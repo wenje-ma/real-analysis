@@ -32,9 +32,9 @@
 
 ### 解答 习题一
 
-$(\Rightarrow)$ 由**定义 9.1.3**, 若 $f_{n}\xrightarrow{\mu}f$, 则任意子列 $\left\{f_{n_{k}}\right\}$ 也依测度收敛到 $f$ (定义中的极限沿子列仍成立). 由**定理 9.1.8** (子序列性质), 存在子子列 $\left\{f_{n'_{k}}\right\}$ 使得 $f_{n'_{k}}\to f$ 几乎处处.
+$\left(\Rightarrow\right)$ 由**定义 9.1.3**, 若 $f_{n}\xrightarrow{\mu}f$, 则任意子列 $\left\{f_{n_{k}}\right\}$ 也依测度收敛到 $f$ (定义中的极限沿子列仍成立). 由**定理 9.1.8** (子序列性质), 存在子子列 $\left\{f_{n'_{k}}\right\}$ 使得 $f_{n'_{k}}\to f$ 几乎处处.
 
-$(\Leftarrow)$ 反证. 若 $f_{n}$ 不依测度收敛到 $f$, 则存在 $\epsilon>0$ 使 $\mu\left(\left\{\left|f_{n}-f\right|>\epsilon\right\}\right)$ 不趋于 $0$, 即存在 $\delta>0$ 与子列 $\left\{f_{n_{k}}\right\}$ 使
+$\left(\Leftarrow\right)$ 反证. 若 $f_{n}$ 不依测度收敛到 $f$, 则存在 $\epsilon>0$ 使 $\mu\left(\left\{\left|f_{n}-f\right|>\epsilon\right\}\right)$ 不趋于 $0$, 即存在 $\delta>0$ 与子列 $\left\{f_{n_{k}}\right\}$ 使
 
 $$
 \mu\left(\left\{x:\left|f_{n_{k}}\left(x\right)-f\left(x\right)\right|>\epsilon\right\}\right)\ge\delta\quad\text{对所有}k.
@@ -48,7 +48,7 @@ $$
 
 这与假设 (任意子列存在几乎处处收敛子子列) 矛盾. 故 $f_{n}\xrightarrow{\mu}f$.
 
-最后设 $\phi:\mathbb R\to\mathbb R$ 连续. 对任意子列 $\left\{\phi\left(f_{n_{k}}\right)\right\}$, 由 $f_{n}\xrightarrow{\mu}f$ 和已证的 $(\Rightarrow)$, 子列 $\left\{f_{n_{k}}\right\}$ 存在子子列 $f_{n'_{k}}\to f$ 几乎处处; $\phi$ 连续推出 $\phi\left(f_{n'_{k}}\right)\to\phi\left(f\right)$ 几乎处处. 故 $\left\{\phi\left(f_{n}\right)\right\}$ 的任意子列存在几乎处处收敛子子列, 由已证的 $(\Leftarrow)$, $\phi\left(f_{n}\right)\xrightarrow{\mu}\phi\left(f\right)$. $\blacksquare$
+最后设 $\phi:\mathbb R\to\mathbb R$ 连续. 对任意子列 $\left\{\phi\left(f_{n_{k}}\right)\right\}$, 由 $f_{n}\xrightarrow{\mu}f$ 和已证的 $\left(\Rightarrow\right)$, 子列 $\left\{f_{n_{k}}\right\}$ 存在子子列 $f_{n'_{k}}\to f$ 几乎处处; $\phi$ 连续推出 $\phi\left(f_{n'_{k}}\right)\to\phi\left(f\right)$ 几乎处处. 故 $\left\{\phi\left(f_{n}\right)\right\}$ 的任意子列存在几乎处处收敛子子列, 由已证的 $\left(\Leftarrow\right)$, $\phi\left(f_{n}\right)\xrightarrow{\mu}\phi\left(f\right)$. $\blacksquare$
 
 ### 习题二
 
