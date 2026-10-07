@@ -213,7 +213,7 @@ $$
 
 **定义 5.1.5** (σ-有限测度)
 
-设 $\left(X,\mathcal F,\mu\right)$ 是测度空间. 如果存在一列可测集 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 使得 $X=\bigcup_{n=1}^{\infty}E_{n}$ 且 $\mu\left(E_{n}\right)<+\infty$ 对所有 $n\in\mathbb N$ 成立, 则称 $\mu$ 为 σ-有限测度.
+设 $\left(X,\mathcal F,\mu\right)$ 是测度空间. 如果存在一列可测集 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 使得 $X=\bigcup_{n=1}^{\infty}E_{n}$ 且 $\mu\left(E_{n}\right)< +\infty$ 对所有 $n\in\mathbb N$ 成立, 则称 $\mu$ 为 σ-有限测度.
 
 **命题 5.2.1** (有限可加性)
 
@@ -225,7 +225,7 @@ $$
 
 **命题 5.2.2** (单调性)
 
-设 $\mu$ 是测度, $E,F\in\mathcal F$ 且 $E\subset F$, 则 $\mu\left(E\right)\le\mu\left(F\right)$. 若进一步 $\mu\left(E\right)<+\infty$, 则
+设 $\mu$ 是测度, $E,F\in\mathcal F$ 且 $E\subset F$, 则 $\mu\left(E\right)\le\mu\left(F\right)$. 若进一步 $\mu\left(E\right)< +\infty$, 则
 
 $$
 \mu\left(F\setminus E\right)=\mu\left(F\right)-\mu\left(E\right).
@@ -249,7 +249,7 @@ $$
 
 **命题 5.2.5** (上连续性)
 
-设 $\mu$ 是测度, $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 是单调递减的集合序列 (即 $E_{1}\supset E_{2}\supset\cdots$), 且存在某个 $m$ 使得 $\mu\left(E_{m}\right)<+\infty$, 则
+设 $\mu$ 是测度, $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 是单调递减的集合序列 (即 $E_{1}\supset E_{2}\supset\cdots$), 且存在某个 $m$ 使得 $\mu\left(E_{m}\right)< +\infty$, 则
 
 $$
 \mu\left(\bigcap_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right).
@@ -341,7 +341,7 @@ $$
 
 **定义 6.4.1** (h 区间)
 
-令 $-\infty\le a< b< \infty$, 所有左开右闭区间 $\left(a,b\right]$, 以及 $\left(a,\infty\right)$, $\varnothing$ 称为 **h 区间**. h 区间的有限不交并形成的集族 $\mathcal E$ 为一个代数.
+令 $-\infty\le a<  b<  \infty$, 所有左开右闭区间 $\left(a,b\right]$, 以及 $\left(a,\infty\right)$, $\varnothing$ 称为 **h 区间**. h 区间的有限不交并形成的集族 $\mathcal E$ 为一个代数.
 
 **命题 6.4.2** ($\mathcal E$ 上的准测度)
 
@@ -465,7 +465,7 @@ $$
 \int_{X}f\,\mathrm{d}\mu=\sup\left\{\int_{X}\phi\,\mathrm{d}\mu:\phi\text{是简单函数},0\le\phi\le f\right\}
 $$
 
-. 若 $\int_{X}f\,\mathrm{d}\mu<\infty$, 则称 $f$ 是可积的.
+. 若 $\int_{X}f\,\mathrm{d}\mu< \infty$, 则称 $f$ 是可积的.
 
 **定理 8.2.2** (单调收敛定理)
 
@@ -491,7 +491,7 @@ $$
 \int_{X}f\,\mathrm{d}\mu=\int_{X}f^{+}\mathrm{d}\mu-\int_{X}f^{-}\mathrm{d}\mu
 $$
 
-. 若 $\int_{X}f^{+}\mathrm{d}\mu<\infty$ 且 $\int_{X}f^{-}\mathrm{d}\mu<\infty$, 则称 $f$ 是可积的.
+. 若 $\int_{X}f^{+}\mathrm{d}\mu< \infty$ 且 $\int_{X}f^{-}\mathrm{d}\mu< \infty$, 则称 $f$ 是可积的.
 
 **定理 8.2.7** (法图引理)
 
@@ -514,7 +514,7 @@ $$
 设 $\left\{f_{n}\right\}$ 是一列可测函数, 且
 
 $$
-\sum_{n=1}^{\infty}\int_{X}\left|f_{n}\right|\mathrm{d}\mu<\infty
+\sum_{n=1}^{\infty}\int_{X}\left|f_{n}\right|\mathrm{d}\mu< \infty
 $$
 
 , 则
@@ -525,10 +525,10 @@ $$
 
 **定理 8.2.16**
 
-如果 $f\in L^{1}\left(\mu\right)$ 且 $\epsilon>0$, 则存在可积简单函数 $\varphi=\sum a_{j}\chi_{E_{j}}$ 使得
+如果 $f\in L^{1}\left(\mu\right)$ 且 $\epsilon> 0$, 则存在可积简单函数 $\varphi=\sum a_{j}\chi_{E_{j}}$ 使得
 
 $$
-\int\left|f-\varphi\right|\mathrm{d}\mu<\epsilon
+\int\left|f-\varphi\right|\mathrm{d}\mu< \epsilon
 $$
 
 (即可积简单函数在 $L^{1}$ 度量下稠密).
@@ -579,18 +579,18 @@ $$
 
 **命题 9.1.2** (几乎处处收敛的刻画)
 
-$f_{n}\xrightarrow{\text{a.e.}}f$ 当且仅当对任意的 $\epsilon>0$,
+$f_{n}\xrightarrow{\text{a.e.}}f$ 当且仅当对任意的 $\epsilon> 0$,
 
 $$
-\mu\left(\bigcap_{k=1}^{\infty}\bigcup_{n=k}^{\infty}\left\{x:\left|f_{n}\left(x\right)-f\left(x\right)\right|>\epsilon\right\}\right)=0.
+\mu\left(\bigcap_{k=1}^{\infty}\bigcup_{n=k}^{\infty}\left\{x:\left|f_{n}\left(x\right)-f\left(x\right)\right|> \epsilon\right\}\right)=0.
 $$
 
 **定义 9.1.3** (依测度收敛)
 
-设 $\left\{f_{n}\right\}$ 是一列可测函数, $f$ 是可测函数. 如果对任意 $\varepsilon>0$ 有
+设 $\left\{f_{n}\right\}$ 是一列可测函数, $f$ 是可测函数. 如果对任意 $\varepsilon> 0$ 有
 
 $$
-\lim_{n\to\infty}\mu\left(\left\{x:\left|f_{n}\left(x\right)-f\left(x\right)\right|>\varepsilon\right\}\right)=0
+\lim_{n\to\infty}\mu\left(\left\{x:\left|f_{n}\left(x\right)-f\left(x\right)\right|> \varepsilon\right\}\right)=0
 $$
 
 , 则称 $\left\{f_{n}\right\}$ 依测度收敛到 $f$, 记作 $f_{n}\xrightarrow{\mu}f$.
@@ -601,7 +601,7 @@ $$
 
 **定理 9.1.15** (叶戈罗夫定理)
 
-设 $\mu\left(X\right)<\infty$ 且 $f_{n}\to f$ 几乎处处. 则对任意 $\delta>0$ 存在可测集 $E\subset X$ 使得 $\mu\left(E\right)<\delta$, 且在 $X\setminus E$ 上 $f_{n}$ 一致收敛到 $f$. 特别地, 在有限测度空间中, 几乎处处收敛蕴含依测度收敛.
+设 $\mu\left(X\right)< \infty$ 且 $f_{n}\to f$ 几乎处处. 则对任意 $\delta> 0$ 存在可测集 $E\subset X$ 使得 $\mu\left(E\right)< \delta$, 且在 $X\setminus E$ 上 $f_{n}$ 一致收敛到 $f$. 特别地, 在有限测度空间中, 几乎处处收敛蕴含依测度收敛.
 
 ## 乘积测度与重积分
 
@@ -640,7 +640,7 @@ $$
 设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 σ-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 即
 
 $$
-\int_{X\times Y}\left|f\right|\mathrm{d}\left(\mu\times\nu\right)<\infty
+\int_{X\times Y}\left|f\right|\mathrm{d}\left(\mu\times\nu\right)< \infty
 $$
 
 , 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 ν-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 μ-可积的; 且重积分相等:
@@ -695,7 +695,7 @@ $$
 \lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcup_{j}E_{j}\right);
 $$
 
-(3) 上连续性: 若 $\left\{E_{j}\right\}$ 单调下降可测且 $\nu\left(E_{1}\right)<\infty$, 则
+(3) 上连续性: 若 $\left\{E_{j}\right\}$ 单调下降可测且 $\nu\left(E_{1}\right)< \infty$, 则
 
 $$
 \lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcap_{j}E_{j}\right).
@@ -719,7 +719,7 @@ $$
 
 **引理 11.2.4**
 
-设 $\nu$ 是符号测度. 若 $E$ 不是负集, 则存在正集 $F\subset E$ 使得 $\nu\left(F\right)>0$.
+设 $\nu$ 是符号测度. 若 $E$ 不是负集, 则存在正集 $F\subset E$ 使得 $\nu\left(F\right)> 0$.
 
 **定理 11.3.2** (哈恩分解定理)
 
@@ -796,7 +796,7 @@ $\mu$-几乎处处成立.
 
 **定义 14.0.6** (有界变差函数)
 
-设 $f:\left[a,b\right]\to\mathbb R$. 对 $\left[a,b\right]$ 的任意分划 $P:a=x_{0}<x_{1}<\cdots<x_{n}=b$, 定义变差
+设 $f:\left[a,b\right]\to\mathbb R$. 对 $\left[a,b\right]$ 的任意分划 $P:a=x_{0}< x_{1}< \cdots< x_{n}=b$, 定义变差
 
 $$
 V\left(f,P\right)=\sum_{i=1}^{n}\left|f\left(x_{i}\right)-f\left(x_{i-1}\right)\right|
@@ -808,7 +808,7 @@ $$
 V_{a}^{b}\left(f\right)=\sup_{P}V\left(f,P\right)
 $$
 
-. 若 $V_{a}^{b}\left(f\right)<+\infty$, 则称 $f$ 为 $\left[a,b\right]$ 上的有界变差函数, 记作 $f\in BV\left(\left[a,b\right]\right)$.
+. 若 $V_{a}^{b}\left(f\right)< +\infty$, 则称 $f$ 为 $\left[a,b\right]$ 上的有界变差函数, 记作 $f\in BV\left(\left[a,b\right]\right)$.
 
 **定理 14.0.7** (基本性质)
 
@@ -832,10 +832,10 @@ $$
 
 **定义 15.0.11** (绝对连续性)
 
-函数 $f:\left[a,b\right]\to\mathbb R$ 称为**绝对连续的** (记 $f\in AC\left(\left[a,b\right]\right)$), 若对任意 $\varepsilon>0$, 存在 $\delta>0$, 使得对任意有限个互不相交的子区间 $\left(a_{i},b_{i}\right)\subset\left[a,b\right]$, 只要 $\sum_{i}\left(b_{i}-a_{i}\right)<\delta$, 就有
+函数 $f:\left[a,b\right]\to\mathbb R$ 称为**绝对连续的** (记 $f\in AC\left(\left[a,b\right]\right)$), 若对任意 $\varepsilon> 0$, 存在 $\delta> 0$, 使得对任意有限个互不相交的子区间 $\left(a_{i},b_{i}\right)\subset\left[a,b\right]$, 只要 $\sum_{i}\left(b_{i}-a_{i}\right)< \delta$, 就有
 
 $$
-\sum_{i}\left|f\left(b_{i}\right)-f\left(a_{i}\right)\right|<\varepsilon.
+\sum_{i}\left|f\left(b_{i}\right)-f\left(a_{i}\right)\right|< \varepsilon.
 $$
 
 **定理 15.0.14** (等价刻画)
@@ -861,7 +861,7 @@ $$
 ## 基础知识
 
 **基础知识**
-**黎曼积分与达布和**: 设 $f$ 是 $\left[a,b\right]$ 上的有界实值函数. 对 $\left[a,b\right]$ 的一个分割 $P=\left\{t_{0}<\cdots< t_{n}\right\}$, 记
+**黎曼积分与达布和**: 设 $f$ 是 $\left[a,b\right]$ 上的有界实值函数. 对 $\left[a,b\right]$ 的一个分割 $P=\left\{t_{0}< \cdots<  t_{n}\right\}$, 记
 
 $$
 M_{i}=\sup_{\left[t_{i-1},t_{i}\right]}f,
@@ -902,14 +902,14 @@ $$
 设 $f\in L^{1}_{\mathrm{loc}}\left(\mathbb R^{n}\right)$. 定义 $f$ 的哈代-利特尔伍德极大函数
 
 $$
-Mf\left(x\right)=\sup_{r>0}\frac{1}{\left|B\left(x,r\right)\right|}\int_{B\left(x,r\right)}\left|f\left(y\right)\right|\mathrm{d}y,
+Mf\left(x\right)=\sup_{r> 0}\frac{1}{\left|B\left(x,r\right)\right|}\int_{B\left(x,r\right)}\left|f\left(y\right)\right|\mathrm{d}y,
 $$
 
 其中 $B\left(x,r\right)$ 是以 $x$ 为中心、$r$ 为半径的开球, $\left|B\left(x,r\right)\right|$ 表示其勒贝格测度.
 
 **基础知识** (球体积公式)
 
-设 $C_{n}=m\left(B\left(1,0\right)\right)$ 为单位球的勒贝格测度, 则对任意 $x\in\mathbb R^{n}$, $r>0$,
+设 $C_{n}=m\left(B\left(1,0\right)\right)$ 为单位球的勒贝格测度, 则对任意 $x\in\mathbb R^{n}$, $r> 0$,
 
 $$
 m\left(B\left(x,r\right)\right)=C_{n}r^{n}.
@@ -919,7 +919,7 @@ $$
 
 设 $\nu$ 是 $\mathbb R^{n}$ 上的博雷尔测度. 称 $\nu$ 为**正则的**, 若:
 
-(1) 对每个紧集 $K$, 有 $\nu\left(K\right)<\infty$;
+(1) 对每个紧集 $K$, 有 $\nu\left(K\right)< \infty$;
 
 (2) 对每个 $E\in\mathcal B\left(\mathbb R^{n}\right)$, 有
 
