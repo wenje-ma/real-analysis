@@ -5,8 +5,7 @@
 **定理 1.2.9** (德摩根定律)
 
 $$
-\begin{aligned}
-\left(A\cup B\right)^{c}&=A^{c}\cap B^{c},\\
+\begin{aligned}\left(A\cup B\right)^{c}&=A^{c}\cap B^{c},\\
 \left(A\cap B\right)^{c}&=A^{c}\cup B^{c}.
 \end{aligned}
 $$
@@ -16,8 +15,7 @@ $$
 集列 $\left\{E_{n}\right\}$ 的上极限定义为
 
 $$
-\begin{aligned}
-&\quad\;\overline{\lim}_{n\to\infty}E_{n}\\
+\begin{aligned}&\quad\;\overline{\lim}_{n\to\infty}E_{n}\\
 &=\left\{x:x\text{ 属于无穷多个 }E_{n}\right\}\\
 &=\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}E_{k}.
 \end{aligned}
@@ -26,8 +24,7 @@ $$
 **定义 1.3.3** (下极限)
 
 $$
-\begin{aligned}
-&\quad\;\underline{\lim}_{n\to\infty}E_{n}\\
+\begin{aligned}&\quad\;\underline{\lim}_{n\to\infty}E_{n}\\
 &=\left\{x:x\text{ 仅不属于有限多个 }E_{n}\right\}\\
 &=\bigcup_{n=1}^{\infty}\bigcap_{k=n}^{\infty}E_{k}.
 \end{aligned}
@@ -38,8 +35,7 @@ $$
 设 $f:A\to B$, 则
 
 $$
-\begin{aligned}
-f^{-1}\left(B_{1}\cup B_{2}\right)&=f^{-1}\left(B_{1}\right)\cup f^{-1}\left(B_{2}\right),\\
+\begin{aligned}f^{-1}\left(B_{1}\cup B_{2}\right)&=f^{-1}\left(B_{1}\right)\cup f^{-1}\left(B_{2}\right),\\
 f^{-1}\left(B_{1}\cap B_{2}\right)&=f^{-1}\left(B_{1}\right)\cap f^{-1}\left(B_{2}\right),\\
 f^{-1}\left(B^{c}\right)&=\left(f^{-1}\left(B\right)\right)^{c},\\
 f^{-1}\left(\bigcup_{\alpha\in I}B_{\alpha}\right)&=\bigcup_{\alpha\in I}f^{-1}\left(B_{\alpha}\right),\\

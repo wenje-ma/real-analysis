@@ -4,7 +4,7 @@
 
 > **定义 5.1.5** (σ-有限测度)<br>设 $\left(X,\mathcal F,\mu\right)$ 是测度空间. 如果存在一列可测集 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 使得 $X=\bigcup_{n=1}^{\infty}E_{n}$ 且 $\mu\left(E_{n}\right)<+\infty$ 对所有 $n\in\mathbb N$ 成立, 则称 $\mu$ 为 σ-有限测度.
 
-> **定理 6.4.5** (勒贝格-斯蒂尔杰斯测度的正则性)<br>设 $\mu_{F}$ 是由增右连续函数 $F$ 生成的勒贝格-斯蒂尔杰斯测度, $\mathcal M^{*}$ 是 $\mu_{F}$-可测集的 σ-代数. 若 $E\in\mathcal M^{*}$, 则 $$\begin{aligned}&\quad\;\mu_{F}\left(E\right)\\&=\inf\left\{\mu_{F}\left(U\right):E\subset U,U\text{开}\right\}\\&=\sup\left\{\mu_{F}\left(K\right):K\subset E,K\text{紧}\right\}.\end{aligned}$$ 特别地, 勒贝格测度在 $\left[a,b\right]$ 上内正则.
+> **定理 6.4.5** (勒贝格-斯蒂尔杰斯测度的正则性)<br>设 $\mu_{F}$ 是由增右连续函数 $F$ 生成的勒贝格-斯蒂尔杰斯测度, $\mathcal M^{*}$ 是 $\mu_{F}$-可测集的 σ-代数. 若 $E\in\mathcal M^{*}$, 则 $$\begin{aligned}\mu_{F}\left(E\right)&=\inf\left\{\mu_{F}\left(U\right):E\subset U,U\text{开}\right\}\\&=\sup\left\{\mu_{F}\left(K\right):K\subset E,K\text{紧}\right\}.\end{aligned}$$ 特别地, 勒贝格测度在 $\left[a,b\right]$ 上内正则.
 
 > **定理 7.1.8** (实值可测函数的运算封闭性)<br>设 $f,g:X\to\mathbb R$ 可测, $c\in\mathbb R$, 则 $cf$, $f+g$, $fg$, $\max\left(f,g\right)$, $\min\left(f,g\right)$ 可测; 若 $\left\{f_{n}\right\}$ 可测且点点收敛, 则极限函数可测.
 
@@ -106,8 +106,7 @@ $$
 令 $F_{m}:=\bigcup_{j=1}^{\infty}E_{mj}$. 则 $X_{m}\setminus F_{m}=\bigcap_{j=1}^{\infty}\left(X_{m}\setminus E_{mj}\right)$, 且 $\mu\left(X_{m}\setminus F_{m}\right)\le\mu\left(X_{m}\setminus E_{mj}\right)<2^{-j}$ 对所有 $j$ 成立, 故 $\mu\left(X_{m}\setminus F_{m}\right)=0$. 令 $F:=\bigcup_{m,j}E_{mj}=\bigcup_{m}F_{m}$, 则
 
 $$
-\begin{aligned}
-&\quad\;\mu\left(X\setminus F\right)\\&=\mu\left(\bigcup_{m=1}^{\infty}\left(X_{m}\setminus F_{m}\right)\right)\\&\le\sum_{m=1}^{\infty}\mu\left(X_{m}\setminus F_{m}\right)\\&=0,
+\begin{aligned}\mu\left(X\setminus F\right)&=\mu\left(\bigcup_{m=1}^{\infty}\left(X_{m}\setminus F_{m}\right)\right)\\&\le\sum_{m=1}^{\infty}\mu\left(X_{m}\setminus F_{m}\right)\\&=0,
 \end{aligned}
 $$
 

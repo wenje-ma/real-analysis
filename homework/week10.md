@@ -35,8 +35,7 @@ $$
 否则 $\left|\int_{K}f\right|$ 全为零将推出 $f=0$ 几乎处处, 矛盾. 记 $c=\int_{K}\left|f\right|\mathrm{d}y>0$, 并取 $R>0$ 使 $K\subset B\left(0,R\right)$ (即 $\sup_{y\in K}\left|y\right|<R$). 对 $\left|x\right|>R$, 因 $K\subset B\left(0,R\right)$ 且 $R<\left|x\right|$, 有 $K\subset B\left(x,2\left|x\right|\right)$. 于是由极大函数定义与**基础知识** (球体积公式),
 
 $$
-\begin{aligned}
-&\quad\;Hf\left(x\right)\\&\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{B\left(x,2\left|x\right|\right)}\left|f\right|\mathrm{d}y\\&\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{K}\left|f\right|\mathrm{d}y\\&=\frac{c}{C_{n}\left(2\left|x\right|\right)^{n}}\\&=\frac{c}{2^{n}C_{n}}\left|x\right|^{-n}.
+\begin{aligned}Hf\left(x\right)\\&\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{B\left(x,2\left|x\right|\right)}\left|f\right|\mathrm{d}y\\&\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{K}\left|f\right|\mathrm{d}y&=\frac{c}{C_{n}\left(2\left|x\right|\right)^{n}}\\&=\frac{c}{2^{n}C_{n}}\left|x\right|^{-n}.
 \end{aligned}
 $$
 
@@ -51,8 +50,7 @@ $$
 由球体积公式, 该集合的测度为
 
 $$
-\begin{aligned}
-&\quad\;m\left(\left\{x:\left|x\right|<\left(C/\lambda\right)^{1/n}\right\}\right)\\&=C_{n}\left(\frac{C}{\lambda}\right)^{1/n\cdot n}\\&=\frac{C_{n}C}{\lambda}.
+\begin{aligned}m\left(\left\{x:\left|x\right|<\left(C/\lambda\right)^{1/n}\right\}\right)&=C_{n}\left(\frac{C}{\lambda}\right)^{1/n\cdot n}\\&=\frac{C_{n}C}{\lambda}.
 \end{aligned}
 $$
 
@@ -77,8 +75,7 @@ $$
 即 $B\subset B\left(x,2\rho\right)$. 由球体积公式, $\left|B\left(x,2\rho\right)\right|=C_{n}\left(2\rho\right)^{n}=2^{n}C_{n}\rho^{n}=2^{n}\left|B\right|$. 于是
 
 $$
-\begin{aligned}
-&\quad\;\frac{1}{m\left(B\right)}\int_{B}\left|f\right|\mathrm{d}y\\&\le\frac{1}{m\left(B\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y\\&=\frac{m\left(B\left(x,2\rho\right)\right)}{m\left(B\right)}\cdot\frac{1}{m\left(B\left(x,2\rho\right)\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y\\&=2^{n}\cdot\frac{1}{m\left(B\left(x,2\rho\right)\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y\\&\le2^{n}Hf\left(x\right).
+\begin{aligned}\frac{1}{m\left(B\right)}\int_{B}\left|f\right|\mathrm{d}y\\&\le\frac{1}{m\left(B\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y&=\frac{m\left(B\left(x,2\rho\right)\right)}{m\left(B\right)}\cdot\frac{1}{m\left(B\left(x,2\rho\right)\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y\\&=2^{n}\cdot\frac{1}{m\left(B\left(x,2\rho\right)\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y\\&\le2^{n}Hf\left(x\right).
 \end{aligned}
 $$
 
@@ -93,8 +90,7 @@ $$
 **正则性的条件 (2) 对 $\lambda$.** 先注意对任意 $E\in\mathcal B\left(\mathbb R^{n}\right)$,
 
 $$
-\begin{aligned}
-&\quad\;\lambda\left(E\right)\\&=\lambda\left(E\cap A\right)\\&=\nu\left(E\cap A\right),
+\begin{aligned}\lambda\left(E\right)&=\lambda\left(E\cap A\right)\\&=\nu\left(E\cap A\right),
 \end{aligned}
 $$
 

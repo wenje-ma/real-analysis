@@ -18,7 +18,7 @@
 
 > **定义 4.3.2** (博雷尔 $\sigma$-代数)<br>设 $\left(X,\tau\right)$ 是拓扑空间, 由所有开集生成的 $\sigma$-代数称为 **博雷尔 $\sigma$-代数**, 记作 $\mathcal B\left(X\right)$, 其中元素称为 **博雷尔集**.
 
-> **例 4.3.3** (实数上的博雷尔代数)<br>在 $\mathbb R$ 上, 以下集合族生成相同的博雷尔 $\sigma$-代数 $\mathcal B\left(\mathbb R\right)$: 所有开集 $\tau$、所有闭集 $\mathcal F$、所有开区间 $\left\{\left(a,b\right)\right\}$、所有闭区间 $\left\{\left[a,b\right]\right\}$、所有左开右闭区间 $\left\{\left(a,b\right]\right\}$, 即 $$\begin{aligned}&\quad\;\mathcal B\left(\mathbb R\right)\\&=\sigma\left(\tau\right)\\&=\sigma\left(\mathcal F\right)\\&=\sigma\left(\left\{\left(a,b\right)\right\}\right)\\&=\sigma\left(\left\{\left[a,b\right]\right\}\right)\\&=\sigma\left(\left\{\left(a,b\right]\right\}\right).\end{aligned}$$
+> **例 4.3.3** (实数上的博雷尔代数)<br>在 $\mathbb R$ 上, 以下集合族生成相同的博雷尔 $\sigma$-代数 $\mathcal B\left(\mathbb R\right)$: 所有开集 $\tau$、所有闭集 $\mathcal F$、所有开区间 $\left\{\left(a,b\right)\right\}$、所有闭区间 $\left\{\left[a,b\right]\right\}$、所有左开右闭区间 $\left\{\left(a,b\right]\right\}$, 即 $$\begin{aligned}\mathcal B\left(\mathbb R\right)&=\sigma\left(\tau\right)\\&=\sigma\left(\mathcal F\right)\\&=\sigma\left(\left\{\left(a,b\right)\right\}\right)\\&=\sigma\left(\left\{\left[a,b\right]\right\}\right)\\&=\sigma\left(\left\{\left(a,b\right]\right\}\right).\end{aligned}$$
 
 > **定义 4.5.1 / 4.5.2** (可测矩形与乘积 $\sigma$-代数)<br>设 $\left(X,\mathcal F\right)$、$\left(Y,\mathcal G\right)$ 为可测空间. $A\times B\subseteq X\times Y$ 称为**可测矩形**, 若 $A\in\mathcal F$ 且 $B\in\mathcal G$.**乘积 $\sigma$-代数**为包含所有可测矩形的最小 $\sigma$-代数: $$\mathcal F\otimes\mathcal G:=\sigma\left(\left\{A\times B:A\in\mathcal F,B\in\mathcal G\right\}\right).$$
 
@@ -51,8 +51,7 @@ $$
 **($\Leftarrow$)** 设 (a)(b)(c) 成立. $X\in\mathcal A$ 即定义 4.1.1 (1); 有限并封闭即 (3). 只需验证差运算封闭 (2): 对任意 $A,B\in\mathcal A$, 由 (b) 得 $B^{c}\in\mathcal A$, 由 (c) 得 $A^{c}\cup B\in\mathcal A$, 再由 (b) 得
 
 $$
-\begin{aligned}
-&\quad\;A\setminus B\\&=A\cap B^{c}\\&=\left(A^{c}\cup B\right)^{c}\in\mathcal A,
+\begin{aligned}A\setminus B&=A\cap B^{c}\\&=\left(A^{c}\cup B\right)^{c}\in\mathcal A,
 \end{aligned}
 $$
 
@@ -69,8 +68,7 @@ $$
 **($\Rightarrow$)** 设 $\mathcal F$ 是 $\sigma$-代数 (**定义 4.1.3**). 则 $X\in\mathcal F$; 对补封闭 (b); 对可数并封闭, 特别地对有限并封闭 (c), 也对可数不交并封闭. 还需验证差运算封闭: 对 $A,B\in\mathcal F$, 由 (b)(c) 与 德摩根定律
 
 $$
-\begin{aligned}
-&\quad\;A\setminus B\\&=A\cap B^{c}\\&=\left(A^{c}\cup B\right)^{c}\in\mathcal F.
+\begin{aligned}A\setminus B&=A\cap B^{c}\\&=\left(A^{c}\cup B\right)^{c}\in\mathcal F.
 \end{aligned}
 $$
 
@@ -79,8 +77,7 @@ $$
 **($\Leftarrow$)** 设 $\mathcal F$ 是代数且对可数不交并封闭. 代数给出 $X\in\mathcal F$、对补封闭及有限并封闭; 只需再证对可数并封闭. 设 $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 作**不交化**:
 
 $$
-\begin{aligned}
-B_{1}&:=A_{1},\\B_{n}&:=A_{n}\setminus\left(A_{1}\cup\cdots\cup A_{n-1}\right)\left(n\ge2\right).
+\begin{aligned}B_{1}&:=A_{1},\\B_{n}&:=A_{n}\setminus\left(A_{1}\cup\cdots\cup A_{n-1}\right)\left(n\ge2\right).
 \end{aligned}
 $$
 
@@ -149,8 +146,7 @@ $$
 即证明
 
 $$
-\begin{aligned}
-&\quad\;\mathcal B\left(\mathbb R\right)\\&=\sigma\left(\tau\right)\\&=\sigma\left(\mathcal F\right)\\&=\sigma\left(\left\{\left(a,b\right)\right\}\right)\\&=\sigma\left(\left\{\left[a,b\right]\right\}\right)\\&=\sigma\left(\left\{\left(a,b\right]\right\}\right).
+\begin{aligned}\mathcal B\left(\mathbb R\right)&=\sigma\left(\tau\right)\\&=\sigma\left(\mathcal F\right)\\&=\sigma\left(\left\{\left(a,b\right)\right\}\right)\\&=\sigma\left(\left\{\left[a,b\right]\right\}\right)\\&=\sigma\left(\left\{\left(a,b\right]\right\}\right).
 \end{aligned}
 $$
 
@@ -195,8 +191,7 @@ $$
 证明**定理 4.5.3 (截面可测性)**: 设 $\left(X,\mathcal F\right)$、$\left(Y,\mathcal G\right)$ 为可测空间. 若 $E\in\mathcal F\otimes\mathcal G$, 则对任意 $x\in X$ 和 $y\in Y$, 其截面
 
 $$
-\begin{aligned}
-E_{x}&=\left\{y\in Y:\left(x,y\right)\in E\right\}\in\mathcal G,\\E^{y}&=\left\{x\in X:\left(x,y\right)\in E\right\}\in\mathcal F.
+\begin{aligned}E_{x}&=\left\{y\in Y:\left(x,y\right)\in E\right\}\in\mathcal G,\\E^{y}&=\left\{x\in X:\left(x,y\right)\in E\right\}\in\mathcal F.
 \end{aligned}
 $$
 

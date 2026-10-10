@@ -24,7 +24,7 @@
 
 > **定理 11.5.5** (拉东-尼科迪姆定理)<br>设 $\mu$ 是 $\sigma$-有限正测度, $\nu$ 是符号测度且 $\nu\ll\mu$, 则存在可测函数 $f:X\to\mathbb R$ 使得 $\nu\left(E\right)=\int_{E}f\,\mathrm{d}\mu$ 对一切 $E\in\mathcal F$ 成立; 且 $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$. 函数 $f$ 称为 $\nu$ 关于 $\mu$ 的 拉东-尼科迪姆导数, 记作 $f=\frac{\mathrm{d}\nu}{\mathrm{d}\mu}$.
 
-> **定理 10.2.2** (托内利定理)<br>如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则 $$\begin{aligned}&\quad\;\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)\\&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),\end{aligned}$$ 其中所有积分值都在 $\left[0,\infty\right]$ 中.
+> **定理 10.2.2** (托内利定理)<br>如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则 $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),\end{aligned}$$ 其中所有积分值都在 $\left[0,\infty\right]$ 中.
 
 ### 习题一
 
@@ -51,16 +51,14 @@ $$
 由 $\beta$ 的定义, 取正集列 $\left\{P_{n}\right\}\subset E$ 使 $\nu\left(P_{n}\right)\to\beta$. 令 $G=\bigcup_{n=1}^{\infty}P_{n}\subset E$, 则 $G$ 是正集 (**引理 11.2.2**(2)). 令 $Q_{n}=\bigcup_{k=1}^{n}P_{k}$, 则 $\left\{Q_{n}\right\}$ 是正集列的上升并, 仍为正集, 且 $\nu\left(Q_{n}\right)\ge\nu\left(P_{n}\right)\to\beta$; 又 $Q_{n}\subset E$ 为正集, 故 $\nu\left(Q_{n}\right)\le\beta$. 于是 $\nu\left(Q_{n}\right)\to\beta$, 由**命题 11.1.2**(2) (下连续性),
 
 $$
-\begin{aligned}
-&\quad\;\nu\left(G\right)\\&=\lim_{n\to\infty}\nu\left(Q_{n}\right)\\&=\beta\\&=\alpha>0.
+\begin{aligned}\nu\left(G\right)&=\lim_{n\to\infty}\nu\left(Q_{n}\right)\\&=\beta\\&=\alpha>0.
 \end{aligned}
 $$
 
 最后证 $E\setminus G$ 是负集. 反设 $E\setminus G$ 不是负集, 由**引理 11.2.4** 存在正集 $F\subset E\setminus G$ 使 $\nu\left(F\right)>0$. 因 $G\cap F=\varnothing$, $G\cup F\subset E$ 且 $G\cup F$ 是正集 (**引理 11.2.2**(2)), 于是
 
 $$
-\begin{aligned}
-&\quad\;\nu\left(G\cup F\right)\\&=\nu\left(G\right)+\nu\left(F\right)\\&=\alpha+\nu\left(F\right)\\&>\alpha\\&=\beta,
+\begin{aligned}\nu\left(G\cup F\right)&=\nu\left(G\right)+\nu\left(F\right)\\&=\alpha+\nu\left(F\right)\\&>\alpha\\&=\beta,
 \end{aligned}
 $$
 
@@ -96,8 +94,7 @@ $$
 **(b)** 由**定理 11.4.3** (若尔当分解), $\nu=\nu^{+}-\nu^{-}$. 于是由三角不等式与 (a),
 
 $$
-\begin{aligned}
-&\quad\;\left|\int f\,\mathrm{d}\nu\right|\\&=\left|\int f\,\mathrm{d}\nu^{+}-\int f\,\mathrm{d}\nu^{-}\right|\\&\le\int\left|f\right|\mathrm{d}\nu^{+}+\int\left|f\right|\mathrm{d}\nu^{-}\\&=\int\left|f\right|\mathrm{d}\left|\nu\right|.
+\begin{aligned}\left|\int f\,\mathrm{d}\nu\right|&=\left|\int f\,\mathrm{d}\nu^{+}-\int f\,\mathrm{d}\nu^{-}\right|\\&\le\int\left|f\right|\mathrm{d}\nu^{+}+\int\left|f\right|\mathrm{d}\nu^{-}\\&=\int\left|f\right|\mathrm{d}\left|\nu\right|.
 \end{aligned}
 $$
 
@@ -114,8 +111,7 @@ $$
 再证 $\ge$: 取 $\nu$ 的一个 哈恩分解 $X=P\cup N$ (**定理 11.3.2**), 令 $g=\chi_{E\cap P}-\chi_{E\cap N}$, 则 $\left|g\right|\le1$ 且 $g$ 可测. 由**定理 11.4.3** (若尔当分解), $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)$, $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)$. 于是
 
 $$
-\begin{aligned}
-&\quad\;\int_{E}g\,\mathrm{d}\nu\\&=\nu\left(E\cap P\right)-\nu\left(E\cap N\right)\\&=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)\\&=\left|\nu\right|\left(E\right).
+\begin{aligned}\int_{E}g\,\mathrm{d}\nu&=\nu\left(E\cap P\right)-\nu\left(E\cap N\right)\\&=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)\\&=\left|\nu\right|\left(E\right).
 \end{aligned}
 $$
 
@@ -130,8 +126,7 @@ $f$ 是实值可测函数, 至少一个 $\int f^{+}\mathrm{d}\mu$, $\int f^{-}\m
 因此 $X=P\cup N$, 其中
 
 $$
-\begin{aligned}
-P&=\left\{x:f\left(x\right)\ge0\right\},\\N&=\left\{x:f\left(x\right)<0\right\},
+\begin{aligned}P&=\left\{x:f\left(x\right)\ge0\right\},\\N&=\left\{x:f\left(x\right)<0\right\},
 \end{aligned}
 $$
 
@@ -140,8 +135,7 @@ $$
 由**定理 11.4.3** (若尔当分解), $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)=\int_{E\cap P}f\,\mathrm{d}\mu=\int_{E}f^{+}\mathrm{d}\mu$ (因 $f\ge0$ 于 $P$ 上), $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)=-\int_{E\cap N}f\,\mathrm{d}\mu=\int_{E}f^{-}\mathrm{d}\mu$ (因 $f\le0$ 于 $N$ 上). 故
 
 $$
-\begin{aligned}
-\nu^{+}\left(E\right)&=\int_{E}f^{+}\mathrm{d}\mu,\\\nu^{-}\left(E\right)&=\int_{E}f^{-}\mathrm{d}\mu,\\\left|\nu\right|\left(E\right)&=\int_{E}\left|f\right|\mathrm{d}\mu.
+\begin{aligned}\nu^{+}\left(E\right)&=\int_{E}f^{+}\mathrm{d}\mu,\\\nu^{-}\left(E\right)&=\int_{E}f^{-}\mathrm{d}\mu,\\\left|\nu\right|\left(E\right)&=\int_{E}\left|f\right|\mathrm{d}\mu.
 \end{aligned}
 $$
 
@@ -158,8 +152,7 @@ $\blacksquare$
 **(b)** 先证 $\le$: 对任意两两不交且并等于 $E$ 的 $\left\{E_{i}\right\}$, 由 $\nu=\nu^{+}-\nu^{-}$ 与三角不等式,
 
 $$
-\begin{aligned}
-&\quad\;\sum_{i}\left|\nu\left(E_{i}\right)\right|\\&=\sum_{i}\left|\nu^{+}\left(E_{i}\right)-\nu^{-}\left(E_{i}\right)\right|\\&\le\sum_{i}\left[\nu^{+}\left(E_{i}\right)+\nu^{-}\left(E_{i}\right)\right]\\&=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)\\&=\left|\nu\right|\left(E\right),
+\begin{aligned}\sum_{i}\left|\nu\left(E_{i}\right)\right|&=\sum_{i}\left|\nu^{+}\left(E_{i}\right)-\nu^{-}\left(E_{i}\right)\right|\\&\le\sum_{i}\left[\nu^{+}\left(E_{i}\right)+\nu^{-}\left(E_{i}\right)\right]\\&=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)\\&=\left|\nu\right|\left(E\right),
 \end{aligned}
 $$
 
@@ -168,8 +161,7 @@ $$
 再证 $\ge$: 取 哈恩分解 $X=P\cup N$ (**定理 11.3.2**), 令 $E_{1}=E\cap P$, $E_{2}=E\cap N$, 则 $E_{1},E_{2}$ 两两不交且 $E_{1}\cup E_{2}=E$. 于是
 
 $$
-\begin{aligned}
-&\quad\;\left|\nu\left(E_{1}\right)\right|+\left|\nu\left(E_{2}\right)\right|\\&=\nu^{+}\left(E\cap P\right)+\nu^{-}\left(E\cap N\right)\\&=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)\\&=\left|\nu\right|\left(E\right),
+\begin{aligned}\left|\nu\left(E_{1}\right)\right|+\left|\nu\left(E_{2}\right)\right|&=\nu^{+}\left(E\cap P\right)+\nu^{-}\left(E\cap N\right)\\&=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)\\&=\left|\nu\right|\left(E\right),
 \end{aligned}
 $$
 
@@ -226,8 +218,7 @@ $$
 因 $\nu_{j}\ll\mu_{j}$ 且 $\mu_{j}$ 是 $\sigma$-有限正测度, 由**定理 11.5.5** (拉东-尼科迪姆定理), 存在 $\mathcal M_{j}$-可测函数 $f_{j}=\frac{\mathrm{d}\nu_{j}}{\mathrm{d}\mu_{j}}\ge0$ 使得 $\nu_{j}\left(E\right)=\int_{E}f_{j}\,\mathrm{d}\mu_{j}$ 对一切 $E\in\mathcal M_{j}$ 成立. 定义 $F:\left(X_{1}\times X_{2}\right)\to\left[0,\infty\right]$, $F\left(x_{1},x_{2}\right)=f_{1}\left(x_{1}\right)f_{2}\left(x_{2}\right)$, 则 $F$ 是 $\mathcal M_{1}\otimes\mathcal M_{2}$-可测的 (由乘积空间的可测性). 对可测矩形 $A\times B\in\mathcal M_{1}\otimes\mathcal M_{2}$, 由**定理 10.2.2** (托内利定理),
 
 $$
-\begin{aligned}
-&\quad\;\int_{A\times B}F\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)\\&=\int_{A\times B}f_{1}\left(x_{1}\right)f_{2}\left(x_{2}\right)\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)\\&=\left(\int_{A}f_{1}\,\mathrm{d}\mu_{1}\right)\left(\int_{B}f_{2}\,\mathrm{d}\mu_{2}\right)\\&=\nu_{1}\left(A\right)\nu_{2}\left(B\right)\\&=\left(\nu_{1}\times\nu_{2}\right)\left(A\times B\right).
+\begin{aligned}\int_{A\times B}F\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)&=\int_{A\times B}f_{1}\left(x_{1}\right)f_{2}\left(x_{2}\right)\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)\\&=\left(\int_{A}f_{1}\,\mathrm{d}\mu_{1}\right)\left(\int_{B}f_{2}\,\mathrm{d}\mu_{2}\right)\\&=\nu_{1}\left(A\right)\nu_{2}\left(B\right)\\&=\left(\nu_{1}\times\nu_{2}\right)\left(A\times B\right).
 \end{aligned}
 $$
 
@@ -240,8 +231,7 @@ $$
 这蕴含 $\nu_{1}\times\nu_{2}\ll\mu_{1}\times\mu_{2}$ (**定义 11.5.1**: 若 $\left(\mu_{1}\times\mu_{2}\right)\left(E\right)=0$, 则上式右端为 $0$). 又 $\nu_{1}\times\nu_{2}$ 是 $\sigma$-有限的 (因 $\nu_{j}$ $\sigma$-有限), 由**定理 11.5.5** 的唯一性, $F$ 就是 $\nu_{1}\times\nu_{2}$ 关于 $\mu_{1}\times\mu_{2}$ 的 拉东-尼科迪姆导数, 即
 
 $$
-\begin{aligned}
-&\quad\;\frac{\mathrm{d}\left(\nu_{1}\times\nu_{2}\right)}{\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)}\left(x_{1},x_{2}\right)\\&=f_{1}\left(x_{1}\right)f_{2}\left(x_{2}\right)\\&=\frac{\mathrm{d}\nu_{1}}{\mathrm{d}\mu_{1}}\left(x_{1}\right)\cdot\frac{\mathrm{d}\nu_{2}}{\mathrm{d}\mu_{2}}\left(x_{2}\right).
+\begin{aligned}\frac{\mathrm{d}\left(\nu_{1}\times\nu_{2}\right)}{\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)}\left(x_{1},x_{2}\right)&=f_{1}\left(x_{1}\right)f_{2}\left(x_{2}\right)\\&=\frac{\mathrm{d}\nu_{1}}{\mathrm{d}\mu_{1}}\left(x_{1}\right)\cdot\frac{\mathrm{d}\nu_{2}}{\mathrm{d}\mu_{2}}\left(x_{2}\right).
 \end{aligned}
 $$
 
@@ -262,8 +252,7 @@ $$
 最后证 $\frac{\mathrm{d}\nu}{\mathrm{d}\mu}=\frac{f}{1-f}$. 对任意 $E\in\mathcal M$, 由 $\lambda=\mu+\nu$ 与 $f=\frac{\mathrm{d}\nu}{\mathrm{d}\lambda}$,
 
 $$
-\begin{aligned}
-&\quad\;\nu\left(E\right)\\&=\int_{E}f\,\mathrm{d}\lambda\\&=\int_{E}f\,\mathrm{d}\mu+\int_{E}f\,\mathrm{d}\nu,
+\begin{aligned}\nu\left(E\right)&=\int_{E}f\,\mathrm{d}\lambda\\&=\int_{E}f\,\mathrm{d}\mu+\int_{E}f\,\mathrm{d}\nu,
 \end{aligned}
 $$
 
@@ -280,8 +269,7 @@ $\blacksquare$
 对 $E\in\mathcal N$, 定义 $\nu_{0}\left(E\right):=\int_{E}f\,\mathrm{d}\mu$. 则 $\nu_{0}$ 是 $\mathcal N$ 上的符号测度: 有限可加性与可数可加性由 $\mu$ 的可数可加性及 $f$ 的可积性 (控制收敛) 保证, 且 $\left|\nu_{0}\left(E\right)\right|\le\int_{E}\left|f\right|\mathrm{d}\mu\le\int\left|f\right|\mathrm{d}\mu<\infty$, 故 $\nu_{0}$ 有限. 又 $\nu_{0}\ll\nu$ (**定义 11.5.1**): 若 $E\in\mathcal N$ 且 $\nu\left(E\right)=\mu\left(E\right)=0$, 则 $\nu_{0}\left(E\right)=\int_{E}f\,\mathrm{d}\mu=0$ ($f\in L^{1}\left(\mu\right)$, 在零测集上积分为 $0$). 由于 $\nu=\mu|_{\mathcal N}$ 是 $\sigma$-有限的 (由 $\mu$ $\sigma$-有限), 由**定理 11.5.5** (拉东-尼科迪姆定理), 存在 $\mathcal N$-可测函数 $g=\frac{\mathrm{d}\nu_{0}}{\mathrm{d}\nu}\in L^{1}\left(\nu\right)$ 使得
 
 $$
-\begin{aligned}
-&\quad\;\int_{E}f\,\mathrm{d}\mu\\&=\nu_{0}\left(E\right)\\&=\int_{E}g\,\mathrm{d}\nu,
+\begin{aligned}\int_{E}f\,\mathrm{d}\mu&=\nu_{0}\left(E\right)\\&=\int_{E}g\,\mathrm{d}\nu,
 \end{aligned}
 \quad \forall E\in\mathcal N.
 $$

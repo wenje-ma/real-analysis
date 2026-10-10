@@ -45,16 +45,14 @@ $$
 **(b)** 若 $f\in AC\left(\left[a,b\right]\right)$ (**定义 15.0.11**), 则 $F\left(t\right)=t+if\left(t\right)$ 的两个分量 $t$ (恒等函数) 与 $f$ 均绝对连续, 故 $F$ 绝对连续. 由**定理 15.0.14**, 对几乎所有 $t$,
 
 $$
-\begin{aligned}
-&\quad\;F'\left(t\right)\\&=\frac{\mathrm{d}}{\mathrm{d}t}\left(t+if\left(t\right)\right)\\&=1+if'\left(t\right),
+\begin{aligned}F'\left(t\right)&=\frac{\mathrm{d}}{\mathrm{d}t}\left(t+if\left(t\right)\right)\\&=1+if'\left(t\right),
 \end{aligned}
 $$
 
 从而 $\left|F'\left(t\right)\right|=\left(1+\left(f'\left(t\right)\right)^{2}\right)^{1/2}$. 由**基础知识** (绝对连续函数的全变差),
 
 $$
-\begin{aligned}
-&\quad\;L\\&=V_{a}^{b}\left(F\right)\\&=\int_{a}^{b}\left|F'\left(t\right)\right|\mathrm{d}t\\&=\int_{a}^{b}\left[1+\left(f'\left(t\right)\right)^{2}\right]^{1/2}\mathrm{d}t.
+\begin{aligned}L&=V_{a}^{b}\left(F\right)\\&=\int_{a}^{b}\left|F'\left(t\right)\right|\mathrm{d}t\\&=\int_{a}^{b}\left[1+\left(f'\left(t\right)\right)^{2}\right]^{1/2}\mathrm{d}t.
 \end{aligned}
 $$
 
@@ -65,8 +63,7 @@ $\blacksquare$
 设 $\mu_{F_{j}}$ 是 $F_{j}$ 对应的 斯蒂尔杰斯测度, $\mu_{F}$ 是 $F=\sum_{j}F_{j}$ 对应的 斯蒂尔杰斯测度 (**基础知识**). 因 $\sum_{j}F_{j}$ 收敛且各项非负, 由 斯蒂尔杰斯测度的可数可加性, $\mu_{F}=\sum_{j}\mu_{F_{j}}$. 由**推论 13.4.5** 与**定理 13.4.4** (应用于正则测度 $\mu_{F_{j}}$; 单调函数的导数即其 斯蒂尔杰斯测度的拉东-尼科迪姆导数), 对 $m$-几乎每个 $x$, $F_{j}'\left(x\right)=\frac{\mathrm{d}\mu_{F_{j}}}{\mathrm{d}m}\left(x\right)$; 同理 $F'\left(x\right)=\frac{\mathrm{d}\mu_{F}}{\mathrm{d}m}\left(x\right)$. 于是由**性质 11.5.6** (线性性, 逐次两两相加),
 
 $$
-\begin{aligned}
-&\quad\;\frac{\mathrm{d}\mu_{F}}{\mathrm{d}m}\left(x\right)\\&=\frac{\mathrm{d}\left(\sum_{j}\mu_{F_{j}}\right)}{\mathrm{d}m}\left(x\right)\\&=\sum_{j}\frac{\mathrm{d}\mu_{F_{j}}}{\mathrm{d}m}\left(x\right)\\&=\sum_{j}F_{j}'\left(x\right),
+\begin{aligned}\frac{\mathrm{d}\mu_{F}}{\mathrm{d}m}\left(x\right)&=\frac{\mathrm{d}\left(\sum_{j}\mu_{F_{j}}\right)}{\mathrm{d}m}\left(x\right)\\&=\sum_{j}\frac{\mathrm{d}\mu_{F_{j}}}{\mathrm{d}m}\left(x\right)\\&=\sum_{j}F_{j}'\left(x\right),
 \end{aligned}
 $$
 
@@ -121,8 +118,7 @@ $$
 **(d)** 记 $t_{0}=\int g\,\mathrm{d}\mu$. 因 $g$ 取值于 $\left(a,b\right)$, 且 $g\in L^{1}\left(\mu\right)$, 有 $t_{0}\in\left(a,b\right)$. 由 (c), 存在 $\beta\in\mathbb R$ 使 $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$ 对所有 $t\in\left(a,b\right)$ 成立. 代入 $t=g\left(x\right)$ 得 $F\left(g\left(x\right)\right)\ge F\left(t_{0}\right)+\beta\left(g\left(x\right)-t_{0}\right)$ 对一切 $x\in X$. 对 $\mu$ 积分 (右端 $\in L^{1}$, 故积分良定义):
 
 $$
-\begin{aligned}
-&\quad\;\int F\circ g\,\mathrm{d}\mu\\&\ge\int\left[F\left(t_{0}\right)+\beta\left(g-t_{0}\right)\right]\mathrm{d}\mu\\&=F\left(t_{0}\right)+\beta\left(\int g\,\mathrm{d}\mu-t_{0}\right)\\&=F\left(t_{0}\right)\\&=F\left(\int g\,\mathrm{d}\mu\right).
+\begin{aligned}\int F\circ g\,\mathrm{d}\mu\\&\ge\int\left[F\left(t_{0}\right)+\beta\left(g-t_{0}\right)\right]\mathrm{d}\mu&=F\left(t_{0}\right)+\beta\left(\int g\,\mathrm{d}\mu-t_{0}\right)\\&=F\left(t_{0}\right)\\&=F\left(\int g\,\mathrm{d}\mu\right).
 \end{aligned}
 $$
 

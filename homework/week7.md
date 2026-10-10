@@ -16,9 +16,9 @@
 
 > **定理 10.1.4** (乘积测度的存在唯一性)<br>设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 σ-有限的测度空间. 存在唯一的测度 $\mu\times\nu$ 在 $\left(X\times Y,\mathcal A\otimes\mathcal B\right)$ 上, 使得对所有 $A\in\mathcal A$, $B\in\mathcal B$ 有 $\left(\mu\times\nu\right)\left(A\times B\right)=\mu\left(A\right)\nu\left(B\right)$. 其构造为 $\phi\left(E\right)=\int_{X}\nu\left(E_{x}\right)\mathrm{d}\mu\left(x\right)$ 对 $E\in\mathcal A\otimes\mathcal B$.
 
-> **定理 10.2.1** (富比尼定理)<br>设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 σ-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 即 $\int_{X\times Y}\left|f\right|\mathrm{d}\left(\mu\times\nu\right)<\infty$, 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 ν-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 μ-可积的; 且重积分相等: $$\begin{aligned}&\quad\;\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)\\&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).\end{aligned}$$
+> **定理 10.2.1** (富比尼定理)<br>设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 σ-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 即 $\int_{X\times Y}\left|f\right|\mathrm{d}\left(\mu\times\nu\right)<\infty$, 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 ν-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 μ-可积的; 且重积分相等: $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).\end{aligned}$$
 
-> **定理 10.2.2** (托内利定理)<br>如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则 $$\begin{aligned}&\quad\;\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)\\&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),\end{aligned}$$ 其中所有积分值都在 $\left[0,\infty\right]$ 中.
+> **定理 10.2.2** (托内利定理)<br>如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则 $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),\end{aligned}$$ 其中所有积分值都在 $\left[0,\infty\right]$ 中.
 
 > **基础知识**<br>**矩形代数的交补性质**: 对可测矩形成立 $\left(A\times B\right)\cap\left(C\times D\right)=\left(A\cap C\right)\times\left(B\cap D\right)$ 与 $\left(A\times B\right)^{c}=\left(A^{c}\times B\right)\cup\left(A\times B^{c}\right)$.
 
@@ -41,8 +41,7 @@ $$
 **$\pi$ 良定义.** 设 $E=\bigcup_{i=1}^{m}A_{i}\times B_{i}=\bigcup_{j=1}^{n}C_{j}\times D_{j}$ 是 $E$ 的两种两两不交矩形分解. 对公共细分 $\left\{\left(A_{i}\cap C_{j}\right)\times\left(B_{i}\cap D_{j}\right)\right\}_{i,j}$, 由 $\mu,\nu$ 的有限可加性,
 
 $$
-\begin{aligned}
-&\quad\;\sum_{i=1}^{m}\mu\left(A_{i}\right)\nu\left(B_{i}\right)\\&=\sum_{i,j}\mu\left(A_{i}\cap C_{j}\right)\nu\left(B_{i}\cap D_{j}\right)\\&=\sum_{j=1}^{n}\mu\left(C_{j}\right)\nu\left(D_{j}\right),
+\begin{aligned}\sum_{i=1}^{m}\mu\left(A_{i}\right)\nu\left(B_{i}\right)&=\sum_{i,j}\mu\left(A_{i}\cap C_{j}\right)\nu\left(B_{i}\cap D_{j}\right)\\&=\sum_{j=1}^{n}\mu\left(C_{j}\right)\nu\left(D_{j}\right),
 \end{aligned}
 $$
 
@@ -51,16 +50,14 @@ $$
 **$\pi$ 是 $\mathcal E$ 上的准测度.** 由**定理 10.1.4**, $\mu\times\nu$ 是 $\left(X\times Y,\mathcal A\otimes\mathcal B\right)$ 上的测度且对矩形取 $\mu\left(A\right)\nu\left(B\right)$; 对有限不交矩形并 $\bigcup_{i=1}^{n}A_{i}\times B_{i}$, 由测度的有限可加性,
 
 $$
-\begin{aligned}
-&\quad\;\left(\mu\times\nu\right)\left(\bigcup_{i=1}^{n}A_{i}\times B_{i}\right)\\&=\sum_{i=1}^{n}\mu\left(A_{i}\right)\nu\left(B_{i}\right)\\&=\pi\left(E\right),
+\begin{aligned}\left(\mu\times\nu\right)\left(\bigcup_{i=1}^{n}A_{i}\times B_{i}\right)&=\sum_{i=1}^{n}\mu\left(A_{i}\right)\nu\left(B_{i}\right)\\&=\pi\left(E\right),
 \end{aligned}
 $$
 
 故 $\pi=\left(\mu\times\nu\right)|_{\mathcal E}$. 由基础知识 (测度限制在代数上是准测度), $\pi$ 满足准测度条件: $\pi\left(\emptyset\right)=0$, 且对两两不交的 $\left\{E_{n}\right\}\subset\mathcal E$ 且 $\bigcup_{n}E_{n}\in\mathcal E$, 由 $\mu\times\nu$ 的 σ-可加性 (**定义 5.1.2**),
 
 $$
-\begin{aligned}
-&\quad\;\pi\left(\bigcup_{n=1}^{\infty}E_{n}\right)\\&=\left(\mu\times\nu\right)\left(\bigcup_{n=1}^{\infty}E_{n}\right)\\&=\sum_{n=1}^{\infty}\left(\mu\times\nu\right)\left(E_{n}\right)\\&=\sum_{n=1}^{\infty}\pi\left(E_{n}\right).
+\begin{aligned}\pi\left(\bigcup_{n=1}^{\infty}E_{n}\right)&=\left(\mu\times\nu\right)\left(\bigcup_{n=1}^{\infty}E_{n}\right)\\&=\sum_{n=1}^{\infty}\left(\mu\times\nu\right)\left(E_{n}\right)\\&=\sum_{n=1}^{\infty}\pi\left(E_{n}\right).
 \end{aligned}
 $$
 
@@ -87,8 +84,7 @@ $$
 先算 $\iint\chi_{D}\,\mathrm{d}\mu\,\mathrm{d}\nu$ (内层按 μ 积分, 外层按 ν 积分). 对固定 $y$,
 
 $$
-\begin{aligned}
-&\quad\;\int_{X}\chi_{D}\left(x,y\right)\mathrm{d}\mu\left(x\right)\\&=\mu\left(\left\{x:\left(x,y\right)\in D\right\}\right)\\&=\mu\left(\left\{y\right\}\right)\\&=0,
+\begin{aligned}\int_{X}\chi_{D}\left(x,y\right)\mathrm{d}\mu\left(x\right)&=\mu\left(\left\{x:\left(x,y\right)\in D\right\}\right)\\&=\mu\left(\left\{y\right\}\right)\\&=0,
 \end{aligned}
 $$
 
@@ -97,8 +93,7 @@ $$
 再算 $\iint\chi_{D}\,\mathrm{d}\nu\,\mathrm{d}\mu$ (内层按 ν 积分). 对固定 $x$,
 
 $$
-\begin{aligned}
-&\quad\;\int_{Y}\chi_{D}\left(x,y\right)\mathrm{d}\nu\left(y\right)\\&=\nu\left(D_{x}\right)\\&=\nu\left(\left\{x\right\}\right)\\&=1,
+\begin{aligned}\int_{Y}\chi_{D}\left(x,y\right)\mathrm{d}\nu\left(y\right)&=\nu\left(D_{x}\right)\\&=\nu\left(\left\{x\right\}\right)\\&=1,
 \end{aligned}
 $$
 
@@ -107,8 +102,7 @@ $$
 最后由**定理 10.1.4** (乘积测度的构造 $\phi\left(E\right)=\int\nu\left(E_{x}\right)\mathrm{d}\mu\left(x\right)$),
 
 $$
-\begin{aligned}
-&\quad\;\int\chi_{D}\,\mathrm{d}\left(\mu\times\nu\right)\\&=\left(\mu\times\nu\right)\left(D\right)\\&=\int_{X}\nu\left(D_{x}\right)\mathrm{d}\mu\left(x\right)\\&=\int_{X}\nu\left(\left\{x\right\}\right)\mathrm{d}\mu\left(x\right)\\&=\int_{X}1\,\mathrm{d}\mu\left(x\right)\\&=1.
+\begin{aligned}\int\chi_{D}\,\mathrm{d}\left(\mu\times\nu\right)&=\left(\mu\times\nu\right)\left(D\right)\\&=\int_{X}\nu\left(D_{x}\right)\mathrm{d}\mu\left(x\right)\\&=\int_{X}\nu\left(\left\{x\right\}\right)\mathrm{d}\mu\left(x\right)\\&=\int_{X}1\,\mathrm{d}\mu\left(x\right)\\&=1.
 \end{aligned}
 $$
 
@@ -119,8 +113,7 @@ $$
 计算 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)=\sum_{m,n}\left|f\left(m,n\right)\right|$. $f$ 在对角线 $\left\{\left(m,m\right)\right\}$ 上取 $1$, 在次对角线 $\left\{\left(m+1,m\right)\right\}$ 上取 $-1$, 故 $\left|f\right|$ 在这两族无限多个点上取 $1$, 于是
 
 $$
-\begin{aligned}
-&\quad\;\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)\\&=\sum_{m,n}\left|f\left(m,n\right)\right|\\&=\infty.
+\begin{aligned}\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)&=\sum_{m,n}\left|f\left(m,n\right)\right|\\&=\infty.
 \end{aligned}
 $$
 
@@ -135,8 +128,7 @@ $$
 **可测性.** 考虑映射 $T:X\times\left[0,\infty\right]\to\left[0,\infty\right]\times\left[0,\infty\right]$, $T\left(x,y\right)=\left(f\left(x\right),y\right)$. 由**命题 7.1.7** (乘积空间的可测性), $T$ 可测当且仅当其坐标函数可测; 坐标函数 $\left(x,y\right)\mapsto f\left(x\right)=f\circ p_{1}$ 可测 (因 $f$ 可测), $\left(x,y\right)\mapsto y=p_{2}$ 连续可测. 故 $T$ 可测. 又 $\Phi\left(z,y\right)=z-y$ 连续, 博雷尔可测. 由**命题 7.1.5** (复合保持可测性), $\left(x,y\right)\mapsto f\left(x\right)-y=\Phi\circ T$ 可测. 因
 
 $$
-\begin{aligned}
-&\quad\;G_{f}\\&=\left\{\left(x,y\right):f\left(x\right)-y\ge0\right\}\\&=\left(f-y\right)^{-1}\left(\left[0,\infty\right]\right),
+\begin{aligned}G_{f}&=\left\{\left(x,y\right):f\left(x\right)-y\ge0\right\}\\&=\left(f-y\right)^{-1}\left(\left[0,\infty\right]\right),
 \end{aligned}
 $$
 
