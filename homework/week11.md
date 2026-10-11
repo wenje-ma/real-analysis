@@ -2,9 +2,19 @@
 
 > **定义 14.0.6** (有界变差函数)<br>设 $f:\left[a,b\right]\to\mathbb R$. 对 $\left[a,b\right]$ 的任意分划 $P:a=x_{0}<x_{1}<\cdots<x_{n}=b$, 定义变差 $V\left(f,P\right)=\sum_{i=1}^{n}\left|f\left(x_{i}\right)-f\left(x_{i-1}\right)\right|$. $f$ 在 $\left[a,b\right]$ 上的全变差为 $V_{a}^{b}\left(f\right)=\sup_{P}V\left(f,P\right)$. 若 $V_{a}^{b}\left(f\right)<+\infty$, 则称 $f$ 为 $\left[a,b\right]$ 上的有界变差函数, 记作 $f\in BV\left(\left[a,b\right]\right)$.
 
-> **定理 14.0.7** (基本性质)<br>设 $f,g\in BV\left(\left[a,b\right]\right)$, 则:<br>(1) $BV\left(\left[a,b\right]\right)$ 构成一个线性空间;<br>(2) $f$ 为有界函数;<br>(3) 若 $f$ 满足 利普希茨条件, 则 $f\in BV\left(\left[a,b\right]\right)$;<br>(4) 单调函数必为有界变差函数.
+> **定理 14.0.7** (基本性质)<br>设 $f,g\in BV\left(\left[a,b\right]\right)$, 则:
+> (1) $BV\left(\left[a,b\right]\right)$ 构成一个线性空间;
+> 
+> (2) $f$ 为有界函数;
+> 
+> (3) 若 $f$ 满足 利普希茨条件, 则 $f\in BV\left(\left[a,b\right]\right)$;
+> 
+> (4) 单调函数必为有界变差函数.
 
-> **定理 14.0.10** (间断点性质)<br>若 $f\in BV\left(\left[a,b\right]\right)$, 则:<br>(1) $f$ 的不连续点至多可数;<br>(2) 所有不连续点都是第一类间断点.
+> **定理 14.0.10** (间断点性质)<br>若 $f\in BV\left(\left[a,b\right]\right)$, 则:
+> (1) $f$ 的不连续点至多可数;
+> 
+> (2) 所有不连续点都是第一类间断点.
 
 > **基础知识** (归一化的有界变差 $NBV$)<br>$NBV=\left\{F\in BV:F\text{右连续},F\left(-\infty\right)=0\right\}$, 其中 $BV$ 指 $\mathbb R$ 上的有界变差函数, $T_{F}$ 表示 $F$ 的全变差函数.
 
@@ -27,7 +37,7 @@ b. $F\in BV\left(\left[-1,1\right]\right)$, 但 $G\notin BV\left(\left[-1,1\righ
 枚举有理数 $\mathbb Q=\left\{q_{1},q_{2},\dots\right\}$, 定义
 
 $$
-F\left(x\right)=\sum_{q_{n}\le x}2^{-n},\quad x\in\mathbb R.
+F\left(x\right)=\sum_{q_{n}\le x}2^{-n},\ x\in\mathbb R.
 $$
 
 这是至多可数项之和且每项非负, 值域含于 $\left[0,1\right]$. 由**基础知识** (级数), $\sum_{n}2^{-n}$ 收敛, 故 $F$ 取值有限. 若 $x<y$, 则 $\left\{n:q_{n}\le x\right\}\subset\left\{n:q_{n}\le y\right\}$, 从而 $F\left(x\right)\le F\left(y\right)$, 即 $F$ 递增.

@@ -4,11 +4,14 @@
 
 > **定理 8.2.16**<br>如果 $f\in L^{1}\left(\mu\right)$ 且 $\epsilon>0$, 则存在可积简单函数 $\varphi=\sum a_{j}\chi_{E_{j}}$ 使得 $\int\left|f-\varphi\right|\mathrm{d}\mu<\epsilon$ (即可积简单函数在 $L^{1}$ 度量下稠密).
 
-> **定理 10.2.1** (富比尼定理)<br>设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 σ-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 ν-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 μ-可积的; 且重积分相等: $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).\end{aligned}$$
+> **定理 10.2.1** (富比尼定理)<br>设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 $\nu$-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 $\mu$-可积的; 且重积分相等: $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).\end{aligned}$$
 
 > **定理 10.2.2** (托内利定理)<br>如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则 $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).\end{aligned}$$<br>其中所有积分值都在 $\left[0,\infty\right]$ 中.
 
-> **定理 11.1.1**<br>假设 $E\in\mathcal L^{n}$.<br>(a) $$\begin{aligned}m\left(E\right)&=\inf\left\{m\left(U\right):U\supset E,U\text{开}\right\}\\&=\sup\left\{m\left(K\right):K\subset E,K\text{紧}\right\}\end{aligned}$$;<br>(b) 若 $m\left(E\right)<\infty$, 则对任意 $\epsilon>0$, 存在有限个边为区间的互不相交的矩形族 $\left\{R_{j}\right\}_{j=1}^{N}$, 使得 $m\left(E\triangle\bigcup_{j=1}^{N}R_{j}\right)<\epsilon$.
+> **定理 11.1.1**<br>假设 $E\in\mathcal L^{n}$.
+> (a) $$\begin{aligned}m\left(E\right)&=\inf\left\{m\left(U\right):U\supset E,U\text{开}\right\}\\&=\sup\left\{m\left(K\right):K\subset E,K\text{紧}\right\}\end{aligned}$$;
+> 
+> (b) 若 $m\left(E\right)<\infty$, 则对任意 $\epsilon>0$, 存在有限个边为区间的互不相交的矩形族 $\left\{R_{j}\right\}_{j=1}^{N}$, 使得 $m\left(E\triangle\bigcup_{j=1}^{N}R_{j}\right)<\epsilon$.
 
 > **定理 11.4.1**<br>存在 $S^{n-1}$ 上唯一的博雷尔测度 $\sigma=\sigma_{n-1}$, 使得 $m^{*}=\rho\times\sigma$. 若 $f$ 是 $\mathbb R^{n}$ 上的博雷尔可测函数, 且 $f\ge0$ 或 $f\in L^{1}\left(m\right)$, 则 $$\int_{\mathbb R^{n}}f\left(x\right)\mathrm{d}x=\int_{0}^{\infty}\int_{S^{n-1}}f\left(rx'\right)r^{n-1}\mathrm{d}\sigma\left(x'\right)\mathrm{d}r.$$
 
@@ -22,7 +25,7 @@
 
 > **基础知识**<br>**特征函数的连续逼近**: 若 $R\subset\mathbb R^{n}$ 是有界闭矩形, 则对任意 $\epsilon>0$, 存在具有紧支撑的连续函数 $g$ 使得 $\int\left|\chi_{R}-g\right|\mathrm{d}m<\epsilon$.
 
-> **基础知识**<br>**测度在乘积 σ-代数生成族上的唯一性**: 两个 σ-有限的测度若在某个生成乘积 σ-代数的矩形容许族上取值相等, 则在整个乘积 σ-代数上相等.
+> **基础知识**<br>**测度在乘积 $\sigma$-代数生成族上的唯一性**: 两个 $\sigma$-有限的测度若在某个生成乘积 $\sigma$-代数的矩形容许族上取值相等, 则在整个乘积 $\sigma$-代数上相等.
 
 ### 习题一
 
@@ -109,7 +112,9 @@ $$
 \end{aligned}
 $$
 
-于是 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=\int_{0}^{1}-\frac{1}{1+y^{2}}\mathrm{d}y=-\left[\arctan y\right]_{0}^{1}=-\frac{\pi}{4}$.
+于是
+
+$$\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=\int_{0}^{1}-\frac{1}{1+y^{2}}\mathrm{d}y=-\left[\arctan y\right]_{0}^{1}=-\frac{\pi}{4}.$$
 
 **$\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x$ (先对 $y$ 积分).** 对称地, 固定 $x$ 令 $y=xt$, 内层 $\int_{0}^{1}f\,\mathrm{d}y=\frac{1}{x^{2}+1}$, 故
 
@@ -301,7 +306,7 @@ $$
 \end{aligned}
 $$
 
-由 $m^{*}=\rho\times\sigma$ (**定理 11.4.1**), $\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times R^{-1}E\right)$. 又由 $m^{*}$ 的旋转不变性, $m^{*}\left(\left(a,b\right]\times R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(E\right)$. 故在矩形上 $\rho\times\sigma_{R}=\rho\times\sigma$. 由基础知识 (测度在乘积 σ-代数生成族上的唯一性), $\rho\times\sigma_{R}=\rho\times\sigma$ 在 $\left(0,\infty\right)\times S^{n-1}$ 上成立.
+由 $m^{*}=\rho\times\sigma$ (**定理 11.4.1**), $\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times R^{-1}E\right)$. 又由 $m^{*}$ 的旋转不变性, $m^{*}\left(\left(a,b\right]\times R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(E\right)$. 故在矩形上 $\rho\times\sigma_{R}=\rho\times\sigma$. 由基础知识 (测度在乘积 $\sigma$-代数生成族上的唯一性), $\rho\times\sigma_{R}=\rho\times\sigma$ 在 $\left(0,\infty\right)\times S^{n-1}$ 上成立.
 
 最后由**定理 11.4.1** 的唯一性 (使 $m^{*}=\rho\times\sigma$ 的测度 $\sigma$ 唯一), 从 $\rho\times\sigma_{R}=m^{*}=\rho\times\sigma$ 得 $\sigma_{R}=\sigma$, 即 $\sigma\left(R^{-1}E\right)=\sigma\left(E\right)$ 对一切博雷尔 $E$ 成立. 故 $\sigma$ 旋转不变. $\blacksquare$
 
@@ -311,7 +316,9 @@ $$
 
 ### 解答 习题八
 
-函数 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 是径向的, 由**定理 11.4.1** (极坐标分解), $\int_{\mathbb R^{n}}\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}\mathrm{d}x=\sigma\left(S^{n-1}\right)\int_{0}^{\infty}r^{a+n-1}\left|\log r\right|^{b}\mathrm{d}r$.
+函数 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 是径向的, 由**定理 11.4.1** (极坐标分解),
+
+$$\int_{\mathbb R^{n}}\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}\mathrm{d}x=\sigma\left(S^{n-1}\right)\int_{0}^{\infty}r^{a+n-1}\left|\log r\right|^{b}\mathrm{d}r.$$
 
 **集合 $\left\{\left|x\right|<1/2\right\}$.** 作代换 $u=-\log r$ (即 $r=e^{-u}$, $\mathrm{d}r=-e^{-u}\mathrm{d}u$, 则 $r\in\left(0,1/2\right]$ 对应 $u\in\left[\log 2,\infty\right)$):
 

@@ -1,12 +1,29 @@
 # 作业 9
 
-> **定义 11.1.1** (符号测度)<br>设 $\left(X,\mathcal F\right)$ 是一个可测空间. 函数 $\nu:\mathcal F\to\mathbb R\cup\left\{+\infty\right\}$ 或 $\mathbb R\cup\left\{-\infty\right\}$ 称为**符号测度**, 若满足:<br>(1) $\nu\left(\varnothing\right)=0$;<br>(2) 可列可加性: 对任意一列互不相交的可测集 $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal F$, 有 $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$;<br>(3) $\nu$ 不能同时取 $+\infty$ 与 $-\infty$ 为值.
+> **定义 11.1.1** (符号测度)<br>设 $\left(X,\mathcal F\right)$ 是一个可测空间. 函数 $\nu:\mathcal F\to\mathbb R\cup\left\{+\infty\right\}$ 或 $\mathbb R\cup\left\{-\infty\right\}$ 称为**符号测度**, 若满足:
+> (1) $\nu\left(\varnothing\right)=0$;
+> 
+> (2) 可列可加性: 对任意一列互不相交的可测集 $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal F$, 有 $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$;
+> 
+> (3) $\nu$ 不能同时取 $+\infty$ 与 $-\infty$ 为值.
 
-> **命题 11.1.2** (符号测度的基本性质)<br>设 $\nu$ 是符号测度, 则:<br>(1) 有限可加性: 对任意有限个互不相交的 $E_{1},\dots,E_{n}\in\mathcal F$, 有 $\nu\left(\bigcup_{i=1}^{n}E_{i}\right)=\sum_{i=1}^{n}\nu\left(E_{i}\right)$;<br>(2) 下连续性: 若 $\left\{E_{j}\right\}$ 单调上升可测, 则 $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcup_{j}E_{j}\right)$;<br>(3) 上连续性: 若 $\left\{E_{j}\right\}$ 单调下降可测且 $\nu\left(E_{1}\right)<\infty$, 则 $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcap_{j}E_{j}\right)$.
+> **命题 11.1.2** (符号测度的基本性质)<br>设 $\nu$ 是符号测度, 则:
+> (1) 有限可加性: 对任意有限个互不相交的 $E_{1},\dots,E_{n}\in\mathcal F$, 有 $\nu\left(\bigcup_{i=1}^{n}E_{i}\right)=\sum_{i=1}^{n}\nu\left(E_{i}\right)$;
+> 
+> (2) 下连续性: 若 $\left\{E_{j}\right\}$ 单调上升可测, 则 $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcup_{j}E_{j}\right)$;
+> 
+> (3) 上连续性: 若 $\left\{E_{j}\right\}$ 单调下降可测且 $\nu\left(E_{1}\right)<\infty$, 则 $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcap_{j}E_{j}\right)$.
 
 > **定义 11.2.1** (正集、负集、零集)<br>设 $\nu$ 是 $\left(X,\mathcal F\right)$ 上的符号测度.<br>称 $P\in\mathcal F$ 为**正集** (记为 $P\gtrsim0$), 若对任意 $E\in\mathcal F$ 且 $E\subset P$, 有 $\nu\left(E\right)\ge0$;<br>称 $N\in\mathcal F$ 为**负集** (记为 $N\lesssim0$), 若对任意 $E\in\mathcal F$ 且 $E\subset N$, 有 $\nu\left(E\right)\le0$;<br>称 $Z\in\mathcal F$ 为**零集**, 若对任意 $E\in\mathcal F$ 且 $E\subset Z$, 有 $\nu\left(E\right)=0$.
 
-> **引理 11.2.2** (正集的性质)<br>(1) 正集的任意可测子集是正集;<br>(2) 正集的可列并是正集;<br>(3) 若 $\left\{P_{n}\right\}$ 是正集列, 则 $\bigcap_{n=1}^{\infty}P_{n}$ 是正集.<br>上述性质对负集仍然成立 (注 11.2.3).
+> **引理 11.2.2** (正集的性质)
+> (1) 正集的任意可测子集是正集;
+> 
+> (2) 正集的可列并是正集;
+> 
+> (3) 若 $\left\{P_{n}\right\}$ 是正集列, 则 $\bigcap_{n=1}^{\infty}P_{n}$ 是正集.
+> 
+> 上述性质对负集仍然成立 (注 11.2.3).
 
 > **引理 11.2.4**<br>设 $\nu$ 是符号测度. 若 $E$ 不是负集, 则存在正集 $F\subset E$ 使得 $\nu\left(F\right)>0$.
 
@@ -271,7 +288,7 @@ $\blacksquare$
 $$
 \begin{aligned}\int_{E}f\,\mathrm{d}\mu&=\nu_{0}\left(E\right)\\&=\int_{E}g\,\mathrm{d}\nu,
 \end{aligned}
-\quad \forall E\in\mathcal N.
+\ \forall E\in\mathcal N.
 $$
 
 若 $g'\in L^{1}\left(\nu\right)$ 也满足同样等式, 则 $\int_{E}\left(g-g'\right)\mathrm{d}\nu=0$ 对一切 $E\in\mathcal N$. 取 $E=\left\{g>g'\right\}\in\mathcal N$, 因 $g-g'\in L^{1}\left(\nu\right)$ 且 $\int_{\left\{g>g'\right\}}\left(g-g'\right)\mathrm{d}\nu=0$, 由非负函数积分为零则几乎处处为零, 得 $g=g'$ $\nu$-几乎处处于 $\left\{g>g'\right\}$ 上; 同理于 $\left\{g<g'\right\}$ 上. 故 $g=g'$ $\nu$-几乎处处. $\blacksquare$

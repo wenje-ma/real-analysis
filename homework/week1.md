@@ -6,11 +6,32 @@
 
 > **定理 3.2.1** (实数中开集的构造)<br>设 $U\subset\mathbb R$ 是非空开集, 则存在一列互不相交的开区间 $\left\{I_{n}\right\}_{n=1}^{\infty}$, 使 $U=\bigcup_{n=1}^{\infty}I_{n}$; 且此表示在重排意义下唯一.
 
-> **定义 4.1.1** (集合代数)<br>设 $X$ 非空, $\mathcal A\subset\mathcal P\left(X\right)$. 称 $\mathcal A$ 为 $X$ 上的一个**集合代数** (布尔代数), 若满足:<br>(1) $X\in\mathcal A$;<br>(2) 对差运算封闭: $A,B\in\mathcal A\Rightarrow A\setminus B\in\mathcal A$;<br>(3) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
+> **定义 4.1.1** (集合代数)<br>设 $X$ 非空, $\mathcal A\subset\mathcal P\left(X\right)$. 称 $\mathcal A$ 为 $X$ 上的一个**集合代数** (布尔代数), 若满足:
+> (1) $X\in\mathcal A$;
+> 
+> (2) 对差运算封闭: $A,B\in\mathcal A\Rightarrow A\setminus B\in\mathcal A$;
+> 
+> (3) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
 
-> **命题 4.1.2** (代数的等价定义)<br>设 $\mathcal A\subset\mathcal P\left(X\right)$, 则以下条件等价:<br>(1) $\mathcal A$ 是代数;<br>(2) $\mathcal A$ 满足: (a) $X\in\mathcal A$; (b) 对补运算封闭: $A\in\mathcal A\Rightarrow A^{c}=X\setminus A\in\mathcal A$; (c) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
+> **命题 4.1.2** (代数的等价定义)<br>设 $\mathcal A\subset\mathcal P\left(X\right)$, 则以下条件等价:
+> (1) $\mathcal A$ 是代数;
+> 
+> (2) $\mathcal A$ 满足:
+> 
+> (a) $X\in\mathcal A$;
+> 
+> (b) 对补运算封闭: $A\in\mathcal A\Rightarrow A^{c}=X\setminus A\in\mathcal A$;
+> 
+> (c) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
 
-> **定义 4.1.3** ($\sigma$-代数)<br>设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 **$\sigma$-代数**, 若满足:<br>(1) $X\in\mathcal F$;<br>(2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$;<br>(3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.<br>称 $\left(X,\mathcal F\right)$ 为**可测空间**, $\mathcal F$ 中的元素称为**可测集**.
+> **定义 4.1.3** ($\sigma$-代数)<br>设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 **$\sigma$-代数**, 若满足:
+> (1) $X\in\mathcal F$;
+> 
+> (2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$;
+> 
+> (3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
+> 
+> 称 $\left(X,\mathcal F\right)$ 为**可测空间**, $\mathcal F$ 中的元素称为**可测集**.
 
 > **定义 4.2.1** (生成代数)<br>包含 $\mathcal E\subset\mathcal P\left(X\right)$ 的最小代数称为由 $\mathcal E$ 生成的代数, 记作 $\alpha\left(\mathcal E\right)$: $$\alpha\left(\mathcal E\right)=\bigcap\left\{\mathcal A\subset\mathcal P\left(X\right):\mathcal A\text{ 是代数且 }\mathcal E\subset\mathcal A\right\}.$$
 
@@ -26,7 +47,7 @@
 
 > **定理 4.5.4** (博雷尔集的乘积)<br>对欧氏空间中的博雷尔 $\sigma$-代数, 有 $$\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)=\mathcal B\left(\mathbb R^{m+n}\right).$$
 
-> **定义 4.5.7** (任意乘积 $\sigma$-代数)<br>设 $\left\{\left(X_{\alpha},\mathcal F_{\alpha}\right)\right\}_{\alpha\in I}$ 是一族可测空间, 乘积 $\sigma$-代数 $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$ 是由所有**柱集** $$\left\{x=\left(x_{\alpha}\right)_{\alpha\in I}\in\prod_{\alpha\in I}X_{\alpha}:x_{\beta}\in A_{\beta}\right\},\quad A_{\beta}\in\mathcal F_{\beta},\quad\beta\in I$$ 生成的 $\sigma$-代数.
+> **定义 4.5.7** (任意乘积 $\sigma$-代数)<br>设 $\left\{\left(X_{\alpha},\mathcal F_{\alpha}\right)\right\}_{\alpha\in I}$ 是一族可测空间, 乘积 $\sigma$-代数 $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$ 是由所有**柱集** $$\left\{x=\left(x_{\alpha}\right)_{\alpha\in I}\in\prod_{\alpha\in I}X_{\alpha}:x_{\beta}\in A_{\beta}\right\},\ A_{\beta}\in\mathcal F_{\beta},\ \beta\in I$$ 生成的 $\sigma$-代数.
 
 > **基础知识**<br>$\mathbb R^{m+n}$ 中每个开集可表为可数个开矩形的并: $O=\bigcup_{k=1}^{\infty}\left(U_{k}\times V_{k}\right)$, 其中 $U_{k}\subset\mathbb R^{m}$、$V_{k}\subset\mathbb R^{n}$ 为开集 (有理端点的矩形构成可数基).
 
@@ -34,7 +55,11 @@
 
 设 $\mathcal A\subset\mathcal P\left(X\right)$, 证明**命题 4.1.2**: $\mathcal A$ 是代数, 当且仅当 $\mathcal A$ 满足
 
-(a) $X\in\mathcal A$; (b) 对补运算封闭: $A\in\mathcal A\Rightarrow A^{c}\in\mathcal A$; (c) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
+(a) $X\in\mathcal A$;
+
+(b) 对补运算封闭: $A\in\mathcal A\Rightarrow A^{c}\in\mathcal A$;
+
+(c) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
 
 ### 解答 习题一
 
@@ -306,5 +331,5 @@ $$
 两方向结合, 即
 
 $$
-\boxed{\bigotimes_{\alpha\in I}\mathcal F_{\alpha}=\sigma\left(\left\{\pi_{\alpha}^{-1}\left(\mathcal E_{\alpha}\right):\alpha\in I\right\}\right)}\quad\blacksquare
+\boxed{\bigotimes_{\alpha\in I}\mathcal F_{\alpha}=\sigma\left(\left\{\pi_{\alpha}^{-1}\left(\mathcal E_{\alpha}\right):\alpha\in I\right\}\right)}\ \blacksquare
 $$

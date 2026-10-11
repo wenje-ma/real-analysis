@@ -1,14 +1,32 @@
 # 作业 3
 
-> **定义 4.1.1** (集合代数)<br>设 $X$ 是非空集合, $\mathcal A\subset\mathcal P\left(X\right)$. 称 $\mathcal A$ 为 $X$ 上的一个**集合代数**, 若满足:<br>(1) $X\in\mathcal A$;<br>(2) 对差运算封闭: $A,B\in\mathcal A\Rightarrow A\setminus B\in\mathcal A$;<br>(3) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
+> **定义 4.1.1** (集合代数)<br>设 $X$ 是非空集合, $\mathcal A\subset\mathcal P\left(X\right)$. 称 $\mathcal A$ 为 $X$ 上的一个**集合代数**, 若满足:
+> (1) $X\in\mathcal A$;
+> 
+> (2) 对差运算封闭: $A,B\in\mathcal A\Rightarrow A\setminus B\in\mathcal A$;
+> 
+> (3) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
 
-> **定义 4.1.3** ($\sigma$-代数)<br>设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 **$\sigma$-代数**, 若满足:<br>(1) $X\in\mathcal F$;<br>(2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$;<br>(3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
+> **定义 4.1.3** ($\sigma$-代数)<br>设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 **$\sigma$-代数**, 若满足:
+> (1) $X\in\mathcal F$;
+> 
+> (2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$;
+> 
+> (3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
 
-> **定义 4.4.1** (单调类)<br>设 $\mathcal M\subset\mathcal P\left(X\right)$. 称 $\mathcal M$ 为**单调类**, 若满足:<br>(1) 对单调递增序列封闭: $A_{1}\subset A_{2}\subset\cdots$ 且 $A_{n}\in\mathcal M\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal M$;<br>(2) 对单调递减序列封闭: $A_{1}\supset A_{2}\supset\cdots$ 且 $A_{n}\in\mathcal M\Rightarrow\bigcap_{n=1}^{\infty}A_{n}\in\mathcal M$.
+> **定义 4.4.1** (单调类)<br>设 $\mathcal M\subset\mathcal P\left(X\right)$. 称 $\mathcal M$ 为**单调类**, 若满足:
+> (1) 对单调递增序列封闭: $A_{1}\subset A_{2}\subset\cdots$ 且 $A_{n}\in\mathcal M\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal M$;
+> 
+> (2) 对单调递减序列封闭: $A_{1}\supset A_{2}\supset\cdots$ 且 $A_{n}\in\mathcal M\Rightarrow\bigcap_{n=1}^{\infty}A_{n}\in\mathcal M$.
 
 > **定理 4.4.2** (单调类定理)<br>设 $\mathcal A$ 是一个代数, $\mathcal M$ 是一个包含 $\mathcal A$ 的单调类, 则 $\sigma\left(\mathcal A\right)\subset\mathcal M$.
 
-> **定义 5.1.2** (测度)<br>设 $\left(X,\mathcal F\right)$ 是可测空间. 函数 $\mu:\mathcal F\to\left[0,+\infty\right]$ 称为 $\left(X,\mathcal F\right)$ 上的一个测度, 若满足:<br>(1) 非负性: $\mu\left(E\right)\ge0$ 对一切 $E\in\mathcal F$;<br>(2) 零空集性: $\mu\left(\varnothing\right)=0$;<br>(3) 可数可加性: 对任意可数个两两不交的 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 有 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
+> **定义 5.1.2** (测度)<br>设 $\left(X,\mathcal F\right)$ 是可测空间. 函数 $\mu:\mathcal F\to\left[0,+\infty\right]$ 称为 $\left(X,\mathcal F\right)$ 上的一个测度, 若满足:
+> (1) 非负性: $\mu\left(E\right)\ge0$ 对一切 $E\in\mathcal F$;
+> 
+> (2) 零空集性: $\mu\left(\varnothing\right)=0$;
+> 
+> (3) 可数可加性: 对任意可数个两两不交的 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 有 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
 
 > **命题 5.2.1** (有限可加性)<br>设 $\mu$ 是测度, $E_{1},\dots,E_{n}\in\mathcal F$ 两两不交, 则 $\mu\left(\bigcup_{k=1}^{n}E_{k}\right)=\sum_{k=1}^{n}\mu\left(E_{k}\right)$.
 
@@ -16,9 +34,17 @@
 
 > **命题 5.2.4** (下连续性)<br>设 $\mu$ 是测度, $\left\{E_{n}\right\}$ 单调递增, 则 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right)$.
 
-> **定义 6.1.1** (外测度)<br>设 $X$ 非空. 函数 $\mu^{*}:\mathcal P\left(X\right)\to\left[0,+\infty\right]$ 称为 $X$ 上的一个**外测度**, 若满足:<br>(1) 非负性: $\mu^{*}\left(\varnothing\right)=0$, 且 $\mu^{*}\left(E\right)\ge0$ 对一切 $E\subset X$;<br>(2) 单调性: $E\subset F\Rightarrow\mu^{*}\left(E\right)\le\mu^{*}\left(F\right)$;<br>(3) 次可数可加性: $\mu^{*}\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu^{*}\left(E_{n}\right)$.
+> **定义 6.1.1** (外测度)<br>设 $X$ 非空. 函数 $\mu^{*}:\mathcal P\left(X\right)\to\left[0,+\infty\right]$ 称为 $X$ 上的一个**外测度**, 若满足:
+> (1) 非负性: $\mu^{*}\left(\varnothing\right)=0$, 且 $\mu^{*}\left(E\right)\ge0$ 对一切 $E\subset X$;
+> 
+> (2) 单调性: $E\subset F\Rightarrow\mu^{*}\left(E\right)\le\mu^{*}\left(F\right)$;
+> 
+> (3) 次可数可加性: $\mu^{*}\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu^{*}\left(E_{n}\right)$.
 
-> **定义 6.2.1** (准测度)<br>设 $X$ 非空, $\mathcal E\subset\mathcal P\left(X\right)$ 是一个代数. 函数 $\mu_{0}:\mathcal E\to\left[0,+\infty\right]$ 称为一个**准测度**, 若:<br>(1) $\mu_{0}\left(\varnothing\right)=0$;<br>(2) 若 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal E$ 两两不交且 $\bigcup_{n=1}^{\infty}E_{n}\in\mathcal E$, 则 $\mu_{0}\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right)$.
+> **定义 6.2.1** (准测度)<br>设 $X$ 非空, $\mathcal E\subset\mathcal P\left(X\right)$ 是一个代数. 函数 $\mu_{0}:\mathcal E\to\left[0,+\infty\right]$ 称为一个**准测度**, 若:
+> (1) $\mu_{0}\left(\varnothing\right)=0$;
+> 
+> (2) 若 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal E$ 两两不交且 $\bigcup_{n=1}^{\infty}E_{n}\in\mathcal E$, 则 $\mu_{0}\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right)$.
 
 > **定理 6.2.2** (由准测度生成外测度)<br>设 $\mathcal E\subset\mathcal P\left(X\right)$ 是一个覆盖类, $\mu_{0}:\mathcal E\to\left[0,+\infty\right]$ 是一个准测度. 对任意 $A\subset X$, 定义 $$\mu^{*}\left(A\right)=\inf\left\{\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right):E_{n}\in\mathcal E,A\subset\bigcup_{n=1}^{\infty}E_{n}\right\}.$$ 则 $\mu^{*}$ 是 $X$ 上的外测度, 且 $\mu^{*}|_{\mathcal E}=\mu_{0}$.
 
@@ -26,7 +52,12 @@
 
 > **引理 6.3.2**<br>如果 $\mathcal E$ 是代数, $\mu_{0}$ 是准测度, 则 $\mathcal E\subset\mathcal M_{\mu^{*}}$.
 
-> **定理 6.3.3** (卡拉西奥多里定理)<br>设 $\mu^{*}$ 是 $X$ 上的外测度, 则:<br>(1) $\mathcal M$ 是一个 $\sigma$-代数;<br>(2) $\mu^{*}|_{\mathcal M}$ 是一个完备测度;<br>(3) 如果 $\mu^{*}$ 是由准测度 $\mu_{0}$ 生成的, 且 $\mu_{0}$ 是 $\sigma$-有限的, 则 $\mu^{*}|_{\mathcal M}$ 是 $\mu_{0}$ 的唯一延拓.
+> **定理 6.3.3** (卡拉西奥多里定理)<br>设 $\mu^{*}$ 是 $X$ 上的外测度, 则:
+> (1) $\mathcal M$ 是一个 $\sigma$-代数;
+> 
+> (2) $\mu^{*}|_{\mathcal M}$ 是一个完备测度;
+> 
+> (3) 如果 $\mu^{*}$ 是由准测度 $\mu_{0}$ 生成的, 且 $\mu_{0}$ 是 $\sigma$-有限的, 则 $\mu^{*}|_{\mathcal M}$ 是 $\mu_{0}$ 的唯一延拓.
 
 > **定义 6.4.1** (h 区间)<br>令 $-\infty\le a<b<\infty$, 所有左开右闭区间 $\left(a,b\right]$, 以及 $\left(a,\infty\right)$, $\varnothing$ 称为 **h 区间**. h 区间的有限不交并形成的集族 $\mathcal E$ 为一个代数.
 
@@ -112,7 +143,11 @@ $$
 \mu^{*}\left(E\cap\bigcup_{j=1}^{\infty}A_{j}\right)=\sum_{j=1}^{N}\mu^{*}\left(E\cap A_{j}\right)+\mu^{*}\left(E\cap\bigcup_{j=N+1}^{\infty}A_{j}\right)\ge\sum_{j=1}^{N}\mu^{*}\left(E\cap A_{j}\right).
 $$
 
-令 $N\to\infty$ 得 $\mu^{*}\left(E\cap\bigcup_{j=1}^{\infty}A_{j}\right)\ge\sum_{j=1}^{\infty}\mu^{*}\left(E\cap A_{j}\right)$. 合并即得等式. $\blacksquare$
+令 $N\to\infty$ 得
+
+$$\mu^{*}\left(E\cap\bigcup_{j=1}^{\infty}A_{j}\right)\ge\sum_{j=1}^{\infty}\mu^{*}\left(E\cap A_{j}\right).$$
+
+合并即得等式. $\blacksquare$
 
 **(3) 习题 24.** (a) 由 $A\cap E=B\cap E$ 得 $\left(A\setminus B\right)\cap E=\varnothing$, 且 $A\setminus B\in\mathcal M$. 因 $A\setminus B$ 可测, 用卡拉西奥多里条件于 $T=X$:
 

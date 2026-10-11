@@ -15,7 +15,7 @@ $$
 集列 $\left\{E_{n}\right\}$ 的上极限定义为
 
 $$
-\begin{aligned}&\quad\;\overline{\lim}_{n\to\infty}E_{n}\\
+\begin{aligned}&\;\;\overline{\lim}_{n\to\infty}E_{n}\\
 &=\left\{x:x\text{ 属于无穷多个 }E_{n}\right\}\\
 &=\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}E_{k}.
 \end{aligned}
@@ -24,7 +24,7 @@ $$
 **定义 1.3.3** (下极限)
 
 $$
-\begin{aligned}&\quad\;\underline{\lim}_{n\to\infty}E_{n}\\
+\begin{aligned}&\;\;\underline{\lim}_{n\to\infty}E_{n}\\
 &=\left\{x:x\text{ 仅不属于有限多个 }E_{n}\right\}\\
 &=\bigcup_{n=1}^{\infty}\bigcap_{k=n}^{\infty}E_{k}.
 \end{aligned}
@@ -65,7 +65,13 @@ $$
 
 (1) $\mathcal A$ 是代数;
 
-(2) $\mathcal A$ 满足: (a) $X\in\mathcal A$; (b) 对补运算封闭: $A\in\mathcal A\Rightarrow A^{c}=X\setminus A\in\mathcal A$; (c) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
+(2) $\mathcal A$ 满足:
+
+(a) $X\in\mathcal A$;
+
+(b) 对补运算封闭: $A\in\mathcal A\Rightarrow A^{c}=X\setminus A\in\mathcal A$;
+
+(c) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
 
 **定义 4.1.3** ($\sigma$-代数)
 
@@ -108,7 +114,7 @@ $$
 在 $\mathbb R$ 上, 以下集合族生成相同的博雷尔 $\sigma$-代数 $\mathcal B\left(\mathbb R\right)$: 所有开集 $\tau$、所有闭集 $\mathcal F$、所有开区间 $\left\{\left(a,b\right)\right\}$、所有闭区间 $\left\{\left[a,b\right]\right\}$、所有左开右闭区间 $\left\{\left(a,b\right]\right\}$, 即
 
 $$
-\begin{aligned}&\quad\;\mathcal B\left(\mathbb R\right)\\
+\begin{aligned}&\;\;\mathcal B\left(\mathbb R\right)\\
 &=\sigma\left(\tau\right)\\
 &=\sigma\left(\mathcal F\right)\\
 &=\sigma\left(\left\{\left(a,b\right)\right\}\right)\\
@@ -186,7 +192,7 @@ $$
 是由所有**柱集**
 
 $$
-\left\{x=\left(x_{\alpha}\right)_{\alpha\in I}\in\prod_{\alpha\in I}X_{\alpha}:x_{\beta}\in A_{\beta}\right\},\quad A_{\beta}\in\mathcal F_{\beta},\quad\beta\in I
+\left\{x=\left(x_{\alpha}\right)_{\alpha\in I}\in\prod_{\alpha\in I}X_{\alpha}:x_{\beta}\in A_{\beta}\right\},\ A_{\beta}\in\mathcal F_{\beta},\ \beta\in I
 $$
 
 生成的 $\sigma$-代数.
@@ -207,9 +213,9 @@ $$
 \mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right).
 $$
 
-**定义 5.1.5** (σ-有限测度)
+**定义 5.1.5** ($\sigma$-有限测度)
 
-设 $\left(X,\mathcal F,\mu\right)$ 是测度空间. 如果存在一列可测集 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 使得 $X=\bigcup_{n=1}^{\infty}E_{n}$ 且 $\mu\left(E_{n}\right)< +\infty$ 对所有 $n\in\mathbb N$ 成立, 则称 $\mu$ 为 σ-有限测度.
+设 $\left(X,\mathcal F,\mu\right)$ 是测度空间. 如果存在一列可测集 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 使得 $X=\bigcup_{n=1}^{\infty}E_{n}$ 且 $\mu\left(E_{n}\right)< +\infty$ 对所有 $n\in\mathbb N$ 成立, 则称 $\mu$ 为 $\sigma$-有限测度.
 
 **命题 5.2.1** (有限可加性)
 
@@ -354,7 +360,7 @@ $$
 设 $F:\mathbb R\to\mathbb R$ 是右连续单调递增函数, $\mu_{F}$ 是由 $F$ 生成的勒贝格-斯蒂尔杰斯测度, $\mathcal M^{*}$ 是 $\mu_{F}$-可测集的 $\sigma$-代数. 若 $E\in\mathcal M^{*}$, 则
 
 $$
-\begin{aligned}&\quad\;\mu_{F}\left(E\right)\\
+\begin{aligned}&\;\;\mu_{F}\left(E\right)\\
 &=\inf\left\{\mu_{F}\left(U\right):E\subset U,U\text{开}\right\}\\
 &=\sup\left\{\mu_{F}\left(K\right):K\subset E,K\text{紧}\right\}.\end{aligned}
 $$
@@ -571,7 +577,7 @@ $$
 \lim_{n\to\infty}f_{n}\left(x\right)=f\left(x\right)
 $$
 
-, 则称 $\left\{f_{n}\right\}$ μ-几乎处处收敛到 $f$, 记作 $f_{n}\xrightarrow{\text{a.e.}}f$.
+, 则称 $\left\{f_{n}\right\}$ $\mu$-几乎处处收敛到 $f$, 记作 $f_{n}\xrightarrow{\text{a.e.}}f$.
 
 **命题 9.1.2** (几乎处处收敛的刻画)
 
@@ -601,15 +607,15 @@ $$
 
 ## 乘积测度与重积分
 
-**定义 10.1.1** (乘积 σ-代数)
+**定义 10.1.1** (乘积 $\sigma$-代数)
 
-设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是两个测度空间. 乘积空间 $X\times Y$ 上的乘积 σ-代数定义为
+设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是两个测度空间. 乘积空间 $X\times Y$ 上的乘积 $\sigma$-代数定义为
 
 $$
 \mathcal A\otimes\mathcal B=\sigma\left(\left\{A\times B:A\in\mathcal A,B\in\mathcal B\right\}\right)
 $$
 
-, 即由所有可测矩形生成的 σ-代数.
+, 即由所有可测矩形生成的 $\sigma$-代数.
 
 **定义 10.1.2** (截面)
 
@@ -617,7 +623,7 @@ $$
 
 **定理 10.1.4** (乘积测度的存在唯一性)
 
-设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 σ-有限的测度空间. 存在唯一的测度 $\mu\times\nu$ 在 $\left(X\times Y,\mathcal A\otimes\mathcal B\right)$ 上, 使得对所有 $A\in\mathcal A$, $B\in\mathcal B$ 有
+设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间. 存在唯一的测度 $\mu\times\nu$ 在 $\left(X\times Y,\mathcal A\otimes\mathcal B\right)$ 上, 使得对所有 $A\in\mathcal A$, $B\in\mathcal B$ 有
 
 $$
 \left(\mu\times\nu\right)\left(A\times B\right)=\mu\left(A\right)\nu\left(B\right)
@@ -633,16 +639,16 @@ $$
 
 **定理 10.2.1** (富比尼定理)
 
-设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 σ-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 即
+设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 即
 
 $$
 \int_{X\times Y}\left|f\right|\mathrm{d}\left(\mu\times\nu\right)< \infty
 $$
 
-, 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 ν-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 μ-可积的; 且重积分相等:
+, 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 $\nu$-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 $\mu$-可积的; 且重积分相等:
 
 $$
-\begin{aligned}&\quad\;\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)\\
+\begin{aligned}&\;\;\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)\\
 &=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\
 &=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).\end{aligned}
 $$
@@ -652,7 +658,7 @@ $$
 如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则
 
 $$
-\begin{aligned}&\quad\;\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)\\
+\begin{aligned}&\;\;\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)\\
 &=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\
 &=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),\end{aligned}
 $$

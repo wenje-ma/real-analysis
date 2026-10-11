@@ -1,6 +1,11 @@
 # 作业 4
 
-> **定义 4.1.3** ($\sigma$-代数)<br>设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 **$\sigma$-代数**, 若满足:<br>(1) $X\in\mathcal F$;<br>(2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$;<br>(3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
+> **定义 4.1.3** ($\sigma$-代数)<br>设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 **$\sigma$-代数**, 若满足:
+> (1) $X\in\mathcal F$;
+> 
+> (2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$;
+> 
+> (3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
 
 > **定义 4.3.2** (博雷尔 $\sigma$-代数)<br>设 $\left(X,\tau\right)$ 是一个拓扑空间. 由所有开集生成的 $\sigma$-代数称为**博雷尔 $\sigma$-代数**, 记作 $\mathcal B\left(X\right)$; 其元素称为**博雷尔集**.
 
@@ -12,7 +17,14 @@
 
 > **命题 7.1.7** (乘积空间的可测性)<br>设 $f=\left(f_{1},\dots,f_{n}\right):X\to Y_{1}\times\cdots\times Y_{n}$. 在乘积空间配备乘积 $\sigma$-代数下, $f$ 可测当且仅当每个坐标映射 $f_{i}:X\to Y_{i}$ 可测.
 
-> **定理 7.1.8** (实值可测函数的运算封闭性)<br>设 $f,g:X\to\mathbb R$ 可测, $c\in\mathbb R$, 则:<br>(1) $cf$, $f+g$, $fg$, $\max\left(f,g\right)$, $\min\left(f,g\right)$ 可测;<br>(2) 若 $g\left(x\right)\ne0$ 对所有 $x$, 则 $f/g$ 可测;<br>(3) 若 $\left\{f_{n}\right\}$ 可测, 则 $\sup_{n}f_{n}$, $\inf_{n}f_{n}$, $\limsup_{n\to\infty}f_{n}$, $\liminf_{n\to\infty}f_{n}$ 可测;<br>(4) 若 $\left\{f_{n}\right\}$ 点点收敛, 则极限函数 $\lim_{n\to\infty}f_{n}$ 可测.
+> **定理 7.1.8** (实值可测函数的运算封闭性)<br>设 $f,g:X\to\mathbb R$ 可测, $c\in\mathbb R$, 则:
+> (1) $cf$, $f+g$, $fg$, $\max\left(f,g\right)$, $\min\left(f,g\right)$ 可测;
+> 
+> (2) 若 $g\left(x\right)\ne0$ 对所有 $x$, 则 $f/g$ 可测;
+> 
+> (3) 若 $\left\{f_{n}\right\}$ 可测, 则 $\sup_{n}f_{n}$, $\inf_{n}f_{n}$, $\limsup_{n\to\infty}f_{n}$, $\liminf_{n\to\infty}f_{n}$ 可测;
+> 
+> (4) 若 $\left\{f_{n}\right\}$ 点点收敛, 则极限函数 $\lim_{n\to\infty}f_{n}$ 可测.
 
 > **定理 7.1.9** (可测函数与连续函数的复合)<br>设 $f:X\to\mathbb R$ 可测, $g:\mathbb R\to\mathbb R$ 连续, 则 $g\circ f:X\to\mathbb R$ 可测.
 

@@ -93,7 +93,9 @@ $$
 S\left(s,t\right)\le S\left(s,t'\right)\le S\left(s',t'\right),
 $$
 
-即 $\frac{F\left(t\right)-F\left(s\right)}{t-s}\le\frac{F\left(t'\right)-F\left(s'\right)}{t'-s'}$.
+即
+
+$$\frac{F\left(t\right)-F\left(s\right)}{t-s}\le\frac{F\left(t'\right)-F\left(s'\right)}{t'-s'}.$$
 
 再证 $\Leftarrow$. 任取 $s<t$, $\lambda\in\left(0,1\right)$, 令 $u=\lambda s+\left(1-\lambda\right)t$, 则 $s<u<t$. 在题设不等式 (a) 中取 $s'=u$, $t'=t$, 满足 $s\le s'<t'$ 且 $s<t\le t'$, 得
 
@@ -122,4 +124,8 @@ $$
 \end{aligned}
 $$
 
-故 $F\left(\int g\,\mathrm{d}\mu\right)\le\int F\circ g\,\mathrm{d}\mu$. $\blacksquare$
+故
+
+$$F\left(\int g\,\mathrm{d}\mu\right)\le\int F\circ g\,\mathrm{d}\mu.$$
+
+$\blacksquare$

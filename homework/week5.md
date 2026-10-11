@@ -1,8 +1,13 @@
 # 作业 5
 
-> **定义 5.1.2** (测度)<br>设 $\left(X,\mathcal F\right)$ 是一个可测空间. 函数 $\mu:\mathcal F\to\left[0,+\infty\right]$ 称为 $\left(X,\mathcal F\right)$ 上的一个测度, 如果满足:<br>(1) 非负性: $\mu\left(E\right)\ge0$ 对一切 $E\in\mathcal F$ 成立;<br>(2) 零空集性: $\mu\left(\emptyset\right)=0$;<br>(3) 可数可加性 (σ-可加性): 对任意可数个两两不交的集合 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 有 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
+> **定义 5.1.2** (测度)<br>设 $\left(X,\mathcal F\right)$ 是一个可测空间. 函数 $\mu:\mathcal F\to\left[0,+\infty\right]$ 称为 $\left(X,\mathcal F\right)$ 上的一个测度, 如果满足:
+> (1) 非负性: $\mu\left(E\right)\ge0$ 对一切 $E\in\mathcal F$ 成立;
+> 
+> (2) 零空集性: $\mu\left(\emptyset\right)=0$;
+> 
+> (3) 可数可加性 ($\sigma$-可加性): 对任意可数个两两不交的集合 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 有 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
 
-> **定义 5.1.5** (σ-有限测度)<br>设 $\left(X,\mathcal F,\mu\right)$ 是测度空间. 如果存在一列可测集 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 使得 $X=\bigcup_{n=1}^{\infty}E_{n}$ 且 $\mu\left(E_{n}\right)<+\infty$ 对所有 $n\in\mathbb N$ 成立, 则称 $\mu$ 为 σ-有限测度.
+> **定义 5.1.5** ($\sigma$-有限测度)<br>设 $\left(X,\mathcal F,\mu\right)$ 是测度空间. 如果存在一列可测集 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 使得 $X=\bigcup_{n=1}^{\infty}E_{n}$ 且 $\mu\left(E_{n}\right)<+\infty$ 对所有 $n\in\mathbb N$ 成立, 则称 $\mu$ 为 $\sigma$-有限测度.
 
 > **定义 8.1.1** (非负简单函数的积分)<br>设 $f=\sum_{i=1}^{n}c_{i}\chi_{A_{i}}$ 是非负简单函数, 其中 $c_{i}\ge0$, $A_{i}\in\mathcal F$ 互不相交且 $\bigcup_{i}A_{i}=X$. 定义 $f$ 关于 $\mu$ 的积分为 $\int_{X}f\,\mathrm{d}\mu=\sum_{i=1}^{n}c_{i}\mu\left(A_{i}\right)$, 并约定 $0\cdot\infty=0$.
 
@@ -24,7 +29,10 @@
 
 > **引理 8.2.13** (级数逐项积分)<br>设 $\left\{f_{n}\right\}$ 是一列可测函数, 且 $\sum_{n=1}^{\infty}\int_{X}\left|f_{n}\right|\mathrm{d}\mu<\infty$, 则 $\int_{X}\left(\sum_{n=1}^{\infty}f_{n}\right)\mathrm{d}\mu=\sum_{n=1}^{\infty}\int_{X}f_{n}\,\mathrm{d}\mu$.
 
-> **定理 8.2.17** (参数积分)<br>设 $f:X\times\left[a,b\right]\to\mathbb R$, 且对每个 $t\in\left[a,b\right]$, 函数 $f\left(\cdot,t\right):X\to\mathbb R$ 可积. 令 $F\left(t\right)=\int_{X}f\left(x,t\right)\mathrm{d}\mu\left(x\right)$.<br>(a) 若存在 $g\in L^{1}\left(\mu\right)$ 使得对所有 $x,t$ 有 $\left|f\left(x,t\right)\right|\le g\left(x\right)$, 且对每个 $x$ 有 $\lim_{t\to t_{0}}f\left(x,t\right)=f\left(x,t_{0}\right)$, 则 $\lim_{t\to t_{0}}F\left(t\right)=F\left(t_{0}\right)$;<br>(b) 若偏导数 $\partial f/\partial t$ 存在, 且存在 $g\in L^{1}\left(\mu\right)$ 使得对所有 $x,t$ 有 $\left|\frac{\partial f}{\partial t}\left(x,t\right)\right|\le g\left(x\right)$, 则 $F$ 可微, 且 $F'\left(t\right)=\int\frac{\partial f}{\partial t}\left(x,t\right)\mathrm{d}\mu\left(x\right)$.
+> **定理 8.2.17** (参数积分)<br>设 $f:X\times\left[a,b\right]\to\mathbb R$, 且对每个 $t\in\left[a,b\right]$, 函数 $f\left(\cdot,t\right):X\to\mathbb R$ 可积. 令 $F\left(t\right)=\int_{X}f\left(x,t\right)\mathrm{d}\mu\left(x\right)$.
+> (a) 若存在 $g\in L^{1}\left(\mu\right)$ 使得对所有 $x,t$ 有 $\left|f\left(x,t\right)\right|\le g\left(x\right)$, 且对每个 $x$ 有 $\lim_{t\to t_{0}}f\left(x,t\right)=f\left(x,t_{0}\right)$, 则 $\lim_{t\to t_{0}}F\left(t\right)=F\left(t_{0}\right)$;
+> 
+> (b) 若偏导数 $\partial f/\partial t$ 存在, 且存在 $g\in L^{1}\left(\mu\right)$ 使得对所有 $x,t$ 有 $\left|\frac{\partial f}{\partial t}\left(x,t\right)\right|\le g\left(x\right)$, 则 $F$ 可微, 且 $F'\left(t\right)=\int\frac{\partial f}{\partial t}\left(x,t\right)\mathrm{d}\mu\left(x\right)$.
 
 > **基础知识**<br>**非负可积函数积分为零则几乎处处为零**: 设 $h\ge0$ 可测且 $\int_{X}h\,\mathrm{d}\mu=0$, 则 $h=0$ 几乎处处. 事实上 $\left\{h>0\right\}=\bigcup_{n=1}^{\infty}\left\{h>\frac{1}{n}\right\}$, 且 $\int h\ge\frac{1}{n}\mu\left(\left\{h>\frac{1}{n}\right\}\right)$, 故 $\mu\left(\left\{h>\frac{1}{n}\right\}\right)=0$ 对所有 $n$ 成立.
 
@@ -47,7 +55,7 @@ $$
 
 - $\lambda\left(\emptyset\right)=\sum_{i=1}^{n}c_{i}\mu\left(\emptyset\cap A_{i}\right)=0$;
 - 非负性显然, 因 $c_{i}\ge0$ 且 $\mu\ge0$;
-- σ-可加性: 设 $E=\bigsqcup_{j=1}^{\infty}E_{j}$ (两两不交). 由 $\mu$ 的 σ-可加性 (**定义 5.1.2**) 与**命题 8.1.2** (线性性),
+- $\sigma$-可加性: 设 $E=\bigsqcup_{j=1}^{\infty}E_{j}$ (两两不交). 由 $\mu$ 的 $\sigma$-可加性 (**定义 5.1.2**) 与**命题 8.1.2** (线性性),
 
 $$
 \begin{aligned}\lambda\left(E\right)&=\sum_{i=1}^{n}c_{i}\mu\left(E\cap A_{i}\right)\\&=\sum_{i=1}^{n}c_{i}\sum_{j=1}^{\infty}\mu\left(E_{j}\cap A_{i}\right)\\&=\sum_{j=1}^{\infty}\sum_{i=1}^{n}c_{i}\mu\left(E_{j}\cap A_{i}\right)\\&=\sum_{j=1}^{\infty}\lambda\left(E_{j}\right).
@@ -117,7 +125,7 @@ $$
 
 设 $f\in L^{1}$, 证明下列命题 :
 
-(a) 集合 $\left\{x:f\left(x\right)\ne0\right\}$ 是 σ-有限的;
+(a) 集合 $\left\{x:f\left(x\right)\ne0\right\}$ 是 $\sigma$-有限的;
 (b) 对 $f,g\in L^{1}$, $\int_{E}f\,\mathrm{d}\mu=\int_{E}g\,\mathrm{d}\mu$ 对任意可测集 $E$ 成立, 当且仅当 $\int\left|f-g\right|\mathrm{d}\mu=0$, 当且仅当 $f=g$ 关于 $\mu$ 几乎处处.
 
 ### 解答 习题三
@@ -134,7 +142,7 @@ $$
 \int_{X}f^{+}\mathrm{d}\mu\ge\int_{\left\{f^{+}>\frac{1}{n}\right\}}f^{+}\mathrm{d}\mu\ge\frac{1}{n}\mu\left(\left\{x:f^{+}\left(x\right)>\frac{1}{n}\right\}\right).
 $$
 
-因 $f$ 可积, $\int f^{+}\mathrm{d}\mu<\infty$, 故 $\mu\left(\left\{x:f^{+}\left(x\right)>\frac{1}{n}\right\}\right)\le n\int f^{+}\mathrm{d}\mu<\infty$. 于是 $\left\{f^{+}>0\right\}$ 是可数个有限测度集之并; 同理 $\left\{f^{-}>0\right\}$ 亦然. 从而 $\left\{x:f\left(x\right)\ne0\right\}$ 也是可数个有限测度集之并, 在**定义 5.1.5** 的意义下是 σ-有限的. $\blacksquare$
+因 $f$ 可积, $\int f^{+}\mathrm{d}\mu<\infty$, 故 $\mu\left(\left\{x:f^{+}\left(x\right)>\frac{1}{n}\right\}\right)\le n\int f^{+}\mathrm{d}\mu<\infty$. 于是 $\left\{f^{+}>0\right\}$ 是可数个有限测度集之并; 同理 $\left\{f^{-}>0\right\}$ 亦然. 从而 $\left\{x:f\left(x\right)\ne0\right\}$ 也是可数个有限测度集之并, 在**定义 5.1.5** 的意义下是 $\sigma$-有限的. $\blacksquare$
 
 (b) 记 $h:=\left|f-g\right|\in L^{1}$, $h\ge0$. 证明等价链.
 
@@ -241,7 +249,11 @@ $$
 \int f\,\mathrm{d}\mu\le\liminf_{n\to\infty}\int f_{n}\,\mathrm{d}\mu\le\limsup_{n\to\infty}\int f_{n}\,\mathrm{d}\mu\le\int f\,\mathrm{d}\mu,
 $$
 
-故 $\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu$. $\blacksquare$
+故
+
+$$\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu.$$
+
+$\blacksquare$
 
 #### 23
 
@@ -258,7 +270,7 @@ $$
 反之, 设 $H\left(x\right)=h\left(x\right)=:L$. 对 $\varepsilon>0$, 由极限定义存在 $\delta>0$ 使对 $0<\delta'<\delta$ 有
 
 $$
-\inf_{0<\left|y-x\right|\le\delta'}f\left(y\right)>L-\varepsilon,\quad \sup_{0<\left|y-x\right|\le\delta'}f\left(y\right)<L+\varepsilon.
+\inf_{0<\left|y-x\right|\le\delta'}f\left(y\right)>L-\varepsilon,\ \sup_{0<\left|y-x\right|\le\delta'}f\left(y\right)<L+\varepsilon.
 $$
 
 取 $\delta'=\delta$, 则对 $0<\left|y-x\right|\le\delta$ 有 $L-\varepsilon<f\left(y\right)<L+\varepsilon$; 又 $f\left(x\right)$ 介于 $\inf$ 与 $\sup$ 之间, 故 $L-\varepsilon<f\left(x\right)<L+\varepsilon$. 于是 $\left|f\left(y\right)-f\left(x\right)\right|<2\varepsilon$ 对 $0<\left|y-x\right|\le\delta$ 成立, 即 $f$ 在 $x$ 连续.
@@ -387,7 +399,11 @@ $$
 \end{aligned}
 $$
 
-又 $G^{\left(n\right)}\left(s\right)=\sqrt\pi\left(-\frac{1}{2}\right)\left(-\frac{3}{2}\right)\cdots\left(-\frac{2n-1}{2}\right)s^{-\frac{2n+1}{2}}$. 取 $s=1$:
+又
+
+$$G^{\left(n\right)}\left(s\right)=\sqrt\pi\left(-\frac{1}{2}\right)\left(-\frac{3}{2}\right)\cdots\left(-\frac{2n-1}{2}\right)s^{-\frac{2n+1}{2}}.$$
+
+取 $s=1$:
 
 $$
 \left(-1\right)^{n}\int_{-\infty}^{\infty}x^{2n}e^{-x^{2}}\mathrm{d}x=\sqrt\pi\left(-1\right)^{n}\frac{1\cdot3\cdots\left(2n-1\right)}{2^{n}},

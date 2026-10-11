@@ -4,9 +4,21 @@
 
 > **定义 1.3.3** (下极限)<br>$$\begin{aligned}\underline{\lim}_{n\to\infty}E_{n}&=\left\{x:x\text{ 仅不属于有限多个 }E_{n}\right\}\\&=\bigcup_{n=1}^{\infty}\bigcap_{k=n}^{\infty}E_{k}.\end{aligned}$$
 
-> **定义 4.1.3** ($\sigma$-代数)<br>设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 **$\sigma$-代数**, 若满足:<br>(1) $X\in\mathcal F$;<br>(2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$;<br>(3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.<br>称 $\left(X,\mathcal F\right)$ 为**可测空间**, $\mathcal F$ 中的元素称为**可测集**.
+> **定义 4.1.3** ($\sigma$-代数)<br>设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 **$\sigma$-代数**, 若满足:
+> (1) $X\in\mathcal F$;
+> 
+> (2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$;
+> 
+> (3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
+> 
+> 称 $\left(X,\mathcal F\right)$ 为**可测空间**, $\mathcal F$ 中的元素称为**可测集**.
 
-> **定义 5.1.2** (测度)<br>设 $\left(X,\mathcal F\right)$ 是可测空间. 函数 $\mu:\mathcal F\to\left[0,+\infty\right]$ 称为 $\left(X,\mathcal F\right)$ 上的一个测度, 若满足:<br>(1) 非负性: $\mu\left(E\right)\ge0$ 对一切 $E\in\mathcal F$;<br>(2) 零空集性: $\mu\left(\varnothing\right)=0$;<br>(3) 可数可加性 ($\sigma$-可加性): 对任意可数个两两不交的 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 有 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
+> **定义 5.1.2** (测度)<br>设 $\left(X,\mathcal F\right)$ 是可测空间. 函数 $\mu:\mathcal F\to\left[0,+\infty\right]$ 称为 $\left(X,\mathcal F\right)$ 上的一个测度, 若满足:
+> (1) 非负性: $\mu\left(E\right)\ge0$ 对一切 $E\in\mathcal F$;
+> 
+> (2) 零空集性: $\mu\left(\varnothing\right)=0$;
+> 
+> (3) 可数可加性 ($\sigma$-可加性): 对任意可数个两两不交的 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 有 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
 
 > **命题 5.2.1** (有限可加性)<br>设 $\mu$ 是 $\left(X,\mathcal F\right)$ 上的测度, $E_{1},\dots,E_{n}\in\mathcal F$ 是两两不交的集合, 则 $$\mu\left(\bigcup_{k=1}^{n}E_{k}\right)=\sum_{k=1}^{n}\mu\left(E_{k}\right).$$
 

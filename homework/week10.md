@@ -6,7 +6,10 @@
 
 > **基础知识** (球体积公式)<br>设 $C_{n}=m\left(B\left(1,0\right)\right)$ 为单位球的勒贝格测度, 则对任意 $x\in\mathbb R^{n}$, $r>0$,<br>$$m\left(B\left(x,r\right)\right)=C_{n}r^{n}.$$
 
-> **基础知识** (正则博雷尔测度)<br>设 $\nu$ 是 $\mathbb R^{n}$ 上的博雷尔测度. 称 $\nu$ 为**正则的**, 若:<br>(1) 对每个紧集 $K$, 有 $\nu\left(K\right)<\infty$;<br>(2) 对每个 $E\in\mathcal B\left(\mathbb R^{n}\right)$, 有 $\nu\left(E\right)=\inf\left\{\nu\left(U\right):U\text{开集},E\subset U\right\}$.
+> **基础知识** (正则博雷尔测度)<br>设 $\nu$ 是 $\mathbb R^{n}$ 上的博雷尔测度. 称 $\nu$ 为**正则的**, 若:
+> (1) 对每个紧集 $K$, 有 $\nu\left(K\right)<\infty$;
+> 
+> (2) 对每个 $E\in\mathcal B\left(\mathbb R^{n}\right)$, 有 $\nu\left(E\right)=\inf\left\{\nu\left(U\right):U\text{开集},E\subset U\right\}$.
 
 ### 习题一
 

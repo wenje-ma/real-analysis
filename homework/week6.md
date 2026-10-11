@@ -2,15 +2,15 @@
 
 > **定义 4.1.3** ($\sigma$-代数)<br>设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 $\sigma$-代数, 若 $X\in\mathcal F$, 对补运算封闭, 且对可数并封闭. 由此 $\mathcal F$ 也对可数交封闭.
 
-> **定义 5.1.5** (σ-有限测度)<br>设 $\left(X,\mathcal F,\mu\right)$ 是测度空间. 如果存在一列可测集 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 使得 $X=\bigcup_{n=1}^{\infty}E_{n}$ 且 $\mu\left(E_{n}\right)<+\infty$ 对所有 $n\in\mathbb N$ 成立, 则称 $\mu$ 为 σ-有限测度.
+> **定义 5.1.5** ($\sigma$-有限测度)<br>设 $\left(X,\mathcal F,\mu\right)$ 是测度空间. 如果存在一列可测集 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 使得 $X=\bigcup_{n=1}^{\infty}E_{n}$ 且 $\mu\left(E_{n}\right)<+\infty$ 对所有 $n\in\mathbb N$ 成立, 则称 $\mu$ 为 $\sigma$-有限测度.
 
-> **定理 6.4.5** (勒贝格-斯蒂尔杰斯测度的正则性)<br>设 $\mu_{F}$ 是由增右连续函数 $F$ 生成的勒贝格-斯蒂尔杰斯测度, $\mathcal M^{*}$ 是 $\mu_{F}$-可测集的 σ-代数. 若 $E\in\mathcal M^{*}$, 则 $$\begin{aligned}\mu_{F}\left(E\right)&=\inf\left\{\mu_{F}\left(U\right):E\subset U,U\text{开}\right\}\\&=\sup\left\{\mu_{F}\left(K\right):K\subset E,K\text{紧}\right\}.\end{aligned}$$ 特别地, 勒贝格测度在 $\left[a,b\right]$ 上内正则.
+> **定理 6.4.5** (勒贝格-斯蒂尔杰斯测度的正则性)<br>设 $\mu_{F}$ 是由增右连续函数 $F$ 生成的勒贝格-斯蒂尔杰斯测度, $\mathcal M^{*}$ 是 $\mu_{F}$-可测集的 $\sigma$-代数. 若 $E\in\mathcal M^{*}$, 则 $$\begin{aligned}\mu_{F}\left(E\right)&=\inf\left\{\mu_{F}\left(U\right):E\subset U,U\text{开}\right\}\\&=\sup\left\{\mu_{F}\left(K\right):K\subset E,K\text{紧}\right\}.\end{aligned}$$ 特别地, 勒贝格测度在 $\left[a,b\right]$ 上内正则.
 
 > **定理 7.1.8** (实值可测函数的运算封闭性)<br>设 $f,g:X\to\mathbb R$ 可测, $c\in\mathbb R$, 则 $cf$, $f+g$, $fg$, $\max\left(f,g\right)$, $\min\left(f,g\right)$ 可测; 若 $\left\{f_{n}\right\}$ 可测且点点收敛, 则极限函数可测.
 
 > **定理 7.2.2** (可测函数的构造)<br>若 $f:X\to\left[0,+\infty\right]$ 是非负可测函数, 则存在一列非负简单函数 $\left\{f_{n}\right\}$ 满足 $0\le f_{1}\le f_{2}\le\cdots\le f$ 且 $\lim_{n\to\infty}f_{n}\left(x\right)=f\left(x\right)$ 对每个 $x\in X$ 成立.
 
-> **定义 9.1.1** (几乎处处收敛)<br>设 $\left\{f_{n}\right\}$ 是一列可测函数, $f$ 是可测函数. 如果存在零测度集 $E$ 使对所有 $x\notin E$ 有 $\lim_{n\to\infty}f_{n}\left(x\right)=f\left(x\right)$, 则称 $\left\{f_{n}\right\}$ μ-几乎处处收敛到 $f$, 记作 $f_{n}\xrightarrow{\text{a.e.}}f$.
+> **定义 9.1.1** (几乎处处收敛)<br>设 $\left\{f_{n}\right\}$ 是一列可测函数, $f$ 是可测函数. 如果存在零测度集 $E$ 使对所有 $x\notin E$ 有 $\lim_{n\to\infty}f_{n}\left(x\right)=f\left(x\right)$, 则称 $\left\{f_{n}\right\}$ $\mu$-几乎处处收敛到 $f$, 记作 $f_{n}\xrightarrow{\text{a.e.}}f$.
 
 > **命题 9.1.2** (几乎处处收敛的刻画)<br>$f_{n}\xrightarrow{\text{a.e.}}f$ 当且仅当对任意的 $\epsilon>0$, $\mu\left(\bigcap_{k=1}^{\infty}\bigcup_{n=k}^{\infty}\left\{x:\left|f_{n}\left(x\right)-f\left(x\right)\right|>\epsilon\right\}\right)=0$.
 
@@ -37,7 +37,7 @@ $\left(\Rightarrow\right)$ 由**定义 9.1.3**, 若 $f_{n}\xrightarrow{\mu}f$, �
 $\left(\Leftarrow\right)$ 反证. 若 $f_{n}$ 不依测度收敛到 $f$, 则存在 $\epsilon>0$ 使 $\mu\left(\left\{\left|f_{n}-f\right|>\epsilon\right\}\right)$ 不趋于 $0$, 即存在 $\delta>0$ 与子列 $\left\{f_{n_{k}}\right\}$ 使
 
 $$
-\mu\left(\left\{x:\left|f_{n_{k}}\left(x\right)-f\left(x\right)\right|>\epsilon\right\}\right)\ge\delta\quad\text{对所有}k.
+\mu\left(\left\{x:\left|f_{n_{k}}\left(x\right)-f\left(x\right)\right|>\epsilon\right\}\right)\ge\delta\ \text{对所有}k.
 $$
 
 由**命题 9.1.2** (几乎处处收敛的刻画), $\left\{f_{n_{k}}\right\}$ 的任何子子列 $\left\{f_{n'_{j}}\right\}$ 都不能几乎处处收敛到 $f$: 因为
@@ -56,7 +56,7 @@ $$
 
 **32.** 设 $\mu\left(X\right)<\infty$. 若 $f,g$ 是 $X$ 上的复值可测函数, 定义 $\rho\left(f,g\right)=\int\frac{\left|f-g\right|}{1+\left|f-g\right|}\,\mathrm{d}\mu$. 则 $\rho$ 是可测函数空间 (把几乎处处相等的函数视为同一) 上的一个度量, 且 $f_{n}\to f$ 关于此度量收敛当且仅当 $f_{n}\to f$ 依测度收敛.
 
-**41.** 若 $\mu$ 是 σ-有限的且 $f_{n}\to f$ 几乎处处, 则存在可测集 $E_{1},E_{2},\dots\subset X$ 使得 $\mu\left(\left(\bigcup_{i=1}^{\infty}E_{i}\right)^{c}\right)=0$, 且 $f_{n}\to f$ 在每个 $E_{i}$ 上一致收敛.
+**41.** 若 $\mu$ 是 $\sigma$-有限的且 $f_{n}\to f$ 几乎处处, 则存在可测集 $E_{1},E_{2},\dots\subset X$ 使得 $\mu\left(\left(\bigcup_{i=1}^{\infty}E_{i}\right)^{c}\right)=0$, 且 $f_{n}\to f$ 在每个 $E_{i}$ 上一致收敛.
 
 **43.** 设 $\mu\left(X\right)<\infty$, $f:X\times\left[0,1\right]\to\mathbb C$ 满足: 对每个 $y\in\left[0,1\right]$, $f\left(\cdot,y\right)$ 可测; 对每个 $x\in X$, $f\left(x,\cdot\right)$ 连续.
 
@@ -69,7 +69,7 @@ b. 对任意 $\varepsilon>0$ 存在集合 $E\subset X$ 使得 $\mu\left(E\right)
 
 #### 32
 
-记 $d\left(t\right)=\frac{t}{1+t}$ ($t\ge0$). 由基础知识, $d$ 递增且次可加. 被积函数 $\frac{\left|f-g\right|}{1+\left|f-g\right|}=d\left(\left|f-g\right|\right)$ 非负且有界 (≤1), 可测, 故可积, $\rho$ 良定义.
+记 $d\left(t\right)=\frac{t}{1+t}$ ($t\ge0$). 由基础知识, $d$ 递增且次可加. 被积函数 $\frac{\left|f-g\right|}{1+\left|f-g\right|}=d\left(\left|f-g\right|\right)$ 非负且有界 ($\le$1), 可测, 故可积, $\rho$ 良定义.
 
 - $\rho\left(f,g\right)\ge0$; $\rho\left(f,g\right)=0$ 当且仅当 $d\left(\left|f-g\right|\right)=0$ 几乎处处 (由基础知识, 非负可积积分为零则几乎处处为零), 当且仅当 $\left|f-g\right|=0$ 几乎处处, 当且仅当 $f=g$ 几乎处处. 因此在把几乎处处相等的函数视为同一的商空间上, $\rho\left(f,g\right)=0$ 当且仅当 $f=g$.
 - 对称性显然: $\rho\left(f,g\right)=\rho\left(g,f\right)$.
@@ -97,11 +97,15 @@ $$
 \rho\left(f_{n},f\right)\ge\int_{\left\{\left|f_{n}-f\right|>\varepsilon\right\}}d\left(\left|f_{n}-f\right|\right)\mathrm{d}\mu\ge d\left(\varepsilon\right)\mu\left(\left\{\left|f_{n}-f\right|>\varepsilon\right\}\right),
 $$
 
-即 $\mu\left(\left\{\left|f_{n}-f\right|>\varepsilon\right\}\right)\le\frac{\rho\left(f_{n},f\right)}{d\left(\varepsilon\right)}\to0$. 由定义 9.1.3, $f_{n}\xrightarrow{\mu}f$. $\blacksquare$
+即
+
+$$\mu\left(\left\{\left|f_{n}-f\right|>\varepsilon\right\}\right)\le\frac{\rho\left(f_{n},f\right)}{d\left(\varepsilon\right)}\to0.$$
+
+由定义 9.1.3, $f_{n}\xrightarrow{\mu}f$. $\blacksquare$
 
 #### 41
 
-由**定义 5.1.5**, $\mu$ σ-有限, 存在 $X=\bigcup_{m=1}^{\infty}X_{m}$ 且 $\mu\left(X_{m}\right)<\infty$. 固定 $m$, 在 $X_{m}$ 上 $\mu\left(X_{m}\right)<\infty$ 且 $f_{n}\to f$ 几乎处处 (**定义 9.1.1**), 由**定理 9.1.15** (叶戈罗夫定理), 对每个 $j\in\mathbb N$ 存在可测集 $E_{mj}\subset X_{m}$ 使 $\mu\left(X_{m}\setminus E_{mj}\right)<2^{-j}$ 且 $f_{n}\to f$ 在 $E_{mj}$ 上一致收敛.
+由**定义 5.1.5**, $\mu$ $\sigma$-有限, 存在 $X=\bigcup_{m=1}^{\infty}X_{m}$ 且 $\mu\left(X_{m}\right)<\infty$. 固定 $m$, 在 $X_{m}$ 上 $\mu\left(X_{m}\right)<\infty$ 且 $f_{n}\to f$ 几乎处处 (**定义 9.1.1**), 由**定理 9.1.15** (叶戈罗夫定理), 对每个 $j\in\mathbb N$ 存在可测集 $E_{mj}\subset X_{m}$ 使 $\mu\left(X_{m}\setminus E_{mj}\right)<2^{-j}$ 且 $f_{n}\to f$ 在 $E_{mj}$ 上一致收敛.
 
 令 $F_{m}:=\bigcup_{j=1}^{\infty}E_{mj}$. 则 $X_{m}\setminus F_{m}=\bigcap_{j=1}^{\infty}\left(X_{m}\setminus E_{mj}\right)$, 且 $\mu\left(X_{m}\setminus F_{m}\right)\le\mu\left(X_{m}\setminus E_{mj}\right)<2^{-j}$ 对所有 $j$ 成立, 故 $\mu\left(X_{m}\setminus F_{m}\right)=0$. 令 $F:=\bigcup_{m,j}E_{mj}=\bigcup_{m}F_{m}$, 则
 
@@ -120,7 +124,7 @@ $$
 E_{\varepsilon,\delta}=\bigcap_{y\in\left[0,\delta\right)\cap\mathbb Q}\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\varepsilon\right\},
 $$
 
-这是可数个可测集之交, 由**定义 4.1.3** (σ-代数对可数交封闭) 可测. $\blacksquare$
+这是可数个可测集之交, 由**定义 4.1.3** ($\sigma$-代数对可数交封闭) 可测. $\blacksquare$
 
 **b.** 固定 $\eta>0$ 作为一致收敛的误差. 对每个 $\delta>0$, 记 $F_{\delta}:=\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta\text{对所有}y<\delta\right\}$, 由 a 可测, 且随 $\delta$ 减小而增大. 因 $f\left(x,\cdot\right)$ 在 $0$ 处连续, 对每个 $x$ 有 $\lim_{y\to0}f\left(x,y\right)=f\left(x,0\right)$, 故存在 $\delta>0$ 使 $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ 对所有 $y<\delta$, 即 $x\in F_{\delta}$. 故 $\bigcup_{\delta>0}F_{\delta}=X$.
 
