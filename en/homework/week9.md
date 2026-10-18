@@ -190,7 +190,7 @@ Prove Problems 9, 11, 12, 16 and 17.
 
 **9.** Let $\left\{\nu_{j}\right\}$ be a sequence of positive measures. If $\nu_{j}\perp\mu$ for all $j$, then $\sum_{j}\nu_{j}\perp\mu$; if $\nu_{j}\ll\mu$ for all $j$, then $\sum_{j}\nu_{j}\ll\mu$.
 
-**11.** Let $\mu$ be a positive measure. A family of functions $\left\{f_{\alpha}\right\}_{\alpha\in A}\subset L^{1}\left(\mu\right)$ is called uniformly integrable if for every $\varepsilon>0$ there exists $\delta>0$ such that $\left|\int_{E}f_{\alpha}\,\mathrm{d}\mu\right|<\varepsilon$ for all $\alpha\in A$, whenever $\mu\left(E\right)<\delta$.
+**11.** Let $\mu$ be a positive measure. A family of functions $\left\{f_{\alpha}\right\}_{\alpha\in A}\subset L^{1}\left(\mu\right)$ is called uniformly integrable if for every $\epsilon>0$ there exists $\delta>0$ such that $\left|\int_{E}f_{\alpha}\,\mathrm{d}\mu\right|<\epsilon$ for all $\alpha\in A$, whenever $\mu\left(E\right)<\delta$.
 a. Any finite subset of $L^{1}\left(\mu\right)$ is uniformly integrable;
 b. If $\left\{f_{n}\right\}$ is a sequence in $L^{1}\left(\mu\right)$ converging in the $L^{1}$ metric to $f\in L^{1}\left(\mu\right)$, then $\left\{f_{n}\right\}$ is uniformly integrable.
 
@@ -220,15 +220,15 @@ so $E$ is a $\mu$-null set. Also $E^{c}=\bigcap_{j=1}^{\infty}E_{j}^{c}\subset E
 
 #### 11
 
-**(a)** Let $\left\{f_{1},\dots,f_{n}\right\}\subset L^{1}\left(\mu\right)$. For each $j$, by **Remark 11.5.3** ($f_{j}\in L^{1}\left(\mu\right)$, $\lim_{\mu\left(E\right)\to0}\int_{E}f_{j}\,\mathrm{d}\mu=0$), there exists $\delta_{j}>0$ such that $\mu\left(E\right)<\delta_{j}\Rightarrow\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|<\varepsilon$. Take $\delta=\min_{1\le j\le n}\delta_{j}>0$; then when $\mu\left(E\right)<\delta$, for all $j$ we have $\mu\left(E\right)<\delta_{j}$, hence $\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|<\varepsilon$. Hence $\left\{f_{1},\dots,f_{n}\right\}$ is uniformly integrable. $\blacksquare$
+**(a)** Let $\left\{f_{1},\dots,f_{n}\right\}\subset L^{1}\left(\mu\right)$. For each $j$, by **Remark 11.5.3** ($f_{j}\in L^{1}\left(\mu\right)$, $\lim_{\mu\left(E\right)\to0}\int_{E}f_{j}\,\mathrm{d}\mu=0$), there exists $\delta_{j}>0$ such that $\mu\left(E\right)<\delta_{j}\Rightarrow\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|<\epsilon$. Take $\delta=\min_{1\le j\le n}\delta_{j}>0$; then when $\mu\left(E\right)<\delta$, for all $j$ we have $\mu\left(E\right)<\delta_{j}$, hence $\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|<\epsilon$. Hence $\left\{f_{1},\dots,f_{n}\right\}$ is uniformly integrable. $\blacksquare$
 
-**(b)** Since $\int\left|f_{n}-f\right|\mathrm{d}\mu\to0$, there exists $N$ such that for $n\ge N$, $\int\left|f_{n}-f\right|\mathrm{d}\mu<\frac{\varepsilon}{2}$. By (a), the singleton $\left\{f\right\}$ is uniformly integrable: there exists $\delta_{1}>0$ such that $\mu\left(E\right)<\delta_{1}\Rightarrow\left|\int_{E}f\,\mathrm{d}\mu\right|<\frac{\varepsilon}{2}$. Also the finite set $\left\{f_{1},\dots,f_{N-1}\right\}$ is uniformly integrable by (a): there exists $\delta_{2}>0$ such that $\mu\left(E\right)<\delta_{2}\Rightarrow\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|<\varepsilon$ for $n<N$. Take $\delta=\min\left\{\delta_{1},\delta_{2}\right\}$. When $\mu\left(E\right)<\delta$, for $n\ge N$,
+**(b)** Since $\int\left|f_{n}-f\right|\mathrm{d}\mu\to0$, there exists $N$ such that for $n\ge N$, $\int\left|f_{n}-f\right|\mathrm{d}\mu<\frac{\epsilon}{2}$. By (a), the singleton $\left\{f\right\}$ is uniformly integrable: there exists $\delta_{1}>0$ such that $\mu\left(E\right)<\delta_{1}\Rightarrow\left|\int_{E}f\,\mathrm{d}\mu\right|<\frac{\epsilon}{2}$. Also the finite set $\left\{f_{1},\dots,f_{N-1}\right\}$ is uniformly integrable by (a): there exists $\delta_{2}>0$ such that $\mu\left(E\right)<\delta_{2}\Rightarrow\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|<\epsilon$ for $n<N$. Take $\delta=\min\left\{\delta_{1},\delta_{2}\right\}$. When $\mu\left(E\right)<\delta$, for $n\ge N$,
 
 $$
-\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|\le\left|\int_{E}f\,\mathrm{d}\mu\right|+\int_{E}\left|f_{n}-f\right|\mathrm{d}\mu\le\frac{\varepsilon}{2}+\int\left|f_{n}-f\right|\mathrm{d}\mu<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
+\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|\le\left|\int_{E}f\,\mathrm{d}\mu\right|+\int_{E}\left|f_{n}-f\right|\mathrm{d}\mu\le\frac{\epsilon}{2}+\int\left|f_{n}-f\right|\mathrm{d}\mu<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon,
 $$
 
-while for $n<N$, also $\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|<\varepsilon$. Hence $\left\{f_{n}\right\}$ is uniformly integrable. $\blacksquare$
+while for $n<N$, also $\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|<\epsilon$. Hence $\left\{f_{n}\right\}$ is uniformly integrable. $\blacksquare$
 
 #### 12
 

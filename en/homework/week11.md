@@ -51,11 +51,11 @@ $$
 
 while the right limit $F\left(q_{k}+\right)=\lim_{x\downarrow q_{k}}F\left(x\right)=F\left(q_{k}\right)$ (since for $x>q_{k}$, $q_{k}$ is still counted). Hence $F$ has unequal left and right limits at $q_{k}$, which is a jump discontinuity of the first kind.
 
-**Every irrational point is a continuity point.** Let $x_{0}\in\mathbb R\setminus\mathbb Q$. Given $\varepsilon>0$, by the **Basic Knowledge** (Series), choose $N$ such that $\sum_{n>N}2^{-n}<\varepsilon$. Since $x_{0}$ is irrational, choose $\delta>0$ small enough that the open interval $\left(x_{0}-\delta,x_{0}+\delta\right)$ contains none of $q_{1},\dots,q_{N}$ (finitely many points, which can be separated). Then when $\left|x-x_{0}\right|<\delta$, the interval $\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right]$ contains at most $q_{N+1},q_{N+2},\dots$, so
+**Every irrational point is a continuity point.** Let $x_{0}\in\mathbb R\setminus\mathbb Q$. Given $\epsilon>0$, by the **Basic Knowledge** (Series), choose $N$ such that $\sum_{n>N}2^{-n}<\epsilon$. Since $x_{0}$ is irrational, choose $\delta>0$ small enough that the open interval $\left(x_{0}-\delta,x_{0}+\delta\right)$ contains none of $q_{1},\dots,q_{N}$ (finitely many points, which can be separated). Then when $\left|x-x_{0}\right|<\delta$, the interval $\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right]$ contains at most $q_{N+1},q_{N+2},\dots$, so
 
 $$
 \begin{aligned}\left|F\left(x\right)-F\left(x_{0}\right)\right|\\
-&=\sum_{x_{0}<q_{n}\le x\text{ 或 }x<q_{n}\le x_{0}}2^{-n}\\&\le\sum_{n>N}2^{-n}<\varepsilon.
+&=\sum_{x_{0}<q_{n}\le x\text{ 或 }x<q_{n}\le x_{0}}2^{-n}\\&\le\sum_{n>N}2^{-n}<\epsilon.
 \end{aligned}
 $$
 

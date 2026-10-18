@@ -589,10 +589,10 @@ $$
 
 **定义 9.1.3** (依测度收敛)
 
-设 $\left\{f_{n}\right\}$ 是一列可测函数, $f$ 是可测函数. 如果对任意 $\varepsilon> 0$ 有
+设 $\left\{f_{n}\right\}$ 是一列可测函数, $f$ 是可测函数. 如果对任意 $\epsilon> 0$ 有
 
 $$
-\lim_{n\to\infty}\mu\left(\left\{x:\left|f_{n}\left(x\right)-f\left(x\right)\right|> \varepsilon\right\}\right)=0
+\lim_{n\to\infty}\mu\left(\left\{x:\left|f_{n}\left(x\right)-f\left(x\right)\right|> \epsilon\right\}\right)=0
 $$
 
 , 则称 $\left\{f_{n}\right\}$ 依测度收敛到 $f$, 记作 $f_{n}\xrightarrow{\mu}f$.
@@ -834,10 +834,10 @@ $$
 
 **定义 15.0.11** (绝对连续性)
 
-函数 $f:\left[a,b\right]\to\mathbb R$ 称为**绝对连续的** (记 $f\in AC\left(\left[a,b\right]\right)$), 若对任意 $\varepsilon> 0$, 存在 $\delta> 0$, 使得对任意有限个互不相交的子区间 $\left(a_{i},b_{i}\right)\subset\left[a,b\right]$, 只要 $\sum_{i}\left(b_{i}-a_{i}\right)< \delta$, 就有
+函数 $f:\left[a,b\right]\to\mathbb R$ 称为**绝对连续的** (记 $f\in AC\left(\left[a,b\right]\right)$), 若对任意 $\epsilon> 0$, 存在 $\delta> 0$, 使得对任意有限个互不相交的子区间 $\left(a_{i},b_{i}\right)\subset\left[a,b\right]$, 只要 $\sum_{i}\left(b_{i}-a_{i}\right)< \delta$, 就有
 
 $$
-\sum_{i}\left|f\left(b_{i}\right)-f\left(a_{i}\right)\right|< \varepsilon.
+\sum_{i}\left|f\left(b_{i}\right)-f\left(a_{i}\right)\right|< \epsilon.
 $$
 
 **定理 15.0.14** (等价刻画)

@@ -105,10 +105,10 @@ $$
 \inf\left\{\lambda\left(U\right):U\text{开},U\supset E\right\}\ge\lambda\left(E\right).
 $$
 
-反向: 给定 $\varepsilon>0$. 因 $\nu$ 正则, $\nu|_{A}$ (限制到 $A$ 上) 也满足正则性条件 (1)(2): 条件 (1) 显然; 对条件 (2), 取 $\nu|_{A}$ 的外正则性, 对 $E\cap A$ 存在开集 $W\supset E\cap A$ 使 $\nu\left(W\cap A\right)<\nu\left(E\cap A\right)+\varepsilon=\lambda\left(E\right)+\varepsilon$ (用 $\nu$ 的正则性先取开集 $W'\supset E\cap A$ 使 $\nu\left(W'\right)<\nu\left(E\cap A\right)+\varepsilon$, 再令 $W=W'$ 并注意 $\nu\left(W'\cap A\right)\le\nu\left(W'\right)$). 又因 $\left(E\cap A^{c}\right)\cap A=\varnothing$ 且 $\lambda\left(E\cap A^{c}\right)=0$, 可取足够薄的开邻域 $V\supset E\cap A^{c}$ 使 $\nu\left(V\cap A\right)<\varepsilon$ (例如取 $V=\left\{x:\mathrm{dist}\left(x,E\cap A^{c}\right)<\delta\right\}$ 并令 $\delta\to0$, 则 $V\cap A\downarrow\left(E\cap A^{c}\right)\cap A=\varnothing$, 由上连续性使 $\nu\left(V\cap A\right)\to0$). 令 $U=W\cup V$, 则 $U$ 开、$U\supset E$, 且
+反向: 给定 $\epsilon>0$. 因 $\nu$ 正则, $\nu|_{A}$ (限制到 $A$ 上) 也满足正则性条件 (1)(2): 条件 (1) 显然; 对条件 (2), 取 $\nu|_{A}$ 的外正则性, 对 $E\cap A$ 存在开集 $W\supset E\cap A$ 使 $\nu\left(W\cap A\right)<\nu\left(E\cap A\right)+\epsilon=\lambda\left(E\right)+\epsilon$ (用 $\nu$ 的正则性先取开集 $W'\supset E\cap A$ 使 $\nu\left(W'\right)<\nu\left(E\cap A\right)+\epsilon$, 再令 $W=W'$ 并注意 $\nu\left(W'\cap A\right)\le\nu\left(W'\right)$). 又因 $\left(E\cap A^{c}\right)\cap A=\varnothing$ 且 $\lambda\left(E\cap A^{c}\right)=0$, 可取足够薄的开邻域 $V\supset E\cap A^{c}$ 使 $\nu\left(V\cap A\right)<\epsilon$ (例如取 $V=\left\{x:\mathrm{dist}\left(x,E\cap A^{c}\right)<\delta\right\}$ 并令 $\delta\to0$, 则 $V\cap A\downarrow\left(E\cap A^{c}\right)\cap A=\varnothing$, 由上连续性使 $\nu\left(V\cap A\right)\to0$). 令 $U=W\cup V$, 则 $U$ 开、$U\supset E$, 且
 
 $$
-\lambda\left(U\right)=\nu\left(U\cap A\right)\le\nu\left(W\cap A\right)+\nu\left(V\cap A\right)<\lambda\left(E\right)+2\varepsilon.
+\lambda\left(U\right)=\nu\left(U\cap A\right)\le\nu\left(W\cap A\right)+\nu\left(V\cap A\right)<\lambda\left(E\right)+2\epsilon.
 $$
 
 故 $\inf\left\{\lambda\left(U\right):U\text{开},U\supset E\right\}\le\lambda\left(E\right)$. 合并得 $\lambda\left(E\right)=\inf\left\{\lambda\left(U\right):U\text{开},U\supset E\right\}$.

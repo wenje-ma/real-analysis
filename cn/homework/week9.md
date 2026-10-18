@@ -190,7 +190,7 @@ $$
 
 **9.** 设 $\left\{\nu_{j}\right\}$ 是一列正测度. 若 $\nu_{j}\perp\mu$ 对一切 $j$, 则 $\sum_{j}\nu_{j}\perp\mu$; 若 $\nu_{j}\ll\mu$ 对一切 $j$, 则 $\sum_{j}\nu_{j}\ll\mu$.
 
-**11.** 设 $\mu$ 是正测度. 一族函数 $\left\{f_{\alpha}\right\}_{\alpha\in A}\subset L^{1}\left(\mu\right)$ 称为一致可积的, 若对任意 $\varepsilon>0$ 存在 $\delta>0$ 使得 $\left|\int_{E}f_{\alpha}\,\mathrm{d}\mu\right|<\varepsilon$ 对所有 $\alpha\in A$ 成立, 只要 $\mu\left(E\right)<\delta$.
+**11.** 设 $\mu$ 是正测度. 一族函数 $\left\{f_{\alpha}\right\}_{\alpha\in A}\subset L^{1}\left(\mu\right)$ 称为一致可积的, 若对任意 $\epsilon>0$ 存在 $\delta>0$ 使得 $\left|\int_{E}f_{\alpha}\,\mathrm{d}\mu\right|<\epsilon$ 对所有 $\alpha\in A$ 成立, 只要 $\mu\left(E\right)<\delta$.
 a. $L^{1}\left(\mu\right)$ 的任意有限子集是一致可积的;
 b. 若 $\left\{f_{n}\right\}$ 是 $L^{1}\left(\mu\right)$ 中的序列且在 $L^{1}$ 度量下收敛于 $f\in L^{1}\left(\mu\right)$, 则 $\left\{f_{n}\right\}$ 是一致可积的.
 
@@ -220,15 +220,15 @@ $$
 
 #### 11
 
-**(a)** 设 $\left\{f_{1},\dots,f_{n}\right\}\subset L^{1}\left(\mu\right)$. 对每个 $j$, 由**注 11.5.3** ($f_{j}\in L^{1}\left(\mu\right)$, $\lim_{\mu\left(E\right)\to0}\int_{E}f_{j}\,\mathrm{d}\mu=0$), 存在 $\delta_{j}>0$ 使 $\mu\left(E\right)<\delta_{j}\Rightarrow\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|<\varepsilon$. 取 $\delta=\min_{1\le j\le n}\delta_{j}>0$, 则当 $\mu\left(E\right)<\delta$ 时, 对所有 $j$ 有 $\mu\left(E\right)<\delta_{j}$, 故 $\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|<\varepsilon$. 故 $\left\{f_{1},\dots,f_{n}\right\}$ 一致可积. $\blacksquare$
+**(a)** 设 $\left\{f_{1},\dots,f_{n}\right\}\subset L^{1}\left(\mu\right)$. 对每个 $j$, 由**注 11.5.3** ($f_{j}\in L^{1}\left(\mu\right)$, $\lim_{\mu\left(E\right)\to0}\int_{E}f_{j}\,\mathrm{d}\mu=0$), 存在 $\delta_{j}>0$ 使 $\mu\left(E\right)<\delta_{j}\Rightarrow\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|<\epsilon$. 取 $\delta=\min_{1\le j\le n}\delta_{j}>0$, 则当 $\mu\left(E\right)<\delta$ 时, 对所有 $j$ 有 $\mu\left(E\right)<\delta_{j}$, 故 $\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|<\epsilon$. 故 $\left\{f_{1},\dots,f_{n}\right\}$ 一致可积. $\blacksquare$
 
-**(b)** 因 $\int\left|f_{n}-f\right|\mathrm{d}\mu\to0$, 存在 $N$ 使当 $n\ge N$ 时 $\int\left|f_{n}-f\right|\mathrm{d}\mu<\frac{\varepsilon}{2}$. 由 (a), 单元素集 $\left\{f\right\}$ 一致可积: 存在 $\delta_{1}>0$ 使 $\mu\left(E\right)<\delta_{1}\Rightarrow\left|\int_{E}f\,\mathrm{d}\mu\right|<\frac{\varepsilon}{2}$. 又有限集 $\left\{f_{1},\dots,f_{N-1}\right\}$ 由 (a) 一致可积: 存在 $\delta_{2}>0$ 使 $\mu\left(E\right)<\delta_{2}\Rightarrow\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|<\varepsilon$ 对 $n<N$ 成立. 取 $\delta=\min\left\{\delta_{1},\delta_{2}\right\}$. 当 $\mu\left(E\right)<\delta$ 时, 对 $n\ge N$,
+**(b)** 因 $\int\left|f_{n}-f\right|\mathrm{d}\mu\to0$, 存在 $N$ 使当 $n\ge N$ 时 $\int\left|f_{n}-f\right|\mathrm{d}\mu<\frac{\epsilon}{2}$. 由 (a), 单元素集 $\left\{f\right\}$ 一致可积: 存在 $\delta_{1}>0$ 使 $\mu\left(E\right)<\delta_{1}\Rightarrow\left|\int_{E}f\,\mathrm{d}\mu\right|<\frac{\epsilon}{2}$. 又有限集 $\left\{f_{1},\dots,f_{N-1}\right\}$ 由 (a) 一致可积: 存在 $\delta_{2}>0$ 使 $\mu\left(E\right)<\delta_{2}\Rightarrow\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|<\epsilon$ 对 $n<N$ 成立. 取 $\delta=\min\left\{\delta_{1},\delta_{2}\right\}$. 当 $\mu\left(E\right)<\delta$ 时, 对 $n\ge N$,
 
 $$
-\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|\le\left|\int_{E}f\,\mathrm{d}\mu\right|+\int_{E}\left|f_{n}-f\right|\mathrm{d}\mu\le\frac{\varepsilon}{2}+\int\left|f_{n}-f\right|\mathrm{d}\mu<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
+\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|\le\left|\int_{E}f\,\mathrm{d}\mu\right|+\int_{E}\left|f_{n}-f\right|\mathrm{d}\mu\le\frac{\epsilon}{2}+\int\left|f_{n}-f\right|\mathrm{d}\mu<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon,
 $$
 
-而对 $n<N$ 亦有 $\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|<\varepsilon$. 故 $\left\{f_{n}\right\}$ 一致可积. $\blacksquare$
+而对 $n<N$ 亦有 $\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|<\epsilon$. 故 $\left\{f_{n}\right\}$ 一致可积. $\blacksquare$
 
 #### 12
 

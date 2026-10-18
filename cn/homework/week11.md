@@ -51,11 +51,11 @@ $$
 
 而右极限 $F\left(q_{k}+\right)=\lim_{x\downarrow q_{k}}F\left(x\right)=F\left(q_{k}\right)$ (因 $x>q_{k}$ 时仍计入 $q_{k}$). 故 $F$ 在 $q_{k}$ 处左、右极限不相等, 是第一类间断点.
 
-**每个无理点是连续点.** 设 $x_{0}\in\mathbb R\setminus\mathbb Q$. 给定 $\varepsilon>0$, 由**基础知识** (级数) 取 $N$ 使 $\sum_{n>N}2^{-n}<\varepsilon$. 因 $x_{0}$ 无理, 取 $\delta>0$ 小到开区间 $\left(x_{0}-\delta,x_{0}+\delta\right)$ 内不含 $q_{1},\dots,q_{N}$ (有限个点, 可分离). 则当 $\left|x-x_{0}\right|<\delta$ 时, 区间 $\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right]$ 内至多含 $q_{N+1},q_{N+2},\dots$, 故
+**每个无理点是连续点.** 设 $x_{0}\in\mathbb R\setminus\mathbb Q$. 给定 $\epsilon>0$, 由**基础知识** (级数) 取 $N$ 使 $\sum_{n>N}2^{-n}<\epsilon$. 因 $x_{0}$ 无理, 取 $\delta>0$ 小到开区间 $\left(x_{0}-\delta,x_{0}+\delta\right)$ 内不含 $q_{1},\dots,q_{N}$ (有限个点, 可分离). 则当 $\left|x-x_{0}\right|<\delta$ 时, 区间 $\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right]$ 内至多含 $q_{N+1},q_{N+2},\dots$, 故
 
 $$
 \begin{aligned}\left|F\left(x\right)-F\left(x_{0}\right)\right|\\
-&=\sum_{x_{0}<q_{n}\le x\text{ 或 }x<q_{n}\le x_{0}}2^{-n}\\&\le\sum_{n>N}2^{-n}<\varepsilon.
+&=\sum_{x_{0}<q_{n}\le x\text{ 或 }x<q_{n}\le x_{0}}2^{-n}\\&\le\sum_{n>N}2^{-n}<\epsilon.
 \end{aligned}
 $$
 
