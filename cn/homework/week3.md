@@ -97,13 +97,13 @@ $$
 
 再证唯一性. 设 $\nu$ 是 $\mathcal M$ 上任一满足 $\nu|_{\mathcal E}=\mu_{0}$ 的测度, 我们证明 $\nu=\mu^{*}|_{\mathcal M}$. 先设 $\mu_{0}\left(X\right)<\infty$.
 
-**步骤 1: $\nu\le\mu^{*}$ 在 $\mathcal M$ 上.** 对任意 $A\in\mathcal M$ 和 $\epsilon>0$, 由**定理 6.2.2** 中 $\mu^{*}$ 的定义, 存在 $\left\{E_{n}\right\}\subset\mathcal E$ 覆盖 $A$ 使 $\sum_{n}\mu_{0}\left(E_{n}\right)\le\mu^{*}\left(A\right)+\epsilon$. 由 $\nu$ 的次可数可加性 (**命题 5.2.3**) 及 $\nu|_{\mathcal E}=\mu_{0}$,
+**步骤 1: $\nu\le\mu^{*}$ 在 $\mathcal M$ 上.** 对任意 $A\in\mathcal M$ 和 $\varepsilon>0$, 由**定理 6.2.2** 中 $\mu^{*}$ 的定义, 存在 $\left\{E_{n}\right\}\subset\mathcal E$ 覆盖 $A$ 使 $\sum_{n}\mu_{0}\left(E_{n}\right)\le\mu^{*}\left(A\right)+\varepsilon$. 由 $\nu$ 的次可数可加性 (**命题 5.2.3**) 及 $\nu|_{\mathcal E}=\mu_{0}$,
 
 $$
-\nu\left(A\right)\le\sum_{n}\nu\left(E_{n}\right)=\sum_{n}\mu_{0}\left(E_{n}\right)\le\mu^{*}\left(A\right)+\epsilon.
+\nu\left(A\right)\le\sum_{n}\nu\left(E_{n}\right)=\sum_{n}\mu_{0}\left(E_{n}\right)\le\mu^{*}\left(A\right)+\varepsilon.
 $$
 
-由 $\epsilon$ 的任意性, $\nu\left(A\right)\le\mu^{*}\left(A\right)$.
+由 $\varepsilon$ 的任意性, $\nu\left(A\right)\le\mu^{*}\left(A\right)$.
 
 **步骤 2: $\nu=\mu^{*}$ 在 $\sigma\left(\mathcal E\right)$ 上.** 令 $\mathcal H=\left\{A\in\sigma\left(\mathcal E\right):\nu\left(A\right)=\mu^{*}\left(A\right)\right\}$. 对 $E\in\mathcal E$, 由**定理 6.2.2** 与 $\nu|_{\mathcal E}=\mu_{0}$ 得 $\mu^{*}\left(E\right)=\mu_{0}\left(E\right)=\nu\left(E\right)$, 故 $\mathcal E\subset\mathcal H$. 验证 $\mathcal H$ 是单调类 (**定义 4.4.1**): 若 $\left\{A_{n}\right\}\subset\mathcal H$ 且 $A_{n}\uparrow A$, 由 $\nu,\mu^{*}|_{\mathcal M}$ 的下连续性 (**命题 5.2.4**; $\sigma\left(\mathcal E\right)\subset\mathcal M$) 得 $\nu\left(A\right)=\lim_{n}\nu\left(A_{n}\right)=\lim_{n}\mu^{*}\left(A_{n}\right)=\mu^{*}\left(A\right)$, 故 $A\in\mathcal H$; 递减情形同理 (此处 $\mu^{*}\left(A_{1}\right)\le\mu^{*}\left(X\right)=\mu_{0}\left(X\right)<\infty$, 上连续性可用). 故 $\mathcal H$ 是包含代数 $\mathcal E$ 的单调类, 由**定理 4.4.2** (单调类定理), $\sigma\left(\mathcal E\right)\subset\mathcal H$, 即 $\nu=\mu^{*}$ 在 $\sigma\left(\mathcal E\right)$ 上.
 
@@ -286,14 +286,14 @@ $$
 
 **4. 无处稠密.** 任取非空开区间 $\left(\alpha,\beta\right)\subset\mathbb R$. 若它与 $\left[0,1\right]$ 相交, 取 $n$ 使 $3^{-n}<\beta-\alpha$. 第 $n$ 步后 $C_{n}$ 是 $2^{n}$ 个长度 $3^{-n}$ 的闭区间之并, 这些闭区间之间的 $2^{n}-1$ 个开区间 (第 $n$ 步挖去的) 覆盖了 $\left[0,1\right]$ 中除端点外的部分, 且挖去区间的长度均为 $3^{-n}$. 因 $\left(\alpha,\beta\right)$ 长度大于 $3^{-n}$, 它必包含某个第 $n$ 步挖去的开区间, 故 $\left(\alpha,\beta\right)$ 不全含于 $C$. 所以 $C$ 不含任何非空开区间, $\operatorname{int}\left(C\right)=\varnothing$, 即 $C$ 无处稠密. $\blacksquare$
 
-**5. 完美集.** 闭集已由 (1) 证得. 证 $C$ 无孤立点: 设 $x\in C$, 对任意 $\epsilon>0$, 由**定理 6.5.2** 写 $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$, $a_{k}\in\left\{0,2\right\}$. 取 $n$ 使 $\frac{2}{3^{n+1}}<\epsilon$, 令 $x_{n}$ 为三进制展开中把 $x$ 的第 $n+1$ 位 $a_{n+1}$ 换成 $2-a_{n+1}$、其余位不变所得的点. 则 $x_{n}\in C$ (三进制不含 $1$), $x_{n}\ne x$, 且
+**5. 完美集.** 闭集已由 (1) 证得. 证 $C$ 无孤立点: 设 $x\in C$, 对任意 $\varepsilon>0$, 由**定理 6.5.2** 写 $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$, $a_{k}\in\left\{0,2\right\}$. 取 $n$ 使 $\frac{2}{3^{n+1}}<\varepsilon$, 令 $x_{n}$ 为三进制展开中把 $x$ 的第 $n+1$ 位 $a_{n+1}$ 换成 $2-a_{n+1}$、其余位不变所得的点. 则 $x_{n}\in C$ (三进制不含 $1$), $x_{n}\ne x$, 且
 
 $$
-\begin{aligned}\left|x_{n}-x\right|&=\left|\frac{2-a_{n+1}}{3^{n+1}}-\frac{a_{n+1}}{3^{n+1}}\right|\\&=\frac{2}{3^{n+1}}<\epsilon.
+\begin{aligned}\left|x_{n}-x\right|&=\left|\frac{2-a_{n+1}}{3^{n+1}}-\frac{a_{n+1}}{3^{n+1}}\right|\\&=\frac{2}{3^{n+1}}<\varepsilon.
 \end{aligned}
 $$
 
-故 $x$ 的 $\epsilon$ 邻域内含有 $C$ 中异于 $x$ 的点, $x$ 不是孤立点. 所以 $C$ 是完美集. $\blacksquare$
+故 $x$ 的 $\varepsilon$ 邻域内含有 $C$ 中异于 $x$ 的点, $x$ 不是孤立点. 所以 $C$ 是完美集. $\blacksquare$
 
 ### 习题五
 

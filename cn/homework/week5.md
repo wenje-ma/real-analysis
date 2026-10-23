@@ -167,7 +167,7 @@ $$
 
 **14.** 若 $f\in L^{+}$, 令 $\lambda\left(E\right)=\int_{E}f\,\mathrm{d}\mu$ (对 $E\in\mathcal M$). 则 $\lambda$ 是 $\mathcal M$ 上的测度, 且对任意 $g\in L^{+}$, $\int g\,d\lambda=\int fg\,\mathrm{d}\mu$.
 
-**16.** 若 $f\in L^{+}$ 且 $\int f<\infty$, 对每个 $\epsilon>0$ 存在 $E\in\mathcal M$ 使得 $\mu\left(E\right)<\infty$ 且 $\int_{E}f>\left(\int f\right)-\epsilon$.
+**16.** 若 $f\in L^{+}$ 且 $\int f<\infty$, 对每个 $\varepsilon>0$ 存在 $E\in\mathcal M$ 使得 $\mu\left(E\right)<\infty$ 且 $\int_{E}f>\left(\int f\right)-\varepsilon$.
 
 ### 解答 习题四
 
@@ -199,7 +199,7 @@ $$
 \int f\,\mathrm{d}\mu\ge\int_{E_{n}}f\,\mathrm{d}\mu\ge\frac{1}{n}\mu\left(E_{n}\right),
 $$
 
-故 $\mu\left(E_{n}\right)\le n\int f\,\mathrm{d}\mu<\infty$. 又由**定理 8.2.2** (单调收敛定理), $\int_{E_{n}}f\,\mathrm{d}\mu\uparrow\int_{\left\{f>0\right\}}f\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu$. 故对给定 $\epsilon>0$, 取 $n$ 充分大使 $\int_{E_{n}}f\,\mathrm{d}\mu>\int f\,\mathrm{d}\mu-\epsilon$, 令 $E:=E_{n}$, 则 $\mu\left(E\right)<\infty$ 且 $\int_{E}f>\int f-\epsilon$. $\blacksquare$
+故 $\mu\left(E_{n}\right)\le n\int f\,\mathrm{d}\mu<\infty$. 又由**定理 8.2.2** (单调收敛定理), $\int_{E_{n}}f\,\mathrm{d}\mu\uparrow\int_{\left\{f>0\right\}}f\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu$. 故对给定 $\varepsilon>0$, 取 $n$ 充分大使 $\int_{E_{n}}f\,\mathrm{d}\mu>\int f\,\mathrm{d}\mu-\varepsilon$, 令 $E:=E_{n}$, 则 $\mu\left(E\right)<\infty$ 且 $\int_{E}f>\int f-\varepsilon$. $\blacksquare$
 
 ### 习题五
 
@@ -259,21 +259,21 @@ $\blacksquare$
 
 先用基础知识中达布和的记号. 记 $\overline{\int}f=\inf_{P}\overline S\left(P\right)$, $\underline{\int}f=\sup_{P}\underline S\left(P\right)$; $f$ 黎曼可积当且仅当 $\overline{\int}f=\underline{\int}f$.
 
-**a.** 设 $f$ 在 $x$ 连续. 对 $\epsilon>0$ 存在 $\delta>0$ 使 $\left|y-x\right|<\delta\Rightarrow\left|f\left(y\right)-f\left(x\right)\right|<\epsilon$. 则对 $0<\left|y-x\right|\le\delta$, 有 $f\left(x\right)-\epsilon<f\left(y\right)<f\left(x\right)+\epsilon$, 故
+**a.** 设 $f$ 在 $x$ 连续. 对 $\varepsilon>0$ 存在 $\delta>0$ 使 $\left|y-x\right|<\delta\Rightarrow\left|f\left(y\right)-f\left(x\right)\right|<\varepsilon$. 则对 $0<\left|y-x\right|\le\delta$, 有 $f\left(x\right)-\varepsilon<f\left(y\right)<f\left(x\right)+\varepsilon$, 故
 
 $$
-f\left(x\right)-\epsilon\le\inf_{0<\left|y-x\right|\le\delta}f\left(y\right)\le f\left(x\right)\le\sup_{0<\left|y-x\right|\le\delta}f\left(y\right)\le f\left(x\right)+\epsilon.
+f\left(x\right)-\varepsilon\le\inf_{0<\left|y-x\right|\le\delta}f\left(y\right)\le f\left(x\right)\le\sup_{0<\left|y-x\right|\le\delta}f\left(y\right)\le f\left(x\right)+\varepsilon.
 $$
 
-令 $\delta\to0$, 由 $\epsilon$ 任意得 $h\left(x\right)\ge f\left(x\right)\ge H\left(x\right)$; 但定义中恒有 $h\left(x\right)\le f\left(x\right)\le H\left(x\right)$, 故 $H\left(x\right)=h\left(x\right)=f\left(x\right)$.
+令 $\delta\to0$, 由 $\varepsilon$ 任意得 $h\left(x\right)\ge f\left(x\right)\ge H\left(x\right)$; 但定义中恒有 $h\left(x\right)\le f\left(x\right)\le H\left(x\right)$, 故 $H\left(x\right)=h\left(x\right)=f\left(x\right)$.
 
-反之, 设 $H\left(x\right)=h\left(x\right)=:L$. 对 $\epsilon>0$, 由极限定义存在 $\delta>0$ 使对 $0<\delta'<\delta$ 有
+反之, 设 $H\left(x\right)=h\left(x\right)=:L$. 对 $\varepsilon>0$, 由极限定义存在 $\delta>0$ 使对 $0<\delta'<\delta$ 有
 
 $$
-\inf_{0<\left|y-x\right|\le\delta'}f\left(y\right)>L-\epsilon,\ \sup_{0<\left|y-x\right|\le\delta'}f\left(y\right)<L+\epsilon.
+\inf_{0<\left|y-x\right|\le\delta'}f\left(y\right)>L-\varepsilon,\ \sup_{0<\left|y-x\right|\le\delta'}f\left(y\right)<L+\varepsilon.
 $$
 
-取 $\delta'=\delta$, 则对 $0<\left|y-x\right|\le\delta$ 有 $L-\epsilon<f\left(y\right)<L+\epsilon$; 又 $f\left(x\right)$ 介于 $\inf$ 与 $\sup$ 之间, 故 $L-\epsilon<f\left(x\right)<L+\epsilon$. 于是 $\left|f\left(y\right)-f\left(x\right)\right|<2\epsilon$ 对 $0<\left|y-x\right|\le\delta$ 成立, 即 $f$ 在 $x$ 连续.
+取 $\delta'=\delta$, 则对 $0<\left|y-x\right|\le\delta$ 有 $L-\varepsilon<f\left(y\right)<L+\varepsilon$; 又 $f\left(x\right)$ 介于 $\inf$ 与 $\sup$ 之间, 故 $L-\varepsilon<f\left(x\right)<L+\varepsilon$. 于是 $\left|f\left(y\right)-f\left(x\right)\right|<2\varepsilon$ 对 $0<\left|y-x\right|\le\delta$ 成立, 即 $f$ 在 $x$ 连续.
 
 **b.** 沿用定理 2.28a 证明中的记号: 取分割列 $\left\{P_{k}\right\}$, 使网格 $\max_{i}\left(t_{i}-t_{i-1}\right)\to0$ 且 $P_{k}\subset P_{k+1}$ (逐次加密), 定义
 

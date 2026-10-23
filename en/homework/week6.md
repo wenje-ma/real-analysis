@@ -12,9 +12,9 @@
 
 > **Definition 9.1.1** (Convergence Almost Everywhere)<br>Let $\left\{f_{n}\right\}$ be a sequence of measurable functions and $f$ a measurable function. If there exists a set $E$ of measure zero such that $\lim_{n\to\infty}f_{n}\left(x\right)=f\left(x\right)$ for all $x\notin E$, then $\left\{f_{n}\right\}$ is said to converge to $f$ $\mu$-almost everywhere, denoted $f_{n}\xrightarrow{\text{a.e.}}f$.
 
-> **Proposition 9.1.2** (Characterization of Almost-Everywhere Convergence)<br>$f_{n}\xrightarrow{\text{a.e.}}f$ if and only if, for every $\epsilon>0$, $\mu\left(\bigcap_{k=1}^{\infty}\bigcup_{n=k}^{\infty}\left\{x:\left|f_{n}\left(x\right)-f\left(x\right)\right|>\epsilon\right\}\right)=0$.
+> **Proposition 9.1.2** (Characterization of Almost-Everywhere Convergence)<br>$f_{n}\xrightarrow{\text{a.e.}}f$ if and only if, for every $\varepsilon>0$, $\mu\left(\bigcap_{k=1}^{\infty}\bigcup_{n=k}^{\infty}\left\{x:\left|f_{n}\left(x\right)-f\left(x\right)\right|>\varepsilon\right\}\right)=0$.
 
-> **Definition 9.1.3** (Convergence in Measure)<br>Let $\left\{f_{n}\right\}$ be a sequence of measurable functions and $f$ a measurable function. If, for every $\epsilon>0$, $\lim_{n\to\infty}\mu\left(\left\{x:\left|f_{n}\left(x\right)-f\left(x\right)\right|>\epsilon\right\}\right)=0$, then $\left\{f_{n}\right\}$ is said to converge to $f$ in measure, denoted $f_{n}\xrightarrow{\mu}f$.
+> **Definition 9.1.3** (Convergence in Measure)<br>Let $\left\{f_{n}\right\}$ be a sequence of measurable functions and $f$ a measurable function. If, for every $\varepsilon>0$, $\lim_{n\to\infty}\mu\left(\left\{x:\left|f_{n}\left(x\right)-f\left(x\right)\right|>\varepsilon\right\}\right)=0$, then $\left\{f_{n}\right\}$ is said to converge to $f$ in measure, denoted $f_{n}\xrightarrow{\mu}f$.
 
 > **Theorem 9.1.8** (Subsequence Property)<br>If $f_{n}\xrightarrow{\mu}f$, then there exists a subsequence $\left\{f_{n_{k}}\right\}$ such that $f_{n_{k}}\to f$ almost everywhere.
 
@@ -34,16 +34,16 @@ Prove Corollary 9.1.10 of the lecture notes: $f_{n}$ converges to $f$ in measure
 
 $\left(\Rightarrow\right)$ By **Definition 9.1.3**, if $f_{n}\xrightarrow{\mu}f$, then any subsequence $\left\{f_{n_{k}}\right\}$ also converges to $f$ in measure (the limit in the definition still holds along the subsequence). By **Theorem 9.1.8** (Subsequence Property), there exists a further subsequence $\left\{f_{n'_{k}}\right\}$ such that $f_{n'_{k}}\to f$ almost everywhere.
 
-$\left(\Leftarrow\right)$ Proof by contradiction. If $f_{n}$ does not converge to $f$ in measure, then there exists $\epsilon>0$ such that $\mu\left(\left\{\left|f_{n}-f\right|>\epsilon\right\}\right)$ does not tend to $0$, i.e. there exist $\delta>0$ and a subsequence $\left\{f_{n_{k}}\right\}$ such that
+$\left(\Leftarrow\right)$ Proof by contradiction. If $f_{n}$ does not converge to $f$ in measure, then there exists $\varepsilon>0$ such that $\mu\left(\left\{\left|f_{n}-f\right|>\varepsilon\right\}\right)$ does not tend to $0$, i.e. there exist $\delta>0$ and a subsequence $\left\{f_{n_{k}}\right\}$ such that
 
 $$
-\mu\left(\left\{x:\left|f_{n_{k}}\left(x\right)-f\left(x\right)\right|>\epsilon\right\}\right)\ge\delta\ \text{对所有}k.
+\mu\left(\left\{x:\left|f_{n_{k}}\left(x\right)-f\left(x\right)\right|>\varepsilon\right\}\right)\ge\delta\ \text{对所有}k.
 $$
 
 By **Proposition 9.1.2** (Characterization of Almost-Everywhere Convergence), no further subsequence $\left\{f_{n'_{j}}\right\}$ of $\left\{f_{n_{k}}\right\}$ can converge almost everywhere to $f$: because
 
 $$
-\mu\left(\bigcap_{j=1}^{\infty}\bigcup_{l\ge j}\left\{x:\left|f_{n'_{l}}\left(x\right)-f\left(x\right)\right|>\epsilon\right\}\right)\ge\limsup_{j\to\infty}\mu\left(\left\{x:\left|f_{n'_{j}}\left(x\right)-f\left(x\right)\right|>\epsilon\right\}\right)\ge\delta>0.
+\mu\left(\bigcap_{j=1}^{\infty}\bigcup_{l\ge j}\left\{x:\left|f_{n'_{l}}\left(x\right)-f\left(x\right)\right|>\varepsilon\right\}\right)\ge\limsup_{j\to\infty}\mu\left(\left\{x:\left|f_{n'_{j}}\left(x\right)-f\left(x\right)\right|>\varepsilon\right\}\right)\ge\delta>0.
 $$
 
 This contradicts the hypothesis (every subsequence has an almost-everywhere-convergent further subsequence). Hence $f_{n}\xrightarrow{\mu}f$.
@@ -60,10 +60,10 @@ Prove Problems 32, 41, 43 and 44.
 
 **43.** Let $\mu\left(X\right)<\infty$, and let $f:X\times\left[0,1\right]\to\mathbb C$ satisfy: for each $y\in\left[0,1\right]$, $f\left(\cdot,y\right)$ is measurable; for each $x\in X$, $f\left(x,\cdot\right)$ is continuous.
 
-a. If $0<\epsilon,\delta<1$, then $E_{\epsilon,\delta}=\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\epsilon\text{对所有}y<\delta\right\}$ is a measurable set;
-b. For every $\epsilon>0$ there exists a set $E\subset X$ such that $\mu\left(E\right)<\epsilon$ and $f\left(\cdot,y\right)\to f\left(\cdot,0\right)$ uniformly on $E^{c}$ ($y\to0$).
+a. If $0<\varepsilon,\delta<1$, then $E_{\varepsilon,\delta}=\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\varepsilon\text{对所有}y<\delta\right\}$ is a measurable set;
+b. For every $\varepsilon>0$ there exists a set $E\subset X$ such that $\mu\left(E\right)<\varepsilon$ and $f\left(\cdot,y\right)\to f\left(\cdot,0\right)$ uniformly on $E^{c}$ ($y\to0$).
 
-**44.** (Lusin's theorem) If $f:\left[a,b\right]\to\mathbb C$ is Lebesgue measurable and $\epsilon>0$, then there exists a compact set $E\subset\left[a,b\right]$ such that $\mu\left(E^{c}\right)<\epsilon$ and $f|_{E}$ is continuous.
+**44.** (Lusin's theorem) If $f:\left[a,b\right]\to\mathbb C$ is Lebesgue measurable and $\varepsilon>0$, then there exists a compact set $E\subset\left[a,b\right]$ such that $\mu\left(E^{c}\right)<\varepsilon$ and $f|_{E}$ is continuous.
 
 ### Solution to Problem 2
 
@@ -83,23 +83,23 @@ integrating gives $\rho\left(f,g\right)\le\rho\left(f,h\right)+\rho\left(h,g\rig
 
 Hence $\rho$ is a metric on the quotient space.
 
-We next prove the equivalence of convergence. If $f_{n}\xrightarrow{\mu}f$, then for $\epsilon\in\left(0,1\right)$,
+We next prove the equivalence of convergence. If $f_{n}\xrightarrow{\mu}f$, then for $\varepsilon\in\left(0,1\right)$,
 
 $$
-\rho\left(f_{n},f\right)=\int_{\left\{\left|f_{n}-f\right|\le\epsilon\right\}}d\left(\left|f_{n}-f\right|\right)\mathrm{d}\mu+\int_{\left\{\left|f_{n}-f\right|>\epsilon\right\}}d\left(\left|f_{n}-f\right|\right)\mathrm{d}\mu\le d\left(\epsilon\right)\mu\left(X\right)+\mu\left(\left\{\left|f_{n}-f\right|>\epsilon\right\}\right).
+\rho\left(f_{n},f\right)=\int_{\left\{\left|f_{n}-f\right|\le\varepsilon\right\}}d\left(\left|f_{n}-f\right|\right)\mathrm{d}\mu+\int_{\left\{\left|f_{n}-f\right|>\varepsilon\right\}}d\left(\left|f_{n}-f\right|\right)\mathrm{d}\mu\le d\left(\varepsilon\right)\mu\left(X\right)+\mu\left(\left\{\left|f_{n}-f\right|>\varepsilon\right\}\right).
 $$
 
-By **Definition 9.1.3**, first let $n\to\infty$ so that the second term $\to0$ (since $f_{n}\xrightarrow{\mu}f$), then let $\epsilon\to0$ so that $d\left(\epsilon\right)=\frac{\epsilon}{1+\epsilon}\to0$, giving $\rho\left(f_{n},f\right)\to0$.
+By **Definition 9.1.3**, first let $n\to\infty$ so that the second term $\to0$ (since $f_{n}\xrightarrow{\mu}f$), then let $\varepsilon\to0$ so that $d\left(\varepsilon\right)=\frac{\varepsilon}{1+\varepsilon}\to0$, giving $\rho\left(f_{n},f\right)\to0$.
 
-Conversely, if $\rho\left(f_{n},f\right)\to0$, since $d$ is increasing, on $\left\{\left|f_{n}-f\right|>\epsilon\right\}$ we have $d\left(\left|f_{n}-f\right|\right)\ge d\left(\epsilon\right)>0$, so
+Conversely, if $\rho\left(f_{n},f\right)\to0$, since $d$ is increasing, on $\left\{\left|f_{n}-f\right|>\varepsilon\right\}$ we have $d\left(\left|f_{n}-f\right|\right)\ge d\left(\varepsilon\right)>0$, so
 
 $$
-\rho\left(f_{n},f\right)\ge\int_{\left\{\left|f_{n}-f\right|>\epsilon\right\}}d\left(\left|f_{n}-f\right|\right)\mathrm{d}\mu\ge d\left(\epsilon\right)\mu\left(\left\{\left|f_{n}-f\right|>\epsilon\right\}\right),
+\rho\left(f_{n},f\right)\ge\int_{\left\{\left|f_{n}-f\right|>\varepsilon\right\}}d\left(\left|f_{n}-f\right|\right)\mathrm{d}\mu\ge d\left(\varepsilon\right)\mu\left(\left\{\left|f_{n}-f\right|>\varepsilon\right\}\right),
 $$
 
 i.e.
 
-$$\mu\left(\left\{\left|f_{n}-f\right|>\epsilon\right\}\right)\le\frac{\rho\left(f_{n},f\right)}{d\left(\epsilon\right)}\to0.$$
+$$\mu\left(\left\{\left|f_{n}-f\right|>\varepsilon\right\}\right)\le\frac{\rho\left(f_{n},f\right)}{d\left(\varepsilon\right)}\to0.$$
 
 By Definition 9.1.3, $f_{n}\xrightarrow{\mu}f$. $\blacksquare$
 
@@ -118,34 +118,34 @@ since $X=\bigcup_{m}X_{m}$. Hence $\mu\left(\left(\bigcup_{m,j}E_{mj}\right)^{c}
 
 #### 43
 
-**a.** For each $y\in\left[0,1\right]$, by **Theorem 7.1.8** (operations on measurable functions, complex-valued handled by real and imaginary parts), $f\left(\cdot,y\right)-f\left(\cdot,0\right)$ is measurable, so $\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\epsilon\right\}$ is a measurable set. Also, since $f\left(x,\cdot\right)$ is continuous, the function $y\mapsto\left|f\left(x,y\right)-f\left(x,0\right)\right|$ is continuous; hence "$\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\epsilon$ for all $y$ in $\left[0,\delta\right)$" if and only if "$\le\epsilon$ for all rational $y$ in $\left[0,\delta\right)$" (by density, if the inequality holds at the rational points then it holds on their closure). Therefore
+**a.** For each $y\in\left[0,1\right]$, by **Theorem 7.1.8** (operations on measurable functions, complex-valued handled by real and imaginary parts), $f\left(\cdot,y\right)-f\left(\cdot,0\right)$ is measurable, so $\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\varepsilon\right\}$ is a measurable set. Also, since $f\left(x,\cdot\right)$ is continuous, the function $y\mapsto\left|f\left(x,y\right)-f\left(x,0\right)\right|$ is continuous; hence "$\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\varepsilon$ for all $y$ in $\left[0,\delta\right)$" if and only if "$\le\varepsilon$ for all rational $y$ in $\left[0,\delta\right)$" (by density, if the inequality holds at the rational points then it holds on their closure). Therefore
 
 $$
-E_{\epsilon,\delta}=\bigcap_{y\in\left[0,\delta\right)\cap\mathbb Q}\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\epsilon\right\},
+E_{\varepsilon,\delta}=\bigcap_{y\in\left[0,\delta\right)\cap\mathbb Q}\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\varepsilon\right\},
 $$
 
 this is an intersection of countably many measurable sets, hence measurable by **Definition 4.1.3** (a $\sigma$-algebra is closed under countable intersections). $\blacksquare$
 
 **b.** Fix $\eta>0$ as the tolerance for uniform convergence. For each $\delta>0$, set $F_{\delta}:=\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta\text{对所有}y<\delta\right\}$, which is measurable by part a and increases as $\delta$ decreases. Since $f\left(x,\cdot\right)$ is continuous at $0$, for each $x$, $\lim_{y\to0}f\left(x,y\right)=f\left(x,0\right)$, so there exists $\delta>0$ such that $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ for all $y<\delta$, i.e. $x\in F_{\delta}$. Hence $\bigcup_{\delta>0}F_{\delta}=X$.
 
-By the Basic Knowledge (continuity from below of a measure), since $\mu\left(X\right)<\infty$ and $F_{\delta}\uparrow X$, we have $\mu\left(X\setminus F_{\delta}\right)\to0$. Given $\epsilon>0$, choose $\delta>0$ such that $\mu\left(X\setminus F_{\delta}\right)<\epsilon$, and set $E:=X\setminus F_{\delta}$; then $\mu\left(E\right)<\epsilon$, and on $E^{c}=F_{\delta}$, $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ for all $y<\delta$, i.e. $f\left(\cdot,y\right)\to f\left(\cdot,0\right)$ uniformly on $E^{c}$ ($y\to0$). $\blacksquare$
+By the Basic Knowledge (continuity from below of a measure), since $\mu\left(X\right)<\infty$ and $F_{\delta}\uparrow X$, we have $\mu\left(X\setminus F_{\delta}\right)\to0$. Given $\varepsilon>0$, choose $\delta>0$ such that $\mu\left(X\setminus F_{\delta}\right)<\varepsilon$, and set $E:=X\setminus F_{\delta}$; then $\mu\left(E\right)<\varepsilon$, and on $E^{c}=F_{\delta}$, $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ for all $y<\delta$, i.e. $f\left(\cdot,y\right)\to f\left(\cdot,0\right)$ uniformly on $E^{c}$ ($y\to0$). $\blacksquare$
 
 #### 44
 
-We first prove the simple-function case. Let $\phi=\sum_{j=1}^{N}c_{j}\chi_{A_{j}}$ be a simple function on $\left[a,b\right]$, with the $A_{j}$ pairwise disjoint measurable and $\bigcup_{j}A_{j}=\left[a,b\right]$. By the inner regularity of the Lebesgue measure (**Theorem 6.4.5**), for each $j$ choose a compact set $K_{j}\subset A_{j}$ such that $m\left(A_{j}\setminus K_{j}\right)<\epsilon/\left(2N\right)$. Set $K:=\bigcup_{j=1}^{N}K_{j}\subset\left[a,b\right]$; then $K$ is compact (a finite union of compact sets), and
+We first prove the simple-function case. Let $\phi=\sum_{j=1}^{N}c_{j}\chi_{A_{j}}$ be a simple function on $\left[a,b\right]$, with the $A_{j}$ pairwise disjoint measurable and $\bigcup_{j}A_{j}=\left[a,b\right]$. By the inner regularity of the Lebesgue measure (**Theorem 6.4.5**), for each $j$ choose a compact set $K_{j}\subset A_{j}$ such that $m\left(A_{j}\setminus K_{j}\right)<\varepsilon/\left(2N\right)$. Set $K:=\bigcup_{j=1}^{N}K_{j}\subset\left[a,b\right]$; then $K$ is compact (a finite union of compact sets), and
 
 $$
-m\left(\left[a,b\right]\setminus K\right)\le\sum_{j=1}^{N}m\left(A_{j}\setminus K_{j}\right)<\epsilon/2.
+m\left(\left[a,b\right]\setminus K\right)\le\sum_{j=1}^{N}m\left(A_{j}\setminus K_{j}\right)<\varepsilon/2.
 $$
 
 Since the $K_{j}$ are pairwise disjoint and $\phi$ is the constant $c_{j}$ on $K_{j}$, $\phi|_{K}$ is continuous.
 
-We next prove the general case. $f$ is complex-valued; write $f=\left(\operatorname{Re}f\right)^{+}-\left(\operatorname{Re}f\right)^{-}+i\left[\left(\operatorname{Im}f\right)^{+}-\left(\operatorname{Im}f\right)^{-}\right]$. By **Theorem 7.2.2** (Construction of Measurable Functions), approximating each nonnegative part pointwise by simple functions, there exist simple functions $\phi_{n}\to f$ everywhere. Since $m\left(\left[a,b\right]\right)<\infty$, by **Theorem 9.1.15** (Egorov's Theorem), for $\epsilon>0$ there exists a measurable set $B\subset\left[a,b\right]$ such that $m\left(B\right)<\epsilon/3$ and $\phi_{n}\to f$ uniformly on $\left[a,b\right]\setminus B$. By the simple-function case, for each $n$ choose a compact set $K_{n}\subset\left[a,b\right]$ such that $m\left(\left[a,b\right]\setminus K_{n}\right)<\epsilon/\left(3\cdot2^{n}\right)$ and $\phi_{n}|_{K_{n}}$ is continuous.
+We next prove the general case. $f$ is complex-valued; write $f=\left(\operatorname{Re}f\right)^{+}-\left(\operatorname{Re}f\right)^{-}+i\left[\left(\operatorname{Im}f\right)^{+}-\left(\operatorname{Im}f\right)^{-}\right]$. By **Theorem 7.2.2** (Construction of Measurable Functions), approximating each nonnegative part pointwise by simple functions, there exist simple functions $\phi_{n}\to f$ everywhere. Since $m\left(\left[a,b\right]\right)<\infty$, by **Theorem 9.1.15** (Egorov's Theorem), for $\varepsilon>0$ there exists a measurable set $B\subset\left[a,b\right]$ such that $m\left(B\right)<\varepsilon/3$ and $\phi_{n}\to f$ uniformly on $\left[a,b\right]\setminus B$. By the simple-function case, for each $n$ choose a compact set $K_{n}\subset\left[a,b\right]$ such that $m\left(\left[a,b\right]\setminus K_{n}\right)<\varepsilon/\left(3\cdot2^{n}\right)$ and $\phi_{n}|_{K_{n}}$ is continuous.
 
 Set $E:=\left(\left[a,b\right]\setminus B\right)\cap\bigcap_{n=1}^{\infty}K_{n}$. Then $E$ is an intersection of closed sets in $\left[a,b\right]$ and hence compact; and
 
 $$
-m\left(\left[a,b\right]\setminus E\right)\le m\left(B\right)+\sum_{n=1}^{\infty}m\left(\left[a,b\right]\setminus K_{n}\right)<\epsilon/3+\epsilon/3=2\epsilon/3<\epsilon.
+m\left(\left[a,b\right]\setminus E\right)\le m\left(B\right)+\sum_{n=1}^{\infty}m\left(\left[a,b\right]\setminus K_{n}\right)<\varepsilon/3+\varepsilon/3=2\varepsilon/3<\varepsilon.
 $$
 
 On $E$, each $\phi_{n}$ is continuous (since $E\subset K_{n}$), and $\phi_{n}\to f$ uniformly (since $E\subset\left[a,b\right]\setminus B$). The limit of a uniformly convergent sequence of continuous functions is continuous, so $f|_{E}$ is continuous. $\blacksquare$

@@ -527,10 +527,10 @@ $$
 
 **Theorem 8.2.16**
 
-If $f\in L^{1}\left(\mu\right)$ and $\epsilon> 0$, then there exists an integrable simple function $\varphi=\sum a_{j}\chi_{E_{j}}$ such that
+If $f\in L^{1}\left(\mu\right)$ and $\varepsilon> 0$, then there exists an integrable simple function $\varphi=\sum a_{j}\chi_{E_{j}}$ such that
 
 $$
-\int\left|f-\varphi\right|\mathrm{d}\mu< \epsilon
+\int\left|f-\varphi\right|\mathrm{d}\mu< \varepsilon
 $$
 
 (i.e. integrable simple functions are dense in the $L^{1}$ metric).
@@ -581,18 +581,18 @@ $$
 
 **Proposition 9.1.2** (Characterization of a.e. Convergence)
 
-$f_{n}\xrightarrow{\text{a.e.}}f$ if and only if for any $\epsilon> 0$,
+$f_{n}\xrightarrow{\text{a.e.}}f$ if and only if for any $\varepsilon> 0$,
 
 $$
-\mu\left(\bigcap_{k=1}^{\infty}\bigcup_{n=k}^{\infty}\left\{x:\left|f_{n}\left(x\right)-f\left(x\right)\right|> \epsilon\right\}\right)=0.
+\mu\left(\bigcap_{k=1}^{\infty}\bigcup_{n=k}^{\infty}\left\{x:\left|f_{n}\left(x\right)-f\left(x\right)\right|> \varepsilon\right\}\right)=0.
 $$
 
 **Definition 9.1.3** (Convergence in Measure)
 
-Let $\left\{f_{n}\right\}$ be a sequence of measurable functions and $f$ a measurable function. If for any $\epsilon> 0$,
+Let $\left\{f_{n}\right\}$ be a sequence of measurable functions and $f$ a measurable function. If for any $\varepsilon> 0$,
 
 $$
-\lim_{n\to\infty}\mu\left(\left\{x:\left|f_{n}\left(x\right)-f\left(x\right)\right|> \epsilon\right\}\right)=0
+\lim_{n\to\infty}\mu\left(\left\{x:\left|f_{n}\left(x\right)-f\left(x\right)\right|> \varepsilon\right\}\right)=0
 $$
 
 , then $\left\{f_{n}\right\}$ is said to converge to $f$ in measure, denoted $f_{n}\xrightarrow{\mu}f$.
@@ -834,10 +834,10 @@ If $f\in BV\left(\left[a,b\right]\right)$, then:
 
 **Definition 15.0.11** (Absolute Continuity)
 
-A function $f:\left[a,b\right]\to\mathbb R$ is called **absolutely continuous** (written $f\in AC\left(\left[a,b\right]\right)$) if for any $\epsilon> 0$, there exists $\delta> 0$ such that for any finite collection of pairwise disjoint subintervals $\left(a_{i},b_{i}\right)\subset\left[a,b\right]$, whenever $\sum_{i}\left(b_{i}-a_{i}\right)< \delta$, one has
+A function $f:\left[a,b\right]\to\mathbb R$ is called **absolutely continuous** (written $f\in AC\left(\left[a,b\right]\right)$) if for any $\varepsilon> 0$, there exists $\delta> 0$ such that for any finite collection of pairwise disjoint subintervals $\left(a_{i},b_{i}\right)\subset\left[a,b\right]$, whenever $\sum_{i}\left(b_{i}-a_{i}\right)< \delta$, one has
 
 $$
-\sum_{i}\left|f\left(b_{i}\right)-f\left(a_{i}\right)\right|< \epsilon.
+\sum_{i}\left|f\left(b_{i}\right)-f\left(a_{i}\right)\right|< \varepsilon.
 $$
 
 **Theorem 15.0.14** (Equivalent Characterization)

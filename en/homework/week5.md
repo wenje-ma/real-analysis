@@ -167,7 +167,7 @@ Prove Problems 14 and 16.
 
 **14.** If $f\in L^{+}$, set $\lambda\left(E\right)=\int_{E}f\,\mathrm{d}\mu$ (for $E\in\mathcal M$). Then $\lambda$ is a measure on $\mathcal M$, and for any $g\in L^{+}$, $\int g\,d\lambda=\int fg\,\mathrm{d}\mu$.
 
-**16.** If $f\in L^{+}$ and $\int f<\infty$, then for each $\epsilon>0$ there exists $E\in\mathcal M$ such that $\mu\left(E\right)<\infty$ and $\int_{E}f>\left(\int f\right)-\epsilon$.
+**16.** If $f\in L^{+}$ and $\int f<\infty$, then for each $\varepsilon>0$ there exists $E\in\mathcal M$ such that $\mu\left(E\right)<\infty$ and $\int_{E}f>\left(\int f\right)-\varepsilon$.
 
 ### Solution to Problem 4
 
@@ -199,7 +199,7 @@ $$
 \int f\,\mathrm{d}\mu\ge\int_{E_{n}}f\,\mathrm{d}\mu\ge\frac{1}{n}\mu\left(E_{n}\right),
 $$
 
-so $\mu\left(E_{n}\right)\le n\int f\,\mathrm{d}\mu<\infty$. Also, by **Theorem 8.2.2** (Monotone Convergence Theorem), $\int_{E_{n}}f\,\mathrm{d}\mu\uparrow\int_{\left\{f>0\right\}}f\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu$. Hence for given $\epsilon>0$, choose $n$ large enough that $\int_{E_{n}}f\,\mathrm{d}\mu>\int f\,\mathrm{d}\mu-\epsilon$, and set $E:=E_{n}$; then $\mu\left(E\right)<\infty$ and $\int_{E}f>\int f-\epsilon$. $\blacksquare$
+so $\mu\left(E_{n}\right)\le n\int f\,\mathrm{d}\mu<\infty$. Also, by **Theorem 8.2.2** (Monotone Convergence Theorem), $\int_{E_{n}}f\,\mathrm{d}\mu\uparrow\int_{\left\{f>0\right\}}f\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu$. Hence for given $\varepsilon>0$, choose $n$ large enough that $\int_{E_{n}}f\,\mathrm{d}\mu>\int f\,\mathrm{d}\mu-\varepsilon$, and set $E:=E_{n}$; then $\mu\left(E\right)<\infty$ and $\int_{E}f>\int f-\varepsilon$. $\blacksquare$
 
 ### Problem 5
 
@@ -259,21 +259,21 @@ $\blacksquare$
 
 We first use the notation for Darboux sums from the Basic Knowledge. Set $\overline{\int}f=\inf_{P}\overline S\left(P\right)$ and $\underline{\int}f=\sup_{P}\underline S\left(P\right)$; $f$ is Riemann integrable if and only if $\overline{\int}f=\underline{\int}f$.
 
-**a.** Suppose $f$ is continuous at $x$. For $\epsilon>0$ there exists $\delta>0$ such that $\left|y-x\right|<\delta\Rightarrow\left|f\left(y\right)-f\left(x\right)\right|<\epsilon$. Then for $0<\left|y-x\right|\le\delta$, we have $f\left(x\right)-\epsilon<f\left(y\right)<f\left(x\right)+\epsilon$, so
+**a.** Suppose $f$ is continuous at $x$. For $\varepsilon>0$ there exists $\delta>0$ such that $\left|y-x\right|<\delta\Rightarrow\left|f\left(y\right)-f\left(x\right)\right|<\varepsilon$. Then for $0<\left|y-x\right|\le\delta$, we have $f\left(x\right)-\varepsilon<f\left(y\right)<f\left(x\right)+\varepsilon$, so
 
 $$
-f\left(x\right)-\epsilon\le\inf_{0<\left|y-x\right|\le\delta}f\left(y\right)\le f\left(x\right)\le\sup_{0<\left|y-x\right|\le\delta}f\left(y\right)\le f\left(x\right)+\epsilon.
+f\left(x\right)-\varepsilon\le\inf_{0<\left|y-x\right|\le\delta}f\left(y\right)\le f\left(x\right)\le\sup_{0<\left|y-x\right|\le\delta}f\left(y\right)\le f\left(x\right)+\varepsilon.
 $$
 
-Letting $\delta\to0$, and since $\epsilon$ is arbitrary, gives $h\left(x\right)\ge f\left(x\right)\ge H\left(x\right)$; but by definition always $h\left(x\right)\le f\left(x\right)\le H\left(x\right)$, so $H\left(x\right)=h\left(x\right)=f\left(x\right)$.
+Letting $\delta\to0$, and since $\varepsilon$ is arbitrary, gives $h\left(x\right)\ge f\left(x\right)\ge H\left(x\right)$; but by definition always $h\left(x\right)\le f\left(x\right)\le H\left(x\right)$, so $H\left(x\right)=h\left(x\right)=f\left(x\right)$.
 
-Conversely, suppose $H\left(x\right)=h\left(x\right)=:L$. For $\epsilon>0$, by the definition of the limit there exists $\delta>0$ such that for $0<\delta'<\delta$,
+Conversely, suppose $H\left(x\right)=h\left(x\right)=:L$. For $\varepsilon>0$, by the definition of the limit there exists $\delta>0$ such that for $0<\delta'<\delta$,
 
 $$
-\inf_{0<\left|y-x\right|\le\delta'}f\left(y\right)>L-\epsilon,\ \sup_{0<\left|y-x\right|\le\delta'}f\left(y\right)<L+\epsilon.
+\inf_{0<\left|y-x\right|\le\delta'}f\left(y\right)>L-\varepsilon,\ \sup_{0<\left|y-x\right|\le\delta'}f\left(y\right)<L+\varepsilon.
 $$
 
-Taking $\delta'=\delta$, then for $0<\left|y-x\right|\le\delta$ we have $L-\epsilon<f\left(y\right)<L+\epsilon$; also $f\left(x\right)$ lies between $\inf$ and $\sup$, so $L-\epsilon<f\left(x\right)<L+\epsilon$. Hence $\left|f\left(y\right)-f\left(x\right)\right|<2\epsilon$ for $0<\left|y-x\right|\le\delta$, i.e. $f$ is continuous at $x$.
+Taking $\delta'=\delta$, then for $0<\left|y-x\right|\le\delta$ we have $L-\varepsilon<f\left(y\right)<L+\varepsilon$; also $f\left(x\right)$ lies between $\inf$ and $\sup$, so $L-\varepsilon<f\left(x\right)<L+\varepsilon$. Hence $\left|f\left(y\right)-f\left(x\right)\right|<2\varepsilon$ for $0<\left|y-x\right|\le\delta$, i.e. $f$ is continuous at $x$.
 
 **b.** We use the notation from the proof of Theorem 2.28a: take a sequence of partitions $\left\{P_{k}\right\}$ such that the mesh $\max_{i}\left(t_{i}-t_{i-1}\right)\to0$ and $P_{k}\subset P_{k+1}$ (refining successively), and define
 

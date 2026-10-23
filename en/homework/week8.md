@@ -2,7 +2,7 @@
 
 > **Theorem 8.2.9** (Dominated Convergence Theorem)<br>Let $\left(X,\mathcal F,\mu\right)$ be a measure space and $\left\{f_{n}\right\}$ a sequence of measurable functions. If there exists an integrable function $g$ such that $\left|f_{n}\right|\le g$ for all $n$, and $f_{n}\to f$ almost everywhere, then $f$ is integrable and $\int f\,\mathrm{d}\mu=\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu$.
 
-> **Theorem 8.2.16**<br>If $f\in L^{1}\left(\mu\right)$ and $\epsilon>0$, then there exists an integrable simple function $\varphi=\sum a_{j}\chi_{E_{j}}$ such that $\int\left|f-\varphi\right|\mathrm{d}\mu<\epsilon$ (i.e. integrable simple functions are dense in the $L^{1}$ metric).
+> **Theorem 8.2.16**<br>If $f\in L^{1}\left(\mu\right)$ and $\varepsilon>0$, then there exists an integrable simple function $\varphi=\sum a_{j}\chi_{E_{j}}$ such that $\int\left|f-\varphi\right|\mathrm{d}\mu<\varepsilon$ (i.e. integrable simple functions are dense in the $L^{1}$ metric).
 
 > **Theorem 10.2.1** (Fubini's Theorem)<br>Let $\left(X,\mathcal A,\mu\right)$ and $\left(Y,\mathcal B,\nu\right)$ be $\sigma$-finite measure spaces, and let $f:X\times Y\to\mathbb R$ be an $\mathcal A\otimes\mathcal B$-measurable function. If $f$ is integrable on $X\times Y$, then for almost every $x$, $y\mapsto f\left(x,y\right)$ is $\nu$-integrable; for almost every $y$, $x\mapsto f\left(x,y\right)$ is $\mu$-integrable; and the iterated integrals are equal: $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).\end{aligned}$$
 
@@ -11,7 +11,7 @@
 > **Theorem 11.1.1**<br>Suppose $E\in\mathcal L^{n}$.
 > (a) $$\begin{aligned}m\left(E\right)&=\inf\left\{m\left(U\right):U\supset E,U\text{开}\right\}\\&=\sup\left\{m\left(K\right):K\subset E,K\text{紧}\right\}\end{aligned}$$;
 >
-> (b) If $m\left(E\right)<\infty$, then for any $\epsilon>0$ there exists a finite family of pairwise disjoint rectangles $\left\{R_{j}\right\}_{j=1}^{N}$ whose sides are intervals, such that $m\left(E\triangle\bigcup_{j=1}^{N}R_{j}\right)<\epsilon$.
+> (b) If $m\left(E\right)<\infty$, then for any $\varepsilon>0$ there exists a finite family of pairwise disjoint rectangles $\left\{R_{j}\right\}_{j=1}^{N}$ whose sides are intervals, such that $m\left(E\triangle\bigcup_{j=1}^{N}R_{j}\right)<\varepsilon$.
 
 > **Theorem 11.4.1**<br>There exists a unique Borel measure $\sigma=\sigma_{n-1}$ on $S^{n-1}$ such that $m^{*}=\rho\times\sigma$. If $f$ is a Borel measurable function on $\mathbb R^{n}$ and either $f\ge0$ or $f\in L^{1}\left(m\right)$, then $$\int_{\mathbb R^{n}}f\left(x\right)\mathrm{d}x=\int_{0}^{\infty}\int_{S^{n-1}}f\left(rx'\right)r^{n-1}\mathrm{d}\sigma\left(x'\right)\mathrm{d}r.$$
 
@@ -23,22 +23,22 @@
 
 > **Basic Knowledge**<br>**The Gamma function and the beta identity**: the Gamma function $\Gamma\left(x\right)=\int_{0}^{\infty}t^{x-1}e^{-t}\mathrm{d}t$ satisfies the recurrence $\Gamma\left(x+1\right)=x\Gamma\left(x\right)$; the Beta function satisfies the identity $\frac{\Gamma\left(x\right)\Gamma\left(y\right)}{\Gamma\left(x+y\right)}=\int_{0}^{1}t^{x-1}\left(1-t\right)^{y-1}\mathrm{d}t$ for $x,y>0$.
 
-> **Basic Knowledge**<br>**Continuous approximation of indicator functions**: if $R\subset\mathbb R^{n}$ is a bounded closed rectangle, then for any $\epsilon>0$ there exists a continuous function $g$ with compact support such that $\int\left|\chi_{R}-g\right|\mathrm{d}m<\epsilon$.
+> **Basic Knowledge**<br>**Continuous approximation of indicator functions**: if $R\subset\mathbb R^{n}$ is a bounded closed rectangle, then for any $\varepsilon>0$ there exists a continuous function $g$ with compact support such that $\int\left|\chi_{R}-g\right|\mathrm{d}m<\varepsilon$.
 
 > **Basic Knowledge**<br>**Uniqueness of a measure on a generating family of the product $\sigma$-algebra**: two $\sigma$-finite measures that agree on a rectangle-admissible family generating the product $\sigma$-algebra agree on the whole product $\sigma$-algebra.
 
 ### Problem 1
 
-Prove Theorem 11.1.2 of the lecture notes: if $f\in L^{1}\left(m\right)$ and $\epsilon>0$, then there exists a simple function $\varphi=\sum a_{j}\chi_{R_{j}}$, where each $R_{j}$ is a product of intervals, such that $\int\left|f-\varphi\right|<\epsilon$; and there exists a continuous function $g$ that vanishes outside a bounded set, such that $\int\left|f-g\right|<\epsilon$.
+Prove Theorem 11.1.2 of the lecture notes: if $f\in L^{1}\left(m\right)$ and $\varepsilon>0$, then there exists a simple function $\varphi=\sum a_{j}\chi_{R_{j}}$, where each $R_{j}$ is a product of intervals, such that $\int\left|f-\varphi\right|<\varepsilon$; and there exists a continuous function $g$ that vanishes outside a bounded set, such that $\int\left|f-g\right|<\varepsilon$.
 
 ### Solution to Problem 1
 
-**The simple-function part.** By **Theorem 8.2.16**, there exists an integrable simple function $\varphi=\sum_{j}a_{j}\chi_{E_{j}}$ such that $\int\left|f-\varphi\right|<\epsilon/2$. For terms with $a_{j}\ne0$, since $\int a_{j}\chi_{E_{j}}\,\mathrm{d}m=a_{j}m\left(E_{j}\right)<\infty$, we have $m\left(E_{j}\right)<\infty$ (otherwise the integral diverges, contradicting integrability). By **Theorem 11.1.1** (b), for each such $E_{j}$ there exist finitely many pairwise disjoint rectangles with sides that are intervals, $\left\{R_{j,k}\right\}$, such that $m\left(E_{j}\triangle\bigcup_{k}R_{j,k}\right)$ is arbitrarily small. Then $\chi_{E_{j}}$ and $\chi_{R_{j}}$ (where $R_{j}=\bigcup_{k}R_{j,k}$) are arbitrarily close in $L^{1}$; taking the approximation errors small enough and combining over all $j$, we obtain a simple function $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ (each $R_{j}$ is a finite union of rectangles with sides that are intervals, and the $R_{j}$ may be arranged as pairwise disjoint products of intervals) satisfying $\int\left|\varphi-\varphi'\right|<\epsilon/2$. Hence $\int\left|f-\varphi'\right|\le\int\left|f-\varphi\right|+\int\left|\varphi-\varphi'\right|<\epsilon$. $\blacksquare$
+**The simple-function part.** By **Theorem 8.2.16**, there exists an integrable simple function $\varphi=\sum_{j}a_{j}\chi_{E_{j}}$ such that $\int\left|f-\varphi\right|<\varepsilon/2$. For terms with $a_{j}\ne0$, since $\int a_{j}\chi_{E_{j}}\,\mathrm{d}m=a_{j}m\left(E_{j}\right)<\infty$, we have $m\left(E_{j}\right)<\infty$ (otherwise the integral diverges, contradicting integrability). By **Theorem 11.1.1** (b), for each such $E_{j}$ there exist finitely many pairwise disjoint rectangles with sides that are intervals, $\left\{R_{j,k}\right\}$, such that $m\left(E_{j}\triangle\bigcup_{k}R_{j,k}\right)$ is arbitrarily small. Then $\chi_{E_{j}}$ and $\chi_{R_{j}}$ (where $R_{j}=\bigcup_{k}R_{j,k}$) are arbitrarily close in $L^{1}$; taking the approximation errors small enough and combining over all $j$, we obtain a simple function $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ (each $R_{j}$ is a finite union of rectangles with sides that are intervals, and the $R_{j}$ may be arranged as pairwise disjoint products of intervals) satisfying $\int\left|\varphi-\varphi'\right|<\varepsilon/2$. Hence $\int\left|f-\varphi'\right|\le\int\left|f-\varphi\right|+\int\left|\varphi-\varphi'\right|<\varepsilon$. $\blacksquare$
 
-**The continuous-function part.** Suppose $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ has been obtained as above, where each $R_{j}$ is a bounded closed rectangle. By the Basic Knowledge (continuous approximation of indicator functions), for each $R_{j}$ there exists a continuous function $g_{j}$ with compact support such that $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ is arbitrarily small. Taking the approximation errors small enough and setting $g=\sum_{j}a_{j}g_{j}$, then $g$ is continuous and supported in $\bigcup_{j}R_{j}$ (a bounded set), and $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|<\epsilon/2$. Hence
+**The continuous-function part.** Suppose $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ has been obtained as above, where each $R_{j}$ is a bounded closed rectangle. By the Basic Knowledge (continuous approximation of indicator functions), for each $R_{j}$ there exists a continuous function $g_{j}$ with compact support such that $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ is arbitrarily small. Taking the approximation errors small enough and setting $g=\sum_{j}a_{j}g_{j}$, then $g$ is continuous and supported in $\bigcup_{j}R_{j}$ (a bounded set), and $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|<\varepsilon/2$. Hence
 
 $$
-\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|<\epsilon.
+\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|<\varepsilon.
 $$
 
 $g$ vanishes outside a bounded set. $\blacksquare$

@@ -2,7 +2,7 @@
 
 > **定义 14.0.6** (有界变差函数)<br>设 $f:\left[a,b\right]\to\mathbb R$. 对 $\left[a,b\right]$ 的任意分划 $P:a=x_{0}<x_{1}<\cdots<x_{n}=b$, 定义变差 $V\left(f,P\right)=\sum_{i=1}^{n}\left|f\left(x_{i}\right)-f\left(x_{i-1}\right)\right|$. $f$ 在 $\left[a,b\right]$ 上的全变差为 $V_{a}^{b}\left(f\right)=\sup_{P}V\left(f,P\right)$. 若 $V_{a}^{b}\left(f\right)<+\infty$, 则称 $f$ 为有界变差函数, 记作 $f\in BV\left(\left[a,b\right]\right)$.
 
-> **定义 15.0.11** (绝对连续性)<br>函数 $f:\left[a,b\right]\to\mathbb R$ 称为**绝对连续的** (记 $f\in AC\left(\left[a,b\right]\right)$), 若对任意 $\epsilon>0$, 存在 $\delta>0$, 使得对任意有限个互不相交的子区间 $\left(a_{i},b_{i}\right)\subset\left[a,b\right]$, 只要 $\sum_{i}\left(b_{i}-a_{i}\right)<\delta$, 就有 $\sum_{i}\left|f\left(b_{i}\right)-f\left(a_{i}\right)\right|<\epsilon$.
+> **定义 15.0.11** (绝对连续性)<br>函数 $f:\left[a,b\right]\to\mathbb R$ 称为**绝对连续的** (记 $f\in AC\left(\left[a,b\right]\right)$), 若对任意 $\varepsilon>0$, 存在 $\delta>0$, 使得对任意有限个互不相交的子区间 $\left(a_{i},b_{i}\right)\subset\left[a,b\right]$, 只要 $\sum_{i}\left(b_{i}-a_{i}\right)<\delta$, 就有 $\sum_{i}\left|f\left(b_{i}\right)-f\left(a_{i}\right)\right|<\varepsilon$.
 
 > **定理 15.0.14** (等价刻画)<br>$f\in AC\left(\left[a,b\right]\right)$ 当且仅当存在 $g\in L^{1}\left(\left[a,b\right]\right)$ 使得 $f\left(x\right)=f\left(a\right)+\int_{a}^{x}g\left(t\right)\mathrm{d}t$ 对一切 $x\in\left[a,b\right]$ 成立. 此时 $f'\left(x\right)=g\left(x\right)$ 几乎处处成立.
 

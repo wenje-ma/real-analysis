@@ -97,13 +97,13 @@ $$
 
 We now prove uniqueness. Let $\nu$ be any measure on $\mathcal M$ satisfying $\nu|_{\mathcal E}=\mu_{0}$; we prove that $\nu=\mu^{*}|_{\mathcal M}$. First assume $\mu_{0}\left(X\right)<\infty$.
 
-**Step 1: $\nu\le\mu^{*}$ on $\mathcal M$.** For any $A\in\mathcal M$ and $\epsilon>0$, by the definition of $\mu^{*}$ in **Theorem 6.2.2**, there exists $\left\{E_{n}\right\}\subset\mathcal E$ covering $A$ such that $\sum_{n}\mu_{0}\left(E_{n}\right)\le\mu^{*}\left(A\right)+\epsilon$. By the countable subadditivity of $\nu$ (**Proposition 5.2.3**) and $\nu|_{\mathcal E}=\mu_{0}$,
+**Step 1: $\nu\le\mu^{*}$ on $\mathcal M$.** For any $A\in\mathcal M$ and $\varepsilon>0$, by the definition of $\mu^{*}$ in **Theorem 6.2.2**, there exists $\left\{E_{n}\right\}\subset\mathcal E$ covering $A$ such that $\sum_{n}\mu_{0}\left(E_{n}\right)\le\mu^{*}\left(A\right)+\varepsilon$. By the countable subadditivity of $\nu$ (**Proposition 5.2.3**) and $\nu|_{\mathcal E}=\mu_{0}$,
 
 $$
-\nu\left(A\right)\le\sum_{n}\nu\left(E_{n}\right)=\sum_{n}\mu_{0}\left(E_{n}\right)\le\mu^{*}\left(A\right)+\epsilon.
+\nu\left(A\right)\le\sum_{n}\nu\left(E_{n}\right)=\sum_{n}\mu_{0}\left(E_{n}\right)\le\mu^{*}\left(A\right)+\varepsilon.
 $$
 
-Since $\epsilon$ is arbitrary, $\nu\left(A\right)\le\mu^{*}\left(A\right)$.
+Since $\varepsilon$ is arbitrary, $\nu\left(A\right)\le\mu^{*}\left(A\right)$.
 
 **Step 2: $\nu=\mu^{*}$ on $\sigma\left(\mathcal E\right)$.** Set $\mathcal H=\left\{A\in\sigma\left(\mathcal E\right):\nu\left(A\right)=\mu^{*}\left(A\right)\right\}$. For $E\in\mathcal E$, by **Theorem 6.2.2** and $\nu|_{\mathcal E}=\mu_{0}$ we have $\mu^{*}\left(E\right)=\mu_{0}\left(E\right)=\nu\left(E\right)$, so $\mathcal E\subset\mathcal H$. We verify that $\mathcal H$ is a monotone class (**Definition 4.4.1**): if $\left\{A_{n}\right\}\subset\mathcal H$ and $A_{n}\uparrow A$, then by the continuity from below of $\nu,\mu^{*}|_{\mathcal M}$ (**Proposition 5.2.4**; $\sigma\left(\mathcal E\right)\subset\mathcal M$) we get $\nu\left(A\right)=\lim_{n}\nu\left(A_{n}\right)=\lim_{n}\mu^{*}\left(A_{n}\right)=\mu^{*}\left(A\right)$, so $A\in\mathcal H$; the decreasing case is analogous (here $\mu^{*}\left(A_{1}\right)\le\mu^{*}\left(X\right)=\mu_{0}\left(X\right)<\infty$, so continuity from above applies). Thus $\mathcal H$ is a monotone class containing the algebra $\mathcal E$, and by **Theorem 4.4.2** (Monotone Class Theorem), $\sigma\left(\mathcal E\right)\subset\mathcal H$, i.e. $\nu=\mu^{*}$ on $\sigma\left(\mathcal E\right)$.
 
@@ -286,14 +286,14 @@ is a union of two nonempty, disjoint $K$-relative open sets (since $K\subset C$ 
 
 **4. Nowhere dense.** Take any nonempty open interval $\left(\alpha,\beta\right)\subset\mathbb R$. If it intersects $\left[0,1\right]$, choose $n$ such that $3^{-n}<\beta-\alpha$. After the $n$-th step, $C_{n}$ is a union of $2^{n}$ closed intervals of length $3^{-n}$; the $2^{n}-1$ open intervals between these closed intervals (dug out at the $n$-th step) cover the part of $\left[0,1\right]$ except the endpoints, and all the dug-out intervals have length $3^{-n}$. Since $\left(\alpha,\beta\right)$ has length greater than $3^{-n}$, it must contain some open interval dug out at the $n$-th step, so $\left(\alpha,\beta\right)$ is not entirely contained in $C$. Hence $C$ contains no nonempty open interval, $\operatorname{int}\left(C\right)=\varnothing$, i.e. $C$ is nowhere dense. $\blacksquare$
 
-**5. Perfect set.** That it is closed was already proved in (1). We prove that $C$ has no isolated points: let $x\in C$. For any $\epsilon>0$, by **Theorem 6.5.2** write $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ with $a_{k}\in\left\{0,2\right\}$. Choose $n$ such that $\frac{2}{3^{n+1}}<\epsilon$, and let $x_{n}$ be the point obtained from the ternary expansion of $x$ by replacing the $n+1$-th digit $a_{n+1}$ with $2-a_{n+1}$ and leaving all other digits unchanged. Then $x_{n}\in C$ (its ternary expansion contains no $1$), $x_{n}\ne x$, and
+**5. Perfect set.** That it is closed was already proved in (1). We prove that $C$ has no isolated points: let $x\in C$. For any $\varepsilon>0$, by **Theorem 6.5.2** write $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ with $a_{k}\in\left\{0,2\right\}$. Choose $n$ such that $\frac{2}{3^{n+1}}<\varepsilon$, and let $x_{n}$ be the point obtained from the ternary expansion of $x$ by replacing the $n+1$-th digit $a_{n+1}$ with $2-a_{n+1}$ and leaving all other digits unchanged. Then $x_{n}\in C$ (its ternary expansion contains no $1$), $x_{n}\ne x$, and
 
 $$
-\begin{aligned}\left|x_{n}-x\right|&=\left|\frac{2-a_{n+1}}{3^{n+1}}-\frac{a_{n+1}}{3^{n+1}}\right|\\&=\frac{2}{3^{n+1}}<\epsilon.
+\begin{aligned}\left|x_{n}-x\right|&=\left|\frac{2-a_{n+1}}{3^{n+1}}-\frac{a_{n+1}}{3^{n+1}}\right|\\&=\frac{2}{3^{n+1}}<\varepsilon.
 \end{aligned}
 $$
 
-Hence the $\epsilon$-neighborhood of $x$ contains points of $C$ other than $x$, so $x$ is not an isolated point. Therefore $C$ is a perfect set. $\blacksquare$
+Hence the $\varepsilon$-neighborhood of $x$ contains points of $C$ other than $x$, so $x$ is not an isolated point. Therefore $C$ is a perfect set. $\blacksquare$
 
 ### Problem 5
 
