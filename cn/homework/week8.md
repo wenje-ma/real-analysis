@@ -2,7 +2,7 @@
 
 > **定理 8.2.9** (控制收敛定理)<br>设 $\left(X,\mathcal F,\mu\right)$ 是测度空间, $\left\{f_{n}\right\}$ 是一列可测函数, 若存在可积函数 $g$ 使 $\left|f_{n}\right|\le g$ 对所有 $n$ 成立, 且 $f_{n}\to f$ 几乎处处, 则 $f$ 可积且 $\int f\,\mathrm{d}\mu=\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu$.
 
-> **定理 8.2.16**<br>如果 $f\in L^{1}\left(\mu\right)$ 且 $\varepsilon>0$, 则存在可积简单函数 $\varphi=\sum a_{j}\chi_{E_{j}}$ 使得 $\int\left|f-\varphi\right|\mathrm{d}\mu<\varepsilon$ (即可积简单函数在 $L^{1}$ 度量下稠密).
+> **定理 8.2.16**<br>如果 $f\in L^{1}\left(\mu\right)$ 且 $\varepsilon> 0$, 则存在可积简单函数 $\varphi=\sum a_{j}\chi_{E_{j}}$ 使得 $\int\left|f-\varphi\right|\mathrm{d}\mu< \varepsilon$ (即可积简单函数在 $L^{1}$ 度量下稠密).
 
 > **定理 10.2.1** (富比尼定理)<br>设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 $\nu$-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 $\mu$-可积的; 且重积分相等: $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).\end{aligned}$$
 
@@ -11,7 +11,7 @@
 > **定理 11.1.1**<br>假设 $E\in\mathcal L^{n}$.
 > (a) $$\begin{aligned}m\left(E\right)&=\inf\left\{m\left(U\right):U\supset E,U\text{开}\right\}\\&=\sup\left\{m\left(K\right):K\subset E,K\text{紧}\right\}\end{aligned}$$;
 > 
-> (b) 若 $m\left(E\right)<\infty$, 则对任意 $\varepsilon>0$, 存在有限个边为区间的互不相交的矩形族 $\left\{R_{j}\right\}_{j=1}^{N}$, 使得 $m\left(E\triangle\bigcup_{j=1}^{N}R_{j}\right)<\varepsilon$.
+> (b) 若 $m\left(E\right)< \infty$, 则对任意 $\varepsilon> 0$, 存在有限个边为区间的互不相交的矩形族 $\left\{R_{j}\right\}_{j=1}^{N}$, 使得 $m\left(E\triangle\bigcup_{j=1}^{N}R_{j}\right)< \varepsilon$.
 
 > **定理 11.4.1**<br>存在 $S^{n-1}$ 上唯一的博雷尔测度 $\sigma=\sigma_{n-1}$, 使得 $m^{*}=\rho\times\sigma$. 若 $f$ 是 $\mathbb R^{n}$ 上的博雷尔可测函数, 且 $f\ge0$ 或 $f\in L^{1}\left(m\right)$, 则 $$\int_{\mathbb R^{n}}f\left(x\right)\mathrm{d}x=\int_{0}^{\infty}\int_{S^{n-1}}f\left(rx'\right)r^{n-1}\mathrm{d}\sigma\left(x'\right)\mathrm{d}r.$$
 
@@ -21,24 +21,24 @@
 
 > **基础知识**<br>**正交变换保持勒贝格测度**: 若 $R\in O\left(n\right)$, 即 $R^{T}R=I$, 则 $\left|\det R\right|=1$, 且对任意 $E\in\mathcal L^{n}$ 有 $m\left(R\left(E\right)\right)=m\left(E\right)$.
 
-> **基础知识**<br>**伽马函数与贝塔恒等式**: 伽马函数 $\Gamma\left(x\right)=\int_{0}^{\infty}t^{x-1}e^{-t}\mathrm{d}t$ 满足递推 $\Gamma\left(x+1\right)=x\Gamma\left(x\right)$; 贝塔函数满足恒等式 $\frac{\Gamma\left(x\right)\Gamma\left(y\right)}{\Gamma\left(x+y\right)}=\int_{0}^{1}t^{x-1}\left(1-t\right)^{y-1}\mathrm{d}t$ 对 $x,y>0$.
+> **基础知识**<br>**伽马函数与贝塔恒等式**: 伽马函数 $\Gamma\left(x\right)=\int_{0}^{\infty}t^{x-1}e^{-t}\mathrm{d}t$ 满足递推 $\Gamma\left(x+1\right)=x\Gamma\left(x\right)$; 贝塔函数满足恒等式 $\frac{\Gamma\left(x\right)\Gamma\left(y\right)}{\Gamma\left(x+y\right)}=\int_{0}^{1}t^{x-1}\left(1-t\right)^{y-1}\mathrm{d}t$ 对 $x,y> 0$.
 
-> **基础知识**<br>**特征函数的连续逼近**: 若 $R\subset\mathbb R^{n}$ 是有界闭矩形, 则对任意 $\varepsilon>0$, 存在具有紧支撑的连续函数 $g$ 使得 $\int\left|\chi_{R}-g\right|\mathrm{d}m<\varepsilon$.
+> **基础知识**<br>**特征函数的连续逼近**: 若 $R\subset\mathbb R^{n}$ 是有界闭矩形, 则对任意 $\varepsilon> 0$, 存在具有紧支撑的连续函数 $g$ 使得 $\int\left|\chi_{R}-g\right|\mathrm{d}m< \varepsilon$.
 
 > **基础知识**<br>**测度在乘积 $\sigma$-代数生成族上的唯一性**: 两个 $\sigma$-有限的测度若在某个生成乘积 $\sigma$-代数的矩形容许族上取值相等, 则在整个乘积 $\sigma$-代数上相等.
 
 ### 习题一
 
-证明讲义定理 11.1.2: 若 $f\in L^{1}\left(m\right)$ 且 $\varepsilon>0$, 则存在一个简单函数 $\varphi=\sum a_{j}\chi_{R_{j}}$, 其中每个 $R_{j}$ 是区间之积, 使得 $\int\left|f-\varphi\right|<\varepsilon$; 且存在一个在有界集外为零的连续函数 $g$, 使得 $\int\left|f-g\right|<\varepsilon$.
+证明讲义定理 11.1.2: 若 $f\in L^{1}\left(m\right)$ 且 $\varepsilon> 0$, 则存在一个简单函数 $\varphi=\sum a_{j}\chi_{R_{j}}$, 其中每个 $R_{j}$ 是区间之积, 使得 $\int\left|f-\varphi\right|< \varepsilon$; 且存在一个在有界集外为零的连续函数 $g$, 使得 $\int\left|f-g\right|< \varepsilon$.
 
 ### 解答 习题一
 
-**简单函数部分.** 由**定理 8.2.16**, 存在可积简单函数 $\varphi=\sum_{j}a_{j}\chi_{E_{j}}$ 使得 $\int\left|f-\varphi\right|<\varepsilon/2$. 对 $a_{j}\ne0$ 的项, 由 $\int a_{j}\chi_{E_{j}}\,\mathrm{d}m=a_{j}m\left(E_{j}\right)<\infty$ 得 $m\left(E_{j}\right)<\infty$ (否则积分发散, 与可积性矛盾). 由**定理 11.1.1** (b), 对每个这样的 $E_{j}$ 存在有限个边为区间的互不相交矩形 $\left\{R_{j,k}\right\}$ 使 $m\left(E_{j}\triangle\bigcup_{k}R_{j,k}\right)$ 任意小. 于是 $\chi_{E_{j}}$ 与 $\chi_{R_{j}}$ (其中 $R_{j}=\bigcup_{k}R_{j,k}$) 在 $L^{1}$ 中任意接近, 取足够小的逼近误差并合并所有 $j$, 得到简单函数 $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ (每个 $R_{j}$ 是边为区间的矩形之有限并, 且各 $R_{j}$ 可整理为区间之积的互不相交矩形) 满足 $\int\left|\varphi-\varphi'\right|<\varepsilon/2$. 故 $\int\left|f-\varphi'\right|\le\int\left|f-\varphi\right|+\int\left|\varphi-\varphi'\right|<\varepsilon$. $\blacksquare$
+**简单函数部分.** 由**定理 8.2.16**, 存在可积简单函数 $\varphi=\sum_{j}a_{j}\chi_{E_{j}}$ 使得 $\int\left|f-\varphi\right|< \varepsilon/2$. 对 $a_{j}\ne0$ 的项, 由 $\int a_{j}\chi_{E_{j}}\,\mathrm{d}m=a_{j}m\left(E_{j}\right)< \infty$ 得 $m\left(E_{j}\right)< \infty$ (否则积分发散, 与可积性矛盾). 由**定理 11.1.1** (b), 对每个这样的 $E_{j}$ 存在有限个边为区间的互不相交矩形 $\left\{R_{j,k}\right\}$ 使 $m\left(E_{j}\triangle\bigcup_{k}R_{j,k}\right)$ 任意小. 于是 $\chi_{E_{j}}$ 与 $\chi_{R_{j}}$ (其中 $R_{j}=\bigcup_{k}R_{j,k}$) 在 $L^{1}$ 中任意接近, 取足够小的逼近误差并合并所有 $j$, 得到简单函数 $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ (每个 $R_{j}$ 是边为区间的矩形之有限并, 且各 $R_{j}$ 可整理为区间之积的互不相交矩形) 满足 $\int\left|\varphi-\varphi'\right|< \varepsilon/2$. 故 $\int\left|f-\varphi'\right|\le\int\left|f-\varphi\right|+\int\left|\varphi-\varphi'\right|< \varepsilon$. $\blacksquare$
 
-**连续函数部分.** 设 $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ 已由上一步得到, 其中每个 $R_{j}$ 是有界闭矩形. 由基础知识 (特征函数的连续逼近), 对每个 $R_{j}$ 存在具有紧支撑的连续函数 $g_{j}$ 使 $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ 任意小. 取逼近误差足够小并令 $g=\sum_{j}a_{j}g_{j}$, 则 $g$ 连续且支撑在 $\bigcup_{j}R_{j}$ 中 (有界集), 且 $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|<\varepsilon/2$. 于是
+**连续函数部分.** 设 $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ 已由上一步得到, 其中每个 $R_{j}$ 是有界闭矩形. 由基础知识 (特征函数的连续逼近), 对每个 $R_{j}$ 存在具有紧支撑的连续函数 $g_{j}$ 使 $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ 任意小. 取逼近误差足够小并令 $g=\sum_{j}a_{j}g_{j}$, 则 $g$ 连续且支撑在 $\bigcup_{j}R_{j}$ 中 (有界集), 且 $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|< \varepsilon/2$. 于是
 
 $$
-\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|<\varepsilon.
+\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|< \varepsilon.
 $$
 
 $g$ 在有界集外为零. $\blacksquare$
@@ -89,9 +89,9 @@ $T\left(E\right)\in\mathcal L^{n}$ 已由可测性保证. $\blacksquare$
 
 a. $f\left(x,y\right)=\left(x^{2}-y^{2}\right)\left(x^{2}+y^{2}\right)^{-2}$;
 
-b. $f\left(x,y\right)=\left(1-xy\right)^{-a}$ ($a>0$);
+b. $f\left(x,y\right)=\left(1-xy\right)^{-a}$ ($a> 0$);
 
-c. $f\left(x,y\right)=\left(x-y\right)^{-3}$, 若 $0<y<x<1$, 否则为 $0$.
+c. $f\left(x,y\right)=\left(x-y\right)^{-3}$, 若 $0< y< x< 1$, 否则为 $0$.
 
 ### 解答 习题三
 
@@ -129,15 +129,15 @@ $$
 
 $f\ge0$.
 
-**$0<a\le1$ 时 $f$ 可积.** 固定 $y$, 内层 $\int_{0}^{1}\left(1-xy\right)^{-a}\mathrm{d}x=\frac{1}{y}\cdot\frac{1-\left(1-y\right)^{1-a}}{1-a}$ (当 $a\ne1$), 且 $a=1$ 时内层 $=-\frac{\ln\left(1-y\right)}{y}$. 对 $0<a<1$, 内层在 $y\to0$ 处趋于 $1$, 在 $y\to1$ 处趋于 $\frac{1}{1-a}$ (因 $\left(1-y\right)^{1-a}\to0$), 故有界, $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y<\infty$. 对 $a=1$, $\int_{0}^{1}-\frac{\ln\left(1-y\right)}{y}\mathrm{d}y=\sum_{k=1}^{\infty}\frac{1}{k^{2}}=\frac{\pi^{2}}{6}<\infty$. 故 $0<a\le1$ 时 $f\in L^{1}$, 由**定理 10.2.2** (托内利), 三个积分都存在且相等.
+**$0< a\le1$ 时 $f$ 可积.** 固定 $y$, 内层 $\int_{0}^{1}\left(1-xy\right)^{-a}\mathrm{d}x=\frac{1}{y}\cdot\frac{1-\left(1-y\right)^{1-a}}{1-a}$ (当 $a\ne1$), 且 $a=1$ 时内层 $=-\frac{\ln\left(1-y\right)}{y}$. 对 $0< a< 1$, 内层在 $y\to0$ 处趋于 $1$, 在 $y\to1$ 处趋于 $\frac{1}{1-a}$ (因 $\left(1-y\right)^{1-a}\to0$), 故有界, $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y< \infty$. 对 $a=1$, $\int_{0}^{1}-\frac{\ln\left(1-y\right)}{y}\mathrm{d}y=\sum_{k=1}^{\infty}\frac{1}{k^{2}}=\frac{\pi^{2}}{6}< \infty$. 故 $0< a\le1$ 时 $f\in L^{1}$, 由**定理 10.2.2** (托内利), 三个积分都存在且相等.
 
-**$a>1$ 时 $f\notin L^{1}$.** 内层 $\frac{1}{y}\cdot\frac{1-\left(1-y\right)^{1-a}}{1-a}$, 因 $1-a<0$ 且 $y\to1$ 时 $\left(1-y\right)^{1-a}\to\infty$, 内层趋于 $+\infty$, 故 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=+\infty$; 对称地 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=+\infty$, 且 $\int_{E}f\,\mathrm{d}m^{2}=+\infty$.
+**$a> 1$ 时 $f\notin L^{1}$.** 内层 $\frac{1}{y}\cdot\frac{1-\left(1-y\right)^{1-a}}{1-a}$, 因 $1-a< 0$ 且 $y\to1$ 时 $\left(1-y\right)^{1-a}\to\infty$, 内层趋于 $+\infty$, 故 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=+\infty$; 对称地 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=+\infty$, 且 $\int_{E}f\,\mathrm{d}m^{2}=+\infty$.
 
-**结论.** $0<a\le1$ 时三个积分存在且相等, $f\in L^{1}$; $a>1$ 时三个积分均为 $+\infty$ (作为非负函数的积分发散), $f\notin L^{1}$. $\blacksquare$
+**结论.** $0< a\le1$ 时三个积分存在且相等, $f\in L^{1}$; $a> 1$ 时三个积分均为 $+\infty$ (作为非负函数的积分发散), $f\notin L^{1}$. $\blacksquare$
 
 #### c
 
-区域为 $\left\{\left(x,y\right):0<y<x<1\right\}$.
+区域为 $\left\{\left(x,y\right):0< y< x< 1\right\}$.
 
 **$\int_{E}f\,\mathrm{d}m^{2}$ 不存在.** $\left|f\right|=\left(x-y\right)^{-3}$. 先对 $x$ 积分, $\int_{y}^{1}\left(x-y\right)^{-3}\mathrm{d}x=\left[-\frac{1}{2}\left(x-y\right)^{-2}\right]_{y}^{1}=+\infty$, 故 $\int_{E}\left|f\right|=\infty$, $f\notin L^{1}$, $\int_{E}f\,\mathrm{d}m^{2}$ 无定义.
 
@@ -163,14 +163,14 @@ $$
 
 ### 解答 习题四
 
-先在 $\left(0,a\right)\times\left(0,a\right)$ 上考虑二元函数 $h\left(x,t\right)=t^{-1}f\left(t\right)\chi_{\left\{x<t\right\}}\left(x,t\right)$ (即定义域 $\left\{\left(x,t\right):0<x<t<a\right\}$). 由**定理 10.2.2** (托内利, 非负函数 $\left|h\right|$),
+先在 $\left(0,a\right)\times\left(0,a\right)$ 上考虑二元函数 $h\left(x,t\right)=t^{-1}f\left(t\right)\chi_{\left\{x< t\right\}}\left(x,t\right)$ (即定义域 $\left\{\left(x,t\right):0< x< t< a\right\}$). 由**定理 10.2.2** (托内利, 非负函数 $\left|h\right|$),
 
 $$
-\begin{aligned}\int_{0}^{a}\int_{x}^{a}t^{-1}\left|f\left(t\right)\right|\mathrm{d}t\,\mathrm{d}x&=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}\left|f\left(t\right)\right|\mathrm{d}x\right)\mathrm{d}t\\&=\int_{0}^{a}t^{-1}\left|f\left(t\right)\right|\cdot t\,\mathrm{d}t\\&=\int_{0}^{a}\left|f\left(t\right)\right|\mathrm{d}t\\&<\infty,
+\begin{aligned}\int_{0}^{a}\int_{x}^{a}t^{-1}\left|f\left(t\right)\right|\mathrm{d}t\,\mathrm{d}x&=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}\left|f\left(t\right)\right|\mathrm{d}x\right)\mathrm{d}t\\&=\int_{0}^{a}t^{-1}\left|f\left(t\right)\right|\cdot t\,\mathrm{d}t\\&=\int_{0}^{a}\left|f\left(t\right)\right|\mathrm{d}t\\&< \infty,
 \end{aligned}
 $$
 
-其中内层交换次序用**定理 10.2.2** 于非负函数. 故 $\left(x,t\right)\mapsto t^{-1}f\left(t\right)\chi_{\left\{x<t\right\}}$ 可积, 从而 $g$ 可积. 再由**定理 10.2.1** (富比尼) 交换次序,
+其中内层交换次序用**定理 10.2.2** 于非负函数. 故 $\left(x,t\right)\mapsto t^{-1}f\left(t\right)\chi_{\left\{x< t\right\}}$ 可积, 从而 $g$ 可积. 再由**定理 10.2.1** (富比尼) 交换次序,
 
 $$
 \begin{aligned}\int_{0}^{a}g\left(x\right)\mathrm{d}x&=\int_{0}^{a}\int_{x}^{a}t^{-1}f\left(t\right)\mathrm{d}t\,\mathrm{d}x\\&=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}f\left(t\right)\mathrm{d}x\right)\mathrm{d}t\\&=\int_{0}^{a}t^{-1}f\left(t\right)\cdot t\,\mathrm{d}t\\&=\int_{0}^{a}f\left(t\right)\mathrm{d}t.
@@ -207,7 +207,7 @@ $$
 
 #### b
 
-对固定的 $b>0$, 因 $\int_{0}^{b}\int_{0}^{\infty}\left|e^{-xy}\sin x\right|\mathrm{d}y\,\mathrm{d}x=\int_{0}^{b}\frac{\left|\sin x\right|}{x}\mathrm{d}x<\infty$ (固定 $b$ 时 $x^{-1}\sin x$ 可积), 由**定理 10.2.2** (托内利) 可交换次序:
+对固定的 $b> 0$, 因 $\int_{0}^{b}\int_{0}^{\infty}\left|e^{-xy}\sin x\right|\mathrm{d}y\,\mathrm{d}x=\int_{0}^{b}\frac{\left|\sin x\right|}{x}\mathrm{d}x< \infty$ (固定 $b$ 时 $x^{-1}\sin x$ 可积), 由**定理 10.2.2** (托内利) 可交换次序:
 
 $$
 \begin{aligned}\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x&=\int_{0}^{b}\int_{0}^{\infty}e^{-xy}\sin x\,\mathrm{d}y\,\mathrm{d}x\\&=\int_{0}^{\infty}\left(\int_{0}^{b}e^{-xy}\sin x\,\mathrm{d}x\right)\mathrm{d}y.
@@ -220,7 +220,7 @@ $$
 \int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\int_{0}^{\infty}\frac{1-e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}\mathrm{d}y.
 $$
 
-**取极限 $b\to\infty$.** 拆成两项 $\frac{1}{1+y^{2}}-\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}$. 第一项积分 $\int_{0}^{\infty}\frac{1}{1+y^{2}}\mathrm{d}y=\frac{\pi}{2}$. 对第二项, 当 $b\ge1$ 时 $\left|\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}\right|\le\frac{e^{-y}\left(y+1\right)}{1+y^{2}}=:g\left(y\right)$, 且 $\int_{0}^{\infty}g\left(y\right)\mathrm{d}y<\infty$ (被 $e^{-y}$ 指数衰减控制). 由**定理 8.2.9** (控制收敛定理, 对任意序列 $b_{n}\to\infty$ 应用), 该项趋于 $\int_{0}^{\infty}0\,\mathrm{d}y=0$. 故
+**取极限 $b\to\infty$.** 拆成两项 $\frac{1}{1+y^{2}}-\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}$. 第一项积分 $\int_{0}^{\infty}\frac{1}{1+y^{2}}\mathrm{d}y=\frac{\pi}{2}$. 对第二项, 当 $b\ge1$ 时 $\left|\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}\right|\le\frac{e^{-y}\left(y+1\right)}{1+y^{2}}=:g\left(y\right)$, 且 $\int_{0}^{\infty}g\left(y\right)\mathrm{d}y< \infty$ (被 $e^{-y}$ 指数衰减控制). 由**定理 8.2.9** (控制收敛定理, 对任意序列 $b_{n}\to\infty$ 应用), 该项趋于 $\int_{0}^{\infty}0\,\mathrm{d}y=0$. 故
 
 $$
 \begin{aligned}\lim_{b\to\infty}\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x&=\frac{\pi}{2}-0\\&=\frac{\pi}{2}.
@@ -231,7 +231,7 @@ $\blacksquare$
 
 ### 习题六
 
-证明习题 61. 若 $f$ 在 $\left[0,\infty\right)$ 上连续, 对 $\alpha>0$ 和 $x\ge0$, 令
+证明习题 61. 若 $f$ 在 $\left[0,\infty\right)$ 上连续, 对 $\alpha> 0$ 和 $x\ge0$, 令
 
 $$
 I_{\alpha}f\left(x\right)=\frac{1}{\Gamma\left(\alpha\right)}\int_{0}^{x}\left(x-t\right)^{\alpha-1}f\left(t\right)\mathrm{d}t,
@@ -239,7 +239,7 @@ $$
 
 $I_{\alpha}f$ 称为 $f$ 的 $\alpha$ 阶分数阶积分.
 
-a. $I_{\alpha+\beta}f=I_{\alpha}\left(I_{\beta}f\right)$ 对所有 $\alpha,\beta>0$ 成立. (用习题 60.)
+a. $I_{\alpha+\beta}f=I_{\alpha}\left(I_{\beta}f\right)$ 对所有 $\alpha,\beta> 0$ 成立. (用习题 60.)
 
 b. 若 $n\in\mathbb N$, $I_{n}f$ 是 $f$ 的 $n$ 阶反导数.
 
@@ -247,7 +247,7 @@ b. 若 $n\in\mathbb N$, $I_{n}f$ 是 $f$ 的 $n$ 阶反导数.
 
 #### a
 
-展开复合积分, 在区域 $\left\{\left(s,t\right):0<t<s<x\right\}$ 上交换次序:
+展开复合积分, 在区域 $\left\{\left(s,t\right):0< t< s< x\right\}$ 上交换次序:
 
 $$
 I_{\alpha}\left(I_{\beta}f\right)\left(x\right)=\frac{1}{\Gamma\left(\alpha\right)}\int_{0}^{x}\left(x-s\right)^{\alpha-1}\left[\frac{1}{\Gamma\left(\beta\right)}\int_{0}^{s}\left(s-t\right)^{\beta-1}f\left(t\right)\mathrm{d}t\right]\mathrm{d}s.
@@ -282,7 +282,7 @@ $$
 I_{1}f\left(x\right)=\int_{0}^{x}f\left(t\right)\mathrm{d}t,
 $$
 
-由微积分基本定理 $\frac{\mathrm{d}}{\mathrm{d}x}I_{1}f=f$. 由 (a), 迭代得 $I_{n}f=\underbrace{I_{1}\circ\cdots\circ I_{1}}_{n\text{次}}f$, 故 $\frac{\mathrm{d}^{n}}{\mathrm{d}x^{n}}I_{n}f=f$. 又因 $I_{\alpha}f$ 的积分下限为 $0$, 对 $k<n$ 有 $\left(\frac{\mathrm{d}}{\mathrm{d}x}\right)^{k}I_{n}f$ 在 $0$ 处取值为 $0$. 故 $I_{n}f$ 是 $f$ 的一个 $n$ 阶反导数. $\blacksquare$
+由微积分基本定理 $\frac{\mathrm{d}}{\mathrm{d}x}I_{1}f=f$. 由 (a), 迭代得 $I_{n}f=\underbrace{I_{1}\circ\cdots\circ I_{1}}_{n\text{次}}f$, 故 $\frac{\mathrm{d}^{n}}{\mathrm{d}x^{n}}I_{n}f=f$. 又因 $I_{\alpha}f$ 的积分下限为 $0$, 对 $k< n$ 有 $\left(\frac{\mathrm{d}}{\mathrm{d}x}\right)^{k}I_{n}f$ 在 $0$ 处取值为 $0$. 故 $I_{n}f$ 是 $f$ 的一个 $n$ 阶反导数. $\blacksquare$
 
 ### 习题七
 
@@ -312,7 +312,7 @@ $$
 
 ### 习题八
 
-证明习题 64. 对哪些实值 $a$ 和 $b$, $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在集合 $\left\{x\in\mathbb R^{n}:\left|x\right|<1/2\right\}$ 上可积? 在集合 $\left\{x\in\mathbb R^{n}:\left|x\right|>2\right\}$ 上可积?
+证明习题 64. 对哪些实值 $a$ 和 $b$, $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在集合 $\left\{x\in\mathbb R^{n}:\left|x\right|< 1/2\right\}$ 上可积? 在集合 $\left\{x\in\mathbb R^{n}:\left|x\right|> 2\right\}$ 上可积?
 
 ### 解答 习题八
 
@@ -320,7 +320,7 @@ $$
 
 $$\int_{\mathbb R^{n}}\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}\mathrm{d}x=\sigma\left(S^{n-1}\right)\int_{0}^{\infty}r^{a+n-1}\left|\log r\right|^{b}\mathrm{d}r.$$
 
-**集合 $\left\{\left|x\right|<1/2\right\}$.** 作代换 $u=-\log r$ (即 $r=e^{-u}$, $\mathrm{d}r=-e^{-u}\mathrm{d}u$, 则 $r\in\left(0,1/2\right]$ 对应 $u\in\left[\log 2,\infty\right)$):
+**集合 $\left\{\left|x\right|< 1/2\right\}$.** 作代换 $u=-\log r$ (即 $r=e^{-u}$, $\mathrm{d}r=-e^{-u}\mathrm{d}u$, 则 $r\in\left(0,1/2\right]$ 对应 $u\in\left[\log 2,\infty\right)$):
 
 $$
 \begin{aligned}\int_{0}^{1/2}r^{a+n-1}\left|\log r\right|^{b}\mathrm{d}r&=\int_{\log 2}^{\infty}e^{-u\left(a+n-1\right)}e^{-u}u^{b}\mathrm{d}u\\&=\int_{\log 2}^{\infty}e^{-u\left(a+n\right)}u^{b}\mathrm{d}u.
@@ -330,12 +330,12 @@ $$
 收敛条件由指数因子决定:
 
 $$
-\int_{\log 2}^{\infty}e^{-u\left(a+n\right)}u^{b}\mathrm{d}u\text{收敛}\iff\begin{cases}a+n>0,&\text{指数衰减, 任意 }b,\\a+n=0\text{且}b<-1,&\int u^{b}\mathrm{d}u\text{收敛},\\a+n<0,&\text{指数增长, 发散}.\end{cases}
+\int_{\log 2}^{\infty}e^{-u\left(a+n\right)}u^{b}\mathrm{d}u\text{收敛}\iff\begin{cases}a+n> 0,&\text{指数衰减, 任意 }b,\\a+n=0\text{且}b< -1,&\int u^{b}\mathrm{d}u\text{收敛},\\a+n< 0,&\text{指数增长, 发散}.\end{cases}
 $$
 
-故 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在 $\left\{\left|x\right|<1/2\right\}$ 上可积 $\iff a>-n$, 或 $a=-n$ 且 $b<-1$.
+故 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在 $\left\{\left|x\right|< 1/2\right\}$ 上可积 $\iff a> -n$, 或 $a=-n$ 且 $b< -1$.
 
-**集合 $\left\{\left|x\right|>2\right\}$.** 当 $r\ge2$ 时 $\left|\log r\right|=\log r$. 作代换 $r=e^{u}$ ($\mathrm{d}r=e^{u}\mathrm{d}u$, $u\ge\log 2$):
+**集合 $\left\{\left|x\right|> 2\right\}$.** 当 $r\ge2$ 时 $\left|\log r\right|=\log r$. 作代换 $r=e^{u}$ ($\mathrm{d}r=e^{u}\mathrm{d}u$, $u\ge\log 2$):
 
 $$
 \begin{aligned}\int_{2}^{\infty}r^{a+n-1}\left(\log r\right)^{b}\mathrm{d}r&=\int_{\log 2}^{\infty}e^{u\left(a+n-1\right)}e^{u}u^{b}\mathrm{d}u\\&=\int_{\log 2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u.
@@ -345,9 +345,9 @@ $$
 收敛条件:
 
 $$
-\int_{\log 2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u\text{收敛}\iff a+n<0
+\int_{\log 2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u\text{收敛}\iff a+n< 0
 $$
 
-(指数衰减; $a+n>0$ 时指数增长发散, $a+n=0$ 时 $\int u^{b}\mathrm{d}u$ 发散对任意 $b$). 故 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在 $\left\{\left|x\right|>2\right\}$ 上可积 $\iff a<-n$.
+(指数衰减; $a+n> 0$ 时指数增长发散, $a+n=0$ 时 $\int u^{b}\mathrm{d}u$ 发散对任意 $b$). 故 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在 $\left\{\left|x\right|> 2\right\}$ 上可积 $\iff a< -n$.
 
-**结论.** 在 $\left\{\left|x\right|<1/2\right\}$ 上可积 $\iff a>-n$ 或 $\left(a=-n\text{且}b<-1\right)$; 在 $\left\{\left|x\right|>2\right\}$ 上可积 $\iff a<-n$. $\blacksquare$
+**结论.** 在 $\left\{\left|x\right|< 1/2\right\}$ 上可积 $\iff a> -n$ 或 $\left(a=-n\text{且}b< -1\right)$; 在 $\left\{\left|x\right|> 2\right\}$ 上可积 $\iff a< -n$. $\blacksquare$

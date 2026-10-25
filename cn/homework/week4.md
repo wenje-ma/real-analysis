@@ -55,10 +55,10 @@ $$
 对 $m,n\in\mathbb N$, 由**定理 7.1.8**(1), 差 $f_{m}-f_{n}$ 可测. 由**定义 7.1.1**, 开区间 $\left(-\frac{1}{k},\frac{1}{k}\right)$ 的原像可测:
 
 $$
-E_{k,m,n}:=\left\{x:\left|f_{m}\left(x\right)-f_{n}\left(x\right)\right|<\frac{1}{k}\right\}=\left(f_{m}-f_{n}\right)^{-1}\left(\left(-\frac{1}{k},\frac{1}{k}\right)\right)\in\mathcal M.
+E_{k,m,n}:=\left\{x:\left|f_{m}\left(x\right)-f_{n}\left(x\right)\right|< \frac{1}{k}\right\}=\left(f_{m}-f_{n}\right)^{-1}\left(\left(-\frac{1}{k},\frac{1}{k}\right)\right)\in\mathcal M.
 $$
 
-由实数的完备性, $\lim_{n\to\infty}f_{n}\left(x\right)$ 存在当且仅当 $\left\{f_{n}\left(x\right)\right\}$ 是柯西列, 即对每个 $k\in\mathbb N$ 存在 $N$ 使对所有 $m,n\ge N$ 有 $\left|f_{m}\left(x\right)-f_{n}\left(x\right)\right|<\frac{1}{k}$. 故
+由实数的完备性, $\lim_{n\to\infty}f_{n}\left(x\right)$ 存在当且仅当 $\left\{f_{n}\left(x\right)\right\}$ 是柯西列, 即对每个 $k\in\mathbb N$ 存在 $N$ 使对所有 $m,n\ge N$ 有 $\left|f_{m}\left(x\right)-f_{n}\left(x\right)\right|< \frac{1}{k}$. 故
 
 $$
 \left\{x:\lim_{n\to\infty}f_{n}\left(x\right)\text{存在}\right\}=\bigcap_{k=1}^{\infty}\bigcup_{N=1}^{\infty}\bigcap_{m,n\ge N}E_{k,m,n}.

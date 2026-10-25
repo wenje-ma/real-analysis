@@ -21,7 +21,7 @@
 
 > **定理 10.1.4** (乘积测度的存在唯一性)<br>设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间. 存在唯一的测度 $\mu\times\nu$ 在 $\left(X\times Y,\mathcal A\otimes\mathcal B\right)$ 上, 使得对所有 $A\in\mathcal A$, $B\in\mathcal B$ 有 $\left(\mu\times\nu\right)\left(A\times B\right)=\mu\left(A\right)\nu\left(B\right)$. 其构造为 $\phi\left(E\right)=\int_{X}\nu\left(E_{x}\right)\mathrm{d}\mu\left(x\right)$ 对 $E\in\mathcal A\otimes\mathcal B$.
 
-> **定理 10.2.1** (富比尼定理)<br>设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 即 $\int_{X\times Y}\left|f\right|\mathrm{d}\left(\mu\times\nu\right)<\infty$, 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 $\nu$-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 $\mu$-可积的; 且重积分相等: $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).\end{aligned}$$
+> **定理 10.2.1** (富比尼定理)<br>设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 即 $\int_{X\times Y}\left|f\right|\mathrm{d}\left(\mu\times\nu\right)< \infty$, 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 $\nu$-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 $\mu$-可积的; 且重积分相等: $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).\end{aligned}$$
 
 > **定理 10.2.2** (托内利定理)<br>如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则 $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),\end{aligned}$$ 其中所有积分值都在 $\left[0,\infty\right]$ 中.
 
@@ -68,7 +68,7 @@ $$
 
 故 $\pi$ 是 $\mathcal E$ 上的准测度 (**定义 6.2.1**).
 
-**唯一延拓与乘积测度一致.** 由**定义 10.1.1**, $\mathcal E$ 由所有可测矩形生成, 故 $\sigma\left(\mathcal E\right)=\mathcal A\otimes\mathcal B$. 因 $\mu,\nu$ $\sigma$-有限, 可取 $X=\bigcup_{p}X_{p}$, $Y=\bigcup_{q}Y_{q}$ 使 $\mu\left(X_{p}\right),\nu\left(Y_{q}\right)<\infty$, 则矩形 $X_{p}\times Y_{q}$ 覆盖 $X\times Y$ 且 $\pi\left(X_{p}\times Y_{q}\right)<\infty$, 故 $\pi$ 是 $\sigma$-有限的. 由**定理 6.3.3** (卡拉西奥多里 定理, 准测度的唯一延拓), $\pi$ 在 $\sigma\left(\mathcal E\right)$ 上有唯一延拓. 该延拓在 $\mathcal E$ 上等于 $\pi=\left(\mu\times\nu\right)|_{\mathcal E}$, 故在整个 $\sigma\left(\mathcal E\right)=\mathcal A\otimes\mathcal B$ 上等于 $\mu\times\nu$. 即与定理 10.1.4 中定义的乘积测度一致. $\blacksquare$
+**唯一延拓与乘积测度一致.** 由**定义 10.1.1**, $\mathcal E$ 由所有可测矩形生成, 故 $\sigma\left(\mathcal E\right)=\mathcal A\otimes\mathcal B$. 因 $\mu,\nu$ $\sigma$-有限, 可取 $X=\bigcup_{p}X_{p}$, $Y=\bigcup_{q}Y_{q}$ 使 $\mu\left(X_{p}\right),\nu\left(Y_{q}\right)< \infty$, 则矩形 $X_{p}\times Y_{q}$ 覆盖 $X\times Y$ 且 $\pi\left(X_{p}\times Y_{q}\right)< \infty$, 故 $\pi$ 是 $\sigma$-有限的. 由**定理 6.3.3** (卡拉西奥多里 定理, 准测度的唯一延拓), $\pi$ 在 $\sigma\left(\mathcal E\right)$ 上有唯一延拓. 该延拓在 $\mathcal E$ 上等于 $\pi=\left(\mu\times\nu\right)|_{\mathcal E}$, 故在整个 $\sigma\left(\mathcal E\right)=\mathcal A\otimes\mathcal B$ 上等于 $\mu\times\nu$. 即与定理 10.1.4 中定义的乘积测度一致. $\blacksquare$
 
 ### 习题二
 
@@ -78,7 +78,7 @@ $$
 
 **48.** 设 $X=Y=\mathbb N$, $\mathcal M=\mathcal N=\mathcal P\left(\mathbb N\right)$, $\mu=\nu$ 是计数测度. 定义 $f\left(m,n\right)=1$ 若 $m=n$, $f\left(m,n\right)=-1$ 若 $m=n+1$, $f\left(m,n\right)=0$ 否则. 则 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)=\infty$, 且 $\iint f\,\mathrm{d}\mu\,\mathrm{d}\nu$ 与 $\iint f\,\mathrm{d}\nu\,\mathrm{d}\mu$ 存在但不相等.
 
-**50.** 设 $\left(X,\mathcal M,\mu\right)$ 是 $\sigma$-有限测度空间且 $f\in L^{+}\left(X\right)$. 令 $G_{f}=\left\{\left(x,y\right)\in X\times\left[0,\infty\right]:y\le f\left(x\right)\right\}$. 则 $G_{f}$ 是 $\mathcal M\otimes\mathcal B_{\mathbb R}$-可测的且 $\mu\times m\left(G_{f}\right)=\int f\,\mathrm{d}\mu$; 若把定义中 $y\le f\left(x\right)$ 的不等式换成 $y<f\left(x\right)$, 结论同样成立.
+**50.** 设 $\left(X,\mathcal M,\mu\right)$ 是 $\sigma$-有限测度空间且 $f\in L^{+}\left(X\right)$. 令 $G_{f}=\left\{\left(x,y\right)\in X\times\left[0,\infty\right]:y\le f\left(x\right)\right\}$. 则 $G_{f}$ 是 $\mathcal M\otimes\mathcal B_{\mathbb R}$-可测的且 $\mu\times m\left(G_{f}\right)=\int f\,\mathrm{d}\mu$; 若把定义中 $y\le f\left(x\right)$ 的不等式换成 $y< f\left(x\right)$, 结论同样成立.
 
 ### 解答 习题二
 
@@ -132,7 +132,7 @@ $$
 
 $$\iint f\,\mathrm{d}\nu\,\mathrm{d}\mu=\sum_{m}\left(\sum_{n}f\left(m,n\right)\right)=1.$$
 
-故 $\iint f\,\mathrm{d}\mu\,\mathrm{d}\nu=0\ne1=\iint f\,\mathrm{d}\nu\,\mathrm{d}\mu$. 因 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)=\infty$, $f$ 非绝对可积, **定理 10.2.1** (富比尼) 的假设 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)<\infty$ 不满足, 故不能交换积分次序. $\blacksquare$
+故 $\iint f\,\mathrm{d}\mu\,\mathrm{d}\nu=0\ne1=\iint f\,\mathrm{d}\nu\,\mathrm{d}\mu$. 因 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)=\infty$, $f$ 非绝对可积, **定理 10.2.1** (富比尼) 的假设 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)< \infty$ 不满足, 故不能交换积分次序. $\blacksquare$
 
 #### 50
 
@@ -157,4 +157,4 @@ $$
 \left(\mu\times m\right)\left(G_{f}\right)=\int_{X}f\left(x\right)\mathrm{d}\mu\left(x\right).
 $$
 
-若把 $y\le f\left(x\right)$ 换成 $y<f\left(x\right)$, 则 $\left(G_{f}\right)_{x}=\left[0,f\left(x\right)\right)$, 仍有 $m=f\left(x\right)$, 结论不变. $\blacksquare$
+若把 $y\le f\left(x\right)$ 换成 $y< f\left(x\right)$, 则 $\left(G_{f}\right)_{x}=\left[0,f\left(x\right)\right)$, 仍有 $m=f\left(x\right)$, 结论不变. $\blacksquare$

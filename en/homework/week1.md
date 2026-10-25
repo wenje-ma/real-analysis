@@ -195,13 +195,13 @@ $$
 \left(a,b\right)=\bigcup_{n=n_{0}}^{\infty}\left[a+\frac{1}{n},b-\frac{1}{n}\right]\in\sigma\left(\mathcal H\right)
 $$
 
-(take $n_{0}$ such that $a+\frac1n<b-\frac1n$); hence $\mathcal G\subset\sigma\left(\mathcal H\right)\Rightarrow\sigma\left(\tau\right)=\sigma\left(\mathcal G\right)\subset\sigma\left(\mathcal H\right)$. The two are equal.
+(take $n_{0}$ such that $a+\frac1n< b-\frac1n$); hence $\mathcal G\subset\sigma\left(\mathcal H\right)\Rightarrow\sigma\left(\tau\right)=\sigma\left(\mathcal G\right)\subset\sigma\left(\mathcal H\right)$. The two are equal.
 
 **4. $\sigma\left(\mathcal K\right)=\sigma\left(\tau\right)$.**
 
 On one hand, $\left(a,b\right]=\bigcap_{n=1}^{\infty}\left(a,b+\frac1n\right)$ is a countable intersection of open intervals, so $\left(a,b\right]\in\sigma\left(\tau\right)$ (a $\sigma$-algebra is closed under countable intersections: taking complements reduces to countable unions); hence $\mathcal K\subset\sigma\left(\tau\right)\Rightarrow\sigma\left(\mathcal K\right)\subset\sigma\left(\tau\right)$.
 
-On the other hand, open intervals are approximated from below by left-open right-closed intervals: take $n_{0}$ such that $b-\frac1n>a$,
+On the other hand, open intervals are approximated from below by left-open right-closed intervals: take $n_{0}$ such that $b-\frac1n> a$,
 
 $$
 \left(a,b\right)=\bigcup_{n=n_{0}}^{\infty}\left(a,b-\frac1n\right]\in\sigma\left(\mathcal K\right),

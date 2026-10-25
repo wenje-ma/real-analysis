@@ -6,29 +6,29 @@
 
 > **Definition 4.1.3** ($\sigma$-Algebra)<br>Let $X$ be nonempty and $\mathcal F\subset\mathcal P\left(X\right)$. $\mathcal F$ is called a **$\sigma$-algebra** on $X$ if it satisfies:
 > (1) $X\in\mathcal F$;
->
+> 
 > (2) closed under complementation: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$;
->
+> 
 > (3) closed under countable unions: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
->
+> 
 > $\left(X,\mathcal F\right)$ is called a **measurable space**, and the elements of $\mathcal F$ are called **measurable sets**.
 
 > **Definition 5.1.2** (Measure)<br>Let $\left(X,\mathcal F\right)$ be a measurable space. A function $\mu:\mathcal F\to\left[0,+\infty\right]$ is called a **measure** on $\left(X,\mathcal F\right)$ if it satisfies:
 > (1) nonnegativity: $\mu\left(E\right)\ge0$ for all $E\in\mathcal F$;
->
+> 
 > (2) the empty set has measure zero: $\mu\left(\varnothing\right)=0$;
->
+> 
 > (3) countable additivity ($\sigma$-additivity): for any countably many pairwise disjoint sets $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, we have $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
 
 > **Proposition 5.2.1** (Finite Additivity)<br>Let $\mu$ be a measure on $\left(X,\mathcal F\right)$ and let $E_{1},\dots,E_{n}\in\mathcal F$ be pairwise disjoint sets. Then $$\mu\left(\bigcup_{k=1}^{n}E_{k}\right)=\sum_{k=1}^{n}\mu\left(E_{k}\right).$$
 
-> **Proposition 5.2.2** (Monotonicity)<br>Let $\mu$ be a measure and let $E,F\in\mathcal F$ with $E\subset F$. Then $\mu\left(E\right)\le\mu\left(F\right)$. If in addition $\mu\left(E\right)<+\infty$, then $\mu\left(F\setminus E\right)=\mu\left(F\right)-\mu\left(E\right)$.
+> **Proposition 5.2.2** (Monotonicity)<br>Let $\mu$ be a measure and let $E,F\in\mathcal F$ with $E\subset F$. Then $\mu\left(E\right)\le\mu\left(F\right)$. If in addition $\mu\left(E\right)< +\infty$, then $\mu\left(F\setminus E\right)=\mu\left(F\right)-\mu\left(E\right)$.
 
 > **Proposition 5.2.3** (Countable Subadditivity)<br>Let $\mu$ be a measure and let $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ be any countably many sets (not necessarily pairwise disjoint). Then $$\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu\left(E_{n}\right).$$
 
 > **Proposition 5.2.4** (Continuity from Below)<br>Let $\mu$ be a measure and let $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ be a monotonically increasing sequence of sets (i.e. $E_{1}\subset E_{2}\subset\cdots$). Then $$\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right).$$
 
-> **Proposition 5.2.5** (Continuity from Above)<br>Let $\mu$ be a measure and let $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ be a monotonically decreasing sequence of sets (i.e. $E_{1}\supset E_{2}\supset\cdots$), and suppose there exists some $m$ such that $\mu\left(E_{m}\right)<+\infty$. Then $$\mu\left(\bigcap_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right).$$
+> **Proposition 5.2.5** (Continuity from Above)<br>Let $\mu$ be a measure and let $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ be a monotonically decreasing sequence of sets (i.e. $E_{1}\supset E_{2}\supset\cdots$), and suppose there exists some $m$ such that $\mu\left(E_{m}\right)< +\infty$. Then $$\mu\left(\bigcap_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right).$$
 
 > **Definition 5.4.1** (Null Set)<br>Let $\left(X,\mathcal F,\mu\right)$ be a measure space. A set $N\in\mathcal F$ is called a null set if $\mu\left(N\right)=0$.
 
@@ -103,7 +103,7 @@ In summary, $\left(X,\mathcal M,\overline\mu\right)$ is a complete measure space
 
 Prove Problems 8, 9, 10 and 12.
 
-**8.** Let $\left(X,\mathcal M,\mu\right)$ be a measure space and $\left\{E_{j}\right\}_{j=1}^{\infty}\subset\mathcal M$. Prove that $\mu\left(\liminf_{j\to\infty}E_{j}\right)\le\liminf_{j\to\infty}\mu\left(E_{j}\right)$. Moreover, if $\mu\left(\bigcup_{j=1}^{\infty}E_{j}\right)<\infty$, then $\mu\left(\limsup_{j\to\infty}E_{j}\right)\ge\limsup_{j\to\infty}\mu\left(E_{j}\right)$.
+**8.** Let $\left(X,\mathcal M,\mu\right)$ be a measure space and $\left\{E_{j}\right\}_{j=1}^{\infty}\subset\mathcal M$. Prove that $\mu\left(\liminf_{j\to\infty}E_{j}\right)\le\liminf_{j\to\infty}\mu\left(E_{j}\right)$. Moreover, if $\mu\left(\bigcup_{j=1}^{\infty}E_{j}\right)< \infty$, then $\mu\left(\limsup_{j\to\infty}E_{j}\right)\ge\limsup_{j\to\infty}\mu\left(E_{j}\right)$.
 
 **9.** Let $\left(X,\mathcal M,\mu\right)$ be a measure space and $E,F\in\mathcal M$. Prove that $\mu\left(E\right)+\mu\left(F\right)=\mu\left(E\cup F\right)+\mu\left(E\cap F\right)$.
 
@@ -135,7 +135,7 @@ $$
 \end{aligned}
 $$
 
-Let $G_{n}:=\bigcup_{j=n}^{\infty}E_{j}$. By **Definition 1.3.1** (Limit Superior), $\limsup_{j\to\infty}E_{j}=\bigcap_{n=1}^{\infty}G_{n}$, and $\left\{G_{n}\right\}$ is monotonically decreasing. Since $\mu\left(G_{1}\right)=\mu\left(\bigcup_{j=1}^{\infty}E_{j}\right)<\infty$, by **Proposition 5.2.5** (Continuity from Above),
+Let $G_{n}:=\bigcup_{j=n}^{\infty}E_{j}$. By **Definition 1.3.1** (Limit Superior), $\limsup_{j\to\infty}E_{j}=\bigcap_{n=1}^{\infty}G_{n}$, and $\left\{G_{n}\right\}$ is monotonically decreasing. Since $\mu\left(G_{1}\right)=\mu\left(\bigcup_{j=1}^{\infty}E_{j}\right)< \infty$, by **Proposition 5.2.5** (Continuity from Above),
 
 $$
 \begin{aligned}\mu\left(\limsup_{j\to\infty}E_{j}\right)&=\mu\left(\bigcap_{n=1}^{\infty}G_{n}\right)\\&=\lim_{n\to\infty}\mu\left(G_{n}\right).

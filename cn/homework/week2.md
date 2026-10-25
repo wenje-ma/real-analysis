@@ -22,13 +22,13 @@
 
 > **命题 5.2.1** (有限可加性)<br>设 $\mu$ 是 $\left(X,\mathcal F\right)$ 上的测度, $E_{1},\dots,E_{n}\in\mathcal F$ 是两两不交的集合, 则 $$\mu\left(\bigcup_{k=1}^{n}E_{k}\right)=\sum_{k=1}^{n}\mu\left(E_{k}\right).$$
 
-> **命题 5.2.2** (单调性)<br>设 $\mu$ 是测度, $E,F\in\mathcal F$ 且 $E\subset F$, 则 $\mu\left(E\right)\le\mu\left(F\right)$. 若进一步 $\mu\left(E\right)<+\infty$, 则 $\mu\left(F\setminus E\right)=\mu\left(F\right)-\mu\left(E\right)$.
+> **命题 5.2.2** (单调性)<br>设 $\mu$ 是测度, $E,F\in\mathcal F$ 且 $E\subset F$, 则 $\mu\left(E\right)\le\mu\left(F\right)$. 若进一步 $\mu\left(E\right)< +\infty$, 则 $\mu\left(F\setminus E\right)=\mu\left(F\right)-\mu\left(E\right)$.
 
 > **命题 5.2.3** (次可数可加性)<br>设 $\mu$ 是测度, $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 是任意可数个集合 (不一定两两不交), 则 $$\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu\left(E_{n}\right).$$
 
 > **命题 5.2.4** (下连续性)<br>设 $\mu$ 是测度, $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 是单调递增的集合序列 (即 $E_{1}\subset E_{2}\subset\cdots$), 则 $$\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right).$$
 
-> **命题 5.2.5** (上连续性)<br>设 $\mu$ 是测度, $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 是单调递减的集合序列 (即 $E_{1}\supset E_{2}\supset\cdots$), 且存在某个 $m$ 使得 $\mu\left(E_{m}\right)<+\infty$, 则 $$\mu\left(\bigcap_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right).$$
+> **命题 5.2.5** (上连续性)<br>设 $\mu$ 是测度, $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 是单调递减的集合序列 (即 $E_{1}\supset E_{2}\supset\cdots$), 且存在某个 $m$ 使得 $\mu\left(E_{m}\right)< +\infty$, 则 $$\mu\left(\bigcap_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right).$$
 
 > **定义 5.4.1** (零集)<br>设 $\left(X,\mathcal F,\mu\right)$ 是测度空间. 集合 $N\in\mathcal F$ 称为零集, 若 $\mu\left(N\right)=0$.
 
@@ -103,7 +103,7 @@ $$
 
 证明习题 8、9、10、12.
 
-**8.** 设 $\left(X,\mathcal M,\mu\right)$ 是测度空间, $\left\{E_{j}\right\}_{j=1}^{\infty}\subset\mathcal M$. 证明 $\mu\left(\liminf_{j\to\infty}E_{j}\right)\le\liminf_{j\to\infty}\mu\left(E_{j}\right)$. 又若 $\mu\left(\bigcup_{j=1}^{\infty}E_{j}\right)<\infty$, 则 $\mu\left(\limsup_{j\to\infty}E_{j}\right)\ge\limsup_{j\to\infty}\mu\left(E_{j}\right)$.
+**8.** 设 $\left(X,\mathcal M,\mu\right)$ 是测度空间, $\left\{E_{j}\right\}_{j=1}^{\infty}\subset\mathcal M$. 证明 $\mu\left(\liminf_{j\to\infty}E_{j}\right)\le\liminf_{j\to\infty}\mu\left(E_{j}\right)$. 又若 $\mu\left(\bigcup_{j=1}^{\infty}E_{j}\right)< \infty$, 则 $\mu\left(\limsup_{j\to\infty}E_{j}\right)\ge\limsup_{j\to\infty}\mu\left(E_{j}\right)$.
 
 **9.** 设 $\left(X,\mathcal M,\mu\right)$ 是测度空间, $E,F\in\mathcal M$. 证明 $\mu\left(E\right)+\mu\left(F\right)=\mu\left(E\cup F\right)+\mu\left(E\cap F\right)$.
 
@@ -135,7 +135,7 @@ $$
 \end{aligned}
 $$
 
-记 $G_{n}:=\bigcup_{j=n}^{\infty}E_{j}$. 由**定义 1.3.1** (上极限), $\limsup_{j\to\infty}E_{j}=\bigcap_{n=1}^{\infty}G_{n}$; 且 $\left\{G_{n}\right\}$ 单调递减. 因 $\mu\left(G_{1}\right)=\mu\left(\bigcup_{j=1}^{\infty}E_{j}\right)<\infty$, 由**命题 5.2.5** (上连续性),
+记 $G_{n}:=\bigcup_{j=n}^{\infty}E_{j}$. 由**定义 1.3.1** (上极限), $\limsup_{j\to\infty}E_{j}=\bigcap_{n=1}^{\infty}G_{n}$; 且 $\left\{G_{n}\right\}$ 单调递减. 因 $\mu\left(G_{1}\right)=\mu\left(\bigcup_{j=1}^{\infty}E_{j}\right)< \infty$, 由**命题 5.2.5** (上连续性),
 
 $$
 \begin{aligned}\mu\left(\limsup_{j\to\infty}E_{j}\right)&=\mu\left(\bigcap_{n=1}^{\infty}G_{n}\right)\\&=\lim_{n\to\infty}\mu\left(G_{n}\right).

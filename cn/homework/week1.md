@@ -195,13 +195,13 @@ $$
 \left(a,b\right)=\bigcup_{n=n_{0}}^{\infty}\left[a+\frac{1}{n},b-\frac{1}{n}\right]\in\sigma\left(\mathcal H\right)
 $$
 
-(取 $n_{0}$ 使 $a+\frac1n<b-\frac1n$), 故 $\mathcal G\subset\sigma\left(\mathcal H\right)\Rightarrow\sigma\left(\tau\right)=\sigma\left(\mathcal G\right)\subset\sigma\left(\mathcal H\right)$. 两者相等.
+(取 $n_{0}$ 使 $a+\frac1n< b-\frac1n$), 故 $\mathcal G\subset\sigma\left(\mathcal H\right)\Rightarrow\sigma\left(\tau\right)=\sigma\left(\mathcal G\right)\subset\sigma\left(\mathcal H\right)$. 两者相等.
 
 **4. $\sigma\left(\mathcal K\right)=\sigma\left(\tau\right)$.**
 
 一方面, $\left(a,b\right]=\bigcap_{n=1}^{\infty}\left(a,b+\frac1n\right)$ 是开区间之可数交, 故 $\left(a,b\right]\in\sigma\left(\tau\right)$ ($\sigma$-代数对可数交封闭: 取补后为可数并), 从而 $\mathcal K\subset\sigma\left(\tau\right)\Rightarrow\sigma\left(\mathcal K\right)\subset\sigma\left(\tau\right)$.
 
-另一方面, 开区间用左开右闭区间递减逼近: 取 $n_{0}$ 使 $b-\frac1n>a$,
+另一方面, 开区间用左开右闭区间递减逼近: 取 $n_{0}$ 使 $b-\frac1n> a$,
 
 $$
 \left(a,b\right)=\bigcup_{n=n_{0}}^{\infty}\left(a,b-\frac1n\right]\in\sigma\left(\mathcal K\right),

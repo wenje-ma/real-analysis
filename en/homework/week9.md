@@ -2,30 +2,30 @@
 
 > **Definition 11.1.1** (Signed Measure)<br>Let $\left(X,\mathcal F\right)$ be a measurable space. A function $\nu:\mathcal F\to\mathbb R\cup\left\{+\infty\right\}$ or $\mathbb R\cup\left\{-\infty\right\}$ is called a **signed measure** if it satisfies:
 > (1) $\nu\left(\varnothing\right)=0$;
->
+> 
 > (2) countable additivity: for any sequence of pairwise disjoint measurable sets $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal F$, we have $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$;
->
+> 
 > (3) $\nu$ cannot take both $+\infty$ and $-\infty$ as values.
 
 > **Proposition 11.1.2** (Basic Properties of a Signed Measure)<br>Let $\nu$ be a signed measure. Then:
 > (1) finite additivity: for any finitely many pairwise disjoint $E_{1},\dots,E_{n}\in\mathcal F$, we have $\nu\left(\bigcup_{i=1}^{n}E_{i}\right)=\sum_{i=1}^{n}\nu\left(E_{i}\right)$;
->
+> 
 > (2) continuity from below: if $\left\{E_{j}\right\}$ is monotonically increasing and measurable, then $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcup_{j}E_{j}\right)$;
->
-> (3) continuity from above: if $\left\{E_{j}\right\}$ is monotonically decreasing and measurable and $\nu\left(E_{1}\right)<\infty$, then $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcap_{j}E_{j}\right)$.
+> 
+> (3) continuity from above: if $\left\{E_{j}\right\}$ is monotonically decreasing and measurable and $\nu\left(E_{1}\right)< \infty$, then $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcap_{j}E_{j}\right)$.
 
 > **Definition 11.2.1** (Positive Set, Negative Set, Null Set)<br>Let $\nu$ be a signed measure on $\left(X,\mathcal F\right)$.<br>A set $P\in\mathcal F$ is called a **positive set** (denoted $P\gtrsim0$) if for every $E\in\mathcal F$ with $E\subset P$, we have $\nu\left(E\right)\ge0$;<br>a set $N\in\mathcal F$ is called a **negative set** (denoted $N\lesssim0$) if for every $E\in\mathcal F$ with $E\subset N$, we have $\nu\left(E\right)\le0$;<br>a set $Z\in\mathcal F$ is called a **null set** if for every $E\in\mathcal F$ with $E\subset Z$, we have $\nu\left(E\right)=0$.
 
 > **Lemma 11.2.2** (Properties of Positive Sets)
 > (1) every measurable subset of a positive set is a positive set;
->
+> 
 > (2) a countable union of positive sets is a positive set;
->
+> 
 > (3) if $\left\{P_{n}\right\}$ is a sequence of positive sets, then $\bigcap_{n=1}^{\infty}P_{n}$ is a positive set.
->
+> 
 > The above properties also hold for negative sets (Remark 11.2.3).
 
-> **Lemma 11.2.4**<br>Let $\nu$ be a signed measure. If $E$ is not a negative set, then there exists a positive set $F\subset E$ such that $\nu\left(F\right)>0$.
+> **Lemma 11.2.4**<br>Let $\nu$ be a signed measure. If $E$ is not a negative set, then there exists a positive set $F\subset E$ such that $\nu\left(F\right)> 0$.
 
 > **Theorem 11.3.2** (Hahn Decomposition Theorem)<br>Let $\nu$ be a signed measure on $\left(X,\mathcal F\right)$. Then there exists a decomposition $X=P\cup N$ of $X$, where $P$ is a positive set, $N$ is a negative set, and $P\cap N=\varnothing$; and this decomposition is unique up to a $\nu$-null set.
 
@@ -48,14 +48,14 @@
 Let $\nu$ be a signed measure on $\left(X,\mathcal F\right)$ that does not take the value $-\infty$, and let $E$ not be a negative set. Prove: there exists a measurable set $G\subset E$ such that
 
 $$
-\nu\left(G\right)=\sup\left\{\nu\left(F\right):F\subset E,\nu\left(F\right)>0\right\}>0,
+\nu\left(G\right)=\sup\left\{\nu\left(F\right):F\subset E,\nu\left(F\right)> 0\right\}> 0,
 $$
 
 and $E\setminus G$ is a negative set. (An embedded exercise in the proof of the Hahn decomposition theorem.)
 
 ### Solution to Problem 1
 
-Set $\alpha=\sup\left\{\nu\left(F\right):F\subset E,\nu\left(F\right)>0\right\}$. Since $E$ is not a negative set, by **Lemma 11.2.4** there exists a positive set $F_{0}\subset E$ with $\nu\left(F_{0}\right)>0$, so $\alpha\ge\nu\left(F_{0}\right)>0$, i.e. $\alpha>0$.
+Set $\alpha=\sup\left\{\nu\left(F\right):F\subset E,\nu\left(F\right)> 0\right\}$. Since $E$ is not a negative set, by **Lemma 11.2.4** there exists a positive set $F_{0}\subset E$ with $\nu\left(F_{0}\right)> 0$, so $\alpha\ge\nu\left(F_{0}\right)> 0$, i.e. $\alpha> 0$.
 
 We first show that $\alpha$ is attained by a positive set. Let
 
@@ -63,19 +63,19 @@ $$
 \beta=\sup\left\{\nu\left(P\right):P\subset E,P\text{是正集}\right\},
 $$
 
-Then $\beta\ge\nu\left(F_{0}\right)>0$. Clearly $\beta\le\alpha$, because a positive set $P\subset E$ with $\nu\left(P\right)>0$ is counted in the supremum defining $\alpha$. Conversely, we show $\alpha\le\beta$: take any $F\subset E$ with $\nu\left(F\right)>0$. If $F$ is a positive set, then $\nu\left(F\right)\le\beta$; if $F$ is not a positive set, then there exists $C\subset F$ with $\nu\left(C\right)<0$. Taking $F_{1}=F\setminus C$, we have $\nu\left(F_{1}\right)=\nu\left(F\right)-\nu\left(C\right)>\nu\left(F\right)$. Applying this construction repeatedly yields a decreasing measurable sequence $\left\{F_{n}\right\}$ such that $\nu\left(F_{n}\right)$ increases strictly and converges to some $\gamma$. By **Proposition 11.1.2**(3) (continuity from above), $\nu\left(\bigcap_{n}F_{n}\right)=\lim_{n}\nu\left(F_{n}\right)=\gamma$. If $\bigcap_{n}F_{n}$ were not a positive set, one could again extract a subset of larger measure from it, contradicting the convergence to $\gamma$; hence $\bigcap_{n}F_{n}\subset E$ is a positive set. Thus $\gamma=\nu\left(\bigcap_{n}F_{n}\right)\le\beta$; and since $\nu\left(F_{n}\right)\uparrow\gamma$ and $\nu\left(F_{1}\right)>\nu\left(F\right)$, we get $\nu\left(F\right)<\gamma\le\beta$. Hence for every such $F$, $\nu\left(F\right)\le\beta$, i.e. $\alpha\le\beta$. Combining gives $\alpha=\beta$.
+Then $\beta\ge\nu\left(F_{0}\right)> 0$. Clearly $\beta\le\alpha$, because a positive set $P\subset E$ with $\nu\left(P\right)> 0$ is counted in the supremum defining $\alpha$. Conversely, we show $\alpha\le\beta$: take any $F\subset E$ with $\nu\left(F\right)> 0$. If $F$ is a positive set, then $\nu\left(F\right)\le\beta$; if $F$ is not a positive set, then there exists $C\subset F$ with $\nu\left(C\right)< 0$. Taking $F_{1}=F\setminus C$, we have $\nu\left(F_{1}\right)=\nu\left(F\right)-\nu\left(C\right)> \nu\left(F\right)$. Applying this construction repeatedly yields a decreasing measurable sequence $\left\{F_{n}\right\}$ such that $\nu\left(F_{n}\right)$ increases strictly and converges to some $\gamma$. By **Proposition 11.1.2**(3) (continuity from above), $\nu\left(\bigcap_{n}F_{n}\right)=\lim_{n}\nu\left(F_{n}\right)=\gamma$. If $\bigcap_{n}F_{n}$ were not a positive set, one could again extract a subset of larger measure from it, contradicting the convergence to $\gamma$; hence $\bigcap_{n}F_{n}\subset E$ is a positive set. Thus $\gamma=\nu\left(\bigcap_{n}F_{n}\right)\le\beta$; and since $\nu\left(F_{n}\right)\uparrow\gamma$ and $\nu\left(F_{1}\right)> \nu\left(F\right)$, we get $\nu\left(F\right)< \gamma\le\beta$. Hence for every such $F$, $\nu\left(F\right)\le\beta$, i.e. $\alpha\le\beta$. Combining gives $\alpha=\beta$.
 
 By the definition of $\beta$, take a sequence of positive sets $\left\{P_{n}\right\}\subset E$ with $\nu\left(P_{n}\right)\to\beta$. Let $G=\bigcup_{n=1}^{\infty}P_{n}\subset E$; then $G$ is a positive set (**Lemma 11.2.2**(2)). Set $Q_{n}=\bigcup_{k=1}^{n}P_{k}$; then $\left\{Q_{n}\right\}$ is an increasing union of positive sets, hence still a positive set, and $\nu\left(Q_{n}\right)\ge\nu\left(P_{n}\right)\to\beta$; also $Q_{n}\subset E$ is a positive set, so $\nu\left(Q_{n}\right)\le\beta$. Hence $\nu\left(Q_{n}\right)\to\beta$, and by **Proposition 11.1.2**(2) (continuity from below),
 
 $$
-\begin{aligned}\nu\left(G\right)&=\lim_{n\to\infty}\nu\left(Q_{n}\right)\\&=\beta\\&=\alpha>0.
+\begin{aligned}\nu\left(G\right)&=\lim_{n\to\infty}\nu\left(Q_{n}\right)\\&=\beta\\&=\alpha> 0.
 \end{aligned}
 $$
 
-Finally, we show that $E\setminus G$ is a negative set. Suppose, for contradiction, that $E\setminus G$ is not a negative set; by **Lemma 11.2.4** there exists a positive set $F\subset E\setminus G$ with $\nu\left(F\right)>0$. Since $G\cap F=\varnothing$, $G\cup F\subset E$ and $G\cup F$ is a positive set (**Lemma 11.2.2**(2)); hence
+Finally, we show that $E\setminus G$ is a negative set. Suppose, for contradiction, that $E\setminus G$ is not a negative set; by **Lemma 11.2.4** there exists a positive set $F\subset E\setminus G$ with $\nu\left(F\right)> 0$. Since $G\cap F=\varnothing$, $G\cup F\subset E$ and $G\cup F$ is a positive set (**Lemma 11.2.2**(2)); hence
 
 $$
-\begin{aligned}\nu\left(G\cup F\right)&=\nu\left(G\right)+\nu\left(F\right)\\&=\alpha+\nu\left(F\right)\\&>\alpha\\&=\beta,
+\begin{aligned}\nu\left(G\cup F\right)&=\nu\left(G\right)+\nu\left(F\right)\\&=\alpha+\nu\left(F\right)\\&> \alpha\\&=\beta,
 \end{aligned}
 $$
 
@@ -138,12 +138,12 @@ so $\sup\ge\left|\nu\right|\left(E\right)$. Combining gives equality. $\blacksqu
 
 $f$ is a real-valued measurable function, with at least one of $\int f^{+}\mathrm{d}\mu$, $\int f^{-}\mathrm{d}\mu$ finite. By **Definition 11.2.1**:
 
-For $E\in\mathcal M$, $E$ is a $\nu$-positive set if and only if for every measurable $F\subset E$, $\nu\left(F\right)=\int_{F}f\,\mathrm{d}\mu\ge0$; since this must hold for both $F=E\cap\left\{f<0\right\}$ and $F=E\cap\left\{f>0\right\}$, $E$ is a positive set if and only if $f\ge0$ $\mu$-almost everywhere on $E$. Similarly, $E$ is a negative set if and only if $f\le0$ $\mu$-almost everywhere on $E$; $E$ is a null set if and only if $f=0$ $\mu$-almost everywhere on $E$.
+For $E\in\mathcal M$, $E$ is a $\nu$-positive set if and only if for every measurable $F\subset E$, $\nu\left(F\right)=\int_{F}f\,\mathrm{d}\mu\ge0$; since this must hold for both $F=E\cap\left\{f< 0\right\}$ and $F=E\cap\left\{f> 0\right\}$, $E$ is a positive set if and only if $f\ge0$ $\mu$-almost everywhere on $E$. Similarly, $E$ is a negative set if and only if $f\le0$ $\mu$-almost everywhere on $E$; $E$ is a null set if and only if $f=0$ $\mu$-almost everywhere on $E$.
 
 Hence $X=P\cup N$, where
 
 $$
-\begin{aligned}P&=\left\{x:f\left(x\right)\ge0\right\},\\N&=\left\{x:f\left(x\right)<0\right\},
+\begin{aligned}P&=\left\{x:f\left(x\right)\ge0\right\},\\N&=\left\{x:f\left(x\right)< 0\right\},
 \end{aligned}
 $$
 
@@ -190,7 +190,7 @@ Prove Problems 9, 11, 12, 16 and 17.
 
 **9.** Let $\left\{\nu_{j}\right\}$ be a sequence of positive measures. If $\nu_{j}\perp\mu$ for all $j$, then $\sum_{j}\nu_{j}\perp\mu$; if $\nu_{j}\ll\mu$ for all $j$, then $\sum_{j}\nu_{j}\ll\mu$.
 
-**11.** Let $\mu$ be a positive measure. A family of functions $\left\{f_{\alpha}\right\}_{\alpha\in A}\subset L^{1}\left(\mu\right)$ is called uniformly integrable if for every $\varepsilon>0$ there exists $\delta>0$ such that $\left|\int_{E}f_{\alpha}\,\mathrm{d}\mu\right|<\varepsilon$ for all $\alpha\in A$, whenever $\mu\left(E\right)<\delta$.
+**11.** Let $\mu$ be a positive measure. A family of functions $\left\{f_{\alpha}\right\}_{\alpha\in A}\subset L^{1}\left(\mu\right)$ is called uniformly integrable if for every $\varepsilon> 0$ there exists $\delta> 0$ such that $\left|\int_{E}f_{\alpha}\,\mathrm{d}\mu\right|< \varepsilon$ for all $\alpha\in A$, whenever $\mu\left(E\right)< \delta$.
 a. Any finite subset of $L^{1}\left(\mu\right)$ is uniformly integrable;
 b. If $\left\{f_{n}\right\}$ is a sequence in $L^{1}\left(\mu\right)$ converging in the $L^{1}$ metric to $f\in L^{1}\left(\mu\right)$, then $\left\{f_{n}\right\}$ is uniformly integrable.
 
@@ -200,7 +200,7 @@ $$
 \frac{\mathrm{d}\left(\nu_{1}\times\nu_{2}\right)}{\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)}\left(x_{1},x_{2}\right)=\frac{\mathrm{d}\nu_{1}}{\mathrm{d}\mu_{1}}\left(x_{1}\right)\cdot\frac{\mathrm{d}\nu_{2}}{\mathrm{d}\mu_{2}}\left(x_{2}\right).
 $$
 
-**16.** Let $\mu,\nu$ be measures on $\left(X,\mathcal M\right)$ with $\nu\ll\mu$, and set $\lambda=\mu+\nu$. If $f=\frac{\mathrm{d}\nu}{\mathrm{d}\lambda}$, then $0\le f<1$ $\mu$-almost everywhere, and $\frac{\mathrm{d}\nu}{\mathrm{d}\mu}=\frac{f}{1-f}$.
+**16.** Let $\mu,\nu$ be measures on $\left(X,\mathcal M\right)$ with $\nu\ll\mu$, and set $\lambda=\mu+\nu$. If $f=\frac{\mathrm{d}\nu}{\mathrm{d}\lambda}$, then $0\le f< 1$ $\mu$-almost everywhere, and $\frac{\mathrm{d}\nu}{\mathrm{d}\mu}=\frac{f}{1-f}$.
 
 **17.** Let $\left(X,\mathcal M,\mu\right)$ be a $\sigma$-finite measure space, $\mathcal N$ a sub-$\sigma$-algebra of $\mathcal M$, and $\nu=\mu|_{\mathcal N}$. If $f\in L^{1}\left(\mu\right)$, then there exists $g\in L^{1}\left(\nu\right)$ (hence $g$ is $\mathcal N$-measurable) such that $\int_{E}f\,\mathrm{d}\mu=\int_{E}g\,\mathrm{d}\nu$ for every $E\in\mathcal N$; and if $g'$ is another such function, then $g=g'$ $\nu$-almost everywhere. (In probability theory, $g$ is called the conditional expectation of $f$ with respect to $\mathcal N$.)
 
@@ -220,15 +220,15 @@ so $E$ is a $\mu$-null set. Also $E^{c}=\bigcap_{j=1}^{\infty}E_{j}^{c}\subset E
 
 #### 11
 
-**(a)** Let $\left\{f_{1},\dots,f_{n}\right\}\subset L^{1}\left(\mu\right)$. For each $j$, by **Remark 11.5.3** ($f_{j}\in L^{1}\left(\mu\right)$, $\lim_{\mu\left(E\right)\to0}\int_{E}f_{j}\,\mathrm{d}\mu=0$), there exists $\delta_{j}>0$ such that $\mu\left(E\right)<\delta_{j}\Rightarrow\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|<\varepsilon$. Take $\delta=\min_{1\le j\le n}\delta_{j}>0$; then when $\mu\left(E\right)<\delta$, for all $j$ we have $\mu\left(E\right)<\delta_{j}$, hence $\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|<\varepsilon$. Hence $\left\{f_{1},\dots,f_{n}\right\}$ is uniformly integrable. $\blacksquare$
+**(a)** Let $\left\{f_{1},\dots,f_{n}\right\}\subset L^{1}\left(\mu\right)$. For each $j$, by **Remark 11.5.3** ($f_{j}\in L^{1}\left(\mu\right)$, $\lim_{\mu\left(E\right)\to0}\int_{E}f_{j}\,\mathrm{d}\mu=0$), there exists $\delta_{j}> 0$ such that $\mu\left(E\right)< \delta_{j}\Rightarrow\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|< \varepsilon$. Take $\delta=\min_{1\le j\le n}\delta_{j}> 0$; then when $\mu\left(E\right)< \delta$, for all $j$ we have $\mu\left(E\right)< \delta_{j}$, hence $\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|< \varepsilon$. Hence $\left\{f_{1},\dots,f_{n}\right\}$ is uniformly integrable. $\blacksquare$
 
-**(b)** Since $\int\left|f_{n}-f\right|\mathrm{d}\mu\to0$, there exists $N$ such that for $n\ge N$, $\int\left|f_{n}-f\right|\mathrm{d}\mu<\frac{\varepsilon}{2}$. By (a), the singleton $\left\{f\right\}$ is uniformly integrable: there exists $\delta_{1}>0$ such that $\mu\left(E\right)<\delta_{1}\Rightarrow\left|\int_{E}f\,\mathrm{d}\mu\right|<\frac{\varepsilon}{2}$. Also the finite set $\left\{f_{1},\dots,f_{N-1}\right\}$ is uniformly integrable by (a): there exists $\delta_{2}>0$ such that $\mu\left(E\right)<\delta_{2}\Rightarrow\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|<\varepsilon$ for $n<N$. Take $\delta=\min\left\{\delta_{1},\delta_{2}\right\}$. When $\mu\left(E\right)<\delta$, for $n\ge N$,
+**(b)** Since $\int\left|f_{n}-f\right|\mathrm{d}\mu\to0$, there exists $N$ such that for $n\ge N$, $\int\left|f_{n}-f\right|\mathrm{d}\mu< \frac{\varepsilon}{2}$. By (a), the singleton $\left\{f\right\}$ is uniformly integrable: there exists $\delta_{1}> 0$ such that $\mu\left(E\right)< \delta_{1}\Rightarrow\left|\int_{E}f\,\mathrm{d}\mu\right|< \frac{\varepsilon}{2}$. Also the finite set $\left\{f_{1},\dots,f_{N-1}\right\}$ is uniformly integrable by (a): there exists $\delta_{2}> 0$ such that $\mu\left(E\right)< \delta_{2}\Rightarrow\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|< \varepsilon$ for $n< N$. Take $\delta=\min\left\{\delta_{1},\delta_{2}\right\}$. When $\mu\left(E\right)< \delta$, for $n\ge N$,
 
 $$
-\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|\le\left|\int_{E}f\,\mathrm{d}\mu\right|+\int_{E}\left|f_{n}-f\right|\mathrm{d}\mu\le\frac{\varepsilon}{2}+\int\left|f_{n}-f\right|\mathrm{d}\mu<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
+\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|\le\left|\int_{E}f\,\mathrm{d}\mu\right|+\int_{E}\left|f_{n}-f\right|\mathrm{d}\mu\le\frac{\varepsilon}{2}+\int\left|f_{n}-f\right|\mathrm{d}\mu< \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
 $$
 
-while for $n<N$, also $\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|<\varepsilon$. Hence $\left\{f_{n}\right\}$ is uniformly integrable. $\blacksquare$
+while for $n< N$, also $\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|< \varepsilon$. Hence $\left\{f_{n}\right\}$ is uniformly integrable. $\blacksquare$
 
 #### 12
 
@@ -258,13 +258,13 @@ $\blacksquare$
 
 Since $\lambda=\mu+\nu\ge\mu$ and $\nu\ll\mu$, we have $\nu\ll\lambda$ (if $\lambda\left(E\right)=0$, then $\mu\left(E\right)=0$, and hence $\nu\left(E\right)=0$); thus $f=\frac{\mathrm{d}\nu}{\mathrm{d}\lambda}$ exists and $f\ge0$ $\lambda$-almost everywhere (**Theorem 11.5.5**).
 
-We first show $f<1$ $\mu$-almost everywhere. Suppose, for contradiction, that $\mu\left(\left\{f\ge1\right\}\right)>0$. Since $\nu\left(\left\{f\ge1\right\}\right)=\int_{\left\{f\ge1\right\}}f\,\mathrm{d}\lambda\ge\lambda\left(\left\{f\ge1\right\}\right)$, and $\lambda=\mu+\nu$,
+We first show $f< 1$ $\mu$-almost everywhere. Suppose, for contradiction, that $\mu\left(\left\{f\ge1\right\}\right)> 0$. Since $\nu\left(\left\{f\ge1\right\}\right)=\int_{\left\{f\ge1\right\}}f\,\mathrm{d}\lambda\ge\lambda\left(\left\{f\ge1\right\}\right)$, and $\lambda=\mu+\nu$,
 
 $$
 \nu\left(\left\{f\ge1\right\}\right)\ge\lambda\left(\left\{f\ge1\right\}\right)=\mu\left(\left\{f\ge1\right\}\right)+\nu\left(\left\{f\ge1\right\}\right),
 $$
 
-which implies $\mu\left(\left\{f\ge1\right\}\right)\le0$, a contradiction. Hence $0\le f<1$ $\mu$-almost everywhere.
+which implies $\mu\left(\left\{f\ge1\right\}\right)\le0$, a contradiction. Hence $0\le f< 1$ $\mu$-almost everywhere.
 
 Finally, we show $\frac{\mathrm{d}\nu}{\mathrm{d}\mu}=\frac{f}{1-f}$. For any $E\in\mathcal M$, from $\lambda=\mu+\nu$ and $f=\frac{\mathrm{d}\nu}{\mathrm{d}\lambda}$,
 
@@ -273,7 +273,7 @@ $$
 \end{aligned}
 $$
 
-i.e. $\int_{E}\left(1-f\right)\mathrm{d}\nu=\int_{E}f\,\mathrm{d}\mu$. Since $1-f>0$ $\mu$-almost everywhere (also $\lambda$-almost everywhere), by the uniqueness in **Theorem 11.5.5**,
+i.e. $\int_{E}\left(1-f\right)\mathrm{d}\nu=\int_{E}f\,\mathrm{d}\mu$. Since $1-f> 0$ $\mu$-almost everywhere (also $\lambda$-almost everywhere), by the uniqueness in **Theorem 11.5.5**,
 
 $$
 \frac{\mathrm{d}\nu}{\mathrm{d}\mu}=\frac{f}{1-f}.
@@ -283,7 +283,7 @@ $\blacksquare$
 
 #### 17
 
-For $E\in\mathcal N$, define $\nu_{0}\left(E\right):=\int_{E}f\,\mathrm{d}\mu$. Then $\nu_{0}$ is a signed measure on $\mathcal N$: finite additivity and countable additivity are guaranteed by the countable additivity of $\mu$ and the integrability of $f$ (dominated convergence), and $\left|\nu_{0}\left(E\right)\right|\le\int_{E}\left|f\right|\mathrm{d}\mu\le\int\left|f\right|\mathrm{d}\mu<\infty$, so $\nu_{0}$ is finite. Also $\nu_{0}\ll\nu$ (**Definition 11.5.1**: if $E\in\mathcal N$ and $\nu\left(E\right)=\mu\left(E\right)=0$, then $\nu_{0}\left(E\right)=\int_{E}f\,\mathrm{d}\mu=0$ ($f\in L^{1}\left(\mu\right)$, and the integral over a null set is $0$). Since $\nu=\mu|_{\mathcal N}$ is $\sigma$-finite (since $\mu$ is $\sigma$-finite), by **Theorem 11.5.5** (Radon–Nikodym theorem), there exists an $\mathcal N$-measurable function $g=\frac{\mathrm{d}\nu_{0}}{\mathrm{d}\nu}\in L^{1}\left(\nu\right)$ such that
+For $E\in\mathcal N$, define $\nu_{0}\left(E\right):=\int_{E}f\,\mathrm{d}\mu$. Then $\nu_{0}$ is a signed measure on $\mathcal N$: finite additivity and countable additivity are guaranteed by the countable additivity of $\mu$ and the integrability of $f$ (dominated convergence), and $\left|\nu_{0}\left(E\right)\right|\le\int_{E}\left|f\right|\mathrm{d}\mu\le\int\left|f\right|\mathrm{d}\mu< \infty$, so $\nu_{0}$ is finite. Also $\nu_{0}\ll\nu$ (**Definition 11.5.1**: if $E\in\mathcal N$ and $\nu\left(E\right)=\mu\left(E\right)=0$, then $\nu_{0}\left(E\right)=\int_{E}f\,\mathrm{d}\mu=0$ ($f\in L^{1}\left(\mu\right)$, and the integral over a null set is $0$). Since $\nu=\mu|_{\mathcal N}$ is $\sigma$-finite (since $\mu$ is $\sigma$-finite), by **Theorem 11.5.5** (Radon–Nikodym theorem), there exists an $\mathcal N$-measurable function $g=\frac{\mathrm{d}\nu_{0}}{\mathrm{d}\nu}\in L^{1}\left(\nu\right)$ such that
 
 $$
 \begin{aligned}\int_{E}f\,\mathrm{d}\mu&=\nu_{0}\left(E\right)\\&=\int_{E}g\,\mathrm{d}\nu,
@@ -291,4 +291,4 @@ $$
 \ \forall E\in\mathcal N.
 $$
 
-If $g'\in L^{1}\left(\nu\right)$ also satisfies the same identity, then $\int_{E}\left(g-g'\right)\mathrm{d}\nu=0$ for every $E\in\mathcal N$. Take $E=\left\{g>g'\right\}\in\mathcal N$; since $g-g'\in L^{1}\left(\nu\right)$ and $\int_{\left\{g>g'\right\}}\left(g-g'\right)\mathrm{d}\nu=0$, by the fact that a nonnegative function with integral zero vanishes almost everywhere, we get $g=g'$ $\nu$-almost everywhere on $\left\{g>g'\right\}$; and similarly on $\left\{g<g'\right\}$. Hence $g=g'$ $\nu$-almost everywhere. $\blacksquare$
+If $g'\in L^{1}\left(\nu\right)$ also satisfies the same identity, then $\int_{E}\left(g-g'\right)\mathrm{d}\nu=0$ for every $E\in\mathcal N$. Take $E=\left\{g> g'\right\}\in\mathcal N$; since $g-g'\in L^{1}\left(\nu\right)$ and $\int_{\left\{g> g'\right\}}\left(g-g'\right)\mathrm{d}\nu=0$, by the fact that a nonnegative function with integral zero vanishes almost everywhere, we get $g=g'$ $\nu$-almost everywhere on $\left\{g> g'\right\}$; and similarly on $\left\{g< g'\right\}$. Hence $g=g'$ $\nu$-almost everywhere. $\blacksquare$

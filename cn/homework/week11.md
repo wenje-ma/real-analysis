@@ -1,6 +1,6 @@
 # 作业 11
 
-> **定义 14.0.6** (有界变差函数)<br>设 $f:\left[a,b\right]\to\mathbb R$. 对 $\left[a,b\right]$ 的任意分划 $P:a=x_{0}<x_{1}<\cdots<x_{n}=b$, 定义变差 $V\left(f,P\right)=\sum_{i=1}^{n}\left|f\left(x_{i}\right)-f\left(x_{i-1}\right)\right|$. $f$ 在 $\left[a,b\right]$ 上的全变差为 $V_{a}^{b}\left(f\right)=\sup_{P}V\left(f,P\right)$. 若 $V_{a}^{b}\left(f\right)<+\infty$, 则称 $f$ 为 $\left[a,b\right]$ 上的有界变差函数, 记作 $f\in BV\left(\left[a,b\right]\right)$.
+> **定义 14.0.6** (有界变差函数)<br>设 $f:\left[a,b\right]\to\mathbb R$. 对 $\left[a,b\right]$ 的任意分划 $P:a=x_{0}< x_{1}< \cdots< x_{n}=b$, 定义变差 $V\left(f,P\right)=\sum_{i=1}^{n}\left|f\left(x_{i}\right)-f\left(x_{i-1}\right)\right|$. $f$ 在 $\left[a,b\right]$ 上的全变差为 $V_{a}^{b}\left(f\right)=\sup_{P}V\left(f,P\right)$. 若 $V_{a}^{b}\left(f\right)< +\infty$, 则称 $f$ 为 $\left[a,b\right]$ 上的有界变差函数, 记作 $f\in BV\left(\left[a,b\right]\right)$.
 
 > **定理 14.0.7** (基本性质)<br>设 $f,g\in BV\left(\left[a,b\right]\right)$, 则:
 > (1) $BV\left(\left[a,b\right]\right)$ 构成一个线性空间;
@@ -40,22 +40,22 @@ $$
 F\left(x\right)=\sum_{q_{n}\le x}2^{-n},\ x\in\mathbb R.
 $$
 
-这是至多可数项之和且每项非负, 值域含于 $\left[0,1\right]$. 由**基础知识** (级数), $\sum_{n}2^{-n}$ 收敛, 故 $F$ 取值有限. 若 $x<y$, 则 $\left\{n:q_{n}\le x\right\}\subset\left\{n:q_{n}\le y\right\}$, 从而 $F\left(x\right)\le F\left(y\right)$, 即 $F$ 递增.
+这是至多可数项之和且每项非负, 值域含于 $\left[0,1\right]$. 由**基础知识** (级数), $\sum_{n}2^{-n}$ 收敛, 故 $F$ 取值有限. 若 $x< y$, 则 $\left\{n:q_{n}\le x\right\}\subset\left\{n:q_{n}\le y\right\}$, 从而 $F\left(x\right)\le F\left(y\right)$, 即 $F$ 递增.
 
 **每个有理点是间断点.** 对 $q_{k}\in\mathbb Q$, 当 $x$ 自 $q_{k}$ 左侧趋于 $q_{k}$ 时, $\left\{q_{n}\le x\right\}$ 不含 $q_{k}$ (也趋于不含 $q_{k}$), 故左极限
 
 $$
-\begin{aligned}F\left(q_{k}-\right)&=\sum_{q_{n}<q_{k}}2^{-n}\\&=\sum_{q_{n}\le q_{k}}2^{-n}-2^{-k}\\&=F\left(q_{k}\right)-2^{-k}\\&<F\left(q_{k}\right).
+\begin{aligned}F\left(q_{k}-\right)&=\sum_{q_{n}< q_{k}}2^{-n}\\&=\sum_{q_{n}\le q_{k}}2^{-n}-2^{-k}\\&=F\left(q_{k}\right)-2^{-k}\\&< F\left(q_{k}\right).
 \end{aligned}
 $$
 
-而右极限 $F\left(q_{k}+\right)=\lim_{x\downarrow q_{k}}F\left(x\right)=F\left(q_{k}\right)$ (因 $x>q_{k}$ 时仍计入 $q_{k}$). 故 $F$ 在 $q_{k}$ 处左、右极限不相等, 是第一类间断点.
+而右极限 $F\left(q_{k}+\right)=\lim_{x\downarrow q_{k}}F\left(x\right)=F\left(q_{k}\right)$ (因 $x> q_{k}$ 时仍计入 $q_{k}$). 故 $F$ 在 $q_{k}$ 处左、右极限不相等, 是第一类间断点.
 
-**每个无理点是连续点.** 设 $x_{0}\in\mathbb R\setminus\mathbb Q$. 给定 $\varepsilon>0$, 由**基础知识** (级数) 取 $N$ 使 $\sum_{n>N}2^{-n}<\varepsilon$. 因 $x_{0}$ 无理, 取 $\delta>0$ 小到开区间 $\left(x_{0}-\delta,x_{0}+\delta\right)$ 内不含 $q_{1},\dots,q_{N}$ (有限个点, 可分离). 则当 $\left|x-x_{0}\right|<\delta$ 时, 区间 $\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right]$ 内至多含 $q_{N+1},q_{N+2},\dots$, 故
+**每个无理点是连续点.** 设 $x_{0}\in\mathbb R\setminus\mathbb Q$. 给定 $\varepsilon> 0$, 由**基础知识** (级数) 取 $N$ 使 $\sum_{n> N}2^{-n}< \varepsilon$. 因 $x_{0}$ 无理, 取 $\delta> 0$ 小到开区间 $\left(x_{0}-\delta,x_{0}+\delta\right)$ 内不含 $q_{1},\dots,q_{N}$ (有限个点, 可分离). 则当 $\left|x-x_{0}\right|< \delta$ 时, 区间 $\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right]$ 内至多含 $q_{N+1},q_{N+2},\dots$, 故
 
 $$
 \begin{aligned}\left|F\left(x\right)-F\left(x_{0}\right)\right|\\
-&=\sum_{x_{0}<q_{n}\le x\text{ 或 }x<q_{n}\le x_{0}}2^{-n}\\&\le\sum_{n>N}2^{-n}<\varepsilon.
+&=\sum_{x_{0}< q_{n}\le x\text{ 或 }x< q_{n}\le x_{0}}2^{-n}\\&\le\sum_{n> N}2^{-n}< \varepsilon.
 \end{aligned}
 $$
 
@@ -90,7 +90,7 @@ $$
 
 **(b)** 先证 $F\in BV\left(\left[-1,1\right]\right)$. 由 (a), 对 $x\ne0$, $\left|F'\left(x\right)\right|=\left|2x\sin\left(x^{-1}\right)-\cos\left(x^{-1}\right)\right|\le2\left|x\right|+1\le3$. 故 $F'$ 在 $\left[-1,1\right]$ 上有界. 由中值定理, $\left|F\left(x\right)-F\left(y\right)\right|\le3\left|x-y\right|$, 即 $F$ 满足 利普希茨条件, 由**定理 14.0.7**(3), $F\in BV\left(\left[-1,1\right]\right)$.
 
-再证 $G\notin BV\left(\left[-1,1\right]\right)$. 取 $x_{k}=\frac{1}{\sqrt{\pi/2+k\pi}}$ ($k=0,1,2,\dots$), 则 $x_{k}\downarrow0$, 且 $\sin\left(x_{k}^{-2}\right)=\sin\left(\pi/2+k\pi\right)=\left(-1\right)^{k}$, 故 $G\left(x_{k}\right)=\left(-1\right)^{k}x_{k}^{2}$. 对分划 $0<x_{N}<\cdots<x_{0}$ (以及端点 $0$), 由交替符号,
+再证 $G\notin BV\left(\left[-1,1\right]\right)$. 取 $x_{k}=\frac{1}{\sqrt{\pi/2+k\pi}}$ ($k=0,1,2,\dots$), 则 $x_{k}\downarrow0$, 且 $\sin\left(x_{k}^{-2}\right)=\sin\left(\pi/2+k\pi\right)=\left(-1\right)^{k}$, 故 $G\left(x_{k}\right)=\left(-1\right)^{k}x_{k}^{2}$. 对分划 $0< x_{N}< \cdots< x_{0}$ (以及端点 $0$), 由交替符号,
 
 $$
 \begin{aligned}\sum_{k=0}^{N-1}\left|G\left(x_{k}\right)-G\left(x_{k+1}\right)\right|&=\sum_{k=0}^{N-1}\left(x_{k}^{2}+x_{k+1}^{2}\right)\\&\ge\sum_{k=0}^{N-1}x_{k}^{2}\\&=\sum_{k=0}^{N-1}\frac{1}{\pi/2+k\pi}.
@@ -101,7 +101,7 @@ $$
 
 #### 32
 
-固定 $x\in\mathbb R$ 与一个分划 $a=t_{0}<\cdots<t_{n}=x$ (取 $-\infty<a$). 因 $F_{j}\to F$ 逐点, 由有限项极限可交换 (求和为有限和),
+固定 $x\in\mathbb R$ 与一个分划 $a=t_{0}< \cdots< t_{n}=x$ (取 $-\infty< a$). 因 $F_{j}\to F$ 逐点, 由有限项极限可交换 (求和为有限和),
 
 $$
 \begin{aligned}\sum_{k=1}^{n}\left|F\left(t_{k}\right)-F\left(t_{k-1}\right)\right|&=\lim_{j\to\infty}\sum_{k=1}^{n}\left|F_{j}\left(t_{k}\right)-F_{j}\left(t_{k-1}\right)\right|\\&=\liminf_{j\to\infty}\sum_{k=1}^{n}\left|F_{j}\left(t_{k}\right)-F_{j}\left(t_{k-1}\right)\right|\\&\le\liminf_{j\to\infty}T_{F_{j}}\left(x\right),

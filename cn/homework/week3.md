@@ -59,7 +59,7 @@
 > 
 > (3) 如果 $\mu^{*}$ 是由准测度 $\mu_{0}$ 生成的, 且 $\mu_{0}$ 是 $\sigma$-有限的, 则 $\mu^{*}|_{\mathcal M}$ 是 $\mu_{0}$ 的唯一延拓.
 
-> **定义 6.4.1** (h 区间)<br>令 $-\infty\le a<b<\infty$, 所有左开右闭区间 $\left(a,b\right]$, 以及 $\left(a,\infty\right)$, $\varnothing$ 称为 **h 区间**. h 区间的有限不交并形成的集族 $\mathcal E$ 为一个代数.
+> **定义 6.4.1** (h 区间)<br>令 $-\infty\le a< b< \infty$, 所有左开右闭区间 $\left(a,b\right]$, 以及 $\left(a,\infty\right)$, $\varnothing$ 称为 **h 区间**. h 区间的有限不交并形成的集族 $\mathcal E$ 为一个代数.
 
 > **命题 6.4.2** ($\mathcal E$ 上的准测度)<br>设 $F:\mathbb R\to\mathbb R$ 为增的右连续函数. 对于不交区间 $\left(a_{i},b_{i}\right]$, $i=1,\dots,n$, 定义 $\mu_{0}\left(\bigcup_{i=1}^{n}\left(a_{i},b_{i}\right]\right):=\sum_{i=1}^{n}\left[F\left(b_{i}\right)-F\left(a_{i}\right)\right]$, 并令 $\mu_{0}\left(\varnothing\right)=0$. 则 $\mu_{0}$ 为 $\mathcal E$ 上的准测度.
 
@@ -95,9 +95,9 @@ $$
 
 **(1) 唯一性.** 由**定义 6.2.1**, $\mu_{0}$ 是代数 $\mathcal E$ 上的准测度. 先证 $\mu^{*}|_{\mathcal M}$ 确是 $\mu_{0}$ 的延拓: 由**定理 6.2.2**, $\mu^{*}|_{\mathcal E}=\mu_{0}$; 由**引理 6.3.2**, $\mathcal E\subset\mathcal M$; 由**定理 6.3.3**(1)(2), $\mathcal M$ 是 $\sigma$-代数且 $\mu^{*}|_{\mathcal M}$ 是完备测度. 故 $\mu^{*}|_{\mathcal M}$ 是 $\mu_{0}$ 到 $\mathcal M$ 的测度延拓.
 
-再证唯一性. 设 $\nu$ 是 $\mathcal M$ 上任一满足 $\nu|_{\mathcal E}=\mu_{0}$ 的测度, 我们证明 $\nu=\mu^{*}|_{\mathcal M}$. 先设 $\mu_{0}\left(X\right)<\infty$.
+再证唯一性. 设 $\nu$ 是 $\mathcal M$ 上任一满足 $\nu|_{\mathcal E}=\mu_{0}$ 的测度, 我们证明 $\nu=\mu^{*}|_{\mathcal M}$. 先设 $\mu_{0}\left(X\right)< \infty$.
 
-**步骤 1: $\nu\le\mu^{*}$ 在 $\mathcal M$ 上.** 对任意 $A\in\mathcal M$ 和 $\varepsilon>0$, 由**定理 6.2.2** 中 $\mu^{*}$ 的定义, 存在 $\left\{E_{n}\right\}\subset\mathcal E$ 覆盖 $A$ 使 $\sum_{n}\mu_{0}\left(E_{n}\right)\le\mu^{*}\left(A\right)+\varepsilon$. 由 $\nu$ 的次可数可加性 (**命题 5.2.3**) 及 $\nu|_{\mathcal E}=\mu_{0}$,
+**步骤 1: $\nu\le\mu^{*}$ 在 $\mathcal M$ 上.** 对任意 $A\in\mathcal M$ 和 $\varepsilon> 0$, 由**定理 6.2.2** 中 $\mu^{*}$ 的定义, 存在 $\left\{E_{n}\right\}\subset\mathcal E$ 覆盖 $A$ 使 $\sum_{n}\mu_{0}\left(E_{n}\right)\le\mu^{*}\left(A\right)+\varepsilon$. 由 $\nu$ 的次可数可加性 (**命题 5.2.3**) 及 $\nu|_{\mathcal E}=\mu_{0}$,
 
 $$
 \nu\left(A\right)\le\sum_{n}\nu\left(E_{n}\right)=\sum_{n}\mu_{0}\left(E_{n}\right)\le\mu^{*}\left(A\right)+\varepsilon.
@@ -105,7 +105,7 @@ $$
 
 由 $\varepsilon$ 的任意性, $\nu\left(A\right)\le\mu^{*}\left(A\right)$.
 
-**步骤 2: $\nu=\mu^{*}$ 在 $\sigma\left(\mathcal E\right)$ 上.** 令 $\mathcal H=\left\{A\in\sigma\left(\mathcal E\right):\nu\left(A\right)=\mu^{*}\left(A\right)\right\}$. 对 $E\in\mathcal E$, 由**定理 6.2.2** 与 $\nu|_{\mathcal E}=\mu_{0}$ 得 $\mu^{*}\left(E\right)=\mu_{0}\left(E\right)=\nu\left(E\right)$, 故 $\mathcal E\subset\mathcal H$. 验证 $\mathcal H$ 是单调类 (**定义 4.4.1**): 若 $\left\{A_{n}\right\}\subset\mathcal H$ 且 $A_{n}\uparrow A$, 由 $\nu,\mu^{*}|_{\mathcal M}$ 的下连续性 (**命题 5.2.4**; $\sigma\left(\mathcal E\right)\subset\mathcal M$) 得 $\nu\left(A\right)=\lim_{n}\nu\left(A_{n}\right)=\lim_{n}\mu^{*}\left(A_{n}\right)=\mu^{*}\left(A\right)$, 故 $A\in\mathcal H$; 递减情形同理 (此处 $\mu^{*}\left(A_{1}\right)\le\mu^{*}\left(X\right)=\mu_{0}\left(X\right)<\infty$, 上连续性可用). 故 $\mathcal H$ 是包含代数 $\mathcal E$ 的单调类, 由**定理 4.4.2** (单调类定理), $\sigma\left(\mathcal E\right)\subset\mathcal H$, 即 $\nu=\mu^{*}$ 在 $\sigma\left(\mathcal E\right)$ 上.
+**步骤 2: $\nu=\mu^{*}$ 在 $\sigma\left(\mathcal E\right)$ 上.** 令 $\mathcal H=\left\{A\in\sigma\left(\mathcal E\right):\nu\left(A\right)=\mu^{*}\left(A\right)\right\}$. 对 $E\in\mathcal E$, 由**定理 6.2.2** 与 $\nu|_{\mathcal E}=\mu_{0}$ 得 $\mu^{*}\left(E\right)=\mu_{0}\left(E\right)=\nu\left(E\right)$, 故 $\mathcal E\subset\mathcal H$. 验证 $\mathcal H$ 是单调类 (**定义 4.4.1**): 若 $\left\{A_{n}\right\}\subset\mathcal H$ 且 $A_{n}\uparrow A$, 由 $\nu,\mu^{*}|_{\mathcal M}$ 的下连续性 (**命题 5.2.4**; $\sigma\left(\mathcal E\right)\subset\mathcal M$) 得 $\nu\left(A\right)=\lim_{n}\nu\left(A_{n}\right)=\lim_{n}\mu^{*}\left(A_{n}\right)=\mu^{*}\left(A\right)$, 故 $A\in\mathcal H$; 递减情形同理 (此处 $\mu^{*}\left(A_{1}\right)\le\mu^{*}\left(X\right)=\mu_{0}\left(X\right)< \infty$, 上连续性可用). 故 $\mathcal H$ 是包含代数 $\mathcal E$ 的单调类, 由**定理 4.4.2** (单调类定理), $\sigma\left(\mathcal E\right)\subset\mathcal H$, 即 $\nu=\mu^{*}$ 在 $\sigma\left(\mathcal E\right)$ 上.
 
 **步骤 3: $\nu=\mu^{*}$ 在 $\mathcal M$ 上.** 对任意 $A\in\mathcal M$, 由步骤 1 得 $\nu\left(A\right)\le\mu^{*}\left(A\right)$. 又因 $X\in\mathcal E$ (**定义 4.1.1**), $\nu\left(X\right)=\mu_{0}\left(X\right)=\mu^{*}\left(X\right)$. 由步骤 1 作用于 $A^{c}\in\mathcal M$ (因 $\mathcal M$ 是 $\sigma$-代数, **定理 6.3.3**(1)), 以及 $A\in\mathcal M$ 给出 $\mu^{*}\left(X\right)=\mu^{*}\left(A\right)+\mu^{*}\left(A^{c}\right)$ (卡拉西奥多里条件于 $T=X$),
 
@@ -114,9 +114,9 @@ $$
 \end{aligned}
 $$
 
-故 $\nu\left(A\right)=\mu^{*}\left(A\right)$. 于是 $\mu_{0}\left(X\right)<\infty$ 时唯一性得证.
+故 $\nu\left(A\right)=\mu^{*}\left(A\right)$. 于是 $\mu_{0}\left(X\right)< \infty$ 时唯一性得证.
 
-**$\sigma$-有限情形.** 设 $\mu_{0}$ 是 $\sigma$-有限的, 即存在两两不交的 $X_{k}\in\mathcal E$ 使 $X=\bigcup_{k=1}^{\infty}X_{k}$ 且 $\mu_{0}\left(X_{k}\right)<\infty$. 对任意 $A\in\mathcal M$, 由可数可加性与下连续性,
+**$\sigma$-有限情形.** 设 $\mu_{0}$ 是 $\sigma$-有限的, 即存在两两不交的 $X_{k}\in\mathcal E$ 使 $X=\bigcup_{k=1}^{\infty}X_{k}$ 且 $\mu_{0}\left(X_{k}\right)< \infty$. 对任意 $A\in\mathcal M$, 由可数可加性与下连续性,
 
 $$
 \begin{aligned}\mu^{*}\left(A\right)&=\sum_{k}\mu^{*}\left(A\cap X_{k}\right),\\\nu\left(A\right)&=\sum_{k}\nu\left(A\cap X_{k}\right).
@@ -180,7 +180,7 @@ $$
 
 ### 习题二
 
-设 $-\infty\le a<b<\infty$, 所有左开右闭区间 $\left(a,b\right]$ 以及 $\left(a,\infty\right)$, $\varnothing$ 称为 h 区间. 证明 h 区间的有限不交并形成的集族 $\mathcal E$ 是一个代数 (**定义 6.4.1**).
+设 $-\infty\le a< b< \infty$, 所有左开右闭区间 $\left(a,b\right]$ 以及 $\left(a,\infty\right)$, $\varnothing$ 称为 h 区间. 证明 h 区间的有限不交并形成的集族 $\mathcal E$ 是一个代数 (**定义 6.4.1**).
 
 ### 解答 习题二
 
@@ -252,7 +252,7 @@ $$
 
 (1) 得证.
 
-(2) 对 $r\ne0$, 伸缩 $\delta_{r}:t\mapsto rt$ 把 h 区间 $\left(a,b\right]$ 映为 $\left(ra,rb\right]$ ($r>0$) 或 $\left(rb,ra\right]$ ($r<0$), 仍是 h 区间, 且长度变为 $\left|r\right|\left(b-a\right)$, 即 $\mu_{0}\left(rI\right)=\left|r\right|\mu_{0}\left(I\right)$. 与 (1) 同理得 $m^{*}\left(rA\right)=\left|r\right|m^{*}\left(A\right)$, 且 $E$ 可测推出 $rE$ 可测 (用卡拉西奥多里条件与伸缩). 故 $m\left(rE\right)=\left|r\right|m\left(E\right)$. 当 $r=0$ 时, $0\cdot E$ 为空集或 $\left\{0\right\}$, 测度均为 $0=\left|0\right|m\left(E\right)$. (2) 得证. $\blacksquare$
+(2) 对 $r\ne0$, 伸缩 $\delta_{r}:t\mapsto rt$ 把 h 区间 $\left(a,b\right]$ 映为 $\left(ra,rb\right]$ ($r> 0$) 或 $\left(rb,ra\right]$ ($r< 0$), 仍是 h 区间, 且长度变为 $\left|r\right|\left(b-a\right)$, 即 $\mu_{0}\left(rI\right)=\left|r\right|\mu_{0}\left(I\right)$. 与 (1) 同理得 $m^{*}\left(rA\right)=\left|r\right|m^{*}\left(A\right)$, 且 $E$ 可测推出 $rE$ 可测 (用卡拉西奥多里条件与伸缩). 故 $m\left(rE\right)=\left|r\right|m\left(E\right)$. 当 $r=0$ 时, $0\cdot E$ 为空集或 $\left\{0\right\}$, 测度均为 $0=\left|0\right|m\left(E\right)$. (2) 得证. $\blacksquare$
 
 ### 习题四
 
@@ -276,7 +276,7 @@ $$
 
 **2. 完备性.** $\mathbb R$ 是完备度量空间, $C$ 是 $\mathbb R$ 的闭子集. 若 $\left\{x_{n}\right\}\subset C$ 是柯西列, 则它在 $\mathbb R$ 中收敛于某 $x$; 因 $C$ 闭, $x\in C$. 故 $C$ 中任何柯西列收敛, $C$ 完备. $\blacksquare$
 
-**3. 完全不连通.** 设 $K\subset C$ 连通且含有 $x<y$ 两点. 由**定理 6.5.2**, $x,y$ 的三进制展开不含数字 $1$. 因 $x\ne y$, 存在最小的 $n$ 使 $x,y$ 的三进制第 $n$ 位不同, 不妨设 $x$ 的第 $n$ 位为 $0$, $y$ 的第 $n$ 位为 $2$ (前 $n-1$ 位相同). 则第 $n$ 步挖去的开区间中有一个 $J=\left(\alpha,\beta\right)$ 位于 $x$ 与 $y$ 之间 (即 $x<\alpha<\beta<y$), 且 $J\cap C=\varnothing$. 于是
+**3. 完全不连通.** 设 $K\subset C$ 连通且含有 $x< y$ 两点. 由**定理 6.5.2**, $x,y$ 的三进制展开不含数字 $1$. 因 $x\ne y$, 存在最小的 $n$ 使 $x,y$ 的三进制第 $n$ 位不同, 不妨设 $x$ 的第 $n$ 位为 $0$, $y$ 的第 $n$ 位为 $2$ (前 $n-1$ 位相同). 则第 $n$ 步挖去的开区间中有一个 $J=\left(\alpha,\beta\right)$ 位于 $x$ 与 $y$ 之间 (即 $x< \alpha< \beta< y$), 且 $J\cap C=\varnothing$. 于是
 
 $$
 K=\left(K\cap\left(-\infty,\alpha\right]\right)\cup\left(K\cap\left[\beta,\infty\right)\right),
@@ -284,12 +284,12 @@ $$
 
 是两个非空、互不相交的 $K$-相对开集 (因 $K\subset C$, $K\cap J=\varnothing$), 与 $K$ 连通矛盾. 故 $K$ 只能是单点集. $\blacksquare$
 
-**4. 无处稠密.** 任取非空开区间 $\left(\alpha,\beta\right)\subset\mathbb R$. 若它与 $\left[0,1\right]$ 相交, 取 $n$ 使 $3^{-n}<\beta-\alpha$. 第 $n$ 步后 $C_{n}$ 是 $2^{n}$ 个长度 $3^{-n}$ 的闭区间之并, 这些闭区间之间的 $2^{n}-1$ 个开区间 (第 $n$ 步挖去的) 覆盖了 $\left[0,1\right]$ 中除端点外的部分, 且挖去区间的长度均为 $3^{-n}$. 因 $\left(\alpha,\beta\right)$ 长度大于 $3^{-n}$, 它必包含某个第 $n$ 步挖去的开区间, 故 $\left(\alpha,\beta\right)$ 不全含于 $C$. 所以 $C$ 不含任何非空开区间, $\operatorname{int}\left(C\right)=\varnothing$, 即 $C$ 无处稠密. $\blacksquare$
+**4. 无处稠密.** 任取非空开区间 $\left(\alpha,\beta\right)\subset\mathbb R$. 若它与 $\left[0,1\right]$ 相交, 取 $n$ 使 $3^{-n}< \beta-\alpha$. 第 $n$ 步后 $C_{n}$ 是 $2^{n}$ 个长度 $3^{-n}$ 的闭区间之并, 这些闭区间之间的 $2^{n}-1$ 个开区间 (第 $n$ 步挖去的) 覆盖了 $\left[0,1\right]$ 中除端点外的部分, 且挖去区间的长度均为 $3^{-n}$. 因 $\left(\alpha,\beta\right)$ 长度大于 $3^{-n}$, 它必包含某个第 $n$ 步挖去的开区间, 故 $\left(\alpha,\beta\right)$ 不全含于 $C$. 所以 $C$ 不含任何非空开区间, $\operatorname{int}\left(C\right)=\varnothing$, 即 $C$ 无处稠密. $\blacksquare$
 
-**5. 完美集.** 闭集已由 (1) 证得. 证 $C$ 无孤立点: 设 $x\in C$, 对任意 $\varepsilon>0$, 由**定理 6.5.2** 写 $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$, $a_{k}\in\left\{0,2\right\}$. 取 $n$ 使 $\frac{2}{3^{n+1}}<\varepsilon$, 令 $x_{n}$ 为三进制展开中把 $x$ 的第 $n+1$ 位 $a_{n+1}$ 换成 $2-a_{n+1}$、其余位不变所得的点. 则 $x_{n}\in C$ (三进制不含 $1$), $x_{n}\ne x$, 且
+**5. 完美集.** 闭集已由 (1) 证得. 证 $C$ 无孤立点: 设 $x\in C$, 对任意 $\varepsilon> 0$, 由**定理 6.5.2** 写 $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$, $a_{k}\in\left\{0,2\right\}$. 取 $n$ 使 $\frac{2}{3^{n+1}}< \varepsilon$, 令 $x_{n}$ 为三进制展开中把 $x$ 的第 $n+1$ 位 $a_{n+1}$ 换成 $2-a_{n+1}$、其余位不变所得的点. 则 $x_{n}\in C$ (三进制不含 $1$), $x_{n}\ne x$, 且
 
 $$
-\begin{aligned}\left|x_{n}-x\right|&=\left|\frac{2-a_{n+1}}{3^{n+1}}-\frac{a_{n+1}}{3^{n+1}}\right|\\&=\frac{2}{3^{n+1}}<\varepsilon.
+\begin{aligned}\left|x_{n}-x\right|&=\left|\frac{2-a_{n+1}}{3^{n+1}}-\frac{a_{n+1}}{3^{n+1}}\right|\\&=\frac{2}{3^{n+1}}< \varepsilon.
 \end{aligned}
 $$
 
@@ -299,13 +299,13 @@ $$
 
 证明习题 30、33.
 
-**30.** 设 $E\in\mathcal L$ 且 $m\left(E\right)>0$. 证明对任意 $\alpha<1$, 存在开区间 $I$ 使 $m\left(E\cap I\right)>\alpha m\left(I\right)$.
+**30.** 设 $E\in\mathcal L$ 且 $m\left(E\right)> 0$. 证明对任意 $\alpha< 1$, 存在开区间 $I$ 使 $m\left(E\cap I\right)> \alpha m\left(I\right)$.
 
-**33.** 证明存在博雷尔集 $A\subset\left[0,1\right]$ 使对 $\left[0,1\right]$ 的每个子区间 $I$, 都有 $0<m\left(A\cap I\right)<m\left(I\right)$. (提示: $\left[0,1\right]$ 的每个子区间都含正测度的康托尔型集.)
+**33.** 证明存在博雷尔集 $A\subset\left[0,1\right]$ 使对 $\left[0,1\right]$ 的每个子区间 $I$, 都有 $0< m\left(A\cap I\right)< m\left(I\right)$. (提示: $\left[0,1\right]$ 的每个子区间都含正测度的康托尔型集.)
 
 ### 解答 习题五
 
-**30.** 反证. 假设存在 $\alpha<1$ 使对每个开区间 $I$, 均有 $m\left(E\cap I\right)\le\alpha m\left(I\right)$. 则对任意开集 $U$, 把 $U$ 表为可数个互不相交开区间的并 $U=\bigcup_{k}I_{k}$, 由 $m$ 的可数可加性,
+**30.** 反证. 假设存在 $\alpha< 1$ 使对每个开区间 $I$, 均有 $m\left(E\cap I\right)\le\alpha m\left(I\right)$. 则对任意开集 $U$, 把 $U$ 表为可数个互不相交开区间的并 $U=\bigcup_{k}I_{k}$, 由 $m$ 的可数可加性,
 
 $$
 \begin{aligned}m\left(E\cap U\right)&=\sum_{k}m\left(E\cap I_{k}\right)\\&\le\alpha\sum_{k}m\left(I_{k}\right)\\&=\alpha m\left(U\right).
@@ -318,22 +318,22 @@ $$
 m\left(E\right)=m\left(E\cap U_{n}\right)\le\alpha m\left(U_{n}\right)\to\alpha m\left(E\right).
 $$
 
-于是 $m\left(E\right)\le\alpha m\left(E\right)$. 因 $m\left(E\right)>0$, 得 $\alpha\ge1$, 与 $\alpha<1$ 矛盾. 故存在开区间 $I$ 使 $m\left(E\cap I\right)>\alpha m\left(I\right)$. $\blacksquare$
+于是 $m\left(E\right)\le\alpha m\left(E\right)$. 因 $m\left(E\right)> 0$, 得 $\alpha\ge1$, 与 $\alpha< 1$ 矛盾. 故存在开区间 $I$ 使 $m\left(E\cap I\right)> \alpha m\left(I\right)$. $\blacksquare$
 
 **33.** 用正测度的广义康托尔集 (基础知识). 设 $\left\{I_{n}\right\}$ 是 $\left[0,1\right]$ 中所有以有理数为端点的开区间的枚举. 归纳地选取两两不交的闭区间 $J_{n}\subset I_{n}$ (取 $J_{n}$ 避开之前所有 $J_{k}$), 使每个子区间 $I$ 都含某个 $J_{n}$ (因 $\left\{I_{n}\right\}$ 枚举有理区间, 每个子区间含某个 $I_{n}$, 而 $J_{n}\subset I_{n}$). 固定 $c\in\left(0,1\right)$. 在每个 $J_{n}$ 内取广义康托尔集 $C_{n}\subset J_{n}$, 使 $m\left(C_{n}\right)=c\,m\left(J_{n}\right)$ (由广义康托尔集测度可为任意 $\beta\in\left(0,1\right)$). 因 $J_{n}$ 两两不交, $C_{n}$ 两两不交. 令 $A=\bigcup_{n=1}^{\infty}C_{n}$, 则 $A$ 是可数个闭集之并, 从而是博雷尔集, 且 $A\subset\left[0,1\right]$.
 
 先证下界. 对任意子区间 $I\subset\left[0,1\right]$, 存在 $n$ 使 $J_{n}\subset I_{n}\subset I$, 故
 
 $$
-\begin{aligned}m\left(A\cap I\right)\\&\ge m\left(A\cap J_{n}\right)&=m\left(C_{n}\right)\\&=c\,m\left(J_{n}\right)>0.
+\begin{aligned}m\left(A\cap I\right)\\&\ge m\left(A\cap J_{n}\right)&=m\left(C_{n}\right)\\&=c\,m\left(J_{n}\right)> 0.
 \end{aligned}
 $$
 
 再证上界. 因 $C_{n}\subset J_{n}$ 且 $\left\{J_{n}\right\}$ 两两不交,
 
 $$
-\begin{aligned}m\left(A\cap I\right)&=m\left(\bigcup_{n}C_{n}\cap I\right)\\&=\sum_{n}m\left(C_{n}\cap I\right)\\&=\sum_{J_{n}\subset I}m\left(C_{n}\right)\\&=c\sum_{J_{n}\subset I}m\left(J_{n}\right)\\&=c\,m\left(\bigcup_{J_{n}\subset I}J_{n}\right)\\&\le c\,m\left(I\right)\\&<m\left(I\right),
+\begin{aligned}m\left(A\cap I\right)&=m\left(\bigcup_{n}C_{n}\cap I\right)\\&=\sum_{n}m\left(C_{n}\cap I\right)\\&=\sum_{J_{n}\subset I}m\left(C_{n}\right)\\&=c\sum_{J_{n}\subset I}m\left(J_{n}\right)\\&=c\,m\left(\bigcup_{J_{n}\subset I}J_{n}\right)\\&\le c\,m\left(I\right)\\&< m\left(I\right),
 \end{aligned}
 $$
 
-其中仅当 $J_{n}\cap I$ 有正测度 (即 $J_{n}\subset I$, 至多相差端点) 时 $m\left(C_{n}\cap I\right)=m\left(C_{n}\right)$ 非零. 故对 $\left[0,1\right]$ 的每个子区间 $I$, 有 $0<m\left(A\cap I\right)<m\left(I\right)$. $\blacksquare$
+其中仅当 $J_{n}\cap I$ 有正测度 (即 $J_{n}\subset I$, 至多相差端点) 时 $m\left(C_{n}\cap I\right)=m\left(C_{n}\right)$ 非零. 故对 $\left[0,1\right]$ 的每个子区间 $I$, 有 $0< m\left(A\cap I\right)< m\left(I\right)$. $\blacksquare$
