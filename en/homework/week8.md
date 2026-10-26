@@ -19,7 +19,7 @@
 
 > **Basic Knowledge**<br>**Invertible linear transformations preserve measurability and null sets**: if $T\in GL\left(n,\mathbb R\right)$, then $T\left(E\right)\in\mathcal L^{n}$ if and only if $E\in\mathcal L^{n}$, and $T$ preserves null sets.
 
-> **Basic Knowledge**<br>**Orthogonal transformations preserve the Lebesgue measure**: if $R\in O\left(n\right)$, i.e. $R^{T}R=I$, then $\left|\det R\right|=1$, and for any $E\in\mathcal L^{n}$, $m\left(R\left(E\right)\right)=m\left(E\right)$.
+> **Basic Knowledge**<br>**Orthogonal transformations preserve the Lebesgue measure**: if $R\in O\left(n\right)$, i.e. $R^{\top}R=I$, then $\left|\det R\right|=1$, and for any $E\in\mathcal L^{n}$, $m\left(R\left(E\right)\right)=m\left(E\right)$.
 
 > **Basic Knowledge**<br>**The Gamma function and the beta identity**: the Gamma function $\Gamma\left(x\right)=\int_{0}^{\infty}t^{x-1}e^{-t}\mathrm{d}t$ satisfies the recurrence $\Gamma\left(x+1\right)=x\Gamma\left(x\right)$; the Beta function satisfies the identity $\frac{\Gamma\left(x\right)\Gamma\left(y\right)}{\Gamma\left(x+y\right)}=\int_{0}^{1}t^{x-1}\left(1-t\right)^{y-1}\mathrm{d}t$ for $x,y> 0$.
 
@@ -160,13 +160,13 @@ Prove Problem 56. If $f$ is Lebesgue integrable on $\left(0,a\right)$ and $g\lef
 First consider the two-variable function $h\left(x,t\right)=t^{-1}f\left(t\right)\chi_{\left\{x< t\right\}}\left(x,t\right)$ on $\left(0,a\right)\times\left(0,a\right)$ (i.e. on the domain $\left\{\left(x,t\right):0< x< t< a\right\}$). By **Theorem 10.2.2** (Tonelli, nonnegative function $\left|h\right|$),
 
 $$
-\int_{0}^{a}\int_{x}^{a}t^{-1}\left|f\left(t\right)\right|\mathrm{d}t\,\mathrm{d}x=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}\left|f\left(t\right)\right|\mathrm{d}x\right)\mathrm{d}t=\int_{0}^{a}t^{-1}\left|f\left(t\right)\right|\cdot t\,\mathrm{d}t=\int_{0}^{a}\left|f\left(t\right)\right|\mathrm{d}t< \infty,
+\int_{0}^{a}\int_{x}^{a}t^{-1}\left|f\left(t\right)\right|\mathrm{d}t\,\mathrm{d}x=\int_{0}^{a}\left(\int_{0}^{\top}t^{-1}\left|f\left(t\right)\right|\mathrm{d}x\right)\mathrm{d}t=\int_{0}^{a}t^{-1}\left|f\left(t\right)\right|\cdot t\,\mathrm{d}t=\int_{0}^{a}\left|f\left(t\right)\right|\mathrm{d}t< \infty,
 $$
 
 where the interchange of order in the inner integral uses **Theorem 10.2.2** for a nonnegative function. Hence $\left(x,t\right)\mapsto t^{-1}f\left(t\right)\chi_{\left\{x< t\right\}}$ is integrable, and therefore $g$ is integrable. Then by **Theorem 10.2.1** (Fubini), interchanging the order,
 
 $$
-\int_{0}^{a}g\left(x\right)\mathrm{d}x=\int_{0}^{a}\int_{x}^{a}t^{-1}f\left(t\right)\mathrm{d}t\,\mathrm{d}x=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}f\left(t\right)\mathrm{d}x\right)\mathrm{d}t=\int_{0}^{a}t^{-1}f\left(t\right)\cdot t\,\mathrm{d}t=\int_{0}^{a}f\left(t\right)\mathrm{d}t.
+\int_{0}^{a}g\left(x\right)\mathrm{d}x=\int_{0}^{a}\int_{x}^{a}t^{-1}f\left(t\right)\mathrm{d}t\,\mathrm{d}x=\int_{0}^{a}\left(\int_{0}^{\top}t^{-1}f\left(t\right)\mathrm{d}x\right)\mathrm{d}t=\int_{0}^{a}t^{-1}f\left(t\right)\cdot t\,\mathrm{d}t=\int_{0}^{a}f\left(t\right)\mathrm{d}t.
 $$
 
 $\blacksquare$
@@ -279,7 +279,7 @@ Prove Problem 62. The measure $\sigma$ on $S^{n-1}$ is invariant under rotations
 
 ### Solution to Problem 7
 
-Let $R\in O\left(n\right)$, i.e. $R^{T}R=I$; then $\left|\det R\right|=1$. By the Basic Knowledge (orthogonal transformations preserve the Lebesgue measure), $R$ preserves $m$ on $\mathbb R^{n}$. Since $R$ preserves the norm, $\left|Rx\right|=\left|x\right|$, under the spherical-coordinate decomposition $\Phi\left(x\right)=\left(r,x'\right)$ it acts on the spherical part: there exists a rotation $\rho$ on the sphere $S^{n-1}$ such that $R\left(rx'\right)=r\rho\left(x'\right)$. Let $m^{*}$ be the measure induced by polar coordinates ($m^{*}=\rho\times\sigma$ by **Theorem 11.4.1**); for a Borel set $A\subset\left(0,\infty\right)\times S^{n-1}$,
+Let $R\in O\left(n\right)$, i.e. $R^{\top}R=I$; then $\left|\det R\right|=1$. By the Basic Knowledge (orthogonal transformations preserve the Lebesgue measure), $R$ preserves $m$ on $\mathbb R^{n}$. Since $R$ preserves the norm, $\left|Rx\right|=\left|x\right|$, under the spherical-coordinate decomposition $\Phi\left(x\right)=\left(r,x'\right)$ it acts on the spherical part: there exists a rotation $\rho$ on the sphere $S^{n-1}$ such that $R\left(rx'\right)=r\rho\left(x'\right)$. Let $m^{*}$ be the measure induced by polar coordinates ($m^{*}=\rho\times\sigma$ by **Theorem 11.4.1**); for a Borel set $A\subset\left(0,\infty\right)\times S^{n-1}$,
 
 $$
 m^{*}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)=m\left(\Phi^{-1}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)\right)=m\left(R\Phi^{-1}\left(A\right)\right)=m\left(\Phi^{-1}\left(A\right)\right)=m^{*}\left(A\right),
@@ -287,7 +287,7 @@ $$
 
 so $m^{*}$ is rotation-invariant.
 
-Define $\sigma_{R}\left(E\right):=\sigma\left(R^{-1}E\right)=\sigma\left(R^{T}E\right)$; it is a Borel measure on $S^{n-1}$. On a rectangle $\left(a,b\right]\times E\subset\left(0,\infty\right)\times S^{n-1}$,
+Define $\sigma_{R}\left(E\right):=\sigma\left(R^{-1}E\right)=\sigma\left(R^{\top}E\right)$; it is a Borel measure on $S^{n-1}$. On a rectangle $\left(a,b\right]\times E\subset\left(0,\infty\right)\times S^{n-1}$,
 
 $$
 \left(\rho\times\sigma_{R}\right)\left(\left(a,b\right]\times E\right)=\int_{a}^{b}r^{n-1}\mathrm{d}r\cdot\sigma_{R}\left(E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right).

@@ -104,10 +104,10 @@ Since $u=\lambda s+\left(1-\lambda\right)t$, we have $u-s=\lambda\left(t-s\right
 
 **(b)** We first prove $\Rightarrow$. Suppose $F$ is convex, and take a compact subinterval $\left[\alpha,\beta\right]\subset\left(a,b\right)$. By the monotonicity of the difference quotient from (a), for $\alpha\le x< y\le\beta$, $S\left(\alpha,x\right)\le S\left(x,y\right)\le S\left(y,\beta\right)$ (increasing slopes over three points), while $S\left(\alpha,x\right)\ge S\left(\alpha,\beta\right)$ (difference quotient increasing in the right endpoint) and $S\left(y,\beta\right)\le S\left(\alpha,\beta\right)$ (difference quotient decreasing in the left endpoint); hence $\left|S\left(x,y\right)\right|\le S\left(\alpha,\beta\right)< \infty$. Thus $F$ satisfies a Lipschitz condition on $\left[\alpha,\beta\right]$ (with Lipschitz constant $S\left(\alpha,\beta\right)$); by **Theorem 15.0.16**, $F\in AC\left(\left[\alpha,\beta\right]\right)$. Moreover, $F'$ exists everywhere (for a convex function) and is the limit of the difference quotients; by (a), the difference quotients are monotone in the left endpoint, so $F'$ is increasing.
 
-We next prove $\Leftarrow$. Suppose $F$ is absolutely continuous on every compact subinterval of $\left(a,b\right)$ and $F'$ is increasing. By **Theorem 15.0.14**, for any $s< t\in\left(a,b\right)$ and an intermediate point $u$, we have $F\left(u\right)-F\left(s\right)=\int_{s}^{u}F'$ and $F\left(t\right)-F\left(u\right)=\int_{u}^{t}F'$. Since the values of $F'$ on $\left(s,u\right)$ are no larger than its values on $\left(u,t\right)$, averaging gives
+We next prove $\Leftarrow$. Suppose $F$ is absolutely continuous on every compact subinterval of $\left(a,b\right)$ and $F'$ is increasing. By **Theorem 15.0.14**, for any $s< t\in\left(a,b\right)$ and an intermediate point $u$, we have $F\left(u\right)-F\left(s\right)=\int_{s}^{u}F'$ and $F\left(t\right)-F\left(u\right)=\int_{u}^{\top}F'$. Since the values of $F'$ on $\left(s,u\right)$ are no larger than its values on $\left(u,t\right)$, averaging gives
 
 $$
-\frac{1}{u-s}\int_{s}^{u}F'\le\frac{1}{t-u}\int_{u}^{t}F',
+\frac{1}{u-s}\int_{s}^{u}F'\le\frac{1}{t-u}\int_{u}^{\top}F',
 $$
 
 i.e. $S\left(s,u\right)\le S\left(u,t\right)$. Taking $u=\lambda s+\left(1-\lambda\right)t$ and rearranging (as in the $\Leftarrow$ direction of (a)) gives $F\left(u\right)\le\lambda F\left(s\right)+\left(1-\lambda\right)F\left(t\right)$, i.e. $F$ is convex. Combining, (b) follows. $\blacksquare$

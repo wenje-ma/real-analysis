@@ -19,7 +19,7 @@
 
 > **基础知识**<br>**可逆线性变换保持可测性与零测集**: 若 $T\in GL\left(n,\mathbb R\right)$, 则 $T\left(E\right)\in\mathcal L^{n}$ 当且仅当 $E\in\mathcal L^{n}$, 且 $T$ 保持零测集.
 
-> **基础知识**<br>**正交变换保持勒贝格测度**: 若 $R\in O\left(n\right)$, 即 $R^{T}R=I$, 则 $\left|\det R\right|=1$, 且对任意 $E\in\mathcal L^{n}$ 有 $m\left(R\left(E\right)\right)=m\left(E\right)$.
+> **基础知识**<br>**正交变换保持勒贝格测度**: 若 $R\in O\left(n\right)$, 即 $R^{\top}R=I$, 则 $\left|\det R\right|=1$, 且对任意 $E\in\mathcal L^{n}$ 有 $m\left(R\left(E\right)\right)=m\left(E\right)$.
 
 > **基础知识**<br>**伽马函数与贝塔恒等式**: 伽马函数 $\Gamma\left(x\right)=\int_{0}^{\infty}t^{x-1}e^{-t}\mathrm{d}t$ 满足递推 $\Gamma\left(x+1\right)=x\Gamma\left(x\right)$; 贝塔函数满足恒等式 $\frac{\Gamma\left(x\right)\Gamma\left(y\right)}{\Gamma\left(x+y\right)}=\int_{0}^{1}t^{x-1}\left(1-t\right)^{y-1}\mathrm{d}t$ 对 $x,y> 0$.
 
@@ -160,13 +160,13 @@ $$
 先在 $\left(0,a\right)\times\left(0,a\right)$ 上考虑二元函数 $h\left(x,t\right)=t^{-1}f\left(t\right)\chi_{\left\{x< t\right\}}\left(x,t\right)$ (即定义域 $\left\{\left(x,t\right):0< x< t< a\right\}$). 由**定理 10.2.2** (托内利, 非负函数 $\left|h\right|$),
 
 $$
-\int_{0}^{a}\int_{x}^{a}t^{-1}\left|f\left(t\right)\right|\mathrm{d}t\,\mathrm{d}x=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}\left|f\left(t\right)\right|\mathrm{d}x\right)\mathrm{d}t=\int_{0}^{a}t^{-1}\left|f\left(t\right)\right|\cdot t\,\mathrm{d}t=\int_{0}^{a}\left|f\left(t\right)\right|\mathrm{d}t< \infty,
+\int_{0}^{a}\int_{x}^{a}t^{-1}\left|f\left(t\right)\right|\mathrm{d}t\,\mathrm{d}x=\int_{0}^{a}\left(\int_{0}^{\top}t^{-1}\left|f\left(t\right)\right|\mathrm{d}x\right)\mathrm{d}t=\int_{0}^{a}t^{-1}\left|f\left(t\right)\right|\cdot t\,\mathrm{d}t=\int_{0}^{a}\left|f\left(t\right)\right|\mathrm{d}t< \infty,
 $$
 
 其中内层交换次序用**定理 10.2.2** 于非负函数. 故 $\left(x,t\right)\mapsto t^{-1}f\left(t\right)\chi_{\left\{x< t\right\}}$ 可积, 从而 $g$ 可积. 再由**定理 10.2.1** (富比尼) 交换次序,
 
 $$
-\int_{0}^{a}g\left(x\right)\mathrm{d}x=\int_{0}^{a}\int_{x}^{a}t^{-1}f\left(t\right)\mathrm{d}t\,\mathrm{d}x=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}f\left(t\right)\mathrm{d}x\right)\mathrm{d}t=\int_{0}^{a}t^{-1}f\left(t\right)\cdot t\,\mathrm{d}t=\int_{0}^{a}f\left(t\right)\mathrm{d}t.
+\int_{0}^{a}g\left(x\right)\mathrm{d}x=\int_{0}^{a}\int_{x}^{a}t^{-1}f\left(t\right)\mathrm{d}t\,\mathrm{d}x=\int_{0}^{a}\left(\int_{0}^{\top}t^{-1}f\left(t\right)\mathrm{d}x\right)\mathrm{d}t=\int_{0}^{a}t^{-1}f\left(t\right)\cdot t\,\mathrm{d}t=\int_{0}^{a}f\left(t\right)\mathrm{d}t.
 $$
 
 $\blacksquare$
@@ -279,7 +279,7 @@ $$
 
 ### 解答 习题七
 
-设 $R\in O\left(n\right)$, 即 $R^{T}R=I$, 则 $\left|\det R\right|=1$. 由基础知识 (正交变换保持勒贝格测度), $R$ 在 $\mathbb R^{n}$ 上保持 $m$. 由于 $R$ 保持范数 $\left|Rx\right|=\left|x\right|$, 它在球面坐标分解 $\Phi\left(x\right)=\left(r,x'\right)$ 下作用于球面部分: 存在球面 $S^{n-1}$ 上的旋转 $\rho$ 使 $R\left(rx'\right)=r\rho\left(x'\right)$. 记 $m^{*}$ 为极坐标诱导测度 ($m^{*}=\rho\times\sigma$ 由**定理 11.4.1**), 对博雷尔集 $A\subset\left(0,\infty\right)\times S^{n-1}$,
+设 $R\in O\left(n\right)$, 即 $R^{\top}R=I$, 则 $\left|\det R\right|=1$. 由基础知识 (正交变换保持勒贝格测度), $R$ 在 $\mathbb R^{n}$ 上保持 $m$. 由于 $R$ 保持范数 $\left|Rx\right|=\left|x\right|$, 它在球面坐标分解 $\Phi\left(x\right)=\left(r,x'\right)$ 下作用于球面部分: 存在球面 $S^{n-1}$ 上的旋转 $\rho$ 使 $R\left(rx'\right)=r\rho\left(x'\right)$. 记 $m^{*}$ 为极坐标诱导测度 ($m^{*}=\rho\times\sigma$ 由**定理 11.4.1**), 对博雷尔集 $A\subset\left(0,\infty\right)\times S^{n-1}$,
 
 $$
 m^{*}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)=m\left(\Phi^{-1}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)\right)=m\left(R\Phi^{-1}\left(A\right)\right)=m\left(\Phi^{-1}\left(A\right)\right)=m^{*}\left(A\right),
@@ -287,7 +287,7 @@ $$
 
 故 $m^{*}$ 旋转不变.
 
-定义 $\sigma_{R}\left(E\right):=\sigma\left(R^{-1}E\right)=\sigma\left(R^{T}E\right)$, 它是 $S^{n-1}$ 上的博雷尔测度. 对矩形 $\left(a,b\right]\times E\subset\left(0,\infty\right)\times S^{n-1}$,
+定义 $\sigma_{R}\left(E\right):=\sigma\left(R^{-1}E\right)=\sigma\left(R^{\top}E\right)$, 它是 $S^{n-1}$ 上的博雷尔测度. 对矩形 $\left(a,b\right]\times E\subset\left(0,\infty\right)\times S^{n-1}$,
 
 $$
 \left(\rho\times\sigma_{R}\right)\left(\left(a,b\right]\times E\right)=\int_{a}^{b}r^{n-1}\mathrm{d}r\cdot\sigma_{R}\left(E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right).

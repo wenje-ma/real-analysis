@@ -104,10 +104,10 @@ $$
 
 **(b)** 先证 $\Rightarrow$. 设 $F$ 凸, 取紧子区间 $\left[\alpha,\beta\right]\subset\left(a,b\right)$. 由 (a) 的差商单调性, 对 $\alpha\le x< y\le\beta$, $S\left(\alpha,x\right)\le S\left(x,y\right)\le S\left(y,\beta\right)$ (三点斜率递增), 而 $S\left(\alpha,x\right)\ge S\left(\alpha,\beta\right)$ (差商关于右端点递增) 且 $S\left(y,\beta\right)\le S\left(\alpha,\beta\right)$ (差商关于左端点递减), 故 $\left|S\left(x,y\right)\right|\le S\left(\alpha,\beta\right)< \infty$. 于是 $F$ 在 $\left[\alpha,\beta\right]$ 上满足利普希茨条件 (利普希茨常数为 $S\left(\alpha,\beta\right)$), 由**定理 15.0.16**, $F\in AC\left(\left[\alpha,\beta\right]\right)$. 又 $F'$ 处处存在 (凸函数) 且为差商的极限, 由 (a) 差商关于左端点单调, 得 $F'$ 递增.
 
-再证 $\Leftarrow$. 设 $F$ 在 $\left(a,b\right)$ 的每个紧子区间上绝对连续且 $F'$ 递增. 由**定理 15.0.14**, 对任意 $s< t\in\left(a,b\right)$ 与中间点 $u$, 有 $F\left(u\right)-F\left(s\right)=\int_{s}^{u}F'$, $F\left(t\right)-F\left(u\right)=\int_{u}^{t}F'$. 因 $F'$ 在 $\left(s,u\right)$ 上的值不超过其在 $\left(u,t\right)$ 上的值, 平均化得
+再证 $\Leftarrow$. 设 $F$ 在 $\left(a,b\right)$ 的每个紧子区间上绝对连续且 $F'$ 递增. 由**定理 15.0.14**, 对任意 $s< t\in\left(a,b\right)$ 与中间点 $u$, 有 $F\left(u\right)-F\left(s\right)=\int_{s}^{u}F'$, $F\left(t\right)-F\left(u\right)=\int_{u}^{\top}F'$. 因 $F'$ 在 $\left(s,u\right)$ 上的值不超过其在 $\left(u,t\right)$ 上的值, 平均化得
 
 $$
-\frac{1}{u-s}\int_{s}^{u}F'\le\frac{1}{t-u}\int_{u}^{t}F',
+\frac{1}{u-s}\int_{s}^{u}F'\le\frac{1}{t-u}\int_{u}^{\top}F',
 $$
 
 即 $S\left(s,u\right)\le S\left(u,t\right)$. 取 $u=\lambda s+\left(1-\lambda\right)t$ 并整理 (同 (a) 的 $\Leftarrow$), 得 $F\left(u\right)\le\lambda F\left(s\right)+\left(1-\lambda\right)F\left(t\right)$, 即 $F$ 凸. 合并即得 (b). $\blacksquare$
