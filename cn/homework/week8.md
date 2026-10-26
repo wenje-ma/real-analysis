@@ -4,12 +4,12 @@
 
 > **定理 8.2.16**<br>如果 $f\in L^{1}\left(\mu\right)$ 且 $\varepsilon> 0$, 则存在可积简单函数 $\varphi=\sum a_{j}\chi_{E_{j}}$ 使得 $\int\left|f-\varphi\right|\mathrm{d}\mu< \varepsilon$ (即可积简单函数在 $L^{1}$ 度量下稠密).
 
-> **定理 10.2.1** (富比尼定理)<br>设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 $\nu$-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 $\mu$-可积的; 且重积分相等: $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).\end{aligned}$$
+> **定理 10.2.1** (富比尼定理)<br>设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 $\nu$-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 $\mu$-可积的; 且重积分相等: $$\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).$$
 
-> **定理 10.2.2** (托内利定理)<br>如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则 $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).\end{aligned}$$<br>其中所有积分值都在 $\left[0,\infty\right]$ 中.
+> **定理 10.2.2** (托内利定理)<br>如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则 $$\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).$$<br>其中所有积分值都在 $\left[0,\infty\right]$ 中.
 
 > **定理 11.1.1**<br>假设 $E\in\mathcal L^{n}$.
-> (a) $$\begin{aligned}m\left(E\right)&=\inf\left\{m\left(U\right):U\supset E,U\text{开}\right\}\\&=\sup\left\{m\left(K\right):K\subset E,K\text{紧}\right\}\end{aligned}$$;
+> (a) $$m\left(E\right)=\inf\left\{m\left(U\right):U\supset E,U\text{开}\right\}=\sup\left\{m\left(K\right):K\subset E,K\text{紧}\right\}$$;
 > 
 > (b) 若 $m\left(E\right)< \infty$, 则对任意 $\varepsilon> 0$, 存在有限个边为区间的互不相交的矩形族 $\left\{R_{j}\right\}_{j=1}^{N}$, 使得 $m\left(E\triangle\bigcup_{j=1}^{N}R_{j}\right)< \varepsilon$.
 
@@ -68,8 +68,7 @@ $$
 **一般情形.** 由初等线性代数, 每个 $T\in GL\left(n,\mathbb R\right)$ 都可写成有限个上述三种初等变换的乘积 $T=T_{1}\circ\cdots\circ T_{k}$ (可逆矩阵可通过行变换化为单位矩阵). 对每个初等变换上式成立, 且行列式相乘 $\left|\det T\right|=\prod_{i}\left|\det T_{i}\right|$. 逐次代入得
 
 $$
-\begin{aligned}\int f\left(x\right)\mathrm{d}x&=\left|\det T_{1}\right|\int f\circ T_{1}\left(x\right)\mathrm{d}x\\&=\cdots\\&=\left|\det T\right|\int f\circ T\left(x\right)\mathrm{d}x,
-\end{aligned}
+\int f\left(x\right)\mathrm{d}x=\left|\det T_{1}\right|\int f\circ T_{1}\left(x\right)\mathrm{d}x=\cdots=\left|\det T\right|\int f\circ T\left(x\right)\mathrm{d}x,
 $$
 
 此即 (a). 可测性: $T$ 连续, 由基础知识 (可逆线性变换保持可测性与零测集) 得 $f\circ T$ 可测且 $T\left(E\right)\in\mathcal L^{n}$.
@@ -77,8 +76,7 @@ $$
 **证 (b).** 在 (a) 中取 $f=\chi_{T\left(E\right)}$, 则
 
 $$
-\begin{aligned}m\left(T\left(E\right)\right)&=\int\chi_{T\left(E\right)}\left(x\right)\mathrm{d}x\\&=\left|\det T\right|\int\chi_{T\left(E\right)}\circ T\left(x\right)\mathrm{d}x\\&=\left|\det T\right|\int\chi_{E}\left(x\right)\mathrm{d}x\\&=\left|\det T\right|m\left(E\right).
-\end{aligned}
+m\left(T\left(E\right)\right)=\int\chi_{T\left(E\right)}\left(x\right)\mathrm{d}x=\left|\det T\right|\int\chi_{T\left(E\right)}\circ T\left(x\right)\mathrm{d}x=\left|\det T\right|\int\chi_{E}\left(x\right)\mathrm{d}x=\left|\det T\right|m\left(E\right).
 $$
 
 $T\left(E\right)\in\mathcal L^{n}$ 已由可测性保证. $\blacksquare$
@@ -108,8 +106,7 @@ $$
 因 $\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{t}{t^{2}+1}\right)=\frac{1-t^{2}}{\left(t^{2}+1\right)^{2}}$, 有 $\int\frac{t^{2}-1}{\left(t^{2}+1\right)^{2}}\mathrm{d}t=-\frac{t}{t^{2}+1}+C$, 故内层积分
 
 $$
-\begin{aligned}=\frac{1}{y}\left[-\frac{t}{t^{2}+1}\right]_{0}^{1/y}&=-\frac{1}{y}\cdot\frac{1/y}{1+1/y^{2}}\\&=-\frac{1}{y^{2}+1}.
-\end{aligned}
+=\frac{1}{y}\left[-\frac{t}{t^{2}+1}\right]_{0}^{1/y}=-\frac{1}{y}\cdot\frac{1/y}{1+1/y^{2}}=-\frac{1}{y^{2}+1}.
 $$
 
 于是
@@ -119,8 +116,7 @@ $$\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=\int_{0}^{1}-\frac{1}{1+y^
 **$\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x$ (先对 $y$ 积分).** 对称地, 固定 $x$ 令 $y=xt$, 内层 $\int_{0}^{1}f\,\mathrm{d}y=\frac{1}{x^{2}+1}$, 故
 
 $$
-\begin{aligned}\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x&=\int_{0}^{1}\frac{1}{1+x^{2}}\mathrm{d}x\\&=\left[\arctan x\right]_{0}^{1}\\&=\frac{\pi}{4}.
-\end{aligned}
+\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=\int_{0}^{1}\frac{1}{1+x^{2}}\mathrm{d}x=\left[\arctan x\right]_{0}^{1}=\frac{\pi}{4}.
 $$
 
 **结论.** $\int_{E}f\,\mathrm{d}m^{2}$ 不存在 ($f$ 非绝对可积); $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=-\frac{\pi}{4}$ 与 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=\frac{\pi}{4}$ 存在但不等, 且符号相反. 因 $f\notin L^{1}$, 定理 10.2.1 (富比尼) 不适用, 两个迭代积分不可交换. $\blacksquare$
@@ -144,15 +140,13 @@ $f\ge0$.
 **$\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y$ (先对 $x$ 积分).** 固定 $y$, $\int_{y}^{1}\left(x-y\right)^{-3}\mathrm{d}x=\left[-\frac{1}{2}\left(x-y\right)^{-2}\right]_{y}^{1}$, 因 $\lim_{x\to y^{+}}\left(x-y\right)^{-2}=\infty$, 故内层积分 $=+\infty$, 于是
 
 $$
-\begin{aligned}\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y&=\int_{0}^{1}\left(\int_{y}^{1}\left(x-y\right)^{-3}\mathrm{d}x\right)\mathrm{d}y\\&=+\infty.
-\end{aligned}
+\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=\int_{0}^{1}\left(\int_{y}^{1}\left(x-y\right)^{-3}\mathrm{d}x\right)\mathrm{d}y=+\infty.
 $$
 
 **$\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x$ (先对 $y$ 积分).** 固定 $x$, $\int_{0}^{x}\left(x-y\right)^{-3}\mathrm{d}y=\left[-\frac{1}{2}\left(x-y\right)^{-2}\right]_{0}^{x}$, 因 $\lim_{y\to x^{-}}\left(x-y\right)^{-2}=\infty$, 故内层积分 $=-\infty$, 于是
 
 $$
-\begin{aligned}\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x&=\int_{0}^{1}\left(\int_{0}^{x}\left(x-y\right)^{-3}\mathrm{d}y\right)\mathrm{d}x\\&=-\infty.
-\end{aligned}
+\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=\int_{0}^{1}\left(\int_{0}^{x}\left(x-y\right)^{-3}\mathrm{d}y\right)\mathrm{d}x=-\infty.
 $$
 
 **结论.** $\int_{E}f\,\mathrm{d}m^{2}$ 不存在 ($f\notin L^{1}$); $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=+\infty$ 而 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=-\infty$, 两个迭代积分存在但不等且符号相反. 这是富比尼失效的经典反例: 非绝对可积时积分次序不可交换. $\blacksquare$
@@ -166,15 +160,13 @@ $$
 先在 $\left(0,a\right)\times\left(0,a\right)$ 上考虑二元函数 $h\left(x,t\right)=t^{-1}f\left(t\right)\chi_{\left\{x< t\right\}}\left(x,t\right)$ (即定义域 $\left\{\left(x,t\right):0< x< t< a\right\}$). 由**定理 10.2.2** (托内利, 非负函数 $\left|h\right|$),
 
 $$
-\begin{aligned}\int_{0}^{a}\int_{x}^{a}t^{-1}\left|f\left(t\right)\right|\mathrm{d}t\,\mathrm{d}x&=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}\left|f\left(t\right)\right|\mathrm{d}x\right)\mathrm{d}t\\&=\int_{0}^{a}t^{-1}\left|f\left(t\right)\right|\cdot t\,\mathrm{d}t\\&=\int_{0}^{a}\left|f\left(t\right)\right|\mathrm{d}t\\&< \infty,
-\end{aligned}
+\int_{0}^{a}\int_{x}^{a}t^{-1}\left|f\left(t\right)\right|\mathrm{d}t\,\mathrm{d}x=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}\left|f\left(t\right)\right|\mathrm{d}x\right)\mathrm{d}t=\int_{0}^{a}t^{-1}\left|f\left(t\right)\right|\cdot t\,\mathrm{d}t=\int_{0}^{a}\left|f\left(t\right)\right|\mathrm{d}t< \infty,
 $$
 
 其中内层交换次序用**定理 10.2.2** 于非负函数. 故 $\left(x,t\right)\mapsto t^{-1}f\left(t\right)\chi_{\left\{x< t\right\}}$ 可积, 从而 $g$ 可积. 再由**定理 10.2.1** (富比尼) 交换次序,
 
 $$
-\begin{aligned}\int_{0}^{a}g\left(x\right)\mathrm{d}x&=\int_{0}^{a}\int_{x}^{a}t^{-1}f\left(t\right)\mathrm{d}t\,\mathrm{d}x\\&=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}f\left(t\right)\mathrm{d}x\right)\mathrm{d}t\\&=\int_{0}^{a}t^{-1}f\left(t\right)\cdot t\,\mathrm{d}t\\&=\int_{0}^{a}f\left(t\right)\mathrm{d}t.
-\end{aligned}
+\int_{0}^{a}g\left(x\right)\mathrm{d}x=\int_{0}^{a}\int_{x}^{a}t^{-1}f\left(t\right)\mathrm{d}t\,\mathrm{d}x=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}f\left(t\right)\mathrm{d}x\right)\mathrm{d}t=\int_{0}^{a}t^{-1}f\left(t\right)\cdot t\,\mathrm{d}t=\int_{0}^{a}f\left(t\right)\mathrm{d}t.
 $$
 
 $\blacksquare$
@@ -210,8 +202,7 @@ $$
 对固定的 $b> 0$, 因 $\int_{0}^{b}\int_{0}^{\infty}\left|e^{-xy}\sin x\right|\mathrm{d}y\,\mathrm{d}x=\int_{0}^{b}\frac{\left|\sin x\right|}{x}\mathrm{d}x< \infty$ (固定 $b$ 时 $x^{-1}\sin x$ 可积), 由**定理 10.2.2** (托内利) 可交换次序:
 
 $$
-\begin{aligned}\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x&=\int_{0}^{b}\int_{0}^{\infty}e^{-xy}\sin x\,\mathrm{d}y\,\mathrm{d}x\\&=\int_{0}^{\infty}\left(\int_{0}^{b}e^{-xy}\sin x\,\mathrm{d}x\right)\mathrm{d}y.
-\end{aligned}
+\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\int_{0}^{b}\int_{0}^{\infty}e^{-xy}\sin x\,\mathrm{d}y\,\mathrm{d}x=\int_{0}^{\infty}\left(\int_{0}^{b}e^{-xy}\sin x\,\mathrm{d}x\right)\mathrm{d}y.
 $$
 
 对固定的 $y$, 分部积分两次得 $\int_{0}^{b}e^{-xy}\sin x\,\mathrm{d}x=\frac{1-e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}$. 故
@@ -223,8 +214,7 @@ $$
 **取极限 $b\to\infty$.** 拆成两项 $\frac{1}{1+y^{2}}-\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}$. 第一项积分 $\int_{0}^{\infty}\frac{1}{1+y^{2}}\mathrm{d}y=\frac{\pi}{2}$. 对第二项, 当 $b\ge1$ 时 $\left|\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}\right|\le\frac{e^{-y}\left(y+1\right)}{1+y^{2}}=:g\left(y\right)$, 且 $\int_{0}^{\infty}g\left(y\right)\mathrm{d}y< \infty$ (被 $e^{-y}$ 指数衰减控制). 由**定理 8.2.9** (控制收敛定理, 对任意序列 $b_{n}\to\infty$ 应用), 该项趋于 $\int_{0}^{\infty}0\,\mathrm{d}y=0$. 故
 
 $$
-\begin{aligned}\lim_{b\to\infty}\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x&=\frac{\pi}{2}-0\\&=\frac{\pi}{2}.
-\end{aligned}
+\lim_{b\to\infty}\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\frac{\pi}{2}-0=\frac{\pi}{2}.
 $$
 
 $\blacksquare$
@@ -268,8 +258,7 @@ $$
 由基础知识 (伽马函数与贝塔恒等式), $\int_{0}^{1}\left(1-u\right)^{\alpha-1}u^{\beta-1}\mathrm{d}u=\frac{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}{\Gamma\left(\alpha+\beta\right)}$. 代入得
 
 $$
-\begin{aligned}I_{\alpha}\left(I_{\beta}f\right)\left(x\right)&=\frac{1}{\Gamma\left(\alpha+\beta\right)}\int_{0}^{x}\left(x-t\right)^{\alpha+\beta-1}f\left(t\right)\mathrm{d}t\\&=I_{\alpha+\beta}f\left(x\right).
-\end{aligned}
+I_{\alpha}\left(I_{\beta}f\right)\left(x\right)=\frac{1}{\Gamma\left(\alpha+\beta\right)}\int_{0}^{x}\left(x-t\right)^{\alpha+\beta-1}f\left(t\right)\mathrm{d}t=I_{\alpha+\beta}f\left(x\right).
 $$
 
 $\blacksquare$
@@ -293,8 +282,7 @@ $$
 设 $R\in O\left(n\right)$, 即 $R^{T}R=I$, 则 $\left|\det R\right|=1$. 由基础知识 (正交变换保持勒贝格测度), $R$ 在 $\mathbb R^{n}$ 上保持 $m$. 由于 $R$ 保持范数 $\left|Rx\right|=\left|x\right|$, 它在球面坐标分解 $\Phi\left(x\right)=\left(r,x'\right)$ 下作用于球面部分: 存在球面 $S^{n-1}$ 上的旋转 $\rho$ 使 $R\left(rx'\right)=r\rho\left(x'\right)$. 记 $m^{*}$ 为极坐标诱导测度 ($m^{*}=\rho\times\sigma$ 由**定理 11.4.1**), 对博雷尔集 $A\subset\left(0,\infty\right)\times S^{n-1}$,
 
 $$
-\begin{aligned}m^{*}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)&=m\left(\Phi^{-1}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)\right)\\&=m\left(R\Phi^{-1}\left(A\right)\right)\\&=m\left(\Phi^{-1}\left(A\right)\right)\\&=m^{*}\left(A\right),
-\end{aligned}
+m^{*}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)=m\left(\Phi^{-1}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)\right)=m\left(R\Phi^{-1}\left(A\right)\right)=m\left(\Phi^{-1}\left(A\right)\right)=m^{*}\left(A\right),
 $$
 
 故 $m^{*}$ 旋转不变.
@@ -302,8 +290,7 @@ $$
 定义 $\sigma_{R}\left(E\right):=\sigma\left(R^{-1}E\right)=\sigma\left(R^{T}E\right)$, 它是 $S^{n-1}$ 上的博雷尔测度. 对矩形 $\left(a,b\right]\times E\subset\left(0,\infty\right)\times S^{n-1}$,
 
 $$
-\begin{aligned}\left(\rho\times\sigma_{R}\right)\left(\left(a,b\right]\times E\right)&=\int_{a}^{b}r^{n-1}\mathrm{d}r\cdot\sigma_{R}\left(E\right)\\&=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right).
-\end{aligned}
+\left(\rho\times\sigma_{R}\right)\left(\left(a,b\right]\times E\right)=\int_{a}^{b}r^{n-1}\mathrm{d}r\cdot\sigma_{R}\left(E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right).
 $$
 
 由 $m^{*}=\rho\times\sigma$ (**定理 11.4.1**), $\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times R^{-1}E\right)$. 又由 $m^{*}$ 的旋转不变性, $m^{*}\left(\left(a,b\right]\times R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(E\right)$. 故在矩形上 $\rho\times\sigma_{R}=\rho\times\sigma$. 由基础知识 (测度在乘积 $\sigma$-代数生成族上的唯一性), $\rho\times\sigma_{R}=\rho\times\sigma$ 在 $\left(0,\infty\right)\times S^{n-1}$ 上成立.
@@ -323,8 +310,7 @@ $$\int_{\mathbb R^{n}}\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}\math
 **集合 $\left\{\left|x\right|< 1/2\right\}$.** 作代换 $u=-\log r$ (即 $r=e^{-u}$, $\mathrm{d}r=-e^{-u}\mathrm{d}u$, 则 $r\in\left(0,1/2\right]$ 对应 $u\in\left[\log 2,\infty\right)$):
 
 $$
-\begin{aligned}\int_{0}^{1/2}r^{a+n-1}\left|\log r\right|^{b}\mathrm{d}r&=\int_{\log 2}^{\infty}e^{-u\left(a+n-1\right)}e^{-u}u^{b}\mathrm{d}u\\&=\int_{\log 2}^{\infty}e^{-u\left(a+n\right)}u^{b}\mathrm{d}u.
-\end{aligned}
+\int_{0}^{1/2}r^{a+n-1}\left|\log r\right|^{b}\mathrm{d}r=\int_{\log 2}^{\infty}e^{-u\left(a+n-1\right)}e^{-u}u^{b}\mathrm{d}u=\int_{\log 2}^{\infty}e^{-u\left(a+n\right)}u^{b}\mathrm{d}u.
 $$
 
 收敛条件由指数因子决定:
@@ -338,8 +324,7 @@ $$
 **集合 $\left\{\left|x\right|> 2\right\}$.** 当 $r\ge2$ 时 $\left|\log r\right|=\log r$. 作代换 $r=e^{u}$ ($\mathrm{d}r=e^{u}\mathrm{d}u$, $u\ge\log 2$):
 
 $$
-\begin{aligned}\int_{2}^{\infty}r^{a+n-1}\left(\log r\right)^{b}\mathrm{d}r&=\int_{\log 2}^{\infty}e^{u\left(a+n-1\right)}e^{u}u^{b}\mathrm{d}u\\&=\int_{\log 2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u.
-\end{aligned}
+\int_{2}^{\infty}r^{a+n-1}\left(\log r\right)^{b}\mathrm{d}r=\int_{\log 2}^{\infty}e^{u\left(a+n-1\right)}e^{u}u^{b}\mathrm{d}u=\int_{\log 2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u.
 $$
 
 收敛条件:

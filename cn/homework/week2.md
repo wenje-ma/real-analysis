@@ -1,8 +1,8 @@
 # 作业 2
 
-> **定义 1.3.1** (上极限)<br>集列 $\left\{E_{n}\right\}$ 的上极限定义为 $$\begin{aligned}\overline{\lim}_{n\to\infty}E_{n}&=\left\{x:x\text{ 属于无穷多个 }E_{n}\right\}\\&=\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}E_{k}.\end{aligned}$$
+> **定义 1.3.1** (上极限)<br>集列 $\left\{E_{n}\right\}$ 的上极限定义为 $$\overline{\lim}_{n\to\infty}E_{n}=\left\{x:x\text{ 属于无穷多个 }E_{n}\right\}=\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}E_{k}.$$
 
-> **定义 1.3.3** (下极限)<br>$$\begin{aligned}\underline{\lim}_{n\to\infty}E_{n}&=\left\{x:x\text{ 仅不属于有限多个 }E_{n}\right\}\\&=\bigcup_{n=1}^{\infty}\bigcap_{k=n}^{\infty}E_{k}.\end{aligned}$$
+> **定义 1.3.3** (下极限)<br>$$\underline{\lim}_{n\to\infty}E_{n}=\left\{x:x\text{ 仅不属于有限多个 }E_{n}\right\}=\bigcup_{n=1}^{\infty}\bigcap_{k=n}^{\infty}E_{k}.$$
 
 > **定义 4.1.3** ($\sigma$-代数)<br>设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 **$\sigma$-代数**, 若满足:
 > (1) $X\in\mathcal F$;
@@ -65,8 +65,7 @@ $$
 (2) **补运算封闭**: 设 $B\subset A\subset B\cup N$, $\mu\left(N\right)=0$. 则 $\left(B\cup N\right)^{c}\subset A^{c}\subset B^{c}$, 且
 
 $$
-\begin{aligned}B^{c}\setminus\left(B\cup N\right)^{c}&=B^{c}\cap\left(B\cup N\right)\\&=B^{c}\cap N\subset N,
-\end{aligned}
+B^{c}\setminus\left(B\cup N\right)^{c}=B^{c}\cap\left(B\cup N\right)=B^{c}\cap N\subset N,
 $$
 
 故由**命题 5.2.2** (单调性) 得 $\mu\left(B^{c}\setminus\left(B\cup N\right)^{c}\right)\le\mu\left(N\right)=0$. 于是 $A^{c}\in\mathcal M$ (取 $B'=\left(B\cup N\right)^{c}\in\mathcal F$, $N'=B^{c}\setminus\left(B\cup N\right)^{c}$).
@@ -78,8 +77,7 @@ $$
 **2. 定义 $\overline\mu:\mathcal M\to\left[0,+\infty\right]$, $\overline\mu\left(A\right):=\mu\left(B\right)$, 其中 $B\subset A\subset B\cup N$, $\mu\left(N\right)=0$.** 先证良定义: 设 $B_{1}\subset A\subset B_{1}\cup N_{1}$ 与 $B_{2}\subset A\subset B_{2}\cup N_{2}$, $\mu\left(N_{1}\right)=\mu\left(N_{2}\right)=0$. 由 $B_{1}\subset A\subset B_{2}\cup N_{2}$ 得 $B_{1}\setminus B_{2}\subset N_{2}$, 故 $\mu\left(B_{1}\setminus B_{2}\right)\le\mu\left(N_{2}\right)=0$; 同理 $\mu\left(B_{2}\setminus B_{1}\right)=0$. 由**命题 5.2.1** (有限可加性) 与**命题 5.2.2** (单调性),
 
 $$
-\begin{aligned}\mu\left(B_{1}\right)&=\mu\left(B_{1}\cap B_{2}\right)+\mu\left(B_{1}\setminus B_{2}\right)\\&=\mu\left(B_{1}\cap B_{2}\right)\\&=\mu\left(B_{2}\right).
-\end{aligned}
+\mu\left(B_{1}\right)=\mu\left(B_{1}\cap B_{2}\right)+\mu\left(B_{1}\setminus B_{2}\right)=\mu\left(B_{1}\cap B_{2}\right)=\mu\left(B_{2}\right).
 $$
 
 故 $\overline\mu$ 良定义.
@@ -87,8 +85,7 @@ $$
 **3. $\overline\mu$ 是测度.** 逐条验证**定义 5.1.2**: 非负性显然. 零空集性: $\overline\mu\left(\varnothing\right)=\mu\left(\varnothing\right)=0$. 可数可加性: 设 $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal M$ 两两不交, 写 $A_{n}=B_{n}\cup N_{n}$ ($B_{n}\in\mathcal F$, $N_{n}\subset N_{n}'\in\mathcal N$). 则 $\bigcup_{n}A_{n}=\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)\in\mathcal M$, 且 $\left\{B_{n}\right\}$ 两两不交 (因 $B_{n}\subset A_{n}$), 由 $\mu$ 的可数可加性
 
 $$
-\begin{aligned}\overline\mu\left(\bigcup_{n}A_{n}\right)&=\mu\left(\bigcup_{n}B_{n}\right)\\&=\sum_{n}\mu\left(B_{n}\right)\\&=\sum_{n}\overline\mu\left(A_{n}\right).
-\end{aligned}
+\overline\mu\left(\bigcup_{n}A_{n}\right)=\mu\left(\bigcup_{n}B_{n}\right)=\sum_{n}\mu\left(B_{n}\right)=\sum_{n}\overline\mu\left(A_{n}\right).
 $$
 
 **4. 延拓性:** 对 $B\in\mathcal F$, 因 $B=B\cup\varnothing\in\mathcal M$, 故 $\overline\mu\left(B\right)=\mu\left(B\right)$, 即 $\overline\mu|_{\mathcal F}=\mu$.
@@ -124,29 +121,25 @@ $$
 记 $F_{n}:=\bigcap_{j=n}^{\infty}E_{j}$. 由**定义 1.3.3** (下极限), $\liminf_{j\to\infty}E_{j}=\bigcup_{n=1}^{\infty}F_{n}$; 且 $\left\{F_{n}\right\}$ 单调递增. 由**命题 5.2.4** (下连续性),
 
 $$
-\begin{aligned}\mu\left(\liminf_{j\to\infty}E_{j}\right)&=\mu\left(\bigcup_{n=1}^{\infty}F_{n}\right)\\&=\lim_{n\to\infty}\mu\left(F_{n}\right).
-\end{aligned}
+\mu\left(\liminf_{j\to\infty}E_{j}\right)=\mu\left(\bigcup_{n=1}^{\infty}F_{n}\right)=\lim_{n\to\infty}\mu\left(F_{n}\right).
 $$
 
 又因 $F_{n}\subset E_{j}$ 对一切 $j\ge n$, 由**命题 5.2.2** (单调性) 得 $\mu\left(F_{n}\right)\le\inf_{j\ge n}\mu\left(E_{j}\right)$, 故
 
 $$
-\begin{aligned}\mu\left(\liminf_{j\to\infty}E_{j}\right)&=\lim_{n\to\infty}\mu\left(F_{n}\right)\\&\le\lim_{n\to\infty}\inf_{j\ge n}\mu\left(E_{j}\right)\\&=\liminf_{j\to\infty}\mu\left(E_{j}\right).
-\end{aligned}
+\mu\left(\liminf_{j\to\infty}E_{j}\right)=\lim_{n\to\infty}\mu\left(F_{n}\right)\le\lim_{n\to\infty}\inf_{j\ge n}\mu\left(E_{j}\right)=\liminf_{j\to\infty}\mu\left(E_{j}\right).
 $$
 
 记 $G_{n}:=\bigcup_{j=n}^{\infty}E_{j}$. 由**定义 1.3.1** (上极限), $\limsup_{j\to\infty}E_{j}=\bigcap_{n=1}^{\infty}G_{n}$; 且 $\left\{G_{n}\right\}$ 单调递减. 因 $\mu\left(G_{1}\right)=\mu\left(\bigcup_{j=1}^{\infty}E_{j}\right)< \infty$, 由**命题 5.2.5** (上连续性),
 
 $$
-\begin{aligned}\mu\left(\limsup_{j\to\infty}E_{j}\right)&=\mu\left(\bigcap_{n=1}^{\infty}G_{n}\right)\\&=\lim_{n\to\infty}\mu\left(G_{n}\right).
-\end{aligned}
+\mu\left(\limsup_{j\to\infty}E_{j}\right)=\mu\left(\bigcap_{n=1}^{\infty}G_{n}\right)=\lim_{n\to\infty}\mu\left(G_{n}\right).
 $$
 
 又因 $G_{n}\supset E_{j}$ 对一切 $j\ge n$, 由单调性得 $\mu\left(G_{n}\right)\ge\sup_{j\ge n}\mu\left(E_{j}\right)$, 故
 
 $$
-\begin{aligned}\mu\left(\limsup_{j\to\infty}E_{j}\right)&=\lim_{n\to\infty}\mu\left(G_{n}\right)\\&\ge\lim_{n\to\infty}\sup_{j\ge n}\mu\left(E_{j}\right)\\&=\limsup_{j\to\infty}\mu\left(E_{j}\right).
-\end{aligned}
+\mu\left(\limsup_{j\to\infty}E_{j}\right)=\lim_{n\to\infty}\mu\left(G_{n}\right)\ge\lim_{n\to\infty}\sup_{j\ge n}\mu\left(E_{j}\right)=\limsup_{j\to\infty}\mu\left(E_{j}\right).
 $$
 
 两不等式得证. $\blacksquare$
@@ -166,8 +159,7 @@ $$
 又 $E=\left(E\cap F\right)\cup\left(E\setminus F\right)$, $F=\left(E\cap F\right)\cup\left(F\setminus E\right)$ 均为两两不交分解, 故
 
 $$
-\begin{aligned}\mu\left(E\right)+\mu\left(F\right)&=2\mu\left(E\cap F\right)+\mu\left(E\setminus F\right)+\mu\left(F\setminus E\right)\\&=\mu\left(E\cup F\right)+\mu\left(E\cap F\right).
-\end{aligned}
+\mu\left(E\right)+\mu\left(F\right)=2\mu\left(E\cap F\right)+\mu\left(E\setminus F\right)+\mu\left(F\setminus E\right)=\mu\left(E\cup F\right)+\mu\left(E\cap F\right).
 $$
 
 等式得证. $\blacksquare$
@@ -183,8 +175,7 @@ $$
 (3) **可数可加性**: 设 $\left\{A_{j}\right\}_{j=1}^{\infty}\subset\mathcal M$ 两两不交, 则 $\left\{A_{j}\cap E\right\}$ 亦两两不交, 由 $\mu$ 的可数可加性
 
 $$
-\begin{aligned}\mu_{E}\left(\bigcup_{j=1}^{\infty}A_{j}\right)&=\mu\left(\left(\bigcup_{j=1}^{\infty}A_{j}\right)\cap E\right)\\&=\mu\left(\bigcup_{j=1}^{\infty}\left(A_{j}\cap E\right)\right)\\&=\sum_{j=1}^{\infty}\mu\left(A_{j}\cap E\right)\\&=\sum_{j=1}^{\infty}\mu_{E}\left(A_{j}\right).
-\end{aligned}
+\mu_{E}\left(\bigcup_{j=1}^{\infty}A_{j}\right)=\mu\left(\left(\bigcup_{j=1}^{\infty}A_{j}\right)\cap E\right)=\mu\left(\bigcup_{j=1}^{\infty}\left(A_{j}\cap E\right)\right)=\sum_{j=1}^{\infty}\mu\left(A_{j}\cap E\right)=\sum_{j=1}^{\infty}\mu_{E}\left(A_{j}\right).
 $$
 
 故 $\mu_{E}$ 是测度. $\blacksquare$
@@ -194,8 +185,7 @@ $$
 **(a)** $E=\left(E\cap F\right)\cup\left(E\setminus F\right)$, $F=\left(E\cap F\right)\cup\left(F\setminus E\right)$ 均为两两不交分解, 由**命题 5.2.1** (有限可加性),
 
 $$
-\begin{aligned}\mu\left(E\right)&=\mu\left(E\cap F\right)+\mu\left(E\setminus F\right),\\\mu\left(F\right)&=\mu\left(E\cap F\right)+\mu\left(F\setminus E\right).
-\end{aligned}
+\mu\left(E\right)=\mu\left(E\cap F\right)+\mu\left(E\setminus F\right),;\mu\left(F\right)=\mu\left(E\cap F\right)+\mu\left(F\setminus E\right).
 $$
 
 又 $E\setminus F\subset E\triangle F$, $F\setminus E\subset E\triangle F$, 由**命题 5.2.2** (单调性), $\mu\left(E\setminus F\right)\le\mu\left(E\triangle F\right)=0$, 同理 $\mu\left(F\setminus E\right)=0$. 故 $\mu\left(E\right)=\mu\left(E\cap F\right)=\mu\left(F\right)$. $\blacksquare$
@@ -213,8 +203,7 @@ $$
 **(c)** 对称性与非负性显然: $\rho\left(E,F\right)=\rho\left(F,E\right)\ge0$, $\rho\left(E,E\right)=0$. 又 $E\triangle G\subset\left(E\triangle F\right)\cup\left(F\triangle G\right)$, 由**命题 5.2.3** (次可数可加性),
 
 $$
-\begin{aligned}\rho\left(E,G\right)&=\mu\left(E\triangle G\right)\\&\le\mu\left(E\triangle F\right)+\mu\left(F\triangle G\right)\\&=\rho\left(E,F\right)+\rho\left(F,G\right).
-\end{aligned}
+\rho\left(E,G\right)=\mu\left(E\triangle G\right)\le\mu\left(E\triangle F\right)+\mu\left(F\triangle G\right)=\rho\left(E,F\right)+\rho\left(F,G\right).
 $$
 
 最后验证良定义与正定性: 若 $E\sim E'$, $F\sim F'$ (即 $\mu\left(E\triangle E'\right)=\mu\left(F\triangle F'\right)=0$), 则

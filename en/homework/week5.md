@@ -47,8 +47,7 @@ Let $f$ be a nonnegative simple function. Prove the following: $A\mapsto\int_{A}
 Let $f=\sum_{i=1}^{n}c_{i}\chi_{A_{i}}$, where $c_{i}\ge0$, the $A_{i}\in\mathcal F$ are pairwise disjoint, and $\bigcup_{i}A_{i}=X$. For $E\in\mathcal F$, by **Definition 8.1.1**,
 
 $$
-\begin{aligned}\int_{E}f\,\mathrm{d}\mu&=\int f\chi_{E}\,\mathrm{d}\mu\\&=\sum_{i=1}^{n}c_{i}\mu\left(E\cap A_{i}\right).
-\end{aligned}
+\int_{E}f\,\mathrm{d}\mu=\int f\chi_{E}\,\mathrm{d}\mu=\sum_{i=1}^{n}c_{i}\mu\left(E\cap A_{i}\right).
 $$
 
 Set $\lambda\left(E\right):=\int_{E}f\,\mathrm{d}\mu$. We verify that $\lambda$ is a measure:
@@ -58,15 +57,13 @@ Set $\lambda\left(E\right):=\int_{E}f\,\mathrm{d}\mu$. We verify that $\lambda$ 
 - $\sigma$-additivity: let $E=\bigsqcup_{j=1}^{\infty}E_{j}$ (pairwise disjoint). By the $\sigma$-additivity of $\mu$ (**Definition 5.1.2**) and **Proposition 8.1.2** (Linearity),
 
 $$
-\begin{aligned}\lambda\left(E\right)&=\sum_{i=1}^{n}c_{i}\mu\left(E\cap A_{i}\right)\\&=\sum_{i=1}^{n}c_{i}\sum_{j=1}^{\infty}\mu\left(E_{j}\cap A_{i}\right)\\&=\sum_{j=1}^{\infty}\sum_{i=1}^{n}c_{i}\mu\left(E_{j}\cap A_{i}\right)\\&=\sum_{j=1}^{\infty}\lambda\left(E_{j}\right).
-\end{aligned}
+\lambda\left(E\right)=\sum_{i=1}^{n}c_{i}\mu\left(E\cap A_{i}\right)=\sum_{i=1}^{n}c_{i}\sum_{j=1}^{\infty}\mu\left(E_{j}\cap A_{i}\right)=\sum_{j=1}^{\infty}\sum_{i=1}^{n}c_{i}\mu\left(E_{j}\cap A_{i}\right)=\sum_{j=1}^{\infty}\lambda\left(E_{j}\right).
 $$
 
 Hence $\lambda$ is a measure on $\mathcal F$. Finally, if $\mu\left(A\right)=0$, then
 
 $$
-\begin{aligned}\lambda\left(A\right)&=\sum_{i=1}^{n}c_{i}\mu\left(A\cap A_{i}\right)\\&\le\sum_{i=1}^{n}c_{i}\mu\left(A\right)\\&=0,
-\end{aligned}
+\lambda\left(A\right)=\sum_{i=1}^{n}c_{i}\mu\left(A\cap A_{i}\right)\le\sum_{i=1}^{n}c_{i}\mu\left(A\right)=0,
 $$
 
 hence $\lambda\left(A\right)=0$. $\blacksquare$
@@ -115,8 +112,7 @@ Rearranging (all terms are finite, since $f,g$ are integrable) gives $\int\left(
 3. Since $\left|f\right|=f^{+}+f^{-}$, nonnegative linearity gives $\int\left|f\right|\mathrm{d}\mu=\int f^{+}\mathrm{d}\mu+\int f^{-}\mathrm{d}\mu$. And since $\int f\,\mathrm{d}\mu=\int f^{+}\mathrm{d}\mu-\int f^{-}\mathrm{d}\mu$, we have
 
 $$
-\begin{aligned}\left|\int f\,\mathrm{d}\mu\right|&=\left|\int f^{+}\mathrm{d}\mu-\int f^{-}\mathrm{d}\mu\right|\\&\le\int f^{+}\mathrm{d}\mu+\int f^{-}\mathrm{d}\mu\\&=\int\left|f\right|\mathrm{d}\mu.
-\end{aligned}
+\left|\int f\,\mathrm{d}\mu\right|=\left|\int f^{+}\mathrm{d}\mu-\int f^{-}\mathrm{d}\mu\right|\le\int f^{+}\mathrm{d}\mu+\int f^{-}\mathrm{d}\mu=\int\left|f\right|\mathrm{d}\mu.
 $$
 
 4. If $f=g$ almost everywhere, then $f^{+}=g^{+}$ and $f^{-}=g^{-}$ almost everywhere. Then $h:=f^{+}-g^{+}$ is integrable and $h=0$ almost everywhere, and both its positive part $h^{+}$ and negative part $h^{-}$ vanish outside a set of measure zero. By **Proposition 8.2.4** (Absolute Continuity), $\int h^{+}\mathrm{d}\mu=\int_{\left\{h> 0\right\}}h^{+}\mathrm{d}\mu=0$ and $\int h^{-}\mathrm{d}\mu=0$, so $\int h\,\mathrm{d}\mu=0$, i.e. $\int f^{+}\mathrm{d}\mu=\int g^{+}\mathrm{d}\mu$; similarly $\int f^{-}\mathrm{d}\mu=\int g^{-}\mathrm{d}\mu$. Therefore $\int f\,\mathrm{d}\mu=\int g\,\mathrm{d}\mu$. $\blacksquare$
@@ -153,8 +149,7 @@ Since $f$ is integrable, $\int f^{+}\mathrm{d}\mu< \infty$, so $\mu\left(\left\{
 (3) $\int\left|f-g\right|\mathrm{d}\mu=0\Rightarrow\int_{E}f\,\mathrm{d}\mu=\int_{E}g\,\mathrm{d}\mu$ for all $E$: by Problem 2 (1)(3) (linearity and the triangle inequality),
 
 $$
-\begin{aligned}\left|\int_{E}f\,\mathrm{d}\mu-\int_{E}g\,\mathrm{d}\mu\right|&=\left|\int_{E}\left(f-g\right)\mathrm{d}\mu\right|\\&\le\int_{E}\left|f-g\right|\mathrm{d}\mu\\&\le\int_{X}\left|f-g\right|\mathrm{d}\mu\\&=0.
-\end{aligned}
+\left|\int_{E}f\,\mathrm{d}\mu-\int_{E}g\,\mathrm{d}\mu\right|=\left|\int_{E}\left(f-g\right)\mathrm{d}\mu\right|\le\int_{E}\left|f-g\right|\mathrm{d}\mu\le\int_{X}\left|f-g\right|\mathrm{d}\mu=0.
 $$
 
 (4) $\int_{E}f\,\mathrm{d}\mu=\int_{E}g\,\mathrm{d}\mu$ for all $E$ $\Rightarrow\int\left|f-g\right|\mathrm{d}\mu=0$: take $E:=\left\{x:f\left(x\right)\ge g\left(x\right)\right\}\in\mathcal F$. By the linearity in Problem 2 (1), $\int_{E}\left(f-g\right)\mathrm{d}\mu=\int_{E}f\,\mathrm{d}\mu-\int_{E}g\,\mathrm{d}\mu=0$; on $E$, $f-g\ge0$, so $\int_{E}\left|f-g\right|\mathrm{d}\mu=\int_{E}\left(f-g\right)\mathrm{d}\mu=0$. Similarly, on $E^{c}$, $\int_{E^{c}}\left(g-f\right)\mathrm{d}\mu=0$, and on $E^{c}$, $g-f\ge0$, so $\int_{E^{c}}\left|f-g\right|\mathrm{d}\mu=0$. Hence $\int\left|f-g\right|\mathrm{d}\mu=\int_{E}\left|f-g\right|\mathrm{d}\mu+\int_{E^{c}}\left|f-g\right|\mathrm{d}\mu=0$.
@@ -176,8 +171,7 @@ Prove Problems 14 and 16.
 We first prove that $\lambda$ is a measure. By **Definition 8.1.1** and **Definition 8.2.1**, $\lambda\left(\emptyset\right)=0$ and it is nonnegative. For pairwise disjoint measurable sets $\left\{E_{n}\right\}$, since $f\chi_{\bigsqcup E_{n}}=\sum_{n}f\chi_{E_{n}}$ and the partial sums $\sum_{n=1}^{N}f\chi_{E_{n}}\uparrow f\chi_{\bigsqcup E_{n}}$ pointwise, by **Theorem 8.2.2** (Monotone Convergence Theorem),
 
 $$
-\begin{aligned}\lambda\left(\bigsqcup_{n=1}^{\infty}E_{n}\right)&=\int f\chi_{\bigsqcup E_{n}}\mathrm{d}\mu\\&=\sum_{n=1}^{\infty}\int f\chi_{E_{n}}\mathrm{d}\mu\\&=\sum_{n=1}^{\infty}\lambda\left(E_{n}\right).
-\end{aligned}
+\lambda\left(\bigsqcup_{n=1}^{\infty}E_{n}\right)=\int f\chi_{\bigsqcup E_{n}}\mathrm{d}\mu=\sum_{n=1}^{\infty}\int f\chi_{E_{n}}\mathrm{d}\mu=\sum_{n=1}^{\infty}\lambda\left(E_{n}\right).
 $$
 
 Hence $\lambda$ is a measure on $\mathcal M$.
@@ -185,8 +179,7 @@ Hence $\lambda$ is a measure on $\mathcal M$.
 We next prove the change-of-variables formula. If $g=\sum_{j=1}^{m}a_{j}\chi_{E_{j}}$ is a simple function (with the $E_{j}$ pairwise disjoint), by **Definition 8.1.1** and finite linearity,
 
 $$
-\begin{aligned}\int g\,\mathrm{d}\lambda&=\sum_{j=1}^{m}a_{j}\lambda\left(E_{j}\right)\\&=\sum_{j=1}^{m}a_{j}\int_{E_{j}}f\,\mathrm{d}\mu\\&=\int\left(\sum_{j=1}^{m}a_{j}\chi_{E_{j}}f\right)\mathrm{d}\mu\\&=\int fg\,\mathrm{d}\mu.
-\end{aligned}
+\int g\,\mathrm{d}\lambda=\sum_{j=1}^{m}a_{j}\lambda\left(E_{j}\right)=\sum_{j=1}^{m}a_{j}\int_{E_{j}}f\,\mathrm{d}\mu=\int\left(\sum_{j=1}^{m}a_{j}\chi_{E_{j}}f\right)\mathrm{d}\mu=\int fg\,\mathrm{d}\mu.
 $$
 
 For a general $g\in L^{+}$, by **Remark 8.2.3** take simple functions $g_{k}\uparrow g$. Since $f\ge0$, $fg_{k}\uparrow fg$. By **Theorem 8.2.2** (under the measures $\lambda$ and $\mu$, respectively), $\int g_{k}\,d\lambda\uparrow\int g\,d\lambda$ and $\int fg_{k}\,\mathrm{d}\mu\uparrow\int fg\,\mathrm{d}\mu$. For each $k$ the two are equal (the simple case), so their limits are equal: $\int g\,d\lambda=\int fg\,\mathrm{d}\mu$. $\blacksquare$
@@ -210,8 +203,7 @@ Prove Problems 20, 23, 27 and 29.
 **23.** Given a bounded function $f:\left[a,b\right]\to\mathbb R$, set
 
 $$
-\begin{aligned}H\left(x\right)&=\limsup_{\delta\to0}\sup_{0< \left|y-x\right|\le\delta}f\left(y\right),\\h\left(x\right)&=\liminf_{\delta\to0}\inf_{0< \left|y-x\right|\le\delta}f\left(y\right).
-\end{aligned}
+H\left(x\right)=\limsup_{\delta\to0}\sup_{0< \left|y-x\right|\le\delta}f\left(y\right),;h\left(x\right)=\liminf_{\delta\to0}\inf_{0< \left|y-x\right|\le\delta}f\left(y\right).
 $$
 
 Prove Theorem 2.28b (that f is Riemann integrable if and only if the set of points of discontinuity of f on $\left[a,b\right]$ has measure 0) by proving the following lemma:
@@ -278,8 +270,7 @@ Taking $\delta'=\delta$, then for $0< \left|y-x\right|\le\delta$ we have $L-\var
 **b.** We use the notation from the proof of Theorem 2.28a: take a sequence of partitions $\left\{P_{k}\right\}$ such that the mesh $\max_{i}\left(t_{i}-t_{i-1}\right)\to0$ and $P_{k}\subset P_{k+1}$ (refining successively), and define
 
 $$
-\begin{aligned}G_{P_{k}}&=\sum_{i}M_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},\\g_{P_{k}}&=\sum_{i}m_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},
-\end{aligned}
+G_{P_{k}}=\sum_{i}M_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},;g_{P_{k}}=\sum_{i}m_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},
 $$
 
 and set $G=\lim_{k}G_{P_{k}}$, $g=\lim_{k}g_{P_{k}}$. Fix $x$ not equal to any partition point of any $P_{k}$ (the union of all partition points is at most countable and has measure 0). Suppose $x\in\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)$; then $G_{P_{k}}\left(x\right)=M_{i}^{\left(k\right)}=\sup_{\left[t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right]}f$. As $k\to\infty$ this small interval shrinks to $\left\{x\right\}$, and the supremum decreases to the limit of $\sup_{0< \left|y-x\right|\le\delta}f\left(y\right)$ as $\delta\to0$, i.e. $H\left(x\right)$. Hence $G\left(x\right)=H\left(x\right)$; similarly $g\left(x\right)=h\left(x\right)$. Therefore, after removing the countable set of partition points from $\left[a,b\right]$, $H=G$ and $h=g$ almost everywhere.
@@ -287,20 +278,17 @@ and set $G=\lim_{k}G_{P_{k}}$, $g=\lim_{k}g_{P_{k}}$. Fix $x$ not equal to any p
 Also, $G_{P_{k}}$ is bounded and $g_{P_{k}}\le f\le G_{P_{k}}$; by **Theorem 8.2.9** (Dominated Convergence Theorem, or monotone convergence),
 
 $$
-\begin{aligned}\int H\,\mathrm{d}m&=\int G\,\mathrm{d}m\\&=\lim_{k}\int G_{P_{k}}\mathrm{d}m\\&=\lim_{k}\overline S\left(P_{k}\right)\\&=\overline{\int}f,
-\end{aligned}
+\int H\,\mathrm{d}m=\int G\,\mathrm{d}m=\lim_{k}\int G_{P_{k}}\mathrm{d}m=\lim_{k}\overline S\left(P_{k}\right)=\overline{\int}f,
 $$
 
 $$
-\begin{aligned}\int h\,\mathrm{d}m&=\int g\,\mathrm{d}m\\&=\lim_{k}\int g_{P_{k}}\mathrm{d}m\\&=\lim_{k}\underline S\left(P_{k}\right)\\&=\underline{\int}f.
-\end{aligned}
+\int h\,\mathrm{d}m=\int g\,\mathrm{d}m=\lim_{k}\int g_{P_{k}}\mathrm{d}m=\lim_{k}\underline S\left(P_{k}\right)=\underline{\int}f.
 $$
 
 (In the proof of Theorem 2.28a, the $P_{k}$ are chosen so that $\overline S\left(P_{k}\right)\to\overline{\int}f$ and $\underline S\left(P_{k}\right)\to\underline{\int}f$.) In particular, $\int_{\left(a,b\right)}h\,\mathrm{d}m=L\left(f\right)$. Thus
 
 $$
-\begin{aligned}f\text{黎曼可积}\\&\iff\overline{\int}f=\underline{\int}f\\&\iff\int H\,\mathrm{d}m=\int h\,\mathrm{d}m\\&\iff\int\left(H-h\right)\mathrm{d}m=0.
-\end{aligned}
+f\text{黎曼可积}\iff\overline{\int}f=\underline{\int}f\iff\int H\,\mathrm{d}m=\int h\,\mathrm{d}m\iff\int\left(H-h\right)\mathrm{d}m=0.
 $$
 
 Since $H\ge h$, by Problem 3 (b), $\int\left(H-h\right)\mathrm{d}m=0\iff H=h$ almost everywhere. Combining with lemma a ($H=h\iff f$ continuous at $x$), we get that $f$ is Riemann integrable if and only if the set of points of discontinuity of $f$ has measure 0. In that case the Riemann integral is $\overline{\int}f=\int H\,\mathrm{d}m=\int f\,\mathrm{d}m$ (since $H=f$ almost everywhere), and Theorem 2.28b is proved. $\blacksquare$
@@ -330,15 +318,13 @@ $$
 Set $t=e^{-nx_{n}}$; then by the zero-point condition $at^{a}=bt^{b}$, i.e. $t^{a-b}=b/a$, so $t=\left(b/a\right)^{1/\left(a-b\right)}\in\left(0,1\right)$. Since $t< 1$ and $a< b$, the power function $\lambda\mapsto t^{\lambda}$ is decreasing, so $t^{a}> t^{b}$; the constant $c:=2\left(t^{a}-t^{b}\right)> 0$. Therefore
 
 $$
-\begin{aligned}\sum_{n=1}^{\infty}\int_{0}^{\infty}\left|f_{n}\right|\mathrm{d}x&=c\sum_{n=1}^{\infty}\frac{1}{n}&=\infty.
-\end{aligned}
+\sum_{n=1}^{\infty}\int_{0}^{\infty}\left|f_{n}\right|\mathrm{d}x=c\sum_{n=1}^{\infty}\frac{1}{n}=\infty.
 $$
 
 **b.** Compute term by term:
 
 $$
-\begin{aligned}\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x&=\int_{0}^{\infty}ae^{-nax}\mathrm{d}x-\int_{0}^{\infty}be^{-nbx}\mathrm{d}x\\&=\frac{1}{n}-\frac{1}{n}\\&=0,
-\end{aligned}
+\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x=\int_{0}^{\infty}ae^{-nax}\mathrm{d}x-\int_{0}^{\infty}be^{-nbx}\mathrm{d}x=\frac{1}{n}-\frac{1}{n}=0,
 $$
 
 hence $\sum_{n=1}^{\infty}\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x=0$.
@@ -346,8 +332,7 @@ hence $\sum_{n=1}^{\infty}\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x=0$.
 **c.** By the geometric series $\sum_{n=1}^{\infty}e^{-nax}=\frac{e^{-ax}}{1-e^{-ax}}=\frac{1}{e^{ax}-1}$,
 
 $$
-\begin{aligned}\sum_{n=1}^{\infty}f_{n}\left(x\right)&=a\sum_{n=1}^{\infty}e^{-nax}-b\sum_{n=1}^{\infty}e^{-nbx}\\&=\frac{a}{e^{ax}-1}-\frac{b}{e^{bx}-1}.
-\end{aligned}
+\sum_{n=1}^{\infty}f_{n}\left(x\right)=a\sum_{n=1}^{\infty}e^{-nax}-b\sum_{n=1}^{\infty}e^{-nbx}=\frac{a}{e^{ax}-1}-\frac{b}{e^{bx}-1}.
 $$
 
 As $x\to0^{+}$, $\frac{a}{e^{ax}-1}=\frac{1}{x}-\frac{a}{2}+O\left(x\right)$, so the difference $\frac{a}{e^{ax}-1}-\frac{b}{e^{bx}-1}\to\frac{b-a}{2}+O\left(x\right)$ is finite; as $x\to\infty$, there is exponential decay. Hence $\sum f_{n}\in L^{1}\left(\left[0,\infty\right),m\right)$.
@@ -355,8 +340,7 @@ As $x\to0^{+}$, $\frac{a}{e^{ax}-1}=\frac{1}{x}-\frac{a}{2}+O\left(x\right)$, so
 For $R> 0$, make the substitutions $u=ax$ and $u=bx$:
 
 $$
-\begin{aligned}\int_{0}^{R}\frac{a}{e^{ax}-1}\mathrm{d}x&=\int_{0}^{aR}\frac{\mathrm{d}u}{e^{u}-1},\\\int_{0}^{R}\frac{b}{e^{bx}-1}\mathrm{d}x&=\int_{0}^{bR}\frac{\mathrm{d}u}{e^{u}-1}.
-\end{aligned}
+\int_{0}^{R}\frac{a}{e^{ax}-1}\mathrm{d}x=\int_{0}^{aR}\frac{\mathrm{d}u}{e^{u}-1},;\int_{0}^{R}\frac{b}{e^{bx}-1}\mathrm{d}x=\int_{0}^{bR}\frac{\mathrm{d}u}{e^{u}-1}.
 $$
 
 Hence
@@ -368,8 +352,7 @@ $$
 Since $\frac{1}{e^{u}-1}-\frac{1}{u}=O\left(e^{-u}\right)$ is integrable at infinity, $\int_{aR}^{bR}\frac{\mathrm{d}u}{e^{u}-1}=\int_{aR}^{bR}\frac{\mathrm{d}u}{u}+o\left(1\right)$; letting $R\to\infty$ gives
 
 $$
-\begin{aligned}\int_{0}^{\infty}\sum_{n=1}^{\infty}f_{n}\left(x\right)\mathrm{d}x&=\lim_{R\to\infty}\int_{aR}^{bR}\frac{\mathrm{d}u}{u}\\&=\log\left(b/a\right).
-\end{aligned}
+\int_{0}^{\infty}\sum_{n=1}^{\infty}f_{n}\left(x\right)\mathrm{d}x=\lim_{R\to\infty}\int_{aR}^{bR}\frac{\mathrm{d}u}{u}=\log\left(b/a\right).
 $$
 
 Note that here $\sum\int\left|f_{n}\right|=\infty$ (by part a), so the condition $\sum\int\left|f_{n}\right|< \infty$ of **Lemma 8.2.13** (Termwise Integration of a Series) is not satisfied; hence termwise integration cannot be applied. In fact, $\int\sum f_{n}=\log\left(b/a\right)\ne\sum\int f_{n}=0$, which shows that this condition is essential. $\blacksquare$
@@ -395,8 +378,7 @@ i.e. $\int_{0}^{\infty}x^{n}e^{-x}\mathrm{d}x=n!$.
 **Case 2.** Let $G\left(s\right)=\int_{-\infty}^{\infty}e^{-sx^{2}}\mathrm{d}x=\sqrt{\pi/s}=\sqrt\pi\,s^{-1/2}$ ($s> 0$). For each $k\ge1$, on $s\in\left[s_{0}/2,s_{0}\right]$, $\left|\frac{\partial^{k}}{\partial s^{k}}e^{-sx^{2}}\right|=x^{2k}e^{-sx^{2}}\le x^{2k}e^{-\left(s_{0}/2\right)x^{2}}\in L^{1}\left(\mathbb R\right)$, so we may differentiate repeatedly:
 
 $$
-\begin{aligned}G^{\left(n\right)}\left(s\right)&=\int_{-\infty}^{\infty}\left(-x^{2}\right)^{n}e^{-sx^{2}}\mathrm{d}x\\&=\left(-1\right)^{n}\int_{-\infty}^{\infty}x^{2n}e^{-sx^{2}}\mathrm{d}x.
-\end{aligned}
+G^{\left(n\right)}\left(s\right)=\int_{-\infty}^{\infty}\left(-x^{2}\right)^{n}e^{-sx^{2}}\mathrm{d}x=\left(-1\right)^{n}\int_{-\infty}^{\infty}x^{2n}e^{-sx^{2}}\mathrm{d}x.
 $$
 
 Also,

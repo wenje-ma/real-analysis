@@ -5,9 +5,7 @@
 **定理 1.2.9** (德摩根定律)
 
 $$
-\begin{aligned}\left(A\cup B\right)^{c}&=A^{c}\cap B^{c},\\
-\left(A\cap B\right)^{c}&=A^{c}\cup B^{c}.
-\end{aligned}
+\left(A\cup B\right)^{c}=A^{c}\cap B^{c},;\left(A\cap B\right)^{c}=A^{c}\cup B^{c}.
 $$
 
 **定义 1.3.1** (上极限)
@@ -15,19 +13,13 @@ $$
 集列 $\left\{E_{n}\right\}$ 的上极限定义为
 
 $$
-\begin{aligned}&\;\;\overline{\lim}_{n\to\infty}E_{n}\\
-&=\left\{x:x\text{ 属于无穷多个 }E_{n}\right\}\\
-&=\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}E_{k}.
-\end{aligned}
+\overline{\lim}_{n\to\infty}E_{n}=\left\{x:x\text{ 属于无穷多个 }E_{n}\right\}=\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}E_{k}.
 $$
 
 **定义 1.3.3** (下极限)
 
 $$
-\begin{aligned}&\;\;\underline{\lim}_{n\to\infty}E_{n}\\
-&=\left\{x:x\text{ 仅不属于有限多个 }E_{n}\right\}\\
-&=\bigcup_{n=1}^{\infty}\bigcap_{k=n}^{\infty}E_{k}.
-\end{aligned}
+\underline{\lim}_{n\to\infty}E_{n}=\left\{x:x\text{ 仅不属于有限多个 }E_{n}\right\}=\bigcup_{n=1}^{\infty}\bigcap_{k=n}^{\infty}E_{k}.
 $$
 
 **定理 2.4.2** (原像运算的性质)
@@ -35,12 +27,7 @@ $$
 设 $f:A\to B$, 则
 
 $$
-\begin{aligned}f^{-1}\left(B_{1}\cup B_{2}\right)&=f^{-1}\left(B_{1}\right)\cup f^{-1}\left(B_{2}\right),\\
-f^{-1}\left(B_{1}\cap B_{2}\right)&=f^{-1}\left(B_{1}\right)\cap f^{-1}\left(B_{2}\right),\\
-f^{-1}\left(B^{c}\right)&=\left(f^{-1}\left(B\right)\right)^{c},\\
-f^{-1}\left(\bigcup_{\alpha\in I}B_{\alpha}\right)&=\bigcup_{\alpha\in I}f^{-1}\left(B_{\alpha}\right),\\
-f^{-1}\left(\bigcap_{\alpha\in I}B_{\alpha}\right)&=\bigcap_{\alpha\in I}f^{-1}\left(B_{\alpha}\right).
-\end{aligned}
+f^{-1}\left(B_{1}\cup B_{2}\right)=f^{-1}\left(B_{1}\right)\cup f^{-1}\left(B_{2}\right),;f^{-1}\left(B_{1}\cap B_{2}\right)=f^{-1}\left(B_{1}\right)\cap f^{-1}\left(B_{2}\right),;f^{-1}\left(B^{c}\right)=\left(f^{-1}\left(B\right)\right)^{c},;f^{-1}\left(\bigcup_{\alpha\in I}B_{\alpha}\right)=\bigcup_{\alpha\in I}f^{-1}\left(B_{\alpha}\right),;f^{-1}\left(\bigcap_{\alpha\in I}B_{\alpha}\right)=\bigcap_{\alpha\in I}f^{-1}\left(B_{\alpha}\right).
 $$
 
 **定理 3.2.1** (实数中开集的构造)
@@ -114,12 +101,7 @@ $$
 在 $\mathbb R$ 上, 以下集合族生成相同的博雷尔 $\sigma$-代数 $\mathcal B\left(\mathbb R\right)$: 所有开集 $\tau$、所有闭集 $\mathcal F$、所有开区间 $\left\{\left(a,b\right)\right\}$、所有闭区间 $\left\{\left[a,b\right]\right\}$、所有左开右闭区间 $\left\{\left(a,b\right]\right\}$, 即
 
 $$
-\begin{aligned}&\;\;\mathcal B\left(\mathbb R\right)\\
-&=\sigma\left(\tau\right)\\
-&=\sigma\left(\mathcal F\right)\\
-&=\sigma\left(\left\{\left(a,b\right)\right\}\right)\\
-&=\sigma\left(\left\{\left[a,b\right]\right\}\right)\\
-&=\sigma\left(\left\{\left(a,b\right]\right\}\right).\end{aligned}
+\mathcal B\left(\mathbb R\right)=\sigma\left(\tau\right)=\sigma\left(\mathcal F\right)=\sigma\left(\left\{\left(a,b\right)\right\}\right)=\sigma\left(\left\{\left[a,b\right]\right\}\right)=\sigma\left(\left\{\left(a,b\right]\right\}\right).
 $$
 
 **定义 4.4.1** (单调类)
@@ -163,8 +145,7 @@ $$
 若 $E\in\mathcal F\otimes\mathcal G$, 则对任意 $x\in X$、$y\in Y$, 其截面都可测:
 
 $$
-\begin{aligned}E_{x}&=\left\{y\in Y:\left(x,y\right)\in E\right\}\in\mathcal G,\\
-E^{y}&=\left\{x\in X:\left(x,y\right)\in E\right\}\in\mathcal F.\end{aligned}
+E_{x}=\left\{y\in Y:\left(x,y\right)\in E\right\}\in\mathcal G,;E^{y}=\left\{x\in X:\left(x,y\right)\in E\right\}\in\mathcal F.
 $$
 
 **定理 4.5.4** (博雷尔集的乘积)
@@ -360,9 +341,7 @@ $$
 设 $F:\mathbb R\to\mathbb R$ 是右连续单调递增函数, $\mu_{F}$ 是由 $F$ 生成的勒贝格-斯蒂尔杰斯测度, $\mathcal M^{*}$ 是 $\mu_{F}$-可测集的 $\sigma$-代数. 若 $E\in\mathcal M^{*}$, 则
 
 $$
-\begin{aligned}&\;\;\mu_{F}\left(E\right)\\
-&=\inf\left\{\mu_{F}\left(U\right):E\subset U,U\text{开}\right\}\\
-&=\sup\left\{\mu_{F}\left(K\right):K\subset E,K\text{紧}\right\}.\end{aligned}
+\mu_{F}\left(E\right)=\inf\left\{\mu_{F}\left(U\right):E\subset U,U\text{开}\right\}=\sup\left\{\mu_{F}\left(K\right):K\subset E,K\text{紧}\right\}.
 $$
 
 **定义 6.4.6** (勒贝格测度)
@@ -648,9 +627,7 @@ $$
 , 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 $\nu$-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 $\mu$-可积的; 且重积分相等:
 
 $$
-\begin{aligned}&\;\;\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)\\
-&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\
-&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).\end{aligned}
+\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).
 $$
 
 **定理 10.2.2** (托内利定理)
@@ -658,9 +635,7 @@ $$
 如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则
 
 $$
-\begin{aligned}&\;\;\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)\\
-&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\
-&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),\end{aligned}
+\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),
 $$
 
  其中所有积分值都在 $\left[0,\infty\right]$ 中.

@@ -63,7 +63,7 @@
 
 > **命题 6.4.2** ($\mathcal E$ 上的准测度)<br>设 $F:\mathbb R\to\mathbb R$ 为增的右连续函数. 对于不交区间 $\left(a_{i},b_{i}\right]$, $i=1,\dots,n$, 定义 $\mu_{0}\left(\bigcup_{i=1}^{n}\left(a_{i},b_{i}\right]\right):=\sum_{i=1}^{n}\left[F\left(b_{i}\right)-F\left(a_{i}\right)\right]$, 并令 $\mu_{0}\left(\varnothing\right)=0$. 则 $\mu_{0}$ 为 $\mathcal E$ 上的准测度.
 
-> **定理 6.4.5** (勒贝格-斯蒂尔杰斯测度的正则性)<br>设 $F:\mathbb R\to\mathbb R$ 是右连续单调递增函数, $\mu_{F}$ 是由 $F$ 生成的勒贝格-斯蒂尔杰斯测度, $\mathcal M^{*}$ 是 $\mu_{F}$-可测集的 $\sigma$-代数. 若 $E\in\mathcal M^{*}$, 则 $$\begin{aligned}\mu_{F}\left(E\right)&=\inf\left\{\mu_{F}\left(U\right):E\subset U,U\text{开}\right\}\\&=\sup\left\{\mu_{F}\left(K\right):K\subset E,K\text{紧}\right\}.\end{aligned}$$
+> **定理 6.4.5** (勒贝格-斯蒂尔杰斯测度的正则性)<br>设 $F:\mathbb R\to\mathbb R$ 是右连续单调递增函数, $\mu_{F}$ 是由 $F$ 生成的勒贝格-斯蒂尔杰斯测度, $\mathcal M^{*}$ 是 $\mu_{F}$-可测集的 $\sigma$-代数. 若 $E\in\mathcal M^{*}$, 则 $$\mu_{F}\left(E\right)=\inf\left\{\mu_{F}\left(U\right):E\subset U,U\text{开}\right\}=\sup\left\{\mu_{F}\left(K\right):K\subset E,K\text{紧}\right\}.$$
 
 > **定义 6.4.6** (勒贝格测度)<br>由 $F\left(x\right)=x$ 生成的测度称为**勒贝格测度**, 记作 $m$; 相应外测度定义的可测集称为**勒贝格可测集**, 全体记作 $\mathcal L$.
 
@@ -110,8 +110,7 @@ $$
 **步骤 3: $\nu=\mu^{*}$ 在 $\mathcal M$ 上.** 对任意 $A\in\mathcal M$, 由步骤 1 得 $\nu\left(A\right)\le\mu^{*}\left(A\right)$. 又因 $X\in\mathcal E$ (**定义 4.1.1**), $\nu\left(X\right)=\mu_{0}\left(X\right)=\mu^{*}\left(X\right)$. 由步骤 1 作用于 $A^{c}\in\mathcal M$ (因 $\mathcal M$ 是 $\sigma$-代数, **定理 6.3.3**(1)), 以及 $A\in\mathcal M$ 给出 $\mu^{*}\left(X\right)=\mu^{*}\left(A\right)+\mu^{*}\left(A^{c}\right)$ (卡拉西奥多里条件于 $T=X$),
 
 $$
-\begin{aligned}\nu\left(A\right)&=\nu\left(X\right)-\nu\left(A^{c}\right)\\&=\mu^{*}\left(X\right)-\nu\left(A^{c}\right)\\&\ge\mu^{*}\left(X\right)-\mu^{*}\left(A^{c}\right)\\&=\mu^{*}\left(A\right).
-\end{aligned}
+\nu\left(A\right)=\nu\left(X\right)-\nu\left(A^{c}\right)=\mu^{*}\left(X\right)-\nu\left(A^{c}\right)\ge\mu^{*}\left(X\right)-\mu^{*}\left(A^{c}\right)=\mu^{*}\left(A\right).
 $$
 
 故 $\nu\left(A\right)=\mu^{*}\left(A\right)$. 于是 $\mu_{0}\left(X\right)< \infty$ 时唯一性得证.
@@ -119,8 +118,7 @@ $$
 **$\sigma$-有限情形.** 设 $\mu_{0}$ 是 $\sigma$-有限的, 即存在两两不交的 $X_{k}\in\mathcal E$ 使 $X=\bigcup_{k=1}^{\infty}X_{k}$ 且 $\mu_{0}\left(X_{k}\right)< \infty$. 对任意 $A\in\mathcal M$, 由可数可加性与下连续性,
 
 $$
-\begin{aligned}\mu^{*}\left(A\right)&=\sum_{k}\mu^{*}\left(A\cap X_{k}\right),\\\nu\left(A\right)&=\sum_{k}\nu\left(A\cap X_{k}\right).
-\end{aligned}
+\mu^{*}\left(A\right)=\sum_{k}\mu^{*}\left(A\cap X_{k}\right),;\nu\left(A\right)=\sum_{k}\nu\left(A\cap X_{k}\right).
 $$
 
 对每个 $k$, 把有限测度 $\mu_{0}\left(\cdot\cap X_{k}\right)$ 与 $\nu\left(\cdot\cap X_{k}\right)$ 限制在 $X_{k}$ 上即化为有限情形, 得 $\nu\left(A\cap X_{k}\right)=\mu^{*}\left(A\cap X_{k}\right)$. 求和得 $\nu\left(A\right)=\mu^{*}\left(A\right)$. 故 $\mu^{*}|_{\mathcal M}$ 是 $\mu_{0}$ 到 $\mathcal M$ 的唯一延拓. $\blacksquare$
@@ -152,15 +150,13 @@ $$\mu^{*}\left(E\cap\bigcup_{j=1}^{\infty}A_{j}\right)\ge\sum_{j=1}^{\infty}\mu^
 **(3) 习题 24.** (a) 由 $A\cap E=B\cap E$ 得 $\left(A\setminus B\right)\cap E=\varnothing$, 且 $A\setminus B\in\mathcal M$. 因 $A\setminus B$ 可测, 用卡拉西奥多里条件于 $T=X$:
 
 $$
-\begin{aligned}\mu^{*}\left(X\right)&=\mu^{*}\left(X\cap\left(A\setminus B\right)\right)+\mu^{*}\left(X\cap\left(A\setminus B\right)^{c}\right)\\&=\mu\left(A\setminus B\right)+\mu^{*}\left(X\setminus\left(A\setminus B\right)\right).
-\end{aligned}
+\mu^{*}\left(X\right)=\mu^{*}\left(X\cap\left(A\setminus B\right)\right)+\mu^{*}\left(X\cap\left(A\setminus B\right)^{c}\right)=\mu\left(A\setminus B\right)+\mu^{*}\left(X\setminus\left(A\setminus B\right)\right).
 $$
 
 由 $\left(A\setminus B\right)\cap E=\varnothing$ 得 $E\subset X\setminus\left(A\setminus B\right)$, 据外测度单调性 (**定义 6.1.1**(2)) 有 $\mu^{*}\left(X\setminus\left(A\setminus B\right)\right)\ge\mu^{*}\left(E\right)=\mu^{*}\left(X\right)$. 代入上式得 $\mu\left(A\setminus B\right)\le0$, 故 $\mu\left(A\setminus B\right)=0$. 同理 $\mu\left(B\setminus A\right)=0$. 于是由**命题 5.2.1** (有限可加性),
 
 $$
-\begin{aligned}\mu\left(A\right)&=\mu\left(A\cap B\right)+\mu\left(A\setminus B\right)\\&=\mu\left(A\cap B\right)\\&=\mu\left(B\right).
-\end{aligned}
+\mu\left(A\right)=\mu\left(A\cap B\right)+\mu\left(A\setminus B\right)=\mu\left(A\cap B\right)=\mu\left(B\right).
 $$
 
 $\blacksquare$
@@ -172,8 +168,7 @@ $\blacksquare$
 最后证 $\nu$ 是 $\mathcal M_{E}$ 上的测度 (**定义 5.1.2**). 非负性由 $\mu\ge0$; $\nu\left(\varnothing\right)=\mu\left(\varnothing\right)=0$. 设 $\left\{A_{n}\cap E\right\}$ 两两不交. 则对 $n\ne m$, $\left(A_{n}\cap A_{m}\right)\cap E=\left(A_{n}\cap E\right)\cap\left(A_{m}\cap E\right)=\varnothing$, 由 (a) 得 $\mu\left(A_{n}\cap A_{m}\right)=0$. 于是由**命题 5.2.1** 与**命题 5.2.4** (下连续性),
 
 $$
-\begin{aligned}\nu\left(\bigcup_{n}\left(A_{n}\cap E\right)\right)&=\nu\left(\left(\bigcup_{n}A_{n}\right)\cap E\right)\\&=\mu\left(\bigcup_{n}A_{n}\right)\\&=\sum_{n}\mu\left(A_{n}\right)\\&=\sum_{n}\nu\left(A_{n}\cap E\right).
-\end{aligned}
+\nu\left(\bigcup_{n}\left(A_{n}\cap E\right)\right)=\nu\left(\left(\bigcup_{n}A_{n}\right)\cap E\right)=\mu\left(\bigcup_{n}A_{n}\right)=\sum_{n}\mu\left(A_{n}\right)=\sum_{n}\nu\left(A_{n}\cap E\right).
 $$
 
 故 $\nu$ 是测度. $\blacksquare$
@@ -191,15 +186,13 @@ $$
 再证 $\mathcal E$ 对补封闭. 单个 h 区间的补:
 
 $$
-\begin{aligned}\varnothing^{c}=\mathbb R&=\left(-\infty,\infty\right),\\\left(a,\infty\right)^{c}=\left(-\infty,a\right],\\\left(a,b\right]^{c}=\left(-\infty,a\right]\cup\left(b,\infty\right),
-\end{aligned}
+\varnothing^{c}=\mathbb R=\left(-\infty,\infty\right),;\left(a,\infty\right)^{c}=\left(-\infty,a\right],;\left(a,b\right]^{c}=\left(-\infty,a\right]\cup\left(b,\infty\right),
 $$
 
 其中 $\left(-\infty,a\right]=\left(-\infty,a\right]$, $\left(b,\infty\right)$ 均为 h 区间, 且两两不交. 故每个 h 区间的补仍属于 $\mathcal E$. 对 $\mathcal E$ 中元素 $A=\bigcup_{i=1}^{n}I_{i}$ ($I_{i}$ 为不交 h 区间), 由德摩根律
 
 $$
-\begin{aligned}A^{c}&=\left(\bigcup_{i=1}^{n}I_{i}\right)^{c}&=\bigcap_{i=1}^{n}I_{i}^{c}\in\mathcal E,
-\end{aligned}
+A^{c}=\left(\bigcup_{i=1}^{n}I_{i}\right)^{c}=\bigcap_{i=1}^{n}I_{i}^{c}\in\mathcal E,
 $$
 
 因每个 $I_{i}^{c}\in\mathcal E$ 且 $\mathcal E$ 对有限交封闭.
@@ -239,15 +232,13 @@ $$
 再证可测性在平移下保持. 若 $E\in\mathcal L$ (即 $E$ 是 $m^{*}$-可测的, **定义 6.3.1**), 则对任意 $T\subset\mathbb R$,
 
 $$
-\begin{aligned}m^{*}\left(T\right)&=m^{*}\left(T-x\right)&=m^{*}\left(\left(T-x\right)\cap E\right)+m^{*}\left(\left(T-x\right)\cap E^{c}\right)\\&=m^{*}\left(T\cap\left(E+x\right)\right)+m^{*}\left(T\cap\left(E+x\right)^{c}\right),
-\end{aligned}
+m^{*}\left(T\right)=m^{*}\left(T-x\right)=m^{*}\left(\left(T-x\right)\cap E\right)+m^{*}\left(\left(T-x\right)\cap E^{c}\right)=m^{*}\left(T\cap\left(E+x\right)\right)+m^{*}\left(T\cap\left(E+x\right)^{c}\right),
 $$
 
 其中第二步用 $E$ 的可测性于 $T-x$. 故 $E+x$ 可测. 于是对可测集 $E$,
 
 $$
-\begin{aligned}m\left(E+x\right)&=m^{*}\left(E+x\right)\\&=m^{*}\left(E\right)\\&=m\left(E\right).
-\end{aligned}
+m\left(E+x\right)=m^{*}\left(E+x\right)=m^{*}\left(E\right)=m\left(E\right).
 $$
 
 (1) 得证.
@@ -289,8 +280,7 @@ $$
 **5. 完美集.** 闭集已由 (1) 证得. 证 $C$ 无孤立点: 设 $x\in C$, 对任意 $\varepsilon> 0$, 由**定理 6.5.2** 写 $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$, $a_{k}\in\left\{0,2\right\}$. 取 $n$ 使 $\frac{2}{3^{n+1}}< \varepsilon$, 令 $x_{n}$ 为三进制展开中把 $x$ 的第 $n+1$ 位 $a_{n+1}$ 换成 $2-a_{n+1}$、其余位不变所得的点. 则 $x_{n}\in C$ (三进制不含 $1$), $x_{n}\ne x$, 且
 
 $$
-\begin{aligned}\left|x_{n}-x\right|&=\left|\frac{2-a_{n+1}}{3^{n+1}}-\frac{a_{n+1}}{3^{n+1}}\right|\\&=\frac{2}{3^{n+1}}< \varepsilon.
-\end{aligned}
+\left|x_{n}-x\right|=\left|\frac{2-a_{n+1}}{3^{n+1}}-\frac{a_{n+1}}{3^{n+1}}\right|=\frac{2}{3^{n+1}}< \varepsilon.
 $$
 
 故 $x$ 的 $\varepsilon$ 邻域内含有 $C$ 中异于 $x$ 的点, $x$ 不是孤立点. 所以 $C$ 是完美集. $\blacksquare$
@@ -308,8 +298,7 @@ $$
 **30.** 反证. 假设存在 $\alpha< 1$ 使对每个开区间 $I$, 均有 $m\left(E\cap I\right)\le\alpha m\left(I\right)$. 则对任意开集 $U$, 把 $U$ 表为可数个互不相交开区间的并 $U=\bigcup_{k}I_{k}$, 由 $m$ 的可数可加性,
 
 $$
-\begin{aligned}m\left(E\cap U\right)&=\sum_{k}m\left(E\cap I_{k}\right)\\&\le\alpha\sum_{k}m\left(I_{k}\right)\\&=\alpha m\left(U\right).
-\end{aligned}
+m\left(E\cap U\right)=\sum_{k}m\left(E\cap I_{k}\right)\le\alpha\sum_{k}m\left(I_{k}\right)=\alpha m\left(U\right).
 $$
 
 由勒贝格-斯蒂尔杰斯测度的外正则性 (**定理 6.4.5**), $m\left(E\right)=\inf\left\{m\left(U\right):E\subset U\text{开}\right\}$. 取一列开集 $U_{n}\supset E$ 使 $m\left(U_{n}\right)\to m\left(E\right)$. 因 $E\subset U_{n}$, $E=E\cap U_{n}$, 故
@@ -325,15 +314,13 @@ $$
 先证下界. 对任意子区间 $I\subset\left[0,1\right]$, 存在 $n$ 使 $J_{n}\subset I_{n}\subset I$, 故
 
 $$
-\begin{aligned}m\left(A\cap I\right)\\&\ge m\left(A\cap J_{n}\right)&=m\left(C_{n}\right)\\&=c\,m\left(J_{n}\right)> 0.
-\end{aligned}
+m\left(A\cap I\right)\ge m\left(A\cap J_{n}\right)=m\left(C_{n}\right)=c\,m\left(J_{n}\right)> 0.
 $$
 
 再证上界. 因 $C_{n}\subset J_{n}$ 且 $\left\{J_{n}\right\}$ 两两不交,
 
 $$
-\begin{aligned}m\left(A\cap I\right)&=m\left(\bigcup_{n}C_{n}\cap I\right)\\&=\sum_{n}m\left(C_{n}\cap I\right)\\&=\sum_{J_{n}\subset I}m\left(C_{n}\right)\\&=c\sum_{J_{n}\subset I}m\left(J_{n}\right)\\&=c\,m\left(\bigcup_{J_{n}\subset I}J_{n}\right)\\&\le c\,m\left(I\right)\\&< m\left(I\right),
-\end{aligned}
+m\left(A\cap I\right)=m\left(\bigcup_{n}C_{n}\cap I\right)=\sum_{n}m\left(C_{n}\cap I\right)=\sum_{J_{n}\subset I}m\left(C_{n}\right)=c\sum_{J_{n}\subset I}m\left(J_{n}\right)=c\,m\left(\bigcup_{J_{n}\subset I}J_{n}\right)\le c\,m\left(I\right)< m\left(I\right),
 $$
 
 其中仅当 $J_{n}\cap I$ 有正测度 (即 $J_{n}\subset I$, 至多相差端点) 时 $m\left(C_{n}\cap I\right)=m\left(C_{n}\right)$ 非零. 故对 $\left[0,1\right]$ 的每个子区间 $I$, 有 $0< m\left(A\cap I\right)< m\left(I\right)$. $\blacksquare$

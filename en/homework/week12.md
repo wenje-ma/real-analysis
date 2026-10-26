@@ -45,15 +45,13 @@ so the length of the inscribed polygon is exactly $\sum_{j=1}^{n}\left|F\left(t_
 **(b)** If $f\in AC\left(\left[a,b\right]\right)$ (**Definition 15.0.11**), then both components of $F\left(t\right)=t+if\left(t\right)$, namely $t$ (the identity function) and $f$, are absolutely continuous, so $F$ is absolutely continuous. By **Theorem 15.0.14**, for almost every $t$,
 
 $$
-\begin{aligned}F'\left(t\right)&=\frac{\mathrm{d}}{\mathrm{d}t}\left(t+if\left(t\right)\right)\\&=1+if'\left(t\right),
-\end{aligned}
+F'\left(t\right)=\frac{\mathrm{d}}{\mathrm{d}t}\left(t+if\left(t\right)\right)=1+if'\left(t\right),
 $$
 
 and hence $\left|F'\left(t\right)\right|=\left(1+\left(f'\left(t\right)\right)^{2}\right)^{1/2}$. By the **Basic Knowledge** (Total Variation of an Absolutely Continuous Function),
 
 $$
-\begin{aligned}L&=V_{a}^{b}\left(F\right)\\&=\int_{a}^{b}\left|F'\left(t\right)\right|\mathrm{d}t\\&=\int_{a}^{b}\left[1+\left(f'\left(t\right)\right)^{2}\right]^{1/2}\mathrm{d}t.
-\end{aligned}
+L=V_{a}^{b}\left(F\right)=\int_{a}^{b}\left|F'\left(t\right)\right|\mathrm{d}t=\int_{a}^{b}\left[1+\left(f'\left(t\right)\right)^{2}\right]^{1/2}\mathrm{d}t.
 $$
 
 $\blacksquare$
@@ -63,8 +61,7 @@ $\blacksquare$
 Let $\mu_{F_{j}}$ be the Stieltjes measure associated with $F_{j}$, and $\mu_{F}$ the Stieltjes measure associated with $F=\sum_{j}F_{j}$ (**Basic Knowledge**). Since $\sum_{j}F_{j}$ converges and each term is nonnegative, by countable additivity of the Stieltjes measures, $\mu_{F}=\sum_{j}\mu_{F_{j}}$. By **Corollary 13.4.5** and **Theorem 13.4.4** (applied to the regular measures $\mu_{F_{j}}$; the derivative of a monotone function is the Radon–Nikodym derivative of its Stieltjes measure), for $m$-almost every $x$, $F_{j}'\left(x\right)=\frac{\mathrm{d}\mu_{F_{j}}}{\mathrm{d}m}\left(x\right)$; similarly, $F'\left(x\right)=\frac{\mathrm{d}\mu_{F}}{\mathrm{d}m}\left(x\right)$. Hence, by **Property 11.5.6** (linearity, adding pairwise one at a time),
 
 $$
-\begin{aligned}\frac{\mathrm{d}\mu_{F}}{\mathrm{d}m}\left(x\right)&=\frac{\mathrm{d}\left(\sum_{j}\mu_{F_{j}}\right)}{\mathrm{d}m}\left(x\right)\\&=\sum_{j}\frac{\mathrm{d}\mu_{F_{j}}}{\mathrm{d}m}\left(x\right)\\&=\sum_{j}F_{j}'\left(x\right),
-\end{aligned}
+\frac{\mathrm{d}\mu_{F}}{\mathrm{d}m}\left(x\right)=\frac{\mathrm{d}\left(\sum_{j}\mu_{F_{j}}\right)}{\mathrm{d}m}\left(x\right)=\sum_{j}\frac{\mathrm{d}\mu_{F_{j}}}{\mathrm{d}m}\left(x\right)=\sum_{j}F_{j}'\left(x\right),
 $$
 
 holds for $m$-almost every $x$. Thus $F'\left(x\right)=\sum_{j}F_{j}'\left(x\right)$ almost everywhere. $\blacksquare$
@@ -120,8 +117,7 @@ i.e. $S\left(s,u\right)\le S\left(u,t\right)$. Taking $u=\lambda s+\left(1-\lamb
 **(d)** Denote $t_{0}=\int g\,\mathrm{d}\mu$. Since $g$ takes values in $\left(a,b\right)$ and $g\in L^{1}\left(\mu\right)$, we have $t_{0}\in\left(a,b\right)$. By (c), there exists $\beta\in\mathbb R$ such that $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$ for all $t\in\left(a,b\right)$. Substituting $t=g\left(x\right)$ gives $F\left(g\left(x\right)\right)\ge F\left(t_{0}\right)+\beta\left(g\left(x\right)-t_{0}\right)$ for all $x\in X$. Integrating with respect to $\mu$ (the right-hand side $\in L^{1}$, so the integral is well-defined):
 
 $$
-\begin{aligned}\int F\circ g\,\mathrm{d}\mu\\&\ge\int\left[F\left(t_{0}\right)+\beta\left(g-t_{0}\right)\right]\mathrm{d}\mu&=F\left(t_{0}\right)+\beta\left(\int g\,\mathrm{d}\mu-t_{0}\right)\\&=F\left(t_{0}\right)\\&=F\left(\int g\,\mathrm{d}\mu\right).
-\end{aligned}
+\int F\circ g\,\mathrm{d}\mu\ge\int\left[F\left(t_{0}\right)+\beta\left(g-t_{0}\right)\right]\mathrm{d}\mu=F\left(t_{0}\right)+\beta\left(\int g\,\mathrm{d}\mu-t_{0}\right)=F\left(t_{0}\right)=F\left(\int g\,\mathrm{d}\mu\right).
 $$
 
 Hence

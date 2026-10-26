@@ -47,8 +47,7 @@
 设 $f=\sum_{i=1}^{n}c_{i}\chi_{A_{i}}$, 其中 $c_{i}\ge0$, $A_{i}\in\mathcal F$ 两两不交且 $\bigcup_{i}A_{i}=X$. 对 $E\in\mathcal F$, 由**定义 8.1.1**,
 
 $$
-\begin{aligned}\int_{E}f\,\mathrm{d}\mu&=\int f\chi_{E}\,\mathrm{d}\mu\\&=\sum_{i=1}^{n}c_{i}\mu\left(E\cap A_{i}\right).
-\end{aligned}
+\int_{E}f\,\mathrm{d}\mu=\int f\chi_{E}\,\mathrm{d}\mu=\sum_{i=1}^{n}c_{i}\mu\left(E\cap A_{i}\right).
 $$
 
 记 $\lambda\left(E\right):=\int_{E}f\,\mathrm{d}\mu$. 验证 $\lambda$ 是测度:
@@ -58,15 +57,13 @@ $$
 - $\sigma$-可加性: 设 $E=\bigsqcup_{j=1}^{\infty}E_{j}$ (两两不交). 由 $\mu$ 的 $\sigma$-可加性 (**定义 5.1.2**) 与**命题 8.1.2** (线性性),
 
 $$
-\begin{aligned}\lambda\left(E\right)&=\sum_{i=1}^{n}c_{i}\mu\left(E\cap A_{i}\right)\\&=\sum_{i=1}^{n}c_{i}\sum_{j=1}^{\infty}\mu\left(E_{j}\cap A_{i}\right)\\&=\sum_{j=1}^{\infty}\sum_{i=1}^{n}c_{i}\mu\left(E_{j}\cap A_{i}\right)\\&=\sum_{j=1}^{\infty}\lambda\left(E_{j}\right).
-\end{aligned}
+\lambda\left(E\right)=\sum_{i=1}^{n}c_{i}\mu\left(E\cap A_{i}\right)=\sum_{i=1}^{n}c_{i}\sum_{j=1}^{\infty}\mu\left(E_{j}\cap A_{i}\right)=\sum_{j=1}^{\infty}\sum_{i=1}^{n}c_{i}\mu\left(E_{j}\cap A_{i}\right)=\sum_{j=1}^{\infty}\lambda\left(E_{j}\right).
 $$
 
 故 $\lambda$ 是 $\mathcal F$ 上的测度. 最后, 若 $\mu\left(A\right)=0$, 则
 
 $$
-\begin{aligned}\lambda\left(A\right)&=\sum_{i=1}^{n}c_{i}\mu\left(A\cap A_{i}\right)\\&\le\sum_{i=1}^{n}c_{i}\mu\left(A\right)\\&=0,
-\end{aligned}
+\lambda\left(A\right)=\sum_{i=1}^{n}c_{i}\mu\left(A\cap A_{i}\right)\le\sum_{i=1}^{n}c_{i}\mu\left(A\right)=0,
 $$
 
 故 $\lambda\left(A\right)=0$. $\blacksquare$
@@ -115,8 +112,7 @@ $$
 3. $\left|f\right|=f^{+}+f^{-}$, 由非负线性性 $\int\left|f\right|\mathrm{d}\mu=\int f^{+}\mathrm{d}\mu+\int f^{-}\mathrm{d}\mu$. 再由 $\int f\,\mathrm{d}\mu=\int f^{+}\mathrm{d}\mu-\int f^{-}\mathrm{d}\mu$, 有
 
 $$
-\begin{aligned}\left|\int f\,\mathrm{d}\mu\right|&=\left|\int f^{+}\mathrm{d}\mu-\int f^{-}\mathrm{d}\mu\right|\\&\le\int f^{+}\mathrm{d}\mu+\int f^{-}\mathrm{d}\mu\\&=\int\left|f\right|\mathrm{d}\mu.
-\end{aligned}
+\left|\int f\,\mathrm{d}\mu\right|=\left|\int f^{+}\mathrm{d}\mu-\int f^{-}\mathrm{d}\mu\right|\le\int f^{+}\mathrm{d}\mu+\int f^{-}\mathrm{d}\mu=\int\left|f\right|\mathrm{d}\mu.
 $$
 
 4. $f=g$ 几乎处处, 则 $f^{+}=g^{+}$, $f^{-}=g^{-}$ 几乎处处. 于是 $h:=f^{+}-g^{+}$ 可积且 $h=0$ 几乎处处, 其正部 $h^{+}$ 与负部 $h^{-}$ 均在零测集外为零. 由**命题 8.2.4** (绝对连续性), $\int h^{+}\mathrm{d}\mu=\int_{\left\{h> 0\right\}}h^{+}\mathrm{d}\mu=0$, $\int h^{-}\mathrm{d}\mu=0$, 故 $\int h\,\mathrm{d}\mu=0$, 即 $\int f^{+}\mathrm{d}\mu=\int g^{+}\mathrm{d}\mu$; 同理 $\int f^{-}\mathrm{d}\mu=\int g^{-}\mathrm{d}\mu$. 因此 $\int f\,\mathrm{d}\mu=\int g\,\mathrm{d}\mu$. $\blacksquare$
@@ -153,8 +149,7 @@ $$
 (3) $\int\left|f-g\right|\mathrm{d}\mu=0\Rightarrow\int_{E}f\,\mathrm{d}\mu=\int_{E}g\,\mathrm{d}\mu$ 对所有 $E$: 由习题二(1)(3) (线性与三角不等式),
 
 $$
-\begin{aligned}\left|\int_{E}f\,\mathrm{d}\mu-\int_{E}g\,\mathrm{d}\mu\right|&=\left|\int_{E}\left(f-g\right)\mathrm{d}\mu\right|\\&\le\int_{E}\left|f-g\right|\mathrm{d}\mu\\&\le\int_{X}\left|f-g\right|\mathrm{d}\mu\\&=0.
-\end{aligned}
+\left|\int_{E}f\,\mathrm{d}\mu-\int_{E}g\,\mathrm{d}\mu\right|=\left|\int_{E}\left(f-g\right)\mathrm{d}\mu\right|\le\int_{E}\left|f-g\right|\mathrm{d}\mu\le\int_{X}\left|f-g\right|\mathrm{d}\mu=0.
 $$
 
 (4) $\int_{E}f\,\mathrm{d}\mu=\int_{E}g\,\mathrm{d}\mu$ 对所有 $E$ $\Rightarrow\int\left|f-g\right|\mathrm{d}\mu=0$: 取 $E:=\left\{x:f\left(x\right)\ge g\left(x\right)\right\}\in\mathcal F$. 由习题二(1) 线性性, $\int_{E}\left(f-g\right)\mathrm{d}\mu=\int_{E}f\,\mathrm{d}\mu-\int_{E}g\,\mathrm{d}\mu=0$; 在 $E$ 上 $f-g\ge0$, 故 $\int_{E}\left|f-g\right|\mathrm{d}\mu=\int_{E}\left(f-g\right)\mathrm{d}\mu=0$. 同理, 对 $E^{c}$, $\int_{E^{c}}\left(g-f\right)\mathrm{d}\mu=0$, 在 $E^{c}$ 上 $g-f\ge0$, 故 $\int_{E^{c}}\left|f-g\right|\mathrm{d}\mu=0$. 于是 $\int\left|f-g\right|\mathrm{d}\mu=\int_{E}\left|f-g\right|\mathrm{d}\mu+\int_{E^{c}}\left|f-g\right|\mathrm{d}\mu=0$.
@@ -176,8 +171,7 @@ $$
 先证 $\lambda$ 是测度. 由**定义 8.1.1** 与**定义 8.2.1**, $\lambda\left(\emptyset\right)=0$ 且非负. 对两两不交的可测集 $\left\{E_{n}\right\}$, 因 $f\chi_{\bigsqcup E_{n}}=\sum_{n}f\chi_{E_{n}}$ 且部分和 $\sum_{n=1}^{N}f\chi_{E_{n}}\uparrow f\chi_{\bigsqcup E_{n}}$ 点点, 由**定理 8.2.2** (单调收敛定理),
 
 $$
-\begin{aligned}\lambda\left(\bigsqcup_{n=1}^{\infty}E_{n}\right)&=\int f\chi_{\bigsqcup E_{n}}\mathrm{d}\mu\\&=\sum_{n=1}^{\infty}\int f\chi_{E_{n}}\mathrm{d}\mu\\&=\sum_{n=1}^{\infty}\lambda\left(E_{n}\right).
-\end{aligned}
+\lambda\left(\bigsqcup_{n=1}^{\infty}E_{n}\right)=\int f\chi_{\bigsqcup E_{n}}\mathrm{d}\mu=\sum_{n=1}^{\infty}\int f\chi_{E_{n}}\mathrm{d}\mu=\sum_{n=1}^{\infty}\lambda\left(E_{n}\right).
 $$
 
 故 $\lambda$ 是 $\mathcal M$ 上的测度.
@@ -185,8 +179,7 @@ $$
 再证换元公式. 若 $g=\sum_{j=1}^{m}a_{j}\chi_{E_{j}}$ 是简单函数 (设 $E_{j}$ 两两不交), 由**定义 8.1.1** 与有限线性性,
 
 $$
-\begin{aligned}\int g\,\mathrm{d}\lambda&=\sum_{j=1}^{m}a_{j}\lambda\left(E_{j}\right)\\&=\sum_{j=1}^{m}a_{j}\int_{E_{j}}f\,\mathrm{d}\mu\\&=\int\left(\sum_{j=1}^{m}a_{j}\chi_{E_{j}}f\right)\mathrm{d}\mu\\&=\int fg\,\mathrm{d}\mu.
-\end{aligned}
+\int g\,\mathrm{d}\lambda=\sum_{j=1}^{m}a_{j}\lambda\left(E_{j}\right)=\sum_{j=1}^{m}a_{j}\int_{E_{j}}f\,\mathrm{d}\mu=\int\left(\sum_{j=1}^{m}a_{j}\chi_{E_{j}}f\right)\mathrm{d}\mu=\int fg\,\mathrm{d}\mu.
 $$
 
 对一般 $g\in L^{+}$, 由**注 8.2.3** 取简单函数 $g_{k}\uparrow g$. 因 $f\ge0$, $fg_{k}\uparrow fg$. 由**定理 8.2.2** (分别在测度 $\lambda$ 与 $\mu$ 下), $\int g_{k}\,d\lambda\uparrow\int g\,d\lambda$ 且 $\int fg_{k}\,\mathrm{d}\mu\uparrow\int fg\,\mathrm{d}\mu$. 对每个 $k$ 两式相等 (简单情形), 故极限相等: $\int g\,d\lambda=\int fg\,\mathrm{d}\mu$. $\blacksquare$
@@ -210,8 +203,7 @@ $$
 **23.** 给定有界函数 $f:\left[a,b\right]\to\mathbb R$, 令
 
 $$
-\begin{aligned}H\left(x\right)&=\limsup_{\delta\to0}\sup_{0< \left|y-x\right|\le\delta}f\left(y\right),\\h\left(x\right)&=\liminf_{\delta\to0}\inf_{0< \left|y-x\right|\le\delta}f\left(y\right).
-\end{aligned}
+H\left(x\right)=\limsup_{\delta\to0}\sup_{0< \left|y-x\right|\le\delta}f\left(y\right),;h\left(x\right)=\liminf_{\delta\to0}\inf_{0< \left|y-x\right|\le\delta}f\left(y\right).
 $$
 
 通过证明下面的引理来证明定理 2.28b (f 黎曼可积当且仅当 f 在 $\left[a,b\right]$ 上的不连续点集测度为 0):
@@ -278,8 +270,7 @@ $$
 **b.** 沿用定理 2.28a 证明中的记号: 取分割列 $\left\{P_{k}\right\}$, 使网格 $\max_{i}\left(t_{i}-t_{i-1}\right)\to0$ 且 $P_{k}\subset P_{k+1}$ (逐次加密), 定义
 
 $$
-\begin{aligned}G_{P_{k}}&=\sum_{i}M_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},\\g_{P_{k}}&=\sum_{i}m_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},
-\end{aligned}
+G_{P_{k}}=\sum_{i}M_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},;g_{P_{k}}=\sum_{i}m_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},
 $$
 
 并令 $G=\lim_{k}G_{P_{k}}$, $g=\lim_{k}g_{P_{k}}$. 固定 $x$ 不属于任何 $P_{k}$ 的分点 (所有分割的分点之并至多可数, 测度为 0). 设 $x\in\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)$, 则 $G_{P_{k}}\left(x\right)=M_{i}^{\left(k\right)}=\sup_{\left[t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right]}f$. 随 $k\to\infty$ 该小区间收缩到 $\left\{x\right\}$, 上确界递减趋于 $\sup_{0< \left|y-x\right|\le\delta}f\left(y\right)$ 随 $\delta\to0$ 的极限, 即 $H\left(x\right)$. 故 $G\left(x\right)=H\left(x\right)$; 同理 $g\left(x\right)=h\left(x\right)$. 因此在 $\left[a,b\right]$ 去掉可数分点集后 $H=G$, $h=g$ 几乎处处.
@@ -287,20 +278,17 @@ $$
 又 $G_{P_{k}}$ 有界且 $g_{P_{k}}\le f\le G_{P_{k}}$, 由**定理 8.2.9** (控制收敛定理, 或单调收敛),
 
 $$
-\begin{aligned}\int H\,\mathrm{d}m&=\int G\,\mathrm{d}m\\&=\lim_{k}\int G_{P_{k}}\mathrm{d}m\\&=\lim_{k}\overline S\left(P_{k}\right)\\&=\overline{\int}f,
-\end{aligned}
+\int H\,\mathrm{d}m=\int G\,\mathrm{d}m=\lim_{k}\int G_{P_{k}}\mathrm{d}m=\lim_{k}\overline S\left(P_{k}\right)=\overline{\int}f,
 $$
 
 $$
-\begin{aligned}\int h\,\mathrm{d}m&=\int g\,\mathrm{d}m\\&=\lim_{k}\int g_{P_{k}}\mathrm{d}m\\&=\lim_{k}\underline S\left(P_{k}\right)\\&=\underline{\int}f.
-\end{aligned}
+\int h\,\mathrm{d}m=\int g\,\mathrm{d}m=\lim_{k}\int g_{P_{k}}\mathrm{d}m=\lim_{k}\underline S\left(P_{k}\right)=\underline{\int}f.
 $$
 
 (在定理 2.28a 的证明中取 $P_{k}$ 已保证 $\overline S\left(P_{k}\right)\to\overline{\int}f$, $\underline S\left(P_{k}\right)\to\underline{\int}f$.) 特别地 $\int_{\left(a,b\right)}h\,\mathrm{d}m=L\left(f\right)$. 于是
 
 $$
-\begin{aligned}f\text{黎曼可积}\\&\iff\overline{\int}f=\underline{\int}f\\&\iff\int H\,\mathrm{d}m=\int h\,\mathrm{d}m\\&\iff\int\left(H-h\right)\mathrm{d}m=0.
-\end{aligned}
+f\text{黎曼可积}\iff\overline{\int}f=\underline{\int}f\iff\int H\,\mathrm{d}m=\int h\,\mathrm{d}m\iff\int\left(H-h\right)\mathrm{d}m=0.
 $$
 
 因 $H\ge h$, 由习题三(b) 得 $\int\left(H-h\right)\mathrm{d}m=0\iff H=h$ 几乎处处. 结合引理 a ($H=h\iff f$ 连续于 $x$) 得 $f$ 黎曼可积当且仅当 $f$ 的不连续点集测度为 0. 此时黎曼积分 $\overline{\int}f=\int H\,\mathrm{d}m=\int f\,\mathrm{d}m$ (因 $H=f$ 几乎处处), 定理 2.28b 得证. $\blacksquare$
@@ -330,15 +318,13 @@ $$
 记 $t=e^{-nx_{n}}$, 则由零点条件 $at^{a}=bt^{b}$, 即 $t^{a-b}=b/a$, 故 $t=\left(b/a\right)^{1/\left(a-b\right)}\in\left(0,1\right)$. 因 $t< 1$ 且 $a< b$, 幂函数 $\lambda\mapsto t^{\lambda}$ 递减, 故 $t^{a}> t^{b}$, 常数 $c:=2\left(t^{a}-t^{b}\right)> 0$. 因此
 
 $$
-\begin{aligned}\sum_{n=1}^{\infty}\int_{0}^{\infty}\left|f_{n}\right|\mathrm{d}x&=c\sum_{n=1}^{\infty}\frac{1}{n}&=\infty.
-\end{aligned}
+\sum_{n=1}^{\infty}\int_{0}^{\infty}\left|f_{n}\right|\mathrm{d}x=c\sum_{n=1}^{\infty}\frac{1}{n}=\infty.
 $$
 
 **b.** 逐项计算:
 
 $$
-\begin{aligned}\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x&=\int_{0}^{\infty}ae^{-nax}\mathrm{d}x-\int_{0}^{\infty}be^{-nbx}\mathrm{d}x\\&=\frac{1}{n}-\frac{1}{n}\\&=0,
-\end{aligned}
+\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x=\int_{0}^{\infty}ae^{-nax}\mathrm{d}x-\int_{0}^{\infty}be^{-nbx}\mathrm{d}x=\frac{1}{n}-\frac{1}{n}=0,
 $$
 
 故 $\sum_{n=1}^{\infty}\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x=0$.
@@ -346,8 +332,7 @@ $$
 **c.** 由几何级数 $\sum_{n=1}^{\infty}e^{-nax}=\frac{e^{-ax}}{1-e^{-ax}}=\frac{1}{e^{ax}-1}$,
 
 $$
-\begin{aligned}\sum_{n=1}^{\infty}f_{n}\left(x\right)&=a\sum_{n=1}^{\infty}e^{-nax}-b\sum_{n=1}^{\infty}e^{-nbx}\\&=\frac{a}{e^{ax}-1}-\frac{b}{e^{bx}-1}.
-\end{aligned}
+\sum_{n=1}^{\infty}f_{n}\left(x\right)=a\sum_{n=1}^{\infty}e^{-nax}-b\sum_{n=1}^{\infty}e^{-nbx}=\frac{a}{e^{ax}-1}-\frac{b}{e^{bx}-1}.
 $$
 
 当 $x\to0^{+}$ 时, $\frac{a}{e^{ax}-1}=\frac{1}{x}-\frac{a}{2}+O\left(x\right)$, 故差 $\frac{a}{e^{ax}-1}-\frac{b}{e^{bx}-1}\to\frac{b-a}{2}+O\left(x\right)$ 有限; 当 $x\to\infty$ 时指数衰减. 故 $\sum f_{n}\in L^{1}\left(\left[0,\infty\right),m\right)$.
@@ -355,8 +340,7 @@ $$
 对 $R> 0$, 换元 $u=ax$ 与 $u=bx$:
 
 $$
-\begin{aligned}\int_{0}^{R}\frac{a}{e^{ax}-1}\mathrm{d}x&=\int_{0}^{aR}\frac{\mathrm{d}u}{e^{u}-1},\\\int_{0}^{R}\frac{b}{e^{bx}-1}\mathrm{d}x&=\int_{0}^{bR}\frac{\mathrm{d}u}{e^{u}-1}.
-\end{aligned}
+\int_{0}^{R}\frac{a}{e^{ax}-1}\mathrm{d}x=\int_{0}^{aR}\frac{\mathrm{d}u}{e^{u}-1},;\int_{0}^{R}\frac{b}{e^{bx}-1}\mathrm{d}x=\int_{0}^{bR}\frac{\mathrm{d}u}{e^{u}-1}.
 $$
 
 故
@@ -368,8 +352,7 @@ $$
 由于 $\frac{1}{e^{u}-1}-\frac{1}{u}=O\left(e^{-u}\right)$ 在无穷远可积, $\int_{aR}^{bR}\frac{\mathrm{d}u}{e^{u}-1}=\int_{aR}^{bR}\frac{\mathrm{d}u}{u}+o\left(1\right)$, 令 $R\to\infty$ 得
 
 $$
-\begin{aligned}\int_{0}^{\infty}\sum_{n=1}^{\infty}f_{n}\left(x\right)\mathrm{d}x&=\lim_{R\to\infty}\int_{aR}^{bR}\frac{\mathrm{d}u}{u}\\&=\log\left(b/a\right).
-\end{aligned}
+\int_{0}^{\infty}\sum_{n=1}^{\infty}f_{n}\left(x\right)\mathrm{d}x=\lim_{R\to\infty}\int_{aR}^{bR}\frac{\mathrm{d}u}{u}=\log\left(b/a\right).
 $$
 
 注意到这里 $\sum\int\left|f_{n}\right|=\infty$ (由 a), 不满足**引理 8.2.13** (级数逐项积分) 的条件 $\sum\int\left|f_{n}\right|< \infty$, 故不能逐项积分; 事实上 $\int\sum f_{n}=\log\left(b/a\right)\ne\sum\int f_{n}=0$, 正说明该条件是本质的. $\blacksquare$
@@ -395,8 +378,7 @@ $$
 **情形 2.** 令 $G\left(s\right)=\int_{-\infty}^{\infty}e^{-sx^{2}}\mathrm{d}x=\sqrt{\pi/s}=\sqrt\pi\,s^{-1/2}$ ($s> 0$). 对每个 $k\ge1$, 在 $s\in\left[s_{0}/2,s_{0}\right]$ 上 $\left|\frac{\partial^{k}}{\partial s^{k}}e^{-sx^{2}}\right|=x^{2k}e^{-sx^{2}}\le x^{2k}e^{-\left(s_{0}/2\right)x^{2}}\in L^{1}\left(\mathbb R\right)$, 故可反复求导:
 
 $$
-\begin{aligned}G^{\left(n\right)}\left(s\right)&=\int_{-\infty}^{\infty}\left(-x^{2}\right)^{n}e^{-sx^{2}}\mathrm{d}x\\&=\left(-1\right)^{n}\int_{-\infty}^{\infty}x^{2n}e^{-sx^{2}}\mathrm{d}x.
-\end{aligned}
+G^{\left(n\right)}\left(s\right)=\int_{-\infty}^{\infty}\left(-x^{2}\right)^{n}e^{-sx^{2}}\mathrm{d}x=\left(-1\right)^{n}\int_{-\infty}^{\infty}x^{2n}e^{-sx^{2}}\mathrm{d}x.
 $$
 
 又

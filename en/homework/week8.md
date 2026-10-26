@@ -4,12 +4,12 @@
 
 > **Theorem 8.2.16**<br>If $f\in L^{1}\left(\mu\right)$ and $\varepsilon> 0$, then there exists an integrable simple function $\varphi=\sum a_{j}\chi_{E_{j}}$ such that $\int\left|f-\varphi\right|\mathrm{d}\mu< \varepsilon$ (i.e. integrable simple functions are dense in the $L^{1}$ metric).
 
-> **Theorem 10.2.1** (Fubini's Theorem)<br>Let $\left(X,\mathcal A,\mu\right)$ and $\left(Y,\mathcal B,\nu\right)$ be $\sigma$-finite measure spaces, and let $f:X\times Y\to\mathbb R$ be an $\mathcal A\otimes\mathcal B$-measurable function. If $f$ is integrable on $X\times Y$, then for almost every $x$, $y\mapsto f\left(x,y\right)$ is $\nu$-integrable; for almost every $y$, $x\mapsto f\left(x,y\right)$ is $\mu$-integrable; and the iterated integrals are equal: $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).\end{aligned}$$
+> **Theorem 10.2.1** (Fubini's Theorem)<br>Let $\left(X,\mathcal A,\mu\right)$ and $\left(Y,\mathcal B,\nu\right)$ be $\sigma$-finite measure spaces, and let $f:X\times Y\to\mathbb R$ be an $\mathcal A\otimes\mathcal B$-measurable function. If $f$ is integrable on $X\times Y$, then for almost every $x$, $y\mapsto f\left(x,y\right)$ is $\nu$-integrable; for almost every $y$, $x\mapsto f\left(x,y\right)$ is $\mu$-integrable; and the iterated integrals are equal: $$\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).$$
 
-> **Theorem 10.2.2** (Tonelli's Theorem)<br>If $f:X\times Y\to\left[0,\infty\right]$ is $\mathcal A\otimes\mathcal B$-measurable, then $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).\end{aligned}$$<br>where all integral values lie in $\left[0,\infty\right]$.
+> **Theorem 10.2.2** (Tonelli's Theorem)<br>If $f:X\times Y\to\left[0,\infty\right]$ is $\mathcal A\otimes\mathcal B$-measurable, then $$\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).$$<br>where all integral values lie in $\left[0,\infty\right]$.
 
 > **Theorem 11.1.1**<br>Suppose $E\in\mathcal L^{n}$.
-> (a) $$\begin{aligned}m\left(E\right)&=\inf\left\{m\left(U\right):U\supset E,U\text{开}\right\}\\&=\sup\left\{m\left(K\right):K\subset E,K\text{紧}\right\}\end{aligned}$$;
+> (a) $$m\left(E\right)=\inf\left\{m\left(U\right):U\supset E,U\text{开}\right\}=\sup\left\{m\left(K\right):K\subset E,K\text{紧}\right\}$$;
 > 
 > (b) If $m\left(E\right)< \infty$, then for any $\varepsilon> 0$ there exists a finite family of pairwise disjoint rectangles $\left\{R_{j}\right\}_{j=1}^{N}$ whose sides are intervals, such that $m\left(E\triangle\bigcup_{j=1}^{N}R_{j}\right)< \varepsilon$.
 
@@ -68,8 +68,7 @@ We first prove the three elementary-transformation cases, then combine them.
 **The general case.** By elementary linear algebra, every $T\in GL\left(n,\mathbb R\right)$ can be written as a product $T=T_{1}\circ\cdots\circ T_{k}$ of finitely many of the three elementary transformations above (an invertible matrix can be reduced to the identity by row operations). The formula holds for each elementary transformation, and determinants multiply, $\left|\det T\right|=\prod_{i}\left|\det T_{i}\right|$. Substituting successively gives
 
 $$
-\begin{aligned}\int f\left(x\right)\mathrm{d}x&=\left|\det T_{1}\right|\int f\circ T_{1}\left(x\right)\mathrm{d}x\\&=\cdots\\&=\left|\det T\right|\int f\circ T\left(x\right)\mathrm{d}x,
-\end{aligned}
+\int f\left(x\right)\mathrm{d}x=\left|\det T_{1}\right|\int f\circ T_{1}\left(x\right)\mathrm{d}x=\cdots=\left|\det T\right|\int f\circ T\left(x\right)\mathrm{d}x,
 $$
 
 which is (a). Measurability: $T$ is continuous, and by the Basic Knowledge (invertible linear transformations preserve measurability and null sets), $f\circ T$ is measurable and $T\left(E\right)\in\mathcal L^{n}$.
@@ -77,8 +76,7 @@ which is (a). Measurability: $T$ is continuous, and by the Basic Knowledge (inve
 **Proof of (b).** Take $f=\chi_{T\left(E\right)}$ in (a); then
 
 $$
-\begin{aligned}m\left(T\left(E\right)\right)&=\int\chi_{T\left(E\right)}\left(x\right)\mathrm{d}x\\&=\left|\det T\right|\int\chi_{T\left(E\right)}\circ T\left(x\right)\mathrm{d}x\\&=\left|\det T\right|\int\chi_{E}\left(x\right)\mathrm{d}x\\&=\left|\det T\right|m\left(E\right).
-\end{aligned}
+m\left(T\left(E\right)\right)=\int\chi_{T\left(E\right)}\left(x\right)\mathrm{d}x=\left|\det T\right|\int\chi_{T\left(E\right)}\circ T\left(x\right)\mathrm{d}x=\left|\det T\right|\int\chi_{E}\left(x\right)\mathrm{d}x=\left|\det T\right|m\left(E\right).
 $$
 
 $T\left(E\right)\in\mathcal L^{n}$ has already been ensured by measurability. $\blacksquare$
@@ -108,8 +106,7 @@ $$
 Since $\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{t}{t^{2}+1}\right)=\frac{1-t^{2}}{\left(t^{2}+1\right)^{2}}$, we have $\int\frac{t^{2}-1}{\left(t^{2}+1\right)^{2}}\mathrm{d}t=-\frac{t}{t^{2}+1}+C$, so the inner integral
 
 $$
-\begin{aligned}=\frac{1}{y}\left[-\frac{t}{t^{2}+1}\right]_{0}^{1/y}&=-\frac{1}{y}\cdot\frac{1/y}{1+1/y^{2}}\\&=-\frac{1}{y^{2}+1}.
-\end{aligned}
+=\frac{1}{y}\left[-\frac{t}{t^{2}+1}\right]_{0}^{1/y}=-\frac{1}{y}\cdot\frac{1/y}{1+1/y^{2}}=-\frac{1}{y^{2}+1}.
 $$
 
 Hence
@@ -119,8 +116,7 @@ $$\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=\int_{0}^{1}-\frac{1}{1+y^
 **$\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x$ (integrate first in $y$).** Symmetrically, fix $x$ and set $y=xt$; the inner integral $\int_{0}^{1}f\,\mathrm{d}y=\frac{1}{x^{2}+1}$, so
 
 $$
-\begin{aligned}\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x&=\int_{0}^{1}\frac{1}{1+x^{2}}\mathrm{d}x\\&=\left[\arctan x\right]_{0}^{1}\\&=\frac{\pi}{4}.
-\end{aligned}
+\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=\int_{0}^{1}\frac{1}{1+x^{2}}\mathrm{d}x=\left[\arctan x\right]_{0}^{1}=\frac{\pi}{4}.
 $$
 
 **Conclusion.** $\int_{E}f\,\mathrm{d}m^{2}$ does not exist ($f$ is not absolutely integrable); $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=-\frac{\pi}{4}$ and $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=\frac{\pi}{4}$ exist but are not equal and have opposite signs. Since $f\notin L^{1}$, Theorem 10.2.1 (Fubini) does not apply, and the two iterated integrals cannot be interchanged. $\blacksquare$
@@ -144,15 +140,13 @@ The region is $\left\{\left(x,y\right):0< y< x< 1\right\}$.
 **$\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y$ (integrate first in $x$).** Fix $y$; $\int_{y}^{1}\left(x-y\right)^{-3}\mathrm{d}x=\left[-\frac{1}{2}\left(x-y\right)^{-2}\right]_{y}^{1}$, and since $\lim_{x\to y^{+}}\left(x-y\right)^{-2}=\infty$, the inner integral $=+\infty$, so
 
 $$
-\begin{aligned}\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y&=\int_{0}^{1}\left(\int_{y}^{1}\left(x-y\right)^{-3}\mathrm{d}x\right)\mathrm{d}y\\&=+\infty.
-\end{aligned}
+\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=\int_{0}^{1}\left(\int_{y}^{1}\left(x-y\right)^{-3}\mathrm{d}x\right)\mathrm{d}y=+\infty.
 $$
 
 **$\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x$ (integrate first in $y$).** Fix $x$; $\int_{0}^{x}\left(x-y\right)^{-3}\mathrm{d}y=\left[-\frac{1}{2}\left(x-y\right)^{-2}\right]_{0}^{x}$, and since $\lim_{y\to x^{-}}\left(x-y\right)^{-2}=\infty$, the inner integral $=-\infty$, so
 
 $$
-\begin{aligned}\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x&=\int_{0}^{1}\left(\int_{0}^{x}\left(x-y\right)^{-3}\mathrm{d}y\right)\mathrm{d}x\\&=-\infty.
-\end{aligned}
+\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=\int_{0}^{1}\left(\int_{0}^{x}\left(x-y\right)^{-3}\mathrm{d}y\right)\mathrm{d}x=-\infty.
 $$
 
 **Conclusion.** $\int_{E}f\,\mathrm{d}m^{2}$ does not exist ($f\notin L^{1}$); $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=+\infty$ while $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=-\infty$; the two iterated integrals exist but are not equal and have opposite signs. This is a classic counterexample showing Fubini's theorem fails: when integrability is not absolute, the order of integration cannot be interchanged. $\blacksquare$
@@ -166,15 +160,13 @@ Prove Problem 56. If $f$ is Lebesgue integrable on $\left(0,a\right)$ and $g\lef
 First consider the two-variable function $h\left(x,t\right)=t^{-1}f\left(t\right)\chi_{\left\{x< t\right\}}\left(x,t\right)$ on $\left(0,a\right)\times\left(0,a\right)$ (i.e. on the domain $\left\{\left(x,t\right):0< x< t< a\right\}$). By **Theorem 10.2.2** (Tonelli, nonnegative function $\left|h\right|$),
 
 $$
-\begin{aligned}\int_{0}^{a}\int_{x}^{a}t^{-1}\left|f\left(t\right)\right|\mathrm{d}t\,\mathrm{d}x&=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}\left|f\left(t\right)\right|\mathrm{d}x\right)\mathrm{d}t\\&=\int_{0}^{a}t^{-1}\left|f\left(t\right)\right|\cdot t\,\mathrm{d}t\\&=\int_{0}^{a}\left|f\left(t\right)\right|\mathrm{d}t\\&< \infty,
-\end{aligned}
+\int_{0}^{a}\int_{x}^{a}t^{-1}\left|f\left(t\right)\right|\mathrm{d}t\,\mathrm{d}x=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}\left|f\left(t\right)\right|\mathrm{d}x\right)\mathrm{d}t=\int_{0}^{a}t^{-1}\left|f\left(t\right)\right|\cdot t\,\mathrm{d}t=\int_{0}^{a}\left|f\left(t\right)\right|\mathrm{d}t< \infty,
 $$
 
 where the interchange of order in the inner integral uses **Theorem 10.2.2** for a nonnegative function. Hence $\left(x,t\right)\mapsto t^{-1}f\left(t\right)\chi_{\left\{x< t\right\}}$ is integrable, and therefore $g$ is integrable. Then by **Theorem 10.2.1** (Fubini), interchanging the order,
 
 $$
-\begin{aligned}\int_{0}^{a}g\left(x\right)\mathrm{d}x&=\int_{0}^{a}\int_{x}^{a}t^{-1}f\left(t\right)\mathrm{d}t\,\mathrm{d}x\\&=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}f\left(t\right)\mathrm{d}x\right)\mathrm{d}t\\&=\int_{0}^{a}t^{-1}f\left(t\right)\cdot t\,\mathrm{d}t\\&=\int_{0}^{a}f\left(t\right)\mathrm{d}t.
-\end{aligned}
+\int_{0}^{a}g\left(x\right)\mathrm{d}x=\int_{0}^{a}\int_{x}^{a}t^{-1}f\left(t\right)\mathrm{d}t\,\mathrm{d}x=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}f\left(t\right)\mathrm{d}x\right)\mathrm{d}t=\int_{0}^{a}t^{-1}f\left(t\right)\cdot t\,\mathrm{d}t=\int_{0}^{a}f\left(t\right)\mathrm{d}t.
 $$
 
 $\blacksquare$
@@ -210,8 +202,7 @@ $$
 For fixed $b> 0$, since $\int_{0}^{b}\int_{0}^{\infty}\left|e^{-xy}\sin x\right|\mathrm{d}y\,\mathrm{d}x=\int_{0}^{b}\frac{\left|\sin x\right|}{x}\mathrm{d}x< \infty$ (for fixed $b$, $x^{-1}\sin x$ is integrable), by **Theorem 10.2.2** (Tonelli) the order may be interchanged:
 
 $$
-\begin{aligned}\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x&=\int_{0}^{b}\int_{0}^{\infty}e^{-xy}\sin x\,\mathrm{d}y\,\mathrm{d}x\\&=\int_{0}^{\infty}\left(\int_{0}^{b}e^{-xy}\sin x\,\mathrm{d}x\right)\mathrm{d}y.
-\end{aligned}
+\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\int_{0}^{b}\int_{0}^{\infty}e^{-xy}\sin x\,\mathrm{d}y\,\mathrm{d}x=\int_{0}^{\infty}\left(\int_{0}^{b}e^{-xy}\sin x\,\mathrm{d}x\right)\mathrm{d}y.
 $$
 
 For fixed $y$, integrating by parts twice gives $\int_{0}^{b}e^{-xy}\sin x\,\mathrm{d}x=\frac{1-e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}$. Hence
@@ -223,8 +214,7 @@ $$
 **Taking the limit $b\to\infty$.** Split into two terms $\frac{1}{1+y^{2}}-\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}$. The first integrates to $\int_{0}^{\infty}\frac{1}{1+y^{2}}\mathrm{d}y=\frac{\pi}{2}$. For the second, when $b\ge1$, $\left|\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}\right|\le\frac{e^{-y}\left(y+1\right)}{1+y^{2}}=:g\left(y\right)$, and $\int_{0}^{\infty}g\left(y\right)\mathrm{d}y< \infty$ (dominated by the exponential decay of $e^{-y}$). By **Theorem 8.2.9** (Dominated Convergence Theorem, applied along any sequence $b_{n}\to\infty$), this term tends to $\int_{0}^{\infty}0\,\mathrm{d}y=0$. Hence
 
 $$
-\begin{aligned}\lim_{b\to\infty}\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x&=\frac{\pi}{2}-0\\&=\frac{\pi}{2}.
-\end{aligned}
+\lim_{b\to\infty}\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\frac{\pi}{2}-0=\frac{\pi}{2}.
 $$
 
 $\blacksquare$
@@ -268,8 +258,7 @@ $$
 By the Basic Knowledge (the Gamma function and the beta identity), $\int_{0}^{1}\left(1-u\right)^{\alpha-1}u^{\beta-1}\mathrm{d}u=\frac{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}{\Gamma\left(\alpha+\beta\right)}$. Substituting gives
 
 $$
-\begin{aligned}I_{\alpha}\left(I_{\beta}f\right)\left(x\right)&=\frac{1}{\Gamma\left(\alpha+\beta\right)}\int_{0}^{x}\left(x-t\right)^{\alpha+\beta-1}f\left(t\right)\mathrm{d}t\\&=I_{\alpha+\beta}f\left(x\right).
-\end{aligned}
+I_{\alpha}\left(I_{\beta}f\right)\left(x\right)=\frac{1}{\Gamma\left(\alpha+\beta\right)}\int_{0}^{x}\left(x-t\right)^{\alpha+\beta-1}f\left(t\right)\mathrm{d}t=I_{\alpha+\beta}f\left(x\right).
 $$
 
 $\blacksquare$
@@ -293,8 +282,7 @@ Prove Problem 62. The measure $\sigma$ on $S^{n-1}$ is invariant under rotations
 Let $R\in O\left(n\right)$, i.e. $R^{T}R=I$; then $\left|\det R\right|=1$. By the Basic Knowledge (orthogonal transformations preserve the Lebesgue measure), $R$ preserves $m$ on $\mathbb R^{n}$. Since $R$ preserves the norm, $\left|Rx\right|=\left|x\right|$, under the spherical-coordinate decomposition $\Phi\left(x\right)=\left(r,x'\right)$ it acts on the spherical part: there exists a rotation $\rho$ on the sphere $S^{n-1}$ such that $R\left(rx'\right)=r\rho\left(x'\right)$. Let $m^{*}$ be the measure induced by polar coordinates ($m^{*}=\rho\times\sigma$ by **Theorem 11.4.1**); for a Borel set $A\subset\left(0,\infty\right)\times S^{n-1}$,
 
 $$
-\begin{aligned}m^{*}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)&=m\left(\Phi^{-1}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)\right)\\&=m\left(R\Phi^{-1}\left(A\right)\right)\\&=m\left(\Phi^{-1}\left(A\right)\right)\\&=m^{*}\left(A\right),
-\end{aligned}
+m^{*}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)=m\left(\Phi^{-1}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)\right)=m\left(R\Phi^{-1}\left(A\right)\right)=m\left(\Phi^{-1}\left(A\right)\right)=m^{*}\left(A\right),
 $$
 
 so $m^{*}$ is rotation-invariant.
@@ -302,8 +290,7 @@ so $m^{*}$ is rotation-invariant.
 Define $\sigma_{R}\left(E\right):=\sigma\left(R^{-1}E\right)=\sigma\left(R^{T}E\right)$; it is a Borel measure on $S^{n-1}$. On a rectangle $\left(a,b\right]\times E\subset\left(0,\infty\right)\times S^{n-1}$,
 
 $$
-\begin{aligned}\left(\rho\times\sigma_{R}\right)\left(\left(a,b\right]\times E\right)&=\int_{a}^{b}r^{n-1}\mathrm{d}r\cdot\sigma_{R}\left(E\right)\\&=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right).
-\end{aligned}
+\left(\rho\times\sigma_{R}\right)\left(\left(a,b\right]\times E\right)=\int_{a}^{b}r^{n-1}\mathrm{d}r\cdot\sigma_{R}\left(E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right).
 $$
 
 By $m^{*}=\rho\times\sigma$ (**Theorem 11.4.1**), $\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times R^{-1}E\right)$. Also, by the rotation-invariance of $m^{*}$, $m^{*}\left(\left(a,b\right]\times R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(E\right)$. Hence on rectangles, $\rho\times\sigma_{R}=\rho\times\sigma$. By the Basic Knowledge (uniqueness of a measure on a generating family of the product $\sigma$-algebra), $\rho\times\sigma_{R}=\rho\times\sigma$ on $\left(0,\infty\right)\times S^{n-1}$.
@@ -323,8 +310,7 @@ $$\int_{\mathbb R^{n}}\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}\math
 **The set $\left\{\left|x\right|< 1/2\right\}$.** Make the substitution $u=-\log r$ (i.e. $r=e^{-u}$, $\mathrm{d}r=-e^{-u}\mathrm{d}u$, so $r\in\left(0,1/2\right]$ corresponds to $u\in\left[\log 2,\infty\right)$):
 
 $$
-\begin{aligned}\int_{0}^{1/2}r^{a+n-1}\left|\log r\right|^{b}\mathrm{d}r&=\int_{\log 2}^{\infty}e^{-u\left(a+n-1\right)}e^{-u}u^{b}\mathrm{d}u\\&=\int_{\log 2}^{\infty}e^{-u\left(a+n\right)}u^{b}\mathrm{d}u.
-\end{aligned}
+\int_{0}^{1/2}r^{a+n-1}\left|\log r\right|^{b}\mathrm{d}r=\int_{\log 2}^{\infty}e^{-u\left(a+n-1\right)}e^{-u}u^{b}\mathrm{d}u=\int_{\log 2}^{\infty}e^{-u\left(a+n\right)}u^{b}\mathrm{d}u.
 $$
 
 The convergence condition is determined by the exponential factor:
@@ -338,8 +324,7 @@ Hence $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ is integrable on $
 **The set $\left\{\left|x\right|> 2\right\}$.** When $r\ge2$, $\left|\log r\right|=\log r$. Make the substitution $r=e^{u}$ ($\mathrm{d}r=e^{u}\mathrm{d}u$, $u\ge\log 2$):
 
 $$
-\begin{aligned}\int_{2}^{\infty}r^{a+n-1}\left(\log r\right)^{b}\mathrm{d}r&=\int_{\log 2}^{\infty}e^{u\left(a+n-1\right)}e^{u}u^{b}\mathrm{d}u\\&=\int_{\log 2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u.
-\end{aligned}
+\int_{2}^{\infty}r^{a+n-1}\left(\log r\right)^{b}\mathrm{d}r=\int_{\log 2}^{\infty}e^{u\left(a+n-1\right)}e^{u}u^{b}\mathrm{d}u=\int_{\log 2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u.
 $$
 
 Convergence condition:

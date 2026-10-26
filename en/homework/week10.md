@@ -38,8 +38,7 @@ $$
 otherwise $\left|\int_{K}f\right|$ would all be zero, which would imply $f=0$ almost everywhere, a contradiction. Set $c=\int_{K}\left|f\right|\mathrm{d}y> 0$, and take $R> 0$ such that $K\subset B\left(0,R\right)$ (i.e. $\sup_{y\in K}\left|y\right|< R$). For $\left|x\right|> R$, since $K\subset B\left(0,R\right)$ and $R< \left|x\right|$, we have $K\subset B\left(x,2\left|x\right|\right)$. Hence, by the definition of the maximal function and the **Basic Knowledge** (ball-volume formula),
 
 $$
-\begin{aligned}Hf\left(x\right)\\&\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{B\left(x,2\left|x\right|\right)}\left|f\right|\mathrm{d}y\\&\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{K}\left|f\right|\mathrm{d}y&=\frac{c}{C_{n}\left(2\left|x\right|\right)^{n}}\\&=\frac{c}{2^{n}C_{n}}\left|x\right|^{-n}.
-\end{aligned}
+Hf\left(x\right)\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{B\left(x,2\left|x\right|\right)}\left|f\right|\mathrm{d}y\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{K}\left|f\right|\mathrm{d}y=\frac{c}{C_{n}\left(2\left|x\right|\right)^{n}}=\frac{c}{2^{n}C_{n}}\left|x\right|^{-n}.
 $$
 
 Taking $C=\frac{c}{2^{n}C_{n}}> 0$, we obtain $Hf\left(x\right)\ge C\left|x\right|^{-n}$ for $\left|x\right|> R$.
@@ -53,8 +52,7 @@ $$
 By the ball-volume formula, the measure of this set is
 
 $$
-\begin{aligned}m\left(\left\{x:\left|x\right|< \left(C/\lambda\right)^{1/n}\right\}\right)&=C_{n}\left(\frac{C}{\lambda}\right)^{1/n\cdot n}\\&=\frac{C_{n}C}{\lambda}.
-\end{aligned}
+m\left(\left\{x:\left|x\right|< \left(C/\lambda\right)^{1/n}\right\}\right)=C_{n}\left(\frac{C}{\lambda}\right)^{1/n\cdot n}=\frac{C_{n}C}{\lambda}.
 $$
 
 Setting $C'=C_{n}C$, we get $m\left(\left\{x:Hf\left(x\right)> \lambda\right\}\right)\ge C'\lambda^{-1}$ for sufficiently small $\lambda> 0$. $\blacksquare$
@@ -78,8 +76,7 @@ $$
 i.e. $B\subset B\left(x,2\rho\right)$. By the ball-volume formula, $\left|B\left(x,2\rho\right)\right|=C_{n}\left(2\rho\right)^{n}=2^{n}C_{n}\rho^{n}=2^{n}\left|B\right|$. Hence
 
 $$
-\begin{aligned}\frac{1}{m\left(B\right)}\int_{B}\left|f\right|\mathrm{d}y\\&\le\frac{1}{m\left(B\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y&=\frac{m\left(B\left(x,2\rho\right)\right)}{m\left(B\right)}\cdot\frac{1}{m\left(B\left(x,2\rho\right)\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y\\&=2^{n}\cdot\frac{1}{m\left(B\left(x,2\rho\right)\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y\\&\le2^{n}Hf\left(x\right).
-\end{aligned}
+\frac{1}{m\left(B\right)}\int_{B}\left|f\right|\mathrm{d}y\le\frac{1}{m\left(B\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y=\frac{m\left(B\left(x,2\rho\right)\right)}{m\left(B\right)}\cdot\frac{1}{m\left(B\left(x,2\rho\right)\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y=2^{n}\cdot\frac{1}{m\left(B\left(x,2\rho\right)\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y;\le2^{n}Hf\left(x\right).
 $$
 
 Taking the supremum over all balls $B$ containing $x$, we get $H^{*}f\left(x\right)\le2^{n}Hf\left(x\right)$. Combining, $Hf\le H^{*}f\le2^{n}Hf$. $\blacksquare$
@@ -93,8 +90,7 @@ Let $\nu=\lambda+\mu$. Since $\lambda\perp\mu$ (**Definition 11.4.1**), there ex
 **Condition (2) of regularity for $\lambda$.** First note that for any $E\in\mathcal B\left(\mathbb R^{n}\right)$,
 
 $$
-\begin{aligned}\lambda\left(E\right)&=\lambda\left(E\cap A\right)\\&=\nu\left(E\cap A\right),
-\end{aligned}
+\lambda\left(E\right)=\lambda\left(E\cap A\right)=\nu\left(E\cap A\right),
 $$
 
 where the second equality uses $\mu\left(E\cap A\right)\le\mu\left(A\right)=0$; similarly, $\mu\left(E\right)=\nu\left(E\cap A^{c}\right)$.

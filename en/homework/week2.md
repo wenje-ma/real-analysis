@@ -1,8 +1,8 @@
 # Assignment 2
 
-> **Definition 1.3.1** (Limit Superior)<br>The limit superior of a sequence of sets $\left\{E_{n}\right\}$ is defined as $$\begin{aligned}\overline{\lim}_{n\to\infty}E_{n}&=\left\{x:x\text{ 属于无穷多个 }E_{n}\right\}\\&=\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}E_{k}.\end{aligned}$$
+> **Definition 1.3.1** (Limit Superior)<br>The limit superior of a sequence of sets $\left\{E_{n}\right\}$ is defined as $$\overline{\lim}_{n\to\infty}E_{n}=\left\{x:x\text{ 属于无穷多个 }E_{n}\right\}=\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}E_{k}.$$
 
-> **Definition 1.3.3** (Limit Inferior)<br>$$\begin{aligned}\underline{\lim}_{n\to\infty}E_{n}&=\left\{x:x\text{ 仅不属于有限多个 }E_{n}\right\}\\&=\bigcup_{n=1}^{\infty}\bigcap_{k=n}^{\infty}E_{k}.\end{aligned}$$
+> **Definition 1.3.3** (Limit Inferior)<br>$$\underline{\lim}_{n\to\infty}E_{n}=\left\{x:x\text{ 仅不属于有限多个 }E_{n}\right\}=\bigcup_{n=1}^{\infty}\bigcap_{k=n}^{\infty}E_{k}.$$
 
 > **Definition 4.1.3** ($\sigma$-Algebra)<br>Let $X$ be nonempty and $\mathcal F\subset\mathcal P\left(X\right)$. $\mathcal F$ is called a **$\sigma$-algebra** on $X$ if it satisfies:
 > (1) $X\in\mathcal F$;
@@ -65,8 +65,7 @@ That is, $A\in\mathcal M$ if and only if $A$ differs from some measurable set $B
 (2) **Closed under complementation**: suppose $B\subset A\subset B\cup N$ with $\mu\left(N\right)=0$. Then $\left(B\cup N\right)^{c}\subset A^{c}\subset B^{c}$, and
 
 $$
-\begin{aligned}B^{c}\setminus\left(B\cup N\right)^{c}&=B^{c}\cap\left(B\cup N\right)\\&=B^{c}\cap N\subset N,
-\end{aligned}
+B^{c}\setminus\left(B\cup N\right)^{c}=B^{c}\cap\left(B\cup N\right)=B^{c}\cap N\subset N,
 $$
 
 Hence by **Proposition 5.2.2** (Monotonicity), $\mu\left(B^{c}\setminus\left(B\cup N\right)^{c}\right)\le\mu\left(N\right)=0$. Thus $A^{c}\in\mathcal M$ (take $B'=\left(B\cup N\right)^{c}\in\mathcal F$ and $N'=B^{c}\setminus\left(B\cup N\right)^{c}$).
@@ -78,8 +77,7 @@ Thus $\mathcal M$ is a $\sigma$-algebra.
 **2. Define $\overline\mu:\mathcal M\to\left[0,+\infty\right]$ by $\overline\mu\left(A\right):=\mu\left(B\right)$, where $B\subset A\subset B\cup N$ and $\mu\left(N\right)=0$.** We first prove that this is well-defined: suppose $B_{1}\subset A\subset B_{1}\cup N_{1}$ and $B_{2}\subset A\subset B_{2}\cup N_{2}$ with $\mu\left(N_{1}\right)=\mu\left(N_{2}\right)=0$. From $B_{1}\subset A\subset B_{2}\cup N_{2}$ we get $B_{1}\setminus B_{2}\subset N_{2}$, hence $\mu\left(B_{1}\setminus B_{2}\right)\le\mu\left(N_{2}\right)=0$; similarly $\mu\left(B_{2}\setminus B_{1}\right)=0$. By **Proposition 5.2.1** (Finite Additivity) and **Proposition 5.2.2** (Monotonicity),
 
 $$
-\begin{aligned}\mu\left(B_{1}\right)&=\mu\left(B_{1}\cap B_{2}\right)+\mu\left(B_{1}\setminus B_{2}\right)\\&=\mu\left(B_{1}\cap B_{2}\right)\\&=\mu\left(B_{2}\right).
-\end{aligned}
+\mu\left(B_{1}\right)=\mu\left(B_{1}\cap B_{2}\right)+\mu\left(B_{1}\setminus B_{2}\right)=\mu\left(B_{1}\cap B_{2}\right)=\mu\left(B_{2}\right).
 $$
 
 Thus $\overline\mu$ is well-defined.
@@ -87,8 +85,7 @@ Thus $\overline\mu$ is well-defined.
 **3. $\overline\mu$ is a measure.** We verify **Definition 5.1.2** item by item: nonnegativity is clear. The empty set has measure zero: $\overline\mu\left(\varnothing\right)=\mu\left(\varnothing\right)=0$. Countable additivity: let $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal M$ be pairwise disjoint, and write $A_{n}=B_{n}\cup N_{n}$ ($B_{n}\in\mathcal F$, $N_{n}\subset N_{n}'\in\mathcal N$). Then $\bigcup_{n}A_{n}=\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)\in\mathcal M$, and the $\left\{B_{n}\right\}$ are pairwise disjoint (since $B_{n}\subset A_{n}$); by the countable additivity of $\mu$
 
 $$
-\begin{aligned}\overline\mu\left(\bigcup_{n}A_{n}\right)&=\mu\left(\bigcup_{n}B_{n}\right)\\&=\sum_{n}\mu\left(B_{n}\right)\\&=\sum_{n}\overline\mu\left(A_{n}\right).
-\end{aligned}
+\overline\mu\left(\bigcup_{n}A_{n}\right)=\mu\left(\bigcup_{n}B_{n}\right)=\sum_{n}\mu\left(B_{n}\right)=\sum_{n}\overline\mu\left(A_{n}\right).
 $$
 
 **4. Extension property:** for $B\in\mathcal F$, since $B=B\cup\varnothing\in\mathcal M$, we have $\overline\mu\left(B\right)=\mu\left(B\right)$, i.e. $\overline\mu|_{\mathcal F}=\mu$.
@@ -124,29 +121,25 @@ Prove Problems 8, 9, 10 and 12.
 Let $F_{n}:=\bigcap_{j=n}^{\infty}E_{j}$. By **Definition 1.3.3** (Limit Inferior), $\liminf_{j\to\infty}E_{j}=\bigcup_{n=1}^{\infty}F_{n}$, and $\left\{F_{n}\right\}$ is monotonically increasing. By **Proposition 5.2.4** (Continuity from Below),
 
 $$
-\begin{aligned}\mu\left(\liminf_{j\to\infty}E_{j}\right)&=\mu\left(\bigcup_{n=1}^{\infty}F_{n}\right)\\&=\lim_{n\to\infty}\mu\left(F_{n}\right).
-\end{aligned}
+\mu\left(\liminf_{j\to\infty}E_{j}\right)=\mu\left(\bigcup_{n=1}^{\infty}F_{n}\right)=\lim_{n\to\infty}\mu\left(F_{n}\right).
 $$
 
 Also, since $F_{n}\subset E_{j}$ for all $j\ge n$, by **Proposition 5.2.2** (Monotonicity) we get $\mu\left(F_{n}\right)\le\inf_{j\ge n}\mu\left(E_{j}\right)$, hence
 
 $$
-\begin{aligned}\mu\left(\liminf_{j\to\infty}E_{j}\right)&=\lim_{n\to\infty}\mu\left(F_{n}\right)\\&\le\lim_{n\to\infty}\inf_{j\ge n}\mu\left(E_{j}\right)\\&=\liminf_{j\to\infty}\mu\left(E_{j}\right).
-\end{aligned}
+\mu\left(\liminf_{j\to\infty}E_{j}\right)=\lim_{n\to\infty}\mu\left(F_{n}\right)\le\lim_{n\to\infty}\inf_{j\ge n}\mu\left(E_{j}\right)=\liminf_{j\to\infty}\mu\left(E_{j}\right).
 $$
 
 Let $G_{n}:=\bigcup_{j=n}^{\infty}E_{j}$. By **Definition 1.3.1** (Limit Superior), $\limsup_{j\to\infty}E_{j}=\bigcap_{n=1}^{\infty}G_{n}$, and $\left\{G_{n}\right\}$ is monotonically decreasing. Since $\mu\left(G_{1}\right)=\mu\left(\bigcup_{j=1}^{\infty}E_{j}\right)< \infty$, by **Proposition 5.2.5** (Continuity from Above),
 
 $$
-\begin{aligned}\mu\left(\limsup_{j\to\infty}E_{j}\right)&=\mu\left(\bigcap_{n=1}^{\infty}G_{n}\right)\\&=\lim_{n\to\infty}\mu\left(G_{n}\right).
-\end{aligned}
+\mu\left(\limsup_{j\to\infty}E_{j}\right)=\mu\left(\bigcap_{n=1}^{\infty}G_{n}\right)=\lim_{n\to\infty}\mu\left(G_{n}\right).
 $$
 
 Also, since $G_{n}\supset E_{j}$ for all $j\ge n$, monotonicity gives $\mu\left(G_{n}\right)\ge\sup_{j\ge n}\mu\left(E_{j}\right)$, hence
 
 $$
-\begin{aligned}\mu\left(\limsup_{j\to\infty}E_{j}\right)&=\lim_{n\to\infty}\mu\left(G_{n}\right)\\&\ge\lim_{n\to\infty}\sup_{j\ge n}\mu\left(E_{j}\right)\\&=\limsup_{j\to\infty}\mu\left(E_{j}\right).
-\end{aligned}
+\mu\left(\limsup_{j\to\infty}E_{j}\right)=\lim_{n\to\infty}\mu\left(G_{n}\right)\ge\lim_{n\to\infty}\sup_{j\ge n}\mu\left(E_{j}\right)=\limsup_{j\to\infty}\mu\left(E_{j}\right).
 $$
 
 The two inequalities are proved. $\blacksquare$
@@ -166,8 +159,7 @@ $$
 Moreover, $E=\left(E\cap F\right)\cup\left(E\setminus F\right)$ and $F=\left(E\cap F\right)\cup\left(F\setminus E\right)$ are both pairwise disjoint decompositions, hence
 
 $$
-\begin{aligned}\mu\left(E\right)+\mu\left(F\right)&=2\mu\left(E\cap F\right)+\mu\left(E\setminus F\right)+\mu\left(F\setminus E\right)\\&=\mu\left(E\cup F\right)+\mu\left(E\cap F\right).
-\end{aligned}
+\mu\left(E\right)+\mu\left(F\right)=2\mu\left(E\cap F\right)+\mu\left(E\setminus F\right)+\mu\left(F\setminus E\right)=\mu\left(E\cup F\right)+\mu\left(E\cap F\right).
 $$
 
 The identity is proved. $\blacksquare$
@@ -183,8 +175,7 @@ We verify **Definition 5.1.2** item by item:
 (3) **Countable additivity**: let $\left\{A_{j}\right\}_{j=1}^{\infty}\subset\mathcal M$ be pairwise disjoint; then $\left\{A_{j}\cap E\right\}$ are also pairwise disjoint, and by the countable additivity of $\mu$
 
 $$
-\begin{aligned}\mu_{E}\left(\bigcup_{j=1}^{\infty}A_{j}\right)&=\mu\left(\left(\bigcup_{j=1}^{\infty}A_{j}\right)\cap E\right)\\&=\mu\left(\bigcup_{j=1}^{\infty}\left(A_{j}\cap E\right)\right)\\&=\sum_{j=1}^{\infty}\mu\left(A_{j}\cap E\right)\\&=\sum_{j=1}^{\infty}\mu_{E}\left(A_{j}\right).
-\end{aligned}
+\mu_{E}\left(\bigcup_{j=1}^{\infty}A_{j}\right)=\mu\left(\left(\bigcup_{j=1}^{\infty}A_{j}\right)\cap E\right)=\mu\left(\bigcup_{j=1}^{\infty}\left(A_{j}\cap E\right)\right)=\sum_{j=1}^{\infty}\mu\left(A_{j}\cap E\right)=\sum_{j=1}^{\infty}\mu_{E}\left(A_{j}\right).
 $$
 
 Thus $\mu_{E}$ is a measure. $\blacksquare$
@@ -194,8 +185,7 @@ Thus $\mu_{E}$ is a measure. $\blacksquare$
 **(a)** $E=\left(E\cap F\right)\cup\left(E\setminus F\right)$ and $F=\left(E\cap F\right)\cup\left(F\setminus E\right)$ are both pairwise disjoint decompositions; by **Proposition 5.2.1** (Finite Additivity),
 
 $$
-\begin{aligned}\mu\left(E\right)&=\mu\left(E\cap F\right)+\mu\left(E\setminus F\right),\\\mu\left(F\right)&=\mu\left(E\cap F\right)+\mu\left(F\setminus E\right).
-\end{aligned}
+\mu\left(E\right)=\mu\left(E\cap F\right)+\mu\left(E\setminus F\right),;\mu\left(F\right)=\mu\left(E\cap F\right)+\mu\left(F\setminus E\right).
 $$
 
 Moreover, $E\setminus F\subset E\triangle F$ and $F\setminus E\subset E\triangle F$; by **Proposition 5.2.2** (Monotonicity), $\mu\left(E\setminus F\right)\le\mu\left(E\triangle F\right)=0$, and similarly $\mu\left(F\setminus E\right)=0$. Hence $\mu\left(E\right)=\mu\left(E\cap F\right)=\mu\left(F\right)$. $\blacksquare$
@@ -213,8 +203,7 @@ Thus $\sim$ is an equivalence relation on $\mathcal M$. $\blacksquare$
 **(c)** Symmetry and nonnegativity are clear: $\rho\left(E,F\right)=\rho\left(F,E\right)\ge0$ and $\rho\left(E,E\right)=0$. Also, $E\triangle G\subset\left(E\triangle F\right)\cup\left(F\triangle G\right)$; by **Proposition 5.2.3** (Countable Subadditivity),
 
 $$
-\begin{aligned}\rho\left(E,G\right)&=\mu\left(E\triangle G\right)\\&\le\mu\left(E\triangle F\right)+\mu\left(F\triangle G\right)\\&=\rho\left(E,F\right)+\rho\left(F,G\right).
-\end{aligned}
+\rho\left(E,G\right)=\mu\left(E\triangle G\right)\le\mu\left(E\triangle F\right)+\mu\left(F\triangle G\right)=\rho\left(E,F\right)+\rho\left(F,G\right).
 $$
 
 Finally, we verify well-definedness and positivity: if $E\sim E'$ and $F\sim F'$ (i.e. $\mu\left(E\triangle E'\right)=\mu\left(F\triangle F'\right)=0$), then

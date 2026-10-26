@@ -21,9 +21,9 @@
 
 > **Theorem 10.1.4** (Existence and Uniqueness of the Product Measure)<br>Let $\left(X,\mathcal A,\mu\right)$ and $\left(Y,\mathcal B,\nu\right)$ be $\sigma$-finite measure spaces. There exists a unique measure $\mu\times\nu$ on $\left(X\times Y,\mathcal A\otimes\mathcal B\right)$ such that $\left(\mu\times\nu\right)\left(A\times B\right)=\mu\left(A\right)\nu\left(B\right)$ for all $A\in\mathcal A$, $B\in\mathcal B$. It is constructed as $\phi\left(E\right)=\int_{X}\nu\left(E_{x}\right)\mathrm{d}\mu\left(x\right)$ for $E\in\mathcal A\otimes\mathcal B$.
 
-> **Theorem 10.2.1** (Fubini's Theorem)<br>Let $\left(X,\mathcal A,\mu\right)$ and $\left(Y,\mathcal B,\nu\right)$ be $\sigma$-finite measure spaces, and let $f:X\times Y\to\mathbb R$ be an $\mathcal A\otimes\mathcal B$-measurable function. If $f$ is integrable on $X\times Y$, i.e. $\int_{X\times Y}\left|f\right|\mathrm{d}\left(\mu\times\nu\right)< \infty$, then for almost every $x$, $y\mapsto f\left(x,y\right)$ is $\nu$-integrable; for almost every $y$, $x\mapsto f\left(x,y\right)$ is $\mu$-integrable; and the iterated integrals are equal: $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).\end{aligned}$$
+> **Theorem 10.2.1** (Fubini's Theorem)<br>Let $\left(X,\mathcal A,\mu\right)$ and $\left(Y,\mathcal B,\nu\right)$ be $\sigma$-finite measure spaces, and let $f:X\times Y\to\mathbb R$ be an $\mathcal A\otimes\mathcal B$-measurable function. If $f$ is integrable on $X\times Y$, i.e. $\int_{X\times Y}\left|f\right|\mathrm{d}\left(\mu\times\nu\right)< \infty$, then for almost every $x$, $y\mapsto f\left(x,y\right)$ is $\nu$-integrable; for almost every $y$, $x\mapsto f\left(x,y\right)$ is $\mu$-integrable; and the iterated integrals are equal: $$\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).$$
 
-> **Theorem 10.2.2** (Tonelli's Theorem)<br>If $f:X\times Y\to\left[0,\infty\right]$ is $\mathcal A\otimes\mathcal B$-measurable, then $$\begin{aligned}\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)&=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)\\&=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),\end{aligned}$$ where all integral values lie in $\left[0,\infty\right]$.
+> **Theorem 10.2.2** (Tonelli's Theorem)<br>If $f:X\times Y\to\left[0,\infty\right]$ is $\mathcal A\otimes\mathcal B$-measurable, then $$\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),$$ where all integral values lie in $\left[0,\infty\right]$.
 
 > **Basic Knowledge**<br>**Intersection and complementation properties of the rectangle algebra**: for measurable rectangles, $\left(A\times B\right)\cap\left(C\times D\right)=\left(A\cap C\right)\times\left(B\cap D\right)$ and $\left(A\times B\right)^{c}=\left(A^{c}\times B\right)\cup\left(A\times B^{c}\right)$ hold.
 
@@ -46,8 +46,7 @@ Prove that $\pi$ is a premeasure on $\mathcal E$, and that the measure on $\sigm
 **$\pi$ is well-defined.** Let $E=\bigcup_{i=1}^{m}A_{i}\times B_{i}=\bigcup_{j=1}^{n}C_{j}\times D_{j}$ be two pairwise-disjoint rectangle decompositions of $E$. For the common refinement $\left\{\left(A_{i}\cap C_{j}\right)\times\left(B_{i}\cap D_{j}\right)\right\}_{i,j}$, by the finite additivity of $\mu,\nu$,
 
 $$
-\begin{aligned}\sum_{i=1}^{m}\mu\left(A_{i}\right)\nu\left(B_{i}\right)&=\sum_{i,j}\mu\left(A_{i}\cap C_{j}\right)\nu\left(B_{i}\cap D_{j}\right)\\&=\sum_{j=1}^{n}\mu\left(C_{j}\right)\nu\left(D_{j}\right),
-\end{aligned}
+\sum_{i=1}^{m}\mu\left(A_{i}\right)\nu\left(B_{i}\right)=\sum_{i,j}\mu\left(A_{i}\cap C_{j}\right)\nu\left(B_{i}\cap D_{j}\right)=\sum_{j=1}^{n}\mu\left(C_{j}\right)\nu\left(D_{j}\right),
 $$
 
 so $\pi\left(E\right)$ is independent of the decomposition.
@@ -55,15 +54,13 @@ so $\pi\left(E\right)$ is independent of the decomposition.
 **$\pi$ is a premeasure on $\mathcal E$.** By **Theorem 10.1.4**, $\mu\times\nu$ is a measure on $\left(X\times Y,\mathcal A\otimes\mathcal B\right)$ and takes the value $\mu\left(A\right)\nu\left(B\right)$ on rectangles; for a finite disjoint union of rectangles $\bigcup_{i=1}^{n}A_{i}\times B_{i}$, by the finite additivity of a measure,
 
 $$
-\begin{aligned}\left(\mu\times\nu\right)\left(\bigcup_{i=1}^{n}A_{i}\times B_{i}\right)&=\sum_{i=1}^{n}\mu\left(A_{i}\right)\nu\left(B_{i}\right)\\&=\pi\left(E\right),
-\end{aligned}
+\left(\mu\times\nu\right)\left(\bigcup_{i=1}^{n}A_{i}\times B_{i}\right)=\sum_{i=1}^{n}\mu\left(A_{i}\right)\nu\left(B_{i}\right)=\pi\left(E\right),
 $$
 
 so $\pi=\left(\mu\times\nu\right)|_{\mathcal E}$. By the Basic Knowledge (the restriction of a measure to an algebra is a premeasure), $\pi$ satisfies the premeasure conditions: $\pi\left(\emptyset\right)=0$, and for pairwise disjoint $\left\{E_{n}\right\}\subset\mathcal E$ with $\bigcup_{n}E_{n}\in\mathcal E$, by the $\sigma$-additivity of $\mu\times\nu$ (**Definition 5.1.2**),
 
 $$
-\begin{aligned}\pi\left(\bigcup_{n=1}^{\infty}E_{n}\right)&=\left(\mu\times\nu\right)\left(\bigcup_{n=1}^{\infty}E_{n}\right)\\&=\sum_{n=1}^{\infty}\left(\mu\times\nu\right)\left(E_{n}\right)\\&=\sum_{n=1}^{\infty}\pi\left(E_{n}\right).
-\end{aligned}
+\pi\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\left(\mu\times\nu\right)\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\left(\mu\times\nu\right)\left(E_{n}\right)=\sum_{n=1}^{\infty}\pi\left(E_{n}\right).
 $$
 
 Hence $\pi$ is a premeasure on $\mathcal E$ (**Definition 6.2.1**).
@@ -89,8 +86,7 @@ By **Definition 10.1.2**, the x-section of the diagonal $D$ is $D_{x}=\left\{y:\
 First compute $\iint\chi_{D}\,\mathrm{d}\mu\,\mathrm{d}\nu$ (inner integral with respect to $\mu$, outer with respect to $\nu$). For fixed $y$,
 
 $$
-\begin{aligned}\int_{X}\chi_{D}\left(x,y\right)\mathrm{d}\mu\left(x\right)&=\mu\left(\left\{x:\left(x,y\right)\in D\right\}\right)\\&=\mu\left(\left\{y\right\}\right)\\&=0,
-\end{aligned}
+\int_{X}\chi_{D}\left(x,y\right)\mathrm{d}\mu\left(x\right)=\mu\left(\left\{x:\left(x,y\right)\in D\right\}\right)=\mu\left(\left\{y\right\}\right)=0,
 $$
 
 since under the Lebesgue measure a singleton has measure zero. Hence
@@ -100,8 +96,7 @@ $$\iint\chi_{D}\,\mathrm{d}\mu\,\mathrm{d}\nu=\int_{Y}0\,\mathrm{d}\nu=0.$$
 Next compute $\iint\chi_{D}\,\mathrm{d}\nu\,\mathrm{d}\mu$ (inner integral with respect to $\nu$). For fixed $x$,
 
 $$
-\begin{aligned}\int_{Y}\chi_{D}\left(x,y\right)\mathrm{d}\nu\left(y\right)&=\nu\left(D_{x}\right)\\&=\nu\left(\left\{x\right\}\right)\\&=1,
-\end{aligned}
+\int_{Y}\chi_{D}\left(x,y\right)\mathrm{d}\nu\left(y\right)=\nu\left(D_{x}\right)=\nu\left(\left\{x\right\}\right)=1,
 $$
 
 since under the counting measure a singleton has measure $1$. Hence
@@ -111,8 +106,7 @@ $$\iint\chi_{D}\,\mathrm{d}\nu\,\mathrm{d}\mu=\int_{X}1\,\mathrm{d}\mu\left(x\ri
 Finally, by **Theorem 10.1.4** (construction of the product measure $\phi\left(E\right)=\int\nu\left(E_{x}\right)\mathrm{d}\mu\left(x\right)$),
 
 $$
-\begin{aligned}\int\chi_{D}\,\mathrm{d}\left(\mu\times\nu\right)&=\left(\mu\times\nu\right)\left(D\right)\\&=\int_{X}\nu\left(D_{x}\right)\mathrm{d}\mu\left(x\right)\\&=\int_{X}\nu\left(\left\{x\right\}\right)\mathrm{d}\mu\left(x\right)\\&=\int_{X}1\,\mathrm{d}\mu\left(x\right)\\&=1.
-\end{aligned}
+\int\chi_{D}\,\mathrm{d}\left(\mu\times\nu\right)=\left(\mu\times\nu\right)\left(D\right)=\int_{X}\nu\left(D_{x}\right)\mathrm{d}\mu\left(x\right)=\int_{X}\nu\left(\left\{x\right\}\right)\mathrm{d}\mu\left(x\right)=\int_{X}1\,\mathrm{d}\mu\left(x\right)=1.
 $$
 
 Hence the three integrals are $0$, $1$, $1$ respectively, and are not all equal; in particular $\iint\chi_{D}\,\mathrm{d}\mu\,\mathrm{d}\nu=0\ne1=\iint\chi_{D}\,\mathrm{d}\nu\,\mathrm{d}\mu$. The reason is that $\nu$ is not $\sigma$-finite, so the $\sigma$-finiteness hypothesis of **Theorem 10.2.1** (Fubini) is not satisfied, and the product integral and the iterated integral first integrating with respect to $\mu$ need not agree. $\blacksquare$
@@ -122,8 +116,7 @@ Hence the three integrals are $0$, $1$, $1$ respectively, and are not all equal;
 Compute $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)=\sum_{m,n}\left|f\left(m,n\right)\right|$. $f$ takes the value $1$ on the diagonal $\left\{\left(m,m\right)\right\}$ and $-1$ on the subdiagonal $\left\{\left(m+1,m\right)\right\}$, so $\left|f\right|$ takes the value $1$ on infinitely many points in these two families; hence
 
 $$
-\begin{aligned}\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)&=\sum_{m,n}\left|f\left(m,n\right)\right|\\&=\infty.
-\end{aligned}
+\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)=\sum_{m,n}\left|f\left(m,n\right)\right|=\infty.
 $$
 
 Compute $\iint f\,\mathrm{d}\mu\,\mathrm{d}\nu$ (inner sum with respect to $\mu$, outer sum with respect to $\nu$). For fixed $n$, $\sum_{m}f\left(m,n\right)=f\left(n,n\right)+f\left(n+1,n\right)=1+\left(-1\right)=0$, so $\iint f\,\mathrm{d}\mu\,\mathrm{d}\nu=\sum_{n}0=0$.
@@ -139,8 +132,7 @@ Hence $\iint f\,\mathrm{d}\mu\,\mathrm{d}\nu=0\ne1=\iint f\,\mathrm{d}\nu\,\math
 **Measurability.** Consider the map $T:X\times\left[0,\infty\right]\to\left[0,\infty\right]\times\left[0,\infty\right]$, $T\left(x,y\right)=\left(f\left(x\right),y\right)$. By **Proposition 7.1.7** (Measurability on Product Spaces), $T$ is measurable if and only if its coordinate functions are measurable; the coordinate function $\left(x,y\right)\mapsto f\left(x\right)=f\circ p_{1}$ is measurable (since $f$ is measurable), and $\left(x,y\right)\mapsto y=p_{2}$ is continuous, hence measurable. So $T$ is measurable. Also $\Phi\left(z,y\right)=z-y$ is continuous, hence Borel measurable. By **Proposition 7.1.5** (Composition Preserves Measurability), $\left(x,y\right)\mapsto f\left(x\right)-y=\Phi\circ T$ is measurable. Since
 
 $$
-\begin{aligned}G_{f}&=\left\{\left(x,y\right):f\left(x\right)-y\ge0\right\}\\&=\left(f-y\right)^{-1}\left(\left[0,\infty\right]\right),
-\end{aligned}
+G_{f}=\left\{\left(x,y\right):f\left(x\right)-y\ge0\right\}=\left(f-y\right)^{-1}\left(\left[0,\infty\right]\right),
 $$
 
 is the preimage of a measurable function, by **Definition 10.1.1** (Product $\sigma$-Algebra), $G_{f}\in\mathcal M\otimes\mathcal B_{\mathbb R}$.

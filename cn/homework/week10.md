@@ -38,8 +38,7 @@ $$
 否则 $\left|\int_{K}f\right|$ 全为零将推出 $f=0$ 几乎处处, 矛盾. 记 $c=\int_{K}\left|f\right|\mathrm{d}y> 0$, 并取 $R> 0$ 使 $K\subset B\left(0,R\right)$ (即 $\sup_{y\in K}\left|y\right|< R$). 对 $\left|x\right|> R$, 因 $K\subset B\left(0,R\right)$ 且 $R< \left|x\right|$, 有 $K\subset B\left(x,2\left|x\right|\right)$. 于是由极大函数定义与**基础知识** (球体积公式),
 
 $$
-\begin{aligned}Hf\left(x\right)\\&\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{B\left(x,2\left|x\right|\right)}\left|f\right|\mathrm{d}y\\&\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{K}\left|f\right|\mathrm{d}y&=\frac{c}{C_{n}\left(2\left|x\right|\right)^{n}}\\&=\frac{c}{2^{n}C_{n}}\left|x\right|^{-n}.
-\end{aligned}
+Hf\left(x\right)\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{B\left(x,2\left|x\right|\right)}\left|f\right|\mathrm{d}y\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{K}\left|f\right|\mathrm{d}y=\frac{c}{C_{n}\left(2\left|x\right|\right)^{n}}=\frac{c}{2^{n}C_{n}}\left|x\right|^{-n}.
 $$
 
 取 $C=\frac{c}{2^{n}C_{n}}> 0$, 即得 $Hf\left(x\right)\ge C\left|x\right|^{-n}$ 对 $\left|x\right|> R$ 成立.
@@ -53,8 +52,7 @@ $$
 由球体积公式, 该集合的测度为
 
 $$
-\begin{aligned}m\left(\left\{x:\left|x\right|< \left(C/\lambda\right)^{1/n}\right\}\right)&=C_{n}\left(\frac{C}{\lambda}\right)^{1/n\cdot n}\\&=\frac{C_{n}C}{\lambda}.
-\end{aligned}
+m\left(\left\{x:\left|x\right|< \left(C/\lambda\right)^{1/n}\right\}\right)=C_{n}\left(\frac{C}{\lambda}\right)^{1/n\cdot n}=\frac{C_{n}C}{\lambda}.
 $$
 
 令 $C'=C_{n}C$, 得 $m\left(\left\{x:Hf\left(x\right)> \lambda\right\}\right)\ge C'\lambda^{-1}$ 对充分小的 $\lambda> 0$ 成立. $\blacksquare$
@@ -78,8 +76,7 @@ $$
 即 $B\subset B\left(x,2\rho\right)$. 由球体积公式, $\left|B\left(x,2\rho\right)\right|=C_{n}\left(2\rho\right)^{n}=2^{n}C_{n}\rho^{n}=2^{n}\left|B\right|$. 于是
 
 $$
-\begin{aligned}\frac{1}{m\left(B\right)}\int_{B}\left|f\right|\mathrm{d}y\\&\le\frac{1}{m\left(B\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y&=\frac{m\left(B\left(x,2\rho\right)\right)}{m\left(B\right)}\cdot\frac{1}{m\left(B\left(x,2\rho\right)\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y\\&=2^{n}\cdot\frac{1}{m\left(B\left(x,2\rho\right)\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y\\&\le2^{n}Hf\left(x\right).
-\end{aligned}
+\frac{1}{m\left(B\right)}\int_{B}\left|f\right|\mathrm{d}y\le\frac{1}{m\left(B\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y=\frac{m\left(B\left(x,2\rho\right)\right)}{m\left(B\right)}\cdot\frac{1}{m\left(B\left(x,2\rho\right)\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y=2^{n}\cdot\frac{1}{m\left(B\left(x,2\rho\right)\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y;\le2^{n}Hf\left(x\right).
 $$
 
 对一切含 $x$ 的球 $B$ 取上确界, 得 $H^{*}f\left(x\right)\le2^{n}Hf\left(x\right)$. 合并即 $Hf\le H^{*}f\le2^{n}Hf$. $\blacksquare$
@@ -93,8 +90,7 @@ $$
 **正则性的条件 (2) 对 $\lambda$.** 先注意对任意 $E\in\mathcal B\left(\mathbb R^{n}\right)$,
 
 $$
-\begin{aligned}\lambda\left(E\right)&=\lambda\left(E\cap A\right)\\&=\nu\left(E\cap A\right),
-\end{aligned}
+\lambda\left(E\right)=\lambda\left(E\cap A\right)=\nu\left(E\cap A\right),
 $$
 
 其中第二式用到 $\mu\left(E\cap A\right)\le\mu\left(A\right)=0$; 同理 $\mu\left(E\right)=\nu\left(E\cap A^{c}\right)$.
