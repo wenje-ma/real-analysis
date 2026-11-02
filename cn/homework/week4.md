@@ -1,24 +1,44 @@
 # week4
 
-> **基础知识: 存在勒贝格不可测集 (维塔利集)**<br>在勒贝格测度空间 $\left(\mathbb R,\mathcal L,m\right)$ 中, 存在 $A\subset\mathbb R$ 使 $A\notin\mathcal L$. 其构造基于选择公理: 在 $\mathbb R/\mathbb Q$ 的每个等价类中选取一个代表元, 所得集合即为勒贝格不可测集.
+> **基础知识: 存在勒贝格不可测集 (维塔利集)**
+>
+> 在勒贝格测度空间 $\left(\mathbb R,\mathcal L,m\right)$ 中, 存在 $A\subset\mathbb R$ 使 $A\notin\mathcal L$. 其构造基于选择公理: 在 $\mathbb R/\mathbb Q$ 的每个等价类中选取一个代表元, 所得集合即为勒贝格不可测集.
 
-> **定义 4.1.3 ($\sigma$-代数)**<br>设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 $\sigma$-代数, 若满足: (1) $X\in\mathcal F$; (2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
+> **定义 4.1.3 ($\sigma$-代数)**
+>
+> 设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 $\sigma$-代数, 若满足: (1) $X\in\mathcal F$; (2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
 
-> **定义 4.3.2 (博雷尔 $\sigma$-代数)**<br>设 $\left(X,\tau\right)$ 是一个拓扑空间. 由所有开集生成的 $\sigma$-代数称为博雷尔 $\sigma$-代数, 记作 $\mathcal B\left(X\right)$; 其元素称为博雷尔集.
+> **定义 4.3.2 (博雷尔 $\sigma$-代数)**
+>
+> 设 $\left(X,\tau\right)$ 是一个拓扑空间. 由所有开集生成的 $\sigma$-代数称为博雷尔 $\sigma$-代数, 记作 $\mathcal B\left(X\right)$; 其元素称为博雷尔集.
 
-> **定义 4.5.2 (乘积 $\sigma$-代数)**<br>乘积 $\sigma$-代数 $\mathcal F\otimes\mathcal G$ 是包含所有可测矩形的最小 $\sigma$-代数: $\mathcal F\otimes\mathcal G:=\sigma\left(\left\{A\times B:A\in\mathcal F,B\in\mathcal G\right\}\right)$.
+> **定义 4.5.2 (乘积 $\sigma$-代数)**
+>
+> 乘积 $\sigma$-代数 $\mathcal F\otimes\mathcal G$ 是包含所有可测矩形的最小 $\sigma$-代数: $\mathcal F\otimes\mathcal G:=\sigma\left(\left\{A\times B:A\in\mathcal F,B\in\mathcal G\right\}\right)$.
 
-> **定理 4.5.4 (博雷尔集的乘积)**<br>对于欧氏空间中的博雷尔 $\sigma$-代数, 有 $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)=\mathcal B\left(\mathbb R^{m+n}\right)$.
+> **定理 4.5.4 (博雷尔集的乘积)**
+>
+> 对于欧氏空间中的博雷尔 $\sigma$-代数, 有 $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)=\mathcal B\left(\mathbb R^{m+n}\right)$.
 
-> **定义 7.1.1 (可测映射)**<br>设 $\left(X,\mathcal F\right)$, $\left(Y,\mathcal G\right)$ 为两个可测空间. 映射 $f:X\to Y$ 称为 $\left(\mathcal F,\mathcal G\right)$-可测的, 若对任意 $B\in\mathcal G$ 有 $f^{-1}\left(B\right)\in\mathcal F$.
+> **定义 7.1.1 (可测映射)**
+>
+> 设 $\left(X,\mathcal F\right)$, $\left(Y,\mathcal G\right)$ 为两个可测空间. 映射 $f:X\to Y$ 称为 $\left(\mathcal F,\mathcal G\right)$-可测的, 若对任意 $B\in\mathcal G$ 有 $f^{-1}\left(B\right)\in\mathcal F$.
 
-> **命题 7.1.7 (乘积空间的可测性)**<br>设 $f=\left(f_{1},\dots,f_{n}\right):X\to Y_{1}\times\cdots\times Y_{n}$. 在乘积空间配备乘积 $\sigma$-代数下, $f$ 可测当且仅当每个坐标映射 $f_{i}:X\to Y_{i}$ 可测.
+> **命题 7.1.7 (乘积空间的可测性)**
+>
+> 设 $f=\left(f_{1},\dots,f_{n}\right):X\to Y_{1}\times\cdots\times Y_{n}$. 在乘积空间配备乘积 $\sigma$-代数下, $f$ 可测当且仅当每个坐标映射 $f_{i}:X\to Y_{i}$ 可测.
 
-> **定理 7.1.8 (实值可测函数的运算封闭性)**<br>设 $f,g:X\to\mathbb R$ 可测, $c\in\mathbb R$, 则: (1) $cf$, $f+g$, $fg$, $\max\left(f,g\right)$, $\min\left(f,g\right)$ 可测; (2) 若 $g\left(x\right)\ne0$ 对所有 $x$, 则 $f/g$ 可测; (3) 若 $\left\{f_{n}\right\}$ 可测, 则 $\sup_{n}f_{n}$, $\inf_{n}f_{n}$, $\limsup_{n\to\infty}f_{n}$, $\liminf_{n\to\infty}f_{n}$ 可测; (4) 若 $\left\{f_{n}\right\}$ 点点收敛, 则极限函数 $\lim_{n\to\infty}f_{n}$ 可测.
+> **定理 7.1.8 (实值可测函数的运算封闭性)**
+>
+> 设 $f,g:X\to\mathbb R$ 可测, $c\in\mathbb R$, 则: (1) $cf$, $f+g$, $fg$, $\max\left(f,g\right)$, $\min\left(f,g\right)$ 可测; (2) 若 $g\left(x\right)\ne0$ 对所有 $x$, 则 $f/g$ 可测; (3) 若 $\left\{f_{n}\right\}$ 可测, 则 $\sup_{n}f_{n}$, $\inf_{n}f_{n}$, $\limsup_{n\to\infty}f_{n}$, $\liminf_{n\to\infty}f_{n}$ 可测; (4) 若 $\left\{f_{n}\right\}$ 点点收敛, 则极限函数 $\lim_{n\to\infty}f_{n}$ 可测.
 
-> **定理 7.1.9 (可测函数与连续函数的复合)**<br>设 $f:X\to\mathbb R$ 可测, $g:\mathbb R\to\mathbb R$ 连续, 则 $g\circ f:X\to\mathbb R$ 可测.
+> **定理 7.1.9 (可测函数与连续函数的复合)**
+>
+> 设 $f:X\to\mathbb R$ 可测, $g:\mathbb R\to\mathbb R$ 连续, 则 $g\circ f:X\to\mathbb R$ 可测.
 
-> **例 7.3.5 (示性函数)**<br>设 $A\subset X$, 则 $\chi_{A}:X\to\mathbb R$ 可测当且仅当 $A\in\mathcal F$.
+> **例 7.3.5 (示性函数)**
+>
+> 设 $A\subset X$, 则 $\chi_{A}:X\to\mathbb R$ 可测当且仅当 $A\in\mathcal F$.
 
 ---
 

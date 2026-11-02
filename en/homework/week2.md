@@ -1,54 +1,80 @@
 # week2
 
-> **Definition 1.3.1 (Limit Superior)**<br>The limit superior of a sequence of sets $\left\{E_{n}\right\}$ is
+> **Definition 1.3.1 (Limit Superior)**
+>
+> The limit superior of a sequence of sets $\left\{E_{n}\right\}$ is
 
 $$
 \overline{\lim}_{n\to\infty}E_{n}=\left\{x:x\text{ belongs to infinitely many }E_{n}\right\}=\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}E_{k}.
 $$
 
-> **Definition 1.3.3 (Limit Inferior)**<br>The limit inferior of a sequence of sets $\left\{E_{n}\right\}$ is
+> **Definition 1.3.3 (Limit Inferior)**
+>
+> The limit inferior of a sequence of sets $\left\{E_{n}\right\}$ is
 
 $$
 \underline{\lim}_{n\to\infty}E_{n}=\left\{x:x\text{ fails to belong to only finitely many }E_{n}\right\}=\bigcup_{n=1}^{\infty}\bigcap_{k=n}^{\infty}E_{k}.
 $$
 
-> **Definition 4.1.3 ($\sigma$-Algebra)**<br>Let $X$ be nonempty and $\mathcal F\subset\mathcal P\left(X\right)$. $\mathcal F$ is called a $\sigma$-algebra on $X$ if: (1) $X\in\mathcal F$; (2) closed under complements: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) closed under countable unions: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$. $\left(X,\mathcal F\right)$ is called a measurable space, and elements of $\mathcal F$ are called measurable sets.
+> **Definition 4.1.3 ($\sigma$-Algebra)**
+>
+> Let $X$ be nonempty and $\mathcal F\subset\mathcal P\left(X\right)$. $\mathcal F$ is called a $\sigma$-algebra on $X$ if: (1) $X\in\mathcal F$; (2) closed under complements: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) closed under countable unions: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$. $\left(X,\mathcal F\right)$ is called a measurable space, and elements of $\mathcal F$ are called measurable sets.
 
-> **Definition 5.1.2 (Measure)**<br>Let $\left(X,\mathcal F\right)$ be a measurable space. A function $\mu:\mathcal F\to\left[0,+\infty\right]$ is called a measure on $\left(X,\mathcal F\right)$ if: (1) nonnegativity: $\mu\left(E\right)\ge0$ for all $E\in\mathcal F$; (2) empty set: $\mu\left(\varnothing\right)=0$; (3) countable additivity ($\sigma$-additivity): for any countable pairwise-disjoint $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
+> **Definition 5.1.2 (Measure)**
+>
+> Let $\left(X,\mathcal F\right)$ be a measurable space. A function $\mu:\mathcal F\to\left[0,+\infty\right]$ is called a measure on $\left(X,\mathcal F\right)$ if: (1) nonnegativity: $\mu\left(E\right)\ge0$ for all $E\in\mathcal F$; (2) empty set: $\mu\left(\varnothing\right)=0$; (3) countable additivity ($\sigma$-additivity): for any countable pairwise-disjoint $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
 
-> **Proposition 5.2.1 (Finite Additivity)**<br>Let $\mu$ be a measure on $\left(X,\mathcal F\right)$ and $E_{1},\dots,E_{n}\in\mathcal F$ be pairwise disjoint. Then
+> **Proposition 5.2.1 (Finite Additivity)**
+>
+> Let $\mu$ be a measure on $\left(X,\mathcal F\right)$ and $E_{1},\dots,E_{n}\in\mathcal F$ be pairwise disjoint. Then
 
 $$
 \mu\left(\bigcup_{k=1}^{n}E_{k}\right)=\sum_{k=1}^{n}\mu\left(E_{k}\right).
 $$
 
-> **Proposition 5.2.2 (Monotonicity)**<br>Let $\mu$ be a measure and $E,F\in\mathcal F$ with $E\subset F$. Then $\mu\left(E\right)\le\mu\left(F\right)$. If moreover $\mu\left(E\right)< +\infty$, then $\mu\left(F\setminus E\right)=\mu\left(F\right)-\mu\left(E\right)$.
+> **Proposition 5.2.2 (Monotonicity)**
+>
+> Let $\mu$ be a measure and $E,F\in\mathcal F$ with $E\subset F$. Then $\mu\left(E\right)\le\mu\left(F\right)$. If moreover $\mu\left(E\right)< +\infty$, then $\mu\left(F\setminus E\right)=\mu\left(F\right)-\mu\left(E\right)$.
 
-> **Proposition 5.2.3 (Countable Subadditivity)**<br>Let $\mu$ be a measure and $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ be any countable collection of sets (not necessarily pairwise disjoint). Then
+> **Proposition 5.2.3 (Countable Subadditivity)**
+>
+> Let $\mu$ be a measure and $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ be any countable collection of sets (not necessarily pairwise disjoint). Then
 
 $$
 \mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu\left(E_{n}\right).
 $$
 
-> **Proposition 5.2.4 (Continuity from Below)**<br>Let $\mu$ be a measure and $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ be an increasing sequence of sets (i.e. $E_{1}\subset E_{2}\subset\cdots$). Then
+> **Proposition 5.2.4 (Continuity from Below)**
+>
+> Let $\mu$ be a measure and $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ be an increasing sequence of sets (i.e. $E_{1}\subset E_{2}\subset\cdots$). Then
 
 $$
 \mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right).
 $$
 
-> **Proposition 5.2.5 (Continuity from Above)**<br>Let $\mu$ be a measure and $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ be a decreasing sequence of sets (i.e. $E_{1}\supset E_{2}\supset\cdots$), and suppose there exists $m$ with $\mu\left(E_{m}\right)< +\infty$. Then
+> **Proposition 5.2.5 (Continuity from Above)**
+>
+> Let $\mu$ be a measure and $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ be a decreasing sequence of sets (i.e. $E_{1}\supset E_{2}\supset\cdots$), and suppose there exists $m$ with $\mu\left(E_{m}\right)< +\infty$. Then
 
 $$
 \mu\left(\bigcap_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right).
 $$
 
-> **Definition 5.4.1 (Null Set)**<br>Let $\left(X,\mathcal F,\mu\right)$ be a measure space. A set $N\in\mathcal F$ is called a null set if $\mu\left(N\right)=0$.
+> **Definition 5.4.1 (Null Set)**
+>
+> Let $\left(X,\mathcal F,\mu\right)$ be a measure space. A set $N\in\mathcal F$ is called a null set if $\mu\left(N\right)=0$.
 
-> **Definition 5.4.2 (Zero-Measure Set)**<br>A set $A\subset X$ is called a zero-measure set if there exists $N\in\mathcal F$ such that $A\subset N$ and $\mu\left(N\right)=0$.
+> **Definition 5.4.2 (Zero-Measure Set)**
+>
+> A set $A\subset X$ is called a zero-measure set if there exists $N\in\mathcal F$ such that $A\subset N$ and $\mu\left(N\right)=0$.
 
-> **Definition 5.4.4 (Complete Measure)**<br>A measure space $\left(X,\mathcal F,\mu\right)$ is called complete if for every $N\in\mathcal F$ with $\mu\left(N\right)=0$ and every $A\subset N$, we have $A\in\mathcal F$.
+> **Definition 5.4.4 (Complete Measure)**
+>
+> A measure space $\left(X,\mathcal F,\mu\right)$ is called complete if for every $N\in\mathcal F$ with $\mu\left(N\right)=0$ and every $A\subset N$, we have $A\in\mathcal F$.
 
-> **Theorem 5.4.6 (Completion Theorem for Measures)**<br>Every measure space $\left(X,\mathcal F,\mu\right)$ can be completed, i.e. there exists a complete measure space $\left(X,\mathcal M,\overline\mu\right)$ such that: (1) $\mathcal F\subset\mathcal M$; (2) $\overline\mu|_{\mathcal F}=\mu$; (3) $\mathcal M$ is the smallest complete $\sigma$-algebra containing $\mathcal F$. Explicitly, let $\mathcal N=\left\{N\in\mathcal F:\mu\left(N\right)=0\right\}$, $\mathcal M=\left\{A\subset X:\exists\,B\in\mathcal F,\ \exists\,N\in\mathcal N,\ B\subset A\subset B\cup N\right\}$, and define $\overline\mu\left(A\right)=\mu\left(B\right)$.
+> **Theorem 5.4.6 (Completion Theorem for Measures)**
+>
+> Every measure space $\left(X,\mathcal F,\mu\right)$ can be completed, i.e. there exists a complete measure space $\left(X,\mathcal M,\overline\mu\right)$ such that: (1) $\mathcal F\subset\mathcal M$; (2) $\overline\mu|_{\mathcal F}=\mu$; (3) $\mathcal M$ is the smallest complete $\sigma$-algebra containing $\mathcal F$. Explicitly, let $\mathcal N=\left\{N\in\mathcal F:\mu\left(N\right)=0\right\}$, $\mathcal M=\left\{A\subset X:\exists\,B\in\mathcal F,\ \exists\,N\in\mathcal N,\ B\subset A\subset B\cup N\right\}$, and define $\overline\mu\left(A\right)=\mu\left(B\right)$.
 
 ---
 

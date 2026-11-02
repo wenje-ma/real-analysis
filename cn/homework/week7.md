@@ -1,32 +1,56 @@
 # week7
 
-> **基础知识: 矩形代数的交补性质**<br>对可测矩形成立 $\left(A\times B\right)\cap\left(C\times D\right)=\left(A\cap C\right)\times\left(B\cap D\right)$ 与 $\left(A\times B\right)^{c}=\left(A^{c}\times B\right)\cup\left(A\times B^{c}\right)$.
+> **基础知识: 矩形代数的交补性质**
+>
+> 对可测矩形成立 $\left(A\times B\right)\cap\left(C\times D\right)=\left(A\cap C\right)\times\left(B\cap D\right)$ 与 $\left(A\times B\right)^{c}=\left(A^{c}\times B\right)\cup\left(A\times B^{c}\right)$.
 
-> **基础知识: 测度限制在代数上是准测度**<br>若 $\lambda$ 是 $\sigma$-代数 $\mathcal M$ 上的测度, $\mathcal E\subset\mathcal M$ 是一个代数, 则 $\lambda|_{\mathcal E}$ 满足准测度条件 (零空集性与 $\sigma$-可加性在 $\mathcal E$ 内成立).
+> **基础知识: 测度限制在代数上是准测度**
+>
+> 若 $\lambda$ 是 $\sigma$-代数 $\mathcal M$ 上的测度, $\mathcal E\subset\mathcal M$ 是一个代数, 则 $\lambda|_{\mathcal E}$ 满足准测度条件 (零空集性与 $\sigma$-可加性在 $\mathcal E$ 内成立).
 
-> **定义 5.1.2 (测度)**<br>设 $\left(X,\mathcal F\right)$ 是一个可测空间. 函数 $\mu:\mathcal F\to\left[0,+\infty\right]$ 称为 $\left(X,\mathcal F\right)$ 上的一个测度, 如果满足: (1) 非负性: $\mu\left(E\right)\ge0$ 对一切 $E\in\mathcal F$ 成立; (2) 零空集性: $\mu\left(\emptyset\right)=0$; (3) 可数可加性 ($\sigma$-可加性): 对任意可数个两两不交的集合 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 有 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
+> **定义 5.1.2 (测度)**
+>
+> 设 $\left(X,\mathcal F\right)$ 是一个可测空间. 函数 $\mu:\mathcal F\to\left[0,+\infty\right]$ 称为 $\left(X,\mathcal F\right)$ 上的一个测度, 如果满足: (1) 非负性: $\mu\left(E\right)\ge0$ 对一切 $E\in\mathcal F$ 成立; (2) 零空集性: $\mu\left(\emptyset\right)=0$; (3) 可数可加性 ($\sigma$-可加性): 对任意可数个两两不交的集合 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 有 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
 
-> **定义 6.2.1 (准测度)**<br>设 $X$ 是非空集合, $\mathcal E\subset\mathcal P\left(X\right)$ 是一个代数. 函数 $\mu_{0}:\mathcal E\to\left[0,+\infty\right]$ 称为一个准测度, 如果 $\mu_{0}\left(\emptyset\right)=0$, 且若 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal E$ 两两不交且 $\bigcup_{n=1}^{\infty}E_{n}\in\mathcal E$, 则 $\mu_{0}\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right)$.
+> **定义 6.2.1 (准测度)**
+>
+> 设 $X$ 是非空集合, $\mathcal E\subset\mathcal P\left(X\right)$ 是一个代数. 函数 $\mu_{0}:\mathcal E\to\left[0,+\infty\right]$ 称为一个准测度, 如果 $\mu_{0}\left(\emptyset\right)=0$, 且若 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal E$ 两两不交且 $\bigcup_{n=1}^{\infty}E_{n}\in\mathcal E$, 则 $\mu_{0}\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right)$.
 
-> **定理 6.3.3 (卡拉西奥多里定理)**<br>设 $\mu^{*}$ 是 $X$ 上的外测度, 则 $\mathcal M$ (全部 $\mu^{*}$-可测集) 是一个 $\sigma$-代数, 且 $\mu^{*}|_{\mathcal M}$ 是一个完备测度. 如果 $\mu^{*}$ 是由准测度 $\mu_{0}$ 生成的, 且 $\mu_{0}$ 是 $\sigma$-有限的, 则 $\mu^{*}|_{\mathcal M}$ 是 $\mu_{0}$ 的唯一延拓.
+> **定理 6.3.3 (卡拉西奥多里定理)**
+>
+> 设 $\mu^{*}$ 是 $X$ 上的外测度, 则 $\mathcal M$ (全部 $\mu^{*}$-可测集) 是一个 $\sigma$-代数, 且 $\mu^{*}|_{\mathcal M}$ 是一个完备测度. 如果 $\mu^{*}$ 是由准测度 $\mu_{0}$ 生成的, 且 $\mu_{0}$ 是 $\sigma$-有限的, 则 $\mu^{*}|_{\mathcal M}$ 是 $\mu_{0}$ 的唯一延拓.
 
-> **命题 7.1.5 (复合保持可测性)**<br>若 $f:X\to Y$ 是 $\left(\mathcal F,\mathcal G\right)$-可测的, $g:Y\to Z$ 是 $\left(\mathcal G,\mathcal H\right)$-可测的, 则 $g\circ f:X\to Z$ 是 $\left(\mathcal F,\mathcal H\right)$-可测的.
+> **命题 7.1.5 (复合保持可测性)**
+>
+> 若 $f:X\to Y$ 是 $\left(\mathcal F,\mathcal G\right)$-可测的, $g:Y\to Z$ 是 $\left(\mathcal G,\mathcal H\right)$-可测的, 则 $g\circ f:X\to Z$ 是 $\left(\mathcal F,\mathcal H\right)$-可测的.
 
-> **命题 7.1.7 (乘积空间的可测性)**<br>设 $f=\left(f_{1},\dots,f_{n}\right):X\to Y_{1}\times\cdots\times Y_{n}$. 在乘积空间配备乘积 $\sigma$-代数下, $f$ 可测当且仅当每个坐标映射 $f_{i}:X\to Y_{i}$ 可测.
+> **命题 7.1.7 (乘积空间的可测性)**
+>
+> 设 $f=\left(f_{1},\dots,f_{n}\right):X\to Y_{1}\times\cdots\times Y_{n}$. 在乘积空间配备乘积 $\sigma$-代数下, $f$ 可测当且仅当每个坐标映射 $f_{i}:X\to Y_{i}$ 可测.
 
-> **定义 10.1.1 (乘积 $\sigma$-代数)**<br>设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是两个测度空间. 乘积空间 $X\times Y$ 上的乘积 $\sigma$-代数定义为 $\mathcal A\otimes\mathcal B=\sigma\left(\left\{A\times B:A\in\mathcal A,B\in\mathcal B\right\}\right)$, 即由所有可测矩形生成的 $\sigma$-代数.
+> **定义 10.1.1 (乘积 $\sigma$-代数)**
+>
+> 设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是两个测度空间. 乘积空间 $X\times Y$ 上的乘积 $\sigma$-代数定义为 $\mathcal A\otimes\mathcal B=\sigma\left(\left\{A\times B:A\in\mathcal A,B\in\mathcal B\right\}\right)$, 即由所有可测矩形生成的 $\sigma$-代数.
 
-> **定义 10.1.2 (截面)**<br>对于 $E\subseteq X\times Y$, 定义 $E$ 的 x-截面 $E_{x}=\left\{y\in Y:\left(x,y\right)\in E\right\}$ 和 y-截面 $E^{y}=\left\{x\in X:\left(x,y\right)\in E\right\}$.
+> **定义 10.1.2 (截面)**
+>
+> 对于 $E\subseteq X\times Y$, 定义 $E$ 的 x-截面 $E_{x}=\left\{y\in Y:\left(x,y\right)\in E\right\}$ 和 y-截面 $E^{y}=\left\{x\in X:\left(x,y\right)\in E\right\}$.
 
-> **定理 10.1.4 (乘积测度的存在唯一性)**<br>设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间. 存在唯一的测度 $\mu\times\nu$ 在 $\left(X\times Y,\mathcal A\otimes\mathcal B\right)$ 上, 使得对所有 $A\in\mathcal A$, $B\in\mathcal B$ 有 $\left(\mu\times\nu\right)\left(A\times B\right)=\mu\left(A\right)\nu\left(B\right)$. 其构造为 $\phi\left(E\right)=\int_{X}\nu\left(E_{x}\right)\mathrm{d}\mu\left(x\right)$ 对 $E\in\mathcal A\otimes\mathcal B$.
+> **定理 10.1.4 (乘积测度的存在唯一性)**
+>
+> 设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间. 存在唯一的测度 $\mu\times\nu$ 在 $\left(X\times Y,\mathcal A\otimes\mathcal B\right)$ 上, 使得对所有 $A\in\mathcal A$, $B\in\mathcal B$ 有 $\left(\mu\times\nu\right)\left(A\times B\right)=\mu\left(A\right)\nu\left(B\right)$. 其构造为 $\phi\left(E\right)=\int_{X}\nu\left(E_{x}\right)\mathrm{d}\mu\left(x\right)$ 对 $E\in\mathcal A\otimes\mathcal B$.
 
-> **定理 10.2.1 (富比尼定理)**<br>设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 即 $\int_{X\times Y}\left|f\right|\mathrm{d}\left(\mu\times\nu\right)< \infty$, 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 $\nu$-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 $\mu$-可积的; 且重积分相等:
+> **定理 10.2.1 (富比尼定理)**
+>
+> 设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 即 $\int_{X\times Y}\left|f\right|\mathrm{d}\left(\mu\times\nu\right)< \infty$, 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 $\nu$-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 $\mu$-可积的; 且重积分相等:
 
 $$
 \int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).
 $$
 
-> **定理 10.2.2 (托内利定理)**<br>如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则
+> **定理 10.2.2 (托内利定理)**
+>
+> 如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则
 
 $$
 \int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),

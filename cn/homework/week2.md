@@ -1,54 +1,80 @@
 # week2
 
-> **定义 1.3.1 (上极限)**<br>集列 $\left\{E_{n}\right\}$ 的上极限定义为
+> **定义 1.3.1 (上极限)**
+>
+> 集列 $\left\{E_{n}\right\}$ 的上极限定义为
 
 $$
 \overline{\lim}_{n\to\infty}E_{n}=\left\{x:x\text{ 属于无穷多个 }E_{n}\right\}=\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}E_{k}.
 $$
 
-> **定义 1.3.3 (下极限)**<br>集列 $\left\{E_{n}\right\}$ 的下极限定义为
+> **定义 1.3.3 (下极限)**
+>
+> 集列 $\left\{E_{n}\right\}$ 的下极限定义为
 
 $$
 \underline{\lim}_{n\to\infty}E_{n}=\left\{x:x\text{ 仅不属于有限多个 }E_{n}\right\}=\bigcup_{n=1}^{\infty}\bigcap_{k=n}^{\infty}E_{k}.
 $$
 
-> **定义 4.1.3 ($\sigma$-代数)**<br>设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 $\sigma$-代数, 若满足: (1) $X\in\mathcal F$; (2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$. 称 $\left(X,\mathcal F\right)$ 为可测空间, $\mathcal F$ 中的元素称为可测集.
+> **定义 4.1.3 ($\sigma$-代数)**
+>
+> 设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 $\sigma$-代数, 若满足: (1) $X\in\mathcal F$; (2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$. 称 $\left(X,\mathcal F\right)$ 为可测空间, $\mathcal F$ 中的元素称为可测集.
 
-> **定义 5.1.2 (测度)**<br>设 $\left(X,\mathcal F\right)$ 是可测空间. 函数 $\mu:\mathcal F\to\left[0,+\infty\right]$ 称为 $\left(X,\mathcal F\right)$ 上的一个测度, 若满足: (1) 非负性: $\mu\left(E\right)\ge0$ 对一切 $E\in\mathcal F$; (2) 零空集性: $\mu\left(\varnothing\right)=0$; (3) 可数可加性 ($\sigma$-可加性): 对任意可数个两两不交的 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 有 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
+> **定义 5.1.2 (测度)**
+>
+> 设 $\left(X,\mathcal F\right)$ 是可测空间. 函数 $\mu:\mathcal F\to\left[0,+\infty\right]$ 称为 $\left(X,\mathcal F\right)$ 上的一个测度, 若满足: (1) 非负性: $\mu\left(E\right)\ge0$ 对一切 $E\in\mathcal F$; (2) 零空集性: $\mu\left(\varnothing\right)=0$; (3) 可数可加性 ($\sigma$-可加性): 对任意可数个两两不交的 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 有 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
 
-> **命题 5.2.1 (有限可加性)**<br>设 $\mu$ 是 $\left(X,\mathcal F\right)$ 上的测度, $E_{1},\dots,E_{n}\in\mathcal F$ 是两两不交的集合, 则
+> **命题 5.2.1 (有限可加性)**
+>
+> 设 $\mu$ 是 $\left(X,\mathcal F\right)$ 上的测度, $E_{1},\dots,E_{n}\in\mathcal F$ 是两两不交的集合, 则
 
 $$
 \mu\left(\bigcup_{k=1}^{n}E_{k}\right)=\sum_{k=1}^{n}\mu\left(E_{k}\right).
 $$
 
-> **命题 5.2.2 (单调性)**<br>设 $\mu$ 是测度, $E,F\in\mathcal F$ 且 $E\subset F$, 则 $\mu\left(E\right)\le\mu\left(F\right)$. 若进一步 $\mu\left(E\right)< +\infty$, 则 $\mu\left(F\setminus E\right)=\mu\left(F\right)-\mu\left(E\right)$.
+> **命题 5.2.2 (单调性)**
+>
+> 设 $\mu$ 是测度, $E,F\in\mathcal F$ 且 $E\subset F$, 则 $\mu\left(E\right)\le\mu\left(F\right)$. 若进一步 $\mu\left(E\right)< +\infty$, 则 $\mu\left(F\setminus E\right)=\mu\left(F\right)-\mu\left(E\right)$.
 
-> **命题 5.2.3 (次可数可加性)**<br>设 $\mu$ 是测度, $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 是任意可数个集合 (不一定两两不交), 则
+> **命题 5.2.3 (次可数可加性)**
+>
+> 设 $\mu$ 是测度, $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 是任意可数个集合 (不一定两两不交), 则
 
 $$
 \mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu\left(E_{n}\right).
 $$
 
-> **命题 5.2.4 (下连续性)**<br>设 $\mu$ 是测度, $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 是单调递增的集合序列 (即 $E_{1}\subset E_{2}\subset\cdots$), 则
+> **命题 5.2.4 (下连续性)**
+>
+> 设 $\mu$ 是测度, $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 是单调递增的集合序列 (即 $E_{1}\subset E_{2}\subset\cdots$), 则
 
 $$
 \mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right).
 $$
 
-> **命题 5.2.5 (上连续性)**<br>设 $\mu$ 是测度, $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 是单调递减的集合序列 (即 $E_{1}\supset E_{2}\supset\cdots$), 且存在某个 $m$ 使得 $\mu\left(E_{m}\right)< +\infty$, 则
+> **命题 5.2.5 (上连续性)**
+>
+> 设 $\mu$ 是测度, $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 是单调递减的集合序列 (即 $E_{1}\supset E_{2}\supset\cdots$), 且存在某个 $m$ 使得 $\mu\left(E_{m}\right)< +\infty$, 则
 
 $$
 \mu\left(\bigcap_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right).
 $$
 
-> **定义 5.4.1 (零集)**<br>设 $\left(X,\mathcal F,\mu\right)$ 是测度空间. 集合 $N\in\mathcal F$ 称为零集, 若 $\mu\left(N\right)=0$.
+> **定义 5.4.1 (零集)**
+>
+> 设 $\left(X,\mathcal F,\mu\right)$ 是测度空间. 集合 $N\in\mathcal F$ 称为零集, 若 $\mu\left(N\right)=0$.
 
-> **定义 5.4.2 (零测度集)**<br>集合 $A\subset X$ 称为零测度集, 若存在 $N\in\mathcal F$ 使得 $A\subset N$ 且 $\mu\left(N\right)=0$.
+> **定义 5.4.2 (零测度集)**
+>
+> 集合 $A\subset X$ 称为零测度集, 若存在 $N\in\mathcal F$ 使得 $A\subset N$ 且 $\mu\left(N\right)=0$.
 
-> **定义 5.4.4 (完备测度)**<br>测度空间 $\left(X,\mathcal F,\mu\right)$ 称为完备的, 若对任意满足 $\mu\left(N\right)=0$ 的 $N\in\mathcal F$, 以及任意 $A\subset N$, 都有 $A\in\mathcal F$.
+> **定义 5.4.4 (完备测度)**
+>
+> 测度空间 $\left(X,\mathcal F,\mu\right)$ 称为完备的, 若对任意满足 $\mu\left(N\right)=0$ 的 $N\in\mathcal F$, 以及任意 $A\subset N$, 都有 $A\in\mathcal F$.
 
-> **定理 5.4.6 (测度完备化定理)**<br>任意测度空间 $\left(X,\mathcal F,\mu\right)$ 都可以完备化, 即存在完备测度空间 $\left(X,\mathcal M,\overline\mu\right)$ 使得: (1) $\mathcal F\subset\mathcal M$; (2) $\overline\mu|_{\mathcal F}=\mu$; (3) $\mathcal M$ 是包含 $\mathcal F$ 的最小完备 $\sigma$-代数. 具体地, 令 $\mathcal N=\left\{N\in\mathcal F:\mu\left(N\right)=0\right\}$, $\mathcal M=\left\{A\subset X:\exists\,B\in\mathcal F,\ \exists\,N\in\mathcal N,\ B\subset A\subset B\cup N\right\}$, 并定义 $\overline\mu\left(A\right)=\mu\left(B\right)$.
+> **定理 5.4.6 (测度完备化定理)**
+>
+> 任意测度空间 $\left(X,\mathcal F,\mu\right)$ 都可以完备化, 即存在完备测度空间 $\left(X,\mathcal M,\overline\mu\right)$ 使得: (1) $\mathcal F\subset\mathcal M$; (2) $\overline\mu|_{\mathcal F}=\mu$; (3) $\mathcal M$ 是包含 $\mathcal F$ 的最小完备 $\sigma$-代数. 具体地, 令 $\mathcal N=\left\{N\in\mathcal F:\mu\left(N\right)=0\right\}$, $\mathcal M=\left\{A\subset X:\exists\,B\in\mathcal F,\ \exists\,N\in\mathcal N,\ B\subset A\subset B\cup N\right\}$, 并定义 $\overline\mu\left(A\right)=\mu\left(B\right)$.
 
 ---
 

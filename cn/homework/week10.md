@@ -1,6 +1,8 @@
 # week10
 
-> **基础知识: 哈代-利特尔伍德极大函数**<br>设 $f\in L^{1}_{\mathrm{loc}}\left(\mathbb R^{n}\right)$. 定义 $f$ 的哈代-利特尔伍德极大函数
+> **基础知识: 哈代-利特尔伍德极大函数**
+>
+> 设 $f\in L^{1}_{\mathrm{loc}}\left(\mathbb R^{n}\right)$. 定义 $f$ 的哈代-利特尔伍德极大函数
 
 $$
 Mf\left(x\right)=\sup_{r> 0}\frac{1}{\left|B\left(x,r\right)\right|}\int_{B\left(x,r\right)}\left|f\left(y\right)\right|\mathrm{d}y,
@@ -8,11 +10,17 @@ $$
 
 其中 $B\left(x,r\right)$ 是以 $x$ 为中心,$r$ 为半径的开球, $\left|B\left(x,r\right)\right|$ 表示其勒贝格测度.
 
-> **基础知识: 球体积公式**<br>设 $C_{n}=m\left(B\left(1,0\right)\right)$ 为单位球的勒贝格测度, 则对任意 $x\in\mathbb R^{n}$, $r> 0$, $m\left(B\left(x,r\right)\right)=C_{n}r^{n}$.
+> **基础知识: 球体积公式**
+>
+> 设 $C_{n}=m\left(B\left(1,0\right)\right)$ 为单位球的勒贝格测度, 则对任意 $x\in\mathbb R^{n}$, $r> 0$, $m\left(B\left(x,r\right)\right)=C_{n}r^{n}$.
 
-> **基础知识: 正则博雷尔测度**<br>设 $\nu$ 是 $\mathbb R^{n}$ 上的博雷尔测度. 称 $\nu$ 为正则的, 若: (1) 对每个紧集 $K$, 有 $\nu\left(K\right)< \infty$; (2) 对每个 $E\in\mathcal B\left(\mathbb R^{n}\right)$, 有 $\nu\left(E\right)=\inf\left\{\nu\left(U\right):U\text{ 开集},E\subset U\right\}$.
+> **基础知识: 正则博雷尔测度**
+>
+> 设 $\nu$ 是 $\mathbb R^{n}$ 上的博雷尔测度. 称 $\nu$ 为正则的, 若: (1) 对每个紧集 $K$, 有 $\nu\left(K\right)< \infty$; (2) 对每个 $E\in\mathcal B\left(\mathbb R^{n}\right)$, 有 $\nu\left(E\right)=\inf\left\{\nu\left(U\right):U\text{ 开集},E\subset U\right\}$.
 
-> **定义 11.4.1 (相互奇异)**<br>设 $\mu$ 和 $\nu$ 是可测空间 $\left(X,\mathcal F\right)$ 上的两个符号测度. 若存在可测集 $E\in\mathcal F$ 使得 $E$ 为 $\mu$-零集且 $E^{c}$ 为 $\nu$-零集, 则称 $\mu$ 和 $\nu$ 相互奇异, 记为 $\mu\perp\nu$.
+> **定义 11.4.1 (相互奇异)**
+>
+> 设 $\mu$ 和 $\nu$ 是可测空间 $\left(X,\mathcal F\right)$ 上的两个符号测度. 若存在可测集 $E\in\mathcal F$ 使得 $E$ 为 $\mu$-零集且 $E^{c}$ 为 $\nu$-零集, 则称 $\mu$ 和 $\nu$ 相互奇异, 记为 $\mu\perp\nu$.
 
 ---
 

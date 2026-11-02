@@ -1,58 +1,88 @@
 # week1
 
-> **Basic Knowledge: Open Sets as Countable Unions of Open Rectangles**<br>Every open set in $\mathbb R^{m+n}$ can be written as a countable union of open rectangles: $O=\bigcup_{k=1}^{\infty}\left(U_{k}\times V_{k}\right)$, where $U_{k}\subset\mathbb R^{m}$, $V_{k}\subset\mathbb R^{n}$ are open sets (rectangles with rational endpoints form a countable basis).
+> **Basic Knowledge: Open Sets as Countable Unions of Open Rectangles**
+>
+> Every open set in $\mathbb R^{m+n}$ can be written as a countable union of open rectangles: $O=\bigcup_{k=1}^{\infty}\left(U_{k}\times V_{k}\right)$, where $U_{k}\subset\mathbb R^{m}$, $V_{k}\subset\mathbb R^{n}$ are open sets (rectangles with rational endpoints form a countable basis).
 
-> **Theorem 1.2.9 (De Morgan's Laws)**<br>$\left(A\cup B\right)^{c}=A^{c}\cap B^{c}$, $\left(A\cap B\right)^{c}=A^{c}\cup B^{c}$.
+> **Theorem 1.2.9 (De Morgan's Laws)**
+>
+> $\left(A\cup B\right)^{c}=A^{c}\cap B^{c}$, $\left(A\cap B\right)^{c}=A^{c}\cup B^{c}$.
 
-> **Theorem 2.4.2 (Properties of Preimage Operations)**<br>Let $f:A\to B$. Then $f^{-1}\left(B_{1}\cup B_{2}\right)=f^{-1}\left(B_{1}\right)\cup f^{-1}\left(B_{2}\right)$, $f^{-1}\left(B_{1}\cap B_{2}\right)=f^{-1}\left(B_{1}\right)\cap f^{-1}\left(B_{2}\right)$, $f^{-1}\left(B^{c}\right)=\left(f^{-1}\left(B\right)\right)^{c}$, $f^{-1}\left(\bigcup_{\alpha\in I}B_{\alpha}\right)=\bigcup_{\alpha\in I}f^{-1}\left(B_{\alpha}\right)$, $f^{-1}\left(\bigcap_{\alpha\in I}B_{\alpha}\right)=\bigcap_{\alpha\in I}f^{-1}\left(B_{\alpha}\right)$.
+> **Theorem 2.4.2 (Properties of Preimage Operations)**
+>
+> Let $f:A\to B$. Then $f^{-1}\left(B_{1}\cup B_{2}\right)=f^{-1}\left(B_{1}\right)\cup f^{-1}\left(B_{2}\right)$, $f^{-1}\left(B_{1}\cap B_{2}\right)=f^{-1}\left(B_{1}\right)\cap f^{-1}\left(B_{2}\right)$, $f^{-1}\left(B^{c}\right)=\left(f^{-1}\left(B\right)\right)^{c}$, $f^{-1}\left(\bigcup_{\alpha\in I}B_{\alpha}\right)=\bigcup_{\alpha\in I}f^{-1}\left(B_{\alpha}\right)$, $f^{-1}\left(\bigcap_{\alpha\in I}B_{\alpha}\right)=\bigcap_{\alpha\in I}f^{-1}\left(B_{\alpha}\right)$.
 
-> **Theorem 3.2.1 (Structure of Open Sets in $\mathbb R$)**<br>If $U\subset\mathbb R$ is a nonempty open set, then there exists a sequence of pairwise disjoint open intervals $\left\{I_{n}\right\}_{n=1}^{\infty}$ such that $U=\bigcup_{n=1}^{\infty}I_{n}$; this representation is unique up to reordering.
+> **Theorem 3.2.1 (Structure of Open Sets in $\mathbb R$)**
+>
+> If $U\subset\mathbb R$ is a nonempty open set, then there exists a sequence of pairwise disjoint open intervals $\left\{I_{n}\right\}_{n=1}^{\infty}$ such that $U=\bigcup_{n=1}^{\infty}I_{n}$; this representation is unique up to reordering.
 
-> **Definition 4.1.1 (Algebra of Sets)**<br>Let $X$ be nonempty and $\mathcal A\subset\mathcal P\left(X\right)$. $\mathcal A$ is called an algebra of sets (Boolean algebra) on $X$ if: (1) $X\in\mathcal A$; (2) closed under differences: $A,B\in\mathcal A\Rightarrow A\setminus B\in\mathcal A$; (3) closed under finite unions: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
+> **Definition 4.1.1 (Algebra of Sets)**
+>
+> Let $X$ be nonempty and $\mathcal A\subset\mathcal P\left(X\right)$. $\mathcal A$ is called an algebra of sets (Boolean algebra) on $X$ if: (1) $X\in\mathcal A$; (2) closed under differences: $A,B\in\mathcal A\Rightarrow A\setminus B\in\mathcal A$; (3) closed under finite unions: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
 
-> **Proposition 4.1.2 (Equivalent Definition of an Algebra)**<br>Let $\mathcal A\subset\mathcal P\left(X\right)$. The following are equivalent: (1) $\mathcal A$ is an algebra; (2) $\mathcal A$ satisfies: (a) $X\in\mathcal A$; (b) closed under complements: $A\in\mathcal A\Rightarrow A^{c}=X\setminus A\in\mathcal A$; (c) closed under finite unions: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
+> **Proposition 4.1.2 (Equivalent Definition of an Algebra)**
+>
+> Let $\mathcal A\subset\mathcal P\left(X\right)$. The following are equivalent: (1) $\mathcal A$ is an algebra; (2) $\mathcal A$ satisfies: (a) $X\in\mathcal A$; (b) closed under complements: $A\in\mathcal A\Rightarrow A^{c}=X\setminus A\in\mathcal A$; (c) closed under finite unions: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
 
-> **Definition 4.1.3 ($\sigma$-Algebra)**<br>Let $X$ be nonempty and $\mathcal F\subset\mathcal P\left(X\right)$. $\mathcal F$ is called a $\sigma$-algebra on $X$ if: (1) $X\in\mathcal F$; (2) closed under complements: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) closed under countable unions: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$. $\left(X,\mathcal F\right)$ is called a measurable space, and elements of $\mathcal F$ are called measurable sets.
+> **Definition 4.1.3 ($\sigma$-Algebra)**
+>
+> Let $X$ be nonempty and $\mathcal F\subset\mathcal P\left(X\right)$. $\mathcal F$ is called a $\sigma$-algebra on $X$ if: (1) $X\in\mathcal F$; (2) closed under complements: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) closed under countable unions: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$. $\left(X,\mathcal F\right)$ is called a measurable space, and elements of $\mathcal F$ are called measurable sets.
 
-> **Definition 4.2.1 (Generated Algebra)**<br>The smallest algebra containing $\mathcal E\subset\mathcal P\left(X\right)$ is called the algebra generated by $\mathcal E$, denoted $\alpha\left(\mathcal E\right)$:
+> **Definition 4.2.1 (Generated Algebra)**
+>
+> The smallest algebra containing $\mathcal E\subset\mathcal P\left(X\right)$ is called the algebra generated by $\mathcal E$, denoted $\alpha\left(\mathcal E\right)$:
 
 $$
 \alpha\left(\mathcal E\right)=\bigcap\left\{\mathcal A\subset\mathcal P\left(X\right):\mathcal A\text{ is an algebra and }\mathcal E\subset\mathcal A\right\}.
 $$
 
-> **Definition 4.2.2 (Generated $\sigma$-Algebra)**<br>The smallest $\sigma$-algebra containing $\mathcal E\subset\mathcal P\left(X\right)$ is called the $\sigma$-algebra generated by $\mathcal E$, denoted $\sigma\left(\mathcal E\right)$:
+> **Definition 4.2.2 (Generated $\sigma$-Algebra)**
+>
+> The smallest $\sigma$-algebra containing $\mathcal E\subset\mathcal P\left(X\right)$ is called the $\sigma$-algebra generated by $\mathcal E$, denoted $\sigma\left(\mathcal E\right)$:
 
 $$
 \sigma\left(\mathcal E\right)=\bigcap\left\{\mathcal F\subset\mathcal P\left(X\right):\mathcal F\text{ is a }\sigma\text{-algebra and }\mathcal E\subset\mathcal F\right\}.
 $$
 
-> **Definition 4.3.2 (Borel $\sigma$-Algebra)**<br>Let $\left(X,\tau\right)$ be a topological space. The $\sigma$-algebra generated by all open sets is called the Borel $\sigma$-algebra, denoted $\mathcal B\left(X\right)$, and its elements are called Borel sets.
+> **Definition 4.3.2 (Borel $\sigma$-Algebra)**
+>
+> Let $\left(X,\tau\right)$ be a topological space. The $\sigma$-algebra generated by all open sets is called the Borel $\sigma$-algebra, denoted $\mathcal B\left(X\right)$, and its elements are called Borel sets.
 
-> **Example 4.3.3 (Borel Algebra on $\mathbb R$)**<br>On $\mathbb R$, the following families generate the same Borel $\sigma$-algebra $\mathcal B\left(\mathbb R\right)$: all open sets $\tau$, all closed sets $\mathcal F$, all open intervals $\left\{\left(a,b\right)\right\}$, all closed intervals $\left\{\left[a,b\right]\right\}$, all half-open intervals $\left\{\left(a,b\right]\right\}$, i.e.
+> **Example 4.3.3 (Borel Algebra on $\mathbb R$)**
+>
+> On $\mathbb R$, the following families generate the same Borel $\sigma$-algebra $\mathcal B\left(\mathbb R\right)$: all open sets $\tau$, all closed sets $\mathcal F$, all open intervals $\left\{\left(a,b\right)\right\}$, all closed intervals $\left\{\left[a,b\right]\right\}$, all half-open intervals $\left\{\left(a,b\right]\right\}$, i.e.
 
 $$
 \mathcal B\left(\mathbb R\right)=\sigma\left(\tau\right)=\sigma\left(\mathcal F\right)=\sigma\left(\left\{\left(a,b\right)\right\}\right)=\sigma\left(\left\{\left[a,b\right]\right\}\right)=\sigma\left(\left\{\left(a,b\right]\right\}\right).
 $$
 
-> **Definition 4.5.1 (Measurable Rectangles and Product $\sigma$-Algebra)**<br>Let $\left(X,\mathcal F\right)$ and $\left(Y,\mathcal G\right)$ be measurable spaces. $A\times B\subseteq X\times Y$ is called a measurable rectangle if $A\in\mathcal F$ and $B\in\mathcal G$. The product $\sigma$-algebra is the smallest $\sigma$-algebra containing all measurable rectangles:
+> **Definition 4.5.1 (Measurable Rectangles and Product $\sigma$-Algebra)**
+>
+> Let $\left(X,\mathcal F\right)$ and $\left(Y,\mathcal G\right)$ be measurable spaces. $A\times B\subseteq X\times Y$ is called a measurable rectangle if $A\in\mathcal F$ and $B\in\mathcal G$. The product $\sigma$-algebra is the smallest $\sigma$-algebra containing all measurable rectangles:
 
 $$
 \mathcal F\otimes\mathcal G:=\sigma\left(\left\{A\times B:A\in\mathcal F,B\in\mathcal G\right\}\right).
 $$
 
-> **Theorem 4.5.3 (Section Measurability)**<br>If $E\in\mathcal F\otimes\mathcal G$, then for every $x\in X$ and $y\in Y$, its sections are measurable:
+> **Theorem 4.5.3 (Section Measurability)**
+>
+> If $E\in\mathcal F\otimes\mathcal G$, then for every $x\in X$ and $y\in Y$, its sections are measurable:
 
 $$
 E_{x}=\left\{y\in Y:\left(x,y\right)\in E\right\}\in\mathcal G,\qquad E^{y}=\left\{x\in X:\left(x,y\right)\in E\right\}\in\mathcal F.
 $$
 
-> **Theorem 4.5.4 (Product of Borel $\sigma$-Algebras)**<br>For Borel $\sigma$-algebras in Euclidean space,
+> **Theorem 4.5.4 (Product of Borel $\sigma$-Algebras)**
+>
+> For Borel $\sigma$-algebras in Euclidean space,
 
 $$
 \mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)=\mathcal B\left(\mathbb R^{m+n}\right).
 $$
 
-> **Definition 4.5.7 (Arbitrary Product $\sigma$-Algebra)**<br>Let $\left\{\left(X_{\alpha},\mathcal F_{\alpha}\right)\right\}_{\alpha\in I}$ be a family of measurable spaces. The product $\sigma$-algebra $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$ is the $\sigma$-algebra generated by all cylinder sets
+> **Definition 4.5.7 (Arbitrary Product $\sigma$-Algebra)**
+>
+> Let $\left\{\left(X_{\alpha},\mathcal F_{\alpha}\right)\right\}_{\alpha\in I}$ be a family of measurable spaces. The product $\sigma$-algebra $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$ is the $\sigma$-algebra generated by all cylinder sets
 
 $$
 \left\{x=\left(x_{\alpha}\right)_{\alpha\in I}\in\prod_{\alpha\in I}X_{\alpha}:x_{\beta}\in A_{\beta}\right\},\ A_{\beta}\in\mathcal F_{\beta},\ \beta\in I.

@@ -1,28 +1,52 @@
 # week3
 
-> **基础知识: 广义康托尔集**<br>设 $\left\{\alpha_{j}\right\}\subset\left(0,1\right)$, 从 $\left[0,1\right]$ 出发, 第 $j$ 步去掉每个剩余闭区间的中间 $\alpha_{j}$ 部分, 所得交集 $K=\bigcap_{j}K_{j}$ 称为广义康托尔集. 它满足 $m\left(K\right)=\prod_{j=1}^{\infty}\left(1-\alpha_{j}\right)$, 且对任意 $\beta\in\left(0,1\right)$ 可选取 $\left\{\alpha_{j}\right\}$ 使 $m\left(K\right)=\beta$; 广义康托尔集与普通康托尔集一样是紧, 无处稠密, 无孤立点的闭集.
+> **基础知识: 广义康托尔集**
+>
+> 设 $\left\{\alpha_{j}\right\}\subset\left(0,1\right)$, 从 $\left[0,1\right]$ 出发, 第 $j$ 步去掉每个剩余闭区间的中间 $\alpha_{j}$ 部分, 所得交集 $K=\bigcap_{j}K_{j}$ 称为广义康托尔集. 它满足 $m\left(K\right)=\prod_{j=1}^{\infty}\left(1-\alpha_{j}\right)$, 且对任意 $\beta\in\left(0,1\right)$ 可选取 $\left\{\alpha_{j}\right\}$ 使 $m\left(K\right)=\beta$; 广义康托尔集与普通康托尔集一样是紧, 无处稠密, 无孤立点的闭集.
 
-> **定义 4.1.1 (集合代数)**<br>设 $X$ 是非空集合, $\mathcal A\subset\mathcal P\left(X\right)$. 称 $\mathcal A$ 为 $X$ 上的一个集合代数, 若满足: (1) $X\in\mathcal A$; (2) 对差运算封闭: $A,B\in\mathcal A\Rightarrow A\setminus B\in\mathcal A$; (3) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
+> **定义 4.1.1 (集合代数)**
+>
+> 设 $X$ 是非空集合, $\mathcal A\subset\mathcal P\left(X\right)$. 称 $\mathcal A$ 为 $X$ 上的一个集合代数, 若满足: (1) $X\in\mathcal A$; (2) 对差运算封闭: $A,B\in\mathcal A\Rightarrow A\setminus B\in\mathcal A$; (3) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
 
-> **定义 4.1.3 ($\sigma$-代数)**<br>设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 $\sigma$-代数, 若满足: (1) $X\in\mathcal F$; (2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
+> **定义 4.1.3 ($\sigma$-代数)**
+>
+> 设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 $\sigma$-代数, 若满足: (1) $X\in\mathcal F$; (2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
 
-> **定义 4.4.1 (单调类)**<br>设 $\mathcal M\subset\mathcal P\left(X\right)$. 称 $\mathcal M$ 为单调类, 若满足: (1) 对单调递增序列封闭: $A_{1}\subset A_{2}\subset\cdots$ 且 $A_{n}\in\mathcal M\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal M$; (2) 对单调递减序列封闭: $A_{1}\supset A_{2}\supset\cdots$ 且 $A_{n}\in\mathcal M\Rightarrow\bigcap_{n=1}^{\infty}A_{n}\in\mathcal M$.
+> **定义 4.4.1 (单调类)**
+>
+> 设 $\mathcal M\subset\mathcal P\left(X\right)$. 称 $\mathcal M$ 为单调类, 若满足: (1) 对单调递增序列封闭: $A_{1}\subset A_{2}\subset\cdots$ 且 $A_{n}\in\mathcal M\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal M$; (2) 对单调递减序列封闭: $A_{1}\supset A_{2}\supset\cdots$ 且 $A_{n}\in\mathcal M\Rightarrow\bigcap_{n=1}^{\infty}A_{n}\in\mathcal M$.
 
-> **定理 4.4.2 (单调类定理)**<br>设 $\mathcal A$ 是一个代数, $\mathcal M$ 是一个包含 $\mathcal A$ 的单调类, 则 $\sigma\left(\mathcal A\right)\subset\mathcal M$.
+> **定理 4.4.2 (单调类定理)**
+>
+> 设 $\mathcal A$ 是一个代数, $\mathcal M$ 是一个包含 $\mathcal A$ 的单调类, 则 $\sigma\left(\mathcal A\right)\subset\mathcal M$.
 
-> **定义 5.1.2 (测度)**<br>设 $\left(X,\mathcal F\right)$ 是可测空间. 函数 $\mu:\mathcal F\to\left[0,+\infty\right]$ 称为 $\left(X,\mathcal F\right)$ 上的一个测度, 若满足: (1) 非负性: $\mu\left(E\right)\ge0$ 对一切 $E\in\mathcal F$; (2) 零空集性: $\mu\left(\varnothing\right)=0$; (3) 可数可加性: 对任意可数个两两不交的 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 有 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
+> **定义 5.1.2 (测度)**
+>
+> 设 $\left(X,\mathcal F\right)$ 是可测空间. 函数 $\mu:\mathcal F\to\left[0,+\infty\right]$ 称为 $\left(X,\mathcal F\right)$ 上的一个测度, 若满足: (1) 非负性: $\mu\left(E\right)\ge0$ 对一切 $E\in\mathcal F$; (2) 零空集性: $\mu\left(\varnothing\right)=0$; (3) 可数可加性: 对任意可数个两两不交的 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 有 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
 
-> **命题 5.2.1 (有限可加性)**<br>设 $\mu$ 是测度, $E_{1},\dots,E_{n}\in\mathcal F$ 两两不交, 则 $\mu\left(\bigcup_{k=1}^{n}E_{k}\right)=\sum_{k=1}^{n}\mu\left(E_{k}\right)$.
+> **命题 5.2.1 (有限可加性)**
+>
+> 设 $\mu$ 是测度, $E_{1},\dots,E_{n}\in\mathcal F$ 两两不交, 则 $\mu\left(\bigcup_{k=1}^{n}E_{k}\right)=\sum_{k=1}^{n}\mu\left(E_{k}\right)$.
 
-> **命题 5.2.3 (次可数可加性)**<br>设 $\mu$ 是测度, $\left\{E_{n}\right\}_{n=1}^{\infty}$ 任意, 则 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
+> **命题 5.2.3 (次可数可加性)**
+>
+> 设 $\mu$ 是测度, $\left\{E_{n}\right\}_{n=1}^{\infty}$ 任意, 则 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
 
-> **命题 5.2.4 (下连续性)**<br>设 $\mu$ 是测度, $\left\{E_{n}\right\}$ 单调递增, 则 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right)$.
+> **命题 5.2.4 (下连续性)**
+>
+> 设 $\mu$ 是测度, $\left\{E_{n}\right\}$ 单调递增, 则 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right)$.
 
-> **定义 6.1.1 (外测度)**<br>设 $X$ 非空. 函数 $\mu^{*}:\mathcal P\left(X\right)\to\left[0,+\infty\right]$ 称为 $X$ 上的一个外测度, 若满足: (1) 非负性: $\mu^{*}\left(\varnothing\right)=0$, 且 $\mu^{*}\left(E\right)\ge0$ 对一切 $E\subset X$; (2) 单调性: $E\subset F\Rightarrow\mu^{*}\left(E\right)\le\mu^{*}\left(F\right)$; (3) 次可数可加性: $\mu^{*}\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu^{*}\left(E_{n}\right)$.
+> **定义 6.1.1 (外测度)**
+>
+> 设 $X$ 非空. 函数 $\mu^{*}:\mathcal P\left(X\right)\to\left[0,+\infty\right]$ 称为 $X$ 上的一个外测度, 若满足: (1) 非负性: $\mu^{*}\left(\varnothing\right)=0$, 且 $\mu^{*}\left(E\right)\ge0$ 对一切 $E\subset X$; (2) 单调性: $E\subset F\Rightarrow\mu^{*}\left(E\right)\le\mu^{*}\left(F\right)$; (3) 次可数可加性: $\mu^{*}\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu^{*}\left(E_{n}\right)$.
 
-> **定义 6.2.1 (准测度)**<br>设 $X$ 非空, $\mathcal E\subset\mathcal P\left(X\right)$ 是一个代数. 函数 $\mu_{0}:\mathcal E\to\left[0,+\infty\right]$ 称为一个准测度, 若: (1) $\mu_{0}\left(\varnothing\right)=0$; (2) 若 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal E$ 两两不交且 $\bigcup_{n=1}^{\infty}E_{n}\in\mathcal E$, 则 $\mu_{0}\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right)$.
+> **定义 6.2.1 (准测度)**
+>
+> 设 $X$ 非空, $\mathcal E\subset\mathcal P\left(X\right)$ 是一个代数. 函数 $\mu_{0}:\mathcal E\to\left[0,+\infty\right]$ 称为一个准测度, 若: (1) $\mu_{0}\left(\varnothing\right)=0$; (2) 若 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal E$ 两两不交且 $\bigcup_{n=1}^{\infty}E_{n}\in\mathcal E$, 则 $\mu_{0}\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right)$.
 
-> **定理 6.2.2 (由准测度生成外测度)**<br>设 $\mathcal E\subset\mathcal P\left(X\right)$ 是一个覆盖类, $\mu_{0}:\mathcal E\to\left[0,+\infty\right]$ 是一个准测度. 对任意 $A\subset X$, 定义
+> **定理 6.2.2 (由准测度生成外测度)**
+>
+> 设 $\mathcal E\subset\mathcal P\left(X\right)$ 是一个覆盖类, $\mu_{0}:\mathcal E\to\left[0,+\infty\right]$ 是一个准测度. 对任意 $A\subset X$, 定义
 
 $$
 \mu^{*}\left(A\right)=\inf\left\{\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right):E_{n}\in\mathcal E,A\subset\bigcup_{n=1}^{\infty}E_{n}\right\}.
@@ -30,7 +54,9 @@ $$
 
 则 $\mu^{*}$ 是 $X$ 上的外测度, 且 $\mu^{*}|_{\mathcal E}=\mu_{0}$.
 
-> **定义 6.3.1 (卡拉西奥多里条件)**<br>设 $\mu^{*}$ 是 $X$ 上的外测度. 子集 $A\subset X$ 称为 $\mu^{*}$-可测的, 若对任意 $T\subset X$ 有
+> **定义 6.3.1 (卡拉西奥多里条件)**
+>
+> 设 $\mu^{*}$ 是 $X$ 上的外测度. 子集 $A\subset X$ 称为 $\mu^{*}$-可测的, 若对任意 $T\subset X$ 有
 
 $$
 \mu^{*}\left(T\right)=\mu^{*}\left(T\cap A\right)+\mu^{*}\left(T\cap A^{c}\right).
@@ -38,25 +64,41 @@ $$
 
 所有 $\mu^{*}$-可测集组成的集合记为 $\mathcal M_{\mu^{*}}$.
 
-> **引理 6.3.2 (代数含于可测集)**<br>如果 $\mathcal E$ 是代数, $\mu_{0}$ 是准测度, 则 $\mathcal E\subset\mathcal M_{\mu^{*}}$.
+> **引理 6.3.2 (代数含于可测集)**
+>
+> 如果 $\mathcal E$ 是代数, $\mu_{0}$ 是准测度, 则 $\mathcal E\subset\mathcal M_{\mu^{*}}$.
 
-> **定理 6.3.3 (卡拉西奥多里定理)**<br>设 $\mu^{*}$ 是 $X$ 上的外测度, 则: (1) $\mathcal M$ 是一个 $\sigma$-代数; (2) $\mu^{*}|_{\mathcal M}$ 是一个完备测度; (3) 如果 $\mu^{*}$ 是由准测度 $\mu_{0}$ 生成的, 且 $\mu_{0}$ 是 $\sigma$-有限的, 则 $\mu^{*}|_{\mathcal M}$ 是 $\mu_{0}$ 的唯一延拓.
+> **定理 6.3.3 (卡拉西奥多里定理)**
+>
+> 设 $\mu^{*}$ 是 $X$ 上的外测度, 则: (1) $\mathcal M$ 是一个 $\sigma$-代数; (2) $\mu^{*}|_{\mathcal M}$ 是一个完备测度; (3) 如果 $\mu^{*}$ 是由准测度 $\mu_{0}$ 生成的, 且 $\mu_{0}$ 是 $\sigma$-有限的, 则 $\mu^{*}|_{\mathcal M}$ 是 $\mu_{0}$ 的唯一延拓.
 
-> **定义 6.4.1 (h 区间)**<br>令 $-\infty\le a< b< \infty$, 所有左开右闭区间 $\left(a,b\right]$, 以及 $\left(a,\infty\right)$, $\varnothing$ 称为 h 区间. h 区间的有限不交并形成的集族 $\mathcal E$ 为一个代数.
+> **定义 6.4.1 (h 区间)**
+>
+> 令 $-\infty\le a< b< \infty$, 所有左开右闭区间 $\left(a,b\right]$, 以及 $\left(a,\infty\right)$, $\varnothing$ 称为 h 区间. h 区间的有限不交并形成的集族 $\mathcal E$ 为一个代数.
 
-> **命题 6.4.2 ($\mathcal E$ 上的准测度)**<br>设 $F:\mathbb R\to\mathbb R$ 为增的右连续函数. 对于不交区间 $\left(a_{i},b_{i}\right]$, $i=1,\dots,n$, 定义 $\mu_{0}\left(\bigcup_{i=1}^{n}\left(a_{i},b_{i}\right]\right):=\sum_{i=1}^{n}\left[F\left(b_{i}\right)-F\left(a_{i}\right)\right]$, 并令 $\mu_{0}\left(\varnothing\right)=0$. 则 $\mu_{0}$ 为 $\mathcal E$ 上的准测度.
+> **命题 6.4.2 ($\mathcal E$ 上的准测度)**
+>
+> 设 $F:\mathbb R\to\mathbb R$ 为增的右连续函数. 对于不交区间 $\left(a_{i},b_{i}\right]$, $i=1,\dots,n$, 定义 $\mu_{0}\left(\bigcup_{i=1}^{n}\left(a_{i},b_{i}\right]\right):=\sum_{i=1}^{n}\left[F\left(b_{i}\right)-F\left(a_{i}\right)\right]$, 并令 $\mu_{0}\left(\varnothing\right)=0$. 则 $\mu_{0}$ 为 $\mathcal E$ 上的准测度.
 
-> **定理 6.4.5 (勒贝格-斯蒂尔杰斯测度的正则性)**<br>设 $F:\mathbb R\to\mathbb R$ 是右连续单调递增函数, $\mu_{F}$ 是由 $F$ 生成的勒贝格-斯蒂尔杰斯测度, $\mathcal M^{*}$ 是 $\mu_{F}$-可测集的 $\sigma$-代数. 若 $E\in\mathcal M^{*}$, 则
+> **定理 6.4.5 (勒贝格-斯蒂尔杰斯测度的正则性)**
+>
+> 设 $F:\mathbb R\to\mathbb R$ 是右连续单调递增函数, $\mu_{F}$ 是由 $F$ 生成的勒贝格-斯蒂尔杰斯测度, $\mathcal M^{*}$ 是 $\mu_{F}$-可测集的 $\sigma$-代数. 若 $E\in\mathcal M^{*}$, 则
 
 $$
 \mu_{F}\left(E\right)=\inf\left\{\mu_{F}\left(U\right):E\subset U,U\text{ 开}\right\}=\sup\left\{\mu_{F}\left(K\right):K\subset E,K\text{ 紧}\right\}.
 $$
 
-> **定义 6.4.6 (勒贝格测度)**<br>由 $F\left(x\right)=x$ 生成的测度称为勒贝格测度, 记作 $m$; 相应外测度定义的可测集称为勒贝格可测集, 全体记作 $\mathcal L$.
+> **定义 6.4.6 (勒贝格测度)**
+>
+> 由 $F\left(x\right)=x$ 生成的测度称为勒贝格测度, 记作 $m$; 相应外测度定义的可测集称为勒贝格可测集, 全体记作 $\mathcal L$.
 
-> **定义 6.5.1 (康托尔集的递归构造)**<br>设 $C_{0}=\left[0,1\right]$. 对每个 $n\ge0$, 定义 $C_{n+1}=\frac{1}{3}C_{n}\cup\left(\frac{2}{3}+\frac{1}{3}C_{n}\right)$. 则康托尔集定义为 $C=\bigcap_{n=0}^{\infty}C_{n}$.
+> **定义 6.5.1 (康托尔集的递归构造)**
+>
+> 设 $C_{0}=\left[0,1\right]$. 对每个 $n\ge0$, 定义 $C_{n+1}=\frac{1}{3}C_{n}\cup\left(\frac{2}{3}+\frac{1}{3}C_{n}\right)$. 则康托尔集定义为 $C=\bigcap_{n=0}^{\infty}C_{n}$.
 
-> **定理 6.5.2 (康托尔集的三进制刻画)**<br>点 $x\in\left[0,1\right]$ 属于康托尔集 $C$ 当且仅当它的三进制展开 $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ 中不含数字 $1$ (即 $a_{k}\in\left\{0,2\right\}$).
+> **定理 6.5.2 (康托尔集的三进制刻画)**
+>
+> 点 $x\in\left[0,1\right]$ 属于康托尔集 $C$ 当且仅当它的三进制展开 $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ 中不含数字 $1$ (即 $a_{k}\in\left\{0,2\right\}$).
 
 ---
 

@@ -1,14 +1,24 @@
 # week11
 
-> **基础知识: 归一化的有界变差 $NBV$**<br>$NBV=\left\{F\in BV:F\text{ 右连续},F\left(-\infty\right)=0\right\}$, 其中 $BV$ 指 $\mathbb R$ 上的有界变差函数, $T_{F}$ 表示 $F$ 的全变差函数.
+> **基础知识: 归一化的有界变差 $NBV$**
+>
+> $NBV=\left\{F\in BV:F\text{ 右连续},F\left(-\infty\right)=0\right\}$, 其中 $BV$ 指 $\mathbb R$ 上的有界变差函数, $T_{F}$ 表示 $F$ 的全变差函数.
 
-> **基础知识: 级数**<br>几何级数 $\sum_{n=1}^{\infty}2^{-n}=1$ 收敛; 调和级数 $\sum_{k}\frac{1}{k}$ 发散.
+> **基础知识: 级数**
+>
+> 几何级数 $\sum_{n=1}^{\infty}2^{-n}=1$ 收敛; 调和级数 $\sum_{k}\frac{1}{k}$ 发散.
 
-> **定义 14.0.6 (有界变差函数)**<br>设 $f:\left[a,b\right]\to\mathbb R$. 对 $\left[a,b\right]$ 的任意分划 $P:a=x_{0}< x_{1}< \cdots< x_{n}=b$, 定义变差 $V\left(f,P\right)=\sum_{i=1}^{n}\left|f\left(x_{i}\right)-f\left(x_{i-1}\right)\right|$. $f$ 在 $\left[a,b\right]$ 上的全变差为 $V_{a}^{b}\left(f\right)=\sup_{P}V\left(f,P\right)$. 若 $V_{a}^{b}\left(f\right)< +\infty$, 则称 $f$ 为 $\left[a,b\right]$ 上的有界变差函数, 记作 $f\in BV\left(\left[a,b\right]\right)$.
+> **定义 14.0.6 (有界变差函数)**
+>
+> 设 $f:\left[a,b\right]\to\mathbb R$. 对 $\left[a,b\right]$ 的任意分划 $P:a=x_{0}< x_{1}< \cdots< x_{n}=b$, 定义变差 $V\left(f,P\right)=\sum_{i=1}^{n}\left|f\left(x_{i}\right)-f\left(x_{i-1}\right)\right|$. $f$ 在 $\left[a,b\right]$ 上的全变差为 $V_{a}^{b}\left(f\right)=\sup_{P}V\left(f,P\right)$. 若 $V_{a}^{b}\left(f\right)< +\infty$, 则称 $f$ 为 $\left[a,b\right]$ 上的有界变差函数, 记作 $f\in BV\left(\left[a,b\right]\right)$.
 
-> **定理 14.0.7 (有界变差函数的基本性质)**<br>设 $f,g\in BV\left(\left[a,b\right]\right)$, 则: (1) $BV\left(\left[a,b\right]\right)$ 构成一个线性空间; (2) $f$ 为有界函数; (3) 若 $f$ 满足利普希茨条件, 则 $f\in BV\left(\left[a,b\right]\right)$; (4) 单调函数必为有界变差函数.
+> **定理 14.0.7 (有界变差函数的基本性质)**
+>
+> 设 $f,g\in BV\left(\left[a,b\right]\right)$, 则: (1) $BV\left(\left[a,b\right]\right)$ 构成一个线性空间; (2) $f$ 为有界函数; (3) 若 $f$ 满足利普希茨条件, 则 $f\in BV\left(\left[a,b\right]\right)$; (4) 单调函数必为有界变差函数.
 
-> **定理 14.0.10 (有界变差函数的间断点性质)**<br>若 $f\in BV\left(\left[a,b\right]\right)$, 则: (1) $f$ 的不连续点至多可数; (2) 所有不连续点都是第一类间断点.
+> **定理 14.0.10 (有界变差函数的间断点性质)**
+>
+> 若 $f\in BV\left(\left[a,b\right]\right)$, 则: (1) $f$ 的不连续点至多可数; (2) 所有不连续点都是第一类间断点.
 
 ---
 

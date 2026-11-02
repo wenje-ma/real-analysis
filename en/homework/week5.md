@@ -1,34 +1,64 @@
 # week5
 
-> **Basic Knowledge: Nonnegative Integrable Function with Zero Integral Vanishes Almost Everywhere**<br>If $h\ge0$ is measurable and $\int_{X}h\,\mathrm{d}\mu=0$, then $h=0$ almost everywhere. Indeed $\left\{h> 0\right\}=\bigcup_{n=1}^{\infty}\left\{h> \frac{1}{n}\right\}$, and $\int h\ge\frac{1}{n}\mu\left(\left\{h> \frac{1}{n}\right\}\right)$, so $\mu\left(\left\{h> \frac{1}{n}\right\}\right)=0$ for all $n$.
+> **Basic Knowledge: Nonnegative Integrable Function with Zero Integral Vanishes Almost Everywhere**
+>
+> If $h\ge0$ is measurable and $\int_{X}h\,\mathrm{d}\mu=0$, then $h=0$ almost everywhere. Indeed $\left\{h> 0\right\}=\bigcup_{n=1}^{\infty}\left\{h> \frac{1}{n}\right\}$, and $\int h\ge\frac{1}{n}\mu\left(\left\{h> \frac{1}{n}\right\}\right)$, so $\mu\left(\left\{h> \frac{1}{n}\right\}\right)=0$ for all $n$.
 
-> **Basic Knowledge: Riemann Integral and Darboux Sums**<br>Let $f$ be a bounded real-valued function on $\left[a,b\right]$. For a partition $P=\left\{t_{0}< \cdots< t_{n}\right\}$ of $\left[a,b\right]$, write $M_{i}=\sup_{\left[t_{i-1},t_{i}\right]}f$, $m_{i}=\inf_{\left[t_{i-1},t_{i}\right]}f$. The upper Darboux sum is $\overline S\left(P\right)=\sum_{i}M_{i}\left(t_{i}-t_{i-1}\right)$ and the lower is $\underline S\left(P\right)=\sum_{i}m_{i}\left(t_{i}-t_{i-1}\right)$. The upper integral is $\overline{\int}f=\inf_{P}\overline S\left(P\right)$ and the lower is $\underline{\int}f=\sup_{P}\underline S\left(P\right)$. If $\overline{\int}f=\underline{\int}f$, the common value is the Riemann integral of $f$, and $f$ is called Riemann integrable.
+> **Basic Knowledge: Riemann Integral and Darboux Sums**
+>
+> Let $f$ be a bounded real-valued function on $\left[a,b\right]$. For a partition $P=\left\{t_{0}< \cdots< t_{n}\right\}$ of $\left[a,b\right]$, write $M_{i}=\sup_{\left[t_{i-1},t_{i}\right]}f$, $m_{i}=\inf_{\left[t_{i-1},t_{i}\right]}f$. The upper Darboux sum is $\overline S\left(P\right)=\sum_{i}M_{i}\left(t_{i}-t_{i-1}\right)$ and the lower is $\underline S\left(P\right)=\sum_{i}m_{i}\left(t_{i}-t_{i-1}\right)$. The upper integral is $\overline{\int}f=\inf_{P}\overline S\left(P\right)$ and the lower is $\underline{\int}f=\sup_{P}\underline S\left(P\right)$. If $\overline{\int}f=\underline{\int}f$, the common value is the Riemann integral of $f$, and $f$ is called Riemann integrable.
 
-> **Definition 5.1.2 (Measure)**<br>Let $\left(X,\mathcal F\right)$ be a measurable space. A function $\mu:\mathcal F\to\left[0,+\infty\right]$ is called a measure on $\left(X,\mathcal F\right)$ if: (1) nonnegativity: $\mu\left(E\right)\ge0$ for all $E\in\mathcal F$; (2) empty set: $\mu\left(\emptyset\right)=0$; (3) countable additivity ($\sigma$-additivity): for any countable pairwise-disjoint $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
+> **Definition 5.1.2 (Measure)**
+>
+> Let $\left(X,\mathcal F\right)$ be a measurable space. A function $\mu:\mathcal F\to\left[0,+\infty\right]$ is called a measure on $\left(X,\mathcal F\right)$ if: (1) nonnegativity: $\mu\left(E\right)\ge0$ for all $E\in\mathcal F$; (2) empty set: $\mu\left(\emptyset\right)=0$; (3) countable additivity ($\sigma$-additivity): for any countable pairwise-disjoint $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
 
-> **Definition 5.1.5 ($\sigma$-Finite Measure)**<br>Let $\left(X,\mathcal F,\mu\right)$ be a measure space. If there exists a sequence of measurable sets $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ such that $X=\bigcup_{n=1}^{\infty}E_{n}$ and $\mu\left(E_{n}\right)< +\infty$ for all $n\in\mathbb N$, then $\mu$ is called $\sigma$-finite.
+> **Definition 5.1.5 ($\sigma$-Finite Measure)**
+>
+> Let $\left(X,\mathcal F,\mu\right)$ be a measure space. If there exists a sequence of measurable sets $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ such that $X=\bigcup_{n=1}^{\infty}E_{n}$ and $\mu\left(E_{n}\right)< +\infty$ for all $n\in\mathbb N$, then $\mu$ is called $\sigma$-finite.
 
-> **Definition 8.1.1 (Integral of a Nonnegative Simple Function)**<br>Let $f=\sum_{i=1}^{n}c_{i}\chi_{A_{i}}$ be a nonnegative simple function, where $c_{i}\ge0$, the $A_{i}\in\mathcal F$ are pairwise disjoint and $\bigcup_{i}A_{i}=X$. The integral of $f$ with respect to $\mu$ is $\int_{X}f\,\mathrm{d}\mu=\sum_{i=1}^{n}c_{i}\mu\left(A_{i}\right)$, with the convention $0\cdot\infty=0$.
+> **Definition 8.1.1 (Integral of a Nonnegative Simple Function)**
+>
+> Let $f=\sum_{i=1}^{n}c_{i}\chi_{A_{i}}$ be a nonnegative simple function, where $c_{i}\ge0$, the $A_{i}\in\mathcal F$ are pairwise disjoint and $\bigcup_{i}A_{i}=X$. The integral of $f$ with respect to $\mu$ is $\int_{X}f\,\mathrm{d}\mu=\sum_{i=1}^{n}c_{i}\mu\left(A_{i}\right)$, with the convention $0\cdot\infty=0$.
 
-> **Proposition 8.1.2 (Linearity of the Integral for Simple Functions)**<br>Let $f,g$ be nonnegative simple functions and $\alpha,\beta\ge0$. Then $\int_{X}\left(\alpha f+\beta g\right)\mathrm{d}\mu=\alpha\int_{X}f\,\mathrm{d}\mu+\beta\int_{X}g\,\mathrm{d}\mu$.
+> **Proposition 8.1.2 (Linearity of the Integral for Simple Functions)**
+>
+> Let $f,g$ be nonnegative simple functions and $\alpha,\beta\ge0$. Then $\int_{X}\left(\alpha f+\beta g\right)\mathrm{d}\mu=\alpha\int_{X}f\,\mathrm{d}\mu+\beta\int_{X}g\,\mathrm{d}\mu$.
 
-> **Definition 8.2.1 (Integral of a Nonnegative Measurable Function)**<br>Let $f:X\to\left[0,+\infty\right]$ be a nonnegative measurable function. The integral of $f$ with respect to $\mu$ is $\int_{X}f\,\mathrm{d}\mu=\sup\left\{\int_{X}\phi\,\mathrm{d}\mu:\phi\text{ simple},0\le\phi\le f\right\}$. If $\int_{X}f\,\mathrm{d}\mu< \infty$, $f$ is called integrable.
+> **Definition 8.2.1 (Integral of a Nonnegative Measurable Function)**
+>
+> Let $f:X\to\left[0,+\infty\right]$ be a nonnegative measurable function. The integral of $f$ with respect to $\mu$ is $\int_{X}f\,\mathrm{d}\mu=\sup\left\{\int_{X}\phi\,\mathrm{d}\mu:\phi\text{ simple},0\le\phi\le f\right\}$. If $\int_{X}f\,\mathrm{d}\mu< \infty$, $f$ is called integrable.
 
-> **Theorem 8.2.2 (Monotone Convergence Theorem)**<br>Let $\left(X,\mathcal F,\mu\right)$ be a measure space and $\left\{f_{n}\right\}$ a sequence of nonnegative measurable functions with $0\le f_{1}\left(x\right)\le f_{2}\left(x\right)\le\cdots$ for all $x\in X$, and $f_{n}\to f$ pointwise. Then $\lim_{n\to\infty}\int_{X}f_{n}\,\mathrm{d}\mu=\int_{X}f\,\mathrm{d}\mu$.
+> **Theorem 8.2.2 (Monotone Convergence Theorem)**
+>
+> Let $\left(X,\mathcal F,\mu\right)$ be a measure space and $\left\{f_{n}\right\}$ a sequence of nonnegative measurable functions with $0\le f_{1}\left(x\right)\le f_{2}\left(x\right)\le\cdots$ for all $x\in X$, and $f_{n}\to f$ pointwise. Then $\lim_{n\to\infty}\int_{X}f_{n}\,\mathrm{d}\mu=\int_{X}f\,\mathrm{d}\mu$.
 
-> **Remark 8.2.3 (Approximation by Simple Functions)**<br>The monotone convergence theorem tells us that the integral can be approximated by simple functions.
+> **Remark 8.2.3 (Approximation by Simple Functions)**
+>
+> The monotone convergence theorem tells us that the integral can be approximated by simple functions.
 
-> **Proposition 8.2.4 (Absolute Continuity of the Integral with Respect to the Set)**<br>Let $f$ be a nonnegative measurable function. Then $A\mapsto\int_{A}f\,\mathrm{d}\mu$ is a measure; if $\mu\left(A\right)=0$, then $\int_{A}f\,\mathrm{d}\mu=0$.
+> **Proposition 8.2.4 (Absolute Continuity of the Integral with Respect to the Set)**
+>
+> Let $f$ be a nonnegative measurable function. Then $A\mapsto\int_{A}f\,\mathrm{d}\mu$ is a measure; if $\mu\left(A\right)=0$, then $\int_{A}f\,\mathrm{d}\mu=0$.
 
-> **Definition 8.2.5 (Integral of a General Measurable Function)**<br>Let $f:X\to\left[-\infty,+\infty\right]$ be measurable. Define its positive and negative parts by $f^{+}\left(x\right)=\max\left\{f\left(x\right),0\right\}$, $f^{-}\left(x\right)=\max\left\{-f\left(x\right),0\right\}$. If at least one of $\int_{X}f^{+}\mathrm{d}\mu$, $\int_{X}f^{-}\mathrm{d}\mu$ is finite, define the integral by $\int_{X}f\,\mathrm{d}\mu=\int_{X}f^{+}\mathrm{d}\mu-\int_{X}f^{-}\mathrm{d}\mu$. If both are finite, $f$ is called integrable.
+> **Definition 8.2.5 (Integral of a General Measurable Function)**
+>
+> Let $f:X\to\left[-\infty,+\infty\right]$ be measurable. Define its positive and negative parts by $f^{+}\left(x\right)=\max\left\{f\left(x\right),0\right\}$, $f^{-}\left(x\right)=\max\left\{-f\left(x\right),0\right\}$. If at least one of $\int_{X}f^{+}\mathrm{d}\mu$, $\int_{X}f^{-}\mathrm{d}\mu$ is finite, define the integral by $\int_{X}f\,\mathrm{d}\mu=\int_{X}f^{+}\mathrm{d}\mu-\int_{X}f^{-}\mathrm{d}\mu$. If both are finite, $f$ is called integrable.
 
-> **Theorem 8.2.7 (Fatou's Lemma)**<br>Let $\left(X,\mathcal F,\mu\right)$ be a measure space and $\left\{f_{n}\right\}$ a sequence of nonnegative measurable functions. Then $\int_{X}\liminf_{n\to\infty}f_{n}\,\mathrm{d}\mu\le\liminf_{n\to\infty}\int_{X}f_{n}\,\mathrm{d}\mu$.
+> **Theorem 8.2.7 (Fatou's Lemma)**
+>
+> Let $\left(X,\mathcal F,\mu\right)$ be a measure space and $\left\{f_{n}\right\}$ a sequence of nonnegative measurable functions. Then $\int_{X}\liminf_{n\to\infty}f_{n}\,\mathrm{d}\mu\le\liminf_{n\to\infty}\int_{X}f_{n}\,\mathrm{d}\mu$.
 
-> **Theorem 8.2.9 (Dominated Convergence Theorem)**<br>Let $\left(X,\mathcal F,\mu\right)$ be a measure space, $\left\{f_{n}\right\}$ a sequence of measurable functions with $f_{n}\to f$ almost everywhere. If there exists an integrable function $g$ such that $\left|f_{n}\right|\le g$ almost everywhere for all $n$, then $\lim_{n\to\infty}\int_{X}f_{n}\,\mathrm{d}\mu=\int_{X}f\,\mathrm{d}\mu$.
+> **Theorem 8.2.9 (Dominated Convergence Theorem)**
+>
+> Let $\left(X,\mathcal F,\mu\right)$ be a measure space, $\left\{f_{n}\right\}$ a sequence of measurable functions with $f_{n}\to f$ almost everywhere. If there exists an integrable function $g$ such that $\left|f_{n}\right|\le g$ almost everywhere for all $n$, then $\lim_{n\to\infty}\int_{X}f_{n}\,\mathrm{d}\mu=\int_{X}f\,\mathrm{d}\mu$.
 
-> **Lemma 8.2.13 (Termwise Integration of Series)**<br>Let $\left\{f_{n}\right\}$ be a sequence of measurable functions with $\sum_{n=1}^{\infty}\int_{X}\left|f_{n}\right|\mathrm{d}\mu< \infty$. Then $\int_{X}\left(\sum_{n=1}^{\infty}f_{n}\right)\mathrm{d}\mu=\sum_{n=1}^{\infty}\int_{X}f_{n}\,\mathrm{d}\mu$.
+> **Lemma 8.2.13 (Termwise Integration of Series)**
+>
+> Let $\left\{f_{n}\right\}$ be a sequence of measurable functions with $\sum_{n=1}^{\infty}\int_{X}\left|f_{n}\right|\mathrm{d}\mu< \infty$. Then $\int_{X}\left(\sum_{n=1}^{\infty}f_{n}\right)\mathrm{d}\mu=\sum_{n=1}^{\infty}\int_{X}f_{n}\,\mathrm{d}\mu$.
 
-> **Theorem 8.2.17 (Parameter Integrals)**<br>Let $f:X\times\left[a,b\right]\to\mathbb R$, and for each $t\in\left[a,b\right]$ let $f\left(\cdot,t\right):X\to\mathbb R$ be integrable. Set $F\left(t\right)=\int_{X}f\left(x,t\right)\mathrm{d}\mu\left(x\right)$. (a) If there exists $g\in L^{1}\left(\mu\right)$ with $\left|f\left(x,t\right)\right|\le g\left(x\right)$ for all $x,t$, and $\lim_{t\to t_{0}}f\left(x,t\right)=f\left(x,t_{0}\right)$ for each $x$, then $\lim_{t\to t_{0}}F\left(t\right)=F\left(t_{0}\right)$; (b) if the partial derivative $\partial f/\partial t$ exists and there is $g\in L^{1}\left(\mu\right)$ with $\left|\frac{\partial f}{\partial t}\left(x,t\right)\right|\le g\left(x\right)$ for all $x,t$, then $F$ is differentiable and $F'\left(t\right)=\int\frac{\partial f}{\partial t}\left(x,t\right)\mathrm{d}\mu\left(x\right)$.
+> **Theorem 8.2.17 (Parameter Integrals)**
+>
+> Let $f:X\times\left[a,b\right]\to\mathbb R$, and for each $t\in\left[a,b\right]$ let $f\left(\cdot,t\right):X\to\mathbb R$ be integrable. Set $F\left(t\right)=\int_{X}f\left(x,t\right)\mathrm{d}\mu\left(x\right)$. (a) If there exists $g\in L^{1}\left(\mu\right)$ with $\left|f\left(x,t\right)\right|\le g\left(x\right)$ for all $x,t$, and $\lim_{t\to t_{0}}f\left(x,t\right)=f\left(x,t_{0}\right)$ for each $x$, then $\lim_{t\to t_{0}}F\left(t\right)=F\left(t_{0}\right)$; (b) if the partial derivative $\partial f/\partial t$ exists and there is $g\in L^{1}\left(\mu\right)$ with $\left|\frac{\partial f}{\partial t}\left(x,t\right)\right|\le g\left(x\right)$ for all $x,t$, then $F$ is differentiable and $F'\left(t\right)=\int\frac{\partial f}{\partial t}\left(x,t\right)\mathrm{d}\mu\left(x\right)$.
 
 ---
 

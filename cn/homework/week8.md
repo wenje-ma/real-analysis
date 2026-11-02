@@ -1,28 +1,48 @@
 # week8
 
-> **基础知识: 一维平移与伸缩的不变性**<br>对 $c\in\mathbb R$ 与 $\lambda\ne0$, 勒贝格测度满足 $m\left(E+c\right)=m\left(E\right)$ 与 $m\left(\lambda E\right)=\left|\lambda\right|m\left(E\right)$.
+> **基础知识: 一维平移与伸缩的不变性**
+>
+> 对 $c\in\mathbb R$ 与 $\lambda\ne0$, 勒贝格测度满足 $m\left(E+c\right)=m\left(E\right)$ 与 $m\left(\lambda E\right)=\left|\lambda\right|m\left(E\right)$.
 
-> **基础知识: 可逆线性变换保持可测性与零测集**<br>若 $T\in GL\left(n,\mathbb R\right)$, 则 $T\left(E\right)\in\mathcal L^{n}$ 当且仅当 $E\in\mathcal L^{n}$, 且 $T$ 保持零测集.
+> **基础知识: 可逆线性变换保持可测性与零测集**
+>
+> 若 $T\in GL\left(n,\mathbb R\right)$, 则 $T\left(E\right)\in\mathcal L^{n}$ 当且仅当 $E\in\mathcal L^{n}$, 且 $T$ 保持零测集.
 
-> **基础知识: 正交变换保持勒贝格测度**<br>若 $R\in O\left(n\right)$, 即 $R^{\top}R=I$, 则 $\left|\det R\right|=1$, 且对任意 $E\in\mathcal L^{n}$ 有 $m\left(R\left(E\right)\right)=m\left(E\right)$.
+> **基础知识: 正交变换保持勒贝格测度**
+>
+> 若 $R\in O\left(n\right)$, 即 $R^{\top}R=I$, 则 $\left|\det R\right|=1$, 且对任意 $E\in\mathcal L^{n}$ 有 $m\left(R\left(E\right)\right)=m\left(E\right)$.
 
-> **基础知识: 伽马函数与贝塔恒等式**<br>伽马函数 $\Gamma\left(x\right)=\int_{0}^{\infty}t^{x-1}e^{-t}\mathrm{d}t$ 满足递推 $\Gamma\left(x+1\right)=x\Gamma\left(x\right)$; 贝塔函数满足恒等式 $\frac{\Gamma\left(x\right)\Gamma\left(y\right)}{\Gamma\left(x+y\right)}=\int_{0}^{1}t^{x-1}\left(1-t\right)^{y-1}\mathrm{d}t$ 对 $x,y> 0$.
+> **基础知识: 伽马函数与贝塔恒等式**
+>
+> 伽马函数 $\Gamma\left(x\right)=\int_{0}^{\infty}t^{x-1}e^{-t}\mathrm{d}t$ 满足递推 $\Gamma\left(x+1\right)=x\Gamma\left(x\right)$; 贝塔函数满足恒等式 $\frac{\Gamma\left(x\right)\Gamma\left(y\right)}{\Gamma\left(x+y\right)}=\int_{0}^{1}t^{x-1}\left(1-t\right)^{y-1}\mathrm{d}t$ 对 $x,y> 0$.
 
-> **基础知识: 特征函数的连续逼近**<br>若 $R\subset\mathbb R^{n}$ 是有界闭矩形, 则对任意 $\varepsilon> 0$, 存在具有紧支撑的连续函数 $g$ 使得 $\int\left|\chi_{R}-g\right|\mathrm{d}m< \varepsilon$.
+> **基础知识: 特征函数的连续逼近**
+>
+> 若 $R\subset\mathbb R^{n}$ 是有界闭矩形, 则对任意 $\varepsilon> 0$, 存在具有紧支撑的连续函数 $g$ 使得 $\int\left|\chi_{R}-g\right|\mathrm{d}m< \varepsilon$.
 
-> **基础知识: 测度在乘积 $\sigma$-代数生成族上的唯一性**<br>两个 $\sigma$-有限的测度若在某个生成乘积 $\sigma$-代数的矩形容许族上取值相等, 则在整个乘积 $\sigma$-代数上相等.
+> **基础知识: 测度在乘积 $\sigma$-代数生成族上的唯一性**
+>
+> 两个 $\sigma$-有限的测度若在某个生成乘积 $\sigma$-代数的矩形容许族上取值相等, 则在整个乘积 $\sigma$-代数上相等.
 
-> **定理 8.2.9 (控制收敛定理)**<br>设 $\left(X,\mathcal F,\mu\right)$ 是测度空间, $\left\{f_{n}\right\}$ 是一列可测函数, 若存在可积函数 $g$ 使 $\left|f_{n}\right|\le g$ 对所有 $n$ 成立, 且 $f_{n}\to f$ 几乎处处, 则 $f$ 可积且 $\int f\,\mathrm{d}\mu=\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu$.
+> **定理 8.2.9 (控制收敛定理)**
+>
+> 设 $\left(X,\mathcal F,\mu\right)$ 是测度空间, $\left\{f_{n}\right\}$ 是一列可测函数, 若存在可积函数 $g$ 使 $\left|f_{n}\right|\le g$ 对所有 $n$ 成立, 且 $f_{n}\to f$ 几乎处处, 则 $f$ 可积且 $\int f\,\mathrm{d}\mu=\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu$.
 
-> **定理 8.2.16 (可积简单函数在 $L^{1}$ 中稠密)**<br>如果 $f\in L^{1}\left(\mu\right)$ 且 $\varepsilon> 0$, 则存在可积简单函数 $\varphi=\sum a_{j}\chi_{E_{j}}$ 使得 $\int\left|f-\varphi\right|\mathrm{d}\mu< \varepsilon$.
+> **定理 8.2.16 (可积简单函数在 $L^{1}$ 中稠密)**
+>
+> 如果 $f\in L^{1}\left(\mu\right)$ 且 $\varepsilon> 0$, 则存在可积简单函数 $\varphi=\sum a_{j}\chi_{E_{j}}$ 使得 $\int\left|f-\varphi\right|\mathrm{d}\mu< \varepsilon$.
 
-> **定理 10.2.1 (富比尼定理)**<br>设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 $\nu$-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 $\mu$-可积的; 且重积分相等:
+> **定理 10.2.1 (富比尼定理)**
+>
+> 设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 $\nu$-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 $\mu$-可积的; 且重积分相等:
 
 $$
 \int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right).
 $$
 
-> **定理 10.2.2 (托内利定理)**<br>如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则
+> **定理 10.2.2 (托内利定理)**
+>
+> 如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则
 
 $$
 \int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),
@@ -30,7 +50,9 @@ $$
 
 其中所有积分值都在 $\left[0,\infty\right]$ 中.
 
-> **定理 11.1.1 (勒贝格测度的正则性与矩形逼近)**<br>假设 $E\in\mathcal L^{n}$. (a)
+> **定理 11.1.1 (勒贝格测度的正则性与矩形逼近)**
+>
+> 假设 $E\in\mathcal L^{n}$. (a)
 
 $$
 m\left(E\right)=\inf\left\{m\left(U\right):U\supset E,U\text{ 开}\right\}=\sup\left\{m\left(K\right):K\subset E,K\text{ 紧}\right\};
@@ -38,7 +60,9 @@ $$
 
 (b) 若 $m\left(E\right)< \infty$, 则对任意 $\varepsilon> 0$, 存在有限个边为区间的互不相交的矩形族 $\left\{R_{j}\right\}_{j=1}^{N}$, 使得 $m\left(E\triangle\bigcup_{j=1}^{N}R_{j}\right)< \varepsilon$.
 
-> **定理 11.4.1 (极坐标下的积分公式)**<br>存在 $S^{n-1}$ 上唯一的博雷尔测度 $\sigma=\sigma_{n-1}$, 使得 $m^{*}=\rho\times\sigma$. 若 $f$ 是 $\mathbb R^{n}$ 上的博雷尔可测函数, 且 $f\ge0$ 或 $f\in L^{1}\left(m\right)$, 则
+> **定理 11.4.1 (极坐标下的积分公式)**
+>
+> 存在 $S^{n-1}$ 上唯一的博雷尔测度 $\sigma=\sigma_{n-1}$, 使得 $m^{*}=\rho\times\sigma$. 若 $f$ 是 $\mathbb R^{n}$ 上的博雷尔可测函数, 且 $f\ge0$ 或 $f\in L^{1}\left(m\right)$, 则
 
 $$
 \int_{\mathbb R^{n}}f\left(x\right)\mathrm{d}x=\int_{0}^{\infty}\int_{S^{n-1}}f\left(rx'\right)r^{n-1}\mathrm{d}\sigma\left(x'\right)\mathrm{d}r.
