@@ -1,7 +1,7 @@
 # week10
 
 > **Basic Knowledge: Hardy-Littlewood Maximal Function**
->
+> 
 > Let $f\in L^{1}_{\mathrm{loc}}\left(\mathbb R^{n}\right)$. The Hardy-Littlewood maximal function of $f$ is
 
 $$
@@ -11,15 +11,15 @@ $$
 where $B\left(x,r\right)$ is the open ball centered at $x$ with radius $r$, and $\left|B\left(x,r\right)\right|$ denotes its Lebesgue measure.
 
 > **Basic Knowledge: Ball-Volume Formula**
->
+> 
 > Let $C_{n}=m\left(B\left(1,0\right)\right)$ be the Lebesgue measure of the unit ball. Then for every $x\in\mathbb R^{n}$ and $r> 0$, $m\left(B\left(x,r\right)\right)=C_{n}r^{n}$.
 
 > **Basic Knowledge: Regular Borel Measures**
->
+> 
 > Let $\nu$ be a Borel measure on $\mathbb R^{n}$. We call $\nu$ regular if: (1) for every compact set $K$, $\nu\left(K\right)< \infty$; (2) for every $E\in\mathcal B\left(\mathbb R^{n}\right)$, $\nu\left(E\right)=\inf\left\{\nu\left(U\right):U\text{ open},E\subset U\right\}$.
 
 > **Definition 11.4.1 (Mutually Singular)**
->
+> 
 > Let $\mu$ and $\nu$ be two signed measures on $\left(X,\mathcal F\right)$. If there exists $E\in\mathcal F$ such that $E$ is a $\mu$-null set and $E^{c}$ is a $\nu$-null set, then $\mu$ and $\nu$ are mutually singular, written $\mu\perp\nu$.
 
 ---

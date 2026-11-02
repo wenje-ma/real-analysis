@@ -1,35 +1,35 @@
 # week1
 
 > **基础知识: 开集表为可数开矩形并**
->
+> 
 > $\mathbb R^{m+n}$ 中每个开集可表为可数个开矩形的并: $O=\bigcup_{k=1}^{\infty}\left(U_{k}\times V_{k}\right)$, 其中 $U_{k}\subset\mathbb R^{m}$, $V_{k}\subset\mathbb R^{n}$ 为开集 (有理端点的矩形构成可数基).
 
 > **定理 1.2.9 (德摩根定律)**
->
+> 
 > $\left(A\cup B\right)^{c}=A^{c}\cap B^{c}$, $\left(A\cap B\right)^{c}=A^{c}\cup B^{c}$.
 
 > **定理 2.4.2 (原像运算的性质)**
->
+> 
 > 设 $f:A\to B$, 则 $f^{-1}\left(B_{1}\cup B_{2}\right)=f^{-1}\left(B_{1}\right)\cup f^{-1}\left(B_{2}\right)$, $f^{-1}\left(B_{1}\cap B_{2}\right)=f^{-1}\left(B_{1}\right)\cap f^{-1}\left(B_{2}\right)$, $f^{-1}\left(B^{c}\right)=\left(f^{-1}\left(B\right)\right)^{c}$, $f^{-1}\left(\bigcup_{\alpha\in I}B_{\alpha}\right)=\bigcup_{\alpha\in I}f^{-1}\left(B_{\alpha}\right)$, $f^{-1}\left(\bigcap_{\alpha\in I}B_{\alpha}\right)=\bigcap_{\alpha\in I}f^{-1}\left(B_{\alpha}\right)$.
 
 > **定理 3.2.1 (实数中开集的构造)**
->
+> 
 > 设 $U\subset\mathbb R$ 是非空开集, 则存在一列互不相交的开区间 $\left\{I_{n}\right\}_{n=1}^{\infty}$, 使 $U=\bigcup_{n=1}^{\infty}I_{n}$; 且此表示在重排意义下唯一.
 
 > **定义 4.1.1 (集合代数)**
->
+> 
 > 设 $X$ 非空, $\mathcal A\subset\mathcal P\left(X\right)$. 称 $\mathcal A$ 为 $X$ 上的一个集合代数 (布尔代数), 若满足: (1) $X\in\mathcal A$; (2) 对差运算封闭: $A,B\in\mathcal A\Rightarrow A\setminus B\in\mathcal A$; (3) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
 
 > **命题 4.1.2 (代数的等价定义)**
->
+> 
 > 设 $\mathcal A\subset\mathcal P\left(X\right)$, 则以下条件等价: (1) $\mathcal A$ 是代数; (2) $\mathcal A$ 满足: (a) $X\in\mathcal A$; (b) 对补运算封闭: $A\in\mathcal A\Rightarrow A^{c}=X\setminus A\in\mathcal A$; (c) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
 
 > **定义 4.1.3 ($\sigma$-代数)**
->
+> 
 > 设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 $\sigma$-代数, 若满足: (1) $X\in\mathcal F$; (2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$. 称 $\left(X,\mathcal F\right)$ 为可测空间, $\mathcal F$ 中的元素称为可测集.
 
 > **定义 4.2.1 (生成代数)**
->
+> 
 > 包含 $\mathcal E\subset\mathcal P\left(X\right)$ 的最小代数称为由 $\mathcal E$ 生成的代数, 记作 $\alpha\left(\mathcal E\right)$:
 
 $$
@@ -37,7 +37,7 @@ $$
 $$
 
 > **定义 4.2.2 (生成 $\sigma$-代数)**
->
+> 
 > 包含 $\mathcal E\subset\mathcal P\left(X\right)$ 的最小 $\sigma$-代数称为由 $\mathcal E$ 生成的 $\sigma$-代数, 记作 $\sigma\left(\mathcal E\right)$:
 
 $$
@@ -45,11 +45,11 @@ $$
 $$
 
 > **定义 4.3.2 (博雷尔 $\sigma$-代数)**
->
+> 
 > 设 $\left(X,\tau\right)$ 是拓扑空间, 由所有开集生成的 $\sigma$-代数称为博雷尔 $\sigma$-代数, 记作 $\mathcal B\left(X\right)$, 其中元素称为博雷尔集.
 
 > **例 4.3.3 (实数上的博雷尔代数)**
->
+> 
 > 在 $\mathbb R$ 上, 以下集合族生成相同的博雷尔 $\sigma$-代数 $\mathcal B\left(\mathbb R\right)$: 所有开集 $\tau$, 所有闭集 $\mathcal F$, 所有开区间 $\left\{\left(a,b\right)\right\}$, 所有闭区间 $\left\{\left[a,b\right]\right\}$, 所有左开右闭区间 $\left\{\left(a,b\right]\right\}$, 即
 
 $$
@@ -57,7 +57,7 @@ $$
 $$
 
 > **定义 4.5.1 (可测矩形与乘积 $\sigma$-代数)**
->
+> 
 > 设 $\left(X,\mathcal F\right)$, $\left(Y,\mathcal G\right)$ 为可测空间. $A\times B\subseteq X\times Y$ 称为可测矩形, 若 $A\in\mathcal F$ 且 $B\in\mathcal G$. 乘积 $\sigma$-代数为包含所有可测矩形的最小 $\sigma$-代数:
 
 $$
@@ -65,7 +65,7 @@ $$
 $$
 
 > **定理 4.5.3 (截面可测性)**
->
+> 
 > 若 $E\in\mathcal F\otimes\mathcal G$, 则对任意 $x\in X$, $y\in Y$, 其截面都可测:
 
 $$
@@ -73,7 +73,7 @@ E_{x}=\left\{y\in Y:\left(x,y\right)\in E\right\}\in\mathcal G,\qquad E^{y}=\lef
 $$
 
 > **定理 4.5.4 (博雷尔集的乘积)**
->
+> 
 > 对欧氏空间中的博雷尔 $\sigma$-代数, 有
 
 $$
@@ -81,7 +81,7 @@ $$
 $$
 
 > **定义 4.5.7 (任意乘积 $\sigma$-代数)**
->
+> 
 > 设 $\left\{\left(X_{\alpha},\mathcal F_{\alpha}\right)\right\}_{\alpha\in I}$ 是一族可测空间, 乘积 $\sigma$-代数 $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$ 是由所有柱集
 
 $$
@@ -143,7 +143,7 @@ $$
 **($\Leftarrow$)** 设 $\mathcal F$ 是代数且对可数不交并封闭. 代数给出 $X\in\mathcal F$, 对补封闭及有限并封闭; 只需再证对可数并封闭. 设 $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 作不交化:
 
 $$
-B_{1}:=A_{1},\qquad B_{n}:=A_{n}\setminus\left(A_{1}\cup\cdots\cup A_{n-1}\right)\ (n\ge2).
+B_{1}:=A_{1},\qquad B_{n}:=A_{n}\setminus\left(A_{1}\cup\cdots\cup A_{n-1}\right)\ \left(n\ge2\right).
 $$
 
 由代数的差运算与有限并封闭, 每个 $B_{n}\in\mathcal F$; 且 $\left\{B_{n}\right\}$ 两两不交, 并保持并集不变: $\bigcup_{n=1}^{\infty}B_{n}=\bigcup_{n=1}^{\infty}A_{n}$. 由可数不交并封闭,

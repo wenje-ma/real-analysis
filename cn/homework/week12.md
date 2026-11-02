@@ -1,35 +1,35 @@
 # week12
 
 > **基础知识: 归一化的有界变差 $NBV$ 与斯蒂尔杰斯测度**
->
+> 
 > $NBV=\left\{F\in BV:F\text{ 右连续},F\left(-\infty\right)=0\right\}$. 对递增右连续的 $F$, 由 $\mu_{F}\left(\left(a,b\right]\right)=F\left(b\right)-F\left(a\right)$ 唯一确定一个正则博雷尔测度 $\mu_{F}$.
 
 > **基础知识: 绝对连续函数的全变差**
->
+> 
 > 若 $F$ 在 $\left[a,b\right]$ 上绝对连续, 则 $F$ 的全变差 $V_{a}^{b}\left(F\right)=\int_{a}^{b}\left|F'\left(t\right)\right|\mathrm{d}t$.
 
 > **性质 11.5.6 (拉东-尼科迪姆导数的线性性)**
->
+> 
 > 若 $\nu_{1},\nu_{2}\ll\mu$ 且 $a,b\in\mathbb R$, 则 $\frac{\mathrm{d}\left(a\nu_{1}+b\nu_{2}\right)}{\mathrm{d}\mu}=a\frac{\mathrm{d}\nu_{1}}{\mathrm{d}\mu}+b\frac{\mathrm{d}\nu_{2}}{\mathrm{d}\mu}$ $\mu$-几乎处处成立.
 
 > **推论 13.4.5 (单调函数几乎处处可导)**
->
+> 
 > 设 $F$ 是 $\mathbb R$ 上的右连续的增函数, 则对几乎所有的 $x$, $F'\left(x\right)$ 存在.
 
 > **定义 14.0.6 (有界变差函数)**
->
+> 
 > 设 $f:\left[a,b\right]\to\mathbb R$. 对 $\left[a,b\right]$ 的任意分划 $P:a=x_{0}< x_{1}< \cdots< x_{n}=b$, 定义变差 $V\left(f,P\right)=\sum_{i=1}^{n}\left|f\left(x_{i}\right)-f\left(x_{i-1}\right)\right|$. $f$ 在 $\left[a,b\right]$ 上的全变差为 $V_{a}^{b}\left(f\right)=\sup_{P}V\left(f,P\right)$. 若 $V_{a}^{b}\left(f\right)< +\infty$, 则称 $f$ 为有界变差函数, 记作 $f\in BV\left(\left[a,b\right]\right)$.
 
 > **定义 15.0.11 (绝对连续性)**
->
+> 
 > 函数 $f:\left[a,b\right]\to\mathbb R$ 称为绝对连续的 (记 $f\in AC\left(\left[a,b\right]\right)$), 若对任意 $\varepsilon> 0$, 存在 $\delta> 0$, 使得对任意有限个互不相交的子区间 $\left(a_{i},b_{i}\right)\subset\left[a,b\right]$, 只要 $\sum_{i}\left(b_{i}-a_{i}\right)< \delta$, 就有 $\sum_{i}\left|f\left(b_{i}\right)-f\left(a_{i}\right)\right|< \varepsilon$.
 
 > **定理 15.0.14 (绝对连续的等价刻画)**
->
+> 
 > $f\in AC\left(\left[a,b\right]\right)$ 当且仅当存在 $g\in L^{1}\left(\left[a,b\right]\right)$ 使得 $f\left(x\right)=f\left(a\right)+\int_{a}^{x}g\left(t\right)\mathrm{d}t$ 对一切 $x\in\left[a,b\right]$ 成立. 此时 $f'\left(x\right)=g\left(x\right)$ 几乎处处成立.
 
 > **定理 15.0.16 (函数类的包含关系)**
->
+> 
 > 有以下严格包含关系: $C^{1}\left(\left[a,b\right]\right)\subset$ 利普希茨 $\subset AC\left(\left[a,b\right]\right)\subset BV\left(\left[a,b\right]\right)\subset$ 有界函数.
 
 ---

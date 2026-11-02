@@ -1,63 +1,63 @@
 # week5
 
 > **基础知识: 非负可积函数积分为零则几乎处处为零**
->
+> 
 > 设 $h\ge0$ 可测且 $\int_{X}h\,\mathrm{d}\mu=0$, 则 $h=0$ 几乎处处. 事实上 $\left\{h> 0\right\}=\bigcup_{n=1}^{\infty}\left\{h> \frac{1}{n}\right\}$, 且 $\int h\ge\frac{1}{n}\mu\left(\left\{h> \frac{1}{n}\right\}\right)$, 故 $\mu\left(\left\{h> \frac{1}{n}\right\}\right)=0$ 对所有 $n$ 成立.
 
 > **基础知识: 黎曼积分与达布和**
->
+> 
 > 设 $f$ 是 $\left[a,b\right]$ 上的有界实值函数. 对 $\left[a,b\right]$ 的一个分割 $P=\left\{t_{0}< \cdots< t_{n}\right\}$, 记 $M_{i}=\sup_{\left[t_{i-1},t_{i}\right]}f$, $m_{i}=\inf_{\left[t_{i-1},t_{i}\right]}f$, 定义上达布和 $\overline S\left(P\right)=\sum_{i}M_{i}\left(t_{i}-t_{i-1}\right)$, 下达布和 $\underline S\left(P\right)=\sum_{i}m_{i}\left(t_{i}-t_{i-1}\right)$. 上积分 $\overline{\int}f=\inf_{P}\overline S\left(P\right)$, 下积分 $\underline{\int}f=\sup_{P}\underline S\left(P\right)$. 若 $\overline{\int}f=\underline{\int}f$, 其公共值称为 $f$ 的黎曼积分, 此时称 $f$ 黎曼可积.
 
 > **定义 5.1.2 (测度)**
->
+> 
 > 设 $\left(X,\mathcal F\right)$ 是一个可测空间. 函数 $\mu:\mathcal F\to\left[0,+\infty\right]$ 称为 $\left(X,\mathcal F\right)$ 上的一个测度, 如果满足: (1) 非负性: $\mu\left(E\right)\ge0$ 对一切 $E\in\mathcal F$ 成立; (2) 零空集性: $\mu\left(\emptyset\right)=0$; (3) 可数可加性 ($\sigma$-可加性): 对任意可数个两两不交的集合 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 有 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
 
 > **定义 5.1.5 ($\sigma$-有限测度)**
->
+> 
 > 设 $\left(X,\mathcal F,\mu\right)$ 是测度空间. 如果存在一列可测集 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 使得 $X=\bigcup_{n=1}^{\infty}E_{n}$ 且 $\mu\left(E_{n}\right)< +\infty$ 对所有 $n\in\mathbb N$ 成立, 则称 $\mu$ 为 $\sigma$-有限测度.
 
 > **定义 8.1.1 (非负简单函数的积分)**
->
+> 
 > 设 $f=\sum_{i=1}^{n}c_{i}\chi_{A_{i}}$ 是非负简单函数, 其中 $c_{i}\ge0$, $A_{i}\in\mathcal F$ 互不相交且 $\bigcup_{i}A_{i}=X$. 定义 $f$ 关于 $\mu$ 的积分为 $\int_{X}f\,\mathrm{d}\mu=\sum_{i=1}^{n}c_{i}\mu\left(A_{i}\right)$, 并约定 $0\cdot\infty=0$.
 
 > **命题 8.1.2 (简单函数积分的线性性)**
->
+> 
 > 设 $f,g$ 为非负简单函数, $\alpha,\beta\ge0$, 则 $\int_{X}\left(\alpha f+\beta g\right)\mathrm{d}\mu=\alpha\int_{X}f\,\mathrm{d}\mu+\beta\int_{X}g\,\mathrm{d}\mu$.
 
 > **定义 8.2.1 (非负可测函数的积分)**
->
+> 
 > 设 $f:X\to\left[0,+\infty\right]$ 是非负可测函数. 定义 $f$ 关于 $\mu$ 的积分为 $\int_{X}f\,\mathrm{d}\mu=\sup\left\{\int_{X}\phi\,\mathrm{d}\mu:\phi\text{ 是简单函数},0\le\phi\le f\right\}$. 若 $\int_{X}f\,\mathrm{d}\mu< \infty$, 则称 $f$ 是可积的.
 
 > **定理 8.2.2 (单调收敛定理)**
->
+> 
 > 设 $\left(X,\mathcal F,\mu\right)$ 是测度空间, $\left\{f_{n}\right\}$ 是一列非负可测函数, 满足 $0\le f_{1}\left(x\right)\le f_{2}\left(x\right)\le\cdots$ 对所有 $x\in X$ 成立, 且 $f_{n}\to f$ 点点收敛. 则 $\lim_{n\to\infty}\int_{X}f_{n}\,\mathrm{d}\mu=\int_{X}f\,\mathrm{d}\mu$.
 
 > **注 8.2.3 (简单函数逼近)**
->
+> 
 > 单调收敛定理告诉我们积分可以用简单函数逼近.
 
 > **命题 8.2.4 (积分关于集合的绝对连续性)**
->
+> 
 > 设 $f$ 为非负可测函数, 则 $A\mapsto\int_{A}f\,\mathrm{d}\mu$ 为一个测度; 若 $\mu\left(A\right)=0$, 则 $\int_{A}f\,\mathrm{d}\mu=0$.
 
 > **定义 8.2.5 (一般可测函数的积分)**
->
+> 
 > 设 $f:X\to\left[-\infty,+\infty\right]$ 是可测函数. 定义 $f$ 的正部和负部分别为 $f^{+}\left(x\right)=\max\left\{f\left(x\right),0\right\}$, $f^{-}\left(x\right)=\max\left\{-f\left(x\right),0\right\}$. 若至少有一个积分 $\int_{X}f^{+}\mathrm{d}\mu$, $\int_{X}f^{-}\mathrm{d}\mu$ 有限, 则定义 $f$ 的积分为 $\int_{X}f\,\mathrm{d}\mu=\int_{X}f^{+}\mathrm{d}\mu-\int_{X}f^{-}\mathrm{d}\mu$. 若 $\int_{X}f^{+}\mathrm{d}\mu< \infty$ 且 $\int_{X}f^{-}\mathrm{d}\mu< \infty$, 则称 $f$ 是可积的.
 
 > **定理 8.2.7 (法图引理)**
->
+> 
 > 设 $\left(X,\mathcal F,\mu\right)$ 是测度空间, $\left\{f_{n}\right\}$ 是一列非负可测函数, 则 $\int_{X}\liminf_{n\to\infty}f_{n}\,\mathrm{d}\mu\le\liminf_{n\to\infty}\int_{X}f_{n}\,\mathrm{d}\mu$.
 
 > **定理 8.2.9 (控制收敛定理)**
->
+> 
 > 设 $\left(X,\mathcal F,\mu\right)$ 是测度空间, $\left\{f_{n}\right\}$ 是一列可测函数, $f_{n}\to f$ 几乎处处. 如果存在可积函数 $g$ 使得对所有 $n$ 有 $\left|f_{n}\right|\le g$ 几乎处处, 则 $\lim_{n\to\infty}\int_{X}f_{n}\,\mathrm{d}\mu=\int_{X}f\,\mathrm{d}\mu$.
 
 > **引理 8.2.13 (级数逐项积分)**
->
+> 
 > 设 $\left\{f_{n}\right\}$ 是一列可测函数, 且 $\sum_{n=1}^{\infty}\int_{X}\left|f_{n}\right|\mathrm{d}\mu< \infty$, 则 $\int_{X}\left(\sum_{n=1}^{\infty}f_{n}\right)\mathrm{d}\mu=\sum_{n=1}^{\infty}\int_{X}f_{n}\,\mathrm{d}\mu$.
 
 > **定理 8.2.17 (参数积分)**
->
+> 
 > 设 $f:X\times\left[a,b\right]\to\mathbb R$, 且对每个 $t\in\left[a,b\right]$, 函数 $f\left(\cdot,t\right):X\to\mathbb R$ 可积. 令 $F\left(t\right)=\int_{X}f\left(x,t\right)\mathrm{d}\mu\left(x\right)$. (a) 若存在 $g\in L^{1}\left(\mu\right)$ 使得对所有 $x,t$ 有 $\left|f\left(x,t\right)\right|\le g\left(x\right)$, 且对每个 $x$ 有 $\lim_{t\to t_{0}}f\left(x,t\right)=f\left(x,t_{0}\right)$, 则 $\lim_{t\to t_{0}}F\left(t\right)=F\left(t_{0}\right)$; (b) 若偏导数 $\partial f/\partial t$ 存在, 且存在 $g\in L^{1}\left(\mu\right)$ 使得对所有 $x,t$ 有 $\left|\frac{\partial f}{\partial t}\left(x,t\right)\right|\le g\left(x\right)$, 则 $F$ 可微, 且 $F'\left(t\right)=\int\frac{\partial f}{\partial t}\left(x,t\right)\mathrm{d}\mu\left(x\right)$.
 
 ---

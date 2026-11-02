@@ -1,23 +1,23 @@
 # week11
 
 > **Basic Knowledge: Normalized Bounded Variation ($NBV$)**
->
+> 
 > $NBV=\left\{F\in BV:F\text{ right-continuous},F\left(-\infty\right)=0\right\}$, where $BV$ denotes the bounded-variation functions on $\mathbb R$, and $T_{F}$ is the total-variation function of $F$.
 
 > **Basic Knowledge: Series**
->
+> 
 > The geometric series $\sum_{n=1}^{\infty}2^{-n}=1$ converges; the harmonic series $\sum_{k}\frac{1}{k}$ diverges.
 
 > **Definition 14.0.6 (Functions of Bounded Variation)**
->
+> 
 > Let $f:\left[a,b\right]\to\mathbb R$. For any partition $P:a=x_{0}< x_{1}< \cdots< x_{n}=b$ of $\left[a,b\right]$, define the variation $V\left(f,P\right)=\sum_{i=1}^{n}\left|f\left(x_{i}\right)-f\left(x_{i-1}\right)\right|$. The total variation of $f$ on $\left[a,b\right]$ is $V_{a}^{b}\left(f\right)=\sup_{P}V\left(f,P\right)$. If $V_{a}^{b}\left(f\right)< +\infty$, $f$ is called a bounded-variation function on $\left[a,b\right]$, written $f\in BV\left(\left[a,b\right]\right)$.
 
 > **Theorem 14.0.7 (Basic Properties of Bounded-Variation Functions)**
->
+> 
 > Let $f,g\in BV\left(\left[a,b\right]\right)$. Then: (1) $BV\left(\left[a,b\right]\right)$ is a linear space; (2) $f$ is bounded; (3) if $f$ satisfies a Lipschitz condition, then $f\in BV\left(\left[a,b\right]\right)$; (4) a monotone function is always of bounded variation.
 
 > **Theorem 14.0.10 (Discontinuity Properties of Bounded-Variation Functions)**
->
+> 
 > If $f\in BV\left(\left[a,b\right]\right)$, then: (1) $f$ has at most countably many discontinuities; (2) all discontinuities are jump discontinuities.
 
 ---

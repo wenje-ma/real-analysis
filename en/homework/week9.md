@@ -1,7 +1,7 @@
 # week9
 
 > **Theorem 10.2.2 (Tonelli's Theorem)**
->
+> 
 > If $f:X\times Y\to\left[0,\infty\right]$ is $\mathcal A\otimes\mathcal B$-measurable, then
 
 $$
@@ -11,51 +11,51 @@ $$
 with all integral values in $\left[0,\infty\right]$.
 
 > **Definition 11.1.1 (Signed Measure)**
->
+> 
 > Let $\left(X,\mathcal F\right)$ be a measurable space. A function $\nu:\mathcal F\to\mathbb R\cup\left\{+\infty\right\}$ or $\mathbb R\cup\left\{-\infty\right\}$ is called a signed measure if: (1) $\nu\left(\varnothing\right)=0$; (2) countable additivity: for every sequence of pairwise-disjoint measurable sets $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal F$, $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$; (3) $\nu$ cannot take both $+\infty$ and $-\infty$.
 
 > **Proposition 11.1.2 (Basic Properties of Signed Measures)**
->
+> 
 > Let $\nu$ be a signed measure. Then: (1) finite additivity: for any finitely many pairwise-disjoint $E_{1},\dots,E_{n}\in\mathcal F$, $\nu\left(\bigcup_{i=1}^{n}E_{i}\right)=\sum_{i=1}^{n}\nu\left(E_{i}\right)$; (2) lower continuity: if $\left\{E_{j}\right\}$ is increasing measurable, then $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcup_{j}E_{j}\right)$; (3) upper continuity: if $\left\{E_{j}\right\}$ is decreasing measurable and $\nu\left(E_{1}\right)< \infty$, then $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcap_{j}E_{j}\right)$.
 
 > **Definition 11.2.1 (Positive Set, Negative Set, Null Set)**
->
+> 
 > Let $\nu$ be a signed measure on $\left(X,\mathcal F\right)$. A set $P\in\mathcal F$ is positive (written $P\gtrsim0$) if $\nu\left(E\right)\ge0$ for every $E\in\mathcal F$ with $E\subset P$; a set $N\in\mathcal F$ is negative (written $N\lesssim0$) if $\nu\left(E\right)\le0$ for every $E\in\mathcal F$ with $E\subset N$; a set $Z\in\mathcal F$ is a null set if $\nu\left(E\right)=0$ for every $E\in\mathcal F$ with $E\subset Z$.
 
 > **Lemma 11.2.2 (Properties of Positive Sets)**
->
+> 
 > (1) Any measurable subset of a positive set is positive; (2) a countable union of positive sets is positive; (3) if $\left\{P_{n}\right\}$ is a sequence of positive sets, then $\bigcap_{n=1}^{\infty}P_{n}$ is positive. The same holds for negative sets.
 
 > **Lemma 11.2.4 (Criterion for a Non-Negative Set)**
->
+> 
 > Let $\nu$ be a signed measure. If $E$ is not a negative set, then there exists a positive set $F\subset E$ with $\nu\left(F\right)> 0$.
 
 > **Theorem 11.3.2 (Hahn Decomposition Theorem)**
->
+> 
 > Let $\nu$ be a signed measure on $\left(X,\mathcal F\right)$. Then there is a decomposition $X=P\cup N$, where $P$ is positive, $N$ is negative, and $P\cap N=\varnothing$; and this decomposition is unique up to a $\nu$-null set.
 
 > **Definition 11.4.1 (Mutually Singular Signed Measures)**
->
+> 
 > Let $\mu$ and $\nu$ be two signed measures on $\left(X,\mathcal F\right)$. If there exists $E\in\mathcal F$ such that $E$ is a $\mu$-null set and $E^{c}$ is a $\nu$-null set, then $\mu$ and $\nu$ are mutually singular, written $\mu\perp\nu$.
 
 > **Theorem 11.4.3 (Jordan Decomposition Theorem)**
->
+> 
 > Let $\nu$ be a signed measure on $\left(X,\mathcal F\right)$. Then there is a unique pair of mutually singular positive measures $\nu^{+}$ and $\nu^{-}$ such that $\nu=\nu^{+}-\nu^{-}$.
 
 > **Definition 11.4.4 (Variation Measure)**
->
+> 
 > Let $\nu$ be a signed measure with Jordan decomposition $\nu=\nu^{+}-\nu^{-}$. $\nu^{+}$ is the positive variation, $\nu^{-}$ the negative variation, and $\left|\nu\right|=\nu^{+}+\nu^{-}$ the total variation measure.
 
 > **Definition 11.5.1 (Absolute Continuity)**
->
+> 
 > Let $\mu$ be a positive measure and $\nu$ a signed measure. We say $\nu$ is absolutely continuous w.r.t. $\mu$ (written $\nu\ll\mu$) if $\mu\left(E\right)=0\Rightarrow\nu\left(E\right)=0$ for every $E\in\mathcal F$.
 
 > **Remark 11.5.3 (Absolute Continuity of the Integral w.r.t. the Measure)**
->
+> 
 > If $f\in L^{1}\left(\mu\right)$, then $\lim_{\mu\left(E\right)\to0}\int_{E}f\,\mathrm{d}\mu=0$.
 
 > **Theorem 11.5.5 (Radon-Nikodym Theorem)**
->
+> 
 > Let $\mu$ be a $\sigma$-finite positive measure and $\nu$ a signed measure with $\nu\ll\mu$. Then there exists a measurable function $f:X\to\mathbb R$ such that $\nu\left(E\right)=\int_{E}f\,\mathrm{d}\mu$ for every $E\in\mathcal F$; and $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$. The function $f$ is the Radon-Nikodym derivative of $\nu$ w.r.t. $\mu$, written $f=\frac{\mathrm{d}\nu}{\mathrm{d}\mu}$.
 
 ---

@@ -1,35 +1,35 @@
 # week12
 
 > **Basic Knowledge: NBV and Stieltjes Measures**
->
+> 
 > $NBV=\left\{F\in BV:F\text{ right-continuous},F\left(-\infty\right)=0\right\}$. For an increasing right-continuous $F$, a regular Borel measure $\mu_{F}$ is uniquely determined by $\mu_{F}\left(\left(a,b\right]\right)=F\left(b\right)-F\left(a\right)$.
 
 > **Basic Knowledge: Total Variation of an Absolutely Continuous Function**
->
+> 
 > If $F$ is absolutely continuous on $\left[a,b\right]$, then its total variation is $V_{a}^{b}\left(F\right)=\int_{a}^{b}\left|F'\left(t\right)\right|\mathrm{d}t$.
 
 > **Property 11.5.6 (Linearity of the Radon-Nikodym Derivative)**
->
+> 
 > If $\nu_{1},\nu_{2}\ll\mu$ and $a,b\in\mathbb R$, then $\frac{\mathrm{d}\left(a\nu_{1}+b\nu_{2}\right)}{\mathrm{d}\mu}=a\frac{\mathrm{d}\nu_{1}}{\mathrm{d}\mu}+b\frac{\mathrm{d}\nu_{2}}{\mathrm{d}\mu}$ holds $\mu$-a.e.
 
 > **Corollary 13.4.5 (Monotone Functions Are Differentiable a.e.)**
->
+> 
 > Let $F$ be a right-continuous increasing function on $\mathbb R$. Then $F'\left(x\right)$ exists for almost every $x$.
 
 > **Definition 14.0.6 (Functions of Bounded Variation)**
->
+> 
 > Let $f:\left[a,b\right]\to\mathbb R$. For any partition $P:a=x_{0}< x_{1}< \cdots< x_{n}=b$ of $\left[a,b\right]$, define the variation $V\left(f,P\right)=\sum_{i=1}^{n}\left|f\left(x_{i}\right)-f\left(x_{i-1}\right)\right|$. The total variation of $f$ on $\left[a,b\right]$ is $V_{a}^{b}\left(f\right)=\sup_{P}V\left(f,P\right)$. If $V_{a}^{b}\left(f\right)< +\infty$, $f$ is called a bounded-variation function, written $f\in BV\left(\left[a,b\right]\right)$.
 
 > **Definition 15.0.11 (Absolute Continuity)**
->
+> 
 > A function $f:\left[a,b\right]\to\mathbb R$ is called absolutely continuous (written $f\in AC\left(\left[a,b\right]\right)$) if for every $\varepsilon> 0$ there exists $\delta> 0$ such that for any finite collection of disjoint subintervals $\left(a_{i},b_{i}\right)\subset\left[a,b\right]$, whenever $\sum_{i}\left(b_{i}-a_{i}\right)< \delta$, we have $\sum_{i}\left|f\left(b_{i}\right)-f\left(a_{i}\right)\right|< \varepsilon$.
 
 > **Theorem 15.0.14 (Equivalent Characterization of Absolute Continuity)**
->
+> 
 > $f\in AC\left(\left[a,b\right]\right)$ if and only if there exists $g\in L^{1}\left(\left[a,b\right]\right)$ such that $f\left(x\right)=f\left(a\right)+\int_{a}^{x}g\left(t\right)\mathrm{d}t$ for all $x\in\left[a,b\right]$. In this case $f'\left(x\right)=g\left(x\right)$ a.e.
 
 > **Theorem 15.0.16 (Inclusions Among Function Classes)**
->
+> 
 > The following strict inclusions hold: $C^{1}\left(\left[a,b\right]\right)\subset$ Lipschitz $\subset AC\left(\left[a,b\right]\right)\subset BV\left(\left[a,b\right]\right)\subset$ bounded functions.
 
 ---

@@ -1,51 +1,51 @@
 # week3
 
 > **Basic Knowledge: Generalized Cantor Set**
->
+> 
 > Let $\left\{\alpha_{j}\right\}\subset\left(0,1\right)$. Starting from $\left[0,1\right]$, at step $j$ remove the middle $\alpha_{j}$ portion of each remaining closed interval. The resulting intersection $K=\bigcap_{j}K_{j}$ is called a generalized Cantor set. It satisfies $m\left(K\right)=\prod_{j=1}^{\infty}\left(1-\alpha_{j}\right)$, and for any $\beta\in\left(0,1\right)$ one can choose $\left\{\alpha_{j}\right\}$ so that $m\left(K\right)=\beta$; like the ordinary Cantor set, a generalized Cantor set is compact, nowhere dense, closed, and has no isolated points.
 
 > **Definition 4.1.1 (Algebra of Sets)**
->
+> 
 > Let $X$ be a nonempty set and $\mathcal A\subset\mathcal P\left(X\right)$. $\mathcal A$ is called an algebra of sets on $X$ if: (1) $X\in\mathcal A$; (2) closed under differences: $A,B\in\mathcal A\Rightarrow A\setminus B\in\mathcal A$; (3) closed under finite unions: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
 
 > **Definition 4.1.3 ($\sigma$-Algebra)**
->
+> 
 > Let $X$ be nonempty and $\mathcal F\subset\mathcal P\left(X\right)$. $\mathcal F$ is called a $\sigma$-algebra on $X$ if: (1) $X\in\mathcal F$; (2) closed under complements: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) closed under countable unions: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
 
 > **Definition 4.4.1 (Monotone Class)**
->
+> 
 > Let $\mathcal M\subset\mathcal P\left(X\right)$. $\mathcal M$ is called a monotone class if: (1) closed under increasing sequences: $A_{1}\subset A_{2}\subset\cdots$ and $A_{n}\in\mathcal M\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal M$; (2) closed under decreasing sequences: $A_{1}\supset A_{2}\supset\cdots$ and $A_{n}\in\mathcal M\Rightarrow\bigcap_{n=1}^{\infty}A_{n}\in\mathcal M$.
 
 > **Theorem 4.4.2 (Monotone Class Theorem)**
->
+> 
 > Let $\mathcal A$ be an algebra and $\mathcal M$ a monotone class containing $\mathcal A$. Then $\sigma\left(\mathcal A\right)\subset\mathcal M$.
 
 > **Definition 5.1.2 (Measure)**
->
+> 
 > Let $\left(X,\mathcal F\right)$ be a measurable space. A function $\mu:\mathcal F\to\left[0,+\infty\right]$ is called a measure on $\left(X,\mathcal F\right)$ if: (1) nonnegativity: $\mu\left(E\right)\ge0$ for all $E\in\mathcal F$; (2) empty set: $\mu\left(\varnothing\right)=0$; (3) countable additivity: for any countable pairwise-disjoint $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
 
 > **Proposition 5.2.1 (Finite Additivity)**
->
+> 
 > Let $\mu$ be a measure and $E_{1},\dots,E_{n}\in\mathcal F$ be pairwise disjoint. Then $\mu\left(\bigcup_{k=1}^{n}E_{k}\right)=\sum_{k=1}^{n}\mu\left(E_{k}\right)$.
 
 > **Proposition 5.2.3 (Countable Subadditivity)**
->
+> 
 > Let $\mu$ be a measure and $\left\{E_{n}\right\}_{n=1}^{\infty}$ arbitrary. Then $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
 
 > **Proposition 5.2.4 (Continuity from Below)**
->
+> 
 > Let $\mu$ be a measure and $\left\{E_{n}\right\}$ increasing. Then $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right)$.
 
 > **Definition 6.1.1 (Outer Measure)**
->
+> 
 > Let $X$ be nonempty. A function $\mu^{*}:\mathcal P\left(X\right)\to\left[0,+\infty\right]$ is called an outer measure on $X$ if: (1) nonnegativity: $\mu^{*}\left(\varnothing\right)=0$ and $\mu^{*}\left(E\right)\ge0$ for all $E\subset X$; (2) monotonicity: $E\subset F\Rightarrow\mu^{*}\left(E\right)\le\mu^{*}\left(F\right)$; (3) countable subadditivity: $\mu^{*}\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu^{*}\left(E_{n}\right)$.
 
 > **Definition 6.2.1 (Premeasure)**
->
+> 
 > Let $X$ be nonempty and $\mathcal E\subset\mathcal P\left(X\right)$ an algebra. A function $\mu_{0}:\mathcal E\to\left[0,+\infty\right]$ is called a premeasure if: (1) $\mu_{0}\left(\varnothing\right)=0$; (2) if $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal E$ are pairwise disjoint and $\bigcup_{n=1}^{\infty}E_{n}\in\mathcal E$, then $\mu_{0}\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right)$.
 
 > **Theorem 6.2.2 (Outer Measure from a Premeasure)**
->
+> 
 > Let $\mathcal E\subset\mathcal P\left(X\right)$ be a covering class and $\mu_{0}:\mathcal E\to\left[0,+\infty\right]$ a premeasure. For any $A\subset X$, define
 
 $$
@@ -55,7 +55,7 @@ $$
 Then $\mu^{*}$ is an outer measure on $X$, and $\mu^{*}|_{\mathcal E}=\mu_{0}$.
 
 > **Definition 6.3.1 (Carathéodory Condition)**
->
+> 
 > Let $\mu^{*}$ be an outer measure on $X$. A subset $A\subset X$ is called $\mu^{*}$-measurable if for every $T\subset X$,
 
 $$
@@ -65,23 +65,23 @@ $$
 The collection of all $\mu^{*}$-measurable sets is denoted $\mathcal M_{\mu^{*}}$.
 
 > **Lemma 6.3.2 (Algebra Contained in Measurable Sets)**
->
+> 
 > If $\mathcal E$ is an algebra and $\mu_{0}$ is a premeasure, then $\mathcal E\subset\mathcal M_{\mu^{*}}$.
 
 > **Theorem 6.3.3 (Carathéodory's Theorem)**
->
+> 
 > Let $\mu^{*}$ be an outer measure on $X$. Then: (1) $\mathcal M$ is a $\sigma$-algebra; (2) $\mu^{*}|_{\mathcal M}$ is a complete measure; (3) if $\mu^{*}$ is generated by a premeasure $\mu_{0}$ and $\mu_{0}$ is $\sigma$-finite, then $\mu^{*}|_{\mathcal M}$ is the unique extension of $\mu_{0}$.
 
 > **Definition 6.4.1 (h-Interval)**
->
+> 
 > Let $-\infty\le a< b< \infty$. All half-open intervals $\left(a,b\right]$, together with $\left(a,\infty\right)$ and $\varnothing$, are called h-intervals. The family of finite disjoint unions of h-intervals forms an algebra $\mathcal E$.
 
 > **Proposition 6.4.2 (Premeasure on $\mathcal E$)**
->
+> 
 > Let $F:\mathbb R\to\mathbb R$ be increasing and right-continuous. For disjoint intervals $\left(a_{i},b_{i}\right]$, $i=1,\dots,n$, define $\mu_{0}\left(\bigcup_{i=1}^{n}\left(a_{i},b_{i}\right]\right):=\sum_{i=1}^{n}\left[F\left(b_{i}\right)-F\left(a_{i}\right)\right]$, and set $\mu_{0}\left(\varnothing\right)=0$. Then $\mu_{0}$ is a premeasure on $\mathcal E$.
 
 > **Theorem 6.4.5 (Regularity of Lebesgue-Stieltjes Measure)**
->
+> 
 > Let $F:\mathbb R\to\mathbb R$ be right-continuous and increasing, $\mu_{F}$ the Lebesgue-Stieltjes measure generated by $F$, and $\mathcal M^{*}$ the $\sigma$-algebra of $\mu_{F}$-measurable sets. If $E\in\mathcal M^{*}$, then
 
 $$
@@ -89,15 +89,15 @@ $$
 $$
 
 > **Definition 6.4.6 (Lebesgue Measure)**
->
+> 
 > The measure generated by $F\left(x\right)=x$ is called Lebesgue measure, denoted $m$; the measurable sets defined via the corresponding outer measure are called Lebesgue measurable sets, and their collection is denoted $\mathcal L$.
 
 > **Definition 6.5.1 (Recursive Construction of the Cantor Set)**
->
+> 
 > Let $C_{0}=\left[0,1\right]$. For each $n\ge0$, define $C_{n+1}=\frac{1}{3}C_{n}\cup\left(\frac{2}{3}+\frac{1}{3}C_{n}\right)$. The Cantor set is defined as $C=\bigcap_{n=0}^{\infty}C_{n}$.
 
 > **Theorem 6.5.2 (Ternary Characterization of the Cantor Set)**
->
+> 
 > A point $x\in\left[0,1\right]$ belongs to the Cantor set $C$ iff its ternary expansion $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ contains no digit $1$ (i.e. $a_{k}\in\left\{0,2\right\}$).
 
 ---
@@ -312,7 +312,7 @@ which are two nonempty, disjoint, relatively open subsets of $K$ (since $K\subse
 
 **4. Nowhere dense.** Take any nonempty open interval $\left(\alpha,\beta\right)\subset\mathbb R$. If it intersects $\left[0,1\right]$, choose $n$ so that $3^{-n}< \beta-\alpha$. After step $n$, $C_{n}$ is a union of $2^{n}$ closed intervals of length $3^{-n}$, and the $2^{n}-1$ open intervals between them (dug out at step $n$) cover the part of $\left[0,1\right]$ excluding endpoints, each of length $3^{-n}$. Since $\left(\alpha,\beta\right)$ has length greater than $3^{-n}$, it must contain one of the open intervals dug out at step $n$, so $\left(\alpha,\beta\right)$ is not entirely contained in $C$. Thus $C$ contains no nonempty open interval, $\operatorname{int}\left(C\right)=\varnothing$, i.e. $C$ is nowhere dense. $\blacksquare$
 
-**5. Perfect set.** Closedness was proved in (1). To show $C$ has no isolated points: let $x\in C$ and $\varepsilon> 0$. By **Theorem 6.5.2 (Ternary Characterization of the Cantor Set)**, write $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ with $a_{k}\in\left\{0,2\right\}$. Choose $n$ so that $\frac{2}{3^{n+1}}< \varepsilon$, and let $x_{n}$ be the point obtained by replacing the $(n+1)$-th digit $a_{n+1}$ of $x$ by $2-a_{n+1}$, leaving all other digits unchanged. Then $x_{n}\in C$ (ternary expansion contains no $1$), $x_{n}\ne x$, and
+**5. Perfect set.** Closedness was proved in (1). To show $C$ has no isolated points: let $x\in C$ and $\varepsilon> 0$. By **Theorem 6.5.2 (Ternary Characterization of the Cantor Set)**, write $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ with $a_{k}\in\left\{0,2\right\}$. Choose $n$ so that $\frac{2}{3^{n+1}}< \varepsilon$, and let $x_{n}$ be the point obtained by replacing the $\left(n+1\right)$-th digit $a_{n+1}$ of $x$ by $2-a_{n+1}$, leaving all other digits unchanged. Then $x_{n}\in C$ (ternary expansion contains no $1$), $x_{n}\ne x$, and
 
 $$
 \left|x_{n}-x\right|=\left|\frac{2-a_{n+1}}{3^{n+1}}-\frac{a_{n+1}}{3^{n+1}}\right|=\frac{2}{3^{n+1}}< \varepsilon.

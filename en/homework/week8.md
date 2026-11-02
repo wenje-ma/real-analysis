@@ -1,39 +1,39 @@
 # week8
 
 > **Basic Knowledge: Invariance Under Translation and Dilation in One Dimension**
->
+> 
 > For $c\in\mathbb R$ and $\lambda\ne0$, Lebesgue measure satisfies $m\left(E+c\right)=m\left(E\right)$ and $m\left(\lambda E\right)=\left|\lambda\right|m\left(E\right)$.
 
 > **Basic Knowledge: Invertible Linear Maps Preserve Measurability and Null Sets**
->
+> 
 > If $T\in GL\left(n,\mathbb R\right)$, then $T\left(E\right)\in\mathcal L^{n}$ iff $E\in\mathcal L^{n}$, and $T$ preserves null sets.
 
 > **Basic Knowledge: Orthogonal Transformations Preserve Lebesgue Measure**
->
+> 
 > If $R\in O\left(n\right)$, i.e. $R^{\top}R=I$, then $\left|\det R\right|=1$, and $m\left(R\left(E\right)\right)=m\left(E\right)$ for every $E\in\mathcal L^{n}$.
 
 > **Basic Knowledge: Gamma Function and the Beta Identity**
->
+> 
 > The gamma function $\Gamma\left(x\right)=\int_{0}^{\infty}t^{x-1}e^{-t}\mathrm{d}t$ satisfies $\Gamma\left(x+1\right)=x\Gamma\left(x\right)$; the beta function satisfies $\frac{\Gamma\left(x\right)\Gamma\left(y\right)}{\Gamma\left(x+y\right)}=\int_{0}^{1}t^{x-1}\left(1-t\right)^{y-1}\mathrm{d}t$ for $x,y> 0$.
 
 > **Basic Knowledge: Continuous Approximation of Characteristic Functions**
->
+> 
 > If $R\subset\mathbb R^{n}$ is a bounded closed rectangle, then for every $\varepsilon> 0$ there exists a continuous compactly supported function $g$ with $\int\left|\chi_{R}-g\right|\mathrm{d}m< \varepsilon$.
 
 > **Basic Knowledge: Uniqueness of Measures on a Generating Rectangle Family**
->
+> 
 > Two $\sigma$-finite measures that agree on a rectangle family generating the product $\sigma$-algebra agree on the whole product $\sigma$-algebra.
 
 > **Theorem 8.2.9 (Dominated Convergence Theorem)**
->
+> 
 > Let $\left(X,\mathcal F,\mu\right)$ be a measure space and $\left\{f_{n}\right\}$ a sequence of measurable functions. If there exists an integrable $g$ with $\left|f_{n}\right|\le g$ for all $n$ and $f_{n}\to f$ a.e., then $f$ is integrable and $\int f\,\mathrm{d}\mu=\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu$.
 
 > **Theorem 8.2.16 (Integrable Simple Functions Are Dense in $L^{1}$)**
->
+> 
 > If $f\in L^{1}\left(\mu\right)$ and $\varepsilon> 0$, then there exists an integrable simple function $\varphi=\sum a_{j}\chi_{E_{j}}$ with $\int\left|f-\varphi\right|\mathrm{d}\mu< \varepsilon$.
 
 > **Theorem 10.2.1 (Fubini's Theorem)**
->
+> 
 > Let $\left(X,\mathcal A,\mu\right)$ and $\left(Y,\mathcal B,\nu\right)$ be $\sigma$-finite measure spaces and $f:X\times Y\to\mathbb R$ be $\mathcal A\otimes\mathcal B$-measurable. If $f$ is integrable on $X\times Y$, then for almost every $x$, $y\mapsto f\left(x,y\right)$ is $\nu$-integrable; for almost every $y$, $x\mapsto f\left(x,y\right)$ is $\mu$-integrable; and the iterated integrals agree:
 
 $$
@@ -41,7 +41,7 @@ $$
 $$
 
 > **Theorem 10.2.2 (Tonelli's Theorem)**
->
+> 
 > If $f:X\times Y\to\left[0,\infty\right]$ is $\mathcal A\otimes\mathcal B$-measurable, then
 
 $$
@@ -51,7 +51,7 @@ $$
 with all integral values in $\left[0,\infty\right]$.
 
 > **Theorem 11.1.1 (Regularity of Lebesgue Measure and Rectangle Approximation)**
->
+> 
 > Let $E\in\mathcal L^{n}$. (a)
 
 $$
@@ -61,7 +61,7 @@ $$
 (b) if $m\left(E\right)< \infty$, then for every $\varepsilon> 0$ there is a finite family of pairwise-disjoint rectangles $\left\{R_{j}\right\}_{j=1}^{N}$ with interval sides such that $m\left(E\triangle\bigcup_{j=1}^{N}R_{j}\right)< \varepsilon$.
 
 > **Theorem 11.4.1 (Integration in Polar Coordinates)**
->
+> 
 > There is a unique Borel measure $\sigma=\sigma_{n-1}$ on $S^{n-1}$ such that $m^{*}=\rho\times\sigma$. If $f$ is Borel measurable on $\mathbb R^{n}$ and either $f\ge0$ or $f\in L^{1}\left(m\right)$, then
 
 $$

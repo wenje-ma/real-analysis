@@ -1,27 +1,27 @@
 # week6
 
 > **基础知识: 非负可积函数积分为零则几乎处处为零**
->
+> 
 > 设 $h\ge0$ 可测且 $\int_{X}h\,\mathrm{d}\mu=0$, 则 $h=0$ 几乎处处.
 
 > **基础知识: 函数 $t\mapsto\frac{t}{1+t}$ 的性质**
->
+> 
 > 设 $d\left(t\right)=\frac{t}{1+t}$, $t\ge0$. 则 $d$ 在 $\left[0,\infty\right)$ 上递增, 且次可加: $d\left(a+b\right)\le d\left(a\right)+d\left(b\right)$ 对所有 $a,b\ge0$.
 
 > **基础知识: 测度的下连续性**
->
+> 
 > 若 $\left\{E_{n}\right\}$ 是可测集的单调上升序列, 则 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right)$; 特别当 $\mu\left(X\right)< \infty$ 时, 若 $E_{n}\uparrow X$, 则 $\mu\left(X\setminus E_{n}\right)\to0$.
 
 > **定义 4.1.3 ($\sigma$-代数)**
->
+> 
 > 设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 $\sigma$-代数, 若 $X\in\mathcal F$, 对补运算封闭, 且对可数并封闭. 由此 $\mathcal F$ 也对可数交封闭.
 
 > **定义 5.1.5 ($\sigma$-有限测度)**
->
+> 
 > 设 $\left(X,\mathcal F,\mu\right)$ 是测度空间. 如果存在一列可测集 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ 使得 $X=\bigcup_{n=1}^{\infty}E_{n}$ 且 $\mu\left(E_{n}\right)< +\infty$ 对所有 $n\in\mathbb N$ 成立, 则称 $\mu$ 为 $\sigma$-有限测度.
 
 > **定理 6.4.5 (勒贝格-斯蒂尔杰斯测度的正则性)**
->
+> 
 > 设 $\mu_{F}$ 是由增右连续函数 $F$ 生成的勒贝格-斯蒂尔杰斯测度, $\mathcal M^{*}$ 是 $\mu_{F}$-可测集的 $\sigma$-代数. 若 $E\in\mathcal M^{*}$, 则
 
 $$
@@ -31,19 +31,19 @@ $$
 特别地, 勒贝格测度在 $\left[a,b\right]$ 上内正则.
 
 > **定理 7.1.8 (实值可测函数的运算封闭性)**
->
+> 
 > 设 $f,g:X\to\mathbb R$ 可测, $c\in\mathbb R$, 则 $cf$, $f+g$, $fg$, $\max\left(f,g\right)$, $\min\left(f,g\right)$ 可测; 若 $\left\{f_{n}\right\}$ 可测且点点收敛, 则极限函数可测.
 
 > **定理 7.2.2 (可测函数的构造)**
->
+> 
 > 若 $f:X\to\left[0,+\infty\right]$ 是非负可测函数, 则存在一列非负简单函数 $\left\{f_{n}\right\}$ 满足 $0\le f_{1}\le f_{2}\le\cdots\le f$ 且 $\lim_{n\to\infty}f_{n}\left(x\right)=f\left(x\right)$ 对每个 $x\in X$ 成立.
 
 > **定义 9.1.1 (几乎处处收敛)**
->
+> 
 > 设 $\left\{f_{n}\right\}$ 是一列可测函数, $f$ 是可测函数. 如果存在零测度集 $E$ 使对所有 $x\notin E$ 有 $\lim_{n\to\infty}f_{n}\left(x\right)=f\left(x\right)$, 则称 $\left\{f_{n}\right\}$ $\mu$-几乎处处收敛到 $f$, 记作 $f_{n}\xrightarrow{\text{a.e.}}f$.
 
 > **命题 9.1.2 (几乎处处收敛的刻画)**
->
+> 
 > $f_{n}\xrightarrow{\text{a.e.}}f$ 当且仅当对任意的 $\varepsilon> 0$,
 
 $$
@@ -51,15 +51,15 @@ $$
 $$
 
 > **定义 9.1.3 (依测度收敛)**
->
+> 
 > 设 $\left\{f_{n}\right\}$ 是一列可测函数, $f$ 是可测函数. 如果对任意 $\varepsilon> 0$ 有 $\lim_{n\to\infty}\mu\left(\left\{x:\left|f_{n}\left(x\right)-f\left(x\right)\right|> \varepsilon\right\}\right)=0$, 则称 $\left\{f_{n}\right\}$ 依测度收敛到 $f$, 记作 $f_{n}\xrightarrow{\mu}f$.
 
 > **定理 9.1.8 (子序列性质)**
->
+> 
 > 如果 $f_{n}\xrightarrow{\mu}f$, 则存在子序列 $\left\{f_{n_{k}}\right\}$ 使得 $f_{n_{k}}\to f$ 几乎处处.
 
 > **定理 9.1.15 (叶戈罗夫定理)**
->
+> 
 > 设 $\mu\left(X\right)< \infty$ 且 $f_{n}\to f$ 几乎处处. 则对任意 $\delta> 0$ 存在可测集 $E\subset X$ 使得 $\mu\left(E\right)< \delta$, 且在 $X\setminus E$ 上 $f_{n}$ 一致收敛到 $f$. 特别地, 在有限测度空间中, 几乎处处收敛蕴含依测度收敛.
 
 ---

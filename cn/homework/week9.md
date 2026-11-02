@@ -1,7 +1,7 @@
 # week9
 
 > **定理 10.2.2 (托内利定理)**
->
+> 
 > 如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则
 
 $$
@@ -11,51 +11,51 @@ $$
 其中所有积分值都在 $\left[0,\infty\right]$ 中.
 
 > **定义 11.1.1 (符号测度)**
->
+> 
 > 设 $\left(X,\mathcal F\right)$ 是一个可测空间. 函数 $\nu:\mathcal F\to\mathbb R\cup\left\{+\infty\right\}$ 或 $\mathbb R\cup\left\{-\infty\right\}$ 称为符号测度, 若满足: (1) $\nu\left(\varnothing\right)=0$; (2) 可列可加性: 对任意一列互不相交的可测集 $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal F$, 有 $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$; (3) $\nu$ 不能同时取 $+\infty$ 与 $-\infty$ 为值.
 
 > **命题 11.1.2 (符号测度的基本性质)**
->
+> 
 > 设 $\nu$ 是符号测度, 则: (1) 有限可加性: 对任意有限个互不相交的 $E_{1},\dots,E_{n}\in\mathcal F$, 有 $\nu\left(\bigcup_{i=1}^{n}E_{i}\right)=\sum_{i=1}^{n}\nu\left(E_{i}\right)$; (2) 下连续性: 若 $\left\{E_{j}\right\}$ 单调上升可测, 则 $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcup_{j}E_{j}\right)$; (3) 上连续性: 若 $\left\{E_{j}\right\}$ 单调下降可测且 $\nu\left(E_{1}\right)< \infty$, 则 $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcap_{j}E_{j}\right)$.
 
 > **定义 11.2.1 (正集,负集,零集)**
->
+> 
 > 设 $\nu$ 是 $\left(X,\mathcal F\right)$ 上的符号测度. 称 $P\in\mathcal F$ 为正集 (记为 $P\gtrsim0$), 若对任意 $E\in\mathcal F$ 且 $E\subset P$, 有 $\nu\left(E\right)\ge0$; 称 $N\in\mathcal F$ 为负集 (记为 $N\lesssim0$), 若对任意 $E\in\mathcal F$ 且 $E\subset N$, 有 $\nu\left(E\right)\le0$; 称 $Z\in\mathcal F$ 为零集, 若对任意 $E\in\mathcal F$ 且 $E\subset Z$, 有 $\nu\left(E\right)=0$.
 
 > **引理 11.2.2 (正集的性质)**
->
+> 
 > (1) 正集的任意可测子集是正集; (2) 正集的可列并是正集; (3) 若 $\left\{P_{n}\right\}$ 是正集列, 则 $\bigcap_{n=1}^{\infty}P_{n}$ 是正集. 上述性质对负集仍然成立.
 
 > **引理 11.2.4 (非负集的判定)**
->
+> 
 > 设 $\nu$ 是符号测度. 若 $E$ 不是负集, 则存在正集 $F\subset E$ 使得 $\nu\left(F\right)> 0$.
 
 > **定理 11.3.2 (哈恩分解定理)**
->
+> 
 > 设 $\nu$ 是 $\left(X,\mathcal F\right)$ 上的符号测度, 则存在 $X$ 的分解 $X=P\cup N$, 其中 $P$ 是正集, $N$ 是负集, $P\cap N=\varnothing$; 并且该分解在相差一个 $\nu$-零集的意义下是唯一的.
 
 > **定义 11.4.1 (相互奇异的符号测度)**
->
+> 
 > 设 $\mu$ 和 $\nu$ 是可测空间 $\left(X,\mathcal F\right)$ 上的两个符号测度. 若存在可测集 $E\in\mathcal F$ 使得 $E$ 为 $\mu$-零集且 $E^{c}$ 为 $\nu$-零集, 则称 $\mu$ 和 $\nu$ 相互奇异, 记为 $\mu\perp\nu$.
 
 > **定理 11.4.3 (若尔当分解定理)**
->
+> 
 > 设 $\nu$ 是 $\left(X,\mathcal F\right)$ 上的符号测度, 则存在唯一的一对相互奇异的正测度 $\nu^{+}$ 和 $\nu^{-}$, 使得 $\nu=\nu^{+}-\nu^{-}$.
 
 > **定义 11.4.4 (变差测度)**
->
+> 
 > 设 $\nu$ 是符号测度, 其若尔当分解为 $\nu=\nu^{+}-\nu^{-}$. 称 $\nu^{+}$ 为 $\nu$ 的正变差, $\nu^{-}$ 为 $\nu$ 的负变差, $\left|\nu\right|=\nu^{+}+\nu^{-}$ 为 $\nu$ 的全变差测度.
 
 > **定义 11.5.1 (绝对连续性)**
->
+> 
 > 设 $\mu$ 是正测度, $\nu$ 是符号测度. 称 $\nu$ 关于 $\mu$ 绝对连续 (记为 $\nu\ll\mu$), 若对任意 $E\in\mathcal F$ 有 $\mu\left(E\right)=0\Rightarrow\nu\left(E\right)=0$.
 
 > **注 11.5.3 (积分关于测度的绝对连续)**
->
+> 
 > 设 $f\in L^{1}\left(\mu\right)$, 则 $\lim_{\mu\left(E\right)\to0}\int_{E}f\,\mathrm{d}\mu=0$.
 
 > **定理 11.5.5 (拉东-尼科迪姆定理)**
->
+> 
 > 设 $\mu$ 是 $\sigma$-有限正测度, $\nu$ 是符号测度且 $\nu\ll\mu$, 则存在可测函数 $f:X\to\mathbb R$ 使得 $\nu\left(E\right)=\int_{E}f\,\mathrm{d}\mu$ 对一切 $E\in\mathcal F$ 成立; 且 $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$. 函数 $f$ 称为 $\nu$ 关于 $\mu$ 的拉东-尼科迪姆导数, 记作 $f=\frac{\mathrm{d}\nu}{\mathrm{d}\mu}$.
 
 ---
