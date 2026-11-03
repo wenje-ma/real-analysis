@@ -1,17 +1,5 @@
 # week6
 
-> **Basic Knowledge: Nonnegative Integrable Function with Zero Integral Vanishes Almost Everywhere**
-> 
-> If $h\ge0$ is measurable and $\int_{X}h\,\mathrm{d}\mu=0$, then $h=0$ almost everywhere.
-
-> **Basic Knowledge: Properties of the Map $t\mapsto\frac{t}{1+t}$**
-> 
-> Let $d\left(t\right)=\frac{t}{1+t}$ for $t\ge0$. Then $d$ is increasing on $\left[0,\infty\right)$ and subadditive: $d\left(a+b\right)\le d\left(a\right)+d\left(b\right)$ for all $a,b\ge0$.
-
-> **Basic Knowledge: Lower Continuity of a Measure**
-> 
-> If $\left\{E_{n}\right\}$ is an increasing sequence of measurable sets, then $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right)$; in particular, when $\mu\left(X\right)< \infty$ and $E_{n}\uparrow X$, we have $\mu\left(X\setminus E_{n}\right)\to0$.
-
 > **Definition 4.1.3 ($\sigma$-Algebra)**
 > 
 > Let $X$ be nonempty and $\mathcal F\subset\mathcal P\left(X\right)$. We call $\mathcal F$ a $\sigma$-algebra on $X$ if $X\in\mathcal F$, it is closed under complements, and it is closed under countable unions. It follows that $\mathcal F$ is also closed under countable intersections.
@@ -96,9 +84,9 @@ Let $\mu\left(X\right)< \infty$. If $f,g$ are complex-valued measurable function
 
 ### Solution 2
 
-Write $d\left(t\right)=\frac{t}{1+t}$ ($t\ge0$). By **Basic Knowledge: Properties of the Map $t\mapsto\frac{t}{1+t}$**, $d$ is increasing and subadditive. The integrand $\frac{\left|f-g\right|}{1+\left|f-g\right|}=d\left(\left|f-g\right|\right)$ is nonnegative and bounded ($\le1$), measurable, hence integrable, so $\rho$ is well-defined.
+Write $d\left(t\right)=\frac{t}{1+t}$ ($t\ge0$). By Properties of the Map $t\mapsto\frac{t}{1+t}$, $d$ is increasing and subadditive. The integrand $\frac{\left|f-g\right|}{1+\left|f-g\right|}=d\left(\left|f-g\right|\right)$ is nonnegative and bounded ($\le1$), measurable, hence integrable, so $\rho$ is well-defined.
 
-- $\rho\left(f,g\right)\ge0$; $\rho\left(f,g\right)=0$ iff $d\left(\left|f-g\right|\right)=0$ a.e. (by **Basic Knowledge: Nonnegative Integrable Function with Zero Integral Vanishes Almost Everywhere**), iff $\left|f-g\right|=0$ a.e., iff $f=g$ a.e. Thus on the quotient space (identifying functions equal a.e.), $\rho\left(f,g\right)=0$ iff $f=g$.
+- $\rho\left(f,g\right)\ge0$; $\rho\left(f,g\right)=0$ iff $d\left(\left|f-g\right|\right)=0$ a.e. (by Nonnegative Integrable Function with Zero Integral Vanishes Almost Everywhere), iff $\left|f-g\right|=0$ a.e., iff $f=g$ a.e. Thus on the quotient space (identifying functions equal a.e.), $\rho\left(f,g\right)=0$ iff $f=g$.
 - Symmetry is clear: $\rho\left(f,g\right)=\rho\left(g,f\right)$.
 - Triangle inequality: by $\left|f-g\right|\le\left|f-h\right|+\left|h-g\right|$ and the increase and subadditivity of $d$,
 
@@ -172,7 +160,7 @@ a countable intersection of measurable sets, measurable by **Definition 4.1.3 ($
 
 (b) Fix $\eta> 0$ as the tolerance of uniform convergence. For each $\delta> 0$, set $F_{\delta}:=\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta\text{ for all }y< \delta\right\}$, measurable by (a), and increasing as $\delta$ decreases. Since $f\left(x,\cdot\right)$ is continuous at $0$, for each $x$, $\lim_{y\to0}f\left(x,y\right)=f\left(x,0\right)$, so there exists $\delta> 0$ with $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ for all $y< \delta$, i.e. $x\in F_{\delta}$. Hence $\bigcup_{\delta> 0}F_{\delta}=X$.
 
-By **Basic Knowledge: Lower Continuity of a Measure**, since $\mu\left(X\right)< \infty$ and $F_{\delta}\uparrow X$, we have $\mu\left(X\setminus F_{\delta}\right)\to0$. Given $\varepsilon> 0$, choose $\delta> 0$ with $\mu\left(X\setminus F_{\delta}\right)< \varepsilon$, set $E:=X\setminus F_{\delta}$; then $\mu\left(E\right)< \varepsilon$, and on $E^{c}=F_{\delta}$, $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ for all $y< \delta$, i.e. $f\left(\cdot,y\right)\to f\left(\cdot,0\right)$ uniformly on $E^{c}$ as $y\to0$. $\blacksquare$
+By Lower Continuity of a Measure, since $\mu\left(X\right)< \infty$ and $F_{\delta}\uparrow X$, we have $\mu\left(X\setminus F_{\delta}\right)\to0$. Given $\varepsilon> 0$, choose $\delta> 0$ with $\mu\left(X\setminus F_{\delta}\right)< \varepsilon$, set $E:=X\setminus F_{\delta}$; then $\mu\left(E\right)< \varepsilon$, and on $E^{c}=F_{\delta}$, $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ for all $y< \delta$, i.e. $f\left(\cdot,y\right)\to f\left(\cdot,0\right)$ uniformly on $E^{c}$ as $y\to0$. $\blacksquare$
 
 ---
 

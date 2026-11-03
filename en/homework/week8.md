@@ -1,29 +1,5 @@
 # week8
 
-> **Basic Knowledge: Invariance Under Translation and Dilation in One Dimension**
-> 
-> For $c\in\mathbb R$ and $\lambda\ne0$, Lebesgue measure satisfies $m\left(E+c\right)=m\left(E\right)$ and $m\left(\lambda E\right)=\left|\lambda\right|m\left(E\right)$.
-
-> **Basic Knowledge: Invertible Linear Maps Preserve Measurability and Null Sets**
-> 
-> If $T\in GL\left(n,\mathbb R\right)$, then $T\left(E\right)\in\mathcal L^{n}$ iff $E\in\mathcal L^{n}$, and $T$ preserves null sets.
-
-> **Basic Knowledge: Orthogonal Transformations Preserve Lebesgue Measure**
-> 
-> If $R\in O\left(n\right)$, i.e. $R^{\top}R=I$, then $\left|\det R\right|=1$, and $m\left(R\left(E\right)\right)=m\left(E\right)$ for every $E\in\mathcal L^{n}$.
-
-> **Basic Knowledge: Gamma Function and the Beta Identity**
-> 
-> The gamma function $\Gamma\left(x\right)=\int_{0}^{\infty}t^{x-1}e^{-t}\mathrm{d}t$ satisfies $\Gamma\left(x+1\right)=x\Gamma\left(x\right)$; the beta function satisfies $\frac{\Gamma\left(x\right)\Gamma\left(y\right)}{\Gamma\left(x+y\right)}=\int_{0}^{1}t^{x-1}\left(1-t\right)^{y-1}\mathrm{d}t$ for $x,y> 0$.
-
-> **Basic Knowledge: Continuous Approximation of Characteristic Functions**
-> 
-> If $R\subset\mathbb R^{n}$ is a bounded closed rectangle, then for every $\varepsilon> 0$ there exists a continuous compactly supported function $g$ with $\int\left|\chi_{R}-g\right|\mathrm{d}m< \varepsilon$.
-
-> **Basic Knowledge: Uniqueness of Measures on a Generating Rectangle Family**
-> 
-> Two $\sigma$-finite measures that agree on a rectangle family generating the product $\sigma$-algebra agree on the whole product $\sigma$-algebra.
-
 > **Theorem 8.2.9 (Dominated Convergence Theorem)**
 > 
 > Let $\left(X,\mathcal F,\mu\right)$ be a measure space and $\left\{f_{n}\right\}$ a sequence of measurable functions. If there exists an integrable $g$ with $\left|f_{n}\right|\le g$ for all $n$ and $f_{n}\to f$ a.e., then $f$ is integrable and $\int f\,\mathrm{d}\mu=\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu$.
@@ -78,7 +54,7 @@ If $f\in L^{1}\left(m\right)$ and $\varepsilon> 0$, then there is a simple funct
 
 **Simple-function part.** By **Theorem 8.2.16 (Integrable Simple Functions Are Dense in $L^{1}$)**, there is an integrable simple function $\varphi=\sum_{j}a_{j}\chi_{E_{j}}$ with $\int\left|f-\varphi\right|< \varepsilon/2$. For the terms with $a_{j}\ne0$, since $\int a_{j}\chi_{E_{j}}\,\mathrm{d}m=a_{j}m\left(E_{j}\right)< \infty$, we have $m\left(E_{j}\right)< \infty$ (otherwise the integral diverges, contradicting integrability). By **Theorem 11.1.1 (Regularity of Lebesgue Measure and Rectangle Approximation)** (b), for each such $E_{j}$ there are finitely many pairwise-disjoint rectangles $\left\{R_{j,k}\right\}$ with interval sides such that $m\left(E_{j}\triangle\bigcup_{k}R_{j,k}\right)$ is arbitrarily small. Thus $\chi_{E_{j}}$ and $\chi_{R_{j}}$ (with $R_{j}=\bigcup_{k}R_{j,k}$) are arbitrarily close in $L^{1}$; taking the approximation errors small enough and combining over all $j$, we obtain a simple function $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ with $\int\left|\varphi-\varphi'\right|< \varepsilon/2$. Hence $\int\left|f-\varphi'\right|\le\int\left|f-\varphi\right|+\int\left|\varphi-\varphi'\right|< \varepsilon$.
 
-**Continuous-function part.** Let $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ be as obtained above, each $R_{j}$ a bounded closed rectangle. By **Basic Knowledge: Continuous Approximation of Characteristic Functions**, for each $R_{j}$ there is a continuous compactly supported $g_{j}$ with $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ arbitrarily small. Taking the errors small enough and setting $g=\sum_{j}a_{j}g_{j}$, $g$ is continuous, supported in $\bigcup_{j}R_{j}$ (bounded), and $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|< \varepsilon/2$. Hence $\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|< \varepsilon$, and $g$ vanishes outside a bounded set. $\blacksquare$
+**Continuous-function part.** Let $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ be as obtained above, each $R_{j}$ a bounded closed rectangle. By Continuous Approximation of Characteristic Functions, for each $R_{j}$ there is a continuous compactly supported $g_{j}$ with $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ arbitrarily small. Taking the errors small enough and setting $g=\sum_{j}a_{j}g_{j}$, $g$ is continuous, supported in $\bigcup_{j}R_{j}$ (bounded), and $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|< \varepsilon/2$. Hence $\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|< \varepsilon$, and $g$ vanishes outside a bounded set. $\blacksquare$
 
 ---
 
@@ -94,9 +70,9 @@ If $f\in L^{1}\left(m\right)$ and $\varepsilon> 0$, then there is a simple funct
 
 First treat the three elementary transformations, then combine.
 
-**Dilation** $T_{1}\left(x_{1},\dots,x_{j},\dots,x_{n}\right)=\left(x_{1},\dots,cx_{j},\dots,x_{n}\right)$ ($c\ne0$). By **Basic Knowledge: Invariance Under Translation and Dilation in One Dimension** and the product structure, dilating one coordinate while fixing the others gives $m\left(T_{1}\left(E\right)\right)=\left|c\right|m\left(E\right)$ and $\int f\circ T_{1}\left(x\right)\mathrm{d}x=\frac{1}{\left|c\right|}\int f\left(x\right)\mathrm{d}x$, i.e. $\int f\left(x\right)\mathrm{d}x=\left|\det T_{1}\right|\int f\circ T_{1}\left(x\right)\mathrm{d}x$.
+**Dilation** $T_{1}\left(x_{1},\dots,x_{j},\dots,x_{n}\right)=\left(x_{1},\dots,cx_{j},\dots,x_{n}\right)$ ($c\ne0$). By Invariance Under Translation and Dilation in One Dimension and the product structure, dilating one coordinate while fixing the others gives $m\left(T_{1}\left(E\right)\right)=\left|c\right|m\left(E\right)$ and $\int f\circ T_{1}\left(x\right)\mathrm{d}x=\frac{1}{\left|c\right|}\int f\left(x\right)\mathrm{d}x$, i.e. $\int f\left(x\right)\mathrm{d}x=\left|\det T_{1}\right|\int f\circ T_{1}\left(x\right)\mathrm{d}x$.
 
-**Shear** $T_{2}\left(x_{1},\dots,x_{j},\dots,x_{n}\right)=\left(x_{1},\dots,x_{j}+cx_{k},\dots,x_{n}\right)$ ($k\ne j$). By **Basic Knowledge: Invariance Under Translation and Dilation in One Dimension** applied slicewise, $m\left(T_{2}\left(E\right)\right)=m\left(E\right)$ and $\int f\circ T_{2}\left(x\right)\mathrm{d}x=\int f\left(x\right)\mathrm{d}x$. Since $\det T_{2}=1$, the formula holds.
+**Shear** $T_{2}\left(x_{1},\dots,x_{j},\dots,x_{n}\right)=\left(x_{1},\dots,x_{j}+cx_{k},\dots,x_{n}\right)$ ($k\ne j$). By Invariance Under Translation and Dilation in One Dimension applied slicewise, $m\left(T_{2}\left(E\right)\right)=m\left(E\right)$ and $\int f\circ T_{2}\left(x\right)\mathrm{d}x=\int f\left(x\right)\mathrm{d}x$. Since $\det T_{2}=1$, the formula holds.
 
 **Swap** $T_{3}$ swaps two coordinates, $\det T_{3}=-1$. By the symmetry of $m$ as a product measure, $m\left(T_{3}\left(E\right)\right)=m\left(E\right)$ and $\int f\circ T_{3}\left(x\right)\mathrm{d}x=\int f\left(x\right)\mathrm{d}x$, and $\left|\det T_{3}\right|=1$, so the formula holds.
 
@@ -106,7 +82,7 @@ $$
 \int f\left(x\right)\mathrm{d}x=\left|\det T_{1}\right|\int f\circ T_{1}\left(x\right)\mathrm{d}x=\cdots=\left|\det T\right|\int f\circ T\left(x\right)\mathrm{d}x,
 $$
 
-which is (a). Measurability: $T$ is continuous, and by **Basic Knowledge: Invertible Linear Maps Preserve Measurability and Null Sets**, $f\circ T$ is measurable and $T\left(E\right)\in\mathcal L^{n}$.
+which is (a). Measurability: $T$ is continuous, and by Invertible Linear Maps Preserve Measurability and Null Sets, $f\circ T$ is measurable and $T\left(E\right)\in\mathcal L^{n}$.
 
 **Proof of (b).** Take $f=\chi_{T\left(E\right)}$ in (a):
 
@@ -234,7 +210,7 @@ $$
 \int_{t}^{x}\left(x-s\right)^{\alpha-1}\left(s-t\right)^{\beta-1}\mathrm{d}s=\left(x-t\right)^{\alpha+\beta-1}\int_{0}^{1}\left(1-u\right)^{\alpha-1}u^{\beta-1}\mathrm{d}u.
 $$
 
-By **Basic Knowledge: Gamma Function and the Beta Identity**, $\int_{0}^{1}\left(1-u\right)^{\alpha-1}u^{\beta-1}\mathrm{d}u=\frac{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}{\Gamma\left(\alpha+\beta\right)}$. Substituting, $I_{\alpha}\left(I_{\beta}f\right)\left(x\right)=\frac{1}{\Gamma\left(\alpha+\beta\right)}\int_{0}^{x}\left(x-t\right)^{\alpha+\beta-1}f\left(t\right)\mathrm{d}t=I_{\alpha+\beta}f\left(x\right)$.
+By Gamma Function and the Beta Identity, $\int_{0}^{1}\left(1-u\right)^{\alpha-1}u^{\beta-1}\mathrm{d}u=\frac{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}{\Gamma\left(\alpha+\beta\right)}$. Substituting, $I_{\alpha}\left(I_{\beta}f\right)\left(x\right)=\frac{1}{\Gamma\left(\alpha+\beta\right)}\int_{0}^{x}\left(x-t\right)^{\alpha+\beta-1}f\left(t\right)\mathrm{d}t=I_{\alpha+\beta}f\left(x\right)$.
 
 **(b).** For $\alpha=1$, since $\Gamma\left(1\right)=1$, $I_{1}f\left(x\right)=\int_{0}^{x}f\left(t\right)\mathrm{d}t$, and by the fundamental theorem of calculus $\frac{\mathrm{d}}{\mathrm{d}x}I_{1}f=f$. By (a), iterating gives $I_{n}f=\underbrace{I_{1}\circ\cdots\circ I_{1}}_{n\text{ times}}f$, so $\frac{\mathrm{d}^{n}}{\mathrm{d}x^{n}}I_{n}f=f$. Also, since the lower limit of $I_{\alpha}f$ is $0$, for $k< n$, $\left(\frac{\mathrm{d}}{\mathrm{d}x}\right)^{k}I_{n}f$ takes the value $0$ at $0$. Thus $I_{n}f$ is an $n$-th antiderivative of $f$. $\blacksquare$
 
@@ -246,7 +222,7 @@ The measure $\sigma$ on $S^{n-1}$ is rotation invariant.
 
 ### Solution 7
 
-Let $R\in O\left(n\right)$, i.e. $R^{\top}R=I$, so $\left|\det R\right|=1$. By **Basic Knowledge: Orthogonal Transformations Preserve Lebesgue Measure**, $R$ preserves $m$ on $\mathbb R^{n}$. Since $R$ preserves the norm $\left|Rx\right|=\left|x\right|$, under the spherical-coordinate decomposition $\Phi\left(x\right)=\left(r,x'\right)$ it acts on the spherical part: there is a rotation $\rho$ of $S^{n-1}$ with $R\left(rx'\right)=r\rho\left(x'\right)$. Let $m^{*}$ be the polar-coordinate measure ($m^{*}=\rho\times\sigma$ by **Theorem 11.4.1 (Integration in Polar Coordinates)**); for a Borel set $A\subset\left(0,\infty\right)\times S^{n-1}$,
+Let $R\in O\left(n\right)$, i.e. $R^{\top}R=I$, so $\left|\det R\right|=1$. By Orthogonal Transformations Preserve Lebesgue Measure, $R$ preserves $m$ on $\mathbb R^{n}$. Since $R$ preserves the norm $\left|Rx\right|=\left|x\right|$, under the spherical-coordinate decomposition $\Phi\left(x\right)=\left(r,x'\right)$ it acts on the spherical part: there is a rotation $\rho$ of $S^{n-1}$ with $R\left(rx'\right)=r\rho\left(x'\right)$. Let $m^{*}$ be the polar-coordinate measure ($m^{*}=\rho\times\sigma$ by **Theorem 11.4.1 (Integration in Polar Coordinates)**); for a Borel set $A\subset\left(0,\infty\right)\times S^{n-1}$,
 
 $$
 m^{*}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)=m\left(\Phi^{-1}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)\right)=m\left(R\Phi^{-1}\left(A\right)\right)=m\left(\Phi^{-1}\left(A\right)\right)=m^{*}\left(A\right),
@@ -260,7 +236,7 @@ $$
 \left(\rho\times\sigma_{R}\right)\left(\left(a,b\right]\times E\right)=\int_{a}^{b}r^{n-1}\mathrm{d}r\cdot\sigma_{R}\left(E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right).
 $$
 
-By $m^{*}=\rho\times\sigma$ (**Theorem 11.4.1 (Integration in Polar Coordinates)**), $\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times R^{-1}E\right)$. By rotation invariance of $m^{*}$, $m^{*}\left(\left(a,b\right]\times R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(E\right)$. Hence on rectangles $\rho\times\sigma_{R}=\rho\times\sigma$. By **Basic Knowledge: Uniqueness of Measures on a Generating Rectangle Family**, $\rho\times\sigma_{R}=\rho\times\sigma$ on $\left(0,\infty\right)\times S^{n-1}$.
+By $m^{*}=\rho\times\sigma$ (**Theorem 11.4.1 (Integration in Polar Coordinates)**), $\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times R^{-1}E\right)$. By rotation invariance of $m^{*}$, $m^{*}\left(\left(a,b\right]\times R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(E\right)$. Hence on rectangles $\rho\times\sigma_{R}=\rho\times\sigma$. By Uniqueness of Measures on a Generating Rectangle Family, $\rho\times\sigma_{R}=\rho\times\sigma$ on $\left(0,\infty\right)\times S^{n-1}$.
 
 Finally, by the uniqueness in **Theorem 11.4.1 (Integration in Polar Coordinates)** (the measure $\sigma$ with $m^{*}=\rho\times\sigma$ is unique), from $\rho\times\sigma_{R}=m^{*}=\rho\times\sigma$ we get $\sigma_{R}=\sigma$, i.e. $\sigma\left(R^{-1}E\right)=\sigma\left(E\right)$ for all Borel $E$. Thus $\sigma$ is rotation invariant. $\blacksquare$
 

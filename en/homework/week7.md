@@ -1,13 +1,5 @@
 # week7
 
-> **Basic Knowledge: Intersection and Complement Properties of Rectangle Algebras**
-> 
-> For measurable rectangles, $\left(A\times B\right)\cap\left(C\times D\right)=\left(A\cap C\right)\times\left(B\cap D\right)$ and $\left(A\times B\right)^{c}=\left(A^{c}\times B\right)\cup\left(A\times B^{c}\right)$.
-
-> **Basic Knowledge: The Restriction of a Measure to an Algebra is a Premeasure**
-> 
-> If $\lambda$ is a measure on a $\sigma$-algebra $\mathcal M$ and $\mathcal E\subset\mathcal M$ is an algebra, then $\lambda|_{\mathcal E}$ satisfies the premeasure conditions (empty-set property and $\sigma$-additivity hold within $\mathcal E$).
-
 > **Definition 5.1.2 (Measure)**
 > 
 > Let $\left(X,\mathcal F\right)$ be a measurable space. A function $\mu:\mathcal F\to\left[0,+\infty\right]$ is called a measure on $\left(X,\mathcal F\right)$ if: (1) nonnegativity: $\mu\left(E\right)\ge0$ for all $E\in\mathcal F$; (2) empty set: $\mu\left(\emptyset\right)=0$; (3) countable additivity ($\sigma$-additivity): for any countable pairwise-disjoint $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
@@ -66,7 +58,7 @@ Let $\mathcal E$ be the collection of all finite disjoint unions of rectangles. 
 
 ### Solution 1
 
-**$\mathcal E$ is an algebra.** By **Basic Knowledge: Intersection and Complement Properties of Rectangle Algebras**, the intersection of measurable rectangles is a measurable rectangle, and the complement of a measurable rectangle is a union of two measurable rectangles. The empty set $\emptyset$ and the whole space $X\times Y$ lie in $\mathcal E$. Taking complements, intersections, and unions of elements of $\mathcal E$, first write each element as a finite disjoint union of rectangles; then, since intersections of rectangles are rectangles and after common refinement they are pairwise disjoint, the result is again a finite disjoint union of rectangles, hence in $\mathcal E$. Thus $\mathcal E$ is an algebra.
+**$\mathcal E$ is an algebra.** By Intersection and Complement Properties of Rectangle Algebras, the intersection of measurable rectangles is a measurable rectangle, and the complement of a measurable rectangle is a union of two measurable rectangles. The empty set $\emptyset$ and the whole space $X\times Y$ lie in $\mathcal E$. Taking complements, intersections, and unions of elements of $\mathcal E$, first write each element as a finite disjoint union of rectangles; then, since intersections of rectangles are rectangles and after common refinement they are pairwise disjoint, the result is again a finite disjoint union of rectangles, hence in $\mathcal E$. Thus $\mathcal E$ is an algebra.
 
 **$\pi$ is well-defined.** Let $E=\bigcup_{i=1}^{m}A_{i}\times B_{i}=\bigcup_{j=1}^{n}C_{j}\times D_{j}$ be two pairwise-disjoint rectangle decompositions of $E$. For the common refinement $\left\{\left(A_{i}\cap C_{j}\right)\times\left(B_{i}\cap D_{j}\right)\right\}_{i,j}$, by finite additivity of $\mu,\nu$,
 
@@ -82,7 +74,7 @@ $$
 \left(\mu\times\nu\right)\left(\bigcup_{i=1}^{n}A_{i}\times B_{i}\right)=\sum_{i=1}^{n}\mu\left(A_{i}\right)\nu\left(B_{i}\right)=\pi\left(E\right),
 $$
 
-so $\pi=\left(\mu\times\nu\right)|_{\mathcal E}$. By **Basic Knowledge: The Restriction of a Measure to an Algebra is a Premeasure**, $\pi$ satisfies the premeasure conditions: $\pi\left(\emptyset\right)=0$, and for pairwise disjoint $\left\{E_{n}\right\}\subset\mathcal E$ with $\bigcup_{n}E_{n}\in\mathcal E$, by $\sigma$-additivity of $\mu\times\nu$ (**Definition 5.1.2 (Measure)**),
+so $\pi=\left(\mu\times\nu\right)|_{\mathcal E}$. By The Restriction of a Measure to an Algebra is a Premeasure, $\pi$ satisfies the premeasure conditions: $\pi\left(\emptyset\right)=0$, and for pairwise disjoint $\left\{E_{n}\right\}\subset\mathcal E$ with $\bigcup_{n}E_{n}\in\mathcal E$, by $\sigma$-additivity of $\mu\times\nu$ (**Definition 5.1.2 (Measure)**),
 
 $$
 \pi\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\left(\mu\times\nu\right)\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\left(\mu\times\nu\right)\left(E_{n}\right)=\sum_{n=1}^{\infty}\pi\left(E_{n}\right).

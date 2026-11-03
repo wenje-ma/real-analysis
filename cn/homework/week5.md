@@ -1,13 +1,5 @@
 # week5
 
-> **基础知识: 非负可积函数积分为零则几乎处处为零**
-> 
-> 设 $h\ge0$ 可测且 $\int_{X}h\,\mathrm{d}\mu=0$, 则 $h=0$ 几乎处处. 事实上 $\left\{h> 0\right\}=\bigcup_{n=1}^{\infty}\left\{h> \frac{1}{n}\right\}$, 且 $\int h\ge\frac{1}{n}\mu\left(\left\{h> \frac{1}{n}\right\}\right)$, 故 $\mu\left(\left\{h> \frac{1}{n}\right\}\right)=0$ 对所有 $n$ 成立.
-
-> **基础知识: 黎曼积分与达布和**
-> 
-> 设 $f$ 是 $\left[a,b\right]$ 上的有界实值函数. 对 $\left[a,b\right]$ 的一个分割 $P=\left\{t_{0}< \cdots< t_{n}\right\}$, 记 $M_{i}=\sup_{\left[t_{i-1},t_{i}\right]}f$, $m_{i}=\inf_{\left[t_{i-1},t_{i}\right]}f$, 定义上达布和 $\overline S\left(P\right)=\sum_{i}M_{i}\left(t_{i}-t_{i-1}\right)$, 下达布和 $\underline S\left(P\right)=\sum_{i}m_{i}\left(t_{i}-t_{i-1}\right)$. 上积分 $\overline{\int}f=\inf_{P}\overline S\left(P\right)$, 下积分 $\underline{\int}f=\sup_{P}\underline S\left(P\right)$. 若 $\overline{\int}f=\underline{\int}f$, 其公共值称为 $f$ 的黎曼积分, 此时称 $f$ 黎曼可积.
-
 > **定义 5.1.2 (测度)**
 > 
 > 设 $\left(X,\mathcal F\right)$ 是一个可测空间. 函数 $\mu:\mathcal F\to\left[0,+\infty\right]$ 称为 $\left(X,\mathcal F\right)$ 上的一个测度, 如果满足: (1) 非负性: $\mu\left(E\right)\ge0$ 对一切 $E\in\mathcal F$ 成立; (2) 零空集性: $\mu\left(\emptyset\right)=0$; (3) 可数可加性 ($\sigma$-可加性): 对任意可数个两两不交的集合 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 有 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
@@ -170,7 +162,7 @@ $$
 
 (b) 记 $h:=\left|f-g\right|\in L^{1}$, $h\ge0$.
 
-(1) $\int\left|f-g\right|\mathrm{d}\mu=0\Rightarrow f=g$ 几乎处处: 由**基础知识: 非负可积函数积分为零则几乎处处为零**, $h=0$ 几乎处处, 即 $f=g$ 几乎处处.
+(1) $\int\left|f-g\right|\mathrm{d}\mu=0\Rightarrow f=g$ 几乎处处: 由非负可积函数积分为零则几乎处处为零, $h=0$ 几乎处处, 即 $f=g$ 几乎处处.
 
 (2) $f=g$ 几乎处处 $\Rightarrow\int\left|f-g\right|\mathrm{d}\mu=0$: 因 $h=0$ 在 $\left\{f\ne g\right\}$ 之外成立, 而 $\left\{f\ne g\right\}$ 是零测集. 由**命题 8.2.4 (积分关于集合的绝对连续性)**, $\int_{\left\{f\ne g\right\}}h\,\mathrm{d}\mu=0$, 且 $\int_{\left\{f=g\right\}}h\,\mathrm{d}\mu=0$, 故 $\int h\,\mathrm{d}\mu=0$.
 
@@ -262,7 +254,7 @@ $$
 
 故 $\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu$. $\blacksquare$
 
-**23.** 用**基础知识: 黎曼积分与达布和** 的记号. $f$ 黎曼可积当且仅当 $\overline{\int}f=\underline{\int}f$.
+**23.** 用黎曼积分与达布和 的记号. $f$ 黎曼可积当且仅当 $\overline{\int}f=\underline{\int}f$.
 
 (a) 设 $f$ 在 $x$ 连续. 对 $\varepsilon> 0$ 存在 $\delta> 0$ 使 $\left|y-x\right|< \delta\Rightarrow\left|f\left(y\right)-f\left(x\right)\right|< \varepsilon$. 则对 $0< \left|y-x\right|\le\delta$, 有
 

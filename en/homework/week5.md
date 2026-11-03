@@ -1,13 +1,5 @@
 # week5
 
-> **Basic Knowledge: Nonnegative Integrable Function with Zero Integral Vanishes Almost Everywhere**
-> 
-> If $h\ge0$ is measurable and $\int_{X}h\,\mathrm{d}\mu=0$, then $h=0$ almost everywhere. Indeed $\left\{h> 0\right\}=\bigcup_{n=1}^{\infty}\left\{h> \frac{1}{n}\right\}$, and $\int h\ge\frac{1}{n}\mu\left(\left\{h> \frac{1}{n}\right\}\right)$, so $\mu\left(\left\{h> \frac{1}{n}\right\}\right)=0$ for all $n$.
-
-> **Basic Knowledge: Riemann Integral and Darboux Sums**
-> 
-> Let $f$ be a bounded real-valued function on $\left[a,b\right]$. For a partition $P=\left\{t_{0}< \cdots< t_{n}\right\}$ of $\left[a,b\right]$, write $M_{i}=\sup_{\left[t_{i-1},t_{i}\right]}f$, $m_{i}=\inf_{\left[t_{i-1},t_{i}\right]}f$. The upper Darboux sum is $\overline S\left(P\right)=\sum_{i}M_{i}\left(t_{i}-t_{i-1}\right)$ and the lower is $\underline S\left(P\right)=\sum_{i}m_{i}\left(t_{i}-t_{i-1}\right)$. The upper integral is $\overline{\int}f=\inf_{P}\overline S\left(P\right)$ and the lower is $\underline{\int}f=\sup_{P}\underline S\left(P\right)$. If $\overline{\int}f=\underline{\int}f$, the common value is the Riemann integral of $f$, and $f$ is called Riemann integrable.
-
 > **Definition 5.1.2 (Measure)**
 > 
 > Let $\left(X,\mathcal F\right)$ be a measurable space. A function $\mu:\mathcal F\to\left[0,+\infty\right]$ is called a measure on $\left(X,\mathcal F\right)$ if: (1) nonnegativity: $\mu\left(E\right)\ge0$ for all $E\in\mathcal F$; (2) empty set: $\mu\left(\emptyset\right)=0$; (3) countable additivity ($\sigma$-additivity): for any countable pairwise-disjoint $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
@@ -170,7 +162,7 @@ Since $f$ is integrable, $\int f^{+}\mathrm{d}\mu< \infty$, so $\mu\left(\left\{
 
 (b) Let $h:=\left|f-g\right|\in L^{1}$, $h\ge0$.
 
-(1) $\int\left|f-g\right|\mathrm{d}\mu=0\Rightarrow f=g$ a.e.: by **Basic Knowledge: Nonnegative Integrable Function with Zero Integral Vanishes Almost Everywhere**, $h=0$ a.e., i.e. $f=g$ a.e.
+(1) $\int\left|f-g\right|\mathrm{d}\mu=0\Rightarrow f=g$ a.e.: by Nonnegative Integrable Function with Zero Integral Vanishes Almost Everywhere, $h=0$ a.e., i.e. $f=g$ a.e.
 
 (2) $f=g$ a.e. $\Rightarrow\int\left|f-g\right|\mathrm{d}\mu=0$: since $h=0$ outside $\left\{f\ne g\right\}$ and $\left\{f\ne g\right\}$ is null. By **Proposition 8.2.4 (Absolute Continuity of the Integral with Respect to the Set)**, $\int_{\left\{f\ne g\right\}}h\,\mathrm{d}\mu=0$ and $\int_{\left\{f=g\right\}}h\,\mathrm{d}\mu=0$, so $\int h\,\mathrm{d}\mu=0$.
 
@@ -262,7 +254,7 @@ $$
 
 so $\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu$. $\blacksquare$
 
-**23.** Use the notation of **Basic Knowledge: Riemann Integral and Darboux Sums**. $f$ is Riemann integrable iff $\overline{\int}f=\underline{\int}f$.
+**23.** Use the notation of Riemann Integral and Darboux Sums. $f$ is Riemann integrable iff $\overline{\int}f=\underline{\int}f$.
 
 (a) Suppose $f$ is continuous at $x$. For $\varepsilon> 0$ there exists $\delta> 0$ such that $\left|y-x\right|< \delta\Rightarrow\left|f\left(y\right)-f\left(x\right)\right|< \varepsilon$. Then for $0< \left|y-x\right|\le\delta$,
 

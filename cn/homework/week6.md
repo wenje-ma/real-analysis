@@ -1,17 +1,5 @@
 # week6
 
-> **基础知识: 非负可积函数积分为零则几乎处处为零**
-> 
-> 设 $h\ge0$ 可测且 $\int_{X}h\,\mathrm{d}\mu=0$, 则 $h=0$ 几乎处处.
-
-> **基础知识: 函数 $t\mapsto\frac{t}{1+t}$ 的性质**
-> 
-> 设 $d\left(t\right)=\frac{t}{1+t}$, $t\ge0$. 则 $d$ 在 $\left[0,\infty\right)$ 上递增, 且次可加: $d\left(a+b\right)\le d\left(a\right)+d\left(b\right)$ 对所有 $a,b\ge0$.
-
-> **基础知识: 测度的下连续性**
-> 
-> 若 $\left\{E_{n}\right\}$ 是可测集的单调上升序列, 则 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right)$; 特别当 $\mu\left(X\right)< \infty$ 时, 若 $E_{n}\uparrow X$, 则 $\mu\left(X\setminus E_{n}\right)\to0$.
-
 > **定义 4.1.3 ($\sigma$-代数)**
 > 
 > 设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 $\sigma$-代数, 若 $X\in\mathcal F$, 对补运算封闭, 且对可数并封闭. 由此 $\mathcal F$ 也对可数交封闭.
@@ -96,9 +84,9 @@ $$
 
 ### 解答 2
 
-记 $d\left(t\right)=\frac{t}{1+t}$ ($t\ge0$). 由**基础知识: 函数 $t\mapsto\frac{t}{1+t}$ 的性质**, $d$ 递增且次可加. 被积函数 $\frac{\left|f-g\right|}{1+\left|f-g\right|}=d\left(\left|f-g\right|\right)$ 非负且有界 ($\le1$), 可测, 故可积, $\rho$ 良定义.
+记 $d\left(t\right)=\frac{t}{1+t}$ ($t\ge0$). 由函数 $t\mapsto\frac{t}{1+t}$ 的性质, $d$ 递增且次可加. 被积函数 $\frac{\left|f-g\right|}{1+\left|f-g\right|}=d\left(\left|f-g\right|\right)$ 非负且有界 ($\le1$), 可测, 故可积, $\rho$ 良定义.
 
-- $\rho\left(f,g\right)\ge0$; $\rho\left(f,g\right)=0$ 当且仅当 $d\left(\left|f-g\right|\right)=0$ 几乎处处 (由**基础知识: 非负可积函数积分为零则几乎处处为零**), 当且仅当 $\left|f-g\right|=0$ 几乎处处, 当且仅当 $f=g$ 几乎处处. 因此在把几乎处处相等的函数视为同一的商空间上, $\rho\left(f,g\right)=0$ 当且仅当 $f=g$.
+- $\rho\left(f,g\right)\ge0$; $\rho\left(f,g\right)=0$ 当且仅当 $d\left(\left|f-g\right|\right)=0$ 几乎处处 (由非负可积函数积分为零则几乎处处为零), 当且仅当 $\left|f-g\right|=0$ 几乎处处, 当且仅当 $f=g$ 几乎处处. 因此在把几乎处处相等的函数视为同一的商空间上, $\rho\left(f,g\right)=0$ 当且仅当 $f=g$.
 - 对称性显然: $\rho\left(f,g\right)=\rho\left(g,f\right)$.
 - 三角不等式: 由 $\left|f-g\right|\le\left|f-h\right|+\left|h-g\right|$, $d$ 递增且次可加,
 
@@ -172,7 +160,7 @@ $$
 
 (b) 固定 $\eta> 0$ 作为一致收敛的误差. 对每个 $\delta> 0$, 记 $F_{\delta}:=\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta\text{ 对所有 }y< \delta\right\}$, 由 (a) 可测, 且随 $\delta$ 减小而增大. 因 $f\left(x,\cdot\right)$ 在 $0$ 处连续, 对每个 $x$ 有 $\lim_{y\to0}f\left(x,y\right)=f\left(x,0\right)$, 故存在 $\delta> 0$ 使 $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ 对所有 $y< \delta$, 即 $x\in F_{\delta}$. 故 $\bigcup_{\delta> 0}F_{\delta}=X$.
 
-由**基础知识: 测度的下连续性**, 因 $\mu\left(X\right)< \infty$ 且 $F_{\delta}\uparrow X$, 有 $\mu\left(X\setminus F_{\delta}\right)\to0$. 给定 $\varepsilon> 0$, 取 $\delta> 0$ 使 $\mu\left(X\setminus F_{\delta}\right)< \varepsilon$, 令 $E:=X\setminus F_{\delta}$, 则 $\mu\left(E\right)< \varepsilon$, 且在 $E^{c}=F_{\delta}$ 上 $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ 对所有 $y< \delta$, 即 $f\left(\cdot,y\right)\to f\left(\cdot,0\right)$ 在 $E^{c}$ 上一致收敛 ($y\to0$). $\blacksquare$
+由测度的下连续性, 因 $\mu\left(X\right)< \infty$ 且 $F_{\delta}\uparrow X$, 有 $\mu\left(X\setminus F_{\delta}\right)\to0$. 给定 $\varepsilon> 0$, 取 $\delta> 0$ 使 $\mu\left(X\setminus F_{\delta}\right)< \varepsilon$, 令 $E:=X\setminus F_{\delta}$, 则 $\mu\left(E\right)< \varepsilon$, 且在 $E^{c}=F_{\delta}$ 上 $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ 对所有 $y< \delta$, 即 $f\left(\cdot,y\right)\to f\left(\cdot,0\right)$ 在 $E^{c}$ 上一致收敛 ($y\to0$). $\blacksquare$
 
 ---
 

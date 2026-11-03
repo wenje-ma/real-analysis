@@ -1,22 +1,10 @@
 # week10
 
-> **基础知识: 哈代-利特尔伍德极大函数**
-> 
-> 设 $f\in L^{1}_{\mathrm{loc}}\left(\mathbb R^{n}\right)$. 定义 $f$ 的哈代-利特尔伍德极大函数
-
 $$
 Mf\left(x\right)=\sup_{r> 0}\frac{1}{\left|B\left(x,r\right)\right|}\int_{B\left(x,r\right)}\left|f\left(y\right)\right|\mathrm{d}y,
 $$
 
 其中 $B\left(x,r\right)$ 是以 $x$ 为中心,$r$ 为半径的开球, $\left|B\left(x,r\right)\right|$ 表示其勒贝格测度.
-
-> **基础知识: 球体积公式**
-> 
-> 设 $C_{n}=m\left(B\left(1,0\right)\right)$ 为单位球的勒贝格测度, 则对任意 $x\in\mathbb R^{n}$, $r> 0$, $m\left(B\left(x,r\right)\right)=C_{n}r^{n}$.
-
-> **基础知识: 正则博雷尔测度**
-> 
-> 设 $\nu$ 是 $\mathbb R^{n}$ 上的博雷尔测度. 称 $\nu$ 为正则的, 若: (1) 对每个紧集 $K$, 有 $\nu\left(K\right)< \infty$; (2) 对每个 $E\in\mathcal B\left(\mathbb R^{n}\right)$, 有 $\nu\left(E\right)=\inf\left\{\nu\left(U\right):U\text{ 开集},E\subset U\right\}$.
 
 > **定义 11.4.1 (相互奇异)**
 > 
@@ -30,7 +18,7 @@ $$
 
 ### 解答 1
 
-记 $Hf$ 为哈代-利特尔伍德极大函数 (**基础知识: 哈代-利特尔伍德极大函数**). 因 $f\ne0$ 且 $f\in L^{1}\left(\mathbb R^{n}\right)$, 存在球 $K$ (取某个紧集即可) 使 $\int_{K}\left|f\right|\mathrm{d}y> 0$; 否则 $\left|\int_{K}f\right|$ 全为零将推出 $f=0$ 几乎处处, 矛盾. 记 $c=\int_{K}\left|f\right|\mathrm{d}y> 0$, 并取 $R> 0$ 使 $K\subset B\left(0,R\right)$ (即 $\sup_{y\in K}\left|y\right|< R$). 对 $\left|x\right|> R$, 因 $K\subset B\left(0,R\right)$ 且 $R< \left|x\right|$, 有 $K\subset B\left(x,2\left|x\right|\right)$. 于是由极大函数定义与**基础知识: 球体积公式**,
+记 $Hf$ 为哈代-利特尔伍德极大函数 (哈代-利特尔伍德极大函数). 因 $f\ne0$ 且 $f\in L^{1}\left(\mathbb R^{n}\right)$, 存在球 $K$ (取某个紧集即可) 使 $\int_{K}\left|f\right|\mathrm{d}y> 0$; 否则 $\left|\int_{K}f\right|$ 全为零将推出 $f=0$ 几乎处处, 矛盾. 记 $c=\int_{K}\left|f\right|\mathrm{d}y> 0$, 并取 $R> 0$ 使 $K\subset B\left(0,R\right)$ (即 $\sup_{y\in K}\left|y\right|< R$). 对 $\left|x\right|> R$, 因 $K\subset B\left(0,R\right)$ 且 $R< \left|x\right|$, 有 $K\subset B\left(x,2\left|x\right|\right)$. 于是由极大函数定义与球体积公式,
 
 $$
 Hf\left(x\right)\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{B\left(x,2\left|x\right|\right)}\left|f\right|\mathrm{d}y\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{K}\left|f\right|\mathrm{d}y=\frac{c}{C_{n}\left(2\left|x\right|\right)^{n}}=\frac{c}{2^{n}C_{n}}\left|x\right|^{-n}.
@@ -50,7 +38,7 @@ $$
 
 先证 $Hf\le H^{*}f$. 对任意 $r> 0$, 球 $B\left(x,r\right)$ 是含 $x$ 的球, 故 $\frac{1}{\left|B\left(x,r\right)\right|}\int_{B\left(x,r\right)}\left|f\right|\mathrm{d}y\le H^{*}f\left(x\right)$. 对 $r> 0$ 取上确界得 $Hf\left(x\right)\le H^{*}f\left(x\right)$.
 
-再证 $H^{*}f\le2^{n}Hf$. 设 $B$ 是含 $x$ 的任意球, 记其半径为 $\rho$,中心为 $c$. 因 $x\in B$, 有 $\left|x-c\right|\le\rho$, 故对任意 $y\in B$, $\left|y-x\right|\le\left|y-c\right|+\left|c-x\right|\le\rho+\rho=2\rho$, 即 $B\subset B\left(x,2\rho\right)$. 由**基础知识: 球体积公式**, $\left|B\left(x,2\rho\right)\right|=C_{n}\left(2\rho\right)^{n}=2^{n}C_{n}\rho^{n}=2^{n}\left|B\right|$. 于是
+再证 $H^{*}f\le2^{n}Hf$. 设 $B$ 是含 $x$ 的任意球, 记其半径为 $\rho$,中心为 $c$. 因 $x\in B$, 有 $\left|x-c\right|\le\rho$, 故对任意 $y\in B$, $\left|y-x\right|\le\left|y-c\right|+\left|c-x\right|\le\rho+\rho=2\rho$, 即 $B\subset B\left(x,2\rho\right)$. 由球体积公式, $\left|B\left(x,2\rho\right)\right|=C_{n}\left(2\rho\right)^{n}=2^{n}C_{n}\rho^{n}=2^{n}\left|B\right|$. 于是
 
 $$
 \frac{1}{m\left(B\right)}\int_{B}\left|f\right|\mathrm{d}y\le\frac{1}{m\left(B\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y=2^{n}\cdot\frac{1}{m\left(B\left(x,2\rho\right)\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y\le2^{n}Hf\left(x\right).
@@ -68,7 +56,7 @@ $$
 
 设 $\nu=\lambda+\mu$. 因 $\lambda\perp\mu$ (**定义 11.4.1 (相互奇异)**), 存在博雷尔集 $A$ 使 $\mu\left(A\right)=0$ 且 $\lambda\left(A^{c}\right)=0$.
 
-**正则性的条件 (1).** 对任意紧集 $K$, 由 $\lambda,\mu\ge0$ 及 $\nu$ 正则 (**基础知识: 正则博雷尔测度**), $\lambda\left(K\right)\le\nu\left(K\right)< \infty$, 同理 $\mu\left(K\right)< \infty$.
+**正则性的条件 (1).** 对任意紧集 $K$, 由 $\lambda,\mu\ge0$ 及 $\nu$ 正则 (正则博雷尔测度), $\lambda\left(K\right)\le\nu\left(K\right)< \infty$, 同理 $\mu\left(K\right)< \infty$.
 
 **正则性的条件 (2) 对 $\lambda$.** 先注意对任意 $E\in\mathcal B\left(\mathbb R^{n}\right)$, $\lambda\left(E\right)=\lambda\left(E\cap A\right)=\nu\left(E\cap A\right)$, 其中第二式用到 $\mu\left(E\cap A\right)\le\mu\left(A\right)=0$; 同理 $\mu\left(E\right)=\nu\left(E\cap A^{c}\right)$.
 

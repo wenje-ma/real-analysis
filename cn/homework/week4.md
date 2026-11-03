@@ -1,9 +1,5 @@
 # week4
 
-> **基础知识: 存在勒贝格不可测集 (维塔利集)**
-> 
-> 在勒贝格测度空间 $\left(\mathbb R,\mathcal L,m\right)$ 中, 存在 $A\subset\mathbb R$ 使 $A\notin\mathcal L$. 其构造基于选择公理: 在 $\mathbb R/\mathbb Q$ 的每个等价类中选取一个代表元, 所得集合即为勒贝格不可测集.
-
 > **定义 4.1.3 ($\sigma$-代数)**
 > 
 > 设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 $\sigma$-代数, 若满足: (1) $X\in\mathcal F$; (2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
@@ -70,7 +66,7 @@ $$
 
 ### 解答 2
 
-取 $X=\mathbb R$ 配勒贝格 $\sigma$-代数 $\mathcal L$. 设 $A\subset\mathbb R$ 是勒贝格不可测集 (**基础知识: 存在勒贝格不可测集 (维塔利集)**). 对每个 $a\in A$, 定义 $f_{a}:=\chi_{\left\{a\right\}}$ 为单点指示函数. 因单点集 $\left\{a\right\}$ 是闭集, 从而是博雷尔集, 故 $f_{a}$ 可测. 但不可数族 $\left\{f_{a}:a\in A\right\}$ 的上确界满足
+取 $X=\mathbb R$ 配勒贝格 $\sigma$-代数 $\mathcal L$. 设 $A\subset\mathbb R$ 是勒贝格不可测集 (存在勒贝格不可测集 (维塔利集)). 对每个 $a\in A$, 定义 $f_{a}:=\chi_{\left\{a\right\}}$ 为单点指示函数. 因单点集 $\left\{a\right\}$ 是闭集, 从而是博雷尔集, 故 $f_{a}$ 可测. 但不可数族 $\left\{f_{a}:a\in A\right\}$ 的上确界满足
 
 $$
 \sup_{a\in A}f_{a}\left(x\right)=\begin{cases}1,&x\in A,\\0,&x\notin A,\end{cases}

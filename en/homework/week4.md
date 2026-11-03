@@ -1,9 +1,5 @@
 # week4
 
-> **Basic Knowledge: Existence of a Non-Measurable Lebesgue Set (Vitali Set)**
-> 
-> In the Lebesgue measure space $\left(\mathbb R,\mathcal L,m\right)$, there exists $A\subset\mathbb R$ with $A\notin\mathcal L$. Its construction uses the axiom of choice: choosing one representative from each equivalence class in $\mathbb R/\mathbb Q$ yields a non-measurable set.
-
 > **Definition 4.1.3 ($\sigma$-Algebra)**
 > 
 > Let $X$ be nonempty and $\mathcal F\subset\mathcal P\left(X\right)$. $\mathcal F$ is called a $\sigma$-algebra on $X$ if: (1) $X\in\mathcal F$; (2) closed under complements: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) closed under countable unions: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
@@ -70,7 +66,7 @@ Prove that the supremum of uncountably many measurable real-valued functions on 
 
 ### Solution 2
 
-Take $X=\mathbb R$ equipped with the Lebesgue $\sigma$-algebra $\mathcal L$. Let $A\subset\mathbb R$ be a non-measurable Lebesgue set (**Basic Knowledge: Existence of a Non-Measurable Lebesgue Set (Vitali Set)**). For each $a\in A$, define $f_{a}:=\chi_{\left\{a\right\}}$, the indicator of a singleton. Since $\left\{a\right\}$ is closed, hence Borel, $f_{a}$ is measurable. But the supremum of the uncountable family $\left\{f_{a}:a\in A\right\}$ satisfies
+Take $X=\mathbb R$ equipped with the Lebesgue $\sigma$-algebra $\mathcal L$. Let $A\subset\mathbb R$ be a non-measurable Lebesgue set (Existence of a Non-Measurable Lebesgue Set (Vitali Set)). For each $a\in A$, define $f_{a}:=\chi_{\left\{a\right\}}$, the indicator of a singleton. Since $\left\{a\right\}$ is closed, hence Borel, $f_{a}$ is measurable. But the supremum of the uncountable family $\left\{f_{a}:a\in A\right\}$ satisfies
 
 $$
 \sup_{a\in A}f_{a}\left(x\right)=\begin{cases}1,&x\in A,\\0,&x\notin A,\end{cases}

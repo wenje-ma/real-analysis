@@ -1,9 +1,5 @@
 # week1
 
-> **Basic Knowledge: Open Sets as Countable Unions of Open Rectangles**
-> 
-> Every open set in $\mathbb R^{m+n}$ can be written as a countable union of open rectangles: $O=\bigcup_{k=1}^{\infty}\left(U_{k}\times V_{k}\right)$, where $U_{k}\subset\mathbb R^{m}$, $V_{k}\subset\mathbb R^{n}$ are open sets (rectangles with rational endpoints form a countable basis).
-
 > **Theorem 1.2.9 (De Morgan's Laws)**
 > 
 > $\left(A\cup B\right)^{c}=A^{c}\cap B^{c}$, $\left(A\cap B\right)^{c}=A^{c}\cup B^{c}$.
@@ -318,7 +314,7 @@ By the helper fact, $\pi_{1}^{-1}\left(A\right),\pi_{2}^{-1}\left(B\right)\in\ma
 
 **($\supset$) $\mathcal B\left(\mathbb R^{m+n}\right)\subseteq\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$.**
 
-By **Basic Knowledge: Open Sets as Countable Unions of Open Rectangles**, any open set $O$ in $\mathbb R^{m+n}$ is a countable union of open rectangles: $O=\bigcup_{k=1}^{\infty}\left(U_{k}\times V_{k}\right)$, where $U_{k}\subset\mathbb R^{m}$, $V_{k}\subset\mathbb R^{n}$ are open. Each open rectangle $U_{k}\times V_{k}$ is a measurable rectangle ($U_{k}\in\mathcal B\left(\mathbb R^{m}\right)$, $V_{k}\in\mathcal B\left(\mathbb R^{n}\right)$), so it belongs to $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$. Hence $O$, as a countable union, also belongs to the product $\sigma$-algebra. Thus all open sets lie in $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$, and therefore
+By Open Sets as Countable Unions of Open Rectangles, any open set $O$ in $\mathbb R^{m+n}$ is a countable union of open rectangles: $O=\bigcup_{k=1}^{\infty}\left(U_{k}\times V_{k}\right)$, where $U_{k}\subset\mathbb R^{m}$, $V_{k}\subset\mathbb R^{n}$ are open. Each open rectangle $U_{k}\times V_{k}$ is a measurable rectangle ($U_{k}\in\mathcal B\left(\mathbb R^{m}\right)$, $V_{k}\in\mathcal B\left(\mathbb R^{n}\right)$), so it belongs to $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$. Hence $O$, as a countable union, also belongs to the product $\sigma$-algebra. Thus all open sets lie in $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$, and therefore
 
 $$
 \mathcal B\left(\mathbb R^{m+n}\right)=\sigma\left(\text{open sets}\right)\subseteq\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right).

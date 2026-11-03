@@ -1,13 +1,5 @@
 # week11
 
-> **Basic Knowledge: Normalized Bounded Variation ($NBV$)**
-> 
-> $NBV=\left\{F\in BV:F\text{ right-continuous},F\left(-\infty\right)=0\right\}$, where $BV$ denotes the bounded-variation functions on $\mathbb R$, and $T_{F}$ is the total-variation function of $F$.
-
-> **Basic Knowledge: Series**
-> 
-> The geometric series $\sum_{n=1}^{\infty}2^{-n}=1$ converges; the harmonic series $\sum_{k}\frac{1}{k}$ diverges.
-
 > **Definition 14.0.6 (Functions of Bounded Variation)**
 > 
 > Let $f:\left[a,b\right]\to\mathbb R$. For any partition $P:a=x_{0}< x_{1}< \cdots< x_{n}=b$ of $\left[a,b\right]$, define the variation $V\left(f,P\right)=\sum_{i=1}^{n}\left|f\left(x_{i}\right)-f\left(x_{i-1}\right)\right|$. The total variation of $f$ on $\left[a,b\right]$ is $V_{a}^{b}\left(f\right)=\sup_{P}V\left(f,P\right)$. If $V_{a}^{b}\left(f\right)< +\infty$, $f$ is called a bounded-variation function on $\left[a,b\right]$, written $f\in BV\left(\left[a,b\right]\right)$.
@@ -28,11 +20,11 @@ Construct an increasing function on $\mathbb R$ whose set of discontinuities is 
 
 ### Solution 1
 
-Enumerate the rationals $\mathbb Q=\left\{q_{1},q_{2},\dots\right\}$ and define $F\left(x\right)=\sum_{q_{n}\le x}2^{-n}$ for $x\in\mathbb R$. This is a sum of at most countably many nonnegative terms, with values in $\left[0,1\right]$. By **Basic Knowledge: Series**, $\sum_{n}2^{-n}$ converges, so $F$ takes finite values. If $x< y$, then $\left\{n:q_{n}\le x\right\}\subset\left\{n:q_{n}\le y\right\}$, so $F\left(x\right)\le F\left(y\right)$; hence $F$ is increasing.
+Enumerate the rationals $\mathbb Q=\left\{q_{1},q_{2},\dots\right\}$ and define $F\left(x\right)=\sum_{q_{n}\le x}2^{-n}$ for $x\in\mathbb R$. This is a sum of at most countably many nonnegative terms, with values in $\left[0,1\right]$. By Series, $\sum_{n}2^{-n}$ converges, so $F$ takes finite values. If $x< y$, then $\left\{n:q_{n}\le x\right\}\subset\left\{n:q_{n}\le y\right\}$, so $F\left(x\right)\le F\left(y\right)$; hence $F$ is increasing.
 
 **Every rational point is a discontinuity.** For $q_{k}\in\mathbb Q$, as $x$ approaches $q_{k}$ from the left, $\left\{q_{n}\le x\right\}$ does not contain $q_{k}$, so the left limit $F\left(q_{k}-\right)=\sum_{q_{n}< q_{k}}2^{-n}=\sum_{q_{n}\le q_{k}}2^{-n}-2^{-k}=F\left(q_{k}\right)-2^{-k}< F\left(q_{k}\right)$. The right limit $F\left(q_{k}+\right)=\lim_{x\downarrow q_{k}}F\left(x\right)=F\left(q_{k}\right)$ (since for $x> q_{k}$, $q_{k}$ is still counted). Thus $F$ has unequal left and right limits at $q_{k}$, a jump discontinuity.
 
-**Every irrational point is a continuity point.** Let $x_{0}\in\mathbb R\setminus\mathbb Q$. Given $\varepsilon> 0$, by **Basic Knowledge: Series** choose $N$ with $\sum_{n> N}2^{-n}< \varepsilon$. Since $x_{0}$ is irrational, choose $\delta> 0$ small enough that $\left(x_{0}-\delta,x_{0}+\delta\right)$ contains none of $q_{1},\dots,q_{N}$ (finitely many points, separable). Then whenever $\left|x-x_{0}\right|< \delta$, the interval $\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right]$ contains at most $q_{N+1},q_{N+2},\dots$, so $\left|F\left(x\right)-F\left(x_{0}\right)\right|=\sum_{x_{0}< q_{n}\le x\text{ or }x< q_{n}\le x_{0}}2^{-n}\le\sum_{n> N}2^{-n}< \varepsilon$. Hence $F$ is continuous at $x_{0}$.
+**Every irrational point is a continuity point.** Let $x_{0}\in\mathbb R\setminus\mathbb Q$. Given $\varepsilon> 0$, by Series choose $N$ with $\sum_{n> N}2^{-n}< \varepsilon$. Since $x_{0}$ is irrational, choose $\delta> 0$ small enough that $\left(x_{0}-\delta,x_{0}+\delta\right)$ contains none of $q_{1},\dots,q_{N}$ (finitely many points, separable). Then whenever $\left|x-x_{0}\right|< \delta$, the interval $\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right]$ contains at most $q_{N+1},q_{N+2},\dots$, so $\left|F\left(x\right)-F\left(x_{0}\right)\right|=\sum_{x_{0}< q_{n}\le x\text{ or }x< q_{n}\le x_{0}}2^{-n}\le\sum_{n> N}2^{-n}< \varepsilon$. Hence $F$ is continuous at $x_{0}$.
 
 Thus the discontinuity set of $F$ is exactly $\mathbb Q$. By **Theorem 14.0.7 (Basic Properties of Bounded-Variation Functions)** (4) and **Theorem 14.0.10 (Discontinuity Properties of Bounded-Variation Functions)**, $F$ is an increasing bounded function, hence of bounded variation, with at most countably many jump discontinuities, which here are exactly $\mathbb Q$. $\blacksquare$
 
@@ -64,7 +56,7 @@ $$
 \sum_{k=0}^{N-1}\left|G\left(x_{k}\right)-G\left(x_{k+1}\right)\right|=\sum_{k=0}^{N-1}\left(x_{k}^{2}+x_{k+1}^{2}\right)\ge\sum_{k=0}^{N-1}x_{k}^{2}=\sum_{k=0}^{N-1}\frac{1}{\pi/2+k\pi}.
 $$
 
-By **Basic Knowledge: Series**, the harmonic series $\sum_{k}\frac{1}{k}$ diverges, so the above tends to $+\infty$ as $N\to\infty$. Thus the total variation of $G$ on $\left[0,1\right]\subset\left[-1,1\right]$ is already $+\infty$, so $V_{-1}^{1}\left(G\right)=+\infty$, i.e. $G\notin BV\left(\left[-1,1\right]\right)$. $\blacksquare$
+By Series, the harmonic series $\sum_{k}\frac{1}{k}$ diverges, so the above tends to $+\infty$ as $N\to\infty$. Thus the total variation of $G$ on $\left[0,1\right]\subset\left[-1,1\right]$ is already $+\infty$, so $V_{-1}^{1}\left(G\right)=+\infty$, i.e. $G\notin BV\left(\left[-1,1\right]\right)$. $\blacksquare$
 
 ---
 

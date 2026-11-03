@@ -1,13 +1,5 @@
 # week12
 
-> **Basic Knowledge: NBV and Stieltjes Measures**
-> 
-> $NBV=\left\{F\in BV:F\text{ right-continuous},F\left(-\infty\right)=0\right\}$. For an increasing right-continuous $F$, a regular Borel measure $\mu_{F}$ is uniquely determined by $\mu_{F}\left(\left(a,b\right]\right)=F\left(b\right)-F\left(a\right)$.
-
-> **Basic Knowledge: Total Variation of an Absolutely Continuous Function**
-> 
-> If $F$ is absolutely continuous on $\left[a,b\right]$, then its total variation is $V_{a}^{b}\left(F\right)=\int_{a}^{b}\left|F'\left(t\right)\right|\mathrm{d}t$.
-
 > **Property 11.5.6 (Linearity of the Radon-Nikodym Derivative)**
 > 
 > If $\nu_{1},\nu_{2}\ll\mu$ and $a,b\in\mathbb R$, then $\frac{\mathrm{d}\left(a\nu_{1}+b\nu_{2}\right)}{\mathrm{d}\mu}=a\frac{\mathrm{d}\nu_{1}}{\mathrm{d}\mu}+b\frac{\mathrm{d}\nu_{2}}{\mathrm{d}\mu}$ holds $\mu$-a.e.
@@ -52,7 +44,7 @@ $$
 
 so the length of the inscribed polygon is exactly $\sum_{j=1}^{n}\left|F\left(t_{j}\right)-F\left(t_{j-1}\right)\right|$. Hence $L$ equals the supremum of this sum over all partitions, which is precisely the total variation $V_{a}^{b}\left(F\right)$ of $F$ on $\left[a,b\right]$ (**Definition 14.0.6 (Functions of Bounded Variation)**).
 
-**(b).** If $f\in AC\left(\left[a,b\right]\right)$ (**Definition 15.0.11 (Absolute Continuity)**), then both components of $F\left(t\right)=t+if\left(t\right)$, namely $t$ (the identity) and $f$, are absolutely continuous, so $F$ is absolutely continuous. By **Theorem 15.0.14 (Equivalent Characterization of Absolute Continuity)**, for almost every $t$, $F'\left(t\right)=\frac{\mathrm{d}}{\mathrm{d}t}\left(t+if\left(t\right)\right)=1+if'\left(t\right)$, and hence $\left|F'\left(t\right)\right|=\left(1+\left(f'\left(t\right)\right)^{2}\right)^{1/2}$. By **Basic Knowledge: Total Variation of an Absolutely Continuous Function**,
+**(b).** If $f\in AC\left(\left[a,b\right]\right)$ (**Definition 15.0.11 (Absolute Continuity)**), then both components of $F\left(t\right)=t+if\left(t\right)$, namely $t$ (the identity) and $f$, are absolutely continuous, so $F$ is absolutely continuous. By **Theorem 15.0.14 (Equivalent Characterization of Absolute Continuity)**, for almost every $t$, $F'\left(t\right)=\frac{\mathrm{d}}{\mathrm{d}t}\left(t+if\left(t\right)\right)=1+if'\left(t\right)$, and hence $\left|F'\left(t\right)\right|=\left(1+\left(f'\left(t\right)\right)^{2}\right)^{1/2}$. By Total Variation of an Absolutely Continuous Function,
 
 $$
 L=V_{a}^{b}\left(F\right)=\int_{a}^{b}\left|F'\left(t\right)\right|\mathrm{d}t=\int_{a}^{b}\left[1+\left(f'\left(t\right)\right)^{2}\right]^{1/2}\mathrm{d}t.
@@ -68,7 +60,7 @@ If $\left\{F_{j}\right\}$ is a sequence of nonnegative increasing functions on $
 
 ### Solution 2
 
-Let $\mu_{F_{j}}$ be the Stieltjes measure associated with $F_{j}$, and $\mu_{F}$ that associated with $F=\sum_{j}F_{j}$ (**Basic Knowledge: NBV and Stieltjes Measures**). Since $\sum_{j}F_{j}$ converges and each term is nonnegative, by countable additivity of Stieltjes measures, $\mu_{F}=\sum_{j}\mu_{F_{j}}$. By **Corollary 13.4.5 (Monotone Functions Are Differentiable a.e.)** and the fact that the derivative of a monotone function is the Radon-Nikodym derivative of its Stieltjes measure with respect to Lebesgue measure, for $m$-a.e. $x$, $F_{j}'\left(x\right)=\frac{\mathrm{d}\mu_{F_{j}}}{\mathrm{d}m}\left(x\right)$; similarly $F'\left(x\right)=\frac{\mathrm{d}\mu_{F}}{\mathrm{d}m}\left(x\right)$. Hence by **Property 11.5.6 (Linearity of the Radon-Nikodym Derivative)** (adding two at a time),
+Let $\mu_{F_{j}}$ be the Stieltjes measure associated with $F_{j}$, and $\mu_{F}$ that associated with $F=\sum_{j}F_{j}$ (NBV and Stieltjes Measures). Since $\sum_{j}F_{j}$ converges and each term is nonnegative, by countable additivity of Stieltjes measures, $\mu_{F}=\sum_{j}\mu_{F_{j}}$. By **Corollary 13.4.5 (Monotone Functions Are Differentiable a.e.)** and the fact that the derivative of a monotone function is the Radon-Nikodym derivative of its Stieltjes measure with respect to Lebesgue measure, for $m$-a.e. $x$, $F_{j}'\left(x\right)=\frac{\mathrm{d}\mu_{F_{j}}}{\mathrm{d}m}\left(x\right)$; similarly $F'\left(x\right)=\frac{\mathrm{d}\mu_{F}}{\mathrm{d}m}\left(x\right)$. Hence by **Property 11.5.6 (Linearity of the Radon-Nikodym Derivative)** (adding two at a time),
 
 $$
 \frac{\mathrm{d}\mu_{F}}{\mathrm{d}m}\left(x\right)=\frac{\mathrm{d}\left(\sum_{j}\mu_{F_{j}}\right)}{\mathrm{d}m}\left(x\right)=\sum_{j}\frac{\mathrm{d}\mu_{F_{j}}}{\mathrm{d}m}\left(x\right)=\sum_{j}F_{j}'\left(x\right),

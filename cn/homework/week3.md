@@ -1,9 +1,5 @@
 # week3
 
-> **基础知识: 广义康托尔集**
-> 
-> 设 $\left\{\alpha_{j}\right\}\subset\left(0,1\right)$, 从 $\left[0,1\right]$ 出发, 第 $j$ 步去掉每个剩余闭区间的中间 $\alpha_{j}$ 部分, 所得交集 $K=\bigcap_{j}K_{j}$ 称为广义康托尔集. 它满足 $m\left(K\right)=\prod_{j=1}^{\infty}\left(1-\alpha_{j}\right)$, 且对任意 $\beta\in\left(0,1\right)$ 可选取 $\left\{\alpha_{j}\right\}$ 使 $m\left(K\right)=\beta$; 广义康托尔集与普通康托尔集一样是紧, 无处稠密, 无孤立点的闭集.
-
 > **定义 4.1.1 (集合代数)**
 > 
 > 设 $X$ 是非空集合, $\mathcal A\subset\mathcal P\left(X\right)$. 称 $\mathcal A$ 为 $X$ 上的一个集合代数, 若满足: (1) $X\in\mathcal A$; (2) 对差运算封闭: $A,B\in\mathcal A\Rightarrow A\setminus B\in\mathcal A$; (3) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
@@ -346,7 +342,7 @@ $$
 
 于是 $m\left(E\right)\le\alpha m\left(E\right)$. 因 $m\left(E\right)> 0$, 得 $\alpha\ge1$, 与 $\alpha< 1$ 矛盾. 故存在开区间 $I$ 使 $m\left(E\cap I\right)> \alpha m\left(I\right)$. $\blacksquare$
 
-**33.** 用正测度的广义康托尔集 (**基础知识: 广义康托尔集**). 设 $\left\{I_{n}\right\}$ 是 $\left[0,1\right]$ 中所有以有理数为端点的开区间的枚举. 归纳地选取两两不交的闭区间 $J_{n}\subset I_{n}$ (取 $J_{n}$ 避开之前所有 $J_{k}$), 使每个子区间 $I$ 都含某个 $J_{n}$ (因 $\left\{I_{n}\right\}$ 枚举有理区间, 每个子区间含某个 $I_{n}$, 而 $J_{n}\subset I_{n}$). 固定 $c\in\left(0,1\right)$. 在每个 $J_{n}$ 内取广义康托尔集 $C_{n}\subset J_{n}$, 使 $m\left(C_{n}\right)=c\,m\left(J_{n}\right)$ (由广义康托尔集测度可为任意 $\beta\in\left(0,1\right)$). 因 $J_{n}$ 两两不交, $C_{n}$ 两两不交. 令 $A=\bigcup_{n=1}^{\infty}C_{n}$, 则 $A$ 是可数个闭集之并, 从而是博雷尔集, 且 $A\subset\left[0,1\right]$.
+**33.** 用正测度的广义康托尔集 (广义康托尔集). 设 $\left\{I_{n}\right\}$ 是 $\left[0,1\right]$ 中所有以有理数为端点的开区间的枚举. 归纳地选取两两不交的闭区间 $J_{n}\subset I_{n}$ (取 $J_{n}$ 避开之前所有 $J_{k}$), 使每个子区间 $I$ 都含某个 $J_{n}$ (因 $\left\{I_{n}\right\}$ 枚举有理区间, 每个子区间含某个 $I_{n}$, 而 $J_{n}\subset I_{n}$). 固定 $c\in\left(0,1\right)$. 在每个 $J_{n}$ 内取广义康托尔集 $C_{n}\subset J_{n}$, 使 $m\left(C_{n}\right)=c\,m\left(J_{n}\right)$ (由广义康托尔集测度可为任意 $\beta\in\left(0,1\right)$). 因 $J_{n}$ 两两不交, $C_{n}$ 两两不交. 令 $A=\bigcup_{n=1}^{\infty}C_{n}$, 则 $A$ 是可数个闭集之并, 从而是博雷尔集, 且 $A\subset\left[0,1\right]$.
 
 先证下界. 对任意子区间 $I\subset\left[0,1\right]$, 存在 $n$ 使 $J_{n}\subset I_{n}\subset I$, 故
 

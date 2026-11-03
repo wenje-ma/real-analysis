@@ -1,9 +1,5 @@
 # week1
 
-> **基础知识: 开集表为可数开矩形并**
-> 
-> $\mathbb R^{m+n}$ 中每个开集可表为可数个开矩形的并: $O=\bigcup_{k=1}^{\infty}\left(U_{k}\times V_{k}\right)$, 其中 $U_{k}\subset\mathbb R^{m}$, $V_{k}\subset\mathbb R^{n}$ 为开集 (有理端点的矩形构成可数基).
-
 > **定理 1.2.9 (德摩根定律)**
 > 
 > $\left(A\cup B\right)^{c}=A^{c}\cap B^{c}$, $\left(A\cap B\right)^{c}=A^{c}\cup B^{c}$.
@@ -320,7 +316,7 @@ $$
 
 **($\supset$) $\mathcal B\left(\mathbb R^{m+n}\right)\subseteq\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$.**
 
-由**基础知识: 开集表为可数开矩形并**, $\mathbb R^{m+n}$ 中任意开集 $O$ 可表为可数个开矩形的并: $O=\bigcup_{k=1}^{\infty}\left(U_{k}\times V_{k}\right)$, 其中 $U_{k}\subset\mathbb R^{m}$, $V_{k}\subset\mathbb R^{n}$ 为开集. 而每个开矩形 $U_{k}\times V_{k}$ 是可测矩形 ($U_{k}\in\mathcal B\left(\mathbb R^{m}\right)$, $V_{k}\in\mathcal B\left(\mathbb R^{n}\right)$), 故属于 $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$. 于是 $O$ 作为可数并也属于该乘积 $\sigma$-代数. 故所有开集都在 $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$ 中, 从而
+由开集表为可数开矩形并, $\mathbb R^{m+n}$ 中任意开集 $O$ 可表为可数个开矩形的并: $O=\bigcup_{k=1}^{\infty}\left(U_{k}\times V_{k}\right)$, 其中 $U_{k}\subset\mathbb R^{m}$, $V_{k}\subset\mathbb R^{n}$ 为开集. 而每个开矩形 $U_{k}\times V_{k}$ 是可测矩形 ($U_{k}\in\mathcal B\left(\mathbb R^{m}\right)$, $V_{k}\in\mathcal B\left(\mathbb R^{n}\right)$), 故属于 $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$. 于是 $O$ 作为可数并也属于该乘积 $\sigma$-代数. 故所有开集都在 $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$ 中, 从而
 
 $$
 \mathcal B\left(\mathbb R^{m+n}\right)=\sigma\left(\text{开集}\right)\subseteq\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right).

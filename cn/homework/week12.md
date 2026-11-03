@@ -1,13 +1,5 @@
 # week12
 
-> **基础知识: 归一化的有界变差 $NBV$ 与斯蒂尔杰斯测度**
-> 
-> $NBV=\left\{F\in BV:F\text{ 右连续},F\left(-\infty\right)=0\right\}$. 对递增右连续的 $F$, 由 $\mu_{F}\left(\left(a,b\right]\right)=F\left(b\right)-F\left(a\right)$ 唯一确定一个正则博雷尔测度 $\mu_{F}$.
-
-> **基础知识: 绝对连续函数的全变差**
-> 
-> 若 $F$ 在 $\left[a,b\right]$ 上绝对连续, 则 $F$ 的全变差 $V_{a}^{b}\left(F\right)=\int_{a}^{b}\left|F'\left(t\right)\right|\mathrm{d}t$.
-
 > **性质 11.5.6 (拉东-尼科迪姆导数的线性性)**
 > 
 > 若 $\nu_{1},\nu_{2}\ll\mu$ 且 $a,b\in\mathbb R$, 则 $\frac{\mathrm{d}\left(a\nu_{1}+b\nu_{2}\right)}{\mathrm{d}\mu}=a\frac{\mathrm{d}\nu_{1}}{\mathrm{d}\mu}+b\frac{\mathrm{d}\nu_{2}}{\mathrm{d}\mu}$ $\mu$-几乎处处成立.
@@ -52,7 +44,7 @@ $$
 
 故内接多边形的长度恰为 $\sum_{j=1}^{n}\left|F\left(t_{j}\right)-F\left(t_{j-1}\right)\right|$. 于是 $L$ 等于该和式关于一切分划的上确界, 这正是 $F$ 在 $\left[a,b\right]$ 上的全变差 $V_{a}^{b}\left(F\right)$ (**定义 14.0.6 (有界变差函数)**).
 
-**(b).** 若 $f\in AC\left(\left[a,b\right]\right)$ (**定义 15.0.11 (绝对连续性)**), 则 $F\left(t\right)=t+if\left(t\right)$ 的两个分量 $t$ (恒等函数) 与 $f$ 均绝对连续, 故 $F$ 绝对连续. 由**定理 15.0.14 (绝对连续的等价刻画)**, 对几乎所有 $t$, $F'\left(t\right)=\frac{\mathrm{d}}{\mathrm{d}t}\left(t+if\left(t\right)\right)=1+if'\left(t\right)$, 从而 $\left|F'\left(t\right)\right|=\left(1+\left(f'\left(t\right)\right)^{2}\right)^{1/2}$. 由**基础知识: 绝对连续函数的全变差**,
+**(b).** 若 $f\in AC\left(\left[a,b\right]\right)$ (**定义 15.0.11 (绝对连续性)**), 则 $F\left(t\right)=t+if\left(t\right)$ 的两个分量 $t$ (恒等函数) 与 $f$ 均绝对连续, 故 $F$ 绝对连续. 由**定理 15.0.14 (绝对连续的等价刻画)**, 对几乎所有 $t$, $F'\left(t\right)=\frac{\mathrm{d}}{\mathrm{d}t}\left(t+if\left(t\right)\right)=1+if'\left(t\right)$, 从而 $\left|F'\left(t\right)\right|=\left(1+\left(f'\left(t\right)\right)^{2}\right)^{1/2}$. 由绝对连续函数的全变差,
 
 $$
 L=V_{a}^{b}\left(F\right)=\int_{a}^{b}\left|F'\left(t\right)\right|\mathrm{d}t=\int_{a}^{b}\left[1+\left(f'\left(t\right)\right)^{2}\right]^{1/2}\mathrm{d}t.
@@ -68,7 +60,7 @@ $\blacksquare$
 
 ### 解答 2
 
-设 $\mu_{F_{j}}$ 是 $F_{j}$ 对应的斯蒂尔杰斯测度, $\mu_{F}$ 是 $F=\sum_{j}F_{j}$ 对应的斯蒂尔杰斯测度 (**基础知识: 归一化的有界变差 $NBV$ 与斯蒂尔杰斯测度**). 因 $\sum_{j}F_{j}$ 收敛且各项非负, 由斯蒂尔杰斯测度的可数可加性, $\mu_{F}=\sum_{j}\mu_{F_{j}}$. 由**推论 13.4.5 (单调函数几乎处处可导)** 及单调函数的导数即其斯蒂尔杰斯测度关于勒贝格测度的拉东-尼科迪姆导数, 对 $m$-几乎每个 $x$, $F_{j}'\left(x\right)=\frac{\mathrm{d}\mu_{F_{j}}}{\mathrm{d}m}\left(x\right)$; 同理 $F'\left(x\right)=\frac{\mathrm{d}\mu_{F}}{\mathrm{d}m}\left(x\right)$. 于是由**性质 11.5.6 (拉东-尼科迪姆导数的线性性)** (逐次两两相加),
+设 $\mu_{F_{j}}$ 是 $F_{j}$ 对应的斯蒂尔杰斯测度, $\mu_{F}$ 是 $F=\sum_{j}F_{j}$ 对应的斯蒂尔杰斯测度 (归一化的有界变差 $NBV$ 与斯蒂尔杰斯测度). 因 $\sum_{j}F_{j}$ 收敛且各项非负, 由斯蒂尔杰斯测度的可数可加性, $\mu_{F}=\sum_{j}\mu_{F_{j}}$. 由**推论 13.4.5 (单调函数几乎处处可导)** 及单调函数的导数即其斯蒂尔杰斯测度关于勒贝格测度的拉东-尼科迪姆导数, 对 $m$-几乎每个 $x$, $F_{j}'\left(x\right)=\frac{\mathrm{d}\mu_{F_{j}}}{\mathrm{d}m}\left(x\right)$; 同理 $F'\left(x\right)=\frac{\mathrm{d}\mu_{F}}{\mathrm{d}m}\left(x\right)$. 于是由**性质 11.5.6 (拉东-尼科迪姆导数的线性性)** (逐次两两相加),
 
 $$
 \frac{\mathrm{d}\mu_{F}}{\mathrm{d}m}\left(x\right)=\frac{\mathrm{d}\left(\sum_{j}\mu_{F_{j}}\right)}{\mathrm{d}m}\left(x\right)=\sum_{j}\frac{\mathrm{d}\mu_{F_{j}}}{\mathrm{d}m}\left(x\right)=\sum_{j}F_{j}'\left(x\right),

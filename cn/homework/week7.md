@@ -1,13 +1,5 @@
 # week7
 
-> **基础知识: 矩形代数的交补性质**
-> 
-> 对可测矩形成立 $\left(A\times B\right)\cap\left(C\times D\right)=\left(A\cap C\right)\times\left(B\cap D\right)$ 与 $\left(A\times B\right)^{c}=\left(A^{c}\times B\right)\cup\left(A\times B^{c}\right)$.
-
-> **基础知识: 测度限制在代数上是准测度**
-> 
-> 若 $\lambda$ 是 $\sigma$-代数 $\mathcal M$ 上的测度, $\mathcal E\subset\mathcal M$ 是一个代数, 则 $\lambda|_{\mathcal E}$ 满足准测度条件 (零空集性与 $\sigma$-可加性在 $\mathcal E$ 内成立).
-
 > **定义 5.1.2 (测度)**
 > 
 > 设 $\left(X,\mathcal F\right)$ 是一个可测空间. 函数 $\mu:\mathcal F\to\left[0,+\infty\right]$ 称为 $\left(X,\mathcal F\right)$ 上的一个测度, 如果满足: (1) 非负性: $\mu\left(E\right)\ge0$ 对一切 $E\in\mathcal F$ 成立; (2) 零空集性: $\mu\left(\emptyset\right)=0$; (3) 可数可加性 ($\sigma$-可加性): 对任意可数个两两不交的集合 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 有 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
@@ -66,7 +58,7 @@ $$
 
 ### 解答 1
 
-**$\mathcal E$ 是代数.** 由**基础知识: 矩形代数的交补性质**, 可测矩形之交仍是可测矩形, 可测矩形之补是两个可测矩形之并. 空集 $\emptyset$ 与全空间 $X\times Y$ 都在 $\mathcal E$ 中. 对 $\mathcal E$ 中元素做补,交,并运算, 先把每个元素写成有限不交矩形并, 再由矩形之交仍是矩形,公共细分后两两不交, 得到的结果仍是有限不交矩形并, 仍属于 $\mathcal E$. 故 $\mathcal E$ 是一个代数.
+**$\mathcal E$ 是代数.** 由矩形代数的交补性质, 可测矩形之交仍是可测矩形, 可测矩形之补是两个可测矩形之并. 空集 $\emptyset$ 与全空间 $X\times Y$ 都在 $\mathcal E$ 中. 对 $\mathcal E$ 中元素做补,交,并运算, 先把每个元素写成有限不交矩形并, 再由矩形之交仍是矩形,公共细分后两两不交, 得到的结果仍是有限不交矩形并, 仍属于 $\mathcal E$. 故 $\mathcal E$ 是一个代数.
 
 **$\pi$ 良定义.** 设 $E=\bigcup_{i=1}^{m}A_{i}\times B_{i}=\bigcup_{j=1}^{n}C_{j}\times D_{j}$ 是 $E$ 的两种两两不交矩形分解. 对公共细分 $\left\{\left(A_{i}\cap C_{j}\right)\times\left(B_{i}\cap D_{j}\right)\right\}_{i,j}$, 由 $\mu,\nu$ 的有限可加性,
 
@@ -82,7 +74,7 @@ $$
 \left(\mu\times\nu\right)\left(\bigcup_{i=1}^{n}A_{i}\times B_{i}\right)=\sum_{i=1}^{n}\mu\left(A_{i}\right)\nu\left(B_{i}\right)=\pi\left(E\right),
 $$
 
-故 $\pi=\left(\mu\times\nu\right)|_{\mathcal E}$. 由**基础知识: 测度限制在代数上是准测度**, $\pi$ 满足准测度条件: $\pi\left(\emptyset\right)=0$, 且对两两不交的 $\left\{E_{n}\right\}\subset\mathcal E$ 且 $\bigcup_{n}E_{n}\in\mathcal E$, 由 $\mu\times\nu$ 的 $\sigma$-可加性 (**定义 5.1.2 (测度)**),
+故 $\pi=\left(\mu\times\nu\right)|_{\mathcal E}$. 由测度限制在代数上是准测度, $\pi$ 满足准测度条件: $\pi\left(\emptyset\right)=0$, 且对两两不交的 $\left\{E_{n}\right\}\subset\mathcal E$ 且 $\bigcup_{n}E_{n}\in\mathcal E$, 由 $\mu\times\nu$ 的 $\sigma$-可加性 (**定义 5.1.2 (测度)**),
 
 $$
 \pi\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\left(\mu\times\nu\right)\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\left(\mu\times\nu\right)\left(E_{n}\right)=\sum_{n=1}^{\infty}\pi\left(E_{n}\right).

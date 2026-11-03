@@ -1,9 +1,5 @@
 # week3
 
-> **Basic Knowledge: Generalized Cantor Set**
-> 
-> Let $\left\{\alpha_{j}\right\}\subset\left(0,1\right)$. Starting from $\left[0,1\right]$, at step $j$ remove the middle $\alpha_{j}$ portion of each remaining closed interval. The resulting intersection $K=\bigcap_{j}K_{j}$ is called a generalized Cantor set. It satisfies $m\left(K\right)=\prod_{j=1}^{\infty}\left(1-\alpha_{j}\right)$, and for any $\beta\in\left(0,1\right)$ one can choose $\left\{\alpha_{j}\right\}$ so that $m\left(K\right)=\beta$; like the ordinary Cantor set, a generalized Cantor set is compact, nowhere dense, closed, and has no isolated points.
-
 > **Definition 4.1.1 (Algebra of Sets)**
 > 
 > Let $X$ be a nonempty set and $\mathcal A\subset\mathcal P\left(X\right)$. $\mathcal A$ is called an algebra of sets on $X$ if: (1) $X\in\mathcal A$; (2) closed under differences: $A,B\in\mathcal A\Rightarrow A\setminus B\in\mathcal A$; (3) closed under finite unions: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
@@ -346,7 +342,7 @@ $$
 
 Thus $m\left(E\right)\le\alpha m\left(E\right)$. Since $m\left(E\right)> 0$, $\alpha\ge1$, contradicting $\alpha< 1$. Hence there exists an open interval $I$ such that $m\left(E\cap I\right)> \alpha m\left(I\right)$. $\blacksquare$
 
-**33.** Use a positive-measure generalized Cantor set (**Basic Knowledge: Generalized Cantor Set**). Let $\left\{I_{n}\right\}$ be an enumeration of all open intervals in $\left[0,1\right]$ with rational endpoints. Inductively choose pairwise disjoint closed intervals $J_{n}\subset I_{n}$ (choosing $J_{n}$ to avoid all previous $J_{k}$) so that every subinterval $I$ contains some $J_{n}$ (since $\left\{I_{n}\right\}$ enumerates rational intervals, every subinterval contains some $I_{n}$, and $J_{n}\subset I_{n}$). Fix $c\in\left(0,1\right)$. Inside each $J_{n}$, take a generalized Cantor set $C_{n}\subset J_{n}$ with $m\left(C_{n}\right)=c\,m\left(J_{n}\right)$ (by the fact that a generalized Cantor set can have measure any $\beta\in\left(0,1\right)$). Since the $J_{n}$ are pairwise disjoint, the $C_{n}$ are pairwise disjoint. Let $A=\bigcup_{n=1}^{\infty}C_{n}$; then $A$ is a countable union of closed sets, hence a Borel set, and $A\subset\left[0,1\right]$.
+**33.** Use a positive-measure generalized Cantor set (Generalized Cantor Set). Let $\left\{I_{n}\right\}$ be an enumeration of all open intervals in $\left[0,1\right]$ with rational endpoints. Inductively choose pairwise disjoint closed intervals $J_{n}\subset I_{n}$ (choosing $J_{n}$ to avoid all previous $J_{k}$) so that every subinterval $I$ contains some $J_{n}$ (since $\left\{I_{n}\right\}$ enumerates rational intervals, every subinterval contains some $I_{n}$, and $J_{n}\subset I_{n}$). Fix $c\in\left(0,1\right)$. Inside each $J_{n}$, take a generalized Cantor set $C_{n}\subset J_{n}$ with $m\left(C_{n}\right)=c\,m\left(J_{n}\right)$ (by the fact that a generalized Cantor set can have measure any $\beta\in\left(0,1\right)$). Since the $J_{n}$ are pairwise disjoint, the $C_{n}$ are pairwise disjoint. Let $A=\bigcup_{n=1}^{\infty}C_{n}$; then $A$ is a countable union of closed sets, hence a Borel set, and $A\subset\left[0,1\right]$.
 
 First prove the lower bound. For any subinterval $I\subset\left[0,1\right]$, there exists $n$ with $J_{n}\subset I_{n}\subset I$, so
 

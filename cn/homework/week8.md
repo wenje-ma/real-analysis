@@ -1,29 +1,5 @@
 # week8
 
-> **基础知识: 一维平移与伸缩的不变性**
-> 
-> 对 $c\in\mathbb R$ 与 $\lambda\ne0$, 勒贝格测度满足 $m\left(E+c\right)=m\left(E\right)$ 与 $m\left(\lambda E\right)=\left|\lambda\right|m\left(E\right)$.
-
-> **基础知识: 可逆线性变换保持可测性与零测集**
-> 
-> 若 $T\in GL\left(n,\mathbb R\right)$, 则 $T\left(E\right)\in\mathcal L^{n}$ 当且仅当 $E\in\mathcal L^{n}$, 且 $T$ 保持零测集.
-
-> **基础知识: 正交变换保持勒贝格测度**
-> 
-> 若 $R\in O\left(n\right)$, 即 $R^{\top}R=I$, 则 $\left|\det R\right|=1$, 且对任意 $E\in\mathcal L^{n}$ 有 $m\left(R\left(E\right)\right)=m\left(E\right)$.
-
-> **基础知识: 伽马函数与贝塔恒等式**
-> 
-> 伽马函数 $\Gamma\left(x\right)=\int_{0}^{\infty}t^{x-1}e^{-t}\mathrm{d}t$ 满足递推 $\Gamma\left(x+1\right)=x\Gamma\left(x\right)$; 贝塔函数满足恒等式 $\frac{\Gamma\left(x\right)\Gamma\left(y\right)}{\Gamma\left(x+y\right)}=\int_{0}^{1}t^{x-1}\left(1-t\right)^{y-1}\mathrm{d}t$ 对 $x,y> 0$.
-
-> **基础知识: 特征函数的连续逼近**
-> 
-> 若 $R\subset\mathbb R^{n}$ 是有界闭矩形, 则对任意 $\varepsilon> 0$, 存在具有紧支撑的连续函数 $g$ 使得 $\int\left|\chi_{R}-g\right|\mathrm{d}m< \varepsilon$.
-
-> **基础知识: 测度在乘积 $\sigma$-代数生成族上的唯一性**
-> 
-> 两个 $\sigma$-有限的测度若在某个生成乘积 $\sigma$-代数的矩形容许族上取值相等, 则在整个乘积 $\sigma$-代数上相等.
-
 > **定理 8.2.9 (控制收敛定理)**
 > 
 > 设 $\left(X,\mathcal F,\mu\right)$ 是测度空间, $\left\{f_{n}\right\}$ 是一列可测函数, 若存在可积函数 $g$ 使 $\left|f_{n}\right|\le g$ 对所有 $n$ 成立, 且 $f_{n}\to f$ 几乎处处, 则 $f$ 可积且 $\int f\,\mathrm{d}\mu=\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu$.
@@ -78,7 +54,7 @@ $$
 
 **简单函数部分.** 由**定理 8.2.16 (可积简单函数在 $L^{1}$ 中稠密)**, 存在可积简单函数 $\varphi=\sum_{j}a_{j}\chi_{E_{j}}$ 使得 $\int\left|f-\varphi\right|< \varepsilon/2$. 对 $a_{j}\ne0$ 的项, 由 $\int a_{j}\chi_{E_{j}}\,\mathrm{d}m=a_{j}m\left(E_{j}\right)< \infty$ 得 $m\left(E_{j}\right)< \infty$ (否则积分发散, 与可积性矛盾). 由**定理 11.1.1 (勒贝格测度的正则性与矩形逼近)** (b), 对每个这样的 $E_{j}$ 存在有限个边为区间的互不相交矩形 $\left\{R_{j,k}\right\}$ 使 $m\left(E_{j}\triangle\bigcup_{k}R_{j,k}\right)$ 任意小. 于是 $\chi_{E_{j}}$ 与 $\chi_{R_{j}}$ (其中 $R_{j}=\bigcup_{k}R_{j,k}$) 在 $L^{1}$ 中任意接近, 取足够小的逼近误差并合并所有 $j$, 得到简单函数 $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ 满足 $\int\left|\varphi-\varphi'\right|< \varepsilon/2$. 故 $\int\left|f-\varphi'\right|\le\int\left|f-\varphi\right|+\int\left|\varphi-\varphi'\right|< \varepsilon$.
 
-**连续函数部分.** 设 $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ 已由上一步得到, 其中每个 $R_{j}$ 是有界闭矩形. 由**基础知识: 特征函数的连续逼近**, 对每个 $R_{j}$ 存在具有紧支撑的连续函数 $g_{j}$ 使 $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ 任意小. 取逼近误差足够小并令 $g=\sum_{j}a_{j}g_{j}$, 则 $g$ 连续且支撑在 $\bigcup_{j}R_{j}$ 中 (有界集), 且 $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|< \varepsilon/2$. 于是 $\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|< \varepsilon$, 且 $g$ 在有界集外为零. $\blacksquare$
+**连续函数部分.** 设 $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ 已由上一步得到, 其中每个 $R_{j}$ 是有界闭矩形. 由特征函数的连续逼近, 对每个 $R_{j}$ 存在具有紧支撑的连续函数 $g_{j}$ 使 $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ 任意小. 取逼近误差足够小并令 $g=\sum_{j}a_{j}g_{j}$, 则 $g$ 连续且支撑在 $\bigcup_{j}R_{j}$ 中 (有界集), 且 $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|< \varepsilon/2$. 于是 $\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|< \varepsilon$, 且 $g$ 在有界集外为零. $\blacksquare$
 
 ---
 
@@ -94,9 +70,9 @@ $$
 
 先证三种初等变换的情形, 再组合.
 
-**伸缩变换** $T_{1}\left(x_{1},\dots,x_{j},\dots,x_{n}\right)=\left(x_{1},\dots,cx_{j},\dots,x_{n}\right)$ ($c\ne0$). 由**基础知识: 一维平移与伸缩的不变性** 并结合乘积结构, 逐坐标伸缩保持其余坐标不动, 有 $m\left(T_{1}\left(E\right)\right)=\left|c\right|m\left(E\right)$ 且 $\int f\circ T_{1}\left(x\right)\mathrm{d}x=\frac{1}{\left|c\right|}\int f\left(x\right)\mathrm{d}x$, 即 $\int f\left(x\right)\mathrm{d}x=\left|\det T_{1}\right|\int f\circ T_{1}\left(x\right)\mathrm{d}x$.
+**伸缩变换** $T_{1}\left(x_{1},\dots,x_{j},\dots,x_{n}\right)=\left(x_{1},\dots,cx_{j},\dots,x_{n}\right)$ ($c\ne0$). 由一维平移与伸缩的不变性 并结合乘积结构, 逐坐标伸缩保持其余坐标不动, 有 $m\left(T_{1}\left(E\right)\right)=\left|c\right|m\left(E\right)$ 且 $\int f\circ T_{1}\left(x\right)\mathrm{d}x=\frac{1}{\left|c\right|}\int f\left(x\right)\mathrm{d}x$, 即 $\int f\left(x\right)\mathrm{d}x=\left|\det T_{1}\right|\int f\circ T_{1}\left(x\right)\mathrm{d}x$.
 
-**剪切变换** $T_{2}\left(x_{1},\dots,x_{j},\dots,x_{n}\right)=\left(x_{1},\dots,x_{j}+cx_{k},\dots,x_{n}\right)$ ($k\ne j$). 由**基础知识: 一维平移与伸缩的不变性** 逐切片应用, $m\left(T_{2}\left(E\right)\right)=m\left(E\right)$ 且 $\int f\circ T_{2}\left(x\right)\mathrm{d}x=\int f\left(x\right)\mathrm{d}x$. 因 $\det T_{2}=1$, 公式成立.
+**剪切变换** $T_{2}\left(x_{1},\dots,x_{j},\dots,x_{n}\right)=\left(x_{1},\dots,x_{j}+cx_{k},\dots,x_{n}\right)$ ($k\ne j$). 由一维平移与伸缩的不变性 逐切片应用, $m\left(T_{2}\left(E\right)\right)=m\left(E\right)$ 且 $\int f\circ T_{2}\left(x\right)\mathrm{d}x=\int f\left(x\right)\mathrm{d}x$. 因 $\det T_{2}=1$, 公式成立.
 
 **交换变换** $T_{3}$ 交换两个坐标, $\det T_{3}=-1$. 由 $m$ 作为乘积测度的对称性, $m\left(T_{3}\left(E\right)\right)=m\left(E\right)$ 且 $\int f\circ T_{3}\left(x\right)\mathrm{d}x=\int f\left(x\right)\mathrm{d}x$, 而 $\left|\det T_{3}\right|=1$, 公式成立.
 
@@ -106,7 +82,7 @@ $$
 \int f\left(x\right)\mathrm{d}x=\left|\det T_{1}\right|\int f\circ T_{1}\left(x\right)\mathrm{d}x=\cdots=\left|\det T\right|\int f\circ T\left(x\right)\mathrm{d}x,
 $$
 
-此即 (a). 可测性: $T$ 连续, 由**基础知识: 可逆线性变换保持可测性与零测集** 得 $f\circ T$ 可测且 $T\left(E\right)\in\mathcal L^{n}$.
+此即 (a). 可测性: $T$ 连续, 由可逆线性变换保持可测性与零测集 得 $f\circ T$ 可测且 $T\left(E\right)\in\mathcal L^{n}$.
 
 **证 (b).** 在 (a) 中取 $f=\chi_{T\left(E\right)}$, 则
 
@@ -234,7 +210,7 @@ $$
 \int_{t}^{x}\left(x-s\right)^{\alpha-1}\left(s-t\right)^{\beta-1}\mathrm{d}s=\left(x-t\right)^{\alpha+\beta-1}\int_{0}^{1}\left(1-u\right)^{\alpha-1}u^{\beta-1}\mathrm{d}u.
 $$
 
-由**基础知识: 伽马函数与贝塔恒等式**, $\int_{0}^{1}\left(1-u\right)^{\alpha-1}u^{\beta-1}\mathrm{d}u=\frac{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}{\Gamma\left(\alpha+\beta\right)}$. 代入得 $I_{\alpha}\left(I_{\beta}f\right)\left(x\right)=\frac{1}{\Gamma\left(\alpha+\beta\right)}\int_{0}^{x}\left(x-t\right)^{\alpha+\beta-1}f\left(t\right)\mathrm{d}t=I_{\alpha+\beta}f\left(x\right)$.
+由伽马函数与贝塔恒等式, $\int_{0}^{1}\left(1-u\right)^{\alpha-1}u^{\beta-1}\mathrm{d}u=\frac{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}{\Gamma\left(\alpha+\beta\right)}$. 代入得 $I_{\alpha}\left(I_{\beta}f\right)\left(x\right)=\frac{1}{\Gamma\left(\alpha+\beta\right)}\int_{0}^{x}\left(x-t\right)^{\alpha+\beta-1}f\left(t\right)\mathrm{d}t=I_{\alpha+\beta}f\left(x\right)$.
 
 **(b).** 先看 $\alpha=1$: 因 $\Gamma\left(1\right)=1$, $I_{1}f\left(x\right)=\int_{0}^{x}f\left(t\right)\mathrm{d}t$, 由微积分基本定理 $\frac{\mathrm{d}}{\mathrm{d}x}I_{1}f=f$. 由 (a), 迭代得 $I_{n}f=\underbrace{I_{1}\circ\cdots\circ I_{1}}_{n\text{ 次}}f$, 故 $\frac{\mathrm{d}^{n}}{\mathrm{d}x^{n}}I_{n}f=f$. 又因 $I_{\alpha}f$ 的积分下限为 $0$, 对 $k< n$ 有 $\left(\frac{\mathrm{d}}{\mathrm{d}x}\right)^{k}I_{n}f$ 在 $0$ 处取值为 $0$. 故 $I_{n}f$ 是 $f$ 的一个 $n$ 阶反导数. $\blacksquare$
 
@@ -246,7 +222,7 @@ $S^{n-1}$ 上的测度 $\sigma$ 在旋转下不变.
 
 ### 解答 7
 
-设 $R\in O\left(n\right)$, 即 $R^{\top}R=I$, 则 $\left|\det R\right|=1$. 由**基础知识: 正交变换保持勒贝格测度**, $R$ 在 $\mathbb R^{n}$ 上保持 $m$. 由于 $R$ 保持范数 $\left|Rx\right|=\left|x\right|$, 它在球面坐标分解 $\Phi\left(x\right)=\left(r,x'\right)$ 下作用于球面部分: 存在球面 $S^{n-1}$ 上的旋转 $\rho$ 使 $R\left(rx'\right)=r\rho\left(x'\right)$. 记 $m^{*}$ 为极坐标诱导测度 ($m^{*}=\rho\times\sigma$ 由**定理 11.4.1 (极坐标下的积分公式)**), 对博雷尔集 $A\subset\left(0,\infty\right)\times S^{n-1}$,
+设 $R\in O\left(n\right)$, 即 $R^{\top}R=I$, 则 $\left|\det R\right|=1$. 由正交变换保持勒贝格测度, $R$ 在 $\mathbb R^{n}$ 上保持 $m$. 由于 $R$ 保持范数 $\left|Rx\right|=\left|x\right|$, 它在球面坐标分解 $\Phi\left(x\right)=\left(r,x'\right)$ 下作用于球面部分: 存在球面 $S^{n-1}$ 上的旋转 $\rho$ 使 $R\left(rx'\right)=r\rho\left(x'\right)$. 记 $m^{*}$ 为极坐标诱导测度 ($m^{*}=\rho\times\sigma$ 由**定理 11.4.1 (极坐标下的积分公式)**), 对博雷尔集 $A\subset\left(0,\infty\right)\times S^{n-1}$,
 
 $$
 m^{*}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)=m\left(\Phi^{-1}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)\right)=m\left(R\Phi^{-1}\left(A\right)\right)=m\left(\Phi^{-1}\left(A\right)\right)=m^{*}\left(A\right),
@@ -260,7 +236,7 @@ $$
 \left(\rho\times\sigma_{R}\right)\left(\left(a,b\right]\times E\right)=\int_{a}^{b}r^{n-1}\mathrm{d}r\cdot\sigma_{R}\left(E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right).
 $$
 
-由 $m^{*}=\rho\times\sigma$ (**定理 11.4.1 (极坐标下的积分公式)**), $\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times R^{-1}E\right)$. 又由 $m^{*}$ 的旋转不变性, $m^{*}\left(\left(a,b\right]\times R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(E\right)$. 故在矩形上 $\rho\times\sigma_{R}=\rho\times\sigma$. 由**基础知识: 测度在乘积 $\sigma$-代数生成族上的唯一性**, $\rho\times\sigma_{R}=\rho\times\sigma$ 在 $\left(0,\infty\right)\times S^{n-1}$ 上成立.
+由 $m^{*}=\rho\times\sigma$ (**定理 11.4.1 (极坐标下的积分公式)**), $\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times R^{-1}E\right)$. 又由 $m^{*}$ 的旋转不变性, $m^{*}\left(\left(a,b\right]\times R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(E\right)$. 故在矩形上 $\rho\times\sigma_{R}=\rho\times\sigma$. 由测度在乘积 $\sigma$-代数生成族上的唯一性, $\rho\times\sigma_{R}=\rho\times\sigma$ 在 $\left(0,\infty\right)\times S^{n-1}$ 上成立.
 
 最后由**定理 11.4.1 (极坐标下的积分公式)** 的唯一性 (使 $m^{*}=\rho\times\sigma$ 的测度 $\sigma$ 唯一), 从 $\rho\times\sigma_{R}=m^{*}=\rho\times\sigma$ 得 $\sigma_{R}=\sigma$, 即 $\sigma\left(R^{-1}E\right)=\sigma\left(E\right)$ 对一切博雷尔 $E$ 成立. 故 $\sigma$ 旋转不变. $\blacksquare$
 
