@@ -12,8 +12,6 @@
 > 
 > 若 $f\in BV\left(\left[a,b\right]\right)$, 则: (1) $f$ 的不连续点至多可数; (2) 所有不连续点都是第一类间断点.
 
----
-
 ## 1
 
 构造一个 $\mathbb R$ 上的递增函数, 使其间断点集恰为 $\mathbb Q$.
@@ -27,8 +25,6 @@
 **每个无理点是连续点.** 设 $x_{0}\in\mathbb R\setminus\mathbb Q$. 给定 $\varepsilon> 0$, 由级数 取 $N$ 使 $\sum_{n> N}2^{-n}< \varepsilon$. 因 $x_{0}$ 无理, 取 $\delta> 0$ 小到开区间 $\left(x_{0}-\delta,x_{0}+\delta\right)$ 内不含 $q_{1},\dots,q_{N}$ (有限个点, 可分离). 则当 $\left|x-x_{0}\right|< \delta$ 时, 区间 $\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right]$ 内至多含 $q_{N+1},q_{N+2},\dots$, 故 $\left|F\left(x\right)-F\left(x_{0}\right)\right|=\sum_{x_{0}< q_{n}\le x\text{ 或 }x< q_{n}\le x_{0}}2^{-n}\le\sum_{n> N}2^{-n}< \varepsilon$. 故 $F$ 在 $x_{0}$ 连续.
 
 综上, $F$ 的间断点集恰为 $\mathbb Q$. 由**定理 14.0.7 (有界变差函数的基本性质)** (4) 及**定理 14.0.10 (有界变差函数的间断点性质)**, $F$ 为递增有界函数从而是有界变差函数, 其间断点至多可数且均为第一类, 此处恰与 $\mathbb Q$ 相符. $\blacksquare$
-
----
 
 ## 2
 
@@ -57,8 +53,6 @@ $$
 $$
 
 由级数, 调和级数 $\sum_{k}\frac{1}{k}$ 发散, 故上式随 $N\to\infty$ 趋于 $+\infty$. 于是 $G$ 在 $\left[0,1\right]\subset\left[-1,1\right]$ 上的全变差已为 $+\infty$, 从而 $V_{-1}^{1}\left(G\right)=+\infty$, 即 $G\notin BV\left(\left[-1,1\right]\right)$. $\blacksquare$
-
----
 
 ## 3
 

@@ -44,8 +44,6 @@ $$
 \int_{\mathbb R^{n}}f\left(x\right)\mathrm{d}x=\int_{0}^{\infty}\int_{S^{n-1}}f\left(rx'\right)r^{n-1}\mathrm{d}\sigma\left(x'\right)\mathrm{d}r.
 $$
 
----
-
 ## 1
 
 If $f\in L^{1}\left(m\right)$ and $\varepsilon> 0$, then there is a simple function $\varphi=\sum a_{j}\chi_{R_{j}}$, each $R_{j}$ a product of intervals, with $\int\left|f-\varphi\right|< \varepsilon$; and there is a continuous function $g$ vanishing outside a bounded set with $\int\left|f-g\right|< \varepsilon$.
@@ -55,8 +53,6 @@ If $f\in L^{1}\left(m\right)$ and $\varepsilon> 0$, then there is a simple funct
 **Simple-function part.** By **Theorem 8.2.16 (Integrable Simple Functions Are Dense in $L^{1}$)**, there is an integrable simple function $\varphi=\sum_{j}a_{j}\chi_{E_{j}}$ with $\int\left|f-\varphi\right|< \varepsilon/2$. For the terms with $a_{j}\ne0$, since $\int a_{j}\chi_{E_{j}}\,\mathrm{d}m=a_{j}m\left(E_{j}\right)< \infty$, we have $m\left(E_{j}\right)< \infty$ (otherwise the integral diverges, contradicting integrability). By **Theorem 11.1.1 (Regularity of Lebesgue Measure and Rectangle Approximation)** (b), for each such $E_{j}$ there are finitely many pairwise-disjoint rectangles $\left\{R_{j,k}\right\}$ with interval sides such that $m\left(E_{j}\triangle\bigcup_{k}R_{j,k}\right)$ is arbitrarily small. Thus $\chi_{E_{j}}$ and $\chi_{R_{j}}$ (with $R_{j}=\bigcup_{k}R_{j,k}$) are arbitrarily close in $L^{1}$; taking the approximation errors small enough and combining over all $j$, we obtain a simple function $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ with $\int\left|\varphi-\varphi'\right|< \varepsilon/2$. Hence $\int\left|f-\varphi'\right|\le\int\left|f-\varphi\right|+\int\left|\varphi-\varphi'\right|< \varepsilon$.
 
 **Continuous-function part.** Let $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ be as obtained above, each $R_{j}$ a bounded closed rectangle. By Continuous Approximation of Characteristic Functions, for each $R_{j}$ there is a continuous compactly supported $g_{j}$ with $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ arbitrarily small. Taking the errors small enough and setting $g=\sum_{j}a_{j}g_{j}$, $g$ is continuous, supported in $\bigcup_{j}R_{j}$ (bounded), and $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|< \varepsilon/2$. Hence $\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|< \varepsilon$, and $g$ vanishes outside a bounded set. $\blacksquare$
-
----
 
 ## 2
 
@@ -92,8 +88,6 @@ $$
 
 $T\left(E\right)\in\mathcal L^{n}$ follows from measurability. $\blacksquare$
 
----
-
 ## 3
 
 Let $E=\left[0,1\right]\times\left[0,1\right]$. Study the existence and equality of $\int_{E}f\,\mathrm{d}m^{2}$, $\int_{0}^{1}\int_{0}^{1}f\left(x,y\right)\mathrm{d}x\,\mathrm{d}y$, and $\int_{0}^{1}\int_{0}^{1}f\left(x,y\right)\mathrm{d}y\,\mathrm{d}x$, for the following $f$.
@@ -128,8 +122,6 @@ First integrating in $y$: fix $x$, $\int_{0}^{x}\left(x-y\right)^{-3}\mathrm{d}y
 
 Conclusion: $\int_{E}f\,\mathrm{d}m^{2}$ does not exist; $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=+\infty$ while $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=-\infty$. This is the classic counterexample where Fubini fails: without absolute integrability the order of integration cannot be exchanged. $\blacksquare$
 
----
-
 ## 4
 
 If $f$ is Lebesgue integrable on $\left(0,a\right)$ and $g\left(x\right)=\int_{x}^{a}t^{-1}f\left(t\right)\mathrm{d}t$, then $g$ is integrable on $\left(0,a\right)$ and $\int_{0}^{a}g\left(x\right)\mathrm{d}x=\int_{0}^{a}f\left(x\right)\mathrm{d}x$.
@@ -149,8 +141,6 @@ $$
 $$
 
 $\blacksquare$
-
----
 
 ## 5
 
@@ -173,8 +163,6 @@ $$
 For fixed $y$, integrating by parts twice gives $\int_{0}^{b}e^{-xy}\sin x\,\mathrm{d}x=\frac{1-e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}$. Hence $\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\int_{0}^{\infty}\frac{1-e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}\mathrm{d}y$.
 
 **Taking $b\to\infty$.** Split into $\frac{1}{1+y^{2}}-\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}$. The first integrates to $\int_{0}^{\infty}\frac{1}{1+y^{2}}\mathrm{d}y=\frac{\pi}{2}$. For the second, when $b\ge1$, $\left|\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}\right|\le\frac{e^{-y}\left(y+1\right)}{1+y^{2}}=:g\left(y\right)$, and $\int_{0}^{\infty}g\left(y\right)\mathrm{d}y< \infty$ (dominated by the exponential decay $e^{-y}$). By **Theorem 8.2.9 (Dominated Convergence Theorem)** (applied along any sequence $b_{n}\to\infty$), this term tends to $\int_{0}^{\infty}0\,\mathrm{d}y=0$. Hence $\lim_{b\to\infty}\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\frac{\pi}{2}$. $\blacksquare$
-
----
 
 ## 6
 
@@ -214,8 +202,6 @@ By Gamma Function and the Beta Identity, $\int_{0}^{1}\left(1-u\right)^{\alpha-1
 
 **(b).** For $\alpha=1$, since $\Gamma\left(1\right)=1$, $I_{1}f\left(x\right)=\int_{0}^{x}f\left(t\right)\mathrm{d}t$, and by the fundamental theorem of calculus $\frac{\mathrm{d}}{\mathrm{d}x}I_{1}f=f$. By (a), iterating gives $I_{n}f=\underbrace{I_{1}\circ\cdots\circ I_{1}}_{n\text{ times}}f$, so $\frac{\mathrm{d}^{n}}{\mathrm{d}x^{n}}I_{n}f=f$. Also, since the lower limit of $I_{\alpha}f$ is $0$, for $k< n$, $\left(\frac{\mathrm{d}}{\mathrm{d}x}\right)^{k}I_{n}f$ takes the value $0$ at $0$. Thus $I_{n}f$ is an $n$-th antiderivative of $f$. $\blacksquare$
 
----
-
 ## 7
 
 The measure $\sigma$ on $S^{n-1}$ is rotation invariant.
@@ -239,8 +225,6 @@ $$
 By $m^{*}=\rho\times\sigma$ (**Theorem 11.4.1 (Integration in Polar Coordinates)**), $\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times R^{-1}E\right)$. By rotation invariance of $m^{*}$, $m^{*}\left(\left(a,b\right]\times R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(E\right)$. Hence on rectangles $\rho\times\sigma_{R}=\rho\times\sigma$. By Uniqueness of Measures on a Generating Rectangle Family, $\rho\times\sigma_{R}=\rho\times\sigma$ on $\left(0,\infty\right)\times S^{n-1}$.
 
 Finally, by the uniqueness in **Theorem 11.4.1 (Integration in Polar Coordinates)** (the measure $\sigma$ with $m^{*}=\rho\times\sigma$ is unique), from $\rho\times\sigma_{R}=m^{*}=\rho\times\sigma$ we get $\sigma_{R}=\sigma$, i.e. $\sigma\left(R^{-1}E\right)=\sigma\left(E\right)$ for all Borel $E$. Thus $\sigma$ is rotation invariant. $\blacksquare$
-
----
 
 ## 8
 

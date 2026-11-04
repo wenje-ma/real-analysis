@@ -36,8 +36,6 @@
 > 
 > 设 $A\subset X$, 则 $\chi_{A}:X\to\mathbb R$ 可测当且仅当 $A\in\mathcal F$.
 
----
-
 ## 1
 
 设 $\left(X,\mathcal M\right)$ 是可测空间, $\left\{f_{n}\right\}$ 是一列可测函数. 证明: 若 $\left\{f_{n}\right\}$ 是 $X$ 上的一列可测函数, 则 $\left\{x:\lim_{n\to\infty}f_{n}\left(x\right)\text{ 存在}\right\}$ 是可测集.
@@ -58,8 +56,6 @@ $$
 
 由于 $\mathcal M$ 对可数交与可数并封闭 (**定义 4.1.3 ($\sigma$-代数)**), 且 $\bigcap_{m,n\ge N}E_{k,m.n}$ 是可数交, 故上述集合可测. $\blacksquare$
 
----
-
 ## 2
 
 证明: $X$ 上不可数个可测实值函数的上确界可以不是可测函数 (除非 $\sigma$-代数 $\mathcal M$ 十分特殊).
@@ -73,8 +69,6 @@ $$
 $$
 
 即 $\sup_{a\in A}f_{a}=\chi_{A}$. 由**例 7.3.5 (示性函数)**, $\chi_{A}$ 可测当且仅当 $A\in\mathcal L$, 与 $A$ 不可测矛盾. 故不可数个可测实值函数的上确界可以不是可测函数. $\blacksquare$
-
----
 
 ## 3
 

@@ -24,8 +24,6 @@
 > 
 > The following strict inclusions hold: $C^{1}\left(\left[a,b\right]\right)\subset$ Lipschitz $\subset AC\left(\left[a,b\right]\right)\subset BV\left(\left[a,b\right]\right)\subset$ bounded functions.
 
----
-
 ## 1
 
 Let $f:\left[a,b\right]\to\mathbb R$, and view the graph of $f$ as a subset of $\mathbb C$, namely $\left\{t+if\left(t\right):t\in\left[a,b\right]\right\}$. The length $L$ of the graph is defined as the supremum of the lengths of all inscribed polygons. (An inscribed polygon is the union of segments joining $t_{j-1}+if\left(t_{j-1}\right)$ to $t_{j}+if\left(t_{j}\right)$ for $1\le j\le n$, where $a=t_{0}< \cdots< t_{n}=b$.)
@@ -52,8 +50,6 @@ $$
 
 $\blacksquare$
 
----
-
 ## 2
 
 If $\left\{F_{j}\right\}$ is a sequence of nonnegative increasing functions on $\left[a,b\right]$ and $F:=\sum_{j}F_{j}$ satisfies $F\left(x\right)< \infty$ for all $x\in\left[a,b\right]$, then $F'\left(x\right)=\sum_{j}F_{j}'\left(x\right)$ for almost every $x\in\left[a,b\right]$.
@@ -67,8 +63,6 @@ $$
 $$
 
 for $m$-a.e. $x$. Thus $F'\left(x\right)=\sum_{j}F_{j}'\left(x\right)$ a.e. $\blacksquare$
-
----
 
 ## 3
 

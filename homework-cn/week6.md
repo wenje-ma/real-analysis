@@ -50,8 +50,6 @@ $$
 > 
 > 设 $\mu\left(X\right)< \infty$ 且 $f_{n}\to f$ 几乎处处. 则对任意 $\delta> 0$ 存在可测集 $E\subset X$ 使得 $\mu\left(E\right)< \delta$, 且在 $X\setminus E$ 上 $f_{n}$ 一致收敛到 $f$. 特别地, 在有限测度空间中, 几乎处处收敛蕴含依测度收敛.
 
----
-
 ## 1
 
 证明: $f_{n}$ 依测度收敛到 $f$ 当且仅当对任意子列 $\left\{f_{n_{k}}\right\}$ 存在子子列 $\left\{f_{n'_{k}}\right\}$ 使得 $f_{n'_{k}}\to f$ 几乎处处. 特别地, 若 $\phi:\mathbb R\to\mathbb R$ 是连续函数, 则 $\phi\left(f_{n}\right)\xrightarrow{\mu}\phi\left(f\right)$.
@@ -75,8 +73,6 @@ $$
 这与假设 (任意子列存在几乎处处收敛子子列) 矛盾. 故 $f_{n}\xrightarrow{\mu}f$.
 
 最后设 $\phi:\mathbb R\to\mathbb R$ 连续. 对任意子列 $\left\{\phi\left(f_{n_{k}}\right)\right\}$, 由 $f_{n}\xrightarrow{\mu}f$ 和已证的 $\left(\Rightarrow\right)$, 子列 $\left\{f_{n_{k}}\right\}$ 存在子子列 $f_{n'_{k}}\to f$ 几乎处处; $\phi$ 连续推出 $\phi\left(f_{n'_{k}}\right)\to\phi\left(f\right)$ 几乎处处. 故 $\left\{\phi\left(f_{n}\right)\right\}$ 的任意子列存在几乎处处收敛子子列, 由已证的 $\left(\Leftarrow\right)$, $\phi\left(f_{n}\right)\xrightarrow{\mu}\phi\left(f\right)$. $\blacksquare$
-
----
 
 ## 2
 
@@ -120,8 +116,6 @@ $$
 
 由**定义 9.1.3 (依测度收敛)**, $f_{n}\xrightarrow{\mu}f$. $\blacksquare$
 
----
-
 ## 3
 
 若 $\mu$ 是 $\sigma$-有限的且 $f_{n}\to f$ 几乎处处, 则存在可测集 $E_{1},E_{2},\dots\subset X$ 使得 $\mu\left(\left(\bigcup_{i=1}^{\infty}E_{i}\right)^{c}\right)=0$, 且 $f_{n}\to f$ 在每个 $E_{i}$ 上一致收敛.
@@ -137,8 +131,6 @@ $$
 $$
 
 因 $X=\bigcup_{m}X_{m}$. 故 $\mu\left(\left(\bigcup_{m,j}E_{mj}\right)^{c}\right)=0$. 把可数族 $\left\{E_{mj}:m,j\in\mathbb N\right\}$ 重排为 $E_{1},E_{2},\dots$, 则 $\mu\left(\left(\bigcup_{i}E_{i}\right)^{c}\right)=0$ 且 $f_{n}\to f$ 在每个 $E_{i}$ 上一致收敛. $\blacksquare$
-
----
 
 ## 4
 
@@ -161,8 +153,6 @@ $$
 (b) 固定 $\eta> 0$ 作为一致收敛的误差. 对每个 $\delta> 0$, 记 $F_{\delta}:=\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta\text{ 对所有 }y< \delta\right\}$, 由 (a) 可测, 且随 $\delta$ 减小而增大. 因 $f\left(x,\cdot\right)$ 在 $0$ 处连续, 对每个 $x$ 有 $\lim_{y\to0}f\left(x,y\right)=f\left(x,0\right)$, 故存在 $\delta> 0$ 使 $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ 对所有 $y< \delta$, 即 $x\in F_{\delta}$. 故 $\bigcup_{\delta> 0}F_{\delta}=X$.
 
 由测度的下连续性, 因 $\mu\left(X\right)< \infty$ 且 $F_{\delta}\uparrow X$, 有 $\mu\left(X\setminus F_{\delta}\right)\to0$. 给定 $\varepsilon> 0$, 取 $\delta> 0$ 使 $\mu\left(X\setminus F_{\delta}\right)< \varepsilon$, 令 $E:=X\setminus F_{\delta}$, 则 $\mu\left(E\right)< \varepsilon$, 且在 $E^{c}=F_{\delta}$ 上 $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ 对所有 $y< \delta$, 即 $f\left(\cdot,y\right)\to f\left(\cdot,0\right)$ 在 $E^{c}$ 上一致收敛 ($y\to0$). $\blacksquare$
-
----
 
 ## 5
 

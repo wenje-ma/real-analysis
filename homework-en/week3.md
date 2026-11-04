@@ -96,8 +96,6 @@ $$
 > 
 > A point $x\in\left[0,1\right]$ belongs to the Cantor set $C$ iff its ternary expansion $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ contains no digit $1$ (i.e. $a_{k}\in\left\{0,2\right\}$).
 
----
-
 ## 1
 
 Prove the uniqueness in part (3) of **Theorem 6.3.3 (Carathéodory's Theorem)**, and prove exercises 17 and 24.
@@ -200,8 +198,6 @@ $$
 
 Hence $\nu$ is a measure. $\blacksquare$
 
----
-
 ## 2
 
 Let $-\infty\le a< b< \infty$. All half-open intervals $\left(a,b\right]$, together with $\left(a,\infty\right)$ and $\varnothing$, are called h-intervals. Prove that the family $\mathcal E$ of finite disjoint unions of h-intervals is an algebra (**Definition 6.4.1 (h-Interval)**).
@@ -229,8 +225,6 @@ since each $I_{i}^{c}\in\mathcal E$ and $\mathcal E$ is closed under finite inte
 Finally, $X\in\mathcal E$: since $\mathbb R=\left(-\infty,\infty\right)$ is an h-interval of type $\left(a,\infty\right)$ ($a=-\infty$), $\mathbb R\in\mathcal E$. For $A,B\in\mathcal E$, by De Morgan's laws $A\cup B=\left(A^{c}\cap B^{c}\right)^{c}\in\mathcal E$. Thus $\mathcal E$ is closed under finite unions.
 
 Therefore $\mathcal E$ is an algebra. $\blacksquare$
-
----
 
 ## 3
 
@@ -274,8 +268,6 @@ This proves (1).
 
 (2) For $r\ne0$, the dilation $\delta_{r}:t\mapsto rt$ maps an h-interval $\left(a,b\right]$ to $\left(ra,rb\right]$ ($r> 0$) or $\left(rb,ra\right]$ ($r< 0$), still an h-interval, and the length becomes $\left|r\right|\left(b-a\right)$, i.e. $\mu_{0}\left(rI\right)=\left|r\right|\mu_{0}\left(I\right)$. By the same argument as in (1), $m^{*}\left(rA\right)=\left|r\right|m^{*}\left(A\right)$, and $E$ measurable implies $rE$ measurable (using **Definition 6.3.1 (Carathéodory Condition)** and dilation). Hence $m\left(rE\right)=\left|r\right|m\left(E\right)$. When $r=0$, $0\cdot E$ is empty or $\left\{0\right\}$, and the measure is $0=\left|0\right|m\left(E\right)$. This proves (2). $\blacksquare$
 
----
-
 ## 4
 
 Let the Cantor set $C=\bigcap_{n=0}^{\infty}C_{n}$ (**Definition 6.5.1 (Recursive Construction of the Cantor Set)**). Prove that $C$ has the following properties:
@@ -315,8 +307,6 @@ $$
 $$
 
 Thus the $\varepsilon$-neighborhood of $x$ contains a point of $C$ different from $x$, so $x$ is not isolated. Hence $C$ is a perfect set. $\blacksquare$
-
----
 
 ## 5
 

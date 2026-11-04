@@ -12,8 +12,6 @@
 > 
 > If $f\in BV\left(\left[a,b\right]\right)$, then: (1) $f$ has at most countably many discontinuities; (2) all discontinuities are jump discontinuities.
 
----
-
 ## 1
 
 Construct an increasing function on $\mathbb R$ whose set of discontinuities is exactly $\mathbb Q$.
@@ -27,8 +25,6 @@ Enumerate the rationals $\mathbb Q=\left\{q_{1},q_{2},\dots\right\}$ and define 
 **Every irrational point is a continuity point.** Let $x_{0}\in\mathbb R\setminus\mathbb Q$. Given $\varepsilon> 0$, by Series choose $N$ with $\sum_{n> N}2^{-n}< \varepsilon$. Since $x_{0}$ is irrational, choose $\delta> 0$ small enough that $\left(x_{0}-\delta,x_{0}+\delta\right)$ contains none of $q_{1},\dots,q_{N}$ (finitely many points, separable). Then whenever $\left|x-x_{0}\right|< \delta$, the interval $\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right]$ contains at most $q_{N+1},q_{N+2},\dots$, so $\left|F\left(x\right)-F\left(x_{0}\right)\right|=\sum_{x_{0}< q_{n}\le x\text{ or }x< q_{n}\le x_{0}}2^{-n}\le\sum_{n> N}2^{-n}< \varepsilon$. Hence $F$ is continuous at $x_{0}$.
 
 Thus the discontinuity set of $F$ is exactly $\mathbb Q$. By **Theorem 14.0.7 (Basic Properties of Bounded-Variation Functions)** (4) and **Theorem 14.0.10 (Discontinuity Properties of Bounded-Variation Functions)**, $F$ is an increasing bounded function, hence of bounded variation, with at most countably many jump discontinuities, which here are exactly $\mathbb Q$. $\blacksquare$
-
----
 
 ## 2
 
@@ -57,8 +53,6 @@ $$
 $$
 
 By Series, the harmonic series $\sum_{k}\frac{1}{k}$ diverges, so the above tends to $+\infty$ as $N\to\infty$. Thus the total variation of $G$ on $\left[0,1\right]\subset\left[-1,1\right]$ is already $+\infty$, so $V_{-1}^{1}\left(G\right)=+\infty$, i.e. $G\notin BV\left(\left[-1,1\right]\right)$. $\blacksquare$
-
----
 
 ## 3
 

@@ -36,8 +36,6 @@
 > 
 > Let $A\subset X$. Then $\chi_{A}:X\to\mathbb R$ is measurable iff $A\in\mathcal F$.
 
----
-
 ## 1
 
 Let $\left(X,\mathcal M\right)$ be a measurable space and $\left\{f_{n}\right\}$ a sequence of measurable functions. Prove that if $\left\{f_{n}\right\}$ is a sequence of measurable functions on $X$, then $\left\{x:\lim_{n\to\infty}f_{n}\left(x\right)\text{ exists}\right\}$ is measurable.
@@ -58,8 +56,6 @@ $$
 
 Since $\mathcal M$ is closed under countable intersections and countable unions (**Definition 4.1.3 ($\sigma$-Algebra)**), and $\bigcap_{m,n\ge N}E_{k,m,n}$ is a countable intersection, the above set is measurable. $\blacksquare$
 
----
-
 ## 2
 
 Prove that the supremum of uncountably many measurable real-valued functions on $X$ need not be measurable (unless the $\sigma$-algebra $\mathcal M$ is very special).
@@ -73,8 +69,6 @@ $$
 $$
 
 i.e. $\sup_{a\in A}f_{a}=\chi_{A}$. By **Example 7.3.5 (Indicator Function)**, $\chi_{A}$ is measurable iff $A\in\mathcal L$, contradicting the non-measurability of $A$. Thus the supremum of uncountably many measurable real-valued functions need not be measurable. $\blacksquare$
-
----
 
 ## 3
 

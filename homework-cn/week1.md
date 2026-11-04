@@ -86,8 +86,6 @@ $$
 
 生成的 $\sigma$-代数.
 
----
-
 ## 1
 
 设 $\mathcal A\subset\mathcal P\left(X\right)$, 证明**命题 4.1.2 (代数的等价定义)**: $\mathcal A$ 是代数, 当且仅当 $\mathcal A$ 满足
@@ -120,8 +118,6 @@ $$
 
 两方向结合, 命题得证. $\blacksquare$
 
----
-
 ## 2
 
 证明: $\mathcal F$ 为 $\sigma$-代数, 当且仅当 $\mathcal F$ 为代数, 且对可数不交并封闭.
@@ -150,8 +146,6 @@ $$
 
 故 $\mathcal F$ 对可数并封闭, 是 $\sigma$-代数. $\blacksquare$
 
----
-
 ## 3
 
 设 $\mathcal E\subset\mathcal P\left(X\right)$, 证明由 $\mathcal E$ 生成的代数
@@ -176,8 +170,6 @@ $$
 
 故 $\alpha\left(\mathcal E\right)$ 是含 $\mathcal E$ 的代数. 又由定义其为所有含 $\mathcal E$ 的代数的交集, 故它是包含 $\mathcal E$ 的最小代数. $\blacksquare$
 
----
-
 ## 4
 
 设 $\mathcal E\subset\mathcal P\left(X\right)$, 证明由 $\mathcal E$ 生成的 $\sigma$-代数
@@ -201,8 +193,6 @@ $$
 (3) **可数并封闭**: 设 $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\sigma\left(\mathcal E\right)$, 则对每个 $\mathcal F\in\mathscr C'$, $\left\{A_{n}\right\}\subset\mathcal F$, 由 $\mathcal F$ 对可数并封闭得 $\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$, 故 $\bigcup_{n=1}^{\infty}A_{n}\in\sigma\left(\mathcal E\right)$.
 
 故 $\sigma\left(\mathcal E\right)$ 是含 $\mathcal E$ 的 $\sigma$-代数, 且是最小的 (所有含 $\mathcal E$ 的 $\sigma$-代数之交). $\blacksquare$
-
----
 
 ## 5
 
@@ -244,8 +234,6 @@ $$
 
 综上五族生成的 $\sigma$-代数都等于 $\sigma\left(\tau\right)=\mathcal B\left(\mathbb R\right)$, 命题得证. $\blacksquare$
 
----
-
 ## 6
 
 证明**定理 4.5.3 (截面可测性)**: 设 $\left(X,\mathcal F\right)$, $\left(Y,\mathcal G\right)$ 为可测空间. 若 $E\in\mathcal F\otimes\mathcal G$, 则对任意 $x\in X$ 和 $y\in Y$, 其截面
@@ -286,8 +274,6 @@ $$
 
 对称地 (固定 $y\in Y$, 取截面 $E^{y}$, 用 $\mathcal F$ 作同样论证) 得 $E^{y}\in\mathcal F$. $\blacksquare$
 
----
-
 ## 7
 
 证明**定理 4.5.4 (博雷尔集的乘积)**: 对欧氏空间中的博雷尔 $\sigma$-代数,
@@ -323,8 +309,6 @@ $$
 $$
 
 两方向结合, 即 $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)=\mathcal B\left(\mathbb R^{m+n}\right)$. $\blacksquare$
-
----
 
 ## 8
 

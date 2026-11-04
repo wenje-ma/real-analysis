@@ -58,8 +58,6 @@ $$
 > 
 > 设 $\mu$ 是 $\sigma$-有限正测度, $\nu$ 是符号测度且 $\nu\ll\mu$, 则存在可测函数 $f:X\to\mathbb R$ 使得 $\nu\left(E\right)=\int_{E}f\,\mathrm{d}\mu$ 对一切 $E\in\mathcal F$ 成立; 且 $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$. 函数 $f$ 称为 $\nu$ 关于 $\mu$ 的拉东-尼科迪姆导数, 记作 $f=\frac{\mathrm{d}\nu}{\mathrm{d}\mu}$.
 
----
-
 ## 1
 
 设 $\nu$ 是 $\left(X,\mathcal F\right)$ 上的符号测度且不取 $-\infty$, $E$ 不是负集. 证明: 存在可测集 $G\subset E$ 使得 $\nu\left(G\right)=\sup\left\{\nu\left(F\right):F\subset E,\nu\left(F\right)> 0\right\}> 0$, 且 $E\setminus G$ 是负集.
@@ -73,8 +71,6 @@ $$
 由 $\beta$ 的定义, 取正集列 $\left\{P_{n}\right\}\subset E$ 使 $\nu\left(P_{n}\right)\to\beta$. 令 $G=\bigcup_{n=1}^{\infty}P_{n}\subset E$, 则 $G$ 是正集 (**引理 11.2.2 (正集的性质)** (2)). 令 $Q_{n}=\bigcup_{k=1}^{n}P_{k}$, 则 $\left\{Q_{n}\right\}$ 是正集列的上升并, 仍为正集, 且 $\nu\left(Q_{n}\right)\ge\nu\left(P_{n}\right)\to\beta$; 又 $Q_{n}\subset E$ 为正集, 故 $\nu\left(Q_{n}\right)\le\beta$. 于是 $\nu\left(Q_{n}\right)\to\beta$, 由**命题 11.1.2 (符号测度的基本性质)** (2) (下连续性), $\nu\left(G\right)=\lim_{n\to\infty}\nu\left(Q_{n}\right)=\beta=\alpha> 0$.
 
 最后证 $E\setminus G$ 是负集. 反设 $E\setminus G$ 不是负集, 由**引理 11.2.4 (非负集的判定)** 存在正集 $F\subset E\setminus G$ 使 $\nu\left(F\right)> 0$. 因 $G\cap F=\varnothing$, $G\cup F\subset E$ 且 $G\cup F$ 是正集 (**引理 11.2.2 (正集的性质)** (2)), 于是 $\nu\left(G\cup F\right)=\nu\left(G\right)+\nu\left(F\right)=\alpha+\nu\left(F\right)> \alpha=\beta$, 与 $\beta$ 是 $E$ 中全体正集测度的上确界矛盾. 故 $E\setminus G$ 是负集. $\blacksquare$
-
----
 
 ## 2
 
@@ -106,8 +102,6 @@ $$
 
 再证 $\ge$: 取 $\nu$ 的一个哈恩分解 $X=P\cup N$ (**定理 11.3.2 (哈恩分解定理)**), 令 $g=\chi_{E\cap P}-\chi_{E\cap N}$, 则 $\left|g\right|\le1$ 且 $g$ 可测. 由**定理 11.4.3 (若尔当分解定理)**, $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)$, $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)$. 于是 $\int_{E}g\,\mathrm{d}\nu=\nu\left(E\cap P\right)-\nu\left(E\cap N\right)=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)=\left|\nu\right|\left(E\right)$. 故 $\sup\ge\left|\nu\right|\left(E\right)$. 合并得等式. $\blacksquare$
 
----
-
 ## 3
 
 设 $\nu\left(E\right)=\int_{E}f\,\mathrm{d}\mu$, 其中 $\mu$ 是正测度, $f$ 是扩张的 $\mu$-可积函数. 用 $f$ 和 $\mu$ 描述 $\nu$ 的哈恩分解, 以及 $\nu$ 的正变差,负变差与全变差.
@@ -119,8 +113,6 @@ $f$ 是实值可测函数, 至少一个 $\int f^{+}\mathrm{d}\mu$, $\int f^{-}\m
 因此 $X=P\cup N$, 其中 $P=\left\{x:f\left(x\right)\ge0\right\}$, $N=\left\{x:f\left(x\right)< 0\right\}$, 是 $\nu$ 的一个哈恩分解 (**定理 11.3.2 (哈恩分解定理)**): $P$ 是正集, $N$ 是负集, $P\cap N=\varnothing$, $P\cup N=X$. (零测集 $\left\{f=0\right\}$ 可并入 $P$ 或 $N$ 而不改变分解的本质.)
 
 由**定理 11.4.3 (若尔当分解定理)**, $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)=\int_{E\cap P}f\,\mathrm{d}\mu=\int_{E}f^{+}\mathrm{d}\mu$ (因 $f\ge0$ 于 $P$ 上), $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)=-\int_{E\cap N}f\,\mathrm{d}\mu=\int_{E}f^{-}\mathrm{d}\mu$ (因 $f\le0$ 于 $N$ 上). 故 $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$. $\blacksquare$
-
----
 
 ## 4
 
@@ -148,8 +140,6 @@ $$
 
 再证 $\ge$: 取哈恩分解 $X=P\cup N$ (**定理 11.3.2 (哈恩分解定理)**), 令 $E_{1}=E\cap P$, $E_{2}=E\cap N$, 则 $E_{1},E_{2}$ 两两不交且 $E_{1}\cup E_{2}=E$. 于是 $\left|\nu\left(E_{1}\right)\right|+\left|\nu\left(E_{2}\right)\right|=\nu^{+}\left(E\cap P\right)+\nu^{-}\left(E\cap N\right)=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)=\left|\nu\right|\left(E\right)$, 故 $\sup\ge\left|\nu\right|\left(E\right)$. 合并得等式. $\blacksquare$
 
----
-
 ## 5
 
 设 $\left\{\nu_{j}\right\}$ 是一列正测度. 若 $\nu_{j}\perp\mu$ 对一切 $j$, 则 $\sum_{j}\nu_{j}\perp\mu$; 若 $\nu_{j}\ll\mu$ 对一切 $j$, 则 $\sum_{j}\nu_{j}\ll\mu$.
@@ -159,8 +149,6 @@ $$
 **(奇异情形).** 因 $\nu_{j}\perp\mu$ (**定义 11.4.1 (相互奇异的符号测度)**), 对每个 $j$ 存在 $E_{j}\in\mathcal M$ 使 $E_{j}$ 是 $\mu$-零集且 $E_{j}^{c}$ 是 $\nu_{j}$-零集, 即 $\mu\left(E_{j}\right)=0$, $\nu_{j}\left(E_{j}^{c}\right)=0$. 令 $E=\bigcup_{j=1}^{\infty}E_{j}$. 由 $\mu$ 的次可数可加性, $\mu\left(E\right)\le\sum_{j=1}^{\infty}\mu\left(E_{j}\right)=0$, 故 $E$ 是 $\mu$-零集. 又 $E^{c}=\bigcap_{j=1}^{\infty}E_{j}^{c}\subset E_{k}^{c}$ 对一切 $k$, 由 $\nu_{k}$ 的单调性 $\nu_{k}\left(E^{c}\right)\le\nu_{k}\left(E_{k}^{c}\right)=0$, 故 $\nu_{k}\left(E^{c}\right)=0$ 对一切 $k$, 从而 $\left(\sum_{j}\nu_{j}\right)\left(E^{c}\right)=\sum_{j}\nu_{j}\left(E^{c}\right)=0$. 故 $\sum_{j}\nu_{j}\perp\mu$.
 
 **(绝对连续情形).** 设 $\nu_{j}\ll\mu$ 对一切 $j$ (**定义 11.5.1 (绝对连续性)**). 若 $\mu\left(E\right)=0$, 则 $\nu_{j}\left(E\right)=0$ 对一切 $j$, 故 $\left(\sum_{j}\nu_{j}\right)\left(E\right)=\sum_{j}\nu_{j}\left(E\right)=0$. 因此 $\sum_{j}\nu_{j}\ll\mu$. $\blacksquare$
-
----
 
 ## 6
 
@@ -181,8 +169,6 @@ $$
 $$
 
 而对 $n< N$ 亦有 $\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|< \varepsilon$. 故 $\left\{f_{n}\right\}$ 一致可积. $\blacksquare$
-
----
 
 ## 7
 
@@ -208,8 +194,6 @@ $$
 
 $\blacksquare$
 
----
-
 ## 8
 
 设 $\mu,\nu$ 是 $\left(X,\mathcal M\right)$ 上的测度且 $\nu\ll\mu$, 令 $\lambda=\mu+\nu$. 若 $f=\frac{\mathrm{d}\nu}{\mathrm{d}\lambda}$, 则 $0\le f< 1$ $\mu$-几乎处处, 且 $\frac{\mathrm{d}\nu}{\mathrm{d}\mu}=\frac{f}{1-f}$.
@@ -227,8 +211,6 @@ $$
 $$
 
 即 $\int_{E}\left(1-f\right)\mathrm{d}\nu=\int_{E}f\,\mathrm{d}\mu$. 因 $1-f> 0$ $\mu$-几乎处处 (也 $\lambda$-几乎处处), 由**定理 11.5.5 (拉东-尼科迪姆定理)** 的唯一性, $\frac{\mathrm{d}\nu}{\mathrm{d}\mu}=\frac{f}{1-f}$. $\blacksquare$
-
----
 
 ## 9
 

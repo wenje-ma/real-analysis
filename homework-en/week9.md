@@ -58,8 +58,6 @@ with all integral values in $\left[0,\infty\right]$.
 > 
 > Let $\mu$ be a $\sigma$-finite positive measure and $\nu$ a signed measure with $\nu\ll\mu$. Then there exists a measurable function $f:X\to\mathbb R$ such that $\nu\left(E\right)=\int_{E}f\,\mathrm{d}\mu$ for every $E\in\mathcal F$; and $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$. The function $f$ is the Radon-Nikodym derivative of $\nu$ w.r.t. $\mu$, written $f=\frac{\mathrm{d}\nu}{\mathrm{d}\mu}$.
 
----
-
 ## 1
 
 Let $\nu$ be a signed measure on $\left(X,\mathcal F\right)$ not taking the value $-\infty$, and let $E$ not be a negative set. Prove there is a measurable set $G\subset E$ with $\nu\left(G\right)=\sup\left\{\nu\left(F\right):F\subset E,\nu\left(F\right)> 0\right\}> 0$, and such that $E\setminus G$ is a negative set.
@@ -73,8 +71,6 @@ First show $\alpha$ is attained by a positive set. Let $\beta=\sup\left\{\nu\lef
 By the definition of $\beta$, take a sequence of positive sets $\left\{P_{n}\right\}\subset E$ with $\nu\left(P_{n}\right)\to\beta$. Let $G=\bigcup_{n=1}^{\infty}P_{n}\subset E$; then $G$ is positive (**Lemma 11.2.2 (Properties of Positive Sets)** (2)). Set $Q_{n}=\bigcup_{k=1}^{n}P_{k}$; then $\left\{Q_{n}\right\}$ is an increasing union of positive sets, hence positive, and $\nu\left(Q_{n}\right)\ge\nu\left(P_{n}\right)\to\beta$; also $Q_{n}\subset E$ is positive, so $\nu\left(Q_{n}\right)\le\beta$. Thus $\nu\left(Q_{n}\right)\to\beta$, and by **Proposition 11.1.2 (Basic Properties of Signed Measures)** (2) (lower continuity), $\nu\left(G\right)=\lim_{n\to\infty}\nu\left(Q_{n}\right)=\beta=\alpha> 0$.
 
 Finally show $E\setminus G$ is negative. Suppose otherwise; then by **Lemma 11.2.4 (Criterion for a Non-Negative Set)** there is a positive set $F\subset E\setminus G$ with $\nu\left(F\right)> 0$. Since $G\cap F=\varnothing$, $G\cup F\subset E$ and $G\cup F$ is positive (**Lemma 11.2.2 (Properties of Positive Sets)** (2)); hence $\nu\left(G\cup F\right)=\nu\left(G\right)+\nu\left(F\right)=\alpha+\nu\left(F\right)> \alpha=\beta$, contradicting that $\beta$ is the supremum of the measures of all positive sets in $E$. Thus $E\setminus G$ is negative. $\blacksquare$
-
----
 
 ## 2
 
@@ -106,8 +102,6 @@ $$
 
 Then $\ge$: take a Hahn decomposition $X=P\cup N$ of $\nu$ (**Theorem 11.3.2 (Hahn Decomposition Theorem)**), set $g=\chi_{E\cap P}-\chi_{E\cap N}$; then $\left|g\right|\le1$ and $g$ is measurable. By **Theorem 11.4.3 (Jordan Decomposition Theorem)**, $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)$ and $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)$. Hence $\int_{E}g\,\mathrm{d}\nu=\nu\left(E\cap P\right)-\nu\left(E\cap N\right)=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)=\left|\nu\right|\left(E\right)$. Thus the supremum is $\ge\left|\nu\right|\left(E\right)$. Equality follows. $\blacksquare$
 
----
-
 ## 3
 
 Let $\nu\left(E\right)=\int_{E}f\,\mathrm{d}\mu$, where $\mu$ is a positive measure and $f$ is an extended $\mu$-integrable function. Describe in terms of $f$ and $\mu$ the Hahn decomposition of $\nu$, and its positive variation, negative variation, and total variation.
@@ -119,8 +113,6 @@ $f$ is real-valued measurable, with at least one of $\int f^{+}\mathrm{d}\mu$, $
 Thus $X=P\cup N$, where $P=\left\{x:f\left(x\right)\ge0\right\}$ and $N=\left\{x:f\left(x\right)< 0\right\}$, is a Hahn decomposition of $\nu$ (**Theorem 11.3.2 (Hahn Decomposition Theorem)**): $P$ positive, $N$ negative, $P\cap N=\varnothing$, $P\cup N=X$. (The null set $\left\{f=0\right\}$ may be merged into $P$ or $N$ without changing the decomposition.)
 
 By **Theorem 11.4.3 (Jordan Decomposition Theorem)**, $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)=\int_{E\cap P}f\,\mathrm{d}\mu=\int_{E}f^{+}\mathrm{d}\mu$ (since $f\ge0$ on $P$), and $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)=-\int_{E\cap N}f\,\mathrm{d}\mu=\int_{E}f^{-}\mathrm{d}\mu$ (since $f\le0$ on $N$). Hence $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$. $\blacksquare$
-
----
 
 ## 4
 
@@ -148,8 +140,6 @@ so the supremum is $\le\left|\nu\right|\left(E\right)$.
 
 Then $\ge$: take a Hahn decomposition $X=P\cup N$ (**Theorem 11.3.2 (Hahn Decomposition Theorem)**), set $E_{1}=E\cap P$, $E_{2}=E\cap N$; then $E_{1},E_{2}$ are pairwise disjoint and $E_{1}\cup E_{2}=E$. Hence $\left|\nu\left(E_{1}\right)\right|+\left|\nu\left(E_{2}\right)\right|=\nu^{+}\left(E\cap P\right)+\nu^{-}\left(E\cap N\right)=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)=\left|\nu\right|\left(E\right)$, so the supremum is $\ge\left|\nu\right|\left(E\right)$. Equality follows. $\blacksquare$
 
----
-
 ## 5
 
 Let $\left\{\nu_{j}\right\}$ be a sequence of positive measures. If $\nu_{j}\perp\mu$ for all $j$, then $\sum_{j}\nu_{j}\perp\mu$; if $\nu_{j}\ll\mu$ for all $j$, then $\sum_{j}\nu_{j}\ll\mu$.
@@ -159,8 +149,6 @@ Let $\left\{\nu_{j}\right\}$ be a sequence of positive measures. If $\nu_{j}\per
 **(Singular case).** Since $\nu_{j}\perp\mu$ (**Definition 11.4.1 (Mutually Singular Signed Measures)**), for each $j$ there is $E_{j}\in\mathcal M$ such that $E_{j}$ is a $\mu$-null set and $E_{j}^{c}$ is a $\nu_{j}$-null set, i.e. $\mu\left(E_{j}\right)=0$ and $\nu_{j}\left(E_{j}^{c}\right)=0$. Let $E=\bigcup_{j=1}^{\infty}E_{j}$. By countable subadditivity of $\mu$, $\mu\left(E\right)\le\sum_{j=1}^{\infty}\mu\left(E_{j}\right)=0$, so $E$ is a $\mu$-null set. Also $E^{c}=\bigcap_{j=1}^{\infty}E_{j}^{c}\subset E_{k}^{c}$ for every $k$; by monotonicity of $\nu_{k}$, $\nu_{k}\left(E^{c}\right)\le\nu_{k}\left(E_{k}^{c}\right)=0$, so $\nu_{k}\left(E^{c}\right)=0$ for every $k$, and hence $\left(\sum_{j}\nu_{j}\right)\left(E^{c}\right)=\sum_{j}\nu_{j}\left(E^{c}\right)=0$. Thus $\sum_{j}\nu_{j}\perp\mu$.
 
 **(Absolute continuity case).** Let $\nu_{j}\ll\mu$ for all $j$ (**Definition 11.5.1 (Absolute Continuity)**). If $\mu\left(E\right)=0$, then $\nu_{j}\left(E\right)=0$ for all $j$, so $\left(\sum_{j}\nu_{j}\right)\left(E\right)=\sum_{j}\nu_{j}\left(E\right)=0$. Hence $\sum_{j}\nu_{j}\ll\mu$. $\blacksquare$
-
----
 
 ## 6
 
@@ -181,8 +169,6 @@ $$
 $$
 
 and for $n< N$ also $\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|< \varepsilon$. Thus $\left\{f_{n}\right\}$ is uniformly integrable. $\blacksquare$
-
----
 
 ## 7
 
@@ -208,8 +194,6 @@ $$
 
 $\blacksquare$
 
----
-
 ## 8
 
 Let $\mu,\nu$ be measures on $\left(X,\mathcal M\right)$ with $\nu\ll\mu$, and set $\lambda=\mu+\nu$. If $f=\frac{\mathrm{d}\nu}{\mathrm{d}\lambda}$, then $0\le f< 1$ $\mu$-a.e., and $\frac{\mathrm{d}\nu}{\mathrm{d}\mu}=\frac{f}{1-f}$.
@@ -227,8 +211,6 @@ $$
 $$
 
 i.e. $\int_{E}\left(1-f\right)\mathrm{d}\nu=\int_{E}f\,\mathrm{d}\mu$. Since $1-f> 0$ $\mu$-a.e. (also $\lambda$-a.e.), by the uniqueness in **Theorem 11.5.5 (Radon-Nikodym Theorem)**, $\frac{\mathrm{d}\nu}{\mathrm{d}\mu}=\frac{f}{1-f}$. $\blacksquare$
-
----
 
 ## 9
 

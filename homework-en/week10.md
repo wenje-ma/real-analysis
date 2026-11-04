@@ -10,8 +10,6 @@ where $B\left(x,r\right)$ is the open ball centered at $x$ with radius $r$, and 
 > 
 > Let $\mu$ and $\nu$ be two signed measures on $\left(X,\mathcal F\right)$. If there exists $E\in\mathcal F$ such that $E$ is a $\mu$-null set and $E^{c}$ is a $\nu$-null set, then $\mu$ and $\nu$ are mutually singular, written $\mu\perp\nu$.
 
----
-
 ## 1
 
 Let $f\in L^{1}\left(\mathbb R^{n}\right)$ and $f\ne0$. Prove that there exist $C,R> 0$ such that $Hf\left(x\right)\ge C\left|x\right|^{-n}$ for $\left|x\right|> R$. Hence for small $\lambda$, $m\left(\left\{x:Hf\left(x\right)> \lambda\right\}\right)\ge C'\lambda^{-1}$, so the estimate in the maximal theorem is essentially sharp.
@@ -28,8 +26,6 @@ Taking $C=\frac{c}{2^{n}C_{n}}> 0$, we get $Hf\left(x\right)\ge C\left|x\right|^
 
 For the second part, by the first part, when $0< \lambda< C/R^{n}$, $\left(C/\lambda\right)^{1/n}> R$, so $\left\{x:\left|x\right|> \left(C/\lambda\right)^{1/n}\right\}\subset\left\{x:Hf\left(x\right)> \lambda\right\}$. By the ball-volume formula, $m\left(\left\{x:\left|x\right|< \left(C/\lambda\right)^{1/n}\right\}\right)=C_{n}\left(\frac{C}{\lambda}\right)=\frac{C_{n}C}{\lambda}$. Setting $C'=C_{n}C$, we get $m\left(\left\{x:Hf\left(x\right)> \lambda\right\}\right)\ge C'\lambda^{-1}$ for small $\lambda> 0$. $\blacksquare$
 
----
-
 ## 2
 
 A useful variant of the Hardy-Littlewood maximal function is $H^{*}f\left(x\right)=\sup\left\{\frac{1}{m\left(B\right)}\int_{B}\left|f\left(y\right)\right|\mathrm{d}y:B\text{ a ball},x\in B\right\}$. Prove that $Hf\le H^{*}f\le2^{n}Hf$.
@@ -45,8 +41,6 @@ $$
 $$
 
 Taking the supremum over all balls $B$ containing $x$ gives $H^{*}f\left(x\right)\le2^{n}Hf\left(x\right)$. Combining, $Hf\le H^{*}f\le2^{n}Hf$. $\blacksquare$
-
----
 
 ## 3
 

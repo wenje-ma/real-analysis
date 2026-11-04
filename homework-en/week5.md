@@ -52,8 +52,6 @@
 > 
 > Let $f:X\times\left[a,b\right]\to\mathbb R$, and for each $t\in\left[a,b\right]$ let $f\left(\cdot,t\right):X\to\mathbb R$ be integrable. Set $F\left(t\right)=\int_{X}f\left(x,t\right)\mathrm{d}\mu\left(x\right)$. (a) If there exists $g\in L^{1}\left(\mu\right)$ with $\left|f\left(x,t\right)\right|\le g\left(x\right)$ for all $x,t$, and $\lim_{t\to t_{0}}f\left(x,t\right)=f\left(x,t_{0}\right)$ for each $x$, then $\lim_{t\to t_{0}}F\left(t\right)=F\left(t_{0}\right)$; (b) if the partial derivative $\partial f/\partial t$ exists and there is $g\in L^{1}\left(\mu\right)$ with $\left|\frac{\partial f}{\partial t}\left(x,t\right)\right|\le g\left(x\right)$ for all $x,t$, then $F$ is differentiable and $F'\left(t\right)=\int\frac{\partial f}{\partial t}\left(x,t\right)\mathrm{d}\mu\left(x\right)$.
 
----
-
 ## 1
 
 Let $f$ be a nonnegative simple function. Prove that $A\mapsto\int_{A}f\,\mathrm{d}\mu$ is a measure, and that if $\mu\left(A\right)=0$, then $\int_{A}f\,\mathrm{d}\mu=0$.
@@ -79,8 +77,6 @@ $$
 $$
 
 so $\lambda\left(A\right)=0$. $\blacksquare$
-
----
 
 ## 2
 
@@ -134,8 +130,6 @@ $$
 
 4. If $f=g$ a.e., then $f^{+}=g^{+}$ and $f^{-}=g^{-}$ a.e. Thus $h:=f^{+}-g^{+}$ is integrable and $h=0$ a.e.; its positive part $h^{+}$ and negative part $h^{-}$ vanish outside a null set. By **Proposition 8.2.4 (Absolute Continuity of the Integral with Respect to the Set)**, $\int h^{+}\mathrm{d}\mu=\int_{\left\{h> 0\right\}}h^{+}\mathrm{d}\mu=0$ and $\int h^{-}\mathrm{d}\mu=0$, so $\int h\,\mathrm{d}\mu=0$, i.e. $\int f^{+}\mathrm{d}\mu=\int g^{+}\mathrm{d}\mu$; similarly $\int f^{-}\mathrm{d}\mu=\int g^{-}\mathrm{d}\mu$. Hence $\int f\,\mathrm{d}\mu=\int g\,\mathrm{d}\mu$. $\blacksquare$
 
----
-
 ## 3
 
 Let $f\in L^{1}$. Prove:
@@ -176,8 +170,6 @@ $$
 
 Combining (1)(2)(3)(4), the three conditions are equivalent. $\blacksquare$
 
----
-
 ## 4
 
 Prove:
@@ -211,8 +203,6 @@ $$
 $$
 
 so $\mu\left(E_{n}\right)\le n\int f\,\mathrm{d}\mu< \infty$. Also by **Theorem 8.2.2 (Monotone Convergence Theorem)**, $\int_{E_{n}}f\,\mathrm{d}\mu\uparrow\int_{\left\{f> 0\right\}}f\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu$. Thus for given $\varepsilon> 0$, choose $n$ large enough that $\int_{E_{n}}f\,\mathrm{d}\mu> \int f\,\mathrm{d}\mu-\varepsilon$, and set $E:=E_{n}$; then $\mu\left(E\right)< \infty$ and $\int_{E}f> \int f-\varepsilon$. $\blacksquare$
-
----
 
 ## 5
 

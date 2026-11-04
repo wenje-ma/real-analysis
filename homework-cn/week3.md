@@ -96,8 +96,6 @@ $$
 > 
 > 点 $x\in\left[0,1\right]$ 属于康托尔集 $C$ 当且仅当它的三进制展开 $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ 中不含数字 $1$ (即 $a_{k}\in\left\{0,2\right\}$).
 
----
-
 ## 1
 
 证明**定理 6.3.3 (卡拉西奥多里定理)** 第 (3) 条的唯一性, 并证明习题 17, 24.
@@ -200,8 +198,6 @@ $$
 
 故 $\nu$ 是测度. $\blacksquare$
 
----
-
 ## 2
 
 设 $-\infty\le a< b< \infty$, 所有左开右闭区间 $\left(a,b\right]$ 以及 $\left(a,\infty\right)$, $\varnothing$ 称为 h 区间. 证明 h 区间的有限不交并形成的集族 $\mathcal E$ 是一个代数 (**定义 6.4.1 (h 区间)**).
@@ -229,8 +225,6 @@ $$
 最后, $X\in\mathcal E$: 因 $\mathbb R=\left(-\infty,\infty\right)$ 是 $\left(a,\infty\right)$ 型 h 区间 ($a=-\infty$), 故 $\mathbb R\in\mathcal E$. 且对 $A,B\in\mathcal E$, 由德摩根律 $A\cup B=\left(A^{c}\cap B^{c}\right)^{c}\in\mathcal E$. 故 $\mathcal E$ 对有限并封闭.
 
 综上, $\mathcal E$ 是代数. $\blacksquare$
-
----
 
 ## 3
 
@@ -274,8 +268,6 @@ $$
 
 (2) 对 $r\ne0$, 伸缩 $\delta_{r}:t\mapsto rt$ 把 h 区间 $\left(a,b\right]$ 映为 $\left(ra,rb\right]$ ($r> 0$) 或 $\left(rb,ra\right]$ ($r< 0$), 仍是 h 区间, 且长度变为 $\left|r\right|\left(b-a\right)$, 即 $\mu_{0}\left(rI\right)=\left|r\right|\mu_{0}\left(I\right)$. 与 (1) 同理得 $m^{*}\left(rA\right)=\left|r\right|m^{*}\left(A\right)$, 且 $E$ 可测推出 $rE$ 可测 (用**定义 6.3.1 (卡拉西奥多里条件)** 与伸缩). 故 $m\left(rE\right)=\left|r\right|m\left(E\right)$. 当 $r=0$ 时, $0\cdot E$ 为空集或 $\left\{0\right\}$, 测度均为 $0=\left|0\right|m\left(E\right)$. (2) 得证. $\blacksquare$
 
----
-
 ## 4
 
 设康托尔集 $C=\bigcap_{n=0}^{\infty}C_{n}$ (**定义 6.5.1 (康托尔集的递归构造)**). 证明 $C$ 具有以下性质:
@@ -315,8 +307,6 @@ $$
 $$
 
 故 $x$ 的 $\varepsilon$ 邻域内含有 $C$ 中异于 $x$ 的点, $x$ 不是孤立点. 所以 $C$ 是完美集. $\blacksquare$
-
----
 
 ## 5
 

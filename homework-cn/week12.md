@@ -24,8 +24,6 @@
 > 
 > 有以下严格包含关系: $C^{1}\left(\left[a,b\right]\right)\subset$ 利普希茨 $\subset AC\left(\left[a,b\right]\right)\subset BV\left(\left[a,b\right]\right)\subset$ 有界函数.
 
----
-
 ## 1
 
 设 $f:\left[a,b\right]\to\mathbb R$, 把 $f$ 的图像看作 $\mathbb C$ 的子集 $\left\{t+if\left(t\right):t\in\left[a,b\right]\right\}$. 该图像的长度 $L$ 定义为所有内接多边形长度之和的上确界. (内接多边形是连接 $t_{j-1}+if\left(t_{j-1}\right)$ 与 $t_{j}+if\left(t_{j}\right)$ 的线段之并, $1\le j\le n$, 其中 $a=t_{0}< \cdots< t_{n}=b$.)
@@ -52,8 +50,6 @@ $$
 
 $\blacksquare$
 
----
-
 ## 2
 
 若 $\left\{F_{j}\right\}$ 是 $\left[a,b\right]$ 上的一列非负递增函数, 且 $F:=\sum_{j}F_{j}$ 满足 $F\left(x\right)< \infty$ 对所有 $x\in\left[a,b\right]$ 成立, 则 $F'\left(x\right)=\sum_{j}F_{j}'\left(x\right)$ 对几乎所有 $x\in\left[a,b\right]$ 成立.
@@ -67,8 +63,6 @@ $$
 $$
 
 对 $m$-几乎每个 $x$ 成立. 故 $F'\left(x\right)=\sum_{j}F_{j}'\left(x\right)$ 几乎处处. $\blacksquare$
-
----
 
 ## 3
 

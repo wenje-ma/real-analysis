@@ -50,8 +50,6 @@ $$
 > 
 > Let $\mu\left(X\right)< \infty$ and $f_{n}\to f$ almost everywhere. Then for every $\delta> 0$ there exists a measurable set $E\subset X$ with $\mu\left(E\right)< \delta$ such that $f_{n}$ converges uniformly to $f$ on $X\setminus E$. In particular, on a finite-measure space, almost-everywhere convergence implies convergence in measure.
 
----
-
 ## 1
 
 Prove: $f_{n}$ converges to $f$ in measure iff for every subsequence $\left\{f_{n_{k}}\right\}$ there exists a further subsequence $\left\{f_{n'_{k}}\right\}$ such that $f_{n'_{k}}\to f$ almost everywhere. In particular, if $\phi:\mathbb R\to\mathbb R$ is continuous, then $\phi\left(f_{n}\right)\xrightarrow{\mu}\phi\left(f\right)$.
@@ -75,8 +73,6 @@ $$
 This contradicts the assumption (every subsequence has an a.e.-convergent further subsequence). Hence $f_{n}\xrightarrow{\mu}f$.
 
 Finally, let $\phi:\mathbb R\to\mathbb R$ be continuous. For any subsequence $\left\{\phi\left(f_{n_{k}}\right)\right\}$, by $f_{n}\xrightarrow{\mu}f$ and the proven $\left(\Rightarrow\right)$, the subsequence $\left\{f_{n_{k}}\right\}$ has a further subsequence $f_{n'_{k}}\to f$ a.e.; continuity of $\phi$ gives $\phi\left(f_{n'_{k}}\right)\to\phi\left(f\right)$ a.e. Thus every subsequence of $\left\{\phi\left(f_{n}\right)\right\}$ has an a.e.-convergent further subsequence, and by the proven $\left(\Leftarrow\right)$, $\phi\left(f_{n}\right)\xrightarrow{\mu}\phi\left(f\right)$. $\blacksquare$
-
----
 
 ## 2
 
@@ -120,8 +116,6 @@ $$
 
 By **Definition 9.1.3 (Convergence in Measure)**, $f_{n}\xrightarrow{\mu}f$. $\blacksquare$
 
----
-
 ## 3
 
 If $\mu$ is $\sigma$-finite and $f_{n}\to f$ almost everywhere, then there exist measurable sets $E_{1},E_{2},\dots\subset X$ such that $\mu\left(\left(\bigcup_{i=1}^{\infty}E_{i}\right)^{c}\right)=0$, and $f_{n}\to f$ uniformly on each $E_{i}$.
@@ -137,8 +131,6 @@ $$
 $$
 
 since $X=\bigcup_{m}X_{m}$. Hence $\mu\left(\left(\bigcup_{m,j}E_{mj}\right)^{c}\right)=0$. Reindex the countable family $\left\{E_{mj}:m,j\in\mathbb N\right\}$ as $E_{1},E_{2},\dots$; then $\mu\left(\left(\bigcup_{i}E_{i}\right)^{c}\right)=0$ and $f_{n}\to f$ uniformly on each $E_{i}$. $\blacksquare$
-
----
 
 ## 4
 
@@ -161,8 +153,6 @@ a countable intersection of measurable sets, measurable by **Definition 4.1.3 ($
 (b) Fix $\eta> 0$ as the tolerance of uniform convergence. For each $\delta> 0$, set $F_{\delta}:=\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta\text{ for all }y< \delta\right\}$, measurable by (a), and increasing as $\delta$ decreases. Since $f\left(x,\cdot\right)$ is continuous at $0$, for each $x$, $\lim_{y\to0}f\left(x,y\right)=f\left(x,0\right)$, so there exists $\delta> 0$ with $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ for all $y< \delta$, i.e. $x\in F_{\delta}$. Hence $\bigcup_{\delta> 0}F_{\delta}=X$.
 
 By Lower Continuity of a Measure, since $\mu\left(X\right)< \infty$ and $F_{\delta}\uparrow X$, we have $\mu\left(X\setminus F_{\delta}\right)\to0$. Given $\varepsilon> 0$, choose $\delta> 0$ with $\mu\left(X\setminus F_{\delta}\right)< \varepsilon$, set $E:=X\setminus F_{\delta}$; then $\mu\left(E\right)< \varepsilon$, and on $E^{c}=F_{\delta}$, $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ for all $y< \delta$, i.e. $f\left(\cdot,y\right)\to f\left(\cdot,0\right)$ uniformly on $E^{c}$ as $y\to0$. $\blacksquare$
-
----
 
 ## 5
 

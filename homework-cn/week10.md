@@ -10,8 +10,6 @@ $$
 > 
 > 设 $\mu$ 和 $\nu$ 是可测空间 $\left(X,\mathcal F\right)$ 上的两个符号测度. 若存在可测集 $E\in\mathcal F$ 使得 $E$ 为 $\mu$-零集且 $E^{c}$ 为 $\nu$-零集, 则称 $\mu$ 和 $\nu$ 相互奇异, 记为 $\mu\perp\nu$.
 
----
-
 ## 1
 
 设 $f\in L^{1}\left(\mathbb R^{n}\right)$ 且 $f\ne0$. 证明存在 $C,R> 0$ 使得 $Hf\left(x\right)\ge C\left|x\right|^{-n}$ 对 $\left|x\right|> R$ 成立. 从而当 $\lambda$ 充分小时, $m\left(\left\{x:Hf\left(x\right)> \lambda\right\}\right)\ge C'\lambda^{-1}$, 故极大定理中的估计本质上是尖锐的.
@@ -28,8 +26,6 @@ $$
 
 第二问: 由第一问, 当 $0< \lambda< C/R^{n}$ 时, $\left(C/\lambda\right)^{1/n}> R$, 故 $\left\{x:\left|x\right|> \left(C/\lambda\right)^{1/n}\right\}\subset\left\{x:Hf\left(x\right)> \lambda\right\}$. 由球体积公式, 该集合的补集测度为 $m\left(\left\{x:\left|x\right|< \left(C/\lambda\right)^{1/n}\right\}\right)=C_{n}\left(\frac{C}{\lambda}\right)=\frac{C_{n}C}{\lambda}$. 令 $C'=C_{n}C$, 得 $m\left(\left\{x:Hf\left(x\right)> \lambda\right\}\right)\ge C'\lambda^{-1}$ 对充分小的 $\lambda> 0$ 成立. $\blacksquare$
 
----
-
 ## 2
 
 哈代-利特尔伍德极大函数的一个有用变体是 $H^{*}f\left(x\right)=\sup\left\{\frac{1}{m\left(B\right)}\int_{B}\left|f\left(y\right)\right|\mathrm{d}y:B\text{ 是球},x\in B\right\}$. 证明 $Hf\le H^{*}f\le2^{n}Hf$.
@@ -45,8 +41,6 @@ $$
 $$
 
 对一切含 $x$ 的球 $B$ 取上确界, 得 $H^{*}f\left(x\right)\le2^{n}Hf\left(x\right)$. 合并即 $Hf\le H^{*}f\le2^{n}Hf$. $\blacksquare$
-
----
 
 ## 3
 

@@ -52,8 +52,6 @@
 > 
 > 设 $f:X\times\left[a,b\right]\to\mathbb R$, 且对每个 $t\in\left[a,b\right]$, 函数 $f\left(\cdot,t\right):X\to\mathbb R$ 可积. 令 $F\left(t\right)=\int_{X}f\left(x,t\right)\mathrm{d}\mu\left(x\right)$. (a) 若存在 $g\in L^{1}\left(\mu\right)$ 使得对所有 $x,t$ 有 $\left|f\left(x,t\right)\right|\le g\left(x\right)$, 且对每个 $x$ 有 $\lim_{t\to t_{0}}f\left(x,t\right)=f\left(x,t_{0}\right)$, 则 $\lim_{t\to t_{0}}F\left(t\right)=F\left(t_{0}\right)$; (b) 若偏导数 $\partial f/\partial t$ 存在, 且存在 $g\in L^{1}\left(\mu\right)$ 使得对所有 $x,t$ 有 $\left|\frac{\partial f}{\partial t}\left(x,t\right)\right|\le g\left(x\right)$, 则 $F$ 可微, 且 $F'\left(t\right)=\int\frac{\partial f}{\partial t}\left(x,t\right)\mathrm{d}\mu\left(x\right)$.
 
----
-
 ## 1
 
 设 $f$ 为非负简单函数, 证明: $A\mapsto\int_{A}f\,\mathrm{d}\mu$ 是一个测度; 若 $\mu\left(A\right)=0$, 则 $\int_{A}f\,\mathrm{d}\mu=0$.
@@ -79,8 +77,6 @@ $$
 $$
 
 故 $\lambda\left(A\right)=0$. $\blacksquare$
-
----
 
 ## 2
 
@@ -134,8 +130,6 @@ $$
 
 4. $f=g$ 几乎处处, 则 $f^{+}=g^{+}$, $f^{-}=g^{-}$ 几乎处处. 于是 $h:=f^{+}-g^{+}$ 可积且 $h=0$ 几乎处处, 其正部 $h^{+}$ 与负部 $h^{-}$ 均在零测集外为零. 由**命题 8.2.4 (积分关于集合的绝对连续性)**, $\int h^{+}\mathrm{d}\mu=\int_{\left\{h> 0\right\}}h^{+}\mathrm{d}\mu=0$, $\int h^{-}\mathrm{d}\mu=0$, 故 $\int h\,\mathrm{d}\mu=0$, 即 $\int f^{+}\mathrm{d}\mu=\int g^{+}\mathrm{d}\mu$; 同理 $\int f^{-}\mathrm{d}\mu=\int g^{-}\mathrm{d}\mu$. 因此 $\int f\,\mathrm{d}\mu=\int g\,\mathrm{d}\mu$. $\blacksquare$
 
----
-
 ## 3
 
 设 $f\in L^{1}$, 证明:
@@ -176,8 +170,6 @@ $$
 
 综合 (1)(2)(3)(4) 得三条件等价. $\blacksquare$
 
----
-
 ## 4
 
 证明:
@@ -211,8 +203,6 @@ $$
 $$
 
 故 $\mu\left(E_{n}\right)\le n\int f\,\mathrm{d}\mu< \infty$. 又由**定理 8.2.2 (单调收敛定理)**, $\int_{E_{n}}f\,\mathrm{d}\mu\uparrow\int_{\left\{f> 0\right\}}f\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu$. 故对给定 $\varepsilon> 0$, 取 $n$ 充分大使 $\int_{E_{n}}f\,\mathrm{d}\mu> \int f\,\mathrm{d}\mu-\varepsilon$, 令 $E:=E_{n}$, 则 $\mu\left(E\right)< \infty$ 且 $\int_{E}f> \int f-\varepsilon$. $\blacksquare$
-
----
 
 ## 5
 

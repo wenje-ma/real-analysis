@@ -50,8 +50,6 @@ $$
 
 其中所有积分值都在 $\left[0,\infty\right]$ 中.
 
----
-
 ## 1
 
 设 $\mathcal E$ 为所有矩形框的有限不交并全体, 证明 $\mathcal E$ 为一个代数. 对于 $E=\bigcup_{i=1}^{n}A_{i}\times B_{i}$ (两两不交), 定义 $\pi\left(E\right):=\sum_{i=1}^{n}\mu\left(A_{i}\right)\nu\left(B_{i}\right)$. 证明 $\pi$ 为 $\mathcal E$ 上的准测度, 且由该准测度导出的 $\sigma\left(\mathcal E\right)$ 上的测度与**定理 10.1.4 (乘积测度的存在唯一性)** 中定义的乘积测度一致.
@@ -83,8 +81,6 @@ $$
 故 $\pi$ 是 $\mathcal E$ 上的准测度 (**定义 6.2.1 (准测度)**).
 
 **唯一延拓与乘积测度一致.** 由**定义 10.1.1 (乘积 $\sigma$-代数)**, $\mathcal E$ 由所有可测矩形生成, 故 $\sigma\left(\mathcal E\right)=\mathcal A\otimes\mathcal B$. 因 $\mu,\nu$ $\sigma$-有限, 可取 $X=\bigcup_{p}X_{p}$, $Y=\bigcup_{q}Y_{q}$ 使 $\mu\left(X_{p}\right),\nu\left(Y_{q}\right)< \infty$, 则矩形 $X_{p}\times Y_{q}$ 覆盖 $X\times Y$ 且 $\pi\left(X_{p}\times Y_{q}\right)< \infty$, 故 $\pi$ 是 $\sigma$-有限的. 由**定理 6.3.3 (卡拉西奥多里定理)** (准测度的唯一延拓), $\pi$ 在 $\sigma\left(\mathcal E\right)$ 上有唯一延拓. 该延拓在 $\mathcal E$ 上等于 $\pi=\left(\mu\times\nu\right)|_{\mathcal E}$, 故在整个 $\sigma\left(\mathcal E\right)=\mathcal A\otimes\mathcal B$ 上等于 $\mu\times\nu$. 即与**定理 10.1.4 (乘积测度的存在唯一性)** 中定义的乘积测度一致. $\blacksquare$
-
----
 
 ## 2
 
@@ -118,8 +114,6 @@ $$
 
 故三个积分分别为 $0$, $1$, $1$, 不全相等; 特别 $\iint\chi_{D}\,\mathrm{d}\mu\,\mathrm{d}\nu=0\ne1=\iint\chi_{D}\,\mathrm{d}\nu\,\mathrm{d}\mu$. 原因是 $\nu$ 非 $\sigma$-有限, **定理 10.2.1 (富比尼定理)** 的 $\sigma$-有限假设不满足, 故乘积积分与先对 $\mu$ 积分的迭代积分不一致. $\blacksquare$
 
----
-
 ## 3
 
 设 $X=Y=\mathbb N$, $\mathcal M=\mathcal N=\mathcal P\left(\mathbb N\right)$, $\mu=\nu$ 是计数测度. 定义 $f\left(m,n\right)=1$ 若 $m=n$, $f\left(m,n\right)=-1$ 若 $m=n+1$, $f\left(m,n\right)=0$ 否则. 则 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)=\infty$, 且 $\iint f\,\mathrm{d}\mu\,\mathrm{d}\nu$ 与 $\iint f\,\mathrm{d}\nu\,\mathrm{d}\mu$ 存在但不相等.
@@ -133,8 +127,6 @@ $$
 算 $\iint f\,\mathrm{d}\nu\,\mathrm{d}\mu$ (内层按 $\nu$ 求和). 对固定 $m$, 当 $m\ge1$ 时 $\sum_{n}f\left(m,n\right)=f\left(m,m\right)+f\left(m,m-1\right)=1+\left(-1\right)=0$; 而 $m=0$ 时 $f\left(0,n\right)$ 只在 $n=0$ 处为 $1$, 和为 $1$. 故 $\iint f\,\mathrm{d}\nu\,\mathrm{d}\mu=\sum_{m}\left(\sum_{n}f\left(m,n\right)\right)=1$.
 
 故 $\iint f\,\mathrm{d}\mu\,\mathrm{d}\nu=0\ne1=\iint f\,\mathrm{d}\nu\,\mathrm{d}\mu$. 因 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)=\infty$, $f$ 非绝对可积, **定理 10.2.1 (富比尼定理)** 的假设 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)< \infty$ 不满足, 故不能交换积分次序. $\blacksquare$
-
----
 
 ## 4
 
