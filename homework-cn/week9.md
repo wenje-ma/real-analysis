@@ -1,223 +1,165 @@
 # week9
 
+> **定理 8.2.9 (控制收敛定理)**
+> 
+> 设 $\left(X,\mathcal F,\mu\right)$ 是测度空间, $\left\{f_{n}\right\}$ 是一列可测函数, 若存在可积函数 $g$ 使 $\left|f_{n}\right|\le g$ 对所有 $n$ 成立, 且 $f_{n}\to f$ 几乎处处, 则 $f$ 可积且 $\int f\,\mathrm{d}\mu=\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu$.
+
+> **定理 8.2.16 (可积简单函数在 $L^{1}$ 中稠密)**
+> 
+> 如果 $f\in L^{1}\left(\mu\right)$ 且 $\varepsilon> 0$, 则存在可积简单函数 $\varphi=\sum a_{j}\chi_{E_{j}}$ 使得 $\int\left|f-\varphi\right|\mathrm{d}\mu< \varepsilon$.
+
+> **定理 10.2.1 (富比尼定理)**
+> 
+> 设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间, $f:X\times Y\to\mathbb R$ 是 $\mathcal A\otimes\mathcal B$-可测函数. 若 $f$ 在 $X\times Y$ 上可积, 则对几乎所有 $x$, $y\mapsto f\left(x,y\right)$ 是 $\nu$-可积的; 对几乎所有 $y$, $x\mapsto f\left(x,y\right)$ 是 $\mu$-可积的; 且重积分相等:
+
 > **定理 10.2.2 (托内利定理)**
 > 
 > 如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则
 
-$$
-\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),
-$$
-
-其中所有积分值都在 $\left[0,\infty\right]$ 中.
-
-> **定义 11.1.1 (符号测度)**
+> **定理 11.1.1 (勒贝格测度的正则性与矩形逼近)**
 > 
-> 设 $\left(X,\mathcal F\right)$ 是一个可测空间. 函数 $\nu:\mathcal F\to\mathbb R\cup\left\{+\infty\right\}$ 或 $\mathbb R\cup\left\{-\infty\right\}$ 称为符号测度, 若满足: (1) $\nu\left(\varnothing\right)=0$; (2) 可列可加性: 对任意一列互不相交的可测集 $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal F$, 有 $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$; (3) $\nu$ 不能同时取 $+\infty$ 与 $-\infty$ 为值.
+> 假设 $E\in\mathcal L^{n}$. (a)
 
-> **命题 11.1.2 (符号测度的基本性质)**
+> **定理 11.4.1 (极坐标下的积分公式)**
 > 
-> 设 $\nu$ 是符号测度, 则: (1) 有限可加性: 对任意有限个互不相交的 $E_{1},\dots,E_{n}\in\mathcal F$, 有 $\nu\left(\bigcup_{i=1}^{n}E_{i}\right)=\sum_{i=1}^{n}\nu\left(E_{i}\right)$; (2) 下连续性: 若 $\left\{E_{j}\right\}$ 单调上升可测, 则 $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcup_{j}E_{j}\right)$; (3) 上连续性: 若 $\left\{E_{j}\right\}$ 单调下降可测且 $\nu\left(E_{1}\right)< \infty$, 则 $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcap_{j}E_{j}\right)$.
-
-> **定义 11.2.1 (正集,负集,零集)**
-> 
-> 设 $\nu$ 是 $\left(X,\mathcal F\right)$ 上的符号测度. 称 $P\in\mathcal F$ 为正集 (记为 $P\gtrsim0$), 若对任意 $E\in\mathcal F$ 且 $E\subset P$, 有 $\nu\left(E\right)\ge0$; 称 $N\in\mathcal F$ 为负集 (记为 $N\lesssim0$), 若对任意 $E\in\mathcal F$ 且 $E\subset N$, 有 $\nu\left(E\right)\le0$; 称 $Z\in\mathcal F$ 为零集, 若对任意 $E\in\mathcal F$ 且 $E\subset Z$, 有 $\nu\left(E\right)=0$.
-
-> **引理 11.2.2 (正集的性质)**
-> 
-> (1) 正集的任意可测子集是正集; (2) 正集的可列并是正集; (3) 若 $\left\{P_{n}\right\}$ 是正集列, 则 $\bigcap_{n=1}^{\infty}P_{n}$ 是正集. 上述性质对负集仍然成立.
-
-> **引理 11.2.4 (非负集的判定)**
-> 
-> 设 $\nu$ 是符号测度. 若 $E$ 不是负集, 则存在正集 $F\subset E$ 使得 $\nu\left(F\right)> 0$.
-
-> **定理 11.3.2 (哈恩分解定理)**
-> 
-> 设 $\nu$ 是 $\left(X,\mathcal F\right)$ 上的符号测度, 则存在 $X$ 的分解 $X=P\cup N$, 其中 $P$ 是正集, $N$ 是负集, $P\cap N=\varnothing$; 并且该分解在相差一个 $\nu$-零集的意义下是唯一的.
-
-> **定义 11.4.1 (相互奇异的符号测度)**
-> 
-> 设 $\mu$ 和 $\nu$ 是可测空间 $\left(X,\mathcal F\right)$ 上的两个符号测度. 若存在可测集 $E\in\mathcal F$ 使得 $E$ 为 $\mu$-零集且 $E^{c}$ 为 $\nu$-零集, 则称 $\mu$ 和 $\nu$ 相互奇异, 记为 $\mu\perp\nu$.
-
-> **定理 11.4.3 (若尔当分解定理)**
-> 
-> 设 $\nu$ 是 $\left(X,\mathcal F\right)$ 上的符号测度, 则存在唯一的一对相互奇异的正测度 $\nu^{+}$ 和 $\nu^{-}$, 使得 $\nu=\nu^{+}-\nu^{-}$.
-
-> **定义 11.4.4 (变差测度)**
-> 
-> 设 $\nu$ 是符号测度, 其若尔当分解为 $\nu=\nu^{+}-\nu^{-}$. 称 $\nu^{+}$ 为 $\nu$ 的正变差, $\nu^{-}$ 为 $\nu$ 的负变差, $\left|\nu\right|=\nu^{+}+\nu^{-}$ 为 $\nu$ 的全变差测度.
-
-> **定义 11.5.1 (绝对连续性)**
-> 
-> 设 $\mu$ 是正测度, $\nu$ 是符号测度. 称 $\nu$ 关于 $\mu$ 绝对连续 (记为 $\nu\ll\mu$), 若对任意 $E\in\mathcal F$ 有 $\mu\left(E\right)=0\Rightarrow\nu\left(E\right)=0$.
-
-> **注 11.5.3 (积分关于测度的绝对连续)**
-> 
-> 设 $f\in L^{1}\left(\mu\right)$, 则 $\lim_{\mu\left(E\right)\to0}\int_{E}f\,\mathrm{d}\mu=0$.
-
-> **定理 11.5.5 (拉东-尼科迪姆定理)**
-> 
-> 设 $\mu$ 是 $\sigma$-有限正测度, $\nu$ 是符号测度且 $\nu\ll\mu$, 则存在可测函数 $f:X\to\mathbb R$ 使得 $\nu\left(E\right)=\int_{E}f\,\mathrm{d}\mu$ 对一切 $E\in\mathcal F$ 成立; 且 $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$. 函数 $f$ 称为 $\nu$ 关于 $\mu$ 的拉东-尼科迪姆导数, 记作 $f=\frac{\mathrm{d}\nu}{\mathrm{d}\mu}$.
+> 存在 $S^{n-1}$ 上唯一的博雷尔测度 $\sigma=\sigma_{n-1}$, 使得 $m^{*}=\rho\times\sigma$. 若 $f$ 是 $\mathbb R^{n}$ 上的博雷尔可测函数, 且 $f\ge0$ 或 $f\in L^{1}\left(m\right)$, 则
 
 ## 1
 
-设 $\nu$ 是 $\left(X,\mathcal F\right)$ 上的符号测度且不取 $-\infty$, $E$ 不是负集. 证明: 存在可测集 $G\subset E$ 使得 $\nu\left(G\right)=\sup\left\{\nu\left(F\right):F\subset E,\nu\left(F\right)> 0\right\}> 0$, 且 $E\setminus G$ 是负集.
+如果 $f$ 在 $\left(0,a\right)$ 上勒贝格可积, 且 $g\left(x\right)=\int_{x}^{a}t^{-1}f\left(t\right)\mathrm{d}t$, 则 $g$ 在 $\left(0,a\right)$ 上可积且 $\int_{0}^{a}g\left(x\right)\mathrm{d}x=\int_{0}^{a}f\left(x\right)\mathrm{d}x$.
 
 ### 解答 1
 
-记 $\alpha=\sup\left\{\nu\left(F\right):F\subset E,\nu\left(F\right)> 0\right\}$. 因 $E$ 不是负集, 由**引理 11.2.4 (非负集的判定)** 存在正集 $F_{0}\subset E$ 使 $\nu\left(F_{0}\right)> 0$, 故 $\alpha\ge\nu\left(F_{0}\right)> 0$, 即 $\alpha> 0$.
-
-先证 $\alpha$ 由正集取到. 令 $\beta=\sup\left\{\nu\left(P\right):P\subset E,P\text{ 是正集}\right\}$, 则 $\beta\ge\nu\left(F_{0}\right)> 0$. 显然 $\beta\le\alpha$, 因为正集 $P\subset E$ 若 $\nu\left(P\right)> 0$ 则计入 $\alpha$ 的上确界类. 反之证 $\alpha\le\beta$: 任取 $F\subset E$ 且 $\nu\left(F\right)> 0$. 若 $F$ 是正集, 则 $\nu\left(F\right)\le\beta$; 若 $F$ 不是正集, 则存在 $C\subset F$ 使 $\nu\left(C\right)< 0$, 取 $F_{1}=F\setminus C$, 则 $\nu\left(F_{1}\right)=\nu\left(F\right)-\nu\left(C\right)> \nu\left(F\right)$. 反复应用此构造得上升可测列 $\left\{F_{n}\right\}$, 使 $\nu\left(F_{n}\right)$ 严格上升收敛于某 $\gamma$. 由**命题 11.1.2 (符号测度的基本性质)** (2) (下连续性), $\nu\left(\bigcup_{n}F_{n}\right)=\lim_{n}\nu\left(F_{n}\right)=\gamma$. 若 $\bigcup_{n}F_{n}$ 不是正集, 则又可从中取出测度更大的子集, 与 $\gamma$ 的收敛性矛盾, 故 $\bigcup_{n}F_{n}\subset E$ 是正集. 于是 $\gamma=\nu\left(\bigcup_{n}F_{n}\right)\le\beta$; 又 $\nu\left(F_{n}\right)\uparrow\gamma$ 且 $\nu\left(F_{1}\right)> \nu\left(F\right)$, 得 $\nu\left(F\right)< \gamma\le\beta$. 故对任意这样的 $F$ 有 $\nu\left(F\right)\le\beta$, 即 $\alpha\le\beta$. 合并得 $\alpha=\beta$.
-
-由 $\beta$ 的定义, 取正集列 $\left\{P_{n}\right\}\subset E$ 使 $\nu\left(P_{n}\right)\to\beta$. 令 $G=\bigcup_{n=1}^{\infty}P_{n}\subset E$, 则 $G$ 是正集 (**引理 11.2.2 (正集的性质)** (2)). 令 $Q_{n}=\bigcup_{k=1}^{n}P_{k}$, 则 $\left\{Q_{n}\right\}$ 是正集列的上升并, 仍为正集, 且 $\nu\left(Q_{n}\right)\ge\nu\left(P_{n}\right)\to\beta$; 又 $Q_{n}\subset E$ 为正集, 故 $\nu\left(Q_{n}\right)\le\beta$. 于是 $\nu\left(Q_{n}\right)\to\beta$, 由**命题 11.1.2 (符号测度的基本性质)** (2) (下连续性), $\nu\left(G\right)=\lim_{n\to\infty}\nu\left(Q_{n}\right)=\beta=\alpha> 0$.
-
-最后证 $E\setminus G$ 是负集. 反设 $E\setminus G$ 不是负集, 由**引理 11.2.4 (非负集的判定)** 存在正集 $F\subset E\setminus G$ 使 $\nu\left(F\right)> 0$. 因 $G\cap F=\varnothing$, $G\cup F\subset E$ 且 $G\cup F$ 是正集 (**引理 11.2.2 (正集的性质)** (2)), 于是 $\nu\left(G\cup F\right)=\nu\left(G\right)+\nu\left(F\right)=\alpha+\nu\left(F\right)> \alpha=\beta$, 与 $\beta$ 是 $E$ 中全体正集测度的上确界矛盾. 故 $E\setminus G$ 是负集. $\blacksquare$
-
-## 2
-
-设 $\nu$ 是 $\left(X,\mathcal M\right)$ 上的符号测度.
-
-(a) $L^{1}\left(\nu\right)=L^{1}\left(\left|\nu\right|\right)$;
-
-(b) 若 $f\in L^{1}\left(\nu\right)$, 则 $\left|\int f\,\mathrm{d}\nu\right|\le\int\left|f\right|\mathrm{d}\left|\nu\right|$;
-
-(c) 若 $E\in\mathcal M$, 则 $\left|\nu\right|\left(E\right)=\sup\left\{\left|\int_{E}f\,\mathrm{d}\nu\right|:\left|f\right|\le1\right\}$.
-
-### 解答 2
-
-**(a).** 由**定义 11.4.4 (变差测度)**, $\left|\nu\right|=\nu^{+}+\nu^{-}$. 于是对任意 $f$,
+先在 $\left(0,a\right)\times\left(0,a\right)$ 上考虑二元函数 $h\left(x,t\right)=t^{-1}f\left(t\right)\chi_{\left\{x< t\right\}}\left(x,t\right)$ (即定义域 $\left\{\left(x,t\right):0< x< t< a\right\}$). 由**定理 10.2.2 (托内利定理)** 应用于非负函数 $\left|h\right|$,
 
 $$
-\int\left|f\right|\mathrm{d}\left|\nu\right|=\int\left|f\right|\mathrm{d}\nu^{+}+\int\left|f\right|\mathrm{d}\nu^{-}.
+\int_{0}^{a}\int_{x}^{a}t^{-1}\left|f\left(t\right)\right|\mathrm{d}t\,\mathrm{d}x=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}\left|f\left(t\right)\right|\mathrm{d}x\right)\mathrm{d}t=\int_{0}^{a}t^{-1}\left|f\left(t\right)\right|\cdot t\,\mathrm{d}t=\int_{0}^{a}\left|f\left(t\right)\right|\mathrm{d}t< \infty,
 $$
 
-三项均非负, 故左端有限当且仅当右端两项均有限, 即 $f\in L^{1}\left(\nu^{+}\right)\cap L^{1}\left(\nu^{-}\right)=L^{1}\left(\nu\right)$. 故 $L^{1}\left(\nu\right)=L^{1}\left(\left|\nu\right|\right)$.
-
-**(b).** 由**定理 11.4.3 (若尔当分解定理)**, $\nu=\nu^{+}-\nu^{-}$. 于是由三角不等式与 (a),
+其中内层交换次序用**定理 10.2.2 (托内利定理)** 于非负函数. 故 $\left(x,t\right)\mapsto t^{-1}f\left(t\right)\chi_{\left\{x< t\right\}}$ 可积, 从而 $g$ 可积. 再由**定理 10.2.1 (富比尼定理)** 交换次序,
 
 $$
-\left|\int f\,\mathrm{d}\nu\right|=\left|\int f\,\mathrm{d}\nu^{+}-\int f\,\mathrm{d}\nu^{-}\right|\le\int\left|f\right|\mathrm{d}\nu^{+}+\int\left|f\right|\mathrm{d}\nu^{-}=\int\left|f\right|\mathrm{d}\left|\nu\right|.
-$$
-
-**(c).** 先证 $\le$: 对任意可测函数 $g$ 满足 $\left|g\right|\le1$, 由 (b) 得 $\left|\int_{E}g\,\mathrm{d}\nu\right|\le\int_{E}\left|g\right|\mathrm{d}\left|\nu\right|\le\int_{E}1\,\mathrm{d}\left|\nu\right|=\left|\nu\right|\left(E\right)$, 故 $\sup\le\left|\nu\right|\left(E\right)$.
-
-再证 $\ge$: 取 $\nu$ 的一个哈恩分解 $X=P\cup N$ (**定理 11.3.2 (哈恩分解定理)**), 令 $g=\chi_{E\cap P}-\chi_{E\cap N}$, 则 $\left|g\right|\le1$ 且 $g$ 可测. 由**定理 11.4.3 (若尔当分解定理)**, $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)$, $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)$. 于是 $\int_{E}g\,\mathrm{d}\nu=\nu\left(E\cap P\right)-\nu\left(E\cap N\right)=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)=\left|\nu\right|\left(E\right)$. 故 $\sup\ge\left|\nu\right|\left(E\right)$. 合并得等式. $\blacksquare$
-
-## 3
-
-设 $\nu\left(E\right)=\int_{E}f\,\mathrm{d}\mu$, 其中 $\mu$ 是正测度, $f$ 是扩张的 $\mu$-可积函数. 用 $f$ 和 $\mu$ 描述 $\nu$ 的哈恩分解, 以及 $\nu$ 的正变差,负变差与全变差.
-
-### 解答 3
-
-$f$ 是实值可测函数, 至少一个 $\int f^{+}\mathrm{d}\mu$, $\int f^{-}\mathrm{d}\mu$ 有限. 由**定义 11.2.1 (正集,负集,零集)**: 对 $E\in\mathcal M$, $E$ 是 $\nu$-正集当且仅当对任意可测 $F\subset E$, $\nu\left(F\right)=\int_{F}f\,\mathrm{d}\mu\ge0$; 因这对 $F=E\cap\left\{f< 0\right\}$ 与 $F=E\cap\left\{f> 0\right\}$ 均须成立, 故 $E$ 是正集当且仅当 $f\ge0$ $\mu$-几乎处处于 $E$ 上. 同理, $E$ 是负集当且仅当 $f\le0$ $\mu$-几乎处处于 $E$ 上; $E$ 是零集当且仅当 $f=0$ $\mu$-几乎处处于 $E$ 上.
-
-因此 $X=P\cup N$, 其中 $P=\left\{x:f\left(x\right)\ge0\right\}$, $N=\left\{x:f\left(x\right)< 0\right\}$, 是 $\nu$ 的一个哈恩分解 (**定理 11.3.2 (哈恩分解定理)**): $P$ 是正集, $N$ 是负集, $P\cap N=\varnothing$, $P\cup N=X$. (零测集 $\left\{f=0\right\}$ 可并入 $P$ 或 $N$ 而不改变分解的本质.)
-
-由**定理 11.4.3 (若尔当分解定理)**, $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)=\int_{E\cap P}f\,\mathrm{d}\mu=\int_{E}f^{+}\mathrm{d}\mu$ (因 $f\ge0$ 于 $P$ 上), $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)=-\int_{E\cap N}f\,\mathrm{d}\mu=\int_{E}f^{-}\mathrm{d}\mu$ (因 $f\le0$ 于 $N$ 上). 故 $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$. $\blacksquare$
-
-## 4
-
-设 $\nu$ 是 $\left(X,\mathcal M\right)$ 上的符号测度, $E\in\mathcal M$.
-
-(a) $\nu^{+}\left(E\right)=\sup\left\{\nu\left(F\right):F\in\mathcal M,F\subset E\right\}$, 且 $\nu^{-}\left(E\right)=-\inf\left\{\nu\left(F\right):F\in\mathcal M,F\subset E\right\}$;
-
-(b) $\left|\nu\right|\left(E\right)=\sup\left\{\sum_{i}\left|\nu\left(E_{i}\right)\right|:n\in\mathbb N,E_{1},\dots,E_{n}\text{ 两两不交},\bigcup_{i=1}^{n}E_{i}=E\right\}$.
-
-### 解答 4
-
-**(a).** 取 $\nu$ 的哈恩分解 $X=P\cup N$ (**定理 11.3.2 (哈恩分解定理)**), 则 $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)$, $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)$ (**定理 11.4.3 (若尔当分解定理)**).
-
-对任意 $F\in\mathcal M$ 且 $F\subset E$, 由 $\nu=\nu^{+}-\nu^{-}$ 及 $\nu^{-}\ge0$ 得 $\nu\left(F\right)=\nu^{+}\left(F\right)-\nu^{-}\left(F\right)\le\nu^{+}\left(F\right)\le\nu^{+}\left(E\right)$ (最后一式由 $\nu^{+}$ 的单调性, 因 $F\subset E$). 故 $\sup\left\{\nu\left(F\right):F\subset E\right\}\le\nu^{+}\left(E\right)$. 取 $F=E\cap P\subset E$, 则 $\nu\left(E\cap P\right)=\nu^{+}\left(E\cap P\right)-\nu^{-}\left(E\cap P\right)=\nu^{+}\left(E\cap P\right)=\nu^{+}\left(E\right)$ (因 $E\cap P\subset P$ 是正集, $\nu^{-}\left(E\cap P\right)=0$). 故 $\sup\ge\nu^{+}\left(E\right)$. 合并得 $\nu^{+}\left(E\right)=\sup\left\{\nu\left(F\right):F\subset E\right\}$.
-
-同理, 对 $F\subset E$ 有 $\nu\left(F\right)=\nu^{+}\left(F\right)-\nu^{-}\left(F\right)\ge-\nu^{-}\left(F\right)\ge-\nu^{-}\left(E\right)$, 故 $\inf\left\{\nu\left(F\right):F\subset E\right\}\ge-\nu^{-}\left(E\right)$, 即 $-\inf\left\{\nu\left(F\right):F\subset E\right\}\le\nu^{-}\left(E\right)$. 取 $F=E\cap N$, 则 $\nu\left(E\cap N\right)=-\nu^{-}\left(E\cap N\right)=-\nu^{-}\left(E\right)$, 故 $\inf\le-\nu^{-}\left(E\right)$, 即 $-\inf\ge\nu^{-}\left(E\right)$. 合并得 $\nu^{-}\left(E\right)=-\inf\left\{\nu\left(F\right):F\subset E\right\}$.
-
-**(b).** 先证 $\le$: 对任意两两不交且并等于 $E$ 的 $\left\{E_{i}\right\}$, 由 $\nu=\nu^{+}-\nu^{-}$ 与三角不等式,
-
-$$
-\sum_{i}\left|\nu\left(E_{i}\right)\right|=\sum_{i}\left|\nu^{+}\left(E_{i}\right)-\nu^{-}\left(E_{i}\right)\right|\le\sum_{i}\left[\nu^{+}\left(E_{i}\right)+\nu^{-}\left(E_{i}\right)\right]=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)=\left|\nu\right|\left(E\right),
-$$
-
-故 $\sup\le\left|\nu\right|\left(E\right)$.
-
-再证 $\ge$: 取哈恩分解 $X=P\cup N$ (**定理 11.3.2 (哈恩分解定理)**), 令 $E_{1}=E\cap P$, $E_{2}=E\cap N$, 则 $E_{1},E_{2}$ 两两不交且 $E_{1}\cup E_{2}=E$. 于是 $\left|\nu\left(E_{1}\right)\right|+\left|\nu\left(E_{2}\right)\right|=\nu^{+}\left(E\cap P\right)+\nu^{-}\left(E\cap N\right)=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)=\left|\nu\right|\left(E\right)$, 故 $\sup\ge\left|\nu\right|\left(E\right)$. 合并得等式. $\blacksquare$
-
-## 5
-
-设 $\left\{\nu_{j}\right\}$ 是一列正测度. 若 $\nu_{j}\perp\mu$ 对一切 $j$, 则 $\sum_{j}\nu_{j}\perp\mu$; 若 $\nu_{j}\ll\mu$ 对一切 $j$, 则 $\sum_{j}\nu_{j}\ll\mu$.
-
-### 解答 5
-
-**(奇异情形).** 因 $\nu_{j}\perp\mu$ (**定义 11.4.1 (相互奇异的符号测度)**), 对每个 $j$ 存在 $E_{j}\in\mathcal M$ 使 $E_{j}$ 是 $\mu$-零集且 $E_{j}^{c}$ 是 $\nu_{j}$-零集, 即 $\mu\left(E_{j}\right)=0$, $\nu_{j}\left(E_{j}^{c}\right)=0$. 令 $E=\bigcup_{j=1}^{\infty}E_{j}$. 由 $\mu$ 的次可数可加性, $\mu\left(E\right)\le\sum_{j=1}^{\infty}\mu\left(E_{j}\right)=0$, 故 $E$ 是 $\mu$-零集. 又 $E^{c}=\bigcap_{j=1}^{\infty}E_{j}^{c}\subset E_{k}^{c}$ 对一切 $k$, 由 $\nu_{k}$ 的单调性 $\nu_{k}\left(E^{c}\right)\le\nu_{k}\left(E_{k}^{c}\right)=0$, 故 $\nu_{k}\left(E^{c}\right)=0$ 对一切 $k$, 从而 $\left(\sum_{j}\nu_{j}\right)\left(E^{c}\right)=\sum_{j}\nu_{j}\left(E^{c}\right)=0$. 故 $\sum_{j}\nu_{j}\perp\mu$.
-
-**(绝对连续情形).** 设 $\nu_{j}\ll\mu$ 对一切 $j$ (**定义 11.5.1 (绝对连续性)**). 若 $\mu\left(E\right)=0$, 则 $\nu_{j}\left(E\right)=0$ 对一切 $j$, 故 $\left(\sum_{j}\nu_{j}\right)\left(E\right)=\sum_{j}\nu_{j}\left(E\right)=0$. 因此 $\sum_{j}\nu_{j}\ll\mu$. $\blacksquare$
-
-## 6
-
-设 $\mu$ 是正测度. 一族函数 $\left\{f_{\alpha}\right\}_{\alpha\in A}\subset L^{1}\left(\mu\right)$ 称为一致可积的, 若对任意 $\varepsilon> 0$ 存在 $\delta> 0$ 使得 $\left|\int_{E}f_{\alpha}\,\mathrm{d}\mu\right|< \varepsilon$ 对所有 $\alpha\in A$ 成立, 只要 $\mu\left(E\right)< \delta$.
-
-(a) $L^{1}\left(\mu\right)$ 的任意有限子集是一致可积的;
-
-(b) 若 $\left\{f_{n}\right\}$ 是 $L^{1}\left(\mu\right)$ 中的序列且在 $L^{1}$ 度量下收敛于 $f\in L^{1}\left(\mu\right)$, 则 $\left\{f_{n}\right\}$ 是一致可积的.
-
-### 解答 6
-
-**(a).** 设 $\left\{f_{1},\dots,f_{n}\right\}\subset L^{1}\left(\mu\right)$. 对每个 $j$, 由**注 11.5.3 (积分关于测度的绝对连续)** ($f_{j}\in L^{1}\left(\mu\right)$, $\lim_{\mu\left(E\right)\to0}\int_{E}f_{j}\,\mathrm{d}\mu=0$), 存在 $\delta_{j}> 0$ 使 $\mu\left(E\right)< \delta_{j}\Rightarrow\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|< \varepsilon$. 取 $\delta=\min_{1\le j\le n}\delta_{j}> 0$, 则当 $\mu\left(E\right)< \delta$ 时, 对所有 $j$ 有 $\mu\left(E\right)< \delta_{j}$, 故 $\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|< \varepsilon$. 故 $\left\{f_{1},\dots,f_{n}\right\}$ 一致可积.
-
-**(b).** 因 $\int\left|f_{n}-f\right|\mathrm{d}\mu\to0$, 存在 $N$ 使当 $n\ge N$ 时 $\int\left|f_{n}-f\right|\mathrm{d}\mu< \frac{\varepsilon}{2}$. 由 (a), 单元素集 $\left\{f\right\}$ 一致可积: 存在 $\delta_{1}> 0$ 使 $\mu\left(E\right)< \delta_{1}\Rightarrow\left|\int_{E}f\,\mathrm{d}\mu\right|< \frac{\varepsilon}{2}$. 又有限集 $\left\{f_{1},\dots,f_{N-1}\right\}$ 由 (a) 一致可积: 存在 $\delta_{2}> 0$ 使 $\mu\left(E\right)< \delta_{2}\Rightarrow\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|< \varepsilon$ 对 $n< N$ 成立. 取 $\delta=\min\left\{\delta_{1},\delta_{2}\right\}$. 当 $\mu\left(E\right)< \delta$ 时, 对 $n\ge N$,
-
-$$
-\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|\le\left|\int_{E}f\,\mathrm{d}\mu\right|+\int_{E}\left|f_{n}-f\right|\mathrm{d}\mu\le\frac{\varepsilon}{2}+\int\left|f_{n}-f\right|\mathrm{d}\mu< \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
-$$
-
-而对 $n< N$ 亦有 $\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|< \varepsilon$. 故 $\left\{f_{n}\right\}$ 一致可积. $\blacksquare$
-
-## 7
-
-对 $j=1,2$, 设 $\mu_{j},\nu_{j}$ 是 $\left(X_{j},\mathcal M_{j}\right)$ 上的 $\sigma$-有限测度且 $\nu_{j}\ll\mu_{j}$. 则 $\nu_{1}\times\nu_{2}\ll\mu_{1}\times\mu_{2}$, 且
-
-$$
-\frac{\mathrm{d}\left(\nu_{1}\times\nu_{2}\right)}{\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)}\left(x_{1},x_{2}\right)=\frac{\mathrm{d}\nu_{1}}{\mathrm{d}\mu_{1}}\left(x_{1}\right)\cdot\frac{\mathrm{d}\nu_{2}}{\mathrm{d}\mu_{2}}\left(x_{2}\right).
-$$
-
-### 解答 7
-
-因 $\nu_{j}\ll\mu_{j}$ 且 $\mu_{j}$ 是 $\sigma$-有限正测度, 由**定理 11.5.5 (拉东-尼科迪姆定理)**, 存在 $\mathcal M_{j}$-可测函数 $f_{j}=\frac{\mathrm{d}\nu_{j}}{\mathrm{d}\mu_{j}}\ge0$ 使得 $\nu_{j}\left(E\right)=\int_{E}f_{j}\,\mathrm{d}\mu_{j}$ 对一切 $E\in\mathcal M_{j}$ 成立. 定义 $F:\left(X_{1}\times X_{2}\right)\to\left[0,\infty\right]$, $F\left(x_{1},x_{2}\right)=f_{1}\left(x_{1}\right)f_{2}\left(x_{2}\right)$, 则 $F$ 是 $\mathcal M_{1}\otimes\mathcal M_{2}$-可测的. 对可测矩形 $A\times B\in\mathcal M_{1}\otimes\mathcal M_{2}$, 由**定理 10.2.2 (托内利定理)**,
-
-$$
-\int_{A\times B}F\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)=\left(\int_{A}f_{1}\,\mathrm{d}\mu_{1}\right)\left(\int_{B}f_{2}\,\mathrm{d}\mu_{2}\right)=\nu_{1}\left(A\right)\nu_{2}\left(B\right)=\left(\nu_{1}\times\nu_{2}\right)\left(A\times B\right).
-$$
-
-由乘积测度的唯一性 (矩形容许族上相等), 对一切 $E\in\mathcal M_{1}\otimes\mathcal M_{2}$ 有 $\left(\nu_{1}\times\nu_{2}\right)\left(E\right)=\int_{E}F\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)$. 这蕴含 $\nu_{1}\times\nu_{2}\ll\mu_{1}\times\mu_{2}$ (**定义 11.5.1 (绝对连续性)**: 若 $\left(\mu_{1}\times\mu_{2}\right)\left(E\right)=0$, 则上式右端为 $0$). 又 $\nu_{1}\times\nu_{2}$ 是 $\sigma$-有限的 (因 $\nu_{j}$ $\sigma$-有限), 由**定理 11.5.5 (拉东-尼科迪姆定理)** 的唯一性, $F$ 就是 $\nu_{1}\times\nu_{2}$ 关于 $\mu_{1}\times\mu_{2}$ 的拉东-尼科迪姆导数, 即
-
-$$
-\frac{\mathrm{d}\left(\nu_{1}\times\nu_{2}\right)}{\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)}\left(x_{1},x_{2}\right)=\frac{\mathrm{d}\nu_{1}}{\mathrm{d}\mu_{1}}\left(x_{1}\right)\cdot\frac{\mathrm{d}\nu_{2}}{\mathrm{d}\mu_{2}}\left(x_{2}\right).
+\int_{0}^{a}g\left(x\right)\mathrm{d}x=\int_{0}^{a}\int_{x}^{a}t^{-1}f\left(t\right)\mathrm{d}t\,\mathrm{d}x=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}f\left(t\right)\mathrm{d}x\right)\mathrm{d}t=\int_{0}^{a}t^{-1}f\left(t\right)\cdot t\,\mathrm{d}t=\int_{0}^{a}f\left(t\right)\mathrm{d}t.
 $$
 
 $\blacksquare$
 
-## 8
+## 2
 
-设 $\mu,\nu$ 是 $\left(X,\mathcal M\right)$ 上的测度且 $\nu\ll\mu$, 令 $\lambda=\mu+\nu$. 若 $f=\frac{\mathrm{d}\nu}{\mathrm{d}\lambda}$, 则 $0\le f< 1$ $\mu$-几乎处处, 且 $\frac{\mathrm{d}\nu}{\mathrm{d}\mu}=\frac{f}{1-f}$.
+设 $f\left(x\right)=x^{-1}\sin x$.
 
-### 解答 8
+(a) 证明 $\int_{0}^{\infty}\left|f\left(x\right)\right|\mathrm{d}x=\infty$.
 
-因 $\lambda=\mu+\nu\ge\mu$ 且 $\nu\ll\mu$, 有 $\nu\ll\lambda$ (若 $\lambda\left(E\right)=0$, 则 $\mu\left(E\right)=0$, 从而 $\nu\left(E\right)=0$), 故 $f=\frac{\mathrm{d}\nu}{\mathrm{d}\lambda}$ 存在且 $f\ge0$ $\lambda$-几乎处处 (**定理 11.5.5 (拉东-尼科迪姆定理)**).
+(b) 证明 $\lim_{b\to\infty}\int_{0}^{b}f\left(x\right)\mathrm{d}x=\frac{1}{2}\pi$, 通过积分 $e^{-xy}\sin x$ 关于 $x$ 和 $y$.
 
-先证 $f< 1$ $\mu$-几乎处处. 反设 $\mu\left(\left\{f\ge1\right\}\right)> 0$. 因 $\nu\left(\left\{f\ge1\right\}\right)=\int_{\left\{f\ge1\right\}}f\,\mathrm{d}\lambda\ge\lambda\left(\left\{f\ge1\right\}\right)$, 而 $\lambda=\mu+\nu$, 故 $\nu\left(\left\{f\ge1\right\}\right)\ge\lambda\left(\left\{f\ge1\right\}\right)=\mu\left(\left\{f\ge1\right\}\right)+\nu\left(\left\{f\ge1\right\}\right)$, 推出 $\mu\left(\left\{f\ge1\right\}\right)\le0$, 矛盾. 故 $0\le f< 1$ $\mu$-几乎处处.
+### 解答 2
 
-最后证 $\frac{\mathrm{d}\nu}{\mathrm{d}\mu}=\frac{f}{1-f}$. 对任意 $E\in\mathcal M$, 由 $\lambda=\mu+\nu$ 与 $f=\frac{\mathrm{d}\nu}{\mathrm{d}\lambda}$,
+**(a).** 在区间 $\left[k\pi,\left(k+1\right)\pi\right]$ 上, $\left|\sin x\right|\ge0$ 且 $\int_{k\pi}^{\left(k+1\right)\pi}\left|\sin x\right|\mathrm{d}x=2$. 因 $\frac{1}{x}$ 在此区间上 $\ge\frac{1}{\left(k+1\right)\pi}$, 有 $\int_{k\pi}^{\left(k+1\right)\pi}\frac{\left|\sin x\right|}{x}\mathrm{d}x\ge\frac{2}{\left(k+1\right)\pi}$. 于是对任意 $N$, $\int_{0}^{\left(N+1\right)\pi}\frac{\left|\sin x\right|}{x}\mathrm{d}x\ge\sum_{k=0}^{N}\frac{2}{\left(k+1\right)\pi}\to\infty$ (调和级数发散), 故 $\int_{0}^{\infty}\left|f\right|\mathrm{d}x=\infty$.
+
+**(b).** 对固定的 $b> 0$, 因 $\int_{0}^{b}\int_{0}^{\infty}\left|e^{-xy}\sin x\right|\mathrm{d}y\,\mathrm{d}x=\int_{0}^{b}\frac{\left|\sin x\right|}{x}\mathrm{d}x< \infty$ (固定 $b$ 时 $x^{-1}\sin x$ 可积), 由**定理 10.2.2 (托内利定理)** 可交换次序:
 
 $$
-\nu\left(E\right)=\int_{E}f\,\mathrm{d}\lambda=\int_{E}f\,\mathrm{d}\mu+\int_{E}f\,\mathrm{d}\nu,
+\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\int_{0}^{b}\int_{0}^{\infty}e^{-xy}\sin x\,\mathrm{d}y\,\mathrm{d}x=\int_{0}^{\infty}\left(\int_{0}^{b}e^{-xy}\sin x\,\mathrm{d}x\right)\mathrm{d}y.
 $$
 
-即 $\int_{E}\left(1-f\right)\mathrm{d}\nu=\int_{E}f\,\mathrm{d}\mu$. 因 $1-f> 0$ $\mu$-几乎处处 (也 $\lambda$-几乎处处), 由**定理 11.5.5 (拉东-尼科迪姆定理)** 的唯一性, $\frac{\mathrm{d}\nu}{\mathrm{d}\mu}=\frac{f}{1-f}$. $\blacksquare$
+对固定的 $y$, 分部积分两次得 $\int_{0}^{b}e^{-xy}\sin x\,\mathrm{d}x=\frac{1-e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}$. 故 $\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\int_{0}^{\infty}\frac{1-e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}\mathrm{d}y$.
 
-## 9
+**取极限 $b\to\infty$.** 拆成两项 $\frac{1}{1+y^{2}}-\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}$. 第一项积分 $\int_{0}^{\infty}\frac{1}{1+y^{2}}\mathrm{d}y=\frac{\pi}{2}$. 对第二项, 当 $b\ge1$ 时 $\left|\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}\right|\le\frac{e^{-y}\left(y+1\right)}{1+y^{2}}=:g\left(y\right)$, 且 $\int_{0}^{\infty}g\left(y\right)\mathrm{d}y< \infty$ (被 $e^{-y}$ 指数衰减控制). 由**定理 8.2.9 (控制收敛定理)** (对任意序列 $b_{n}\to\infty$ 应用), 该项趋于 $\int_{0}^{\infty}0\,\mathrm{d}y=0$. 故 $\lim_{b\to\infty}\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\frac{\pi}{2}$. $\blacksquare$
 
-设 $\left(X,\mathcal M,\mu\right)$ 是 $\sigma$-有限测度空间, $\mathcal N$ 是 $\mathcal M$ 的子 $\sigma$-代数, $\nu=\mu|_{\mathcal N}$. 若 $f\in L^{1}\left(\mu\right)$, 则存在 $g\in L^{1}\left(\nu\right)$ (从而 $g$ 是 $\mathcal N$-可测的) 使得 $\int_{E}f\,\mathrm{d}\mu=\int_{E}g\,\mathrm{d}\nu$ 对一切 $E\in\mathcal N$ 成立; 若 $g'$ 是另一个这样的函数, 则 $g=g'$ $\nu$-几乎处处.
+## 3
 
-### 解答 9
+若 $f$ 在 $\left[0,\infty\right)$ 上连续, 对 $\alpha> 0$ 和 $x\ge0$, 令
 
-对 $E\in\mathcal N$, 定义 $\nu_{0}\left(E\right):=\int_{E}f\,\mathrm{d}\mu$. 则 $\nu_{0}$ 是 $\mathcal N$ 上的符号测度: 有限可加性与可数可加性由 $\mu$ 的可数可加性及 $f$ 的可积性 (控制收敛) 保证, 且 $\left|\nu_{0}\left(E\right)\right|\le\int_{E}\left|f\right|\mathrm{d}\mu\le\int\left|f\right|\mathrm{d}\mu< \infty$, 故 $\nu_{0}$ 有限. 又 $\nu_{0}\ll\nu$ (**定义 11.5.1 (绝对连续性)**): 若 $E\in\mathcal N$ 且 $\nu\left(E\right)=\mu\left(E\right)=0$, 则 $\nu_{0}\left(E\right)=\int_{E}f\,\mathrm{d}\mu=0$ ($f\in L^{1}\left(\mu\right)$, 在零测集上积分为 $0$). 由于 $\nu=\mu|_{\mathcal N}$ 是 $\sigma$-有限的 (由 $\mu$ $\sigma$-有限), 由**定理 11.5.5 (拉东-尼科迪姆定理)**, 存在 $\mathcal N$-可测函数 $g=\frac{\mathrm{d}\nu_{0}}{\mathrm{d}\nu}\in L^{1}\left(\nu\right)$ 使得 $\int_{E}f\,\mathrm{d}\mu=\nu_{0}\left(E\right)=\int_{E}g\,\mathrm{d}\nu$ 对一切 $E\in\mathcal N$ 成立.
+$$
+I_{\alpha}f\left(x\right)=\frac{1}{\Gamma\left(\alpha\right)}\int_{0}^{x}\left(x-t\right)^{\alpha-1}f\left(t\right)\mathrm{d}t,
+$$
 
-若 $g'\in L^{1}\left(\nu\right)$ 也满足同样等式, 则 $\int_{E}\left(g-g'\right)\mathrm{d}\nu=0$ 对一切 $E\in\mathcal N$. 取 $E=\left\{g> g'\right\}\in\mathcal N$, 因 $g-g'\in L^{1}\left(\nu\right)$ 且 $\int_{\left\{g> g'\right\}}\left(g-g'\right)\mathrm{d}\nu=0$, 由非负函数积分为零则几乎处处为零, 得 $g=g'$ $\nu$-几乎处处于 $\left\{g> g'\right\}$ 上; 同理于 $\left\{g< g'\right\}$ 上. 故 $g=g'$ $\nu$-几乎处处. $\blacksquare$
+$I_{\alpha}f$ 称为 $f$ 的 $\alpha$ 阶分数阶积分.
+
+(a) $I_{\alpha+\beta}f=I_{\alpha}\left(I_{\beta}f\right)$ 对所有 $\alpha,\beta> 0$ 成立.
+
+(b) 若 $n\in\mathbb N$, $I_{n}f$ 是 $f$ 的 $n$ 阶反导数.
+
+### 解答 3
+
+**(a).** 展开复合积分, 在区域 $\left\{\left(s,t\right):0< t< s< x\right\}$ 上交换次序:
+
+$$
+I_{\alpha}\left(I_{\beta}f\right)\left(x\right)=\frac{1}{\Gamma\left(\alpha\right)}\int_{0}^{x}\left(x-s\right)^{\alpha-1}\left[\frac{1}{\Gamma\left(\beta\right)}\int_{0}^{s}\left(s-t\right)^{\beta-1}f\left(t\right)\mathrm{d}t\right]\mathrm{d}s.
+$$
+
+因 $f$ 连续, 被积函数可积, 由**定理 10.2.1 (富比尼定理)** 交换次序得
+
+$$
+=\frac{1}{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}\int_{0}^{x}f\left(t\right)\left[\int_{t}^{x}\left(x-s\right)^{\alpha-1}\left(s-t\right)^{\beta-1}\mathrm{d}s\right]\mathrm{d}t.
+$$
+
+对内层积分, 令 $u=\frac{s-t}{x-t}$, 则 $s=t+u\left(x-t\right)$, $\mathrm{d}s=\left(x-t\right)\mathrm{d}u$, 得
+
+$$
+\int_{t}^{x}\left(x-s\right)^{\alpha-1}\left(s-t\right)^{\beta-1}\mathrm{d}s=\left(x-t\right)^{\alpha+\beta-1}\int_{0}^{1}\left(1-u\right)^{\alpha-1}u^{\beta-1}\mathrm{d}u.
+$$
+
+由伽马函数与贝塔恒等式, $\int_{0}^{1}\left(1-u\right)^{\alpha-1}u^{\beta-1}\mathrm{d}u=\frac{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}{\Gamma\left(\alpha+\beta\right)}$. 代入得 $I_{\alpha}\left(I_{\beta}f\right)\left(x\right)=\frac{1}{\Gamma\left(\alpha+\beta\right)}\int_{0}^{x}\left(x-t\right)^{\alpha+\beta-1}f\left(t\right)\mathrm{d}t=I_{\alpha+\beta}f\left(x\right)$.
+
+**(b).** 先看 $\alpha=1$: 因 $\Gamma\left(1\right)=1$, $I_{1}f\left(x\right)=\int_{0}^{x}f\left(t\right)\mathrm{d}t$, 由微积分基本定理 $\frac{\mathrm{d}}{\mathrm{d}x}I_{1}f=f$. 由 (a), 迭代得 $I_{n}f=\underbrace{I_{1}\circ\cdots\circ I_{1}}_{n\text{ 次}}f$, 故 $\frac{\mathrm{d}^{n}}{\mathrm{d}x^{n}}I_{n}f=f$. 又因 $I_{\alpha}f$ 的积分下限为 $0$, 对 $k< n$ 有 $\left(\frac{\mathrm{d}}{\mathrm{d}x}\right)^{k}I_{n}f$ 在 $0$ 处取值为 $0$. 故 $I_{n}f$ 是 $f$ 的一个 $n$ 阶反导数. $\blacksquare$
+
+## 4
+
+$S^{n-1}$ 上的测度 $\sigma$ 在旋转下不变.
+
+### 解答 4
+
+设 $R\in O\left(n\right)$, 即 $R^{\top}R=I$, 则 $\left|\det R\right|=1$. 由正交变换保持勒贝格测度, $R$ 在 $\mathbb R^{n}$ 上保持 $m$. 由于 $R$ 保持范数 $\left|Rx\right|=\left|x\right|$, 它在球面坐标分解 $\Phi\left(x\right)=\left(r,x'\right)$ 下作用于球面部分: 存在球面 $S^{n-1}$ 上的旋转 $\rho$ 使 $R\left(rx'\right)=r\rho\left(x'\right)$. 记 $m^{*}$ 为极坐标诱导测度 ($m^{*}=\rho\times\sigma$ 由**定理 11.4.1 (极坐标下的积分公式)**), 对博雷尔集 $A\subset\left(0,\infty\right)\times S^{n-1}$,
+
+$$
+m^{*}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)=m\left(\Phi^{-1}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)\right)=m\left(R\Phi^{-1}\left(A\right)\right)=m\left(\Phi^{-1}\left(A\right)\right)=m^{*}\left(A\right),
+$$
+
+故 $m^{*}$ 旋转不变.
+
+定义 $\sigma_{R}\left(E\right):=\sigma\left(R^{-1}E\right)=\sigma\left(R^{\top}E\right)$, 它是 $S^{n-1}$ 上的博雷尔测度. 对矩形 $\left(a,b\right]\times E\subset\left(0,\infty\right)\times S^{n-1}$,
+
+$$
+\left(\rho\times\sigma_{R}\right)\left(\left(a,b\right]\times E\right)=\int_{a}^{b}r^{n-1}\mathrm{d}r\cdot\sigma_{R}\left(E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right).
+$$
+
+由 $m^{*}=\rho\times\sigma$ (**定理 11.4.1 (极坐标下的积分公式)**), $\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times R^{-1}E\right)$. 又由 $m^{*}$ 的旋转不变性, $m^{*}\left(\left(a,b\right]\times R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(E\right)$. 故在矩形上 $\rho\times\sigma_{R}=\rho\times\sigma$. 由测度在乘积 $\sigma$-代数生成族上的唯一性, $\rho\times\sigma_{R}=\rho\times\sigma$ 在 $\left(0,\infty\right)\times S^{n-1}$ 上成立.
+
+最后由**定理 11.4.1 (极坐标下的积分公式)** 的唯一性 (使 $m^{*}=\rho\times\sigma$ 的测度 $\sigma$ 唯一), 从 $\rho\times\sigma_{R}=m^{*}=\rho\times\sigma$ 得 $\sigma_{R}=\sigma$, 即 $\sigma\left(R^{-1}E\right)=\sigma\left(E\right)$ 对一切博雷尔 $E$ 成立. 故 $\sigma$ 旋转不变. $\blacksquare$
+
+## 5
+
+对哪些实值 $a$ 和 $b$, $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在集合 $\left\{x\in\mathbb R^{n}:\left|x\right|< 1/2\right\}$ 上可积? 在集合 $\left\{x\in\mathbb R^{n}:\left|x\right|> 2\right\}$ 上可积?
+
+### 解答 5
+
+函数 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 是径向的, 由**定理 11.4.1 (极坐标下的积分公式)**,
+
+$$
+\int_{\mathbb R^{n}}\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}\mathrm{d}x=\sigma\left(S^{n-1}\right)\int_{0}^{\infty}r^{a+n-1}\left|\log r\right|^{b}\mathrm{d}r.
+$$
+
+**集合 $\left\{\left|x\right|< 1/2\right\}$.** 作代换 $u=-\log r$ (即 $r=e^{-u}$, $\mathrm{d}r=-e^{-u}\mathrm{d}u$, 则 $r\in\left(0,1/2\right]$ 对应 $u\in\left[\log 2,\infty\right)$):
+
+$$
+\int_{0}^{1/2}r^{a+n-1}\left|\log r\right|^{b}\mathrm{d}r=\int_{\log 2}^{\infty}e^{-u\left(a+n-1\right)}e^{-u}u^{b}\mathrm{d}u=\int_{\log 2}^{\infty}e^{-u\left(a+n\right)}u^{b}\mathrm{d}u.
+$$
+
+收敛条件由指数因子决定:
+
+$$
+\int_{\log 2}^{\infty}e^{-u\left(a+n\right)}u^{b}\mathrm{d}u\text{ 收敛}\iff\begin{cases}a+n> 0,&\text{指数衰减, 任意 }b,\\a+n=0\text{ 且 }b< -1,&\int u^{b}\mathrm{d}u\text{ 收敛},\\a+n< 0,&\text{指数增长, 发散}.\end{cases}
+$$
+
+故 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在 $\left\{\left|x\right|< 1/2\right\}$ 上可积 $\iff a> -n$, 或 $a=-n$ 且 $b< -1$.
+
+**集合 $\left\{\left|x\right|> 2\right\}$.** 当 $r\ge2$ 时 $\left|\log r\right|=\log r$. 作代换 $r=e^{u}$ ($\mathrm{d}r=e^{u}\mathrm{d}u$, $u\ge\log 2$):
+
+$$
+\int_{2}^{\infty}r^{a+n-1}\left(\log r\right)^{b}\mathrm{d}r=\int_{\log 2}^{\infty}e^{u\left(a+n-1\right)}e^{u}u^{b}\mathrm{d}u=\int_{\log 2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u.
+$$
+
+收敛条件: $\int_{\log 2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u\text{ 收敛}\iff a+n< 0$ (指数衰减; $a+n> 0$ 时指数增长发散, $a+n=0$ 时 $\int u^{b}\mathrm{d}u$ 发散对任意 $b$). 故 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在 $\left\{\left|x\right|> 2\right\}$ 上可积 $\iff a< -n$.
+
+**结论.** 在 $\left\{\left|x\right|< 1/2\right\}$ 上可积 $\iff a> -n$ 或 $\left(a=-n\text{ 且 }b< -1\right)$; 在 $\left\{\left|x\right|> 2\right\}$ 上可积 $\iff a< -n$. $\blacksquare$

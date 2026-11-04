@@ -12,6 +12,14 @@
 > 
 > 设 $f:\left[a,b\right]\to\mathbb R$. 对 $\left[a,b\right]$ 的任意分划 $P:a=x_{0}< x_{1}< \cdots< x_{n}=b$, 定义变差 $V\left(f,P\right)=\sum_{i=1}^{n}\left|f\left(x_{i}\right)-f\left(x_{i-1}\right)\right|$. $f$ 在 $\left[a,b\right]$ 上的全变差为 $V_{a}^{b}\left(f\right)=\sup_{P}V\left(f,P\right)$. 若 $V_{a}^{b}\left(f\right)< +\infty$, 则称 $f$ 为有界变差函数, 记作 $f\in BV\left(\left[a,b\right]\right)$.
 
+> **定理 14.0.7 (有界变差函数的基本性质)**
+> 
+> 设 $f,g\in BV\left(\left[a,b\right]\right)$, 则: (1) $BV\left(\left[a,b\right]\right)$ 构成一个线性空间; (2) $f$ 为有界函数; (3) 若 $f$ 满足利普希茨条件, 则 $f\in BV\left(\left[a,b\right]\right)$; (4) 单调函数必为有界变差函数.
+
+> **定理 14.0.10 (有界变差函数的间断点性质)**
+> 
+> 若 $f\in BV\left(\left[a,b\right]\right)$, 则: (1) $f$ 的不连续点至多可数; (2) 所有不连续点都是第一类间断点.
+
 > **定义 15.0.11 (绝对连续性)**
 > 
 > 函数 $f:\left[a,b\right]\to\mathbb R$ 称为绝对连续的 (记 $f\in AC\left(\left[a,b\right]\right)$), 若对任意 $\varepsilon> 0$, 存在 $\delta> 0$, 使得对任意有限个互不相交的子区间 $\left(a_{i},b_{i}\right)\subset\left[a,b\right]$, 只要 $\sum_{i}\left(b_{i}-a_{i}\right)< \delta$, 就有 $\sum_{i}\left|f\left(b_{i}\right)-f\left(a_{i}\right)\right|< \varepsilon$.
@@ -26,13 +34,61 @@
 
 ## 1
 
+设 $F\left(x\right)=x^{2}\sin\left(x^{-1}\right)$, $G\left(x\right)=x^{2}\sin\left(x^{-2}\right)$ 对 $x\ne0$, 且 $F\left(0\right)=G\left(0\right)=0$.
+
+(a) $F$ 与 $G$ 处处可微 (包括 $x=0$);
+
+(b) $F\in BV\left(\left[-1,1\right]\right)$, 但 $G\notin BV\left(\left[-1,1\right]\right)$.
+
+### 解答 1
+
+**(a).** 对 $x\ne0$, 直接求导得 $F'\left(x\right)=2x\sin\left(x^{-1}\right)-\cos\left(x^{-1}\right)$, $G'\left(x\right)=2x\sin\left(x^{-2}\right)-\frac{2}{x}\cos\left(x^{-2}\right)$. 在 $x=0$ 处, 用定义判别:
+
+$$
+F'\left(0\right)=\lim_{h\to0}\frac{F\left(h\right)-F\left(0\right)}{h}=\lim_{h\to0}\frac{h^{2}\sin\left(h^{-1}\right)}{h}=\lim_{h\to0}h\sin\left(h^{-1}\right)=0,
+$$
+
+其中最后一个等式由 $\left|h\sin\left(h^{-1}\right)\right|\le\left|h\right|\to0$ 得; 同理 $G'\left(0\right)=\lim_{h\to0}\frac{h^{2}\sin\left(h^{-2}\right)}{h}=\lim_{h\to0}h\sin\left(h^{-2}\right)=0$. 故 $F,G$ 在 $\mathbb R$ 上处处可微 (含 $x=0$).
+
+**(b).** 先证 $F\in BV\left(\left[-1,1\right]\right)$. 由 (a), 对 $x\ne0$, $\left|F'\left(x\right)\right|=\left|2x\sin\left(x^{-1}\right)-\cos\left(x^{-1}\right)\right|\le2\left|x\right|+1\le3$. 故 $F'$ 在 $\left[-1,1\right]$ 上有界. 由中值定理, $\left|F\left(x\right)-F\left(y\right)\right|\le3\left|x-y\right|$, 即 $F$ 满足利普希茨条件, 由**定理 14.0.7 (有界变差函数的基本性质)** (3), $F\in BV\left(\left[-1,1\right]\right)$.
+
+再证 $G\notin BV\left(\left[-1,1\right]\right)$. 取 $x_{k}=\frac{1}{\sqrt{\pi/2+k\pi}}$ ($k=0,1,2,\dots$), 则 $x_{k}\downarrow0$, 且 $\sin\left(x_{k}^{-2}\right)=\sin\left(\pi/2+k\pi\right)=\left(-1\right)^{k}$, 故 $G\left(x_{k}\right)=\left(-1\right)^{k}x_{k}^{2}$. 对分划 $0< x_{N}< \cdots< x_{0}$ (以及端点 $0$), 由交替符号,
+
+$$
+\sum_{k=0}^{N-1}\left|G\left(x_{k}\right)-G\left(x_{k+1}\right)\right|=\sum_{k=0}^{N-1}\left(x_{k}^{2}+x_{k+1}^{2}\right)\ge\sum_{k=0}^{N-1}x_{k}^{2}=\sum_{k=0}^{N-1}\frac{1}{\pi/2+k\pi}.
+$$
+
+由级数, 调和级数 $\sum_{k}\frac{1}{k}$ 发散, 故上式随 $N\to\infty$ 趋于 $+\infty$. 于是 $G$ 在 $\left[0,1\right]\subset\left[-1,1\right]$ 上的全变差已为 $+\infty$, 从而 $V_{-1}^{1}\left(G\right)=+\infty$, 即 $G\notin BV\left(\left[-1,1\right]\right)$. $\blacksquare$
+
+## 2
+
+若 $F_{1},F_{2},\dots,F\in NBV$ 且 $F_{j}\to F$ 逐点收敛, 则 $T_{F}\le\liminf_{j\to\infty}T_{F_{j}}$.
+
+### 解答 2
+
+固定 $x\in\mathbb R$ 与一个分划 $a=t_{0}< \cdots< t_{n}=x$ (取 $-\infty< a$). 因 $F_{j}\to F$ 逐点, 由有限项极限可交换 (求和为有限和),
+
+$$
+\sum_{k=1}^{n}\left|F\left(t_{k}\right)-F\left(t_{k-1}\right)\right|=\lim_{j\to\infty}\sum_{k=1}^{n}\left|F_{j}\left(t_{k}\right)-F_{j}\left(t_{k-1}\right)\right|=\liminf_{j\to\infty}\sum_{k=1}^{n}\left|F_{j}\left(t_{k}\right)-F_{j}\left(t_{k-1}\right)\right|\le\liminf_{j\to\infty}T_{F_{j}}\left(x\right),
+$$
+
+其中最后一个不等式由**定义 14.0.6 (有界变差函数)** (每个分划的和不超过全变差 $T_{F_{j}}\left(x\right)$, 且 $\liminf$ 保持不等式) 得. 对全体分划取上确界,
+
+$$
+T_{F}\left(x\right)=\sup_{P}\sum_{k=1}^{n}\left|F\left(t_{k}\right)-F\left(t_{k-1}\right)\right|\le\liminf_{j\to\infty}T_{F_{j}}\left(x\right).
+$$
+
+故 $T_{F}\le\liminf_{j\to\infty}T_{F_{j}}$. $\blacksquare$
+
+## 3
+
 设 $f:\left[a,b\right]\to\mathbb R$, 把 $f$ 的图像看作 $\mathbb C$ 的子集 $\left\{t+if\left(t\right):t\in\left[a,b\right]\right\}$. 该图像的长度 $L$ 定义为所有内接多边形长度之和的上确界. (内接多边形是连接 $t_{j-1}+if\left(t_{j-1}\right)$ 与 $t_{j}+if\left(t_{j}\right)$ 的线段之并, $1\le j\le n$, 其中 $a=t_{0}< \cdots< t_{n}=b$.)
 
 (a) 令 $F\left(t\right)=t+if\left(t\right)$, 则 $L$ 是 $F$ 在 $\left[a,b\right]$ 上的全变差;
 
 (b) 若 $f$ 绝对连续, 则 $L=\int_{a}^{b}\left[1+\left(f'\left(t\right)\right)^{2}\right]^{1/2}\mathrm{d}t$.
 
-### 解答 1
+### 解答 3
 
 **(a).** 令 $F\left(t\right)=t+if\left(t\right)$. 对 $\left[a,b\right]$ 的一个分划 $a=t_{0}< \cdots< t_{n}=b$, 相邻顶点 $t_{j-1}+if\left(t_{j-1}\right)$ 与 $t_{j}+if\left(t_{j}\right)$ 的距离为
 
@@ -50,11 +106,11 @@ $$
 
 $\blacksquare$
 
-## 2
+## 4
 
 若 $\left\{F_{j}\right\}$ 是 $\left[a,b\right]$ 上的一列非负递增函数, 且 $F:=\sum_{j}F_{j}$ 满足 $F\left(x\right)< \infty$ 对所有 $x\in\left[a,b\right]$ 成立, 则 $F'\left(x\right)=\sum_{j}F_{j}'\left(x\right)$ 对几乎所有 $x\in\left[a,b\right]$ 成立.
 
-### 解答 2
+### 解答 4
 
 设 $\mu_{F_{j}}$ 是 $F_{j}$ 对应的斯蒂尔杰斯测度, $\mu_{F}$ 是 $F=\sum_{j}F_{j}$ 对应的斯蒂尔杰斯测度 (归一化的有界变差 $NBV$ 与斯蒂尔杰斯测度). 因 $\sum_{j}F_{j}$ 收敛且各项非负, 由斯蒂尔杰斯测度的可数可加性, $\mu_{F}=\sum_{j}\mu_{F_{j}}$. 由**推论 13.4.5 (单调函数几乎处处可导)** 及单调函数的导数即其斯蒂尔杰斯测度关于勒贝格测度的拉东-尼科迪姆导数, 对 $m$-几乎每个 $x$, $F_{j}'\left(x\right)=\frac{\mathrm{d}\mu_{F_{j}}}{\mathrm{d}m}\left(x\right)$; 同理 $F'\left(x\right)=\frac{\mathrm{d}\mu_{F}}{\mathrm{d}m}\left(x\right)$. 于是由**性质 11.5.6 (拉东-尼科迪姆导数的线性性)** (逐次两两相加),
 
@@ -64,7 +120,7 @@ $$
 
 对 $m$-几乎每个 $x$ 成立. 故 $F'\left(x\right)=\sum_{j}F_{j}'\left(x\right)$ 几乎处处. $\blacksquare$
 
-## 3
+## 5
 
 函数 $F:\left(a,b\right)\to\mathbb R$ ($-\infty\le a< b\le\infty$) 称为凸的, 若 $F\left(\lambda s+\left(1-\lambda\right)t\right)\le\lambda F\left(s\right)+\left(1-\lambda\right)F\left(t\right)$ 对所有 $s,t\in\left(a,b\right)$ 和 $\lambda\in\left(0,1\right)$ 成立.
 
@@ -76,7 +132,7 @@ $$
 
 (d) (延森不等式) 若 $\left(X,\mathcal M,\mu\right)$ 是测度空间且 $\mu\left(X\right)=1$, $g:X\to\left(a,b\right)\in L^{1}\left(\mu\right)$, $F$ 在 $\left(a,b\right)$ 上凸, 则 $F\left(\int g\,\mathrm{d}\mu\right)\le\int F\circ g\,\mathrm{d}\mu$.
 
-### 解答 3
+### 解答 5
 
 记差商 $S\left(u,v\right)=\frac{F\left(v\right)-F\left(u\right)}{v-u}$ ($u< v$).
 

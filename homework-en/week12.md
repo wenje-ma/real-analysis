@@ -12,6 +12,14 @@
 > 
 > Let $f:\left[a,b\right]\to\mathbb R$. For any partition $P:a=x_{0}< x_{1}< \cdots< x_{n}=b$ of $\left[a,b\right]$, define the variation $V\left(f,P\right)=\sum_{i=1}^{n}\left|f\left(x_{i}\right)-f\left(x_{i-1}\right)\right|$. The total variation of $f$ on $\left[a,b\right]$ is $V_{a}^{b}\left(f\right)=\sup_{P}V\left(f,P\right)$. If $V_{a}^{b}\left(f\right)< +\infty$, $f$ is called a bounded-variation function, written $f\in BV\left(\left[a,b\right]\right)$.
 
+> **Theorem 14.0.7 (Basic Properties of Bounded-Variation Functions)**
+> 
+> Let $f,g\in BV\left(\left[a,b\right]\right)$. Then: (1) $BV\left(\left[a,b\right]\right)$ is a linear space; (2) $f$ is bounded; (3) if $f$ satisfies a Lipschitz condition, then $f\in BV\left(\left[a,b\right]\right)$; (4) a monotone function is always of bounded variation.
+
+> **Theorem 14.0.10 (Discontinuity Properties of Bounded-Variation Functions)**
+> 
+> If $f\in BV\left(\left[a,b\right]\right)$, then: (1) $f$ has at most countably many discontinuities; (2) all discontinuities are jump discontinuities.
+
 > **Definition 15.0.11 (Absolute Continuity)**
 > 
 > A function $f:\left[a,b\right]\to\mathbb R$ is called absolutely continuous (written $f\in AC\left(\left[a,b\right]\right)$) if for every $\varepsilon> 0$ there exists $\delta> 0$ such that for any finite collection of disjoint subintervals $\left(a_{i},b_{i}\right)\subset\left[a,b\right]$, whenever $\sum_{i}\left(b_{i}-a_{i}\right)< \delta$, we have $\sum_{i}\left|f\left(b_{i}\right)-f\left(a_{i}\right)\right|< \varepsilon$.
@@ -26,13 +34,61 @@
 
 ## 1
 
+Let $F\left(x\right)=x^{2}\sin\left(x^{-1}\right)$ and $G\left(x\right)=x^{2}\sin\left(x^{-2}\right)$ for $x\ne0$, with $F\left(0\right)=G\left(0\right)=0$.
+
+(a) $F$ and $G$ are differentiable everywhere (including $x=0$);
+
+(b) $F\in BV\left(\left[-1,1\right]\right)$, but $G\notin BV\left(\left[-1,1\right]\right)$.
+
+### Solution to 1
+
+**(a).** For $x\ne0$, direct differentiation gives $F'\left(x\right)=2x\sin\left(x^{-1}\right)-\cos\left(x^{-1}\right)$ and $G'\left(x\right)=2x\sin\left(x^{-2}\right)-\frac{2}{x}\cos\left(x^{-2}\right)$. At $x=0$, use the definition:
+
+$$
+F'\left(0\right)=\lim_{h\to0}\frac{F\left(h\right)-F\left(0\right)}{h}=\lim_{h\to0}\frac{h^{2}\sin\left(h^{-1}\right)}{h}=\lim_{h\to0}h\sin\left(h^{-1}\right)=0,
+$$
+
+where the last equality uses $\left|h\sin\left(h^{-1}\right)\right|\le\left|h\right|\to0$; similarly $G'\left(0\right)=\lim_{h\to0}\frac{h^{2}\sin\left(h^{-2}\right)}{h}=\lim_{h\to0}h\sin\left(h^{-2}\right)=0$. Hence $F,G$ are differentiable on all of $\mathbb R$ (including $x=0$).
+
+**(b).** First show $F\in BV\left(\left[-1,1\right]\right)$. By (a), for $x\ne0$, $\left|F'\left(x\right)\right|=\left|2x\sin\left(x^{-1}\right)-\cos\left(x^{-1}\right)\right|\le2\left|x\right|+1\le3$. Thus $F'$ is bounded on $\left[-1,1\right]$. By the mean value theorem, $\left|F\left(x\right)-F\left(y\right)\right|\le3\left|x-y\right|$, i.e. $F$ satisfies a Lipschitz condition, and by **Theorem 14.0.7 (Basic Properties of Bounded-Variation Functions)** (3), $F\in BV\left(\left[-1,1\right]\right)$.
+
+Now show $G\notin BV\left(\left[-1,1\right]\right)$. Take $x_{k}=\frac{1}{\sqrt{\pi/2+k\pi}}$ ($k=0,1,2,\dots$); then $x_{k}\downarrow0$ and $\sin\left(x_{k}^{-2}\right)=\sin\left(\pi/2+k\pi\right)=\left(-1\right)^{k}$, so $G\left(x_{k}\right)=\left(-1\right)^{k}x_{k}^{2}$. For the partition $0< x_{N}< \cdots< x_{0}$ (and the endpoint $0$), by the alternating signs,
+
+$$
+\sum_{k=0}^{N-1}\left|G\left(x_{k}\right)-G\left(x_{k+1}\right)\right|=\sum_{k=0}^{N-1}\left(x_{k}^{2}+x_{k+1}^{2}\right)\ge\sum_{k=0}^{N-1}x_{k}^{2}=\sum_{k=0}^{N-1}\frac{1}{\pi/2+k\pi}.
+$$
+
+By Series, the harmonic series $\sum_{k}\frac{1}{k}$ diverges, so the above tends to $+\infty$ as $N\to\infty$. Thus the total variation of $G$ on $\left[0,1\right]\subset\left[-1,1\right]$ is already $+\infty$, so $V_{-1}^{1}\left(G\right)=+\infty$, i.e. $G\notin BV\left(\left[-1,1\right]\right)$. $\blacksquare$
+
+## 2
+
+If $F_{1},F_{2},\dots,F\in NBV$ and $F_{j}\to F$ pointwise, then $T_{F}\le\liminf_{j\to\infty}T_{F_{j}}$.
+
+### Solution to 2
+
+Fix $x\in\mathbb R$ and a partition $a=t_{0}< \cdots< t_{n}=x$ (with $-\infty< a$). Since $F_{j}\to F$ pointwise, limits exchange over the finite sum,
+
+$$
+\sum_{k=1}^{n}\left|F\left(t_{k}\right)-F\left(t_{k-1}\right)\right|=\lim_{j\to\infty}\sum_{k=1}^{n}\left|F_{j}\left(t_{k}\right)-F_{j}\left(t_{k-1}\right)\right|=\liminf_{j\to\infty}\sum_{k=1}^{n}\left|F_{j}\left(t_{k}\right)-F_{j}\left(t_{k-1}\right)\right|\le\liminf_{j\to\infty}T_{F_{j}}\left(x\right),
+$$
+
+where the last inequality uses **Definition 14.0.6 (Functions of Bounded Variation)** (the sum over any partition does not exceed the total variation $T_{F_{j}}\left(x\right)$, and $\liminf$ preserves inequalities). Taking the supremum over all partitions,
+
+$$
+T_{F}\left(x\right)=\sup_{P}\sum_{k=1}^{n}\left|F\left(t_{k}\right)-F\left(t_{k-1}\right)\right|\le\liminf_{j\to\infty}T_{F_{j}}\left(x\right).
+$$
+
+Hence $T_{F}\le\liminf_{j\to\infty}T_{F_{j}}$. $\blacksquare$
+
+## 3
+
 Let $f:\left[a,b\right]\to\mathbb R$, and view the graph of $f$ as a subset of $\mathbb C$, namely $\left\{t+if\left(t\right):t\in\left[a,b\right]\right\}$. The length $L$ of the graph is defined as the supremum of the lengths of all inscribed polygons. (An inscribed polygon is the union of segments joining $t_{j-1}+if\left(t_{j-1}\right)$ to $t_{j}+if\left(t_{j}\right)$ for $1\le j\le n$, where $a=t_{0}< \cdots< t_{n}=b$.)
 
 (a) Setting $F\left(t\right)=t+if\left(t\right)$, $L$ is the total variation of $F$ on $\left[a,b\right]$;
 
 (b) If $f$ is absolutely continuous, then $L=\int_{a}^{b}\left[1+\left(f'\left(t\right)\right)^{2}\right]^{1/2}\mathrm{d}t$.
 
-### Solution 1
+### Solution to 3
 
 **(a).** Set $F\left(t\right)=t+if\left(t\right)$. For a partition $a=t_{0}< \cdots< t_{n}=b$ of $\left[a,b\right]$, the distance between adjacent vertices $t_{j-1}+if\left(t_{j-1}\right)$ and $t_{j}+if\left(t_{j}\right)$ is
 
@@ -50,11 +106,11 @@ $$
 
 $\blacksquare$
 
-## 2
+## 4
 
 If $\left\{F_{j}\right\}$ is a sequence of nonnegative increasing functions on $\left[a,b\right]$ and $F:=\sum_{j}F_{j}$ satisfies $F\left(x\right)< \infty$ for all $x\in\left[a,b\right]$, then $F'\left(x\right)=\sum_{j}F_{j}'\left(x\right)$ for almost every $x\in\left[a,b\right]$.
 
-### Solution 2
+### Solution to 4
 
 Let $\mu_{F_{j}}$ be the Stieltjes measure associated with $F_{j}$, and $\mu_{F}$ that associated with $F=\sum_{j}F_{j}$ (NBV and Stieltjes Measures). Since $\sum_{j}F_{j}$ converges and each term is nonnegative, by countable additivity of Stieltjes measures, $\mu_{F}=\sum_{j}\mu_{F_{j}}$. By **Corollary 13.4.5 (Monotone Functions Are Differentiable a.e.)** and the fact that the derivative of a monotone function is the Radon-Nikodym derivative of its Stieltjes measure with respect to Lebesgue measure, for $m$-a.e. $x$, $F_{j}'\left(x\right)=\frac{\mathrm{d}\mu_{F_{j}}}{\mathrm{d}m}\left(x\right)$; similarly $F'\left(x\right)=\frac{\mathrm{d}\mu_{F}}{\mathrm{d}m}\left(x\right)$. Hence by **Property 11.5.6 (Linearity of the Radon-Nikodym Derivative)** (adding two at a time),
 
@@ -64,7 +120,7 @@ $$
 
 for $m$-a.e. $x$. Thus $F'\left(x\right)=\sum_{j}F_{j}'\left(x\right)$ a.e. $\blacksquare$
 
-## 3
+## 5
 
 A function $F:\left(a,b\right)\to\mathbb R$ ($-\infty\le a< b\le\infty$) is called convex if $F\left(\lambda s+\left(1-\lambda\right)t\right)\le\lambda F\left(s\right)+\left(1-\lambda\right)F\left(t\right)$ for all $s,t\in\left(a,b\right)$ and $\lambda\in\left(0,1\right)$.
 
@@ -76,7 +132,7 @@ A function $F:\left(a,b\right)\to\mathbb R$ ($-\infty\le a< b\le\infty$) is call
 
 (d) (Jensen's inequality) If $\left(X,\mathcal M,\mu\right)$ is a measure space with $\mu\left(X\right)=1$, $g:X\to\left(a,b\right)\in L^{1}\left(\mu\right)$, and $F$ is convex on $\left(a,b\right)$, then $F\left(\int g\,\mathrm{d}\mu\right)\le\int F\circ g\,\mathrm{d}\mu$.
 
-### Solution 3
+### Solution to 5
 
 Write the difference quotient $S\left(u,v\right)=\frac{F\left(v\right)-F\left(u\right)}{v-u}$ ($u< v$).
 

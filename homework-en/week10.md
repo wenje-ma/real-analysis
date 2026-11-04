@@ -1,63 +1,170 @@
 # week10
 
-$$
-Mf\left(x\right)=\sup_{r> 0}\frac{1}{\left|B\left(x,r\right)\right|}\int_{B\left(x,r\right)}\left|f\left(y\right)\right|\mathrm{d}y,
-$$
+> **Theorem 10.2.2 (Tonelli's Theorem)**
+> 
+> If $f:X\times Y\to\left[0,\infty\right]$ is $\mathcal A\otimes\mathcal B$-measurable, then
 
-where $B\left(x,r\right)$ is the open ball centered at $x$ with radius $r$, and $\left|B\left(x,r\right)\right|$ denotes its Lebesgue measure.
+$$
+\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),
+$$
+with all integral values in $\left[0,\infty\right]$.
 
-> **Definition 11.4.1 (Mutually Singular)**
+> **Definition 11.1.1 (Signed Measure)**
+> 
+> Let $\left(X,\mathcal F\right)$ be a measurable space. A function $\nu:\mathcal F\to\mathbb R\cup\left\{+\infty\right\}$ or $\mathbb R\cup\left\{-\infty\right\}$ is called a signed measure if: (1) $\nu\left(\varnothing\right)=0$; (2) countable additivity: for every sequence of pairwise-disjoint measurable sets $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal F$, $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$; (3) $\nu$ cannot take both $+\infty$ and $-\infty$.
+
+> **Proposition 11.1.2 (Basic Properties of Signed Measures)**
+> 
+> Let $\nu$ be a signed measure. Then: (1) finite additivity: for any finitely many pairwise-disjoint $E_{1},\dots,E_{n}\in\mathcal F$, $\nu\left(\bigcup_{i=1}^{n}E_{i}\right)=\sum_{i=1}^{n}\nu\left(E_{i}\right)$; (2) lower continuity: if $\left\{E_{j}\right\}$ is increasing measurable, then $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcup_{j}E_{j}\right)$; (3) upper continuity: if $\left\{E_{j}\right\}$ is decreasing measurable and $\nu\left(E_{1}\right)< \infty$, then $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcap_{j}E_{j}\right)$.
+
+> **Definition 11.2.1 (Positive Set, Negative Set, Null Set)**
+> 
+> Let $\nu$ be a signed measure on $\left(X,\mathcal F\right)$. A set $P\in\mathcal F$ is positive (written $P\gtrsim0$) if $\nu\left(E\right)\ge0$ for every $E\in\mathcal F$ with $E\subset P$; a set $N\in\mathcal F$ is negative (written $N\lesssim0$) if $\nu\left(E\right)\le0$ for every $E\in\mathcal F$ with $E\subset N$; a set $Z\in\mathcal F$ is a null set if $\nu\left(E\right)=0$ for every $E\in\mathcal F$ with $E\subset Z$.
+
+> **Lemma 11.2.2 (Properties of Positive Sets)**
+> 
+> (1) Any measurable subset of a positive set is positive; (2) a countable union of positive sets is positive; (3) if $\left\{P_{n}\right\}$ is a sequence of positive sets, then $\bigcap_{n=1}^{\infty}P_{n}$ is positive. The same holds for negative sets.
+
+> **Lemma 11.2.4 (Criterion for a Non-Negative Set)**
+> 
+> Let $\nu$ be a signed measure. If $E$ is not a negative set, then there exists a positive set $F\subset E$ with $\nu\left(F\right)> 0$.
+
+> **Theorem 11.3.2 (Hahn Decomposition Theorem)**
+> 
+> Let $\nu$ be a signed measure on $\left(X,\mathcal F\right)$. Then there is a decomposition $X=P\cup N$, where $P$ is positive, $N$ is negative, and $P\cap N=\varnothing$; and this decomposition is unique up to a $\nu$-null set.
+
+> **Definition 11.4.1 (Mutually Singular Signed Measures)**
 > 
 > Let $\mu$ and $\nu$ be two signed measures on $\left(X,\mathcal F\right)$. If there exists $E\in\mathcal F$ such that $E$ is a $\mu$-null set and $E^{c}$ is a $\nu$-null set, then $\mu$ and $\nu$ are mutually singular, written $\mu\perp\nu$.
 
+> **Theorem 11.4.3 (Jordan Decomposition Theorem)**
+> 
+> Let $\nu$ be a signed measure on $\left(X,\mathcal F\right)$. Then there is a unique pair of mutually singular positive measures $\nu^{+}$ and $\nu^{-}$ such that $\nu=\nu^{+}-\nu^{-}$.
+
+> **Definition 11.4.4 (Variation Measure)**
+> 
+> Let $\nu$ be a signed measure with Jordan decomposition $\nu=\nu^{+}-\nu^{-}$. $\nu^{+}$ is the positive variation, $\nu^{-}$ the negative variation, and $\left|\nu\right|=\nu^{+}+\nu^{-}$ the total variation measure.
+
+> **Definition 11.5.1 (Absolute Continuity)**
+> 
+> Let $\mu$ be a positive measure and $\nu$ a signed measure. We say $\nu$ is absolutely continuous w.r.t. $\mu$ (written $\nu\ll\mu$) if $\mu\left(E\right)=0\Rightarrow\nu\left(E\right)=0$ for every $E\in\mathcal F$.
+
+> **Remark 11.5.3 (Absolute Continuity of the Integral w.r.t. the Measure)**
+> 
+> If $f\in L^{1}\left(\mu\right)$, then $\lim_{\mu\left(E\right)\to0}\int_{E}f\,\mathrm{d}\mu=0$.
+
+> **Theorem 11.5.5 (Radon-Nikodym Theorem)**
+> 
+> Let $\mu$ be a $\sigma$-finite positive measure and $\nu$ a signed measure with $\nu\ll\mu$. Then there exists a measurable function $f:X\to\mathbb R$ such that $\nu\left(E\right)=\int_{E}f\,\mathrm{d}\mu$ for every $E\in\mathcal F$; and $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$. The function $f$ is the Radon-Nikodym derivative of $\nu$ w.r.t. $\mu$, written $f=\frac{\mathrm{d}\nu}{\mathrm{d}\mu}$.
+
 ## 1
 
-Let $f\in L^{1}\left(\mathbb R^{n}\right)$ and $f\ne0$. Prove that there exist $C,R> 0$ such that $Hf\left(x\right)\ge C\left|x\right|^{-n}$ for $\left|x\right|> R$. Hence for small $\lambda$, $m\left(\left\{x:Hf\left(x\right)> \lambda\right\}\right)\ge C'\lambda^{-1}$, so the estimate in the maximal theorem is essentially sharp.
+Let $\nu$ be a signed measure on $\left(X,\mathcal F\right)$ not taking the value $-\infty$, and let $E$ not be a negative set. Prove there is a measurable set $G\subset E$ with $\nu\left(G\right)=\sup\left\{\nu\left(F\right):F\subset E,\nu\left(F\right)> 0\right\}> 0$, and such that $E\setminus G$ is a negative set.
 
-### Solution 1
+### Solution to 1
 
-Write $Hf$ for the Hardy-Littlewood maximal function (Hardy-Littlewood Maximal Function). Since $f\ne0$ and $f\in L^{1}\left(\mathbb R^{n}\right)$, there is a ball $K$ (some compact set suffices) with $\int_{K}\left|f\right|\mathrm{d}y> 0$; otherwise all $\int_{K}f$ vanishing would force $f=0$ a.e., a contradiction. Set $c=\int_{K}\left|f\right|\mathrm{d}y> 0$, and take $R> 0$ with $K\subset B\left(0,R\right)$ (i.e. $\sup_{y\in K}\left|y\right|< R$). For $\left|x\right|> R$, since $K\subset B\left(0,R\right)$ and $R< \left|x\right|$, we have $K\subset B\left(x,2\left|x\right|\right)$. Hence, by the definition of the maximal function and Ball-Volume Formula,
+Set $\alpha=\sup\left\{\nu\left(F\right):F\subset E,\nu\left(F\right)> 0\right\}$. Since $E$ is not negative, by **Lemma 11.2.4 (Criterion for a Non-Negative Set)** there is a positive set $F_{0}\subset E$ with $\nu\left(F_{0}\right)> 0$, so $\alpha\ge\nu\left(F_{0}\right)> 0$, i.e. $\alpha> 0$.
 
-$$
-Hf\left(x\right)\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{B\left(x,2\left|x\right|\right)}\left|f\right|\mathrm{d}y\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{K}\left|f\right|\mathrm{d}y=\frac{c}{C_{n}\left(2\left|x\right|\right)^{n}}=\frac{c}{2^{n}C_{n}}\left|x\right|^{-n}.
-$$
+First show $\alpha$ is attained by a positive set. Let $\beta=\sup\left\{\nu\left(P\right):P\subset E,P\text{ positive}\right\}$; then $\beta\ge\nu\left(F_{0}\right)> 0$. Clearly $\beta\le\alpha$, since a positive set $P\subset E$ with $\nu\left(P\right)> 0$ enters the supremum defining $\alpha$. Conversely, $\alpha\le\beta$: take any $F\subset E$ with $\nu\left(F\right)> 0$. If $F$ is positive, then $\nu\left(F\right)\le\beta$; if $F$ is not positive, there exists $C\subset F$ with $\nu\left(C\right)< 0$. Set $F_{1}=F\setminus C$; then $\nu\left(F_{1}\right)=\nu\left(F\right)-\nu\left(C\right)> \nu\left(F\right)$. Repeating this construction gives an increasing measurable sequence $\left\{F_{n}\right\}$ with $\nu\left(F_{n}\right)$ strictly increasing to some $\gamma$. By **Proposition 11.1.2 (Basic Properties of Signed Measures)** (2) (lower continuity), $\nu\left(\bigcup_{n}F_{n}\right)=\lim_{n}\nu\left(F_{n}\right)=\gamma$. If $\bigcup_{n}F_{n}$ were not positive, one could extract from it a subset of still larger measure, contradicting the convergence to $\gamma$; hence $\bigcup_{n}F_{n}\subset E$ is positive. Thus $\gamma=\nu\left(\bigcup_{n}F_{n}\right)\le\beta$; and since $\nu\left(F_{n}\right)\uparrow\gamma$ with $\nu\left(F_{1}\right)> \nu\left(F\right)$, we get $\nu\left(F\right)< \gamma\le\beta$. Hence $\nu\left(F\right)\le\beta$ for every such $F$, i.e. $\alpha\le\beta$. Combining, $\alpha=\beta$.
 
-Taking $C=\frac{c}{2^{n}C_{n}}> 0$, we get $Hf\left(x\right)\ge C\left|x\right|^{-n}$ for $\left|x\right|> R$.
+By the definition of $\beta$, take a sequence of positive sets $\left\{P_{n}\right\}\subset E$ with $\nu\left(P_{n}\right)\to\beta$. Let $G=\bigcup_{n=1}^{\infty}P_{n}\subset E$; then $G$ is positive (**Lemma 11.2.2 (Properties of Positive Sets)** (2)). Set $Q_{n}=\bigcup_{k=1}^{n}P_{k}$; then $\left\{Q_{n}\right\}$ is an increasing union of positive sets, hence positive, and $\nu\left(Q_{n}\right)\ge\nu\left(P_{n}\right)\to\beta$; also $Q_{n}\subset E$ is positive, so $\nu\left(Q_{n}\right)\le\beta$. Thus $\nu\left(Q_{n}\right)\to\beta$, and by **Proposition 11.1.2 (Basic Properties of Signed Measures)** (2) (lower continuity), $\nu\left(G\right)=\lim_{n\to\infty}\nu\left(Q_{n}\right)=\beta=\alpha> 0$.
 
-For the second part, by the first part, when $0< \lambda< C/R^{n}$, $\left(C/\lambda\right)^{1/n}> R$, so $\left\{x:\left|x\right|> \left(C/\lambda\right)^{1/n}\right\}\subset\left\{x:Hf\left(x\right)> \lambda\right\}$. By the ball-volume formula, $m\left(\left\{x:\left|x\right|< \left(C/\lambda\right)^{1/n}\right\}\right)=C_{n}\left(\frac{C}{\lambda}\right)=\frac{C_{n}C}{\lambda}$. Setting $C'=C_{n}C$, we get $m\left(\left\{x:Hf\left(x\right)> \lambda\right\}\right)\ge C'\lambda^{-1}$ for small $\lambda> 0$. $\blacksquare$
+Finally show $E\setminus G$ is negative. Suppose otherwise; then by **Lemma 11.2.4 (Criterion for a Non-Negative Set)** there is a positive set $F\subset E\setminus G$ with $\nu\left(F\right)> 0$. Since $G\cap F=\varnothing$, $G\cup F\subset E$ and $G\cup F$ is positive (**Lemma 11.2.2 (Properties of Positive Sets)** (2)); hence $\nu\left(G\cup F\right)=\nu\left(G\right)+\nu\left(F\right)=\alpha+\nu\left(F\right)> \alpha=\beta$, contradicting that $\beta$ is the supremum of the measures of all positive sets in $E$. Thus $E\setminus G$ is negative. $\blacksquare$
 
 ## 2
 
-A useful variant of the Hardy-Littlewood maximal function is $H^{*}f\left(x\right)=\sup\left\{\frac{1}{m\left(B\right)}\int_{B}\left|f\left(y\right)\right|\mathrm{d}y:B\text{ a ball},x\in B\right\}$. Prove that $Hf\le H^{*}f\le2^{n}Hf$.
+Let $\nu$ be a signed measure on $\left(X,\mathcal M\right)$.
 
-### Solution 2
+(a) $L^{1}\left(\nu\right)=L^{1}\left(\left|\nu\right|\right)$;
 
-First show $Hf\le H^{*}f$. For any $r> 0$, the ball $B\left(x,r\right)$ is a ball containing $x$, so $\frac{1}{\left|B\left(x,r\right)\right|}\int_{B\left(x,r\right)}\left|f\right|\mathrm{d}y\le H^{*}f\left(x\right)$. Taking the supremum over $r> 0$ gives $Hf\left(x\right)\le H^{*}f\left(x\right)$.
+(b) if $f\in L^{1}\left(\nu\right)$, then $\left|\int f\,\mathrm{d}\nu\right|\le\int\left|f\right|\mathrm{d}\left|\nu\right|$;
 
-Now show $H^{*}f\le2^{n}Hf$. Let $B$ be any ball containing $x$; denote its radius by $\rho$ and center by $c$. Since $x\in B$, $\left|x-c\right|\le\rho$, so for every $y\in B$, $\left|y-x\right|\le\left|y-c\right|+\left|c-x\right|\le\rho+\rho=2\rho$, i.e. $B\subset B\left(x,2\rho\right)$. By Ball-Volume Formula, $\left|B\left(x,2\rho\right)\right|=C_{n}\left(2\rho\right)^{n}=2^{n}C_{n}\rho^{n}=2^{n}\left|B\right|$. Hence
+(c) if $E\in\mathcal M$, then $\left|\nu\right|\left(E\right)=\sup\left\{\left|\int_{E}f\,\mathrm{d}\nu\right|:\left|f\right|\le1\right\}$.
+
+### Solution to 2
+
+**(a).** By **Definition 11.4.4 (Variation Measure)**, $\left|\nu\right|=\nu^{+}+\nu^{-}$. Thus for any $f$,
 
 $$
-\frac{1}{m\left(B\right)}\int_{B}\left|f\right|\mathrm{d}y\le\frac{1}{m\left(B\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y=2^{n}\cdot\frac{1}{m\left(B\left(x,2\rho\right)\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y\le2^{n}Hf\left(x\right).
+\int\left|f\right|\mathrm{d}\left|\nu\right|=\int\left|f\right|\mathrm{d}\nu^{+}+\int\left|f\right|\mathrm{d}\nu^{-}.
 $$
 
-Taking the supremum over all balls $B$ containing $x$ gives $H^{*}f\left(x\right)\le2^{n}Hf\left(x\right)$. Combining, $Hf\le H^{*}f\le2^{n}Hf$. $\blacksquare$
+All three terms are nonnegative, so the left side is finite iff both right-side terms are finite, i.e. $f\in L^{1}\left(\nu^{+}\right)\cap L^{1}\left(\nu^{-}\right)=L^{1}\left(\nu\right)$. Hence $L^{1}\left(\nu\right)=L^{1}\left(\left|\nu\right|\right)$.
+
+**(b).** By **Theorem 11.4.3 (Jordan Decomposition Theorem)**, $\nu=\nu^{+}-\nu^{-}$. By the triangle inequality and (a),
+
+$$
+\left|\int f\,\mathrm{d}\nu\right|=\left|\int f\,\mathrm{d}\nu^{+}-\int f\,\mathrm{d}\nu^{-}\right|\le\int\left|f\right|\mathrm{d}\nu^{+}+\int\left|f\right|\mathrm{d}\nu^{-}=\int\left|f\right|\mathrm{d}\left|\nu\right|.
+$$
+
+**(c).** First $\le$: for any measurable $g$ with $\left|g\right|\le1$, by (b), $\left|\int_{E}g\,\mathrm{d}\nu\right|\le\int_{E}\left|g\right|\mathrm{d}\left|\nu\right|\le\int_{E}1\,\mathrm{d}\left|\nu\right|=\left|\nu\right|\left(E\right)$, so the supremum is $\le\left|\nu\right|\left(E\right)$.
+
+Then $\ge$: take a Hahn decomposition $X=P\cup N$ of $\nu$ (**Theorem 11.3.2 (Hahn Decomposition Theorem)**), set $g=\chi_{E\cap P}-\chi_{E\cap N}$; then $\left|g\right|\le1$ and $g$ is measurable. By **Theorem 11.4.3 (Jordan Decomposition Theorem)**, $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)$ and $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)$. Hence $\int_{E}g\,\mathrm{d}\nu=\nu\left(E\cap P\right)-\nu\left(E\cap N\right)=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)=\left|\nu\right|\left(E\right)$. Thus the supremum is $\ge\left|\nu\right|\left(E\right)$. Equality follows. $\blacksquare$
 
 ## 3
 
-If $\lambda$ and $\mu$ are positive mutually singular Borel measures on $\mathbb R^{n}$ and $\lambda+\mu$ is regular, then both $\lambda$ and $\mu$ are regular.
+Let $\nu\left(E\right)=\int_{E}f\,\mathrm{d}\mu$, where $\mu$ is a positive measure and $f$ is an extended $\mu$-integrable function. Describe in terms of $f$ and $\mu$ the Hahn decomposition of $\nu$, and its positive variation, negative variation, and total variation.
 
-### Solution 3
+### Solution to 3
 
-Set $\nu=\lambda+\mu$. Since $\lambda\perp\mu$ (**Definition 11.4.1 (Mutually Singular)**), there is a Borel set $A$ with $\mu\left(A\right)=0$ and $\lambda\left(A^{c}\right)=0$.
+$f$ is real-valued measurable, with at least one of $\int f^{+}\mathrm{d}\mu$, $\int f^{-}\mathrm{d}\mu$ finite. By **Definition 11.2.1 (Positive Set, Negative Set, Null Set)**: for $E\in\mathcal M$, $E$ is a $\nu$-positive set iff for every measurable $F\subset E$, $\nu\left(F\right)=\int_{F}f\,\mathrm{d}\mu\ge0$; since this must hold for both $F=E\cap\left\{f< 0\right\}$ and $F=E\cap\left\{f> 0\right\}$, $E$ is positive iff $f\ge0$ $\mu$-a.e. on $E$. Similarly, $E$ is negative iff $f\le0$ $\mu$-a.e. on $E$; $E$ is a null set iff $f=0$ $\mu$-a.e. on $E$.
 
-**Condition (1) of regularity.** For any compact set $K$, since $\lambda,\mu\ge0$ and $\nu$ is regular (Regular Borel Measures), $\lambda\left(K\right)\le\nu\left(K\right)< \infty$, and similarly $\mu\left(K\right)< \infty$.
+Thus $X=P\cup N$, where $P=\left\{x:f\left(x\right)\ge0\right\}$ and $N=\left\{x:f\left(x\right)< 0\right\}$, is a Hahn decomposition of $\nu$ (**Theorem 11.3.2 (Hahn Decomposition Theorem)**): $P$ positive, $N$ negative, $P\cap N=\varnothing$, $P\cup N=X$. (The null set $\left\{f=0\right\}$ may be merged into $P$ or $N$ without changing the decomposition.)
 
-**Condition (2) of regularity for $\lambda$.** First note that for any $E\in\mathcal B\left(\mathbb R^{n}\right)$, $\lambda\left(E\right)=\lambda\left(E\cap A\right)=\nu\left(E\cap A\right)$, where the second equality uses $\mu\left(E\cap A\right)\le\mu\left(A\right)=0$; similarly $\mu\left(E\right)=\nu\left(E\cap A^{c}\right)$.
+By **Theorem 11.4.3 (Jordan Decomposition Theorem)**, $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)=\int_{E\cap P}f\,\mathrm{d}\mu=\int_{E}f^{+}\mathrm{d}\mu$ (since $f\ge0$ on $P$), and $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)=-\int_{E\cap N}f\,\mathrm{d}\mu=\int_{E}f^{-}\mathrm{d}\mu$ (since $f\le0$ on $N$). Hence $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$. $\blacksquare$
 
-For any open $U\supset E$, $U\cap A\supset E\cap A$, so $\lambda\left(U\right)=\nu\left(U\cap A\right)\ge\nu\left(E\cap A\right)=\lambda\left(E\right)$, hence $\inf\left\{\lambda\left(U\right):U\text{ open},U\supset E\right\}\ge\lambda\left(E\right)$.
+## 4
 
-For the reverse inequality, given $\varepsilon> 0$, since $\nu$ is regular, there is an open set $W\supset E\cap A$ with $\nu\left(W\cap A\right)< \nu\left(E\cap A\right)+\varepsilon=\lambda\left(E\right)+\varepsilon$ (use outer regularity of $\nu$ to choose open $W'\supset E\cap A$ with $\nu\left(W'\right)< \nu\left(E\cap A\right)+\varepsilon$, set $W=W'$, and note $\nu\left(W'\cap A\right)\le\nu\left(W'\right)$). Also, since $\left(E\cap A^{c}\right)\cap A=\varnothing$ and $\lambda\left(E\cap A^{c}\right)=0$, choose a thin enough open neighborhood $V\supset E\cap A^{c}$ with $\nu\left(V\cap A\right)< \varepsilon$ (e.g. take $V=\left\{x:\mathrm{dist}\left(x,E\cap A^{c}\right)< \delta\right\}$ and let $\delta\to0$; then $V\cap A\downarrow\left(E\cap A^{c}\right)\cap A=\varnothing$, and upper continuity gives $\nu\left(V\cap A\right)\to0$). Set $U=W\cup V$; then $U$ is open, $U\supset E$, and $\lambda\left(U\right)=\nu\left(U\cap A\right)\le\nu\left(W\cap A\right)+\nu\left(V\cap A\right)< \lambda\left(E\right)+2\varepsilon$. Hence $\inf\left\{\lambda\left(U\right):U\text{ open},U\supset E\right\}\le\lambda\left(E\right)$. Combining, $\lambda\left(E\right)=\inf\left\{\lambda\left(U\right):U\text{ open},U\supset E\right\}$.
+Let $\nu$ be a signed measure on $\left(X,\mathcal M\right)$ and $E\in\mathcal M$.
 
-**Condition (2) of regularity for $\mu$.** Using $\mu\left(E\right)=\nu\left(E\cap A^{c}\right)$ and the regularity of $\nu|_{A^{c}}$, the argument is entirely symmetric, and $\mu$ also satisfies condition (2).
+(a) $\nu^{+}\left(E\right)=\sup\left\{\nu\left(F\right):F\in\mathcal M,F\subset E\right\}$, and $\nu^{-}\left(E\right)=-\inf\left\{\nu\left(F\right):F\in\mathcal M,F\subset E\right\}$;
 
-Thus both $\lambda$ and $\mu$ are regular. $\blacksquare$
+(b) $\left|\nu\right|\left(E\right)=\sup\left\{\sum_{i}\left|\nu\left(E_{i}\right)\right|:n\in\mathbb N,E_{1},\dots,E_{n}\text{ pairwise disjoint},\bigcup_{i=1}^{n}E_{i}=E\right\}$.
+
+### Solution to 4
+
+**(a).** Take a Hahn decomposition $X=P\cup N$ of $\nu$ (**Theorem 11.3.2 (Hahn Decomposition Theorem)**); then $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)$ and $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)$ (**Theorem 11.4.3 (Jordan Decomposition Theorem)**).
+
+For any $F\in\mathcal M$ with $F\subset E$, by $\nu=\nu^{+}-\nu^{-}$ and $\nu^{-}\ge0$, $\nu\left(F\right)=\nu^{+}\left(F\right)-\nu^{-}\left(F\right)\le\nu^{+}\left(F\right)\le\nu^{+}\left(E\right)$ (the last by monotonicity of $\nu^{+}$, since $F\subset E$). Hence $\sup\left\{\nu\left(F\right):F\subset E\right\}\le\nu^{+}\left(E\right)$. Taking $F=E\cap P\subset E$, $\nu\left(E\cap P\right)=\nu^{+}\left(E\cap P\right)-\nu^{-}\left(E\cap P\right)=\nu^{+}\left(E\cap P\right)=\nu^{+}\left(E\right)$ (since $E\cap P\subset P$ is positive, $\nu^{-}\left(E\cap P\right)=0$). Hence the supremum is $\ge\nu^{+}\left(E\right)$. Combining, $\nu^{+}\left(E\right)=\sup\left\{\nu\left(F\right):F\subset E\right\}$.
+
+Similarly, for $F\subset E$, $\nu\left(F\right)=\nu^{+}\left(F\right)-\nu^{-}\left(F\right)\ge-\nu^{-}\left(F\right)\ge-\nu^{-}\left(E\right)$, so $\inf\left\{\nu\left(F\right):F\subset E\right\}\ge-\nu^{-}\left(E\right)$, i.e. $-\inf\left\{\nu\left(F\right):F\subset E\right\}\le\nu^{-}\left(E\right)$. Taking $F=E\cap N$, $\nu\left(E\cap N\right)=-\nu^{-}\left(E\cap N\right)=-\nu^{-}\left(E\right)$, so the infimum is $\le-\nu^{-}\left(E\right)$, i.e. $-\inf\ge\nu^{-}\left(E\right)$. Combining, $\nu^{-}\left(E\right)=-\inf\left\{\nu\left(F\right):F\subset E\right\}$.
+
+**(b).** First $\le$: for any pairwise-disjoint $\left\{E_{i}\right\}$ with union $E$, by $\nu=\nu^{+}-\nu^{-}$ and the triangle inequality,
+
+$$
+\sum_{i}\left|\nu\left(E_{i}\right)\right|=\sum_{i}\left|\nu^{+}\left(E_{i}\right)-\nu^{-}\left(E_{i}\right)\right|\le\sum_{i}\left[\nu^{+}\left(E_{i}\right)+\nu^{-}\left(E_{i}\right)\right]=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)=\left|\nu\right|\left(E\right),
+$$
+
+so the supremum is $\le\left|\nu\right|\left(E\right)$.
+
+Then $\ge$: take a Hahn decomposition $X=P\cup N$ (**Theorem 11.3.2 (Hahn Decomposition Theorem)**), set $E_{1}=E\cap P$, $E_{2}=E\cap N$; then $E_{1},E_{2}$ are pairwise disjoint and $E_{1}\cup E_{2}=E$. Hence $\left|\nu\left(E_{1}\right)\right|+\left|\nu\left(E_{2}\right)\right|=\nu^{+}\left(E\cap P\right)+\nu^{-}\left(E\cap N\right)=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)=\left|\nu\right|\left(E\right)$, so the supremum is $\ge\left|\nu\right|\left(E\right)$. Equality follows. $\blacksquare$
+
+## 5
+
+Let $\left\{\nu_{j}\right\}$ be a sequence of positive measures. If $\nu_{j}\perp\mu$ for all $j$, then $\sum_{j}\nu_{j}\perp\mu$; if $\nu_{j}\ll\mu$ for all $j$, then $\sum_{j}\nu_{j}\ll\mu$.
+
+### Solution to 5
+
+**(Singular case).** Since $\nu_{j}\perp\mu$ (**Definition 11.4.1 (Mutually Singular Signed Measures)**), for each $j$ there is $E_{j}\in\mathcal M$ such that $E_{j}$ is a $\mu$-null set and $E_{j}^{c}$ is a $\nu_{j}$-null set, i.e. $\mu\left(E_{j}\right)=0$ and $\nu_{j}\left(E_{j}^{c}\right)=0$. Let $E=\bigcup_{j=1}^{\infty}E_{j}$. By countable subadditivity of $\mu$, $\mu\left(E\right)\le\sum_{j=1}^{\infty}\mu\left(E_{j}\right)=0$, so $E$ is a $\mu$-null set. Also $E^{c}=\bigcap_{j=1}^{\infty}E_{j}^{c}\subset E_{k}^{c}$ for every $k$; by monotonicity of $\nu_{k}$, $\nu_{k}\left(E^{c}\right)\le\nu_{k}\left(E_{k}^{c}\right)=0$, so $\nu_{k}\left(E^{c}\right)=0$ for every $k$, and hence $\left(\sum_{j}\nu_{j}\right)\left(E^{c}\right)=\sum_{j}\nu_{j}\left(E^{c}\right)=0$. Thus $\sum_{j}\nu_{j}\perp\mu$.
+
+**(Absolute continuity case).** Let $\nu_{j}\ll\mu$ for all $j$ (**Definition 11.5.1 (Absolute Continuity)**). If $\mu\left(E\right)=0$, then $\nu_{j}\left(E\right)=0$ for all $j$, so $\left(\sum_{j}\nu_{j}\right)\left(E\right)=\sum_{j}\nu_{j}\left(E\right)=0$. Hence $\sum_{j}\nu_{j}\ll\mu$. $\blacksquare$
+
+## 6
+
+Let $\mu$ be a positive measure. A family $\left\{f_{\alpha}\right\}_{\alpha\in A}\subset L^{1}\left(\mu\right)$ is called uniformly integrable if for every $\varepsilon> 0$ there exists $\delta> 0$ such that $\left|\int_{E}f_{\alpha}\,\mathrm{d}\mu\right|< \varepsilon$ for all $\alpha\in A$, whenever $\mu\left(E\right)< \delta$.
+
+(a) Any finite subset of $L^{1}\left(\mu\right)$ is uniformly integrable;
+
+(b) if $\left\{f_{n}\right\}$ is a sequence in $L^{1}\left(\mu\right)$ converging to $f\in L^{1}\left(\mu\right)$ in the $L^{1}$ metric, then $\left\{f_{n}\right\}$ is uniformly integrable.
+
+### Solution to 6
+
+**(a).** Let $\left\{f_{1},\dots,f_{n}\right\}\subset L^{1}\left(\mu\right)$. For each $j$, by **Remark 11.5.3 (Absolute Continuity of the Integral w.r.t. the Measure)** ($f_{j}\in L^{1}\left(\mu\right)$, $\lim_{\mu\left(E\right)\to0}\int_{E}f_{j}\,\mathrm{d}\mu=0$), there is $\delta_{j}> 0$ such that $\mu\left(E\right)< \delta_{j}\Rightarrow\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|< \varepsilon$. Take $\delta=\min_{1\le j\le n}\delta_{j}> 0$; then whenever $\mu\left(E\right)< \delta$, for all $j$ we have $\mu\left(E\right)< \delta_{j}$, hence $\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|< \varepsilon$. Thus $\left\{f_{1},\dots,f_{n}\right\}$ is uniformly integrable.
+
+**(b).** Since $\int\left|f_{n}-f\right|\mathrm{d}\mu\to0$, there is $N$ such that for $n\ge N$, $\int\left|f_{n}-f\right|\mathrm{d}\mu< \frac{\varepsilon}{2}$. By (a), the singleton $\left\{f\right\}$ is uniformly integrable: there is $\delta_{1}> 0$ such that $\mu\left(E\right)< \delta_{1}\Rightarrow\left|\int_{E}f\,\mathrm{d}\mu\right|< \frac{\varepsilon}{2}$. Also the finite set $\left\{f_{1},\dots,f_{N-1}\right\}$ is uniformly integrable by (a): there is $\delta_{2}> 0$ such that $\mu\left(E\right)< \delta_{2}\Rightarrow\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|< \varepsilon$ for $n< N$. Take $\delta=\min\left\{\delta_{1},\delta_{2}\right\}$. When $\mu\left(E\right)< \delta$, for $n\ge N$,
+
+$$
+\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|\le\left|\int_{E}f\,\mathrm{d}\mu\right|+\int_{E}\left|f_{n}-f\right|\mathrm{d}\mu\le\frac{\varepsilon}{2}+\int\left|f_{n}-f\right|\mathrm{d}\mu< \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
+$$
+
+and for $n< N$ also $\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|< \varepsilon$. Thus $\left\{f_{n}\right\}$ is uniformly integrable. $\blacksquare$

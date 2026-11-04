@@ -14,7 +14,7 @@
 
 > **定义 4.1.1 (集合代数)**
 > 
-> 设 $X$ 非空, $\mathcal A\subset\mathcal P\left(X\right)$. 称 $\mathcal A$ 为 $X$ 上的一个集合代数 (布尔代数), 若满足: (1) $X\in\mathcal A$; (2) 对差运算封闭: $A,B\in\mathcal A\Rightarrow A\setminus B\in\mathcal A$; (3) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
+> 设 $X$ 是非空集合, $\mathcal A\subset\mathcal P\left(X\right)$. 称 $\mathcal A$ 为 $X$ 上的一个集合代数, 若满足: (1) $X\in\mathcal A$; (2) 对差运算封闭: $A,B\in\mathcal A\Rightarrow A\setminus B\in\mathcal A$; (3) 对有限并封闭: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
 
 > **命题 4.1.2 (代数的等价定义)**
 > 
@@ -22,7 +22,7 @@
 
 > **定义 4.1.3 ($\sigma$-代数)**
 > 
-> 设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 $\sigma$-代数, 若满足: (1) $X\in\mathcal F$; (2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$. 称 $\left(X,\mathcal F\right)$ 为可测空间, $\mathcal F$ 中的元素称为可测集.
+> 设 $X$ 非空, $\mathcal F\subset\mathcal P\left(X\right)$. 称 $\mathcal F$ 为 $X$ 上的一个 $\sigma$-代数, 若满足: (1) $X\in\mathcal F$; (2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) 对可数并封闭: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
 
 > **定义 4.2.1 (生成代数)**
 > 
@@ -83,7 +83,6 @@ $$
 $$
 \left\{x=\left(x_{\alpha}\right)_{\alpha\in I}\in\prod_{\alpha\in I}X_{\alpha}:x_{\beta}\in A_{\beta}\right\},\ A_{\beta}\in\mathcal F_{\beta},\ \beta\in I
 $$
-
 生成的 $\sigma$-代数.
 
 ## 1
@@ -309,51 +308,3 @@ $$
 $$
 
 两方向结合, 即 $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)=\mathcal B\left(\mathbb R^{m+n}\right)$. $\blacksquare$
-
-## 8
-
-设 $\left\{\left(X_{\alpha},\mathcal F_{\alpha}\right)\right\}_{\alpha\in I}$ 是一族可测空间. 假定 $\mathcal F_{\alpha}=\sigma\left(\mathcal E_{\alpha}\right)$, 其中 $\mathcal E_{\alpha}$ 为 $X_{\alpha}$ 的子集族. 证明
-
-$$
-\bigotimes_{\alpha\in I}\mathcal F_{\alpha}=\sigma\left(\left\{\pi_{\alpha}^{-1}\left(\mathcal E_{\alpha}\right):\alpha\in I\right\}\right),
-$$
-
-其中 $\pi_{\beta}:\prod_{\alpha\in I}X_{\alpha}\to X_{\beta}$ 为乘积空间到 $X_{\beta}$ 的坐标投影.
-
-(这里 $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$ 按**定义 4.5.7 (任意乘积 $\sigma$-代数)**, 是由所有柱集 $\pi_{\beta}^{-1}\left(A_{\beta}\right)$, $A_{\beta}\in\mathcal F_{\beta}$, $\beta\in I$ 生成的 $\sigma$-代数.)
-
-### 解答 8
-
-记 $\mathscr G:=\sigma\left(\left\{\pi_{\alpha}^{-1}\left(\mathcal E_{\alpha}\right):\alpha\in I\right\}\right)$. 分两个包含关系证明.
-
-**($\subset$) $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}\subseteq\mathscr G$.**
-
-固定 $\alpha\in I$, 考虑 $\pi_{\alpha}:\prod_{\beta\in I}X_{\beta}\to X_{\alpha}$, 定义集合族
-
-$$
-\mathscr C_{\alpha}:=\left\{A\subseteq X_{\alpha}:\pi_{\alpha}^{-1}\left(A\right)\in\mathscr G\right\}.
-$$
-
-由原像运算保持补与可数并 (**定理 2.4.2 (原像运算的性质)**), $\mathscr C_{\alpha}$ 是 $\sigma$-代数. 又因 $\pi_{\alpha}^{-1}\left(\mathcal E_{\alpha}\right)\subseteq\mathscr G$ 由 $\mathscr G$ 的定义, 故 $\mathcal E_{\alpha}\subseteq\mathscr C_{\alpha}$. 从而 $\mathscr C_{\alpha}$ 是含 $\mathcal E_{\alpha}$ 的 $\sigma$-代数, 故含 $\sigma\left(\mathcal E_{\alpha}\right)=\mathcal F_{\alpha}$. 即对一切 $A\in\mathcal F_{\alpha}$, 有 $\pi_{\alpha}^{-1}\left(A\right)\in\mathscr G$.
-
-由于 $\alpha\in I$ 任意, 所有柱集 $\pi_{\alpha}^{-1}\left(A\right)$ ($A\in\mathcal F_{\alpha}$, $\alpha\in I$) 都在 $\mathscr G$ 中. 而 $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$ 是由这些柱集生成的 $\sigma$-代数, 故
-
-$$
-\bigotimes_{\alpha\in I}\mathcal F_{\alpha}\subseteq\mathscr G.
-$$
-
-**($\supset$) $\mathscr G\subseteq\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$.**
-
-固定 $\alpha\in I$. 对任意 $E_{\alpha}\in\mathcal E_{\alpha}$, $\pi_{\alpha}^{-1}\left(E_{\alpha}\right)$ 恰是一个柱集 (**定义 4.5.7 (任意乘积 $\sigma$-代数)** 中取 $A_{\beta}=E_{\alpha}$ 当 $\beta=\alpha$), 故 $\pi_{\alpha}^{-1}\left(\mathcal E_{\alpha}\right)\subseteq\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$. 于是所有生成元 $\pi_{\alpha}^{-1}\left(E_{\alpha}\right)$ ($\alpha\in I$) 都在乘积 $\sigma$-代数中, 而 $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$ 是含这些集合的 $\sigma$-代数, 故其生成的 $\sigma$-代数
-
-$$
-\mathscr G\subseteq\bigotimes_{\alpha\in I}\mathcal F_{\alpha}.
-$$
-
-两方向结合, 即
-
-$$
-\bigotimes_{\alpha\in I}\mathcal F_{\alpha}=\sigma\left(\left\{\pi_{\alpha}^{-1}\left(\mathcal E_{\alpha}\right):\alpha\in I\right\}\right).
-$$
-
-$\blacksquare$

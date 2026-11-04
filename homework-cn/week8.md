@@ -1,5 +1,25 @@
 # week8
 
+> **定义 5.1.2 (测度)**
+> 
+> 设 $\left(X,\mathcal F\right)$ 是一个可测空间. 函数 $\mu:\mathcal F\to\left[0,+\infty\right]$ 称为 $\left(X,\mathcal F\right)$ 上的一个测度, 如果满足: (1) 非负性: $\mu\left(E\right)\ge0$ 对一切 $E\in\mathcal F$ 成立; (2) 零空集性: $\mu\left(\emptyset\right)=0$; (3) 可数可加性 ($\sigma$-可加性): 对任意可数个两两不交的集合 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 有 $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
+
+> **定义 6.2.1 (准测度)**
+> 
+> 设 $X$ 是非空集合, $\mathcal E\subset\mathcal P\left(X\right)$ 是一个代数. 函数 $\mu_{0}:\mathcal E\to\left[0,+\infty\right]$ 称为一个准测度, 如果 $\mu_{0}\left(\emptyset\right)=0$, 且若 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal E$ 两两不交且 $\bigcup_{n=1}^{\infty}E_{n}\in\mathcal E$, 则 $\mu_{0}\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right)$.
+
+> **定理 6.3.3 (卡拉西奥多里定理)**
+> 
+> 设 $\mu^{*}$ 是 $X$ 上的外测度, 则: (1) $\mathcal M$ 是一个 $\sigma$-代数; (2) $\mu^{*}|_{\mathcal M}$ 是一个完备测度; (3) 如果 $\mu^{*}$ 是由准测度 $\mu_{0}$ 生成的, 且 $\mu_{0}$ 是 $\sigma$-有限的, 则 $\mu^{*}|_{\mathcal M}$ 是 $\mu_{0}$ 的唯一延拓.
+
+> **命题 7.1.5 (复合保持可测性)**
+> 
+> 若 $f:X\to Y$ 是 $\left(\mathcal F,\mathcal G\right)$-可测的, $g:Y\to Z$ 是 $\left(\mathcal G,\mathcal H\right)$-可测的, 则 $g\circ f:X\to Z$ 是 $\left(\mathcal F,\mathcal H\right)$-可测的.
+
+> **命题 7.1.7 (乘积空间的可测性)**
+> 
+> 设 $f=\left(f_{1},\dots,f_{n}\right):X\to Y_{1}\times\cdots\times Y_{n}$. 在乘积空间配备乘积 $\sigma$-代数下, $f$ 可测当且仅当每个坐标映射 $f_{i}:X\to Y_{i}$ 可测.
+
 > **定理 8.2.9 (控制收敛定理)**
 > 
 > 设 $\left(X,\mathcal F,\mu\right)$ 是测度空间, $\left\{f_{n}\right\}$ 是一列可测函数, 若存在可积函数 $g$ 使 $\left|f_{n}\right|\le g$ 对所有 $n$ 成立, 且 $f_{n}\to f$ 几乎处处, 则 $f$ 可积且 $\int f\,\mathrm{d}\mu=\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu$.
@@ -7,6 +27,18 @@
 > **定理 8.2.16 (可积简单函数在 $L^{1}$ 中稠密)**
 > 
 > 如果 $f\in L^{1}\left(\mu\right)$ 且 $\varepsilon> 0$, 则存在可积简单函数 $\varphi=\sum a_{j}\chi_{E_{j}}$ 使得 $\int\left|f-\varphi\right|\mathrm{d}\mu< \varepsilon$.
+
+> **定义 10.1.1 (乘积 $\sigma$-代数)**
+> 
+> 设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是两个测度空间. 乘积空间 $X\times Y$ 上的乘积 $\sigma$-代数定义为 $\mathcal A\otimes\mathcal B=\sigma\left(\left\{A\times B:A\in\mathcal A,B\in\mathcal B\right\}\right)$, 即由所有可测矩形生成的 $\sigma$-代数.
+
+> **定义 10.1.2 (截面)**
+> 
+> 对于 $E\subseteq X\times Y$, 定义 $E$ 的 x-截面 $E_{x}=\left\{y\in Y:\left(x,y\right)\in E\right\}$ 和 y-截面 $E^{y}=\left\{x\in X:\left(x,y\right)\in E\right\}$.
+
+> **定理 10.1.4 (乘积测度的存在唯一性)**
+> 
+> 设 $\left(X,\mathcal A,\mu\right)$ 和 $\left(Y,\mathcal B,\nu\right)$ 是 $\sigma$-有限的测度空间. 存在唯一的测度 $\mu\times\nu$ 在 $\left(X\times Y,\mathcal A\otimes\mathcal B\right)$ 上, 使得对所有 $A\in\mathcal A$, $B\in\mathcal B$ 有 $\left(\mu\times\nu\right)\left(A\times B\right)=\mu\left(A\right)\nu\left(B\right)$. 其构造为 $\phi\left(E\right)=\int_{X}\nu\left(E_{x}\right)\mathrm{d}\mu\left(x\right)$ 对 $E\in\mathcal A\otimes\mathcal B$.
 
 > **定理 10.2.1 (富比尼定理)**
 > 
@@ -23,7 +55,6 @@ $$
 $$
 \int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),
 $$
-
 其中所有积分值都在 $\left[0,\infty\right]$ 中.
 
 > **定理 11.1.1 (勒贝格测度的正则性与矩形逼近)**
@@ -33,7 +64,6 @@ $$
 $$
 m\left(E\right)=\inf\left\{m\left(U\right):U\supset E,U\text{ 开}\right\}=\sup\left\{m\left(K\right):K\subset E,K\text{ 紧}\right\};
 $$
-
 (b) 若 $m\left(E\right)< \infty$, 则对任意 $\varepsilon> 0$, 存在有限个边为区间的互不相交的矩形族 $\left\{R_{j}\right\}_{j=1}^{N}$, 使得 $m\left(E\triangle\bigcup_{j=1}^{N}R_{j}\right)< \varepsilon$.
 
 > **定理 11.4.1 (极坐标下的积分公式)**
@@ -46,15 +76,53 @@ $$
 
 ## 1
 
-若 $f\in L^{1}\left(m\right)$ 且 $\varepsilon> 0$, 则存在一个简单函数 $\varphi=\sum a_{j}\chi_{R_{j}}$, 其中每个 $R_{j}$ 是区间之积, 使得 $\int\left|f-\varphi\right|< \varepsilon$; 且存在一个在有界集外为零的连续函数 $g$, 使得 $\int\left|f-g\right|< \varepsilon$.
+设 $X=Y=\mathbb N$, $\mathcal M=\mathcal N=\mathcal P\left(\mathbb N\right)$, $\mu=\nu$ 是计数测度. 定义 $f\left(m,n\right)=1$ 若 $m=n$, $f\left(m,n\right)=-1$ 若 $m=n+1$, $f\left(m,n\right)=0$ 否则. 则 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)=\infty$, 且 $\iint f\,\mathrm{d}\mu\,\mathrm{d}\nu$ 与 $\iint f\,\mathrm{d}\nu\,\mathrm{d}\mu$ 存在但不相等.
 
 ### 解答 1
+
+计算 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)=\sum_{m,n}\left|f\left(m,n\right)\right|$. $f$ 在对角线 $\left\{\left(m,m\right)\right\}$ 上取 $1$, 在次对角线 $\left\{\left(m+1,m\right)\right\}$ 上取 $-1$, 故 $\left|f\right|$ 在这两族无限多个点上取 $1$, 于是 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)=\sum_{m,n}\left|f\left(m,n\right)\right|=\infty$.
+
+算 $\iint f\,\mathrm{d}\mu\,\mathrm{d}\nu$ (内层按 $\mu$ 求和, 外层按 $\nu$ 求和). 对固定 $n$, $\sum_{m}f\left(m,n\right)=f\left(n,n\right)+f\left(n+1,n\right)=1+\left(-1\right)=0$, 故 $\iint f\,\mathrm{d}\mu\,\mathrm{d}\nu=\sum_{n}0=0$.
+
+算 $\iint f\,\mathrm{d}\nu\,\mathrm{d}\mu$ (内层按 $\nu$ 求和). 对固定 $m$, 当 $m\ge1$ 时 $\sum_{n}f\left(m,n\right)=f\left(m,m\right)+f\left(m,m-1\right)=1+\left(-1\right)=0$; 而 $m=0$ 时 $f\left(0,n\right)$ 只在 $n=0$ 处为 $1$, 和为 $1$. 故 $\iint f\,\mathrm{d}\nu\,\mathrm{d}\mu=\sum_{m}\left(\sum_{n}f\left(m,n\right)\right)=1$.
+
+故 $\iint f\,\mathrm{d}\mu\,\mathrm{d}\nu=0\ne1=\iint f\,\mathrm{d}\nu\,\mathrm{d}\mu$. 因 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)=\infty$, $f$ 非绝对可积, **定理 10.2.1 (富比尼定理)** 的假设 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)< \infty$ 不满足, 故不能交换积分次序. $\blacksquare$
+
+## 2
+
+设 $\left(X,\mathcal M,\mu\right)$ 是 $\sigma$-有限测度空间且 $f\in L^{+}\left(X\right)$. 令 $G_{f}=\left\{\left(x,y\right)\in X\times\left[0,\infty\right]:y\le f\left(x\right)\right\}$. 则 $G_{f}$ 是 $\mathcal M\otimes\mathcal B_{\mathbb R}$-可测的且 $\mu\times m\left(G_{f}\right)=\int f\,\mathrm{d}\mu$; 若把定义中 $y\le f\left(x\right)$ 的不等式换成 $y< f\left(x\right)$, 结论同样成立.
+
+### 解答 2
+
+**可测性.** 考虑映射 $T:X\times\left[0,\infty\right]\to\left[0,\infty\right]\times\left[0,\infty\right]$, $T\left(x,y\right)=\left(f\left(x\right),y\right)$. 由**命题 7.1.7 (乘积空间的可测性)**, $T$ 可测当且仅当其坐标函数可测; 坐标函数 $\left(x,y\right)\mapsto f\left(x\right)=f\circ p_{1}$ 可测 (因 $f$ 可测), $\left(x,y\right)\mapsto y=p_{2}$ 连续可测. 故 $T$ 可测. 又 $\Phi\left(z,y\right)=z-y$ 连续, 博雷尔可测. 由**命题 7.1.5 (复合保持可测性)**, $\left(x,y\right)\mapsto f\left(x\right)-y=\Phi\circ T$ 可测. 因
+
+$$
+G_{f}=\left\{\left(x,y\right):f\left(x\right)-y\ge0\right\}=\left(f-y\right)^{-1}\left(\left[0,\infty\right]\right),
+$$
+
+是可测函数的原像, 由**定义 10.1.1 (乘积 $\sigma$-代数)**, $G_{f}\in\mathcal M\otimes\mathcal B_{\mathbb R}$.
+
+**测度值.** 由**定理 10.2.2 (托内利定理)** (非负特征函数, $\mu\times m$ $\sigma$-有限),
+
+$$
+\left(\mu\times m\right)\left(G_{f}\right)=\int_{X}m\left(\left(G_{f}\right)_{x}\right)\mathrm{d}\mu\left(x\right),
+$$
+
+其中 $\left(G_{f}\right)_{x}=\left\{y\in\left[0,\infty\right]:y\le f\left(x\right)\right\}=\left[0,f\left(x\right)\right]$, 勒贝格测度 $m\left(\left[0,f\left(x\right)\right]\right)=f\left(x\right)$. 故 $\left(\mu\times m\right)\left(G_{f}\right)=\int_{X}f\left(x\right)\mathrm{d}\mu\left(x\right)$.
+
+若把 $y\le f\left(x\right)$ 换成 $y< f\left(x\right)$, 则 $\left(G_{f}\right)_{x}=\left[0,f\left(x\right)\right)$, 仍有 $m=f\left(x\right)$, 结论不变. $\blacksquare$
+
+## 3
+
+若 $f\in L^{1}\left(m\right)$ 且 $\varepsilon> 0$, 则存在一个简单函数 $\varphi=\sum a_{j}\chi_{R_{j}}$, 其中每个 $R_{j}$ 是区间之积, 使得 $\int\left|f-\varphi\right|< \varepsilon$; 且存在一个在有界集外为零的连续函数 $g$, 使得 $\int\left|f-g\right|< \varepsilon$.
+
+### 解答 3
 
 **简单函数部分.** 由**定理 8.2.16 (可积简单函数在 $L^{1}$ 中稠密)**, 存在可积简单函数 $\varphi=\sum_{j}a_{j}\chi_{E_{j}}$ 使得 $\int\left|f-\varphi\right|< \varepsilon/2$. 对 $a_{j}\ne0$ 的项, 由 $\int a_{j}\chi_{E_{j}}\,\mathrm{d}m=a_{j}m\left(E_{j}\right)< \infty$ 得 $m\left(E_{j}\right)< \infty$ (否则积分发散, 与可积性矛盾). 由**定理 11.1.1 (勒贝格测度的正则性与矩形逼近)** (b), 对每个这样的 $E_{j}$ 存在有限个边为区间的互不相交矩形 $\left\{R_{j,k}\right\}$ 使 $m\left(E_{j}\triangle\bigcup_{k}R_{j,k}\right)$ 任意小. 于是 $\chi_{E_{j}}$ 与 $\chi_{R_{j}}$ (其中 $R_{j}=\bigcup_{k}R_{j,k}$) 在 $L^{1}$ 中任意接近, 取足够小的逼近误差并合并所有 $j$, 得到简单函数 $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ 满足 $\int\left|\varphi-\varphi'\right|< \varepsilon/2$. 故 $\int\left|f-\varphi'\right|\le\int\left|f-\varphi\right|+\int\left|\varphi-\varphi'\right|< \varepsilon$.
 
 **连续函数部分.** 设 $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ 已由上一步得到, 其中每个 $R_{j}$ 是有界闭矩形. 由特征函数的连续逼近, 对每个 $R_{j}$ 存在具有紧支撑的连续函数 $g_{j}$ 使 $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ 任意小. 取逼近误差足够小并令 $g=\sum_{j}a_{j}g_{j}$, 则 $g$ 连续且支撑在 $\bigcup_{j}R_{j}$ 中 (有界集), 且 $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|< \varepsilon/2$. 于是 $\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|< \varepsilon$, 且 $g$ 在有界集外为零. $\blacksquare$
 
-## 2
+## 4
 
 (线性变量替换公式) 假设 $T\in GL\left(n,\mathbb R\right)$.
 
@@ -62,7 +130,7 @@ $$
 
 (b) 如果 $E\in\mathcal L^{n}$, 则 $T\left(E\right)\in\mathcal L^{n}$ 且 $m\left(T\left(E\right)\right)=\left|\det T\right|m\left(E\right)$.
 
-### 解答 2
+### 解答 4
 
 先证三种初等变换的情形, 再组合.
 
@@ -88,7 +156,7 @@ $$
 
 $T\left(E\right)\in\mathcal L^{n}$ 已由可测性保证. $\blacksquare$
 
-## 3
+## 5
 
 设 $E=\left[0,1\right]\times\left[0,1\right]$. 研究 $\int_{E}f\,\mathrm{d}m^{2}$, $\int_{0}^{1}\int_{0}^{1}f\left(x,y\right)\mathrm{d}x\,\mathrm{d}y$ 与 $\int_{0}^{1}\int_{0}^{1}f\left(x,y\right)\mathrm{d}y\,\mathrm{d}x$ 的存在性和相等性, 对下列 $f$.
 
@@ -98,7 +166,7 @@ $T\left(E\right)\in\mathcal L^{n}$ 已由可测性保证. $\blacksquare$
 
 (c) $f\left(x,y\right)=\left(x-y\right)^{-3}$, 若 $0< y< x< 1$, 否则为 $0$.
 
-### 解答 3
+### 解答 5
 
 **(a).** $\left|f\left(x,y\right)\right|=\frac{\left|x^{2}-y^{2}\right|}{\left(x^{2}+y^{2}\right)^{2}}\le\frac{x^{2}+y^{2}}{\left(x^{2}+y^{2}\right)^{2}}=\frac{1}{x^{2}+y^{2}}$. 在 $E$ 上 $\int_{E}\frac{1}{x^{2}+y^{2}}\mathrm{d}x\,\mathrm{d}y$ 发散 (用极坐标, $\int_{0}^{\delta}\int_{0}^{\pi/2}\frac{1}{r^{2}}r\,\mathrm{d}\theta\,\mathrm{d}r=\frac{\pi}{2}\int_{0}^{\delta}\frac{1}{r}\mathrm{d}r=\infty$), 故 $\int_{E}\left|f\right|=\infty$, $f\notin L^{1}$, $\int_{E}f\,\mathrm{d}m^{2}$ 无定义.
 
@@ -121,143 +189,3 @@ $a> 1$ 时, 内层 $\frac{1}{y}\cdot\frac{1-\left(1-y\right)^{1-a}}{1-a}$, 因 $
 先对 $y$ 积分: 固定 $x$, $\int_{0}^{x}\left(x-y\right)^{-3}\mathrm{d}y=\left[-\frac{1}{2}\left(x-y\right)^{-2}\right]_{0}^{x}$, 因 $\lim_{y\to x^{-}}\left(x-y\right)^{-2}=\infty$, 故内层积分 $=-\infty$, 于是 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=-\infty$.
 
 结论: $\int_{E}f\,\mathrm{d}m^{2}$ 不存在; $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=+\infty$ 而 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=-\infty$, 两个迭代积分存在但不等且符号相反. 这是富比尼失效的经典反例: 非绝对可积时积分次序不可交换. $\blacksquare$
-
-## 4
-
-如果 $f$ 在 $\left(0,a\right)$ 上勒贝格可积, 且 $g\left(x\right)=\int_{x}^{a}t^{-1}f\left(t\right)\mathrm{d}t$, 则 $g$ 在 $\left(0,a\right)$ 上可积且 $\int_{0}^{a}g\left(x\right)\mathrm{d}x=\int_{0}^{a}f\left(x\right)\mathrm{d}x$.
-
-### 解答 4
-
-先在 $\left(0,a\right)\times\left(0,a\right)$ 上考虑二元函数 $h\left(x,t\right)=t^{-1}f\left(t\right)\chi_{\left\{x< t\right\}}\left(x,t\right)$ (即定义域 $\left\{\left(x,t\right):0< x< t< a\right\}$). 由**定理 10.2.2 (托内利定理)** 应用于非负函数 $\left|h\right|$,
-
-$$
-\int_{0}^{a}\int_{x}^{a}t^{-1}\left|f\left(t\right)\right|\mathrm{d}t\,\mathrm{d}x=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}\left|f\left(t\right)\right|\mathrm{d}x\right)\mathrm{d}t=\int_{0}^{a}t^{-1}\left|f\left(t\right)\right|\cdot t\,\mathrm{d}t=\int_{0}^{a}\left|f\left(t\right)\right|\mathrm{d}t< \infty,
-$$
-
-其中内层交换次序用**定理 10.2.2 (托内利定理)** 于非负函数. 故 $\left(x,t\right)\mapsto t^{-1}f\left(t\right)\chi_{\left\{x< t\right\}}$ 可积, 从而 $g$ 可积. 再由**定理 10.2.1 (富比尼定理)** 交换次序,
-
-$$
-\int_{0}^{a}g\left(x\right)\mathrm{d}x=\int_{0}^{a}\int_{x}^{a}t^{-1}f\left(t\right)\mathrm{d}t\,\mathrm{d}x=\int_{0}^{a}\left(\int_{0}^{t}t^{-1}f\left(t\right)\mathrm{d}x\right)\mathrm{d}t=\int_{0}^{a}t^{-1}f\left(t\right)\cdot t\,\mathrm{d}t=\int_{0}^{a}f\left(t\right)\mathrm{d}t.
-$$
-
-$\blacksquare$
-
-## 5
-
-设 $f\left(x\right)=x^{-1}\sin x$.
-
-(a) 证明 $\int_{0}^{\infty}\left|f\left(x\right)\right|\mathrm{d}x=\infty$.
-
-(b) 证明 $\lim_{b\to\infty}\int_{0}^{b}f\left(x\right)\mathrm{d}x=\frac{1}{2}\pi$, 通过积分 $e^{-xy}\sin x$ 关于 $x$ 和 $y$.
-
-### 解答 5
-
-**(a).** 在区间 $\left[k\pi,\left(k+1\right)\pi\right]$ 上, $\left|\sin x\right|\ge0$ 且 $\int_{k\pi}^{\left(k+1\right)\pi}\left|\sin x\right|\mathrm{d}x=2$. 因 $\frac{1}{x}$ 在此区间上 $\ge\frac{1}{\left(k+1\right)\pi}$, 有 $\int_{k\pi}^{\left(k+1\right)\pi}\frac{\left|\sin x\right|}{x}\mathrm{d}x\ge\frac{2}{\left(k+1\right)\pi}$. 于是对任意 $N$, $\int_{0}^{\left(N+1\right)\pi}\frac{\left|\sin x\right|}{x}\mathrm{d}x\ge\sum_{k=0}^{N}\frac{2}{\left(k+1\right)\pi}\to\infty$ (调和级数发散), 故 $\int_{0}^{\infty}\left|f\right|\mathrm{d}x=\infty$.
-
-**(b).** 对固定的 $b> 0$, 因 $\int_{0}^{b}\int_{0}^{\infty}\left|e^{-xy}\sin x\right|\mathrm{d}y\,\mathrm{d}x=\int_{0}^{b}\frac{\left|\sin x\right|}{x}\mathrm{d}x< \infty$ (固定 $b$ 时 $x^{-1}\sin x$ 可积), 由**定理 10.2.2 (托内利定理)** 可交换次序:
-
-$$
-\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\int_{0}^{b}\int_{0}^{\infty}e^{-xy}\sin x\,\mathrm{d}y\,\mathrm{d}x=\int_{0}^{\infty}\left(\int_{0}^{b}e^{-xy}\sin x\,\mathrm{d}x\right)\mathrm{d}y.
-$$
-
-对固定的 $y$, 分部积分两次得 $\int_{0}^{b}e^{-xy}\sin x\,\mathrm{d}x=\frac{1-e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}$. 故 $\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\int_{0}^{\infty}\frac{1-e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}\mathrm{d}y$.
-
-**取极限 $b\to\infty$.** 拆成两项 $\frac{1}{1+y^{2}}-\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}$. 第一项积分 $\int_{0}^{\infty}\frac{1}{1+y^{2}}\mathrm{d}y=\frac{\pi}{2}$. 对第二项, 当 $b\ge1$ 时 $\left|\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}\right|\le\frac{e^{-y}\left(y+1\right)}{1+y^{2}}=:g\left(y\right)$, 且 $\int_{0}^{\infty}g\left(y\right)\mathrm{d}y< \infty$ (被 $e^{-y}$ 指数衰减控制). 由**定理 8.2.9 (控制收敛定理)** (对任意序列 $b_{n}\to\infty$ 应用), 该项趋于 $\int_{0}^{\infty}0\,\mathrm{d}y=0$. 故 $\lim_{b\to\infty}\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\frac{\pi}{2}$. $\blacksquare$
-
-## 6
-
-若 $f$ 在 $\left[0,\infty\right)$ 上连续, 对 $\alpha> 0$ 和 $x\ge0$, 令
-
-$$
-I_{\alpha}f\left(x\right)=\frac{1}{\Gamma\left(\alpha\right)}\int_{0}^{x}\left(x-t\right)^{\alpha-1}f\left(t\right)\mathrm{d}t,
-$$
-
-$I_{\alpha}f$ 称为 $f$ 的 $\alpha$ 阶分数阶积分.
-
-(a) $I_{\alpha+\beta}f=I_{\alpha}\left(I_{\beta}f\right)$ 对所有 $\alpha,\beta> 0$ 成立.
-
-(b) 若 $n\in\mathbb N$, $I_{n}f$ 是 $f$ 的 $n$ 阶反导数.
-
-### 解答 6
-
-**(a).** 展开复合积分, 在区域 $\left\{\left(s,t\right):0< t< s< x\right\}$ 上交换次序:
-
-$$
-I_{\alpha}\left(I_{\beta}f\right)\left(x\right)=\frac{1}{\Gamma\left(\alpha\right)}\int_{0}^{x}\left(x-s\right)^{\alpha-1}\left[\frac{1}{\Gamma\left(\beta\right)}\int_{0}^{s}\left(s-t\right)^{\beta-1}f\left(t\right)\mathrm{d}t\right]\mathrm{d}s.
-$$
-
-因 $f$ 连续, 被积函数可积, 由**定理 10.2.1 (富比尼定理)** 交换次序得
-
-$$
-=\frac{1}{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}\int_{0}^{x}f\left(t\right)\left[\int_{t}^{x}\left(x-s\right)^{\alpha-1}\left(s-t\right)^{\beta-1}\mathrm{d}s\right]\mathrm{d}t.
-$$
-
-对内层积分, 令 $u=\frac{s-t}{x-t}$, 则 $s=t+u\left(x-t\right)$, $\mathrm{d}s=\left(x-t\right)\mathrm{d}u$, 得
-
-$$
-\int_{t}^{x}\left(x-s\right)^{\alpha-1}\left(s-t\right)^{\beta-1}\mathrm{d}s=\left(x-t\right)^{\alpha+\beta-1}\int_{0}^{1}\left(1-u\right)^{\alpha-1}u^{\beta-1}\mathrm{d}u.
-$$
-
-由伽马函数与贝塔恒等式, $\int_{0}^{1}\left(1-u\right)^{\alpha-1}u^{\beta-1}\mathrm{d}u=\frac{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}{\Gamma\left(\alpha+\beta\right)}$. 代入得 $I_{\alpha}\left(I_{\beta}f\right)\left(x\right)=\frac{1}{\Gamma\left(\alpha+\beta\right)}\int_{0}^{x}\left(x-t\right)^{\alpha+\beta-1}f\left(t\right)\mathrm{d}t=I_{\alpha+\beta}f\left(x\right)$.
-
-**(b).** 先看 $\alpha=1$: 因 $\Gamma\left(1\right)=1$, $I_{1}f\left(x\right)=\int_{0}^{x}f\left(t\right)\mathrm{d}t$, 由微积分基本定理 $\frac{\mathrm{d}}{\mathrm{d}x}I_{1}f=f$. 由 (a), 迭代得 $I_{n}f=\underbrace{I_{1}\circ\cdots\circ I_{1}}_{n\text{ 次}}f$, 故 $\frac{\mathrm{d}^{n}}{\mathrm{d}x^{n}}I_{n}f=f$. 又因 $I_{\alpha}f$ 的积分下限为 $0$, 对 $k< n$ 有 $\left(\frac{\mathrm{d}}{\mathrm{d}x}\right)^{k}I_{n}f$ 在 $0$ 处取值为 $0$. 故 $I_{n}f$ 是 $f$ 的一个 $n$ 阶反导数. $\blacksquare$
-
-## 7
-
-$S^{n-1}$ 上的测度 $\sigma$ 在旋转下不变.
-
-### 解答 7
-
-设 $R\in O\left(n\right)$, 即 $R^{\top}R=I$, 则 $\left|\det R\right|=1$. 由正交变换保持勒贝格测度, $R$ 在 $\mathbb R^{n}$ 上保持 $m$. 由于 $R$ 保持范数 $\left|Rx\right|=\left|x\right|$, 它在球面坐标分解 $\Phi\left(x\right)=\left(r,x'\right)$ 下作用于球面部分: 存在球面 $S^{n-1}$ 上的旋转 $\rho$ 使 $R\left(rx'\right)=r\rho\left(x'\right)$. 记 $m^{*}$ 为极坐标诱导测度 ($m^{*}=\rho\times\sigma$ 由**定理 11.4.1 (极坐标下的积分公式)**), 对博雷尔集 $A\subset\left(0,\infty\right)\times S^{n-1}$,
-
-$$
-m^{*}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)=m\left(\Phi^{-1}\left(\left(\mathrm{id}\times\rho\right)\left(A\right)\right)\right)=m\left(R\Phi^{-1}\left(A\right)\right)=m\left(\Phi^{-1}\left(A\right)\right)=m^{*}\left(A\right),
-$$
-
-故 $m^{*}$ 旋转不变.
-
-定义 $\sigma_{R}\left(E\right):=\sigma\left(R^{-1}E\right)=\sigma\left(R^{\top}E\right)$, 它是 $S^{n-1}$ 上的博雷尔测度. 对矩形 $\left(a,b\right]\times E\subset\left(0,\infty\right)\times S^{n-1}$,
-
-$$
-\left(\rho\times\sigma_{R}\right)\left(\left(a,b\right]\times E\right)=\int_{a}^{b}r^{n-1}\mathrm{d}r\cdot\sigma_{R}\left(E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right).
-$$
-
-由 $m^{*}=\rho\times\sigma$ (**定理 11.4.1 (极坐标下的积分公式)**), $\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times R^{-1}E\right)$. 又由 $m^{*}$ 的旋转不变性, $m^{*}\left(\left(a,b\right]\times R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times E\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(E\right)$. 故在矩形上 $\rho\times\sigma_{R}=\rho\times\sigma$. 由测度在乘积 $\sigma$-代数生成族上的唯一性, $\rho\times\sigma_{R}=\rho\times\sigma$ 在 $\left(0,\infty\right)\times S^{n-1}$ 上成立.
-
-最后由**定理 11.4.1 (极坐标下的积分公式)** 的唯一性 (使 $m^{*}=\rho\times\sigma$ 的测度 $\sigma$ 唯一), 从 $\rho\times\sigma_{R}=m^{*}=\rho\times\sigma$ 得 $\sigma_{R}=\sigma$, 即 $\sigma\left(R^{-1}E\right)=\sigma\left(E\right)$ 对一切博雷尔 $E$ 成立. 故 $\sigma$ 旋转不变. $\blacksquare$
-
-## 8
-
-对哪些实值 $a$ 和 $b$, $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在集合 $\left\{x\in\mathbb R^{n}:\left|x\right|< 1/2\right\}$ 上可积? 在集合 $\left\{x\in\mathbb R^{n}:\left|x\right|> 2\right\}$ 上可积?
-
-### 解答 8
-
-函数 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 是径向的, 由**定理 11.4.1 (极坐标下的积分公式)**,
-
-$$
-\int_{\mathbb R^{n}}\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}\mathrm{d}x=\sigma\left(S^{n-1}\right)\int_{0}^{\infty}r^{a+n-1}\left|\log r\right|^{b}\mathrm{d}r.
-$$
-
-**集合 $\left\{\left|x\right|< 1/2\right\}$.** 作代换 $u=-\log r$ (即 $r=e^{-u}$, $\mathrm{d}r=-e^{-u}\mathrm{d}u$, 则 $r\in\left(0,1/2\right]$ 对应 $u\in\left[\log 2,\infty\right)$):
-
-$$
-\int_{0}^{1/2}r^{a+n-1}\left|\log r\right|^{b}\mathrm{d}r=\int_{\log 2}^{\infty}e^{-u\left(a+n-1\right)}e^{-u}u^{b}\mathrm{d}u=\int_{\log 2}^{\infty}e^{-u\left(a+n\right)}u^{b}\mathrm{d}u.
-$$
-
-收敛条件由指数因子决定:
-
-$$
-\int_{\log 2}^{\infty}e^{-u\left(a+n\right)}u^{b}\mathrm{d}u\text{ 收敛}\iff\begin{cases}a+n> 0,&\text{指数衰减, 任意 }b,\\a+n=0\text{ 且 }b< -1,&\int u^{b}\mathrm{d}u\text{ 收敛},\\a+n< 0,&\text{指数增长, 发散}.\end{cases}
-$$
-
-故 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在 $\left\{\left|x\right|< 1/2\right\}$ 上可积 $\iff a> -n$, 或 $a=-n$ 且 $b< -1$.
-
-**集合 $\left\{\left|x\right|> 2\right\}$.** 当 $r\ge2$ 时 $\left|\log r\right|=\log r$. 作代换 $r=e^{u}$ ($\mathrm{d}r=e^{u}\mathrm{d}u$, $u\ge\log 2$):
-
-$$
-\int_{2}^{\infty}r^{a+n-1}\left(\log r\right)^{b}\mathrm{d}r=\int_{\log 2}^{\infty}e^{u\left(a+n-1\right)}e^{u}u^{b}\mathrm{d}u=\int_{\log 2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u.
-$$
-
-收敛条件: $\int_{\log 2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u\text{ 收敛}\iff a+n< 0$ (指数衰减; $a+n> 0$ 时指数增长发散, $a+n=0$ 时 $\int u^{b}\mathrm{d}u$ 发散对任意 $b$). 故 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在 $\left\{\left|x\right|> 2\right\}$ 上可积 $\iff a< -n$.
-
-**结论.** 在 $\left\{\left|x\right|< 1/2\right\}$ 上可积 $\iff a> -n$ 或 $\left(a=-n\text{ 且 }b< -1\right)$; 在 $\left\{\left|x\right|> 2\right\}$ 上可积 $\iff a< -n$. $\blacksquare$

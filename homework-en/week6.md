@@ -2,7 +2,11 @@
 
 > **Definition 4.1.3 ($\sigma$-Algebra)**
 > 
-> Let $X$ be nonempty and $\mathcal F\subset\mathcal P\left(X\right)$. We call $\mathcal F$ a $\sigma$-algebra on $X$ if $X\in\mathcal F$, it is closed under complements, and it is closed under countable unions. It follows that $\mathcal F$ is also closed under countable intersections.
+> Let $X$ be nonempty and $\mathcal F\subset\mathcal P\left(X\right)$. $\mathcal F$ is called a $\sigma$-algebra on $X$ if: (1) $X\in\mathcal F$; (2) closed under complements: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) closed under countable unions: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
+
+> **Definition 5.1.2 (Measure)**
+> 
+> Let $\left(X,\mathcal F\right)$ be a measurable space. A function $\mu:\mathcal F\to\left[0,+\infty\right]$ is called a measure on $\left(X,\mathcal F\right)$ if: (1) nonnegativity: $\mu\left(E\right)\ge0$ for all $E\in\mathcal F$; (2) empty set: $\mu\left(\emptyset\right)=0$; (3) countable additivity ($\sigma$-additivity): for any countable pairwise-disjoint $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
 
 > **Definition 5.1.5 ($\sigma$-Finite Measure)**
 > 
@@ -15,7 +19,6 @@
 $$
 \mu_{F}\left(E\right)=\inf\left\{\mu_{F}\left(U\right):E\subset U,U\text{ open}\right\}=\sup\left\{\mu_{F}\left(K\right):K\subset E,K\text{ compact}\right\}.
 $$
-
 In particular, Lebesgue measure on $\left[a,b\right]$ is inner regular.
 
 > **Theorem 7.1.8 (Closure of Real-Valued Measurable Functions Under Operations)**
@@ -25,6 +28,50 @@ In particular, Lebesgue measure on $\left[a,b\right]$ is inner regular.
 > **Theorem 7.2.2 (Construction of Measurable Functions)**
 > 
 > If $f:X\to\left[0,+\infty\right]$ is a nonnegative measurable function, then there exists a sequence of nonnegative simple functions $\left\{f_{n}\right\}$ with $0\le f_{1}\le f_{2}\le\cdots\le f$ and $\lim_{n\to\infty}f_{n}\left(x\right)=f\left(x\right)$ for every $x\in X$.
+
+> **Definition 8.1.1 (Integral of a Nonnegative Simple Function)**
+> 
+> Let $f=\sum_{i=1}^{n}c_{i}\chi_{A_{i}}$ be a nonnegative simple function, where $c_{i}\ge0$, the $A_{i}\in\mathcal F$ are pairwise disjoint and $\bigcup_{i}A_{i}=X$. The integral of $f$ with respect to $\mu$ is $\int_{X}f\,\mathrm{d}\mu=\sum_{i=1}^{n}c_{i}\mu\left(A_{i}\right)$, with the convention $0\cdot\infty=0$.
+
+> **Proposition 8.1.2 (Linearity of the Integral for Simple Functions)**
+> 
+> Let $f,g$ be nonnegative simple functions and $\alpha,\beta\ge0$. Then $\int_{X}\left(\alpha f+\beta g\right)\mathrm{d}\mu=\alpha\int_{X}f\,\mathrm{d}\mu+\beta\int_{X}g\,\mathrm{d}\mu$.
+
+> **Definition 8.2.1 (Integral of a Nonnegative Measurable Function)**
+> 
+> Let $f:X\to\left[0,+\infty\right]$ be a nonnegative measurable function. The integral of $f$ with respect to $\mu$ is $\int_{X}f\,\mathrm{d}\mu=\sup\left\{\int_{X}\phi\,\mathrm{d}\mu:\phi\text{ simple},0\le\phi\le f\right\}$. If $\int_{X}f\,\mathrm{d}\mu< \infty$, $f$ is called integrable.
+
+> **Theorem 8.2.2 (Monotone Convergence Theorem)**
+> 
+> Let $\left(X,\mathcal F,\mu\right)$ be a measure space and $\left\{f_{n}\right\}$ a sequence of nonnegative measurable functions with $0\le f_{1}\left(x\right)\le f_{2}\left(x\right)\le\cdots$ for all $x\in X$, and $f_{n}\to f$ pointwise. Then $\lim_{n\to\infty}\int_{X}f_{n}\,\mathrm{d}\mu=\int_{X}f\,\mathrm{d}\mu$.
+
+> **Remark 8.2.3 (Approximation by Simple Functions)**
+> 
+> The monotone convergence theorem tells us that the integral can be approximated by simple functions.
+
+> **Proposition 8.2.4 (Absolute Continuity of the Integral with Respect to the Set)**
+> 
+> Let $f$ be a nonnegative measurable function. Then $A\mapsto\int_{A}f\,\mathrm{d}\mu$ is a measure; if $\mu\left(A\right)=0$, then $\int_{A}f\,\mathrm{d}\mu=0$.
+
+> **Definition 8.2.5 (Integral of a General Measurable Function)**
+> 
+> Let $f:X\to\left[-\infty,+\infty\right]$ be measurable. Define its positive and negative parts by $f^{+}\left(x\right)=\max\left\{f\left(x\right),0\right\}$, $f^{-}\left(x\right)=\max\left\{-f\left(x\right),0\right\}$. If at least one of $\int_{X}f^{+}\mathrm{d}\mu$, $\int_{X}f^{-}\mathrm{d}\mu$ is finite, define the integral by $\int_{X}f\,\mathrm{d}\mu=\int_{X}f^{+}\mathrm{d}\mu-\int_{X}f^{-}\mathrm{d}\mu$. If both are finite, $f$ is called integrable.
+
+> **Theorem 8.2.7 (Fatou's Lemma)**
+> 
+> Let $\left(X,\mathcal F,\mu\right)$ be a measure space and $\left\{f_{n}\right\}$ a sequence of nonnegative measurable functions. Then $\int_{X}\liminf_{n\to\infty}f_{n}\,\mathrm{d}\mu\le\liminf_{n\to\infty}\int_{X}f_{n}\,\mathrm{d}\mu$.
+
+> **Theorem 8.2.9 (Dominated Convergence Theorem)**
+> 
+> Let $\left(X,\mathcal F,\mu\right)$ be a measure space and $\left\{f_{n}\right\}$ a sequence of measurable functions. If there exists an integrable $g$ with $\left|f_{n}\right|\le g$ for all $n$ and $f_{n}\to f$ a.e., then $f$ is integrable and $\int f\,\mathrm{d}\mu=\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu$.
+
+> **Lemma 8.2.13 (Termwise Integration of Series)**
+> 
+> Let $\left\{f_{n}\right\}$ be a sequence of measurable functions with $\sum_{n=1}^{\infty}\int_{X}\left|f_{n}\right|\mathrm{d}\mu< \infty$. Then $\int_{X}\left(\sum_{n=1}^{\infty}f_{n}\right)\mathrm{d}\mu=\sum_{n=1}^{\infty}\int_{X}f_{n}\,\mathrm{d}\mu$.
+
+> **Theorem 8.2.17 (Parameter Integrals)**
+> 
+> Let $f:X\times\left[a,b\right]\to\mathbb R$, and for each $t\in\left[a,b\right]$ let $f\left(\cdot,t\right):X\to\mathbb R$ be integrable. Set $F\left(t\right)=\int_{X}f\left(x,t\right)\mathrm{d}\mu\left(x\right)$. (a) If there exists $g\in L^{1}\left(\mu\right)$ with $\left|f\left(x,t\right)\right|\le g\left(x\right)$ for all $x,t$, and $\lim_{t\to t_{0}}f\left(x,t\right)=f\left(x,t_{0}\right)$ for each $x$, then $\lim_{t\to t_{0}}F\left(t\right)=F\left(t_{0}\right)$; (b) if the partial derivative $\partial f/\partial t$ exists and there is $g\in L^{1}\left(\mu\right)$ with $\left|\frac{\partial f}{\partial t}\left(x,t\right)\right|\le g\left(x\right)$ for all $x,t$, then $F$ is differentiable and $F'\left(t\right)=\int\frac{\partial f}{\partial t}\left(x,t\right)\mathrm{d}\mu\left(x\right)$.
 
 > **Definition 9.1.1 (Almost-Everywhere Convergence)**
 > 
@@ -52,9 +99,197 @@ $$
 
 ## 1
 
+Prove:
+
+**20.** (Generalized dominated convergence) If $f_{n},g_{n},f,g\in L^{1}$, $f_{n}\to f$ and $g_{n}\to g$ a.e., $\left|f_{n}\right|\le g_{n}$, and $\int g_{n}\to\int g$, then $\int f_{n}\to\int f$.
+
+**23.** Let $f:\left[a,b\right]\to\mathbb R$ be bounded, and set
+
+$$
+H\left(x\right)=\limsup_{\delta\to0}\sup_{0< \left|y-x\right|\le\delta}f\left(y\right),\qquad h\left(x\right)=\liminf_{\delta\to0}\inf_{0< \left|y-x\right|\le\delta}f\left(y\right).
+$$
+
+Prove: (a) $H\left(x\right)=h\left(x\right)$ iff $f$ is continuous at $x$; (b) $H=G$ a.e., $h=g$ a.e., and $\int_{\left(a,b\right)}h\,\mathrm{d}m=\underline{\int}f$. Hence $f$ is Riemann integrable iff its set of discontinuities has measure 0.
+
+**27.** Let $f_{n}\left(x\right)=ae^{-nax}-be^{-nbx}$ with $0< a< b$. (a) $\sum_{n=1}^{\infty}\int_{0}^{\infty}\left|f_{n}\left(x\right)\right|\mathrm{d}x=\infty$; (b) $\sum_{n=1}^{\infty}\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x=0$; (c) $\sum_{n=1}^{\infty}f_{n}\in L^{1}\left(\left[0,\infty\right),m\right)$ and $\int_{0}^{\infty}\sum_{n=1}^{\infty}f_{n}\left(x\right)\mathrm{d}x=\log\left(b/a\right)$.
+
+**29.** By differentiating $\int_{0}^{\infty}e^{-tx}\mathrm{d}x=1/t$, prove $\int_{0}^{\infty}x^{n}e^{-x}\mathrm{d}x=n!$; similarly, by differentiating $\int_{-\infty}^{\infty}e^{-tx^{2}}\mathrm{d}x=\sqrt{\pi/t}$, prove $\int_{-\infty}^{\infty}x^{2n}e^{-x^{2}}\mathrm{d}x=\frac{\left(2n\right)!\sqrt\pi}{4^{n}n!}$.
+
+### Solution to 1
+
+**20.** Since $g_{n}\to g$ a.e. and $\left|f_{n}\right|\le g_{n}$, taking limits gives $\left|f\right|\le g$ a.e., so $f\in L^{1}$. Since $\left|f_{n}\right|\le g_{n}$ means $-g_{n}\le f_{n}\le g_{n}$, the sequences $\left\{g_{n}+f_{n}\right\}$ and $\left\{g_{n}-f_{n}\right\}$ are nonnegative and converge a.e. to $g+f$ and $g-f$ respectively. By **Theorem 8.2.7 (Fatou's Lemma)**,
+
+$$
+\int\left(g+f\right)\mathrm{d}\mu\le\liminf_{n\to\infty}\int\left(g_{n}+f_{n}\right)\mathrm{d}\mu=\int g\,\mathrm{d}\mu+\liminf_{n\to\infty}\int f_{n}\,\mathrm{d}\mu,
+$$
+
+since $\int g_{n}\to\int g$ and the integrals are finite (linearity, Exercise 2). Subtracting $\int g\,\mathrm{d}\mu$ gives $\int f\,\mathrm{d}\mu\le\liminf_{n\to\infty}\int f_{n}\,\mathrm{d}\mu$. Similarly, applying Fatou to $\left\{g_{n}-f_{n}\right\}$,
+
+$$
+\int\left(g-f\right)\mathrm{d}\mu\le\liminf_{n\to\infty}\int\left(g_{n}-f_{n}\right)\mathrm{d}\mu=\int g\,\mathrm{d}\mu-\limsup_{n\to\infty}\int f_{n}\,\mathrm{d}\mu,
+$$
+
+i.e. $\limsup_{n\to\infty}\int f_{n}\,\mathrm{d}\mu\le\int f\,\mathrm{d}\mu$. Combining,
+
+$$
+\int f\,\mathrm{d}\mu\le\liminf_{n\to\infty}\int f_{n}\,\mathrm{d}\mu\le\limsup_{n\to\infty}\int f_{n}\,\mathrm{d}\mu\le\int f\,\mathrm{d}\mu,
+$$
+
+so $\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu$. $\blacksquare$
+
+**23.** Use the notation of Riemann Integral and Darboux Sums. $f$ is Riemann integrable iff $\overline{\int}f=\underline{\int}f$.
+
+(a) Suppose $f$ is continuous at $x$. For $\varepsilon> 0$ there exists $\delta> 0$ such that $\left|y-x\right|< \delta\Rightarrow\left|f\left(y\right)-f\left(x\right)\right|< \varepsilon$. Then for $0< \left|y-x\right|\le\delta$,
+
+$$
+f\left(x\right)-\varepsilon\le\inf_{0< \left|y-x\right|\le\delta}f\left(y\right)\le f\left(x\right)\le\sup_{0< \left|y-x\right|\le\delta}f\left(y\right)\le f\left(x\right)+\varepsilon.
+$$
+
+Letting $\delta\to0$ and using the arbitrariness of $\varepsilon$, $h\left(x\right)\ge f\left(x\right)\ge H\left(x\right)$; but by definition always $h\left(x\right)\le f\left(x\right)\le H\left(x\right)$, so $H\left(x\right)=h\left(x\right)=f\left(x\right)$.
+
+Conversely, suppose $H\left(x\right)=h\left(x\right)=:L$. For $\varepsilon> 0$, by the definition of the limits there exists $\delta> 0$ such that for $0< \delta'< \delta$,
+
+$$
+\inf_{0< \left|y-x\right|\le\delta'}f\left(y\right)> L-\varepsilon,\qquad\sup_{0< \left|y-x\right|\le\delta'}f\left(y\right)< L+\varepsilon.
+$$
+
+Taking $\delta'=\delta$, for $0< \left|y-x\right|\le\delta$ we have $L-\varepsilon< f\left(y\right)< L+\varepsilon$; also $f\left(x\right)$ lies between the inf and sup, so $L-\varepsilon< f\left(x\right)< L+\varepsilon$. Hence $\left|f\left(y\right)-f\left(x\right)\right|< 2\varepsilon$ for $0< \left|y-x\right|\le\delta$, i.e. $f$ is continuous at $x$.
+
+(b) Take a sequence of partitions $\left\{P_{k}\right\}$ with mesh $\max_{i}\left(t_{i}-t_{i-1}\right)\to0$ and $P_{k}\subset P_{k+1}$ (successive refinement), define
+
+$$
+G_{P_{k}}=\sum_{i}M_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},\qquad g_{P_{k}}=\sum_{i}m_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},
+$$
+
+and set $G=\lim_{k}G_{P_{k}}$, $g=\lim_{k}g_{P_{k}}$. Fix $x$ not a partition point of any $P_{k}$ (the union of all partition points is at most countable, measure 0). Suppose $x\in\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)$; then $G_{P_{k}}\left(x\right)=M_{i}^{\left(k\right)}=\sup_{\left[t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right]}f$. As $k\to\infty$ the interval shrinks to $\left\{x\right\}$, and the supremum decreases to the limit of $\sup_{0< \left|y-x\right|\le\delta}f\left(y\right)$ as $\delta\to0$, i.e. $H\left(x\right)$. Hence $G\left(x\right)=H\left(x\right)$; similarly $g\left(x\right)=h\left(x\right)$. Thus after removing the countable set of partition points from $\left[a,b\right]$, $H=G$ and $h=g$ almost everywhere.
+
+Also $G_{P_{k}}$ is bounded and $g_{P_{k}}\le f\le G_{P_{k}}$. By **Theorem 8.2.9 (Dominated Convergence Theorem)**,
+
+$$
+\int H\,\mathrm{d}m=\int G\,\mathrm{d}m=\lim_{k}\int G_{P_{k}}\mathrm{d}m=\lim_{k}\overline S\left(P_{k}\right)=\overline{\int}f,
+$$
+
+$$
+\int h\,\mathrm{d}m=\int g\,\mathrm{d}m=\lim_{k}\int g_{P_{k}}\mathrm{d}m=\lim_{k}\underline S\left(P_{k}\right)=\underline{\int}f.
+$$
+
+In particular $\int_{\left(a,b\right)}h\,\mathrm{d}m=\underline{\int}f$. Hence
+
+$$
+f\text{ Riemann integrable}\iff\overline{\int}f=\underline{\int}f\iff\int H\,\mathrm{d}m=\int h\,\mathrm{d}m\iff\int\left(H-h\right)\mathrm{d}m=0.
+$$
+
+Since $H\ge h$, by Exercise 3(b), $\int\left(H-h\right)\mathrm{d}m=0\iff H=h$ a.e. Combined with (a) ($H=h\iff f$ continuous at $x$), $f$ is Riemann integrable iff its discontinuity set has measure 0. Then the Riemann integral $\overline{\int}f=\int H\,\mathrm{d}m=\int f\,\mathrm{d}m$ (since $H=f$ a.e.). $\blacksquare$
+
+**27.** First find the zero of $f_{n}$. Setting $f_{n}\left(x\right)=0$ gives $ae^{-nax}=be^{-nbx}$, i.e. $e^{n\left(b-a\right)x}=b/a$, so the unique zero is
+
+$$
+x_{n}=\frac{\log\left(b/a\right)}{n\left(b-a\right)}.
+$$
+
+On $\left[0,x_{n}\right)$, $f_{n}< 0$, and on $\left(x_{n},\infty\right)$, $f_{n}> 0$.
+
+(a) Compute
+
+$$
+\int_{0}^{\infty}\left|f_{n}\right|\mathrm{d}x=\int_{0}^{x_{n}}\left(be^{-nbx}-ae^{-nax}\right)\mathrm{d}x+\int_{x_{n}}^{\infty}\left(ae^{-nax}-be^{-nbx}\right)\mathrm{d}x.
+$$
+
+Using $\int_{0}^{x_{n}}be^{-nbx}\mathrm{d}x=\frac{1}{n}\left(1-e^{-nbx_{n}}\right)$, $\int_{0}^{x_{n}}ae^{-nax}\mathrm{d}x=\frac{1}{n}\left(1-e^{-nax_{n}}\right)$, $\int_{x_{n}}^{\infty}ae^{-nax}\mathrm{d}x=\frac{1}{n}e^{-nax_{n}}$, $\int_{x_{n}}^{\infty}be^{-nbx}\mathrm{d}x=\frac{1}{n}e^{-nbx_{n}}$, we get
+
+$$
+\int_{0}^{\infty}\left|f_{n}\right|\mathrm{d}x=\frac{2}{n}\left(e^{-nax_{n}}-e^{-nbx_{n}}\right).
+$$
+
+Let $t=e^{-nx_{n}}$. The zero condition gives $at^{a}=bt^{b}$, i.e. $t^{a-b}=b/a$, so $t=\left(b/a\right)^{1/\left(a-b\right)}\in\left(0,1\right)$. Since $t< 1$ and $a< b$, the power map $\lambda\mapsto t^{\lambda}$ is decreasing, so $t^{a}> t^{b}$, and the constant $c:=2\left(t^{a}-t^{b}\right)> 0$. Therefore
+
+$$
+\sum_{n=1}^{\infty}\int_{0}^{\infty}\left|f_{n}\right|\mathrm{d}x=c\sum_{n=1}^{\infty}\frac{1}{n}=\infty.
+$$
+
+(b) Termwise,
+
+$$
+\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x=\int_{0}^{\infty}ae^{-nax}\mathrm{d}x-\int_{0}^{\infty}be^{-nbx}\mathrm{d}x=\frac{1}{n}-\frac{1}{n}=0,
+$$
+
+so $\sum_{n=1}^{\infty}\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x=0$.
+
+(c) By the geometric series $\sum_{n=1}^{\infty}e^{-nax}=\frac{e^{-ax}}{1-e^{-ax}}=\frac{1}{e^{ax}-1}$,
+
+$$
+\sum_{n=1}^{\infty}f_{n}\left(x\right)=a\sum_{n=1}^{\infty}e^{-nax}-b\sum_{n=1}^{\infty}e^{-nbx}=\frac{a}{e^{ax}-1}-\frac{b}{e^{bx}-1}.
+$$
+
+As $x\to0^{+}$, $\frac{a}{e^{ax}-1}=\frac{1}{x}-\frac{a}{2}+O\left(x\right)$, so the difference tends to $\frac{b-a}{2}+O\left(x\right)$ (finite); as $x\to\infty$, exponential decay. Hence $\sum f_{n}\in L^{1}\left(\left[0,\infty\right),m\right)$.
+
+For $R> 0$, change variables $u=ax$ and $u=bx$:
+
+$$
+\int_{0}^{R}\frac{a}{e^{ax}-1}\mathrm{d}x=\int_{0}^{aR}\frac{\mathrm{d}u}{e^{u}-1},\qquad\int_{0}^{R}\frac{b}{e^{bx}-1}\mathrm{d}x=\int_{0}^{bR}\frac{\mathrm{d}u}{e^{u}-1}.
+$$
+
+Thus
+
+$$
+\int_{0}^{R}\left(\frac{a}{e^{ax}-1}-\frac{b}{e^{bx}-1}\right)\mathrm{d}x=\int_{aR}^{bR}\frac{\mathrm{d}u}{e^{u}-1}.
+$$
+
+Since $\frac{1}{e^{u}-1}-\frac{1}{u}=O\left(e^{-u}\right)$ is integrable at infinity, $\int_{aR}^{bR}\frac{\mathrm{d}u}{e^{u}-1}=\int_{aR}^{bR}\frac{\mathrm{d}u}{u}+o\left(1\right)$, and letting $R\to\infty$,
+
+$$
+\int_{0}^{\infty}\sum_{n=1}^{\infty}f_{n}\left(x\right)\mathrm{d}x=\lim_{R\to\infty}\int_{aR}^{bR}\frac{\mathrm{d}u}{u}=\log\left(b/a\right).
+$$
+
+Note that here $\sum\int\left|f_{n}\right|=\infty$ (by (a)), so the condition $\sum\int\left|f_{n}\right|< \infty$ of **Lemma 8.2.13 (Termwise Integration of Series)** fails, and termwise integration is not allowed; indeed $\int\sum f_{n}=\log\left(b/a\right)\ne\sum\int f_{n}=0$, showing that this condition is essential. $\blacksquare$
+
+**29.** Use **Theorem 8.2.17 (Parameter Integrals)** (b) (differentiation under the integral). Fix $t_{0}> 0$ and work on a compact neighborhood $\left[t_{0}/2,t_{0}\right]$.
+
+**Case 1.** Let $F\left(t\right)=\int_{0}^{\infty}e^{-tx}\mathrm{d}x=\frac{1}{t}$ ($t> 0$). For each $k\ge1$, on $t\in\left[t_{0}/2,t_{0}\right]$, $\left|\frac{\partial^{k}}{\partial t^{k}}e^{-tx}\right|=x^{k}e^{-tx}\le x^{k}e^{-\left(t_{0}/2\right)x}\in L^{1}\left(\left[0,\infty\right)\right)$, so the theorem applies repeatedly:
+
+$$
+F^{\left(n\right)}\left(t\right)=\int_{0}^{\infty}\left(-x\right)^{n}e^{-tx}\mathrm{d}x.
+$$
+
+Since $F\left(t\right)=1/t$, its $n$-th derivative is $F^{\left(n\right)}\left(t\right)=\left(-1\right)^{n}n!/t^{n+1}$. Setting $t=1$,
+
+$$
+\int_{0}^{\infty}\left(-x\right)^{n}e^{-x}\mathrm{d}x=\left(-1\right)^{n}n!,
+$$
+
+i.e. $\int_{0}^{\infty}x^{n}e^{-x}\mathrm{d}x=n!$.
+
+**Case 2.** Let $G\left(s\right)=\int_{-\infty}^{\infty}e^{-sx^{2}}\mathrm{d}x=\sqrt{\pi/s}=\sqrt\pi\,s^{-1/2}$ ($s> 0$). For each $k\ge1$, on $s\in\left[s_{0}/2,s_{0}\right]$, $\left|\frac{\partial^{k}}{\partial s^{k}}e^{-sx^{2}}\right|=x^{2k}e^{-sx^{2}}\le x^{2k}e^{-\left(s_{0}/2\right)x^{2}}\in L^{1}\left(\mathbb R\right)$, so we may differentiate repeatedly:
+
+$$
+G^{\left(n\right)}\left(s\right)=\int_{-\infty}^{\infty}\left(-x^{2}\right)^{n}e^{-sx^{2}}\mathrm{d}x=\left(-1\right)^{n}\int_{-\infty}^{\infty}x^{2n}e^{-sx^{2}}\mathrm{d}x.
+$$
+
+Also,
+
+$$
+G^{\left(n\right)}\left(s\right)=\sqrt\pi\left(-\frac{1}{2}\right)\left(-\frac{3}{2}\right)\cdots\left(-\frac{2n-1}{2}\right)s^{-\frac{2n+1}{2}}.
+$$
+
+Setting $s=1$,
+
+$$
+\left(-1\right)^{n}\int_{-\infty}^{\infty}x^{2n}e^{-x^{2}}\mathrm{d}x=\sqrt\pi\left(-1\right)^{n}\frac{1\cdot3\cdots\left(2n-1\right)}{2^{n}},
+$$
+
+i.e. $\int_{-\infty}^{\infty}x^{2n}e^{-x^{2}}\mathrm{d}x=\sqrt\pi\frac{1\cdot3\cdots\left(2n-1\right)}{2^{n}}$. Since $1\cdot3\cdots\left(2n-1\right)=\frac{\left(2n\right)!}{2^{n}n!}$,
+
+$$
+\int_{-\infty}^{\infty}x^{2n}e^{-x^{2}}\mathrm{d}x=\frac{\left(2n\right)!\sqrt\pi}{4^{n}n!}.
+$$
+
+$\blacksquare$
+
+## 2
+
 Prove: $f_{n}$ converges to $f$ in measure iff for every subsequence $\left\{f_{n_{k}}\right\}$ there exists a further subsequence $\left\{f_{n'_{k}}\right\}$ such that $f_{n'_{k}}\to f$ almost everywhere. In particular, if $\phi:\mathbb R\to\mathbb R$ is continuous, then $\phi\left(f_{n}\right)\xrightarrow{\mu}\phi\left(f\right)$.
 
-### Solution 1
+### Solution to 2
 
 $\left(\Rightarrow\right)$ By **Definition 9.1.3 (Convergence in Measure)**, if $f_{n}\xrightarrow{\mu}f$, then any subsequence $\left\{f_{n_{k}}\right\}$ also converges to $f$ in measure (the limit in the definition holds along any subsequence). By **Theorem 9.1.8 (Subsequence Property)**, there is a further subsequence $\left\{f_{n'_{k}}\right\}$ with $f_{n'_{k}}\to f$ almost everywhere.
 
@@ -73,107 +308,3 @@ $$
 This contradicts the assumption (every subsequence has an a.e.-convergent further subsequence). Hence $f_{n}\xrightarrow{\mu}f$.
 
 Finally, let $\phi:\mathbb R\to\mathbb R$ be continuous. For any subsequence $\left\{\phi\left(f_{n_{k}}\right)\right\}$, by $f_{n}\xrightarrow{\mu}f$ and the proven $\left(\Rightarrow\right)$, the subsequence $\left\{f_{n_{k}}\right\}$ has a further subsequence $f_{n'_{k}}\to f$ a.e.; continuity of $\phi$ gives $\phi\left(f_{n'_{k}}\right)\to\phi\left(f\right)$ a.e. Thus every subsequence of $\left\{\phi\left(f_{n}\right)\right\}$ has an a.e.-convergent further subsequence, and by the proven $\left(\Leftarrow\right)$, $\phi\left(f_{n}\right)\xrightarrow{\mu}\phi\left(f\right)$. $\blacksquare$
-
-## 2
-
-Let $\mu\left(X\right)< \infty$. If $f,g$ are complex-valued measurable functions on $X$, define $\rho\left(f,g\right)=\int\frac{\left|f-g\right|}{1+\left|f-g\right|}\,\mathrm{d}\mu$. Then $\rho$ is a metric on the space of measurable functions (identifying functions equal a.e.), and $f_{n}\to f$ in this metric iff $f_{n}\to f$ in measure.
-
-### Solution 2
-
-Write $d\left(t\right)=\frac{t}{1+t}$ ($t\ge0$). By Properties of the Map $t\mapsto\frac{t}{1+t}$, $d$ is increasing and subadditive. The integrand $\frac{\left|f-g\right|}{1+\left|f-g\right|}=d\left(\left|f-g\right|\right)$ is nonnegative and bounded ($\le1$), measurable, hence integrable, so $\rho$ is well-defined.
-
-- $\rho\left(f,g\right)\ge0$; $\rho\left(f,g\right)=0$ iff $d\left(\left|f-g\right|\right)=0$ a.e. (by Nonnegative Integrable Function with Zero Integral Vanishes Almost Everywhere), iff $\left|f-g\right|=0$ a.e., iff $f=g$ a.e. Thus on the quotient space (identifying functions equal a.e.), $\rho\left(f,g\right)=0$ iff $f=g$.
-- Symmetry is clear: $\rho\left(f,g\right)=\rho\left(g,f\right)$.
-- Triangle inequality: by $\left|f-g\right|\le\left|f-h\right|+\left|h-g\right|$ and the increase and subadditivity of $d$,
-
-$$
-d\left(\left|f-g\right|\right)\le d\left(\left|f-h\right|+\left|h-g\right|\right)\le d\left(\left|f-h\right|\right)+d\left(\left|h-g\right|\right),
-$$
-
-and integrating gives $\rho\left(f,g\right)\le\rho\left(f,h\right)+\rho\left(h,g\right)$.
-
-Thus $\rho$ is a metric on the quotient space.
-
-Now prove equivalence of convergence. If $f_{n}\xrightarrow{\mu}f$, for $\varepsilon\in\left(0,1\right)$,
-
-$$
-\rho\left(f_{n},f\right)=\int_{\left\{\left|f_{n}-f\right|\le\varepsilon\right\}}d\left(\left|f_{n}-f\right|\right)\mathrm{d}\mu+\int_{\left\{\left|f_{n}-f\right|> \varepsilon\right\}}d\left(\left|f_{n}-f\right|\right)\mathrm{d}\mu\le d\left(\varepsilon\right)\mu\left(X\right)+\mu\left(\left\{\left|f_{n}-f\right|> \varepsilon\right\}\right).
-$$
-
-By **Definition 9.1.3 (Convergence in Measure)**, first let $n\to\infty$ so the second term $\to0$ (since $f_{n}\xrightarrow{\mu}f$), then let $\varepsilon\to0$ so $d\left(\varepsilon\right)=\frac{\varepsilon}{1+\varepsilon}\to0$, giving $\rho\left(f_{n},f\right)\to0$.
-
-Conversely, if $\rho\left(f_{n},f\right)\to0$, since $d$ is increasing, on $\left\{\left|f_{n}-f\right|> \varepsilon\right\}$ we have $d\left(\left|f_{n}-f\right|\right)\ge d\left(\varepsilon\right)> 0$, so
-
-$$
-\rho\left(f_{n},f\right)\ge\int_{\left\{\left|f_{n}-f\right|> \varepsilon\right\}}d\left(\left|f_{n}-f\right|\right)\mathrm{d}\mu\ge d\left(\varepsilon\right)\mu\left(\left\{\left|f_{n}-f\right|> \varepsilon\right\}\right),
-$$
-
-i.e.
-
-$$
-\mu\left(\left\{\left|f_{n}-f\right|> \varepsilon\right\}\right)\le\frac{\rho\left(f_{n},f\right)}{d\left(\varepsilon\right)}\to0.
-$$
-
-By **Definition 9.1.3 (Convergence in Measure)**, $f_{n}\xrightarrow{\mu}f$. $\blacksquare$
-
-## 3
-
-If $\mu$ is $\sigma$-finite and $f_{n}\to f$ almost everywhere, then there exist measurable sets $E_{1},E_{2},\dots\subset X$ such that $\mu\left(\left(\bigcup_{i=1}^{\infty}E_{i}\right)^{c}\right)=0$, and $f_{n}\to f$ uniformly on each $E_{i}$.
-
-### Solution 3
-
-By **Definition 5.1.5 ($\sigma$-Finite Measure)**, $\mu$ is $\sigma$-finite, so $X=\bigcup_{m=1}^{\infty}X_{m}$ with $\mu\left(X_{m}\right)< \infty$. Fix $m$; on $X_{m}$ we have $\mu\left(X_{m}\right)< \infty$ and $f_{n}\to f$ a.e. (**Definition 9.1.1 (Almost-Everywhere Convergence)**). By **Theorem 9.1.15 (Egorov's Theorem)**, for each $j\in\mathbb N$ there is a measurable set $E_{mj}\subset X_{m}$ with $\mu\left(X_{m}\setminus E_{mj}\right)< 2^{-j}$ and $f_{n}\to f$ uniformly on $E_{mj}$.
-
-Let $F_{m}:=\bigcup_{j=1}^{\infty}E_{mj}$. Then $X_{m}\setminus F_{m}=\bigcap_{j=1}^{\infty}\left(X_{m}\setminus E_{mj}\right)$, and $\mu\left(X_{m}\setminus F_{m}\right)\le\mu\left(X_{m}\setminus E_{mj}\right)< 2^{-j}$ for all $j$, so $\mu\left(X_{m}\setminus F_{m}\right)=0$. Let $F:=\bigcup_{m,j}E_{mj}=\bigcup_{m}F_{m}$; then
-
-$$
-\mu\left(X\setminus F\right)=\mu\left(\bigcup_{m=1}^{\infty}\left(X_{m}\setminus F_{m}\right)\right)\le\sum_{m=1}^{\infty}\mu\left(X_{m}\setminus F_{m}\right)=0,
-$$
-
-since $X=\bigcup_{m}X_{m}$. Hence $\mu\left(\left(\bigcup_{m,j}E_{mj}\right)^{c}\right)=0$. Reindex the countable family $\left\{E_{mj}:m,j\in\mathbb N\right\}$ as $E_{1},E_{2},\dots$; then $\mu\left(\left(\bigcup_{i}E_{i}\right)^{c}\right)=0$ and $f_{n}\to f$ uniformly on each $E_{i}$. $\blacksquare$
-
-## 4
-
-Let $\mu\left(X\right)< \infty$ and $f:X\times\left[0,1\right]\to\mathbb C$ satisfy: for each $y\in\left[0,1\right]$, $f\left(\cdot,y\right)$ is measurable; for each $x\in X$, $f\left(x,\cdot\right)$ is continuous.
-
-(a) If $0< \varepsilon,\delta< 1$, then $E_{\varepsilon,\delta}=\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\varepsilon\text{ for all }y< \delta\right\}$ is measurable;
-
-(b) for every $\varepsilon> 0$ there exists a set $E\subset X$ with $\mu\left(E\right)< \varepsilon$ such that $f\left(\cdot,y\right)\to f\left(\cdot,0\right)$ uniformly on $E^{c}$ as $y\to0$.
-
-### Solution 4
-
-(a) For each $y\in\left[0,1\right]$, by **Theorem 7.1.8 (Closure of Real-Valued Measurable Functions Under Operations)** (complex-valued split into real and imaginary parts), $f\left(\cdot,y\right)-f\left(\cdot,0\right)$ is measurable, so $\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\varepsilon\right\}$ is measurable. Also, since $f\left(x,\cdot\right)$ is continuous, the map $y\mapsto\left|f\left(x,y\right)-f\left(x,0\right)\right|$ is continuous, so "$\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\varepsilon$ for all $y\in\left[0,\delta\right)$" iff "$\le\varepsilon$ for all rational $y\in\left[0,\delta\right)$" (by density, the inequality holds at rational points iff it holds on the closure). Thus
-
-$$
-E_{\varepsilon,\delta}=\bigcap_{y\in\left[0,\delta\right)\cap\mathbb Q}\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\varepsilon\right\},
-$$
-
-a countable intersection of measurable sets, measurable by **Definition 4.1.3 ($\sigma$-Algebra)** (closed under countable intersections). $\blacksquare$
-
-(b) Fix $\eta> 0$ as the tolerance of uniform convergence. For each $\delta> 0$, set $F_{\delta}:=\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta\text{ for all }y< \delta\right\}$, measurable by (a), and increasing as $\delta$ decreases. Since $f\left(x,\cdot\right)$ is continuous at $0$, for each $x$, $\lim_{y\to0}f\left(x,y\right)=f\left(x,0\right)$, so there exists $\delta> 0$ with $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ for all $y< \delta$, i.e. $x\in F_{\delta}$. Hence $\bigcup_{\delta> 0}F_{\delta}=X$.
-
-By Lower Continuity of a Measure, since $\mu\left(X\right)< \infty$ and $F_{\delta}\uparrow X$, we have $\mu\left(X\setminus F_{\delta}\right)\to0$. Given $\varepsilon> 0$, choose $\delta> 0$ with $\mu\left(X\setminus F_{\delta}\right)< \varepsilon$, set $E:=X\setminus F_{\delta}$; then $\mu\left(E\right)< \varepsilon$, and on $E^{c}=F_{\delta}$, $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ for all $y< \delta$, i.e. $f\left(\cdot,y\right)\to f\left(\cdot,0\right)$ uniformly on $E^{c}$ as $y\to0$. $\blacksquare$
-
-## 5
-
-(Lusin's theorem) If $f:\left[a,b\right]\to\mathbb C$ is Lebesgue measurable and $\varepsilon> 0$, then there exists a compact set $E\subset\left[a,b\right]$ with $\mu\left(E^{c}\right)< \varepsilon$ such that $f|_{E}$ is continuous.
-
-### Solution 5
-
-First treat the simple-function case. Let $\phi=\sum_{j=1}^{N}c_{j}\chi_{A_{j}}$ be a simple function on $\left[a,b\right]$, with the $A_{j}$ pairwise disjoint measurable and $\bigcup_{j}A_{j}=\left[a,b\right]$. By inner regularity of Lebesgue measure (**Theorem 6.4.5 (Regularity of Lebesgue-Stieltjes Measures)**), for each $j$ choose a compact set $K_{j}\subset A_{j}$ with $m\left(A_{j}\setminus K_{j}\right)< \varepsilon/\left(2N\right)$. Set $K:=\bigcup_{j=1}^{N}K_{j}\subset\left[a,b\right]$; then $K$ is compact (finite union of compact sets), and
-
-$$
-m\left(\left[a,b\right]\setminus K\right)\le\sum_{j=1}^{N}m\left(A_{j}\setminus K_{j}\right)< \varepsilon/2.
-$$
-
-Since the $K_{j}$ are pairwise disjoint and $\phi$ is constant $c_{j}$ on $K_{j}$, $\phi|_{K}$ is continuous.
-
-Now the general case. Write $f=\left(\operatorname{Re}f\right)^{+}-\left(\operatorname{Re}f\right)^{-}+i\left[\left(\operatorname{Im}f\right)^{+}-\left(\operatorname{Im}f\right)^{-}\right]$. By **Theorem 7.2.2 (Construction of Measurable Functions)**, approximate each nonnegative part pointwise by simple functions, so there exist simple $\phi_{n}\to f$ everywhere. Since $m\left(\left[a,b\right]\right)< \infty$, by **Theorem 9.1.15 (Egorov's Theorem)**, for $\varepsilon> 0$ there is a measurable set $B\subset\left[a,b\right]$ with $m\left(B\right)< \varepsilon/3$ such that $\phi_{n}\to f$ uniformly on $\left[a,b\right]\setminus B$. By the simple-function case, for each $n$ choose a compact set $K_{n}\subset\left[a,b\right]$ with $m\left(\left[a,b\right]\setminus K_{n}\right)< \varepsilon/\left(3\cdot2^{n}\right)$ and $\phi_{n}|_{K_{n}}$ continuous.
-
-Set $E:=\left(\left[a,b\right]\setminus B\right)\cap\bigcap_{n=1}^{\infty}K_{n}$. Then $E$ is an intersection of closed sets in $\left[a,b\right]$, hence compact; and
-
-$$
-m\left(\left[a,b\right]\setminus E\right)\le m\left(B\right)+\sum_{n=1}^{\infty}m\left(\left[a,b\right]\setminus K_{n}\right)< \varepsilon/3+\varepsilon/3=2\varepsilon/3< \varepsilon.
-$$
-
-On $E$, each $\phi_{n}$ is continuous (since $E\subset K_{n}$) and $\phi_{n}\to f$ uniformly (since $E\subset\left[a,b\right]\setminus B$). The uniform limit of continuous functions is continuous, so $f|_{E}$ is continuous. $\blacksquare$

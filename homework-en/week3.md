@@ -1,5 +1,13 @@
 # week3
 
+> **Definition 1.3.1 (Limit Superior)**
+> 
+> The limit superior of a sequence of sets $\left\{E_{n}\right\}$ is
+
+> **Definition 1.3.3 (Limit Inferior)**
+> 
+> The limit inferior of a sequence of sets $\left\{E_{n}\right\}$ is
+
 > **Definition 4.1.1 (Algebra of Sets)**
 > 
 > Let $X$ be a nonempty set and $\mathcal A\subset\mathcal P\left(X\right)$. $\mathcal A$ is called an algebra of sets on $X$ if: (1) $X\in\mathcal A$; (2) closed under differences: $A,B\in\mathcal A\Rightarrow A\setminus B\in\mathcal A$; (3) closed under finite unions: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
@@ -18,19 +26,43 @@
 
 > **Definition 5.1.2 (Measure)**
 > 
-> Let $\left(X,\mathcal F\right)$ be a measurable space. A function $\mu:\mathcal F\to\left[0,+\infty\right]$ is called a measure on $\left(X,\mathcal F\right)$ if: (1) nonnegativity: $\mu\left(E\right)\ge0$ for all $E\in\mathcal F$; (2) empty set: $\mu\left(\varnothing\right)=0$; (3) countable additivity: for any countable pairwise-disjoint $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
+> Let $\left(X,\mathcal F\right)$ be a measurable space. A function $\mu:\mathcal F\to\left[0,+\infty\right]$ is called a measure on $\left(X,\mathcal F\right)$ if: (1) nonnegativity: $\mu\left(E\right)\ge0$ for all $E\in\mathcal F$; (2) empty set: $\mu\left(\emptyset\right)=0$; (3) countable additivity ($\sigma$-additivity): for any countable pairwise-disjoint $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
 
 > **Proposition 5.2.1 (Finite Additivity)**
 > 
-> Let $\mu$ be a measure and $E_{1},\dots,E_{n}\in\mathcal F$ be pairwise disjoint. Then $\mu\left(\bigcup_{k=1}^{n}E_{k}\right)=\sum_{k=1}^{n}\mu\left(E_{k}\right)$.
+> Let $\mu$ be a measure on $\left(X,\mathcal F\right)$ and $E_{1},\dots,E_{n}\in\mathcal F$ be pairwise disjoint. Then
+
+> **Proposition 5.2.2 (Monotonicity)**
+> 
+> Let $\mu$ be a measure and $E,F\in\mathcal F$ with $E\subset F$. Then $\mu\left(E\right)\le\mu\left(F\right)$. If moreover $\mu\left(E\right)< +\infty$, then $\mu\left(F\setminus E\right)=\mu\left(F\right)-\mu\left(E\right)$.
 
 > **Proposition 5.2.3 (Countable Subadditivity)**
 > 
-> Let $\mu$ be a measure and $\left\{E_{n}\right\}_{n=1}^{\infty}$ arbitrary. Then $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
+> Let $\mu$ be a measure and $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ be any countable collection of sets (not necessarily pairwise disjoint). Then
 
 > **Proposition 5.2.4 (Continuity from Below)**
 > 
 > Let $\mu$ be a measure and $\left\{E_{n}\right\}$ increasing. Then $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right)$.
+
+> **Proposition 5.2.5 (Continuity from Above)**
+> 
+> Let $\mu$ be a measure and $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ be a decreasing sequence of sets (i.e. $E_{1}\supset E_{2}\supset\cdots$), and suppose there exists $m$ with $\mu\left(E_{m}\right)< +\infty$. Then
+
+> **Definition 5.4.1 (Null Set)**
+> 
+> Let $\left(X,\mathcal F,\mu\right)$ be a measure space. A set $N\in\mathcal F$ is called a null set if $\mu\left(N\right)=0$.
+
+> **Definition 5.4.2 (Zero-Measure Set)**
+> 
+> A set $A\subset X$ is called a zero-measure set if there exists $N\in\mathcal F$ such that $A\subset N$ and $\mu\left(N\right)=0$.
+
+> **Definition 5.4.4 (Complete Measure)**
+> 
+> A measure space $\left(X,\mathcal F,\mu\right)$ is called complete if for every $N\in\mathcal F$ with $\mu\left(N\right)=0$ and every $A\subset N$, we have $A\in\mathcal F$.
+
+> **Theorem 5.4.6 (Completion Theorem for Measures)**
+> 
+> Every measure space $\left(X,\mathcal F,\mu\right)$ can be completed, i.e. there exists a complete measure space $\left(X,\mathcal M,\overline\mu\right)$ such that: (1) $\mathcal F\subset\mathcal M$; (2) $\overline\mu|_{\mathcal F}=\mu$; (3) $\mathcal M$ is the smallest complete $\sigma$-algebra containing $\mathcal F$. Explicitly, let $\mathcal N=\left\{N\in\mathcal F:\mu\left(N\right)=0\right\}$, $\mathcal M=\left\{A\subset X:\exists\,B\in\mathcal F,\ \exists\,N\in\mathcal N,\ B\subset A\subset B\cup N\right\}$, and define $\overline\mu\left(A\right)=\mu\left(B\right)$.
 
 > **Definition 6.1.1 (Outer Measure)**
 > 
@@ -47,7 +79,6 @@
 $$
 \mu^{*}\left(A\right)=\inf\left\{\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right):E_{n}\in\mathcal E,A\subset\bigcup_{n=1}^{\infty}E_{n}\right\}.
 $$
-
 Then $\mu^{*}$ is an outer measure on $X$, and $\mu^{*}|_{\mathcal E}=\mu_{0}$.
 
 > **Definition 6.3.1 (Carathéodory Condition)**
@@ -57,7 +88,6 @@ Then $\mu^{*}$ is an outer measure on $X$, and $\mu^{*}|_{\mathcal E}=\mu_{0}$.
 $$
 \mu^{*}\left(T\right)=\mu^{*}\left(T\cap A\right)+\mu^{*}\left(T\cap A^{c}\right).
 $$
-
 The collection of all $\mu^{*}$-measurable sets is denoted $\mathcal M_{\mu^{*}}$.
 
 > **Lemma 6.3.2 (Algebra Contained in Measurable Sets)**
@@ -98,6 +128,50 @@ $$
 
 ## 1
 
+Let $\left(X,\mathcal M,\mu\right)$ be a finite measure space.
+
+(a) If $E,F\in\mathcal M$ and $\mu\left(E\triangle F\right)=0$, then $\mu\left(E\right)=\mu\left(F\right)$.
+
+(b) Define $E\sim F$ iff $\mu\left(E\triangle F\right)=0$. Then $\sim$ is an equivalence relation on $\mathcal M$.
+
+(c) For $E,F\in\mathcal M$, define $\rho\left(E,F\right):=\mu\left(E\triangle F\right)$. Prove that $\rho\left(E,F\right)\le\rho\left(E,G\right)+\rho\left(F,G\right)$, so that $\rho$ defines a metric on the quotient space $\mathcal M/\sim$.
+
+### Solution to 1
+
+**(a)** $E=\left(E\cap F\right)\cup\left(E\setminus F\right)$ and $F=\left(E\cap F\right)\cup\left(F\setminus E\right)$ are disjoint decompositions. By **Proposition 5.2.1 (Finite Additivity)**,
+
+$$
+\mu\left(E\right)=\mu\left(E\cap F\right)+\mu\left(E\setminus F\right),\qquad\mu\left(F\right)=\mu\left(E\cap F\right)+\mu\left(F\setminus E\right).
+$$
+
+Since $E\setminus F\subset E\triangle F$ and $F\setminus E\subset E\triangle F$, by **Proposition 5.2.2 (Monotonicity)**, $\mu\left(E\setminus F\right)\le\mu\left(E\triangle F\right)=0$, and similarly $\mu\left(F\setminus E\right)=0$. Hence $\mu\left(E\right)=\mu\left(E\cap F\right)=\mu\left(F\right)$. $\blacksquare$
+
+**(b)** Verify the three properties of an equivalence relation:
+
+(1) **Reflexivity**: $\mu\left(E\triangle E\right)=\mu\left(\varnothing\right)=0$, so $E\sim E$.
+
+(2) **Symmetry**: $E\triangle F=F\triangle E$, so $E\sim F\iff F\sim E$.
+
+(3) **Transitivity**: since $E\triangle G\subset\left(E\triangle F\right)\cup\left(F\triangle G\right)$, by **Proposition 5.2.3 (Countable Subadditivity)**, $\mu\left(E\triangle G\right)\le\mu\left(E\triangle F\right)+\mu\left(F\triangle G\right)=0$, so $E\sim G$.
+
+Thus $\sim$ is an equivalence relation on $\mathcal M$. $\blacksquare$
+
+**(c)** Symmetry and nonnegativity are clear: $\rho\left(E,F\right)=\rho\left(F,E\right)\ge0$ and $\rho\left(E,E\right)=0$. Since $E\triangle G\subset\left(E\triangle F\right)\cup\left(F\triangle G\right)$, by **Proposition 5.2.3 (Countable Subadditivity)**,
+
+$$
+\rho\left(E,G\right)=\mu\left(E\triangle G\right)\le\mu\left(E\triangle F\right)+\mu\left(F\triangle G\right)=\rho\left(E,F\right)+\rho\left(F,G\right).
+$$
+
+Finally, verify well-definedness and positivity: if $E\sim E'$ and $F\sim F'$ (i.e. $\mu\left(E\triangle E'\right)=\mu\left(F\triangle F'\right)=0$), then
+
+$$
+E\triangle F\subset\left(E\triangle E'\right)\cup\left(E'\triangle F'\right)\cup\left(F'\triangle F\right),
+$$
+
+so $\rho\left(E,F\right)\le0+\rho\left(E',F'\right)+0=\rho\left(E',F'\right)$; symmetrically $\rho\left(E',F'\right)\le\rho\left(E,F\right)$, hence $\rho\left(E,F\right)=\rho\left(E',F'\right)$, i.e. $\rho$ is well-defined on the quotient $\mathcal M/\sim$. Moreover, $\rho\left(E,F\right)=0\iff\mu\left(E\triangle F\right)=0\iff E\sim F$, so $\rho$ is a metric on $\mathcal M/\sim$. $\blacksquare$
+
+## 2
+
 Prove the uniqueness in part (3) of **Theorem 6.3.3 (Carathéodory's Theorem)**, and prove exercises 17 and 24.
 
 (1) Let $\mathcal E\subset\mathcal P\left(X\right)$ be an algebra, $\mu_{0}$ a $\sigma$-finite premeasure on $\mathcal E$, $\mu^{*}$ the outer measure generated by $\mu_{0}$, and $\mathcal M$ the collection of $\mu^{*}$-measurable sets. Prove that $\mu^{*}|_{\mathcal M}$ is the unique extension of $\mu_{0}$ to $\mathcal M$.
@@ -114,7 +188,7 @@ $$
 
 (b) Let $\mathcal M_{E}=\left\{A\cap E:A\in\mathcal M\right\}$ and define $\nu\left(A\cap E\right)=\mu\left(A\right)$ on $\mathcal M_{E}$ (well-defined by (a)). Prove that $\mathcal M_{E}$ is a $\sigma$-algebra on $E$ and $\nu$ is a measure on $\mathcal M_{E}$.
 
-### Solution 1
+### Solution to 2
 
 **(1) Uniqueness.** By **Definition 6.2.1 (Premeasure)**, $\mu_{0}$ is a premeasure on the algebra $\mathcal E$. First show that $\mu^{*}|_{\mathcal M}$ is indeed an extension of $\mu_{0}$: by **Theorem 6.2.2 (Outer Measure from a Premeasure)**, $\mu^{*}|_{\mathcal E}=\mu_{0}$; by **Lemma 6.3.2 (Algebra Contained in Measurable Sets)**, $\mathcal E\subset\mathcal M$; by **Theorem 6.3.3 (Carathéodory's Theorem)** (1)(2), $\mathcal M$ is a $\sigma$-algebra and $\mu^{*}|_{\mathcal M}$ is a complete measure. Thus $\mu^{*}|_{\mathcal M}$ is a measure extension of $\mu_{0}$ to $\mathcal M$.
 
@@ -198,11 +272,11 @@ $$
 
 Hence $\nu$ is a measure. $\blacksquare$
 
-## 2
+## 3
 
 Let $-\infty\le a< b< \infty$. All half-open intervals $\left(a,b\right]$, together with $\left(a,\infty\right)$ and $\varnothing$, are called h-intervals. Prove that the family $\mathcal E$ of finite disjoint unions of h-intervals is an algebra (**Definition 6.4.1 (h-Interval)**).
 
-### Solution 2
+### Solution to 3
 
 Verify using **Definition 4.1.1 (Algebra of Sets)**.
 
@@ -225,125 +299,3 @@ since each $I_{i}^{c}\in\mathcal E$ and $\mathcal E$ is closed under finite inte
 Finally, $X\in\mathcal E$: since $\mathbb R=\left(-\infty,\infty\right)$ is an h-interval of type $\left(a,\infty\right)$ ($a=-\infty$), $\mathbb R\in\mathcal E$. For $A,B\in\mathcal E$, by De Morgan's laws $A\cup B=\left(A^{c}\cap B^{c}\right)^{c}\in\mathcal E$. Thus $\mathcal E$ is closed under finite unions.
 
 Therefore $\mathcal E$ is an algebra. $\blacksquare$
-
-## 3
-
-The Lebesgue measure $m$ constructed from $F\left(x\right)=x$ (**Definition 6.4.6 (Lebesgue Measure)**) satisfies:
-
-(1) $m$ is translation-invariant: $m\left(E+x\right)=m\left(E\right)$ for all measurable $E$ and $x\in\mathbb R$;
-
-(2) $m$ is scale-invariant: $m\left(rE\right)=\left|r\right|m\left(E\right)$ for all measurable $E$ and $r\in\mathbb R$.
-
-### Solution 3
-
-Let $\mathcal E$ be the h-interval algebra and $\mu_{0}$ the premeasure defined from $F\left(x\right)=x$ via **Proposition 6.4.2 (Premeasure on $\mathcal E$)**, i.e. for an h-interval $\mu_{0}\left(\left(a,b\right]\right)=b-a$ (interval length); by **Theorem 6.2.2 (Outer Measure from a Premeasure)**, $\mu_{0}$ generates the outer measure
-
-$$
-m^{*}\left(A\right)=\inf\left\{\sum_{n}\left(b_{n}-a_{n}\right):A\subset\bigcup_{n}\left(a_{n},b_{n}\right]\right\},
-$$
-
-and Lebesgue measure $m=m^{*}|_{\mathcal L}$ (**Definition 6.4.6 (Lebesgue Measure)**).
-
-(1) First prove outer-measure translation invariance. For $A\subset\mathbb R$ and $x\in\mathbb R$, the translation $\tau_{x}:t\mapsto t+x$ maps h-intervals to h-intervals and preserves length: $\mu_{0}\left(I+x\right)=\mu_{0}\left(I\right)$. Thus $\left\{I_{n}\right\}$ covers $A$ iff $\left\{I_{n}+x\right\}$ covers $A+x$, and
-
-$$
-\sum_{n}\mu_{0}\left(I_{n}+x\right)=\sum_{n}\mu_{0}\left(I_{n}\right).
-$$
-
-By the definition of $m^{*}$ (infimum over covers), $m^{*}\left(A+x\right)=m^{*}\left(A\right)$.
-
-Next show measurability is preserved under translation. If $E\in\mathcal L$ (i.e. $E$ is $m^{*}$-measurable, **Definition 6.3.1 (Carathéodory Condition)**), then for any $T\subset\mathbb R$,
-
-$$
-m^{*}\left(T\right)=m^{*}\left(T-x\right)=m^{*}\left(\left(T-x\right)\cap E\right)+m^{*}\left(\left(T-x\right)\cap E^{c}\right)=m^{*}\left(T\cap\left(E+x\right)\right)+m^{*}\left(T\cap\left(E+x\right)^{c}\right),
-$$
-
-where the second equality uses measurability of $E$ at $T-x$. Thus $E+x$ is measurable. Hence for measurable $E$,
-
-$$
-m\left(E+x\right)=m^{*}\left(E+x\right)=m^{*}\left(E\right)=m\left(E\right).
-$$
-
-This proves (1).
-
-(2) For $r\ne0$, the dilation $\delta_{r}:t\mapsto rt$ maps an h-interval $\left(a,b\right]$ to $\left(ra,rb\right]$ ($r> 0$) or $\left(rb,ra\right]$ ($r< 0$), still an h-interval, and the length becomes $\left|r\right|\left(b-a\right)$, i.e. $\mu_{0}\left(rI\right)=\left|r\right|\mu_{0}\left(I\right)$. By the same argument as in (1), $m^{*}\left(rA\right)=\left|r\right|m^{*}\left(A\right)$, and $E$ measurable implies $rE$ measurable (using **Definition 6.3.1 (Carathéodory Condition)** and dilation). Hence $m\left(rE\right)=\left|r\right|m\left(E\right)$. When $r=0$, $0\cdot E$ is empty or $\left\{0\right\}$, and the measure is $0=\left|0\right|m\left(E\right)$. This proves (2). $\blacksquare$
-
-## 4
-
-Let the Cantor set $C=\bigcap_{n=0}^{\infty}C_{n}$ (**Definition 6.5.1 (Recursive Construction of the Cantor Set)**). Prove that $C$ has the following properties:
-
-1. Compactness: $C$ is a bounded closed set;
-
-2. Completeness: $C$ is a complete metric space (every Cauchy sequence converges);
-
-3. Totally disconnected: the only connected subsets of $C$ are singletons;
-
-4. Nowhere dense: the interior of $C$ is empty;
-
-5. Perfect set: $C$ is closed and has no isolated points.
-
-### Solution 4
-
-By **Theorem 6.5.2 (Ternary Characterization of the Cantor Set)**, $x\in C$ iff its ternary expansion $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ satisfies $a_{k}\in\left\{0,2\right\}$.
-
-**1. Compactness.** By **Definition 6.5.1 (Recursive Construction of the Cantor Set)**, each $C_{n}$ is obtained from $\left[0,1\right]$ by removing finitely many open intervals (those dug out at step $n$), so $C_{n}$ is a finite union of closed intervals and hence closed. $C=\bigcap_{n=0}^{\infty}C_{n}$ is an intersection of closed sets, so $C$ is closed, and $C\subset\left[0,1\right]$ is bounded. By the Heine-Borel theorem, bounded closed sets in $\mathbb R$ are compact, so $C$ is compact. $\blacksquare$
-
-**2. Completeness.** $\mathbb R$ is a complete metric space and $C$ is a closed subset of $\mathbb R$. If $\left\{x_{n}\right\}\subset C$ is a Cauchy sequence, it converges in $\mathbb R$ to some $x$; since $C$ is closed, $x\in C$. Thus every Cauchy sequence in $C$ converges, and $C$ is complete. $\blacksquare$
-
-**3. Total disconnectedness.** Suppose $K\subset C$ is connected and contains two points $x< y$. By **Theorem 6.5.2 (Ternary Characterization of the Cantor Set)**, the ternary expansions of $x,y$ contain no digit $1$. Since $x\ne y$, there is a smallest $n$ at which the $n$-th ternary digits of $x,y$ differ; assume without loss that $x$ has digit $0$ and $y$ has digit $2$ at position $n$ (the first $n-1$ digits agree). Then among the open intervals dug out at step $n$ there is one $J=\left(\alpha,\beta\right)$ lying between $x$ and $y$ (i.e. $x< \alpha< \beta< y$), and $J\cap C=\varnothing$. Hence
-
-$$
-K=\left(K\cap\left(-\infty,\alpha\right]\right)\cup\left(K\cap\left[\beta,\infty\right)\right),
-$$
-
-which are two nonempty, disjoint, relatively open subsets of $K$ (since $K\subset C$ and $K\cap J=\varnothing$), contradicting the connectedness of $K$. Thus $K$ can only be a singleton. $\blacksquare$
-
-**4. Nowhere dense.** Take any nonempty open interval $\left(\alpha,\beta\right)\subset\mathbb R$. If it intersects $\left[0,1\right]$, choose $n$ so that $3^{-n}< \beta-\alpha$. After step $n$, $C_{n}$ is a union of $2^{n}$ closed intervals of length $3^{-n}$, and the $2^{n}-1$ open intervals between them (dug out at step $n$) cover the part of $\left[0,1\right]$ excluding endpoints, each of length $3^{-n}$. Since $\left(\alpha,\beta\right)$ has length greater than $3^{-n}$, it must contain one of the open intervals dug out at step $n$, so $\left(\alpha,\beta\right)$ is not entirely contained in $C$. Thus $C$ contains no nonempty open interval, $\operatorname{int}\left(C\right)=\varnothing$, i.e. $C$ is nowhere dense. $\blacksquare$
-
-**5. Perfect set.** Closedness was proved in (1). To show $C$ has no isolated points: let $x\in C$ and $\varepsilon> 0$. By **Theorem 6.5.2 (Ternary Characterization of the Cantor Set)**, write $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ with $a_{k}\in\left\{0,2\right\}$. Choose $n$ so that $\frac{2}{3^{n+1}}< \varepsilon$, and let $x_{n}$ be the point obtained by replacing the $\left(n+1\right)$-th digit $a_{n+1}$ of $x$ by $2-a_{n+1}$, leaving all other digits unchanged. Then $x_{n}\in C$ (ternary expansion contains no $1$), $x_{n}\ne x$, and
-
-$$
-\left|x_{n}-x\right|=\left|\frac{2-a_{n+1}}{3^{n+1}}-\frac{a_{n+1}}{3^{n+1}}\right|=\frac{2}{3^{n+1}}< \varepsilon.
-$$
-
-Thus the $\varepsilon$-neighborhood of $x$ contains a point of $C$ different from $x$, so $x$ is not isolated. Hence $C$ is a perfect set. $\blacksquare$
-
-## 5
-
-Prove exercises 30 and 33.
-
-**30.** Let $E\in\mathcal L$ with $m\left(E\right)> 0$. Prove that for any $\alpha< 1$, there exists an open interval $I$ such that $m\left(E\cap I\right)> \alpha m\left(I\right)$.
-
-**33.** Prove that there exists a Borel set $A\subset\left[0,1\right]$ such that for every subinterval $I$ of $\left[0,1\right]$, $0< m\left(A\cap I\right)< m\left(I\right)$. (Hint: every subinterval of $\left[0,1\right]$ contains a positive-measure Cantor-type set.)
-
-### Solution 5
-
-**30.** By contradiction. Suppose there exists $\alpha< 1$ such that for every open interval $I$, $m\left(E\cap I\right)\le\alpha m\left(I\right)$. Then for any open set $U$, writing $U$ as a countable union of disjoint open intervals $U=\bigcup_{k}I_{k}$, by countable additivity of $m$,
-
-$$
-m\left(E\cap U\right)=\sum_{k}m\left(E\cap I_{k}\right)\le\alpha\sum_{k}m\left(I_{k}\right)=\alpha m\left(U\right).
-$$
-
-By outer regularity of the Lebesgue-Stieltjes measure (**Theorem 6.4.5 (Regularity of Lebesgue-Stieltjes Measure)**), $m\left(E\right)=\inf\left\{m\left(U\right):E\subset U\text{ open}\right\}$. Choose a sequence of open sets $U_{n}\supset E$ with $m\left(U_{n}\right)\to m\left(E\right)$. Since $E\subset U_{n}$, $E=E\cap U_{n}$, so
-
-$$
-m\left(E\right)=m\left(E\cap U_{n}\right)\le\alpha m\left(U_{n}\right)\to\alpha m\left(E\right).
-$$
-
-Thus $m\left(E\right)\le\alpha m\left(E\right)$. Since $m\left(E\right)> 0$, $\alpha\ge1$, contradicting $\alpha< 1$. Hence there exists an open interval $I$ such that $m\left(E\cap I\right)> \alpha m\left(I\right)$. $\blacksquare$
-
-**33.** Use a positive-measure generalized Cantor set (Generalized Cantor Set). Let $\left\{I_{n}\right\}$ be an enumeration of all open intervals in $\left[0,1\right]$ with rational endpoints. Inductively choose pairwise disjoint closed intervals $J_{n}\subset I_{n}$ (choosing $J_{n}$ to avoid all previous $J_{k}$) so that every subinterval $I$ contains some $J_{n}$ (since $\left\{I_{n}\right\}$ enumerates rational intervals, every subinterval contains some $I_{n}$, and $J_{n}\subset I_{n}$). Fix $c\in\left(0,1\right)$. Inside each $J_{n}$, take a generalized Cantor set $C_{n}\subset J_{n}$ with $m\left(C_{n}\right)=c\,m\left(J_{n}\right)$ (by the fact that a generalized Cantor set can have measure any $\beta\in\left(0,1\right)$). Since the $J_{n}$ are pairwise disjoint, the $C_{n}$ are pairwise disjoint. Let $A=\bigcup_{n=1}^{\infty}C_{n}$; then $A$ is a countable union of closed sets, hence a Borel set, and $A\subset\left[0,1\right]$.
-
-First prove the lower bound. For any subinterval $I\subset\left[0,1\right]$, there exists $n$ with $J_{n}\subset I_{n}\subset I$, so
-
-$$
-m\left(A\cap I\right)\ge m\left(A\cap J_{n}\right)=m\left(C_{n}\right)=c\,m\left(J_{n}\right)> 0.
-$$
-
-Now prove the upper bound. Since $C_{n}\subset J_{n}$ and the $J_{n}$ are pairwise disjoint,
-
-$$
-m\left(A\cap I\right)=m\left(\bigcup_{n}C_{n}\cap I\right)=\sum_{n}m\left(C_{n}\cap I\right)=\sum_{J_{n}\subset I}m\left(C_{n}\right)=c\sum_{J_{n}\subset I}m\left(J_{n}\right)=c\,m\left(\bigcup_{J_{n}\subset I}J_{n}\right)\le c\,m\left(I\right)< m\left(I\right),
-$$
-
-where $m\left(C_{n}\cap I\right)=m\left(C_{n}\right)$ is nonzero only when $J_{n}\cap I$ has positive measure (i.e. $J_{n}\subset I$, up to endpoints). Thus for every subinterval $I$ of $\left[0,1\right]$, $0< m\left(A\cap I\right)< m\left(I\right)$. $\blacksquare$

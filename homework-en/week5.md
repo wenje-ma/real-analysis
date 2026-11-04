@@ -42,7 +42,7 @@
 
 > **Theorem 8.2.9 (Dominated Convergence Theorem)**
 > 
-> Let $\left(X,\mathcal F,\mu\right)$ be a measure space, $\left\{f_{n}\right\}$ a sequence of measurable functions with $f_{n}\to f$ almost everywhere. If there exists an integrable function $g$ such that $\left|f_{n}\right|\le g$ almost everywhere for all $n$, then $\lim_{n\to\infty}\int_{X}f_{n}\,\mathrm{d}\mu=\int_{X}f\,\mathrm{d}\mu$.
+> Let $\left(X,\mathcal F,\mu\right)$ be a measure space and $\left\{f_{n}\right\}$ a sequence of measurable functions. If there exists an integrable $g$ with $\left|f_{n}\right|\le g$ for all $n$ and $f_{n}\to f$ a.e., then $f$ is integrable and $\int f\,\mathrm{d}\mu=\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu$.
 
 > **Lemma 8.2.13 (Termwise Integration of Series)**
 > 
@@ -56,7 +56,7 @@
 
 Let $f$ be a nonnegative simple function. Prove that $A\mapsto\int_{A}f\,\mathrm{d}\mu$ is a measure, and that if $\mu\left(A\right)=0$, then $\int_{A}f\,\mathrm{d}\mu=0$.
 
-### Solution 1
+### Solution to 1
 
 Write $f=\sum_{i=1}^{n}c_{i}\chi_{A_{i}}$, where $c_{i}\ge0$, the $A_{i}\in\mathcal F$ are pairwise disjoint and $\bigcup_{i}A_{i}=X$. For $E\in\mathcal F$, by **Definition 8.1.1 (Integral of a Nonnegative Simple Function)**,
 
@@ -90,7 +90,7 @@ Let $f,g$ be integrable and $a,b\in\mathbb R$. Prove:
 
 4. If $f=g$ almost everywhere, then $\int_{X}f\,\mathrm{d}\mu=\int_{X}g\,\mathrm{d}\mu$.
 
-### Solution 2
+### Solution to 2
 
 First establish linearity for nonnegative measurable functions. Let $\phi,\psi$ be nonnegative measurable and $\alpha,\beta\ge0$. By **Remark 8.2.3 (Approximation by Simple Functions)**, there are simple functions $\phi_{k}\uparrow\phi$, $\psi_{k}\uparrow\psi$. By **Proposition 8.1.2 (Linearity of the Integral for Simple Functions)**,
 
@@ -138,7 +138,7 @@ Let $f\in L^{1}$. Prove:
 
 (b) for $f,g\in L^{1}$, $\int_{E}f\,\mathrm{d}\mu=\int_{E}g\,\mathrm{d}\mu$ for every measurable $E$ iff $\int\left|f-g\right|\mathrm{d}\mu=0$ iff $f=g$ almost everywhere.
 
-### Solution 3
+### Solution to 3
 
 (a) By **Definition 8.2.5 (Integral of a General Measurable Function)**, $f=f^{+}-f^{-}$, so $\left\{x:f\left(x\right)\ne0\right\}=\left\{x:f^{+}\left(x\right)> 0\right\}\cup\left\{x:f^{-}\left(x\right)> 0\right\}$. Moreover,
 
@@ -178,7 +178,7 @@ Prove:
 
 **16.** If $f\in L^{+}$ and $\int f< \infty$, then for every $\varepsilon> 0$ there exists $E\in\mathcal M$ with $\mu\left(E\right)< \infty$ and $\int_{E}f> \left(\int f\right)-\varepsilon$.
 
-### Solution 4
+### Solution to 4
 
 **14.** First show $\lambda$ is a measure. By **Definition 8.1.1 (Integral of a Nonnegative Simple Function)** and **Definition 8.2.1 (Integral of a Nonnegative Measurable Function)**, $\lambda\left(\emptyset\right)=0$ and nonnegativity. For pairwise disjoint measurable sets $\left\{E_{n}\right\}$, since $f\chi_{\bigsqcup E_{n}}=\sum_{n}f\chi_{E_{n}}$ and the partial sums $\sum_{n=1}^{N}f\chi_{E_{n}}\uparrow f\chi_{\bigsqcup E_{n}}$ pointwise, by **Theorem 8.2.2 (Monotone Convergence Theorem)**,
 
@@ -203,191 +203,3 @@ $$
 $$
 
 so $\mu\left(E_{n}\right)\le n\int f\,\mathrm{d}\mu< \infty$. Also by **Theorem 8.2.2 (Monotone Convergence Theorem)**, $\int_{E_{n}}f\,\mathrm{d}\mu\uparrow\int_{\left\{f> 0\right\}}f\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu$. Thus for given $\varepsilon> 0$, choose $n$ large enough that $\int_{E_{n}}f\,\mathrm{d}\mu> \int f\,\mathrm{d}\mu-\varepsilon$, and set $E:=E_{n}$; then $\mu\left(E\right)< \infty$ and $\int_{E}f> \int f-\varepsilon$. $\blacksquare$
-
-## 5
-
-Prove:
-
-**20.** (Generalized dominated convergence) If $f_{n},g_{n},f,g\in L^{1}$, $f_{n}\to f$ and $g_{n}\to g$ a.e., $\left|f_{n}\right|\le g_{n}$, and $\int g_{n}\to\int g$, then $\int f_{n}\to\int f$.
-
-**23.** Let $f:\left[a,b\right]\to\mathbb R$ be bounded, and set
-
-$$
-H\left(x\right)=\limsup_{\delta\to0}\sup_{0< \left|y-x\right|\le\delta}f\left(y\right),\qquad h\left(x\right)=\liminf_{\delta\to0}\inf_{0< \left|y-x\right|\le\delta}f\left(y\right).
-$$
-
-Prove: (a) $H\left(x\right)=h\left(x\right)$ iff $f$ is continuous at $x$; (b) $H=G$ a.e., $h=g$ a.e., and $\int_{\left(a,b\right)}h\,\mathrm{d}m=\underline{\int}f$. Hence $f$ is Riemann integrable iff its set of discontinuities has measure 0.
-
-**27.** Let $f_{n}\left(x\right)=ae^{-nax}-be^{-nbx}$ with $0< a< b$. (a) $\sum_{n=1}^{\infty}\int_{0}^{\infty}\left|f_{n}\left(x\right)\right|\mathrm{d}x=\infty$; (b) $\sum_{n=1}^{\infty}\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x=0$; (c) $\sum_{n=1}^{\infty}f_{n}\in L^{1}\left(\left[0,\infty\right),m\right)$ and $\int_{0}^{\infty}\sum_{n=1}^{\infty}f_{n}\left(x\right)\mathrm{d}x=\log\left(b/a\right)$.
-
-**29.** By differentiating $\int_{0}^{\infty}e^{-tx}\mathrm{d}x=1/t$, prove $\int_{0}^{\infty}x^{n}e^{-x}\mathrm{d}x=n!$; similarly, by differentiating $\int_{-\infty}^{\infty}e^{-tx^{2}}\mathrm{d}x=\sqrt{\pi/t}$, prove $\int_{-\infty}^{\infty}x^{2n}e^{-x^{2}}\mathrm{d}x=\frac{\left(2n\right)!\sqrt\pi}{4^{n}n!}$.
-
-### Solution 5
-
-**20.** Since $g_{n}\to g$ a.e. and $\left|f_{n}\right|\le g_{n}$, taking limits gives $\left|f\right|\le g$ a.e., so $f\in L^{1}$. Since $\left|f_{n}\right|\le g_{n}$ means $-g_{n}\le f_{n}\le g_{n}$, the sequences $\left\{g_{n}+f_{n}\right\}$ and $\left\{g_{n}-f_{n}\right\}$ are nonnegative and converge a.e. to $g+f$ and $g-f$ respectively. By **Theorem 8.2.7 (Fatou's Lemma)**,
-
-$$
-\int\left(g+f\right)\mathrm{d}\mu\le\liminf_{n\to\infty}\int\left(g_{n}+f_{n}\right)\mathrm{d}\mu=\int g\,\mathrm{d}\mu+\liminf_{n\to\infty}\int f_{n}\,\mathrm{d}\mu,
-$$
-
-since $\int g_{n}\to\int g$ and the integrals are finite (linearity, Exercise 2). Subtracting $\int g\,\mathrm{d}\mu$ gives $\int f\,\mathrm{d}\mu\le\liminf_{n\to\infty}\int f_{n}\,\mathrm{d}\mu$. Similarly, applying Fatou to $\left\{g_{n}-f_{n}\right\}$,
-
-$$
-\int\left(g-f\right)\mathrm{d}\mu\le\liminf_{n\to\infty}\int\left(g_{n}-f_{n}\right)\mathrm{d}\mu=\int g\,\mathrm{d}\mu-\limsup_{n\to\infty}\int f_{n}\,\mathrm{d}\mu,
-$$
-
-i.e. $\limsup_{n\to\infty}\int f_{n}\,\mathrm{d}\mu\le\int f\,\mathrm{d}\mu$. Combining,
-
-$$
-\int f\,\mathrm{d}\mu\le\liminf_{n\to\infty}\int f_{n}\,\mathrm{d}\mu\le\limsup_{n\to\infty}\int f_{n}\,\mathrm{d}\mu\le\int f\,\mathrm{d}\mu,
-$$
-
-so $\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu$. $\blacksquare$
-
-**23.** Use the notation of Riemann Integral and Darboux Sums. $f$ is Riemann integrable iff $\overline{\int}f=\underline{\int}f$.
-
-(a) Suppose $f$ is continuous at $x$. For $\varepsilon> 0$ there exists $\delta> 0$ such that $\left|y-x\right|< \delta\Rightarrow\left|f\left(y\right)-f\left(x\right)\right|< \varepsilon$. Then for $0< \left|y-x\right|\le\delta$,
-
-$$
-f\left(x\right)-\varepsilon\le\inf_{0< \left|y-x\right|\le\delta}f\left(y\right)\le f\left(x\right)\le\sup_{0< \left|y-x\right|\le\delta}f\left(y\right)\le f\left(x\right)+\varepsilon.
-$$
-
-Letting $\delta\to0$ and using the arbitrariness of $\varepsilon$, $h\left(x\right)\ge f\left(x\right)\ge H\left(x\right)$; but by definition always $h\left(x\right)\le f\left(x\right)\le H\left(x\right)$, so $H\left(x\right)=h\left(x\right)=f\left(x\right)$.
-
-Conversely, suppose $H\left(x\right)=h\left(x\right)=:L$. For $\varepsilon> 0$, by the definition of the limits there exists $\delta> 0$ such that for $0< \delta'< \delta$,
-
-$$
-\inf_{0< \left|y-x\right|\le\delta'}f\left(y\right)> L-\varepsilon,\qquad\sup_{0< \left|y-x\right|\le\delta'}f\left(y\right)< L+\varepsilon.
-$$
-
-Taking $\delta'=\delta$, for $0< \left|y-x\right|\le\delta$ we have $L-\varepsilon< f\left(y\right)< L+\varepsilon$; also $f\left(x\right)$ lies between the inf and sup, so $L-\varepsilon< f\left(x\right)< L+\varepsilon$. Hence $\left|f\left(y\right)-f\left(x\right)\right|< 2\varepsilon$ for $0< \left|y-x\right|\le\delta$, i.e. $f$ is continuous at $x$.
-
-(b) Take a sequence of partitions $\left\{P_{k}\right\}$ with mesh $\max_{i}\left(t_{i}-t_{i-1}\right)\to0$ and $P_{k}\subset P_{k+1}$ (successive refinement), define
-
-$$
-G_{P_{k}}=\sum_{i}M_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},\qquad g_{P_{k}}=\sum_{i}m_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},
-$$
-
-and set $G=\lim_{k}G_{P_{k}}$, $g=\lim_{k}g_{P_{k}}$. Fix $x$ not a partition point of any $P_{k}$ (the union of all partition points is at most countable, measure 0). Suppose $x\in\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)$; then $G_{P_{k}}\left(x\right)=M_{i}^{\left(k\right)}=\sup_{\left[t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right]}f$. As $k\to\infty$ the interval shrinks to $\left\{x\right\}$, and the supremum decreases to the limit of $\sup_{0< \left|y-x\right|\le\delta}f\left(y\right)$ as $\delta\to0$, i.e. $H\left(x\right)$. Hence $G\left(x\right)=H\left(x\right)$; similarly $g\left(x\right)=h\left(x\right)$. Thus after removing the countable set of partition points from $\left[a,b\right]$, $H=G$ and $h=g$ almost everywhere.
-
-Also $G_{P_{k}}$ is bounded and $g_{P_{k}}\le f\le G_{P_{k}}$. By **Theorem 8.2.9 (Dominated Convergence Theorem)**,
-
-$$
-\int H\,\mathrm{d}m=\int G\,\mathrm{d}m=\lim_{k}\int G_{P_{k}}\mathrm{d}m=\lim_{k}\overline S\left(P_{k}\right)=\overline{\int}f,
-$$
-
-$$
-\int h\,\mathrm{d}m=\int g\,\mathrm{d}m=\lim_{k}\int g_{P_{k}}\mathrm{d}m=\lim_{k}\underline S\left(P_{k}\right)=\underline{\int}f.
-$$
-
-In particular $\int_{\left(a,b\right)}h\,\mathrm{d}m=\underline{\int}f$. Hence
-
-$$
-f\text{ Riemann integrable}\iff\overline{\int}f=\underline{\int}f\iff\int H\,\mathrm{d}m=\int h\,\mathrm{d}m\iff\int\left(H-h\right)\mathrm{d}m=0.
-$$
-
-Since $H\ge h$, by Exercise 3(b), $\int\left(H-h\right)\mathrm{d}m=0\iff H=h$ a.e. Combined with (a) ($H=h\iff f$ continuous at $x$), $f$ is Riemann integrable iff its discontinuity set has measure 0. Then the Riemann integral $\overline{\int}f=\int H\,\mathrm{d}m=\int f\,\mathrm{d}m$ (since $H=f$ a.e.). $\blacksquare$
-
-**27.** First find the zero of $f_{n}$. Setting $f_{n}\left(x\right)=0$ gives $ae^{-nax}=be^{-nbx}$, i.e. $e^{n\left(b-a\right)x}=b/a$, so the unique zero is
-
-$$
-x_{n}=\frac{\log\left(b/a\right)}{n\left(b-a\right)}.
-$$
-
-On $\left[0,x_{n}\right)$, $f_{n}< 0$, and on $\left(x_{n},\infty\right)$, $f_{n}> 0$.
-
-(a) Compute
-
-$$
-\int_{0}^{\infty}\left|f_{n}\right|\mathrm{d}x=\int_{0}^{x_{n}}\left(be^{-nbx}-ae^{-nax}\right)\mathrm{d}x+\int_{x_{n}}^{\infty}\left(ae^{-nax}-be^{-nbx}\right)\mathrm{d}x.
-$$
-
-Using $\int_{0}^{x_{n}}be^{-nbx}\mathrm{d}x=\frac{1}{n}\left(1-e^{-nbx_{n}}\right)$, $\int_{0}^{x_{n}}ae^{-nax}\mathrm{d}x=\frac{1}{n}\left(1-e^{-nax_{n}}\right)$, $\int_{x_{n}}^{\infty}ae^{-nax}\mathrm{d}x=\frac{1}{n}e^{-nax_{n}}$, $\int_{x_{n}}^{\infty}be^{-nbx}\mathrm{d}x=\frac{1}{n}e^{-nbx_{n}}$, we get
-
-$$
-\int_{0}^{\infty}\left|f_{n}\right|\mathrm{d}x=\frac{2}{n}\left(e^{-nax_{n}}-e^{-nbx_{n}}\right).
-$$
-
-Let $t=e^{-nx_{n}}$. The zero condition gives $at^{a}=bt^{b}$, i.e. $t^{a-b}=b/a$, so $t=\left(b/a\right)^{1/\left(a-b\right)}\in\left(0,1\right)$. Since $t< 1$ and $a< b$, the power map $\lambda\mapsto t^{\lambda}$ is decreasing, so $t^{a}> t^{b}$, and the constant $c:=2\left(t^{a}-t^{b}\right)> 0$. Therefore
-
-$$
-\sum_{n=1}^{\infty}\int_{0}^{\infty}\left|f_{n}\right|\mathrm{d}x=c\sum_{n=1}^{\infty}\frac{1}{n}=\infty.
-$$
-
-(b) Termwise,
-
-$$
-\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x=\int_{0}^{\infty}ae^{-nax}\mathrm{d}x-\int_{0}^{\infty}be^{-nbx}\mathrm{d}x=\frac{1}{n}-\frac{1}{n}=0,
-$$
-
-so $\sum_{n=1}^{\infty}\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x=0$.
-
-(c) By the geometric series $\sum_{n=1}^{\infty}e^{-nax}=\frac{e^{-ax}}{1-e^{-ax}}=\frac{1}{e^{ax}-1}$,
-
-$$
-\sum_{n=1}^{\infty}f_{n}\left(x\right)=a\sum_{n=1}^{\infty}e^{-nax}-b\sum_{n=1}^{\infty}e^{-nbx}=\frac{a}{e^{ax}-1}-\frac{b}{e^{bx}-1}.
-$$
-
-As $x\to0^{+}$, $\frac{a}{e^{ax}-1}=\frac{1}{x}-\frac{a}{2}+O\left(x\right)$, so the difference tends to $\frac{b-a}{2}+O\left(x\right)$ (finite); as $x\to\infty$, exponential decay. Hence $\sum f_{n}\in L^{1}\left(\left[0,\infty\right),m\right)$.
-
-For $R> 0$, change variables $u=ax$ and $u=bx$:
-
-$$
-\int_{0}^{R}\frac{a}{e^{ax}-1}\mathrm{d}x=\int_{0}^{aR}\frac{\mathrm{d}u}{e^{u}-1},\qquad\int_{0}^{R}\frac{b}{e^{bx}-1}\mathrm{d}x=\int_{0}^{bR}\frac{\mathrm{d}u}{e^{u}-1}.
-$$
-
-Thus
-
-$$
-\int_{0}^{R}\left(\frac{a}{e^{ax}-1}-\frac{b}{e^{bx}-1}\right)\mathrm{d}x=\int_{aR}^{bR}\frac{\mathrm{d}u}{e^{u}-1}.
-$$
-
-Since $\frac{1}{e^{u}-1}-\frac{1}{u}=O\left(e^{-u}\right)$ is integrable at infinity, $\int_{aR}^{bR}\frac{\mathrm{d}u}{e^{u}-1}=\int_{aR}^{bR}\frac{\mathrm{d}u}{u}+o\left(1\right)$, and letting $R\to\infty$,
-
-$$
-\int_{0}^{\infty}\sum_{n=1}^{\infty}f_{n}\left(x\right)\mathrm{d}x=\lim_{R\to\infty}\int_{aR}^{bR}\frac{\mathrm{d}u}{u}=\log\left(b/a\right).
-$$
-
-Note that here $\sum\int\left|f_{n}\right|=\infty$ (by (a)), so the condition $\sum\int\left|f_{n}\right|< \infty$ of **Lemma 8.2.13 (Termwise Integration of Series)** fails, and termwise integration is not allowed; indeed $\int\sum f_{n}=\log\left(b/a\right)\ne\sum\int f_{n}=0$, showing that this condition is essential. $\blacksquare$
-
-**29.** Use **Theorem 8.2.17 (Parameter Integrals)** (b) (differentiation under the integral). Fix $t_{0}> 0$ and work on a compact neighborhood $\left[t_{0}/2,t_{0}\right]$.
-
-**Case 1.** Let $F\left(t\right)=\int_{0}^{\infty}e^{-tx}\mathrm{d}x=\frac{1}{t}$ ($t> 0$). For each $k\ge1$, on $t\in\left[t_{0}/2,t_{0}\right]$, $\left|\frac{\partial^{k}}{\partial t^{k}}e^{-tx}\right|=x^{k}e^{-tx}\le x^{k}e^{-\left(t_{0}/2\right)x}\in L^{1}\left(\left[0,\infty\right)\right)$, so the theorem applies repeatedly:
-
-$$
-F^{\left(n\right)}\left(t\right)=\int_{0}^{\infty}\left(-x\right)^{n}e^{-tx}\mathrm{d}x.
-$$
-
-Since $F\left(t\right)=1/t$, its $n$-th derivative is $F^{\left(n\right)}\left(t\right)=\left(-1\right)^{n}n!/t^{n+1}$. Setting $t=1$,
-
-$$
-\int_{0}^{\infty}\left(-x\right)^{n}e^{-x}\mathrm{d}x=\left(-1\right)^{n}n!,
-$$
-
-i.e. $\int_{0}^{\infty}x^{n}e^{-x}\mathrm{d}x=n!$.
-
-**Case 2.** Let $G\left(s\right)=\int_{-\infty}^{\infty}e^{-sx^{2}}\mathrm{d}x=\sqrt{\pi/s}=\sqrt\pi\,s^{-1/2}$ ($s> 0$). For each $k\ge1$, on $s\in\left[s_{0}/2,s_{0}\right]$, $\left|\frac{\partial^{k}}{\partial s^{k}}e^{-sx^{2}}\right|=x^{2k}e^{-sx^{2}}\le x^{2k}e^{-\left(s_{0}/2\right)x^{2}}\in L^{1}\left(\mathbb R\right)$, so we may differentiate repeatedly:
-
-$$
-G^{\left(n\right)}\left(s\right)=\int_{-\infty}^{\infty}\left(-x^{2}\right)^{n}e^{-sx^{2}}\mathrm{d}x=\left(-1\right)^{n}\int_{-\infty}^{\infty}x^{2n}e^{-sx^{2}}\mathrm{d}x.
-$$
-
-Also,
-
-$$
-G^{\left(n\right)}\left(s\right)=\sqrt\pi\left(-\frac{1}{2}\right)\left(-\frac{3}{2}\right)\cdots\left(-\frac{2n-1}{2}\right)s^{-\frac{2n+1}{2}}.
-$$
-
-Setting $s=1$,
-
-$$
-\left(-1\right)^{n}\int_{-\infty}^{\infty}x^{2n}e^{-x^{2}}\mathrm{d}x=\sqrt\pi\left(-1\right)^{n}\frac{1\cdot3\cdots\left(2n-1\right)}{2^{n}},
-$$
-
-i.e. $\int_{-\infty}^{\infty}x^{2n}e^{-x^{2}}\mathrm{d}x=\sqrt\pi\frac{1\cdot3\cdots\left(2n-1\right)}{2^{n}}$. Since $1\cdot3\cdots\left(2n-1\right)=\frac{\left(2n\right)!}{2^{n}n!}$,
-
-$$
-\int_{-\infty}^{\infty}x^{2n}e^{-x^{2}}\mathrm{d}x=\frac{\left(2n\right)!\sqrt\pi}{4^{n}n!}.
-$$
-
-$\blacksquare$
