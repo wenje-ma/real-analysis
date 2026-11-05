@@ -2,24 +2,24 @@
 
 > **定理 10.2.2 (托内利定理)**
 > 
-> 如果 $f:X\times Y\to\left[0,\infty\right]$ 是 $\mathcal A\otimes\mathcal B$-可测的, 则
+> 如果 $f:X\times{Y}\to\left[0,\infty\right]$ 是 $\mathcal{A}\otimes\mathcal{B}$-可测的, 则
 
 $$
-\int_{X\times Y}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),
+\int_{X\times{Y}}f\,\mathrm{d}\left(\mu\times\nu\right)=\int_{X}\left(\int_{Y}f\left(x,y\right)\mathrm{d}\nu\left(y\right)\right)\mathrm{d}\mu\left(x\right)=\int_{Y}\left(\int_{X}f\left(x,y\right)\mathrm{d}\mu\left(x\right)\right)\mathrm{d}\nu\left(y\right),
 $$
 其中所有积分值都在 $\left[0,\infty\right]$ 中.
 
 > **定义 11.1.1 (符号测度)**
 > 
-> 设 $\left(X,\mathcal F\right)$ 是一个可测空间. 函数 $\nu:\mathcal F\to\mathbb R\cup\left\{+\infty\right\}$ 或 $\mathbb R\cup\left\{-\infty\right\}$ 称为符号测度, 若满足: (1) $\nu\left(\varnothing\right)=0$; (2) 可列可加性: 对任意一列互不相交的可测集 $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal F$, 有 $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$; (3) $\nu$ 不能同时取 $+\infty$ 与 $-\infty$ 为值.
+> 设 $\left(X,\mathcal{F}\right)$ 是一个可测空间. 函数 $\nu:\mathcal{F}\to\mathbb{R}\cup\left\{+\infty\right\}$ 或 $\mathbb{R}\cup\left\{-\infty\right\}$ 称为符号测度, 若满足: (1) $\nu\left(\varnothing\right)=0$; (2) 可列可加性: 对任意一列互不相交的可测集 $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal{F}$, 有 $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$; (3) $\nu$ 不能同时取 $+\infty$ 与 $-\infty$ 为值.
 
 > **命题 11.1.2 (符号测度的基本性质)**
 > 
-> 设 $\nu$ 是符号测度, 则: (1) 有限可加性: 对任意有限个互不相交的 $E_{1},\dots,E_{n}\in\mathcal F$, 有 $\nu\left(\bigcup_{i=1}^{n}E_{i}\right)=\sum_{i=1}^{n}\nu\left(E_{i}\right)$; (2) 下连续性: 若 $\left\{E_{j}\right\}$ 单调上升可测, 则 $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcup_{j}E_{j}\right)$; (3) 上连续性: 若 $\left\{E_{j}\right\}$ 单调下降可测且 $\nu\left(E_{1}\right)< \infty$, 则 $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcap_{j}E_{j}\right)$.
+> 设 $\nu$ 是符号测度, 则: (1) 有限可加性: 对任意有限个互不相交的 $E_{1},\dots,E_{n}\in\mathcal{F}$, 有 $\nu\left(\bigcup_{i=1}^{n}E_{i}\right)=\sum_{i=1}^{n}\nu\left(E_{i}\right)$; (2) 下连续性: 若 $\left\{E_{j}\right\}$ 单调上升可测, 则 $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcup_{j}E_{j}\right)$; (3) 上连续性: 若 $\left\{E_{j}\right\}$ 单调下降可测且 $\nu\left(E_{1}\right)<\infty$, 则 $\lim_{j\to\infty}\nu\left(E_{j}\right)=\nu\left(\bigcap_{j}E_{j}\right)$.
 
 > **定义 11.2.1 (正集,负集,零集)**
 > 
-> 设 $\nu$ 是 $\left(X,\mathcal F\right)$ 上的符号测度. 称 $P\in\mathcal F$ 为正集 (记为 $P\gtrsim0$), 若对任意 $E\in\mathcal F$ 且 $E\subset P$, 有 $\nu\left(E\right)\ge0$; 称 $N\in\mathcal F$ 为负集 (记为 $N\lesssim0$), 若对任意 $E\in\mathcal F$ 且 $E\subset N$, 有 $\nu\left(E\right)\le0$; 称 $Z\in\mathcal F$ 为零集, 若对任意 $E\in\mathcal F$ 且 $E\subset Z$, 有 $\nu\left(E\right)=0$.
+> 设 $\nu$ 是 $\left(X,\mathcal{F}\right)$ 上的符号测度. 称 $P\in\mathcal{F}$ 为正集 (记为 $P\gtrsim0$), 若对任意 $E\in\mathcal{F}$ 且 $E\subset{P}$, 有 $\nu\left(E\right)\ge0$; 称 $N\in\mathcal{F}$ 为负集 (记为 $N\lesssim0$), 若对任意 $E\in\mathcal{F}$ 且 $E\subset{N}$, 有 $\nu\left(E\right)\le0$; 称 $Z\in\mathcal{F}$ 为零集, 若对任意 $E\in\mathcal{F}$ 且 $E\subset{Z}$, 有 $\nu\left(E\right)=0$.
 
 > **引理 11.2.2 (正集的性质)**
 > 
@@ -27,19 +27,19 @@ $$
 
 > **引理 11.2.4 (非负集的判定)**
 > 
-> 设 $\nu$ 是符号测度. 若 $E$ 不是负集, 则存在正集 $F\subset E$ 使得 $\nu\left(F\right)> 0$.
+> 设 $\nu$ 是符号测度. 若 $E$ 不是负集, 则存在正集 $F\subset{E}$ 使得 $\nu\left(F\right)>0$.
 
 > **定理 11.3.2 (哈恩分解定理)**
 > 
-> 设 $\nu$ 是 $\left(X,\mathcal F\right)$ 上的符号测度, 则存在 $X$ 的分解 $X=P\cup N$, 其中 $P$ 是正集, $N$ 是负集, $P\cap N=\varnothing$; 并且该分解在相差一个 $\nu$-零集的意义下是唯一的.
+> 设 $\nu$ 是 $\left(X,\mathcal{F}\right)$ 上的符号测度, 则存在 $X$ 的分解 $X=P\cup{N}$, 其中 $P$ 是正集, $N$ 是负集, $P\cap{N}=\varnothing$; 并且该分解在相差一个 $\nu$-零集的意义下是唯一的.
 
 > **定义 11.4.1 (相互奇异的符号测度)**
 > 
-> 设 $\mu$ 和 $\nu$ 是可测空间 $\left(X,\mathcal F\right)$ 上的两个符号测度. 若存在可测集 $E\in\mathcal F$ 使得 $E$ 为 $\mu$-零集且 $E^{c}$ 为 $\nu$-零集, 则称 $\mu$ 和 $\nu$ 相互奇异, 记为 $\mu\perp\nu$.
+> 设 $\mu$ 和 $\nu$ 是可测空间 $\left(X,\mathcal{F}\right)$ 上的两个符号测度. 若存在可测集 $E\in\mathcal{F}$ 使得 $E$ 为 $\mu$-零集且 $E^{c}$ 为 $\nu$-零集, 则称 $\mu$ 和 $\nu$ 相互奇异, 记为 $\mu\perp\nu$.
 
 > **定理 11.4.3 (若尔当分解定理)**
 > 
-> 设 $\nu$ 是 $\left(X,\mathcal F\right)$ 上的符号测度, 则存在唯一的一对相互奇异的正测度 $\nu^{+}$ 和 $\nu^{-}$, 使得 $\nu=\nu^{+}-\nu^{-}$.
+> 设 $\nu$ 是 $\left(X,\mathcal{F}\right)$ 上的符号测度, 则存在唯一的一对相互奇异的正测度 $\nu^{+}$ 和 $\nu^{-}$, 使得 $\nu=\nu^{+}-\nu^{-}$.
 
 > **定义 11.4.4 (变差测度)**
 > 
@@ -47,39 +47,39 @@ $$
 
 > **定义 11.5.1 (绝对连续性)**
 > 
-> 设 $\mu$ 是正测度, $\nu$ 是符号测度. 称 $\nu$ 关于 $\mu$ 绝对连续 (记为 $\nu\ll\mu$), 若对任意 $E\in\mathcal F$ 有 $\mu\left(E\right)=0\Rightarrow\nu\left(E\right)=0$.
+> 设 $\mu$ 是正测度, $\nu$ 是符号测度. 称 $\nu$ 关于 $\mu$ 绝对连续 (记为 $\nu\ll\mu$), 若对任意 $E\in\mathcal{F}$ 有 $\mu\left(E\right)=0\Rightarrow\nu\left(E\right)=0$.
 
 > **注 11.5.3 (积分关于测度的绝对连续)**
 > 
-> 设 $f\in L^{1}\left(\mu\right)$, 则 $\lim_{\mu\left(E\right)\to0}\int_{E}f\,\mathrm{d}\mu=0$.
+> 设 $f\in{L}^{1}\left(\mu\right)$, 则 $\lim_{\mu\left(E\right)\to0}\int_{E}f\,\mathrm{d}\mu=0$.
 
 > **定理 11.5.5 (拉东-尼科迪姆定理)**
 > 
-> 设 $\mu$ 是 $\sigma$-有限正测度, $\nu$ 是符号测度且 $\nu\ll\mu$, 则存在可测函数 $f:X\to\mathbb R$ 使得 $\nu\left(E\right)=\int_{E}f\,\mathrm{d}\mu$ 对一切 $E\in\mathcal F$ 成立; 且 $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$. 函数 $f$ 称为 $\nu$ 关于 $\mu$ 的拉东-尼科迪姆导数, 记作 $f=\frac{\mathrm{d}\nu}{\mathrm{d}\mu}$.
+> 设 $\mu$ 是 $\sigma$-有限正测度, $\nu$ 是符号测度且 $\nu\ll\mu$, 则存在可测函数 $f:X\to\mathbb{R}$ 使得 $\nu\left(E\right)=\int_{E}f\,\mathrm{d}\mu$ 对一切 $E\in\mathcal{F}$ 成立; 且 $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$. 函数 $f$ 称为 $\nu$ 关于 $\mu$ 的拉东-尼科迪姆导数, 记作 $f=\frac{\mathrm{d}\nu}{\mathrm{d}\mu}$.
 
 ## 1
 
-设 $\nu$ 是 $\left(X,\mathcal F\right)$ 上的符号测度且不取 $-\infty$, $E$ 不是负集. 证明: 存在可测集 $G\subset E$ 使得 $\nu\left(G\right)=\sup\left\{\nu\left(F\right):F\subset E,\nu\left(F\right)> 0\right\}> 0$, 且 $E\setminus G$ 是负集.
+设 $\nu$ 是 $\left(X,\mathcal{F}\right)$ 上的符号测度且不取 $-\infty$, $E$ 不是负集. 证明: 存在可测集 $G\subset{E}$ 使得 $\nu\left(G\right)=\sup\left\{\nu\left(F\right):F\subset{E},\nu\left(F\right)>0\right\}>0$, 且 $E\setminus{G}$ 是负集.
 
 ### 解答 1
 
-记 $\alpha=\sup\left\{\nu\left(F\right):F\subset E,\nu\left(F\right)> 0\right\}$. 因 $E$ 不是负集, 由**引理 11.2.4 (非负集的判定)** 存在正集 $F_{0}\subset E$ 使 $\nu\left(F_{0}\right)> 0$, 故 $\alpha\ge\nu\left(F_{0}\right)> 0$, 即 $\alpha> 0$.
+记 $\alpha=\sup\left\{\nu\left(F\right):F\subset{E},\nu\left(F\right)>0\right\}$. 因 $E$ 不是负集, 由**引理 11.2.4 (非负集的判定)** 存在正集 $F_{0}\subset{E}$ 使 $\nu\left(F_{0}\right)>0$, 故 $\alpha\ge\nu\left(F_{0}\right)>0$, 即 $\alpha>0$.
 
-先证 $\alpha$ 由正集取到. 令 $\beta=\sup\left\{\nu\left(P\right):P\subset E,P\text{ 是正集}\right\}$, 则 $\beta\ge\nu\left(F_{0}\right)> 0$. 显然 $\beta\le\alpha$, 因为正集 $P\subset E$ 若 $\nu\left(P\right)> 0$ 则计入 $\alpha$ 的上确界类. 反之证 $\alpha\le\beta$: 任取 $F\subset E$ 且 $\nu\left(F\right)> 0$. 若 $F$ 是正集, 则 $\nu\left(F\right)\le\beta$; 若 $F$ 不是正集, 则存在 $C\subset F$ 使 $\nu\left(C\right)< 0$, 取 $F_{1}=F\setminus C$, 则 $\nu\left(F_{1}\right)=\nu\left(F\right)-\nu\left(C\right)> \nu\left(F\right)$. 反复应用此构造得上升可测列 $\left\{F_{n}\right\}$, 使 $\nu\left(F_{n}\right)$ 严格上升收敛于某 $\gamma$. 由**命题 11.1.2 (符号测度的基本性质)** (2) (下连续性), $\nu\left(\bigcup_{n}F_{n}\right)=\lim_{n}\nu\left(F_{n}\right)=\gamma$. 若 $\bigcup_{n}F_{n}$ 不是正集, 则又可从中取出测度更大的子集, 与 $\gamma$ 的收敛性矛盾, 故 $\bigcup_{n}F_{n}\subset E$ 是正集. 于是 $\gamma=\nu\left(\bigcup_{n}F_{n}\right)\le\beta$; 又 $\nu\left(F_{n}\right)\uparrow\gamma$ 且 $\nu\left(F_{1}\right)> \nu\left(F\right)$, 得 $\nu\left(F\right)< \gamma\le\beta$. 故对任意这样的 $F$ 有 $\nu\left(F\right)\le\beta$, 即 $\alpha\le\beta$. 合并得 $\alpha=\beta$.
+先证 $\alpha$ 由正集取到. 令 $\beta=\sup\left\{\nu\left(P\right):P\subset{E},P\text{~是正集}\right\}$, 则 $\beta\ge\nu\left(F_{0}\right)>0$. 显然 $\beta\le\alpha$, 因为正集 $P\subset{E}$ 若 $\nu\left(P\right)>0$ 则计入 $\alpha$ 的上确界类. 反之证 $\alpha\le\beta$: 任取 $F\subset{E}$ 且 $\nu\left(F\right)>0$. 若 $F$ 是正集, 则 $\nu\left(F\right)\le\beta$; 若 $F$ 不是正集, 则存在 $C\subset{F}$ 使 $\nu\left(C\right)<0$, 取 $F_{1}=F\setminus{C}$, 则 $\nu\left(F_{1}\right)=\nu\left(F\right)-\nu\left(C\right)>\nu\left(F\right)$. 反复应用此构造得上升可测列 $\left\{F_{n}\right\}$, 使 $\nu\left(F_{n}\right)$ 严格上升收敛于某 $\gamma$. 由**命题 11.1.2 (符号测度的基本性质)** (2) (下连续性), $\nu\left(\bigcup_{n}F_{n}\right)=\lim_{n}\nu\left(F_{n}\right)=\gamma$. 若 $\bigcup_{n}F_{n}$ 不是正集, 则又可从中取出测度更大的子集, 与 $\gamma$ 的收敛性矛盾, 故 $\bigcup_{n}F_{n}\subset{E}$ 是正集. 于是 $\gamma=\nu\left(\bigcup_{n}F_{n}\right)\le\beta$; 又 $\nu\left(F_{n}\right)\uparrow\gamma$ 且 $\nu\left(F_{1}\right)>\nu\left(F\right)$, 得 $\nu\left(F\right)<\gamma\le\beta$. 故对任意这样的 $F$ 有 $\nu\left(F\right)\le\beta$, 即 $\alpha\le\beta$. 合并得 $\alpha=\beta$.
 
-由 $\beta$ 的定义, 取正集列 $\left\{P_{n}\right\}\subset E$ 使 $\nu\left(P_{n}\right)\to\beta$. 令 $G=\bigcup_{n=1}^{\infty}P_{n}\subset E$, 则 $G$ 是正集 (**引理 11.2.2 (正集的性质)** (2)). 令 $Q_{n}=\bigcup_{k=1}^{n}P_{k}$, 则 $\left\{Q_{n}\right\}$ 是正集列的上升并, 仍为正集, 且 $\nu\left(Q_{n}\right)\ge\nu\left(P_{n}\right)\to\beta$; 又 $Q_{n}\subset E$ 为正集, 故 $\nu\left(Q_{n}\right)\le\beta$. 于是 $\nu\left(Q_{n}\right)\to\beta$, 由**命题 11.1.2 (符号测度的基本性质)** (2) (下连续性), $\nu\left(G\right)=\lim_{n\to\infty}\nu\left(Q_{n}\right)=\beta=\alpha> 0$.
+由 $\beta$ 的定义, 取正集列 $\left\{P_{n}\right\}\subset{E}$ 使 $\nu\left(P_{n}\right)\to\beta$. 令 $G=\bigcup_{n=1}^{\infty}P_{n}\subset{E}$, 则 $G$ 是正集 (**引理 11.2.2 (正集的性质)** (2)). 令 $Q_{n}=\bigcup_{k=1}^{n}P_{k}$, 则 $\left\{Q_{n}\right\}$ 是正集列的上升并, 仍为正集, 且 $\nu\left(Q_{n}\right)\ge\nu\left(P_{n}\right)\to\beta$; 又 $Q_{n}\subset{E}$ 为正集, 故 $\nu\left(Q_{n}\right)\le\beta$. 于是 $\nu\left(Q_{n}\right)\to\beta$, 由**命题 11.1.2 (符号测度的基本性质)** (2) (下连续性), $\nu\left(G\right)=\lim_{n\to\infty}\nu\left(Q_{n}\right)=\beta=\alpha>0$.
 
-最后证 $E\setminus G$ 是负集. 反设 $E\setminus G$ 不是负集, 由**引理 11.2.4 (非负集的判定)** 存在正集 $F\subset E\setminus G$ 使 $\nu\left(F\right)> 0$. 因 $G\cap F=\varnothing$, $G\cup F\subset E$ 且 $G\cup F$ 是正集 (**引理 11.2.2 (正集的性质)** (2)), 于是 $\nu\left(G\cup F\right)=\nu\left(G\right)+\nu\left(F\right)=\alpha+\nu\left(F\right)> \alpha=\beta$, 与 $\beta$ 是 $E$ 中全体正集测度的上确界矛盾. 故 $E\setminus G$ 是负集. $\blacksquare$
+最后证 $E\setminus{G}$ 是负集. 反设 $E\setminus{G}$ 不是负集, 由**引理 11.2.4 (非负集的判定)** 存在正集 $F\subset{E}\setminus{G}$ 使 $\nu\left(F\right)>0$. 因 $G\cap{F}=\varnothing$, $G\cup{F}\subset{E}$ 且 $G\cup{F}$ 是正集 (**引理 11.2.2 (正集的性质)** (2)), 于是 $\nu\left(G\cup{F}\right)=\nu\left(G\right)+\nu\left(F\right)=\alpha+\nu\left(F\right)>\alpha=\beta$, 与 $\beta$ 是 $E$ 中全体正集测度的上确界矛盾. 故 $E\setminus{G}$ 是负集. $\blacksquare$
 
 ## 2
 
-设 $\nu$ 是 $\left(X,\mathcal M\right)$ 上的符号测度.
+设 $\nu$ 是 $\left(X,\mathcal{M}\right)$ 上的符号测度.
 
 (a) $L^{1}\left(\nu\right)=L^{1}\left(\left|\nu\right|\right)$;
 
-(b) 若 $f\in L^{1}\left(\nu\right)$, 则 $\left|\int f\,\mathrm{d}\nu\right|\le\int\left|f\right|\mathrm{d}\left|\nu\right|$;
+(b) 若 $f\in{L}^{1}\left(\nu\right)$, 则 $\left|\int{f}\,\mathrm{d}\nu\right|\le\int\left|f\right|\mathrm{d}\left|\nu\right|$;
 
-(c) 若 $E\in\mathcal M$, 则 $\left|\nu\right|\left(E\right)=\sup\left\{\left|\int_{E}f\,\mathrm{d}\nu\right|:\left|f\right|\le1\right\}$.
+(c) 若 $E\in\mathcal{M}$, 则 $\left|\nu\right|\left(E\right)=\sup\left\{\left|\int_{E}f\,\mathrm{d}\nu\right|:\left|f\right|\le1\right\}$.
 
 ### 解答 2
 
@@ -89,17 +89,17 @@ $$
 \int\left|f\right|\mathrm{d}\left|\nu\right|=\int\left|f\right|\mathrm{d}\nu^{+}+\int\left|f\right|\mathrm{d}\nu^{-}.
 $$
 
-三项均非负, 故左端有限当且仅当右端两项均有限, 即 $f\in L^{1}\left(\nu^{+}\right)\cap L^{1}\left(\nu^{-}\right)=L^{1}\left(\nu\right)$. 故 $L^{1}\left(\nu\right)=L^{1}\left(\left|\nu\right|\right)$.
+三项均非负, 故左端有限当且仅当右端两项均有限, 即 $f\in{L}^{1}\left(\nu^{+}\right)\cap{L}^{1}\left(\nu^{-}\right)=L^{1}\left(\nu\right)$. 故 $L^{1}\left(\nu\right)=L^{1}\left(\left|\nu\right|\right)$.
 
 (b). 由**定理 11.4.3 (若尔当分解定理)**, $\nu=\nu^{+}-\nu^{-}$. 于是由三角不等式与 (a),
 
 $$
-\left|\int f\,\mathrm{d}\nu\right|=\left|\int f\,\mathrm{d}\nu^{+}-\int f\,\mathrm{d}\nu^{-}\right|\le\int\left|f\right|\mathrm{d}\nu^{+}+\int\left|f\right|\mathrm{d}\nu^{-}=\int\left|f\right|\mathrm{d}\left|\nu\right|.
+\left|\int{f}\,\mathrm{d}\nu\right|=\left|\int{f}\,\mathrm{d}\nu^{+}-\int{f}\,\mathrm{d}\nu^{-}\right|\le\int\left|f\right|\mathrm{d}\nu^{+}+\int\left|f\right|\mathrm{d}\nu^{-}=\int\left|f\right|\mathrm{d}\left|\nu\right|.
 $$
 
 (c). 先证 $\le$: 对任意可测函数 $g$ 满足 $\left|g\right|\le1$, 由 (b) 得 $\left|\int_{E}g\,\mathrm{d}\nu\right|\le\int_{E}\left|g\right|\mathrm{d}\left|\nu\right|\le\int_{E}1\,\mathrm{d}\left|\nu\right|=\left|\nu\right|\left(E\right)$, 故 $\sup\le\left|\nu\right|\left(E\right)$.
 
-再证 $\ge$: 取 $\nu$ 的一个哈恩分解 $X=P\cup N$ (**定理 11.3.2 (哈恩分解定理)**), 令 $g=\chi_{E\cap P}-\chi_{E\cap N}$, 则 $\left|g\right|\le1$ 且 $g$ 可测. 由**定理 11.4.3 (若尔当分解定理)**, $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)$, $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)$. 于是 $\int_{E}g\,\mathrm{d}\nu=\nu\left(E\cap P\right)-\nu\left(E\cap N\right)=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)=\left|\nu\right|\left(E\right)$. 故 $\sup\ge\left|\nu\right|\left(E\right)$. 合并得等式. $\blacksquare$
+再证 $\ge$: 取 $\nu$ 的一个哈恩分解 $X=P\cup{N}$ (**定理 11.3.2 (哈恩分解定理)**), 令 $g=\chi_{E\cap{P}}-\chi_{E\cap{N}}$, 则 $\left|g\right|\le1$ 且 $g$ 可测. 由**定理 11.4.3 (若尔当分解定理)**, $\nu^{+}\left(E\right)=\nu\left(E\cap{P}\right)$, $\nu^{-}\left(E\right)=-\nu\left(E\cap{N}\right)$. 于是 $\int_{E}g\,\mathrm{d}\nu=\nu\left(E\cap{P}\right)-\nu\left(E\cap{N}\right)=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)=\left|\nu\right|\left(E\right)$. 故 $\sup\ge\left|\nu\right|\left(E\right)$. 合并得等式. $\blacksquare$
 
 ## 3
 
@@ -107,27 +107,27 @@ $$
 
 ### 解答 3
 
-$f$ 是实值可测函数, 至少一个 $\int f^{+}\mathrm{d}\mu$, $\int f^{-}\mathrm{d}\mu$ 有限. 由**定义 11.2.1 (正集,负集,零集)**: 对 $E\in\mathcal M$, $E$ 是 $\nu$-正集当且仅当对任意可测 $F\subset E$, $\nu\left(F\right)=\int_{F}f\,\mathrm{d}\mu\ge0$; 因这对 $F=E\cap\left\{f< 0\right\}$ 与 $F=E\cap\left\{f> 0\right\}$ 均须成立, 故 $E$ 是正集当且仅当 $f\ge0$ $\mu$-几乎处处于 $E$ 上. 同理, $E$ 是负集当且仅当 $f\le0$ $\mu$-几乎处处于 $E$ 上; $E$ 是零集当且仅当 $f=0$ $\mu$-几乎处处于 $E$ 上.
+$f$ 是实值可测函数, 至少一个 $\int{f}^{+}\mathrm{d}\mu$, $\int{f}^{-}\mathrm{d}\mu$ 有限. 由**定义 11.2.1 (正集,负集,零集)**: 对 $E\in\mathcal{M}$, $E$ 是 $\nu$-正集当且仅当对任意可测 $F\subset{E}$, $\nu\left(F\right)=\int_{F}f\,\mathrm{d}\mu\ge0$; 因这对 $F=E\cap\left\{f<0\right\}$ 与 $F=E\cap\left\{f>0\right\}$ 均须成立, 故 $E$ 是正集当且仅当 $f\ge0$ $\mu$-几乎处处于 $E$ 上. 同理, $E$ 是负集当且仅当 $f\le0$ $\mu$-几乎处处于 $E$ 上; $E$ 是零集当且仅当 $f=0$ $\mu$-几乎处处于 $E$ 上.
 
-因此 $X=P\cup N$, 其中 $P=\left\{x:f\left(x\right)\ge0\right\}$, $N=\left\{x:f\left(x\right)< 0\right\}$, 是 $\nu$ 的一个哈恩分解 (**定理 11.3.2 (哈恩分解定理)**): $P$ 是正集, $N$ 是负集, $P\cap N=\varnothing$, $P\cup N=X$. (零测集 $\left\{f=0\right\}$ 可并入 $P$ 或 $N$ 而不改变分解的本质.)
+因此 $X=P\cup{N}$, 其中 $P=\left\{x:f\left(x\right)\ge0\right\}$, $N=\left\{x:f\left(x\right)<0\right\}$, 是 $\nu$ 的一个哈恩分解 (**定理 11.3.2 (哈恩分解定理)**): $P$ 是正集, $N$ 是负集, $P\cap{N}=\varnothing$, $P\cup{N}=X$. (零测集 $\left\{f=0\right\}$ 可并入 $P$ 或 $N$ 而不改变分解的本质.)
 
-由**定理 11.4.3 (若尔当分解定理)**, $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)=\int_{E\cap P}f\,\mathrm{d}\mu=\int_{E}f^{+}\mathrm{d}\mu$ (因 $f\ge0$ 于 $P$ 上), $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)=-\int_{E\cap N}f\,\mathrm{d}\mu=\int_{E}f^{-}\mathrm{d}\mu$ (因 $f\le0$ 于 $N$ 上). 故 $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$. $\blacksquare$
+由**定理 11.4.3 (若尔当分解定理)**, $\nu^{+}\left(E\right)=\nu\left(E\cap{P}\right)=\int_{E\cap{P}}f\,\mathrm{d}\mu=\int_{E}f^{+}\mathrm{d}\mu$ (因 $f\ge0$ 于 $P$ 上), $\nu^{-}\left(E\right)=-\nu\left(E\cap{N}\right)=-\int_{E\cap{N}}f\,\mathrm{d}\mu=\int_{E}f^{-}\mathrm{d}\mu$ (因 $f\le0$ 于 $N$ 上). 故 $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$. $\blacksquare$
 
 ## 4
 
-设 $\nu$ 是 $\left(X,\mathcal M\right)$ 上的符号测度, $E\in\mathcal M$.
+设 $\nu$ 是 $\left(X,\mathcal{M}\right)$ 上的符号测度, $E\in\mathcal{M}$.
 
-(a) $\nu^{+}\left(E\right)=\sup\left\{\nu\left(F\right):F\in\mathcal M,F\subset E\right\}$, 且 $\nu^{-}\left(E\right)=-\inf\left\{\nu\left(F\right):F\in\mathcal M,F\subset E\right\}$;
+(a) $\nu^{+}\left(E\right)=\sup\left\{\nu\left(F\right):F\in\mathcal{M},F\subset{E}\right\}$, 且 $\nu^{-}\left(E\right)=-\inf\left\{\nu\left(F\right):F\in\mathcal{M},F\subset{E}\right\}$;
 
-(b) $\left|\nu\right|\left(E\right)=\sup\left\{\sum_{i}\left|\nu\left(E_{i}\right)\right|:n\in\mathbb N,E_{1},\dots,E_{n}\text{ 两两不交},\bigcup_{i=1}^{n}E_{i}=E\right\}$.
+(b) $\left|\nu\right|\left(E\right)=\sup\left\{\sum_{i}\left|\nu\left(E_{i}\right)\right|:n\in\mathbb{N},E_{1},\dots,E_{n}\text{~两两不交},\bigcup_{i=1}^{n}E_{i}=E\right\}$.
 
 ### 解答 4
 
-(a). 取 $\nu$ 的哈恩分解 $X=P\cup N$ (**定理 11.3.2 (哈恩分解定理)**), 则 $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)$, $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)$ (**定理 11.4.3 (若尔当分解定理)**).
+(a). 取 $\nu$ 的哈恩分解 $X=P\cup{N}$ (**定理 11.3.2 (哈恩分解定理)**), 则 $\nu^{+}\left(E\right)=\nu\left(E\cap{P}\right)$, $\nu^{-}\left(E\right)=-\nu\left(E\cap{N}\right)$ (**定理 11.4.3 (若尔当分解定理)**).
 
-对任意 $F\in\mathcal M$ 且 $F\subset E$, 由 $\nu=\nu^{+}-\nu^{-}$ 及 $\nu^{-}\ge0$ 得 $\nu\left(F\right)=\nu^{+}\left(F\right)-\nu^{-}\left(F\right)\le\nu^{+}\left(F\right)\le\nu^{+}\left(E\right)$ (最后一式由 $\nu^{+}$ 的单调性, 因 $F\subset E$). 故 $\sup\left\{\nu\left(F\right):F\subset E\right\}\le\nu^{+}\left(E\right)$. 取 $F=E\cap P\subset E$, 则 $\nu\left(E\cap P\right)=\nu^{+}\left(E\cap P\right)-\nu^{-}\left(E\cap P\right)=\nu^{+}\left(E\cap P\right)=\nu^{+}\left(E\right)$ (因 $E\cap P\subset P$ 是正集, $\nu^{-}\left(E\cap P\right)=0$). 故 $\sup\ge\nu^{+}\left(E\right)$. 合并得 $\nu^{+}\left(E\right)=\sup\left\{\nu\left(F\right):F\subset E\right\}$.
+对任意 $F\in\mathcal{M}$ 且 $F\subset{E}$, 由 $\nu=\nu^{+}-\nu^{-}$ 及 $\nu^{-}\ge0$ 得 $\nu\left(F\right)=\nu^{+}\left(F\right)-\nu^{-}\left(F\right)\le\nu^{+}\left(F\right)\le\nu^{+}\left(E\right)$ (最后一式由 $\nu^{+}$ 的单调性, 因 $F\subset{E}$). 故 $\sup\left\{\nu\left(F\right):F\subset{E}\right\}\le\nu^{+}\left(E\right)$. 取 $F=E\cap{P}\subset{E}$, 则 $\nu\left(E\cap{P}\right)=\nu^{+}\left(E\cap{P}\right)-\nu^{-}\left(E\cap{P}\right)=\nu^{+}\left(E\cap{P}\right)=\nu^{+}\left(E\right)$ (因 $E\cap{P}\subset{P}$ 是正集, $\nu^{-}\left(E\cap{P}\right)=0$). 故 $\sup\ge\nu^{+}\left(E\right)$. 合并得 $\nu^{+}\left(E\right)=\sup\left\{\nu\left(F\right):F\subset{E}\right\}$.
 
-同理, 对 $F\subset E$ 有 $\nu\left(F\right)=\nu^{+}\left(F\right)-\nu^{-}\left(F\right)\ge-\nu^{-}\left(F\right)\ge-\nu^{-}\left(E\right)$, 故 $\inf\left\{\nu\left(F\right):F\subset E\right\}\ge-\nu^{-}\left(E\right)$, 即 $-\inf\left\{\nu\left(F\right):F\subset E\right\}\le\nu^{-}\left(E\right)$. 取 $F=E\cap N$, 则 $\nu\left(E\cap N\right)=-\nu^{-}\left(E\cap N\right)=-\nu^{-}\left(E\right)$, 故 $\inf\le-\nu^{-}\left(E\right)$, 即 $-\inf\ge\nu^{-}\left(E\right)$. 合并得 $\nu^{-}\left(E\right)=-\inf\left\{\nu\left(F\right):F\subset E\right\}$.
+同理, 对 $F\subset{E}$ 有 $\nu\left(F\right)=\nu^{+}\left(F\right)-\nu^{-}\left(F\right)\ge-\nu^{-}\left(F\right)\ge-\nu^{-}\left(E\right)$, 故 $\inf\left\{\nu\left(F\right):F\subset{E}\right\}\ge-\nu^{-}\left(E\right)$, 即 $-\inf\left\{\nu\left(F\right):F\subset{E}\right\}\le\nu^{-}\left(E\right)$. 取 $F=E\cap{N}$, 则 $\nu\left(E\cap{N}\right)=-\nu^{-}\left(E\cap{N}\right)=-\nu^{-}\left(E\right)$, 故 $\inf\le-\nu^{-}\left(E\right)$, 即 $-\inf\ge\nu^{-}\left(E\right)$. 合并得 $\nu^{-}\left(E\right)=-\inf\left\{\nu\left(F\right):F\subset{E}\right\}$.
 
 (b). 先证 $\le$: 对任意两两不交且并等于 $E$ 的 $\left\{E_{i}\right\}$, 由 $\nu=\nu^{+}-\nu^{-}$ 与三角不等式,
 
@@ -137,7 +137,7 @@ $$
 
 故 $\sup\le\left|\nu\right|\left(E\right)$.
 
-再证 $\ge$: 取哈恩分解 $X=P\cup N$ (**定理 11.3.2 (哈恩分解定理)**), 令 $E_{1}=E\cap P$, $E_{2}=E\cap N$, 则 $E_{1},E_{2}$ 两两不交且 $E_{1}\cup E_{2}=E$. 于是 $\left|\nu\left(E_{1}\right)\right|+\left|\nu\left(E_{2}\right)\right|=\nu^{+}\left(E\cap P\right)+\nu^{-}\left(E\cap N\right)=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)=\left|\nu\right|\left(E\right)$, 故 $\sup\ge\left|\nu\right|\left(E\right)$. 合并得等式. $\blacksquare$
+再证 $\ge$: 取哈恩分解 $X=P\cup{N}$ (**定理 11.3.2 (哈恩分解定理)**), 令 $E_{1}=E\cap{P}$, $E_{2}=E\cap{N}$, 则 $E_{1},E_{2}$ 两两不交且 $E_{1}\cup{E}_{2}=E$. 于是 $\left|\nu\left(E_{1}\right)\right|+\left|\nu\left(E_{2}\right)\right|=\nu^{+}\left(E\cap{P}\right)+\nu^{-}\left(E\cap{N}\right)=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)=\left|\nu\right|\left(E\right)$, 故 $\sup\ge\left|\nu\right|\left(E\right)$. 合并得等式. $\blacksquare$
 
 ## 5
 
@@ -145,26 +145,26 @@ $$
 
 ### 解答 5
 
-(奇异情形). 因 $\nu_{j}\perp\mu$ (**定义 11.4.1 (相互奇异的符号测度)**), 对每个 $j$ 存在 $E_{j}\in\mathcal M$ 使 $E_{j}$ 是 $\mu$-零集且 $E_{j}^{c}$ 是 $\nu_{j}$-零集, 即 $\mu\left(E_{j}\right)=0$, $\nu_{j}\left(E_{j}^{c}\right)=0$. 令 $E=\bigcup_{j=1}^{\infty}E_{j}$. 由 $\mu$ 的次可数可加性, $\mu\left(E\right)\le\sum_{j=1}^{\infty}\mu\left(E_{j}\right)=0$, 故 $E$ 是 $\mu$-零集. 又 $E^{c}=\bigcap_{j=1}^{\infty}E_{j}^{c}\subset E_{k}^{c}$ 对一切 $k$, 由 $\nu_{k}$ 的单调性 $\nu_{k}\left(E^{c}\right)\le\nu_{k}\left(E_{k}^{c}\right)=0$, 故 $\nu_{k}\left(E^{c}\right)=0$ 对一切 $k$, 从而 $\left(\sum_{j}\nu_{j}\right)\left(E^{c}\right)=\sum_{j}\nu_{j}\left(E^{c}\right)=0$. 故 $\sum_{j}\nu_{j}\perp\mu$.
+(奇异情形). 因 $\nu_{j}\perp\mu$ (**定义 11.4.1 (相互奇异的符号测度)**), 对每个 $j$ 存在 $E_{j}\in\mathcal{M}$ 使 $E_{j}$ 是 $\mu$-零集且 $E_{j}^{c}$ 是 $\nu_{j}$-零集, 即 $\mu\left(E_{j}\right)=0$, $\nu_{j}\left(E_{j}^{c}\right)=0$. 令 $E=\bigcup_{j=1}^{\infty}E_{j}$. 由 $\mu$ 的次可数可加性, $\mu\left(E\right)\le\sum_{j=1}^{\infty}\mu\left(E_{j}\right)=0$, 故 $E$ 是 $\mu$-零集. 又 $E^{c}=\bigcap_{j=1}^{\infty}E_{j}^{c}\subset{E}_{k}^{c}$ 对一切 $k$, 由 $\nu_{k}$ 的单调性 $\nu_{k}\left(E^{c}\right)\le\nu_{k}\left(E_{k}^{c}\right)=0$, 故 $\nu_{k}\left(E^{c}\right)=0$ 对一切 $k$, 从而 $\left(\sum_{j}\nu_{j}\right)\left(E^{c}\right)=\sum_{j}\nu_{j}\left(E^{c}\right)=0$. 故 $\sum_{j}\nu_{j}\perp\mu$.
 
 (绝对连续情形). 设 $\nu_{j}\ll\mu$ 对一切 $j$ (**定义 11.5.1 (绝对连续性)**). 若 $\mu\left(E\right)=0$, 则 $\nu_{j}\left(E\right)=0$ 对一切 $j$, 故 $\left(\sum_{j}\nu_{j}\right)\left(E\right)=\sum_{j}\nu_{j}\left(E\right)=0$. 因此 $\sum_{j}\nu_{j}\ll\mu$. $\blacksquare$
 
 ## 6
 
-设 $\mu$ 是正测度. 一族函数 $\left\{f_{\alpha}\right\}_{\alpha\in A}\subset L^{1}\left(\mu\right)$ 称为一致可积的, 若对任意 $\varepsilon> 0$ 存在 $\delta> 0$ 使得 $\left|\int_{E}f_{\alpha}\,\mathrm{d}\mu\right|< \varepsilon$ 对所有 $\alpha\in A$ 成立, 只要 $\mu\left(E\right)< \delta$.
+设 $\mu$ 是正测度. 一族函数 $\left\{f_{\alpha}\right\}_{\alpha\in{A}}\subset{L}^{1}\left(\mu\right)$ 称为一致可积的, 若对任意 $\varepsilon>0$ 存在 $\delta>0$ 使得 $\left|\int_{E}f_{\alpha}\,\mathrm{d}\mu\right|<\varepsilon$ 对所有 $\alpha\in{A}$ 成立, 只要 $\mu\left(E\right)<\delta$.
 
 (a) $L^{1}\left(\mu\right)$ 的任意有限子集是一致可积的;
 
-(b) 若 $\left\{f_{n}\right\}$ 是 $L^{1}\left(\mu\right)$ 中的序列且在 $L^{1}$ 度量下收敛于 $f\in L^{1}\left(\mu\right)$, 则 $\left\{f_{n}\right\}$ 是一致可积的.
+(b) 若 $\left\{f_{n}\right\}$ 是 $L^{1}\left(\mu\right)$ 中的序列且在 $L^{1}$ 度量下收敛于 $f\in{L}^{1}\left(\mu\right)$, 则 $\left\{f_{n}\right\}$ 是一致可积的.
 
 ### 解答 6
 
-(a). 设 $\left\{f_{1},\dots,f_{n}\right\}\subset L^{1}\left(\mu\right)$. 对每个 $j$, 由**注 11.5.3 (积分关于测度的绝对连续)** ($f_{j}\in L^{1}\left(\mu\right)$, $\lim_{\mu\left(E\right)\to0}\int_{E}f_{j}\,\mathrm{d}\mu=0$), 存在 $\delta_{j}> 0$ 使 $\mu\left(E\right)< \delta_{j}\Rightarrow\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|< \varepsilon$. 取 $\delta=\min_{1\le j\le n}\delta_{j}> 0$, 则当 $\mu\left(E\right)< \delta$ 时, 对所有 $j$ 有 $\mu\left(E\right)< \delta_{j}$, 故 $\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|< \varepsilon$. 故 $\left\{f_{1},\dots,f_{n}\right\}$ 一致可积.
+(a). 设 $\left\{f_{1},\dots,f_{n}\right\}\subset{L}^{1}\left(\mu\right)$. 对每个 $j$, 由**注 11.5.3 (积分关于测度的绝对连续)** ($f_{j}\in{L}^{1}\left(\mu\right)$, $\lim_{\mu\left(E\right)\to0}\int_{E}f_{j}\,\mathrm{d}\mu=0$), 存在 $\delta_{j}>0$ 使 $\mu\left(E\right)<\delta_{j}\Rightarrow\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|<\varepsilon$. 取 $\delta=\min_{1\le{j}\le{n}}\delta_{j}>0$, 则当 $\mu\left(E\right)<\delta$ 时, 对所有 $j$ 有 $\mu\left(E\right)<\delta_{j}$, 故 $\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|<\varepsilon$. 故 $\left\{f_{1},\dots,f_{n}\right\}$ 一致可积.
 
-(b). 因 $\int\left|f_{n}-f\right|\mathrm{d}\mu\to0$, 存在 $N$ 使当 $n\ge N$ 时 $\int\left|f_{n}-f\right|\mathrm{d}\mu< \frac{\varepsilon}{2}$. 由 (a), 单元素集 $\left\{f\right\}$ 一致可积: 存在 $\delta_{1}> 0$ 使 $\mu\left(E\right)< \delta_{1}\Rightarrow\left|\int_{E}f\,\mathrm{d}\mu\right|< \frac{\varepsilon}{2}$. 又有限集 $\left\{f_{1},\dots,f_{N-1}\right\}$ 由 (a) 一致可积: 存在 $\delta_{2}> 0$ 使 $\mu\left(E\right)< \delta_{2}\Rightarrow\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|< \varepsilon$ 对 $n< N$ 成立. 取 $\delta=\min\left\{\delta_{1},\delta_{2}\right\}$. 当 $\mu\left(E\right)< \delta$ 时, 对 $n\ge N$,
+(b). 因 $\int\left|f_{n}-f\right|\mathrm{d}\mu\to0$, 存在 $N$ 使当 $n\ge{N}$ 时 $\int\left|f_{n}-f\right|\mathrm{d}\mu<\frac{\varepsilon}{2}$. 由 (a), 单元素集 $\left\{f\right\}$ 一致可积: 存在 $\delta_{1}>0$ 使 $\mu\left(E\right)<\delta_{1}\Rightarrow\left|\int_{E}f\,\mathrm{d}\mu\right|<\frac{\varepsilon}{2}$. 又有限集 $\left\{f_{1},\dots,f_{N-1}\right\}$ 由 (a) 一致可积: 存在 $\delta_{2}>0$ 使 $\mu\left(E\right)<\delta_{2}\Rightarrow\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|<\varepsilon$ 对 $n<{}N$ 成立. 取 $\delta=\min\left\{\delta_{1},\delta_{2}\right\}$. 当 $\mu\left(E\right)<\delta$ 时, 对 $n\ge{N}$,
 
 $$
-\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|\le\left|\int_{E}f\,\mathrm{d}\mu\right|+\int_{E}\left|f_{n}-f\right|\mathrm{d}\mu\le\frac{\varepsilon}{2}+\int\left|f_{n}-f\right|\mathrm{d}\mu< \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
+\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|\le\left|\int_{E}f\,\mathrm{d}\mu\right|+\int_{E}\left|f_{n}-f\right|\mathrm{d}\mu\le\frac{\varepsilon}{2}+\int\left|f_{n}-f\right|\mathrm{d}\mu<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
 $$
 
-而对 $n< N$ 亦有 $\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|< \varepsilon$. 故 $\left\{f_{n}\right\}$ 一致可积. $\blacksquare$
+而对 $n<{}N$ 亦有 $\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|<\varepsilon$. 故 $\left\{f_{n}\right\}$ 一致可积. $\blacksquare$

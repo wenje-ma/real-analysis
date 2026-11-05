@@ -2,35 +2,35 @@
 
 > **性质 11.5.6 (拉东-尼科迪姆导数的线性性)**
 > 
-> 若 $\nu_{1},\nu_{2}\ll\mu$ 且 $a,b\in\mathbb R$, 则 $\frac{\mathrm{d}\left(a\nu_{1}+b\nu_{2}\right)}{\mathrm{d}\mu}=a\frac{\mathrm{d}\nu_{1}}{\mathrm{d}\mu}+b\frac{\mathrm{d}\nu_{2}}{\mathrm{d}\mu}$ $\mu$-几乎处处成立.
+> 若 $\nu_{1},\nu_{2}\ll\mu$ 且 $a,b\in\mathbb{R}$, 则 $\frac{\mathrm{d}\left(a\nu_{1}+b\nu_{2}\right)}{\mathrm{d}\mu}=a\frac{\mathrm{d}\nu_{1}}{\mathrm{d}\mu}+b\frac{\mathrm{d}\nu_{2}}{\mathrm{d}\mu}$ $\mu$-几乎处处成立.
 
 > **推论 13.4.5 (单调函数几乎处处可导)**
 > 
-> 设 $F$ 是 $\mathbb R$ 上的右连续的增函数, 则对几乎所有的 $x$, $F'\left(x\right)$ 存在.
+> 设 $F$ 是 $\mathbb{R}$ 上的右连续的增函数, 则对几乎所有的 $x$, $F'\left(x\right)$ 存在.
 
 > **定义 14.0.6 (有界变差函数)**
 > 
-> 设 $f:\left[a,b\right]\to\mathbb R$. 对 $\left[a,b\right]$ 的任意分划 $P:a=x_{0}< x_{1}< \cdots< x_{n}=b$, 定义变差 $V\left(f,P\right)=\sum_{i=1}^{n}\left|f\left(x_{i}\right)-f\left(x_{i-1}\right)\right|$. $f$ 在 $\left[a,b\right]$ 上的全变差为 $V_{a}^{b}\left(f\right)=\sup_{P}V\left(f,P\right)$. 若 $V_{a}^{b}\left(f\right)< +\infty$, 则称 $f$ 为有界变差函数, 记作 $f\in BV\left(\left[a,b\right]\right)$.
+> 设 $f:\left[a,b\right]\to\mathbb{R}$. 对 $\left[a,b\right]$ 的任意分划 $P:a=x_{0}<{}x_{1}<\cdots<{}x_{n}=b$, 定义变差 $V\left(f,P\right)=\sum_{i=1}^{n}\left|f\left(x_{i}\right)-f\left(x_{i-1}\right)\right|$. $f$ 在 $\left[a,b\right]$ 上的全变差为 $V_{a}^{b}\left(f\right)=\sup_{P}V\left(f,P\right)$. 若 $V_{a}^{b}\left(f\right)<+\infty$, 则称 $f$ 为有界变差函数, 记作 $f\in{B}V\left(\left[a,b\right]\right)$.
 
 > **定理 14.0.7 (有界变差函数的基本性质)**
 > 
-> 设 $f,g\in BV\left(\left[a,b\right]\right)$, 则: (1) $BV\left(\left[a,b\right]\right)$ 构成一个线性空间; (2) $f$ 为有界函数; (3) 若 $f$ 满足利普希茨条件, 则 $f\in BV\left(\left[a,b\right]\right)$; (4) 单调函数必为有界变差函数.
+> 设 $f,g\in{B}V\left(\left[a,b\right]\right)$, 则: (1) $BV\left(\left[a,b\right]\right)$ 构成一个线性空间; (2) $f$ 为有界函数; (3) 若 $f$ 满足利普希茨条件, 则 $f\in{B}V\left(\left[a,b\right]\right)$; (4) 单调函数必为有界变差函数.
 
 > **定理 14.0.10 (有界变差函数的间断点性质)**
 > 
-> 若 $f\in BV\left(\left[a,b\right]\right)$, 则: (1) $f$ 的不连续点至多可数; (2) 所有不连续点都是第一类间断点.
+> 若 $f\in{B}V\left(\left[a,b\right]\right)$, 则: (1) $f$ 的不连续点至多可数; (2) 所有不连续点都是第一类间断点.
 
 > **定义 15.0.11 (绝对连续性)**
 > 
-> 函数 $f:\left[a,b\right]\to\mathbb R$ 称为绝对连续的 (记 $f\in AC\left(\left[a,b\right]\right)$), 若对任意 $\varepsilon> 0$, 存在 $\delta> 0$, 使得对任意有限个互不相交的子区间 $\left(a_{i},b_{i}\right)\subset\left[a,b\right]$, 只要 $\sum_{i}\left(b_{i}-a_{i}\right)< \delta$, 就有 $\sum_{i}\left|f\left(b_{i}\right)-f\left(a_{i}\right)\right|< \varepsilon$.
+> 函数 $f:\left[a,b\right]\to\mathbb{R}$ 称为绝对连续的 (记 $f\in{A}C\left(\left[a,b\right]\right)$), 若对任意 $\varepsilon>0$, 存在 $\delta>0$, 使得对任意有限个互不相交的子区间 $\left(a_{i},b_{i}\right)\subset\left[a,b\right]$, 只要 $\sum_{i}\left(b_{i}-a_{i}\right)<\delta$, 就有 $\sum_{i}\left|f\left(b_{i}\right)-f\left(a_{i}\right)\right|<\varepsilon$.
 
 > **定理 15.0.14 (绝对连续的等价刻画)**
 > 
-> $f\in AC\left(\left[a,b\right]\right)$ 当且仅当存在 $g\in L^{1}\left(\left[a,b\right]\right)$ 使得 $f\left(x\right)=f\left(a\right)+\int_{a}^{x}g\left(t\right)\mathrm{d}t$ 对一切 $x\in\left[a,b\right]$ 成立. 此时 $f'\left(x\right)=g\left(x\right)$ 几乎处处成立.
+> $f\in{A}C\left(\left[a,b\right]\right)$ 当且仅当存在 $g\in{L}^{1}\left(\left[a,b\right]\right)$ 使得 $f\left(x\right)=f\left(a\right)+\int_{a}^{x}g\left(t\right)\mathrm{d}t$ 对一切 $x\in\left[a,b\right]$ 成立. 此时 $f'\left(x\right)=g\left(x\right)$ 几乎处处成立.
 
 > **定理 15.0.16 (函数类的包含关系)**
 > 
-> 有以下严格包含关系: $C^{1}\left(\left[a,b\right]\right)\subset$ 利普希茨 $\subset AC\left(\left[a,b\right]\right)\subset BV\left(\left[a,b\right]\right)\subset$ 有界函数.
+> 有以下严格包含关系: $C^{1}\left(\left[a,b\right]\right)\subset$ 利普希茨 $\subset{A}C\left(\left[a,b\right]\right)\subset{B}V\left(\left[a,b\right]\right)\subset$ 有界函数.
 
 ## 1
 
@@ -38,7 +38,7 @@
 
 (a) $F$ 与 $G$ 处处可微 (包括 $x=0$);
 
-(b) $F\in BV\left(\left[-1,1\right]\right)$, 但 $G\notin BV\left(\left[-1,1\right]\right)$.
+(b) $F\in{B}V\left(\left[-1,1\right]\right)$, 但 $G\notin{B}V\left(\left[-1,1\right]\right)$.
 
 ### 解答 1
 
@@ -48,25 +48,25 @@ $$
 F'\left(0\right)=\lim_{h\to0}\frac{F\left(h\right)-F\left(0\right)}{h}=\lim_{h\to0}\frac{h^{2}\sin\left(h^{-1}\right)}{h}=\lim_{h\to0}h\sin\left(h^{-1}\right)=0,
 $$
 
-其中最后一个等式由 $\left|h\sin\left(h^{-1}\right)\right|\le\left|h\right|\to0$ 得; 同理 $G'\left(0\right)=\lim_{h\to0}\frac{h^{2}\sin\left(h^{-2}\right)}{h}=\lim_{h\to0}h\sin\left(h^{-2}\right)=0$. 故 $F,G$ 在 $\mathbb R$ 上处处可微 (含 $x=0$).
+其中最后一个等式由 $\left|h\sin\left(h^{-1}\right)\right|\le\left|h\right|\to0$ 得; 同理 $G'\left(0\right)=\lim_{h\to0}\frac{h^{2}\sin\left(h^{-2}\right)}{h}=\lim_{h\to0}h\sin\left(h^{-2}\right)=0$. 故 $F,G$ 在 $\mathbb{R}$ 上处处可微 (含 $x=0$).
 
-(b). 先证 $F\in BV\left(\left[-1,1\right]\right)$. 由 (a), 对 $x\ne0$, $\left|F'\left(x\right)\right|=\left|2x\sin\left(x^{-1}\right)-\cos\left(x^{-1}\right)\right|\le2\left|x\right|+1\le3$. 故 $F'$ 在 $\left[-1,1\right]$ 上有界. 由中值定理, $\left|F\left(x\right)-F\left(y\right)\right|\le3\left|x-y\right|$, 即 $F$ 满足利普希茨条件, 由**定理 14.0.7 (有界变差函数的基本性质)** (3), $F\in BV\left(\left[-1,1\right]\right)$.
+(b). 先证 $F\in{B}V\left(\left[-1,1\right]\right)$. 由 (a), 对 $x\ne0$, $\left|F'\left(x\right)\right|=\left|2x\sin\left(x^{-1}\right)-\cos\left(x^{-1}\right)\right|\le2\left|x\right|+1\le3$. 故 $F'$ 在 $\left[-1,1\right]$ 上有界. 由中值定理, $\left|F\left(x\right)-F\left(y\right)\right|\le3\left|x-y\right|$, 即 $F$ 满足利普希茨条件, 由**定理 14.0.7 (有界变差函数的基本性质)** (3), $F\in{B}V\left(\left[-1,1\right]\right)$.
 
-再证 $G\notin BV\left(\left[-1,1\right]\right)$. 取 $x_{k}=\frac{1}{\sqrt{\pi/2+k\pi}}$ ($k=0,1,2,\dots$), 则 $x_{k}\downarrow0$, 且 $\sin\left(x_{k}^{-2}\right)=\sin\left(\pi/2+k\pi\right)=\left(-1\right)^{k}$, 故 $G\left(x_{k}\right)=\left(-1\right)^{k}x_{k}^{2}$. 对分划 $0< x_{N}< \cdots< x_{0}$ (以及端点 $0$), 由交替符号,
+再证 $G\notin{B}V\left(\left[-1,1\right]\right)$. 取 $x_{k}=\frac{1}{\sqrt{\pi/2+k\pi}}$ ($k=0,1,2,\dots$), 则 $x_{k}\downarrow0$, 且 $\sin\left(x_{k}^{-2}\right)=\sin\left(\pi/2+k\pi\right)=\left(-1\right)^{k}$, 故 $G\left(x_{k}\right)=\left(-1\right)^{k}x_{k}^{2}$. 对分划 $0<{}x_{N}<\cdots<{}x_{0}$ (以及端点 $0$), 由交替符号,
 
 $$
 \sum_{k=0}^{N-1}\left|G\left(x_{k}\right)-G\left(x_{k+1}\right)\right|=\sum_{k=0}^{N-1}\left(x_{k}^{2}+x_{k+1}^{2}\right)\ge\sum_{k=0}^{N-1}x_{k}^{2}=\sum_{k=0}^{N-1}\frac{1}{\pi/2+k\pi}.
 $$
 
-由级数, 调和级数 $\sum_{k}\frac{1}{k}$ 发散, 故上式随 $N\to\infty$ 趋于 $+\infty$. 于是 $G$ 在 $\left[0,1\right]\subset\left[-1,1\right]$ 上的全变差已为 $+\infty$, 从而 $V_{-1}^{1}\left(G\right)=+\infty$, 即 $G\notin BV\left(\left[-1,1\right]\right)$. $\blacksquare$
+由级数, 调和级数 $\sum_{k}\frac{1}{k}$ 发散, 故上式随 $N\to\infty$ 趋于 $+\infty$. 于是 $G$ 在 $\left[0,1\right]\subset\left[-1,1\right]$ 上的全变差已为 $+\infty$, 从而 $V_{-1}^{1}\left(G\right)=+\infty$, 即 $G\notin{B}V\left(\left[-1,1\right]\right)$. $\blacksquare$
 
 ## 2
 
-若 $F_{1},F_{2},\dots,F\in NBV$ 且 $F_{j}\to F$ 逐点收敛, 则 $T_{F}\le\liminf_{j\to\infty}T_{F_{j}}$.
+若 $F_{1},F_{2},\dots,F\in{N}BV$ 且 $F_{j}\to{F}$ 逐点收敛, 则 $T_{F}\le\liminf_{j\to\infty}T_{F_{j}}$.
 
 ### 解答 2
 
-固定 $x\in\mathbb R$ 与一个分划 $a=t_{0}< \cdots< t_{n}=x$ (取 $-\infty< a$). 因 $F_{j}\to F$ 逐点, 由有限项极限可交换 (求和为有限和),
+固定 $x\in\mathbb{R}$ 与一个分划 $a=t_{0}<\cdots<{}t_{n}=x$ (取 $-\infty<{}a$). 因 $F_{j}\to{F}$ 逐点, 由有限项极限可交换 (求和为有限和),
 
 $$
 \sum_{k=1}^{n}\left|F\left(t_{k}\right)-F\left(t_{k-1}\right)\right|=\lim_{j\to\infty}\sum_{k=1}^{n}\left|F_{j}\left(t_{k}\right)-F_{j}\left(t_{k-1}\right)\right|=\liminf_{j\to\infty}\sum_{k=1}^{n}\left|F_{j}\left(t_{k}\right)-F_{j}\left(t_{k-1}\right)\right|\le\liminf_{j\to\infty}T_{F_{j}}\left(x\right),
@@ -82,7 +82,7 @@ $$
 
 ## 3
 
-设 $f:\left[a,b\right]\to\mathbb R$, 把 $f$ 的图像看作 $\mathbb C$ 的子集 $\left\{t+if\left(t\right):t\in\left[a,b\right]\right\}$. 该图像的长度 $L$ 定义为所有内接多边形长度之和的上确界. (内接多边形是连接 $t_{j-1}+if\left(t_{j-1}\right)$ 与 $t_{j}+if\left(t_{j}\right)$ 的线段之并, $1\le j\le n$, 其中 $a=t_{0}< \cdots< t_{n}=b$.)
+设 $f:\left[a,b\right]\to\mathbb{R}$, 把 $f$ 的图像看作 $\mathbb{C}$ 的子集 $\left\{t+if\left(t\right):t\in\left[a,b\right]\right\}$. 该图像的长度 $L$ 定义为所有内接多边形长度之和的上确界. (内接多边形是连接 $t_{j-1}+if\left(t_{j-1}\right)$ 与 $t_{j}+if\left(t_{j}\right)$ 的线段之并, $1\le{j}\le{n}$, 其中 $a=t_{0}<\cdots<{}t_{n}=b$.)
 
 (a) 令 $F\left(t\right)=t+if\left(t\right)$, 则 $L$ 是 $F$ 在 $\left[a,b\right]$ 上的全变差;
 
@@ -90,7 +90,7 @@ $$
 
 ### 解答 3
 
-(a). 令 $F\left(t\right)=t+if\left(t\right)$. 对 $\left[a,b\right]$ 的一个分划 $a=t_{0}< \cdots< t_{n}=b$, 相邻顶点 $t_{j-1}+if\left(t_{j-1}\right)$ 与 $t_{j}+if\left(t_{j}\right)$ 的距离为
+(a). 令 $F\left(t\right)=t+if\left(t\right)$. 对 $\left[a,b\right]$ 的一个分划 $a=t_{0}<\cdots<{}t_{n}=b$, 相邻顶点 $t_{j-1}+if\left(t_{j-1}\right)$ 与 $t_{j}+if\left(t_{j}\right)$ 的距离为
 
 $$
 \left|F\left(t_{j}\right)-F\left(t_{j-1}\right)\right|=\sqrt{\left(t_{j}-t_{j-1}\right)^{2}+\left(f\left(t_{j}\right)-f\left(t_{j-1}\right)\right)^{2}},
@@ -98,7 +98,7 @@ $$
 
 故内接多边形的长度恰为 $\sum_{j=1}^{n}\left|F\left(t_{j}\right)-F\left(t_{j-1}\right)\right|$. 于是 $L$ 等于该和式关于一切分划的上确界, 这正是 $F$ 在 $\left[a,b\right]$ 上的全变差 $V_{a}^{b}\left(F\right)$ (**定义 14.0.6 (有界变差函数)**).
 
-(b). 若 $f\in AC\left(\left[a,b\right]\right)$ (**定义 15.0.11 (绝对连续性)**), 则 $F\left(t\right)=t+if\left(t\right)$ 的两个分量 $t$ (恒等函数) 与 $f$ 均绝对连续, 故 $F$ 绝对连续. 由**定理 15.0.14 (绝对连续的等价刻画)**, 对几乎所有 $t$, $F'\left(t\right)=\frac{\mathrm{d}}{\mathrm{d}t}\left(t+if\left(t\right)\right)=1+if'\left(t\right)$, 从而 $\left|F'\left(t\right)\right|=\left(1+\left(f'\left(t\right)\right)^{2}\right)^{1/2}$. 由绝对连续函数的全变差,
+(b). 若 $f\in{A}C\left(\left[a,b\right]\right)$ (**定义 15.0.11 (绝对连续性)**), 则 $F\left(t\right)=t+if\left(t\right)$ 的两个分量 $t$ (恒等函数) 与 $f$ 均绝对连续, 故 $F$ 绝对连续. 由**定理 15.0.14 (绝对连续的等价刻画)**, 对几乎所有 $t$, $F'\left(t\right)=\frac{\mathrm{d}}{\mathrm{d}t}\left(t+if\left(t\right)\right)=1+if'\left(t\right)$, 从而 $\left|F'\left(t\right)\right|=\left(1+\left(f'\left(t\right)\right)^{2}\right)^{1/2}$. 由绝对连续函数的全变差,
 
 $$
 L=V_{a}^{b}\left(F\right)=\int_{a}^{b}\left|F'\left(t\right)\right|\mathrm{d}t=\int_{a}^{b}\left[1+\left(f'\left(t\right)\right)^{2}\right]^{1/2}\mathrm{d}t.
@@ -108,7 +108,7 @@ $\blacksquare$
 
 ## 4
 
-若 $\left\{F_{j}\right\}$ 是 $\left[a,b\right]$ 上的一列非负递增函数, 且 $F:=\sum_{j}F_{j}$ 满足 $F\left(x\right)< \infty$ 对所有 $x\in\left[a,b\right]$ 成立, 则 $F'\left(x\right)=\sum_{j}F_{j}'\left(x\right)$ 对几乎所有 $x\in\left[a,b\right]$ 成立.
+若 $\left\{F_{j}\right\}$ 是 $\left[a,b\right]$ 上的一列非负递增函数, 且 $F:=\sum_{j}F_{j}$ 满足 $F\left(x\right)<\infty$ 对所有 $x\in\left[a,b\right]$ 成立, 则 $F'\left(x\right)=\sum_{j}F_{j}'\left(x\right)$ 对几乎所有 $x\in\left[a,b\right]$ 成立.
 
 ### 解答 4
 
@@ -122,48 +122,48 @@ $$
 
 ## 5
 
-函数 $F:\left(a,b\right)\to\mathbb R$ ($-\infty\le a< b\le\infty$) 称为凸的, 若 $F\left(\lambda s+\left(1-\lambda\right)t\right)\le\lambda F\left(s\right)+\left(1-\lambda\right)F\left(t\right)$ 对所有 $s,t\in\left(a,b\right)$ 和 $\lambda\in\left(0,1\right)$ 成立.
+函数 $F:\left(a,b\right)\to\mathbb{R}$ ($-\infty\le{a}<{}b\le\infty$) 称为凸的, 若 $F\left(\lambda{s}+\left(1-\lambda\right)t\right)\le\lambda{F}\left(s\right)+\left(1-\lambda\right)F\left(t\right)$ 对所有 $s,t\in\left(a,b\right)$ 和 $\lambda\in\left(0,1\right)$ 成立.
 
-(a) $F$ 凸当且仅当对所有 $s,t,s',t'\in\left(a,b\right)$ 满足 $s\le s'< t'$, $s< t\le t'$: $\frac{F\left(t\right)-F\left(s\right)}{t-s}\le\frac{F\left(t'\right)-F\left(s'\right)}{t'-s'}$;
+(a) $F$ 凸当且仅当对所有 $s,t,s',t'\in\left(a,b\right)$ 满足 $s\le{s}'<{}t'$, $s<{}t\le{t}'$: $\frac{F\left(t\right)-F\left(s\right)}{t-s}\le\frac{F\left(t'\right)-F\left(s'\right)}{t'-s'}$;
 
 (b) $F$ 凸当且仅当 $F$ 在 $\left(a,b\right)$ 的每个紧子区间上绝对连续且 $F'$ 递增 (在其定义处);
 
-(c) 若 $F$ 凸且 $t_{0}\in\left(a,b\right)$, 则存在 $\beta\in\mathbb R$ 使 $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$ 对所有 $t\in\left(a,b\right)$ 成立;
+(c) 若 $F$ 凸且 $t_{0}\in\left(a,b\right)$, 则存在 $\beta\in\mathbb{R}$ 使 $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$ 对所有 $t\in\left(a,b\right)$ 成立;
 
-(d) (延森不等式) 若 $\left(X,\mathcal M,\mu\right)$ 是测度空间且 $\mu\left(X\right)=1$, $g:X\to\left(a,b\right)\in L^{1}\left(\mu\right)$, $F$ 在 $\left(a,b\right)$ 上凸, 则 $F\left(\int g\,\mathrm{d}\mu\right)\le\int F\circ g\,\mathrm{d}\mu$.
+(d) (延森不等式) 若 $\left(X,\mathcal{M},\mu\right)$ 是测度空间且 $\mu\left(X\right)=1$, $g:X\to\left(a,b\right)\in{L}^{1}\left(\mu\right)$, $F$ 在 $\left(a,b\right)$ 上凸, 则 $F\left(\int{g}\,\mathrm{d}\mu\right)\le\int{F}\circ{g}\,\mathrm{d}\mu$.
 
 ### 解答 5
 
-记差商 $S\left(u,v\right)=\frac{F\left(v\right)-F\left(u\right)}{v-u}$ ($u< v$).
+记差商 $S\left(u,v\right)=\frac{F\left(v\right)-F\left(u\right)}{v-u}$ ($u<{}v$).
 
-(a). 先证 $\Rightarrow$. 设 $F$ 凸. 先建立两条差商单调性: 固定左端点 $s$, 对 $s< x_{1}< x_{2}$, 由凸性
+(a). 先证 $\Rightarrow$. 设 $F$ 凸. 先建立两条差商单调性: 固定左端点 $s$, 对 $s<{}x_{1}<{}x_{2}$, 由凸性
 
 $$
 F\left(x_{1}\right)\le\frac{x_{2}-x_{1}}{x_{2}-s}F\left(s\right)+\frac{x_{1}-s}{x_{2}-s}F\left(x_{2}\right),
 $$
 
-整理得 $S\left(s,x_{1}\right)\le S\left(s,x_{2}\right)$, 即差商关于右端点递增; 同理固定右端点 $t$, 对 $s_{1}< s_{2}< t$, 由凸性
+整理得 $S\left(s,x_{1}\right)\le{S}\left(s,x_{2}\right)$, 即差商关于右端点递增; 同理固定右端点 $t$, 对 $s_{1}<{}s_{2}<{}t$, 由凸性
 
 $$
 F\left(s_{2}\right)\le\frac{t-s_{2}}{t-s_{1}}F\left(s_{1}\right)+\frac{s_{2}-s_{1}}{t-s_{1}}F\left(t\right),
 $$
 
-整理得 $S\left(s_{2},t\right)\le S\left(s_{1},t\right)$, 即差商关于左端点递减.
+整理得 $S\left(s_{2},t\right)\le{S}\left(s_{1},t\right)$, 即差商关于左端点递减.
 
-现在给定 $s\le s'< t'$ 且 $s< t\le t'$. 由差商关于右端点递增, $S\left(s,t\right)\le S\left(s,t'\right)$ (当 $t=t'$ 时取等); 由差商关于左端点递减, $S\left(s,t'\right)\ge S\left(s',t'\right)$ (当 $s=s'$ 时取等). 故 $S\left(s,t\right)\le S\left(s,t'\right)\le S\left(s',t'\right)$, 即 $\frac{F\left(t\right)-F\left(s\right)}{t-s}\le\frac{F\left(t'\right)-F\left(s'\right)}{t'-s'}$.
+现在给定 $s\le{s}'<{}t'$ 且 $s<{}t\le{t}'$. 由差商关于右端点递增, $S\left(s,t\right)\le{S}\left(s,t'\right)$ (当 $t=t'$ 时取等); 由差商关于左端点递减, $S\left(s,t'\right)\ge{S}\left(s',t'\right)$ (当 $s=s'$ 时取等). 故 $S\left(s,t\right)\le{S}\left(s,t'\right)\le{S}\left(s',t'\right)$, 即 $\frac{F\left(t\right)-F\left(s\right)}{t-s}\le\frac{F\left(t'\right)-F\left(s'\right)}{t'-s'}$.
 
-再证 $\Leftarrow$. 任取 $s< t$, $\lambda\in\left(0,1\right)$, 令 $u=\lambda s+\left(1-\lambda\right)t$, 则 $s< u< t$. 在题设不等式 (a) 中取 $s'=u$, $t'=t$, 满足 $s\le s'< t'$ 且 $s< t\le t'$, 得 $\frac{F\left(u\right)-F\left(s\right)}{u-s}\le\frac{F\left(t\right)-F\left(u\right)}{t-u}$. 由 $u=\lambda s+\left(1-\lambda\right)t$, 有 $u-s=\lambda\left(t-s\right)$, $t-u=\left(1-\lambda\right)\left(t-s\right)$. 代入整理得 $F\left(u\right)\le\lambda F\left(s\right)+\left(1-\lambda\right)F\left(t\right)$, 即 $F$ 凸. 合并即得 (a).
+再证 $\Leftarrow$. 任取 $s<{}t$, $\lambda\in\left(0,1\right)$, 令 $u=\lambda{s}+\left(1-\lambda\right)t$, 则 $s<{}u<{}t$. 在题设不等式 (a) 中取 $s'=u$, $t'=t$, 满足 $s\le{s}'<{}t'$ 且 $s<{}t\le{t}'$, 得 $\frac{F\left(u\right)-F\left(s\right)}{u-s}\le\frac{F\left(t\right)-F\left(u\right)}{t-u}$. 由 $u=\lambda{s}+\left(1-\lambda\right)t$, 有 $u-s=\lambda\left(t-s\right)$, $t-u=\left(1-\lambda\right)\left(t-s\right)$. 代入整理得 $F\left(u\right)\le\lambda{F}\left(s\right)+\left(1-\lambda\right)F\left(t\right)$, 即 $F$ 凸. 合并即得 (a).
 
-(b). 先证 $\Rightarrow$. 设 $F$ 凸, 取紧子区间 $\left[\alpha,\beta\right]\subset\left(a,b\right)$. 由 (a) 的差商单调性, 对 $\alpha\le x< y\le\beta$, $S\left(\alpha,x\right)\le S\left(x,y\right)\le S\left(y,\beta\right)$ (三点斜率递增), 而 $S\left(\alpha,x\right)\ge S\left(\alpha,\beta\right)$ (差商关于右端点递增) 且 $S\left(y,\beta\right)\le S\left(\alpha,\beta\right)$ (差商关于左端点递减), 故 $\left|S\left(x,y\right)\right|\le S\left(\alpha,\beta\right)< \infty$. 于是 $F$ 在 $\left[\alpha,\beta\right]$ 上满足利普希茨条件 (利普希茨常数为 $S\left(\alpha,\beta\right)$), 由**定理 15.0.16 (函数类的包含关系)**, $F\in AC\left(\left[\alpha,\beta\right]\right)$. 又 $F'$ 处处存在 (凸函数) 且为差商的极限, 由 (a) 差商关于左端点单调, 得 $F'$ 递增.
+(b). 先证 $\Rightarrow$. 设 $F$ 凸, 取紧子区间 $\left[\alpha,\beta\right]\subset\left(a,b\right)$. 由 (a) 的差商单调性, 对 $\alpha\le{x}<{}y\le\beta$, $S\left(\alpha,x\right)\le{S}\left(x,y\right)\le{S}\left(y,\beta\right)$ (三点斜率递增), 而 $S\left(\alpha,x\right)\ge{S}\left(\alpha,\beta\right)$ (差商关于右端点递增) 且 $S\left(y,\beta\right)\le{S}\left(\alpha,\beta\right)$ (差商关于左端点递减), 故 $\left|S\left(x,y\right)\right|\le{S}\left(\alpha,\beta\right)<\infty$. 于是 $F$ 在 $\left[\alpha,\beta\right]$ 上满足利普希茨条件 (利普希茨常数为 $S\left(\alpha,\beta\right)$), 由**定理 15.0.16 (函数类的包含关系)**, $F\in{A}C\left(\left[\alpha,\beta\right]\right)$. 又 $F'$ 处处存在 (凸函数) 且为差商的极限, 由 (a) 差商关于左端点单调, 得 $F'$ 递增.
 
-再证 $\Leftarrow$. 设 $F$ 在 $\left(a,b\right)$ 的每个紧子区间上绝对连续且 $F'$ 递增. 由**定理 15.0.14 (绝对连续的等价刻画)**, 对任意 $s< t\in\left(a,b\right)$ 与中间点 $u$, 有 $F\left(u\right)-F\left(s\right)=\int_{s}^{u}F'$, $F\left(t\right)-F\left(u\right)=\int_{u}^{t}F'$. 因 $F'$ 在 $\left(s,u\right)$ 上的值不超过其在 $\left(u,t\right)$ 上的值, 平均化得 $\frac{1}{u-s}\int_{s}^{u}F'\le\frac{1}{t-u}\int_{u}^{t}F'$, 即 $S\left(s,u\right)\le S\left(u,t\right)$. 取 $u=\lambda s+\left(1-\lambda\right)t$ 并整理 (同 (a) 的 $\Leftarrow$), 得 $F\left(u\right)\le\lambda F\left(s\right)+\left(1-\lambda\right)F\left(t\right)$, 即 $F$ 凸. 合并即得 (b).
+再证 $\Leftarrow$. 设 $F$ 在 $\left(a,b\right)$ 的每个紧子区间上绝对连续且 $F'$ 递增. 由**定理 15.0.14 (绝对连续的等价刻画)**, 对任意 $s<{}t\in\left(a,b\right)$ 与中间点 $u$, 有 $F\left(u\right)-F\left(s\right)=\int_{s}^{u}F'$, $F\left(t\right)-F\left(u\right)=\int_{u}^{t}F'$. 因 $F'$ 在 $\left(s,u\right)$ 上的值不超过其在 $\left(u,t\right)$ 上的值, 平均化得 $\frac{1}{u-s}\int_{s}^{u}F'\le\frac{1}{t-u}\int_{u}^{t}F'$, 即 $S\left(s,u\right)\le{S}\left(u,t\right)$. 取 $u=\lambda{s}+\left(1-\lambda\right)t$ 并整理 (同 (a) 的 $\Leftarrow$), 得 $F\left(u\right)\le\lambda{F}\left(s\right)+\left(1-\lambda\right)F\left(t\right)$, 即 $F$ 凸. 合并即得 (b).
 
-(c). 由 (a) 的差商单调性, $F$ 在 $t_{0}$ 处的左,右导数存在: 左导数 $F'_{-}\left(t_{0}\right)=\sup_{t< t_{0}}S\left(t,t_{0}\right)$, 右导数 $F'_{+}\left(t_{0}\right)=\inf_{t> t_{0}}S\left(t_{0},t\right)$, 且 $F'_{-}\left(t_{0}\right)\le F'_{+}\left(t_{0}\right)$ (对 $t_{1}< t_{0}< t_{2}$, 三点斜率 $S\left(t_{1},t_{0}\right)\le S\left(t_{0},t_{2}\right)$). 取 $\beta\in\left[F'_{-}\left(t_{0}\right),F'_{+}\left(t_{0}\right)\right]$. 当 $t> t_{0}$ 时, $S\left(t_{0},t\right)\ge F'_{+}\left(t_{0}\right)\ge\beta$, 故 $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$; 当 $t< t_{0}$ 时, $S\left(t,t_{0}\right)\le F'_{-}\left(t_{0}\right)\le\beta$, 因 $t-t_{0}< 0$ 两边乘以负数翻转, 得 $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$. 对 $t=t_{0}$ 取等号成立.
+(c). 由 (a) 的差商单调性, $F$ 在 $t_{0}$ 处的左,右导数存在: 左导数 $F'_{-}\left(t_{0}\right)=\sup_{t<{}t_{0}}S\left(t,t_{0}\right)$, 右导数 $F'_{+}\left(t_{0}\right)=\inf_{t>{}t_{0}}S\left(t_{0},t\right)$, 且 $F'_{-}\left(t_{0}\right)\le{F}'_{+}\left(t_{0}\right)$ (对 $t_{1}<{}t_{0}<{}t_{2}$, 三点斜率 $S\left(t_{1},t_{0}\right)\le{S}\left(t_{0},t_{2}\right)$). 取 $\beta\in\left[F'_{-}\left(t_{0}\right),F'_{+}\left(t_{0}\right)\right]$. 当 $t>{}t_{0}$ 时, $S\left(t_{0},t\right)\ge{F}'_{+}\left(t_{0}\right)\ge\beta$, 故 $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$; 当 $t<{}t_{0}$ 时, $S\left(t,t_{0}\right)\le{F}'_{-}\left(t_{0}\right)\le\beta$, 因 $t-t_{0}<0$ 两边乘以负数翻转, 得 $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$. 对 $t=t_{0}$ 取等号成立.
 
-(d). 记 $t_{0}=\int g\,\mathrm{d}\mu$. 因 $g$ 取值于 $\left(a,b\right)$, 且 $g\in L^{1}\left(\mu\right)$, 有 $t_{0}\in\left(a,b\right)$. 由 (c), 存在 $\beta\in\mathbb R$ 使 $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$ 对所有 $t\in\left(a,b\right)$ 成立. 代入 $t=g\left(x\right)$ 得 $F\left(g\left(x\right)\right)\ge F\left(t_{0}\right)+\beta\left(g\left(x\right)-t_{0}\right)$ 对一切 $x\in X$. 对 $\mu$ 积分 (右端 $\in L^{1}$, 故积分良定义):
+(d). 记 $t_{0}=\int{g}\,\mathrm{d}\mu$. 因 $g$ 取值于 $\left(a,b\right)$, 且 $g\in{L}^{1}\left(\mu\right)$, 有 $t_{0}\in\left(a,b\right)$. 由 (c), 存在 $\beta\in\mathbb{R}$ 使 $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$ 对所有 $t\in\left(a,b\right)$ 成立. 代入 $t=g\left(x\right)$ 得 $F\left(g\left(x\right)\right)\ge{F}\left(t_{0}\right)+\beta\left(g\left(x\right)-t_{0}\right)$ 对一切 $x\in{X}$. 对 $\mu$ 积分 (右端 $\in{L}^{1}$, 故积分良定义):
 
 $$
-\int F\circ g\,\mathrm{d}\mu\ge\int\left[F\left(t_{0}\right)+\beta\left(g-t_{0}\right)\right]\mathrm{d}\mu=F\left(t_{0}\right)+\beta\left(\int g\,\mathrm{d}\mu-t_{0}\right)=F\left(t_{0}\right)=F\left(\int g\,\mathrm{d}\mu\right).
+\int{F}\circ{g}\,\mathrm{d}\mu\ge\int\left[F\left(t_{0}\right)+\beta\left(g-t_{0}\right)\right]\mathrm{d}\mu=F\left(t_{0}\right)+\beta\left(\int{g}\,\mathrm{d}\mu-t_{0}\right)=F\left(t_{0}\right)=F\left(\int{g}\,\mathrm{d}\mu\right).
 $$
 
-故 $F\left(\int g\,\mathrm{d}\mu\right)\le\int F\circ g\,\mathrm{d}\mu$. $\blacksquare$
+故 $F\left(\int{g}\,\mathrm{d}\mu\right)\le\int{F}\circ{g}\,\mathrm{d}\mu$. $\blacksquare$

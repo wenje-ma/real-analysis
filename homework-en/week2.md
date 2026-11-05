@@ -2,14 +2,14 @@
 
 > **Theorem 1.2.9 (De Morgan's Laws)**
 > 
-> $\left(A\cup B\right)^{c}=A^{c}\cap B^{c}$, $\left(A\cap B\right)^{c}=A^{c}\cup B^{c}$.
+> $\left(A\cup{B}\right)^{c}=A^{c}\cap{B}^{c}$, $\left(A\cap{B}\right)^{c}=A^{c}\cup{B}^{c}$.
 
 > **Definition 1.3.1 (Limit Superior)**
 > 
 > The limit superior of a sequence of sets $\left\{E_{n}\right\}$ is
 
 $$
-\overline{\lim}_{n\to\infty}E_{n}=\left\{x:x\text{ belongs to infinitely many }E_{n}\right\}=\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}E_{k}.
+\overline{\lim}_{n\to\infty}E_{n}=\left\{x:x\text{~belongs~to~infinitely~many~}E_{n}\right\}=\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}E_{k}.
 $$
 
 > **Definition 1.3.3 (Limit Inferior)**
@@ -17,52 +17,52 @@ $$
 > The limit inferior of a sequence of sets $\left\{E_{n}\right\}$ is
 
 $$
-\underline{\lim}_{n\to\infty}E_{n}=\left\{x:x\text{ fails to belong to only finitely many }E_{n}\right\}=\bigcup_{n=1}^{\infty}\bigcap_{k=n}^{\infty}E_{k}.
+\underline{\lim}_{n\to\infty}E_{n}=\left\{x:x\text{~fails~to~belong~to~only~finitely~many~}E_{n}\right\}=\bigcup_{n=1}^{\infty}\bigcap_{k=n}^{\infty}E_{k}.
 $$
 
 > **Theorem 2.4.2 (Properties of Preimage Operations)**
 > 
-> Let $f:A\to B$. Then $f^{-1}\left(B_{1}\cup B_{2}\right)=f^{-1}\left(B_{1}\right)\cup f^{-1}\left(B_{2}\right)$, $f^{-1}\left(B_{1}\cap B_{2}\right)=f^{-1}\left(B_{1}\right)\cap f^{-1}\left(B_{2}\right)$, $f^{-1}\left(B^{c}\right)=\left(f^{-1}\left(B\right)\right)^{c}$, $f^{-1}\left(\bigcup_{\alpha\in I}B_{\alpha}\right)=\bigcup_{\alpha\in I}f^{-1}\left(B_{\alpha}\right)$, $f^{-1}\left(\bigcap_{\alpha\in I}B_{\alpha}\right)=\bigcap_{\alpha\in I}f^{-1}\left(B_{\alpha}\right)$.
+> Let $f:A\to{B}$. Then $f^{-1}\left(B_{1}\cup{B}_{2}\right)=f^{-1}\left(B_{1}\right)\cup{f}^{-1}\left(B_{2}\right)$, $f^{-1}\left(B_{1}\cap{B}_{2}\right)=f^{-1}\left(B_{1}\right)\cap{f}^{-1}\left(B_{2}\right)$, $f^{-1}\left(B^{c}\right)=\left(f^{-1}\left(B\right)\right)^{c}$, $f^{-1}\left(\bigcup_{\alpha\in{I}}B_{\alpha}\right)=\bigcup_{\alpha\in{I}}f^{-1}\left(B_{\alpha}\right)$, $f^{-1}\left(\bigcap_{\alpha\in{I}}B_{\alpha}\right)=\bigcap_{\alpha\in{I}}f^{-1}\left(B_{\alpha}\right)$.
 
-> **Theorem 3.2.1 (Structure of Open Sets in $\mathbb R$)**
+> **Theorem 3.2.1 (Structure of Open Sets in $\mathbb{R}$)**
 > 
-> If $U\subset\mathbb R$ is a nonempty open set, then there exists a sequence of pairwise disjoint open intervals $\left\{I_{n}\right\}_{n=1}^{\infty}$ such that $U=\bigcup_{n=1}^{\infty}I_{n}$; this representation is unique up to reordering.
+> If $U\subset\mathbb{R}$ is a nonempty open set, then there exists a sequence of pairwise disjoint open intervals $\left\{I_{n}\right\}_{n=1}^{\infty}$ such that $U=\bigcup_{n=1}^{\infty}I_{n}$; this representation is unique up to reordering.
 
 > **Definition 4.1.1 (Algebra of Sets)**
 > 
-> Let $X$ be a nonempty set and $\mathcal A\subset\mathcal P\left(X\right)$. $\mathcal A$ is called an algebra of sets on $X$ if: (1) $X\in\mathcal A$; (2) closed under differences: $A,B\in\mathcal A\Rightarrow A\setminus B\in\mathcal A$; (3) closed under finite unions: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
+> Let $X$ be a nonempty set and $\mathcal{A}\subset\mathcal{P}\left(X\right)$. $\mathcal{A}$ is called an algebra of sets on $X$ if: (1) $X\in\mathcal{A}$; (2) closed under differences: $A,B\in\mathcal{A}\Rightarrow{A}\setminus{B}\in\mathcal{A}$; (3) closed under finite unions: $A,B\in\mathcal{A}\Rightarrow{A}\cup{B}\in\mathcal{A}$.
 
 > **Proposition 4.1.2 (Equivalent Definition of an Algebra)**
 > 
-> Let $\mathcal A\subset\mathcal P\left(X\right)$. The following are equivalent: (1) $\mathcal A$ is an algebra; (2) $\mathcal A$ satisfies: (a) $X\in\mathcal A$; (b) closed under complements: $A\in\mathcal A\Rightarrow A^{c}=X\setminus A\in\mathcal A$; (c) closed under finite unions: $A,B\in\mathcal A\Rightarrow A\cup B\in\mathcal A$.
+> Let $\mathcal{A}\subset\mathcal{P}\left(X\right)$. The following are equivalent: (1) $\mathcal{A}$ is an algebra; (2) $\mathcal{A}$ satisfies: (a) $X\in\mathcal{A}$; (b) closed under complements: $A\in\mathcal{A}\Rightarrow{A}^{c}=X\setminus{A}\in\mathcal{A}$; (c) closed under finite unions: $A,B\in\mathcal{A}\Rightarrow{A}\cup{B}\in\mathcal{A}$.
 
 > **Definition 4.1.3 ($\sigma$-Algebra)**
 > 
-> Let $X$ be nonempty and $\mathcal F\subset\mathcal P\left(X\right)$. $\mathcal F$ is called a $\sigma$-algebra on $X$ if: (1) $X\in\mathcal F$; (2) closed under complements: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) closed under countable unions: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$.
+> Let $X$ be nonempty and $\mathcal{F}\subset\mathcal{P}\left(X\right)$. $\mathcal{F}$ is called a $\sigma$-algebra on $X$ if: (1) $X\in\mathcal{F}$; (2) closed under complements: $A\in\mathcal{F}\Rightarrow{A}^{c}\in\mathcal{F}$; (3) closed under countable unions: $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal{F}\Rightarrow\bigcup_{n=1}^{\infty}A_{n}\in\mathcal{F}$.
 
 > **Definition 4.2.1 (Generated Algebra)**
 > 
-> The smallest algebra containing $\mathcal E\subset\mathcal P\left(X\right)$ is called the algebra generated by $\mathcal E$, denoted $\alpha\left(\mathcal E\right)$:
+> The smallest algebra containing $\mathcal{E}\subset\mathcal{P}\left(X\right)$ is called the algebra generated by $\mathcal{E}$, denoted $\alpha\left(\mathcal{E}\right)$:
 
 > **Definition 4.2.2 (Generated $\sigma$-Algebra)**
 > 
-> The smallest $\sigma$-algebra containing $\mathcal E\subset\mathcal P\left(X\right)$ is called the $\sigma$-algebra generated by $\mathcal E$, denoted $\sigma\left(\mathcal E\right)$:
+> The smallest $\sigma$-algebra containing $\mathcal{E}\subset\mathcal{P}\left(X\right)$ is called the $\sigma$-algebra generated by $\mathcal{E}$, denoted $\sigma\left(\mathcal{E}\right)$:
 
 > **Definition 4.3.2 (Borel $\sigma$-Algebra)**
 > 
-> Let $\left(X,\tau\right)$ be a topological space. The $\sigma$-algebra generated by all open sets is called the Borel $\sigma$-algebra, denoted $\mathcal B\left(X\right)$; its elements are called Borel sets.
+> Let $\left(X,\tau\right)$ be a topological space. The $\sigma$-algebra generated by all open sets is called the Borel $\sigma$-algebra, denoted $\mathcal{B}\left(X\right)$; its elements are called Borel sets.
 
-> **Example 4.3.3 (Borel Algebra on $\mathbb R$)**
+> **Example 4.3.3 (Borel Algebra on $\mathbb{R}$)**
 > 
-> On $\mathbb R$, the following families generate the same Borel $\sigma$-algebra $\mathcal B\left(\mathbb R\right)$: all open sets $\tau$, all closed sets $\mathcal F$, all open intervals $\left\{\left(a,b\right)\right\}$, all closed intervals $\left\{\left[a,b\right]\right\}$, all half-open intervals $\left\{\left(a,b\right]\right\}$, i.e.
+> On $\mathbb{R}$, the following families generate the same Borel $\sigma$-algebra $\mathcal{B}\left(\mathbb{R}\right)$: all open sets $\tau$, all closed sets $\mathcal{F}$, all open intervals $\left\{\left(a,b\right)\right\}$, all closed intervals $\left\{\left[a,b\right]\right\}$, all half-open intervals $\left\{\left(a,b\right]\right\}$, i.e.
 
 > **Definition 4.5.1 (Measurable Rectangles and Product $\sigma$-Algebra)**
 > 
-> Let $\left(X,\mathcal F\right)$ and $\left(Y,\mathcal G\right)$ be measurable spaces. $A\times B\subseteq X\times Y$ is called a measurable rectangle if $A\in\mathcal F$ and $B\in\mathcal G$. The product $\sigma$-algebra is the smallest $\sigma$-algebra containing all measurable rectangles:
+> Let $\left(X,\mathcal{F}\right)$ and $\left(Y,\mathcal{G}\right)$ be measurable spaces. $A\times{B}\subseteq{X}\times{Y}$ is called a measurable rectangle if $A\in\mathcal{F}$ and $B\in\mathcal{G}$. The product $\sigma$-algebra is the smallest $\sigma$-algebra containing all measurable rectangles:
 
 > **Theorem 4.5.3 (Section Measurability)**
 > 
-> If $E\in\mathcal F\otimes\mathcal G$, then for every $x\in X$ and $y\in Y$, its sections are measurable:
+> If $E\in\mathcal{F}\otimes\mathcal{G}$, then for every $x\in{X}$ and $y\in{Y}$, its sections are measurable:
 
 > **Theorem 4.5.4 (Product of Borel $\sigma$-Algebras)**
 > 
@@ -70,15 +70,15 @@ $$
 
 > **Definition 4.5.7 (Arbitrary Product $\sigma$-Algebra)**
 > 
-> Let $\left\{\left(X_{\alpha},\mathcal F_{\alpha}\right)\right\}_{\alpha\in I}$ be a family of measurable spaces. The product $\sigma$-algebra $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$ is the $\sigma$-algebra generated by all cylinder sets
+> Let $\left\{\left(X_{\alpha},\mathcal{F}_{\alpha}\right)\right\}_{\alpha\in{I}}$ be a family of measurable spaces. The product $\sigma$-algebra $\bigotimes_{\alpha\in{I}}\mathcal{F}_{\alpha}$ is the $\sigma$-algebra generated by all cylinder sets
 
 > **Definition 5.1.2 (Measure)**
 > 
-> Let $\left(X,\mathcal F\right)$ be a measurable space. A function $\mu:\mathcal F\to\left[0,+\infty\right]$ is called a measure on $\left(X,\mathcal F\right)$ if: (1) nonnegativity: $\mu\left(E\right)\ge0$ for all $E\in\mathcal F$; (2) empty set: $\mu\left(\emptyset\right)=0$; (3) countable additivity ($\sigma$-additivity): for any countable pairwise-disjoint $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
+> Let $\left(X,\mathcal{F}\right)$ be a measurable space. A function $\mu:\mathcal{F}\to\left[0,+\infty\right]$ is called a measure on $\left(X,\mathcal{F}\right)$ if: (1) nonnegativity: $\mu\left(E\right)\ge0$ for all $E\in\mathcal{F}$; (2) empty set: $\mu\left(\emptyset\right)=0$; (3) countable additivity ($\sigma$-additivity): for any countable pairwise-disjoint $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal{F}$, $\mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu\left(E_{n}\right)$.
 
 > **Proposition 5.2.1 (Finite Additivity)**
 > 
-> Let $\mu$ be a measure on $\left(X,\mathcal F\right)$ and $E_{1},\dots,E_{n}\in\mathcal F$ be pairwise disjoint. Then
+> Let $\mu$ be a measure on $\left(X,\mathcal{F}\right)$ and $E_{1},\dots,E_{n}\in\mathcal{F}$ be pairwise disjoint. Then
 
 $$
 \mu\left(\bigcup_{k=1}^{n}E_{k}\right)=\sum_{k=1}^{n}\mu\left(E_{k}\right).
@@ -86,11 +86,11 @@ $$
 
 > **Proposition 5.2.2 (Monotonicity)**
 > 
-> Let $\mu$ be a measure and $E,F\in\mathcal F$ with $E\subset F$. Then $\mu\left(E\right)\le\mu\left(F\right)$. If moreover $\mu\left(E\right)< +\infty$, then $\mu\left(F\setminus E\right)=\mu\left(F\right)-\mu\left(E\right)$.
+> Let $\mu$ be a measure and $E,F\in\mathcal{F}$ with $E\subset{F}$. Then $\mu\left(E\right)\le\mu\left(F\right)$. If moreover $\mu\left(E\right)<+\infty$, then $\mu\left(F\setminus{E}\right)=\mu\left(F\right)-\mu\left(E\right)$.
 
 > **Proposition 5.2.3 (Countable Subadditivity)**
 > 
-> Let $\mu$ be a measure and $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ be any countable collection of sets (not necessarily pairwise disjoint). Then
+> Let $\mu$ be a measure and $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal{F}$ be any countable collection of sets (not necessarily pairwise disjoint). Then
 
 $$
 \mu\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu\left(E_{n}\right).
@@ -106,7 +106,7 @@ $$
 
 > **Proposition 5.2.5 (Continuity from Above)**
 > 
-> Let $\mu$ be a measure and $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ be a decreasing sequence of sets (i.e. $E_{1}\supset E_{2}\supset\cdots$), and suppose there exists $m$ with $\mu\left(E_{m}\right)< +\infty$. Then
+> Let $\mu$ be a measure and $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal{F}$ be a decreasing sequence of sets (i.e. $E_{1}\supset{E}_{2}\supset\cdots$), and suppose there exists $m$ with $\mu\left(E_{m}\right)<+\infty$. Then
 
 $$
 \mu\left(\bigcap_{n=1}^{\infty}E_{n}\right)=\lim_{n\to\infty}\mu\left(E_{n}\right).
@@ -114,129 +114,129 @@ $$
 
 > **Definition 5.4.1 (Null Set)**
 > 
-> Let $\left(X,\mathcal F,\mu\right)$ be a measure space. A set $N\in\mathcal F$ is called a null set if $\mu\left(N\right)=0$.
+> Let $\left(X,\mathcal{F},\mu\right)$ be a measure space. A set $N\in\mathcal{F}$ is called a null set if $\mu\left(N\right)=0$.
 
 > **Definition 5.4.2 (Zero-Measure Set)**
 > 
-> A set $A\subset X$ is called a zero-measure set if there exists $N\in\mathcal F$ such that $A\subset N$ and $\mu\left(N\right)=0$.
+> A set $A\subset{X}$ is called a zero-measure set if there exists $N\in\mathcal{F}$ such that $A\subset{N}$ and $\mu\left(N\right)=0$.
 
 > **Definition 5.4.4 (Complete Measure)**
 > 
-> A measure space $\left(X,\mathcal F,\mu\right)$ is called complete if for every $N\in\mathcal F$ with $\mu\left(N\right)=0$ and every $A\subset N$, we have $A\in\mathcal F$.
+> A measure space $\left(X,\mathcal{F},\mu\right)$ is called complete if for every $N\in\mathcal{F}$ with $\mu\left(N\right)=0$ and every $A\subset{N}$, we have $A\in\mathcal{F}$.
 
 > **Theorem 5.4.6 (Completion Theorem for Measures)**
 > 
-> Every measure space $\left(X,\mathcal F,\mu\right)$ can be completed, i.e. there exists a complete measure space $\left(X,\mathcal M,\overline\mu\right)$ such that: (1) $\mathcal F\subset\mathcal M$; (2) $\overline\mu|_{\mathcal F}=\mu$; (3) $\mathcal M$ is the smallest complete $\sigma$-algebra containing $\mathcal F$. Explicitly, let $\mathcal N=\left\{N\in\mathcal F:\mu\left(N\right)=0\right\}$, $\mathcal M=\left\{A\subset X:\exists\,B\in\mathcal F,\ \exists\,N\in\mathcal N,\ B\subset A\subset B\cup N\right\}$, and define $\overline\mu\left(A\right)=\mu\left(B\right)$.
+> Every measure space $\left(X,\mathcal{F},\mu\right)$ can be completed, i.e. there exists a complete measure space $\left(X,\mathcal{M},\overline\mu\right)$ such that: (1) $\mathcal{F}\subset\mathcal{M}$; (2) $\overline\mu|_{\mathcal{F}}=\mu$; (3) $\mathcal{M}$ is the smallest complete $\sigma$-algebra containing $\mathcal{F}$. Explicitly, let $\mathcal{N}=\left\{N\in\mathcal{F}:\mu\left(N\right)=0\right\}$, $\mathcal{M}=\left\{A\subset{X}:\exists\,B\in\mathcal{F},\,\exists\,N\in\mathcal{N},\,B\subset{A}\subset{B}\cup{N}\right\}$, and define $\overline\mu\left(A\right)=\mu\left(B\right)$.
 
 ## 1
 
-Let $\left\{\left(X_{\alpha},\mathcal F_{\alpha}\right)\right\}_{\alpha\in I}$ be a family of measurable spaces. Suppose $\mathcal F_{\alpha}=\sigma\left(\mathcal E_{\alpha}\right)$, where $\mathcal E_{\alpha}$ is a family of subsets of $X_{\alpha}$. Prove that
+Let $\left\{\left(X_{\alpha},\mathcal{F}_{\alpha}\right)\right\}_{\alpha\in{I}}$ be a family of measurable spaces. Suppose $\mathcal{F}_{\alpha}=\sigma\left(\mathcal{E}_{\alpha}\right)$, where $\mathcal{E}_{\alpha}$ is a family of subsets of $X_{\alpha}$. Prove that
 
 $$
-\bigotimes_{\alpha\in I}\mathcal F_{\alpha}=\sigma\left(\left\{\pi_{\alpha}^{-1}\left(\mathcal E_{\alpha}\right):\alpha\in I\right\}\right),
+\bigotimes_{\alpha\in{I}}\mathcal{F}_{\alpha}=\sigma\left(\left\{\pi_{\alpha}^{-1}\left(\mathcal{E}_{\alpha}\right):\alpha\in{I}\right\}\right),
 $$
 
-where $\pi_{\beta}:\prod_{\alpha\in I}X_{\alpha}\to X_{\beta}$ is the coordinate projection from the product space onto $X_{\beta}$.
+where $\pi_{\beta}:\prod_{\alpha\in{I}}X_{\alpha}\to{X}_{\beta}$ is the coordinate projection from the product space onto $X_{\beta}$.
 
-(Here $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$, by **Definition 4.5.7 (Arbitrary Product $\sigma$-Algebra)**, is the $\sigma$-algebra generated by all cylinder sets $\pi_{\beta}^{-1}\left(A_{\beta}\right)$ with $A_{\beta}\in\mathcal F_{\beta}$, $\beta\in I$.)
+(Here $\bigotimes_{\alpha\in{I}}\mathcal{F}_{\alpha}$, by **Definition 4.5.7 (Arbitrary Product $\sigma$-Algebra)**, is the $\sigma$-algebra generated by all cylinder sets $\pi_{\beta}^{-1}\left(A_{\beta}\right)$ with $A_{\beta}\in\mathcal{F}_{\beta}$, $\beta\in{I}$.)
 
 ### Solution to 1
 
-Let $\mathscr G:=\sigma\left(\left\{\pi_{\alpha}^{-1}\left(\mathcal E_{\alpha}\right):\alpha\in I\right\}\right)$. Prove two inclusions.
+Let $\mathscr{G}:=\sigma\left(\left\{\pi_{\alpha}^{-1}\left(\mathcal{E}_{\alpha}\right):\alpha\in{I}\right\}\right)$. Prove two inclusions.
 
-($\subset$) $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}\subseteq\mathscr G$.
+($\subset$) $\bigotimes_{\alpha\in{I}}\mathcal{F}_{\alpha}\subseteq\mathscr{G}$.
 
-Fix $\alpha\in I$, consider $\pi_{\alpha}:\prod_{\beta\in I}X_{\beta}\to X_{\alpha}$, and define
-
-$$
-\mathscr C_{\alpha}:=\left\{A\subseteq X_{\alpha}:\pi_{\alpha}^{-1}\left(A\right)\in\mathscr G\right\}.
-$$
-
-Since preimage operations preserve complements and countable unions (**Theorem 2.4.2 (Properties of Preimage Operations)**), $\mathscr C_{\alpha}$ is a $\sigma$-algebra. Moreover, $\pi_{\alpha}^{-1}\left(\mathcal E_{\alpha}\right)\subseteq\mathscr G$ by the definition of $\mathscr G$, so $\mathcal E_{\alpha}\subseteq\mathscr C_{\alpha}$. Thus $\mathscr C_{\alpha}$ is a $\sigma$-algebra containing $\mathcal E_{\alpha}$, hence it contains $\sigma\left(\mathcal E_{\alpha}\right)=\mathcal F_{\alpha}$. That is, for every $A\in\mathcal F_{\alpha}$, $\pi_{\alpha}^{-1}\left(A\right)\in\mathscr G$.
-
-Since $\alpha\in I$ is arbitrary, all cylinder sets $\pi_{\alpha}^{-1}\left(A\right)$ ($A\in\mathcal F_{\alpha}$, $\alpha\in I$) lie in $\mathscr G$. Since $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$ is the $\sigma$-algebra generated by these cylinder sets,
+Fix $\alpha\in{I}$, consider $\pi_{\alpha}:\prod_{\beta\in{I}}X_{\beta}\to{X}_{\alpha}$, and define
 
 $$
-\bigotimes_{\alpha\in I}\mathcal F_{\alpha}\subseteq\mathscr G.
+\mathscr{C}_{\alpha}:=\left\{A\subseteq{X}_{\alpha}:\pi_{\alpha}^{-1}\left(A\right)\in\mathscr{G}\right\}.
 $$
 
-($\supset$) $\mathscr G\subseteq\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$.
+Since preimage operations preserve complements and countable unions (**Theorem 2.4.2 (Properties of Preimage Operations)**), $\mathscr{C}_{\alpha}$ is a $\sigma$-algebra. Moreover, $\pi_{\alpha}^{-1}\left(\mathcal{E}_{\alpha}\right)\subseteq\mathscr{G}$ by the definition of $\mathscr{G}$, so $\mathcal{E}_{\alpha}\subseteq\mathscr{C}_{\alpha}$. Thus $\mathscr{C}_{\alpha}$ is a $\sigma$-algebra containing $\mathcal{E}_{\alpha}$, hence it contains $\sigma\left(\mathcal{E}_{\alpha}\right)=\mathcal{F}_{\alpha}$. That is, for every $A\in\mathcal{F}_{\alpha}$, $\pi_{\alpha}^{-1}\left(A\right)\in\mathscr{G}$.
 
-Fix $\alpha\in I$. For any $E_{\alpha}\in\mathcal E_{\alpha}$, $\pi_{\alpha}^{-1}\left(E_{\alpha}\right)$ is exactly a cylinder set (in **Definition 4.5.7 (Arbitrary Product $\sigma$-Algebra)** take $A_{\beta}=E_{\alpha}$ when $\beta=\alpha$), so $\pi_{\alpha}^{-1}\left(\mathcal E_{\alpha}\right)\subseteq\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$. Thus all generators $\pi_{\alpha}^{-1}\left(E_{\alpha}\right)$ ($\alpha\in I$) lie in the product $\sigma$-algebra, and since $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$ is a $\sigma$-algebra containing these sets, the $\sigma$-algebra they generate satisfies
+Since $\alpha\in{I}$ is arbitrary, all cylinder sets $\pi_{\alpha}^{-1}\left(A\right)$ ($A\in\mathcal{F}_{\alpha}$, $\alpha\in{I}$) lie in $\mathscr{G}$. Since $\bigotimes_{\alpha\in{I}}\mathcal{F}_{\alpha}$ is the $\sigma$-algebra generated by these cylinder sets,
 
 $$
-\mathscr G\subseteq\bigotimes_{\alpha\in I}\mathcal F_{\alpha}.
+\bigotimes_{\alpha\in{I}}\mathcal{F}_{\alpha}\subseteq\mathscr{G}.
+$$
+
+($\supset$) $\mathscr{G}\subseteq\bigotimes_{\alpha\in{I}}\mathcal{F}_{\alpha}$.
+
+Fix $\alpha\in{I}$. For any $E_{\alpha}\in\mathcal{E}_{\alpha}$, $\pi_{\alpha}^{-1}\left(E_{\alpha}\right)$ is exactly a cylinder set (in **Definition 4.5.7 (Arbitrary Product $\sigma$-Algebra)** take $A_{\beta}=E_{\alpha}$ when $\beta=\alpha$), so $\pi_{\alpha}^{-1}\left(\mathcal{E}_{\alpha}\right)\subseteq\bigotimes_{\alpha\in{I}}\mathcal{F}_{\alpha}$. Thus all generators $\pi_{\alpha}^{-1}\left(E_{\alpha}\right)$ ($\alpha\in{I}$) lie in the product $\sigma$-algebra, and since $\bigotimes_{\alpha\in{I}}\mathcal{F}_{\alpha}$ is a $\sigma$-algebra containing these sets, the $\sigma$-algebra they generate satisfies
+
+$$
+\mathscr{G}\subseteq\bigotimes_{\alpha\in{I}}\mathcal{F}_{\alpha}.
 $$
 
 Combining both directions,
 
 $$
-\bigotimes_{\alpha\in I}\mathcal F_{\alpha}=\sigma\left(\left\{\pi_{\alpha}^{-1}\left(\mathcal E_{\alpha}\right):\alpha\in I\right\}\right).
+\bigotimes_{\alpha\in{I}}\mathcal{F}_{\alpha}=\sigma\left(\left\{\pi_{\alpha}^{-1}\left(\mathcal{E}_{\alpha}\right):\alpha\in{I}\right\}\right).
 $$
 
 $\blacksquare$
 
 ## 2
 
-Prove **Theorem 5.4.6 (Completion Theorem for Measures)**: every measure space $\left(X,\mathcal F,\mu\right)$ can be completed. That is, there exists a complete measure space $\left(X,\mathcal M,\overline\mu\right)$ such that:
+Prove **Theorem 5.4.6 (Completion Theorem for Measures)**: every measure space $\left(X,\mathcal{F},\mu\right)$ can be completed. That is, there exists a complete measure space $\left(X,\mathcal{M},\overline\mu\right)$ such that:
 
-(1) $\mathcal F\subset\mathcal M$;
+(1) $\mathcal{F}\subset\mathcal{M}$;
 
-(2) $\overline\mu|_{\mathcal F}=\mu$;
+(2) $\overline\mu|_{\mathcal{F}}=\mu$;
 
-(3) $\mathcal M$ is the smallest complete $\sigma$-algebra containing $\mathcal F$.
+(3) $\mathcal{M}$ is the smallest complete $\sigma$-algebra containing $\mathcal{F}$.
 
 ### Solution to 2
 
-Let $\mathcal N=\left\{N\in\mathcal F:\mu\left(N\right)=0\right\}$ be the collection of all null sets (**Definition 5.4.1 (Null Set)**). Define
+Let $\mathcal{N}=\left\{N\in\mathcal{F}:\mu\left(N\right)=0\right\}$ be the collection of all null sets (**Definition 5.4.1 (Null Set)**). Define
 
 $$
-\mathcal M:=\left\{A\subset X:\exists\,B\in\mathcal F,\exists\,N\in\mathcal F,\mu\left(N\right)=0,\text{ s.t. }B\subset A\subset B\cup N\right\},
+\mathcal{M}:=\left\{A\subset{X}:\exists\,B\in\mathcal{F},\exists\,N\in\mathcal{F},\mu\left(N\right)=0,\text{~s.t.~}B\subset{A}\subset{B}\cup{N}\right\},
 $$
 
-i.e. $A\in\mathcal M$ iff $A$ differs from some measurable set $B$ by a zero-measure set (**Definition 5.4.2 (Zero-Measure Set)**). We prove in six steps.
+i.e. $A\in\mathcal{M}$ iff $A$ differs from some measurable set $B$ by a zero-measure set (**Definition 5.4.2 (Zero-Measure Set)**). We prove in six steps.
 
-1. $\mathcal M$ is a $\sigma$-algebra. Verify **Definition 4.1.3 ($\sigma$-Algebra)** item by item:
+1. $\mathcal{M}$ is a $\sigma$-algebra. Verify **Definition 4.1.3 ($\sigma$-Algebra)** item by item:
 
-(1) $X\in\mathcal M$: take $B=X$, $N=\varnothing$; then $X\subset X\subset X\cup\varnothing$.
+(1) $X\in\mathcal{M}$: take $B=X$, $N=\varnothing$; then $X\subset{X}\subset{X}\cup\varnothing$.
 
-(2) Complement closure: suppose $B\subset A\subset B\cup N$, $\mu\left(N\right)=0$. Then $\left(B\cup N\right)^{c}\subset A^{c}\subset B^{c}$, and
-
-$$
-B^{c}\setminus\left(B\cup N\right)^{c}=B^{c}\cap\left(B\cup N\right)=B^{c}\cap N\subset N,
-$$
-
-so by **Proposition 5.2.2 (Monotonicity)**, $\mu\left(B^{c}\setminus\left(B\cup N\right)^{c}\right)\le\mu\left(N\right)=0$. Hence $A^{c}\in\mathcal M$ (take $B'=\left(B\cup N\right)^{c}\in\mathcal F$, $N'=B^{c}\setminus\left(B\cup N\right)^{c}$).
-
-(3) Countable union closure: suppose $B_{n}\subset A_{n}\subset B_{n}\cup N_{n}$, $\mu\left(N_{n}\right)=0$. Then $\bigcup_{n}B_{n}\subset\bigcup_{n}A_{n}\subset\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)$. By **Proposition 5.2.3 (Countable Subadditivity)**, $\mu\left(\bigcup_{n}N_{n}\right)\le\sum_{n}\mu\left(N_{n}\right)=0$, so $\bigcup_{n}N_{n}$ is a zero-measure set, and hence $\bigcup_{n}A_{n}\in\mathcal M$.
-
-Thus $\mathcal M$ is a $\sigma$-algebra.
-
-2. Define $\overline\mu:\mathcal M\to\left[0,+\infty\right]$ by $\overline\mu\left(A\right):=\mu\left(B\right)$, where $B\subset A\subset B\cup N$, $\mu\left(N\right)=0$. First show well-defined: suppose $B_{1}\subset A\subset B_{1}\cup N_{1}$ and $B_{2}\subset A\subset B_{2}\cup N_{2}$ with $\mu\left(N_{1}\right)=\mu\left(N_{2}\right)=0$. From $B_{1}\subset A\subset B_{2}\cup N_{2}$ we get $B_{1}\setminus B_{2}\subset N_{2}$, so $\mu\left(B_{1}\setminus B_{2}\right)\le\mu\left(N_{2}\right)=0$; symmetrically $\mu\left(B_{2}\setminus B_{1}\right)=0$. By **Proposition 5.2.1 (Finite Additivity)** and **Proposition 5.2.2 (Monotonicity)**,
+(2) Complement closure: suppose $B\subset{A}\subset{B}\cup{N}$, $\mu\left(N\right)=0$. Then $\left(B\cup{N}\right)^{c}\subset{A}^{c}\subset{B}^{c}$, and
 
 $$
-\mu\left(B_{1}\right)=\mu\left(B_{1}\cap B_{2}\right)+\mu\left(B_{1}\setminus B_{2}\right)=\mu\left(B_{1}\cap B_{2}\right)=\mu\left(B_{2}\right).
+B^{c}\setminus\left(B\cup{N}\right)^{c}=B^{c}\cap\left(B\cup{N}\right)=B^{c}\cap{N}\subset{N},
+$$
+
+so by **Proposition 5.2.2 (Monotonicity)**, $\mu\left(B^{c}\setminus\left(B\cup{N}\right)^{c}\right)\le\mu\left(N\right)=0$. Hence $A^{c}\in\mathcal{M}$ (take $B'=\left(B\cup{N}\right)^{c}\in\mathcal{F}$, $N'=B^{c}\setminus\left(B\cup{N}\right)^{c}$).
+
+(3) Countable union closure: suppose $B_{n}\subset{A}_{n}\subset{B}_{n}\cup{N}_{n}$, $\mu\left(N_{n}\right)=0$. Then $\bigcup_{n}B_{n}\subset\bigcup_{n}A_{n}\subset\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)$. By **Proposition 5.2.3 (Countable Subadditivity)**, $\mu\left(\bigcup_{n}N_{n}\right)\le\sum_{n}\mu\left(N_{n}\right)=0$, so $\bigcup_{n}N_{n}$ is a zero-measure set, and hence $\bigcup_{n}A_{n}\in\mathcal{M}$.
+
+Thus $\mathcal{M}$ is a $\sigma$-algebra.
+
+2. Define $\overline\mu:\mathcal{M}\to\left[0,+\infty\right]$ by $\overline\mu\left(A\right):=\mu\left(B\right)$, where $B\subset{A}\subset{B}\cup{N}$, $\mu\left(N\right)=0$. First show well-defined: suppose $B_{1}\subset{A}\subset{B}_{1}\cup{N}_{1}$ and $B_{2}\subset{A}\subset{B}_{2}\cup{N}_{2}$ with $\mu\left(N_{1}\right)=\mu\left(N_{2}\right)=0$. From $B_{1}\subset{A}\subset{B}_{2}\cup{N}_{2}$ we get $B_{1}\setminus{B}_{2}\subset{N}_{2}$, so $\mu\left(B_{1}\setminus{B}_{2}\right)\le\mu\left(N_{2}\right)=0$; symmetrically $\mu\left(B_{2}\setminus{B}_{1}\right)=0$. By **Proposition 5.2.1 (Finite Additivity)** and **Proposition 5.2.2 (Monotonicity)**,
+
+$$
+\mu\left(B_{1}\right)=\mu\left(B_{1}\cap{B}_{2}\right)+\mu\left(B_{1}\setminus{B}_{2}\right)=\mu\left(B_{1}\cap{B}_{2}\right)=\mu\left(B_{2}\right).
 $$
 
 Thus $\overline\mu$ is well-defined.
 
-3. $\overline\mu$ is a measure. Verify **Definition 5.1.2 (Measure)** item by item: nonnegativity is clear. Empty-set: $\overline\mu\left(\varnothing\right)=\mu\left(\varnothing\right)=0$. Countable additivity: let $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal M$ be pairwise disjoint; write $A_{n}=B_{n}\cup N_{n}$ ($B_{n}\in\mathcal F$, $N_{n}\subset N_{n}'\in\mathcal N$). Then $\bigcup_{n}A_{n}=\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)\in\mathcal M$, and $\left\{B_{n}\right\}$ are pairwise disjoint (since $B_{n}\subset A_{n}$). By countable additivity of $\mu$,
+3. $\overline\mu$ is a measure. Verify **Definition 5.1.2 (Measure)** item by item: nonnegativity is clear. Empty-set: $\overline\mu\left(\varnothing\right)=\mu\left(\varnothing\right)=0$. Countable additivity: let $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal{M}$ be pairwise disjoint; write $A_{n}=B_{n}\cup{N}_{n}$ ($B_{n}\in\mathcal{F}$, $N_{n}\subset{N}_{n}'\in\mathcal{N}$). Then $\bigcup_{n}A_{n}=\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)\in\mathcal{M}$, and $\left\{B_{n}\right\}$ are pairwise disjoint (since $B_{n}\subset{A}_{n}$). By countable additivity of $\mu$,
 
 $$
 \overline\mu\left(\bigcup_{n}A_{n}\right)=\mu\left(\bigcup_{n}B_{n}\right)=\sum_{n}\mu\left(B_{n}\right)=\sum_{n}\overline\mu\left(A_{n}\right).
 $$
 
-4. Extension: for $B\in\mathcal F$, since $B=B\cup\varnothing\in\mathcal M$, $\overline\mu\left(B\right)=\mu\left(B\right)$, i.e. $\overline\mu|_{\mathcal F}=\mu$.
+4. Extension: for $B\in\mathcal{F}$, since $B=B\cup\varnothing\in\mathcal{M}$, $\overline\mu\left(B\right)=\mu\left(B\right)$, i.e. $\overline\mu|_{\mathcal{F}}=\mu$.
 
-5. Completeness (Definition 5.4.4 (Complete Measure)): suppose $\overline\mu\left(A\right)=0$, i.e. $A=B\cup N$ with $\mu\left(B\right)=0$ and $N\subset N_{0}\in\mathcal N$. Then $A\subset B\cup N_{0}$, and by **Proposition 5.2.3 (Countable Subadditivity)**, $\mu\left(B\cup N_{0}\right)\le\mu\left(B\right)+\mu\left(N_{0}\right)=0$, so $A$ is a subset of a zero-measure set. Hence $A=\varnothing\cup A\in\mathcal M$, and any subset $C\subset A$ also satisfies $C\subset B\cup N_{0}$, so $C\in\mathcal M$. Thus $\mathcal M$ is complete.
+5. Completeness (Definition 5.4.4 (Complete Measure)): suppose $\overline\mu\left(A\right)=0$, i.e. $A=B\cup{N}$ with $\mu\left(B\right)=0$ and $N\subset{N}_{0}\in\mathcal{N}$. Then $A\subset{B}\cup{N}_{0}$, and by **Proposition 5.2.3 (Countable Subadditivity)**, $\mu\left(B\cup{N}_{0}\right)\le\mu\left(B\right)+\mu\left(N_{0}\right)=0$, so $A$ is a subset of a zero-measure set. Hence $A=\varnothing\cup{A}\in\mathcal{M}$, and any subset $C\subset{A}$ also satisfies $C\subset{B}\cup{N}_{0}$, so $C\in\mathcal{M}$. Thus $\mathcal{M}$ is complete.
 
-6. Minimality: let $\mathcal M'$ be any complete $\sigma$-algebra containing $\mathcal F$. For $A=B\cup N\in\mathcal M$ ($B\in\mathcal F$, $N\subset N_{0}\in\mathcal N$), since $N_{0}\in\mathcal F\subset\mathcal M'$ and $\mu\left(N_{0}\right)=0$, completeness of $\mathcal M'$ gives $N\in\mathcal M'$; also $B\in\mathcal F\subset\mathcal M'$, so $A=B\cup N\in\mathcal M'$. Hence $\mathcal M\subset\mathcal M'$. Thus $\mathcal M$ is the smallest complete $\sigma$-algebra containing $\mathcal F$.
+6. Minimality: let $\mathcal{M}'$ be any complete $\sigma$-algebra containing $\mathcal{F}$. For $A=B\cup{N}\in\mathcal{M}$ ($B\in\mathcal{F}$, $N\subset{N}_{0}\in\mathcal{N}$), since $N_{0}\in\mathcal{F}\subset\mathcal{M}'$ and $\mu\left(N_{0}\right)=0$, completeness of $\mathcal{M}'$ gives $N\in\mathcal{M}'$; also $B\in\mathcal{F}\subset\mathcal{M}'$, so $A=B\cup{N}\in\mathcal{M}'$. Hence $\mathcal{M}\subset\mathcal{M}'$. Thus $\mathcal{M}$ is the smallest complete $\sigma$-algebra containing $\mathcal{F}$.
 
-Therefore $\left(X,\mathcal M,\overline\mu\right)$ is a complete measure space satisfying (1)(2)(3), proving the theorem. $\blacksquare$
+Therefore $\left(X,\mathcal{M},\overline\mu\right)$ is a complete measure space satisfying (1)(2)(3), proving the theorem. $\blacksquare$
 
 ## 3
 
-Let $\left(X,\mathcal M,\mu\right)$ be a measure space and $\left\{E_{j}\right\}_{j=1}^{\infty}\subset\mathcal M$. Prove that $\mu\left(\liminf_{j\to\infty}E_{j}\right)\le\liminf_{j\to\infty}\mu\left(E_{j}\right)$. If moreover $\mu\left(\bigcup_{j=1}^{\infty}E_{j}\right)< \infty$, prove that $\mu\left(\limsup_{j\to\infty}E_{j}\right)\ge\limsup_{j\to\infty}\mu\left(E_{j}\right)$.
+Let $\left(X,\mathcal{M},\mu\right)$ be a measure space and $\left\{E_{j}\right\}_{j=1}^{\infty}\subset\mathcal{M}$. Prove that $\mu\left(\liminf_{j\to\infty}E_{j}\right)\le\liminf_{j\to\infty}\mu\left(E_{j}\right)$. If moreover $\mu\left(\bigcup_{j=1}^{\infty}E_{j}\right)<\infty$, prove that $\mu\left(\limsup_{j\to\infty}E_{j}\right)\ge\limsup_{j\to\infty}\mu\left(E_{j}\right)$.
 
 ### Solution to 3
 
@@ -246,66 +246,66 @@ $$
 \mu\left(\liminf_{j\to\infty}E_{j}\right)=\mu\left(\bigcup_{n=1}^{\infty}F_{n}\right)=\lim_{n\to\infty}\mu\left(F_{n}\right).
 $$
 
-Since $F_{n}\subset E_{j}$ for all $j\ge n$, by **Proposition 5.2.2 (Monotonicity)**, $\mu\left(F_{n}\right)\le\inf_{j\ge n}\mu\left(E_{j}\right)$, so
+Since $F_{n}\subset{E}_{j}$ for all $j\ge{n}$, by **Proposition 5.2.2 (Monotonicity)**, $\mu\left(F_{n}\right)\le\inf_{j\ge{n}}\mu\left(E_{j}\right)$, so
 
 $$
-\mu\left(\liminf_{j\to\infty}E_{j}\right)=\lim_{n\to\infty}\mu\left(F_{n}\right)\le\lim_{n\to\infty}\inf_{j\ge n}\mu\left(E_{j}\right)=\liminf_{j\to\infty}\mu\left(E_{j}\right).
+\mu\left(\liminf_{j\to\infty}E_{j}\right)=\lim_{n\to\infty}\mu\left(F_{n}\right)\le\lim_{n\to\infty}\inf_{j\ge{n}}\mu\left(E_{j}\right)=\liminf_{j\to\infty}\mu\left(E_{j}\right).
 $$
 
-Let $G_{n}:=\bigcup_{j=n}^{\infty}E_{j}$. By **Definition 1.3.1 (Limit Superior)**, $\limsup_{j\to\infty}E_{j}=\bigcap_{n=1}^{\infty}G_{n}$; and $\left\{G_{n}\right\}$ is decreasing. Since $\mu\left(G_{1}\right)=\mu\left(\bigcup_{j=1}^{\infty}E_{j}\right)< \infty$, by **Proposition 5.2.5 (Continuity from Above)**,
+Let $G_{n}:=\bigcup_{j=n}^{\infty}E_{j}$. By **Definition 1.3.1 (Limit Superior)**, $\limsup_{j\to\infty}E_{j}=\bigcap_{n=1}^{\infty}G_{n}$; and $\left\{G_{n}\right\}$ is decreasing. Since $\mu\left(G_{1}\right)=\mu\left(\bigcup_{j=1}^{\infty}E_{j}\right)<\infty$, by **Proposition 5.2.5 (Continuity from Above)**,
 
 $$
 \mu\left(\limsup_{j\to\infty}E_{j}\right)=\mu\left(\bigcap_{n=1}^{\infty}G_{n}\right)=\lim_{n\to\infty}\mu\left(G_{n}\right).
 $$
 
-Since $G_{n}\supset E_{j}$ for all $j\ge n$, monotonicity gives $\mu\left(G_{n}\right)\ge\sup_{j\ge n}\mu\left(E_{j}\right)$, so
+Since $G_{n}\supset{E}_{j}$ for all $j\ge{n}$, monotonicity gives $\mu\left(G_{n}\right)\ge\sup_{j\ge{n}}\mu\left(E_{j}\right)$, so
 
 $$
-\mu\left(\limsup_{j\to\infty}E_{j}\right)=\lim_{n\to\infty}\mu\left(G_{n}\right)\ge\lim_{n\to\infty}\sup_{j\ge n}\mu\left(E_{j}\right)=\limsup_{j\to\infty}\mu\left(E_{j}\right).
+\mu\left(\limsup_{j\to\infty}E_{j}\right)=\lim_{n\to\infty}\mu\left(G_{n}\right)\ge\lim_{n\to\infty}\sup_{j\ge{n}}\mu\left(E_{j}\right)=\limsup_{j\to\infty}\mu\left(E_{j}\right).
 $$
 
 Both inequalities are proved. $\blacksquare$
 
 ## 4
 
-Let $\left(X,\mathcal M,\mu\right)$ be a measure space and $E,F\in\mathcal M$. Prove that $\mu\left(E\right)+\mu\left(F\right)=\mu\left(E\cup F\right)+\mu\left(E\cap F\right)$.
+Let $\left(X,\mathcal{M},\mu\right)$ be a measure space and $E,F\in\mathcal{M}$. Prove that $\mu\left(E\right)+\mu\left(F\right)=\mu\left(E\cup{F}\right)+\mu\left(E\cap{F}\right)$.
 
 ### Solution to 4
 
 $$
-E\cup F=\left(E\cap F\right)\cup\left(E\setminus F\right)\cup\left(F\setminus E\right),
+E\cup{F}=\left(E\cap{F}\right)\cup\left(E\setminus{F}\right)\cup\left(F\setminus{E}\right),
 $$
 
 where the three sets on the right are pairwise disjoint. By **Proposition 5.2.1 (Finite Additivity)**,
 
 $$
-\mu\left(E\cup F\right)=\mu\left(E\cap F\right)+\mu\left(E\setminus F\right)+\mu\left(F\setminus E\right).
+\mu\left(E\cup{F}\right)=\mu\left(E\cap{F}\right)+\mu\left(E\setminus{F}\right)+\mu\left(F\setminus{E}\right).
 $$
 
-Also, $E=\left(E\cap F\right)\cup\left(E\setminus F\right)$ and $F=\left(E\cap F\right)\cup\left(F\setminus E\right)$ are disjoint decompositions, so
+Also, $E=\left(E\cap{F}\right)\cup\left(E\setminus{F}\right)$ and $F=\left(E\cap{F}\right)\cup\left(F\setminus{E}\right)$ are disjoint decompositions, so
 
 $$
-\mu\left(E\right)+\mu\left(F\right)=2\mu\left(E\cap F\right)+\mu\left(E\setminus F\right)+\mu\left(F\setminus E\right)=\mu\left(E\cup F\right)+\mu\left(E\cap F\right).
+\mu\left(E\right)+\mu\left(F\right)=2\mu\left(E\cap{F}\right)+\mu\left(E\setminus{F}\right)+\mu\left(F\setminus{E}\right)=\mu\left(E\cup{F}\right)+\mu\left(E\cap{F}\right).
 $$
 
 The identity is proved. $\blacksquare$
 
 ## 5
 
-Given a measure space $\left(X,\mathcal M,\mu\right)$ and $E\in\mathcal M$, define $\mu_{E}\left(A\right):=\mu\left(A\cap E\right)$ for $A\in\mathcal M$. Prove that $\mu_{E}$ is a measure.
+Given a measure space $\left(X,\mathcal{M},\mu\right)$ and $E\in\mathcal{M}$, define $\mu_{E}\left(A\right):=\mu\left(A\cap{E}\right)$ for $A\in\mathcal{M}$. Prove that $\mu_{E}$ is a measure.
 
 ### Solution to 5
 
 Verify **Definition 5.1.2 (Measure)** item by item:
 
-(1) Nonnegativity: $\mu_{E}\left(A\right)=\mu\left(A\cap E\right)\ge0$ for all $A\in\mathcal M$.
+(1) Nonnegativity: $\mu_{E}\left(A\right)=\mu\left(A\cap{E}\right)\ge0$ for all $A\in\mathcal{M}$.
 
-(2) Empty set: $\mu_{E}\left(\varnothing\right)=\mu\left(\varnothing\cap E\right)=\mu\left(\varnothing\right)=0$.
+(2) Empty set: $\mu_{E}\left(\varnothing\right)=\mu\left(\varnothing\cap{E}\right)=\mu\left(\varnothing\right)=0$.
 
-(3) Countable additivity: let $\left\{A_{j}\right\}_{j=1}^{\infty}\subset\mathcal M$ be pairwise disjoint. Then $\left\{A_{j}\cap E\right\}$ are also pairwise disjoint, and by countable additivity of $\mu$,
+(3) Countable additivity: let $\left\{A_{j}\right\}_{j=1}^{\infty}\subset\mathcal{M}$ be pairwise disjoint. Then $\left\{A_{j}\cap{E}\right\}$ are also pairwise disjoint, and by countable additivity of $\mu$,
 
 $$
-\mu_{E}\left(\bigcup_{j=1}^{\infty}A_{j}\right)=\mu\left(\left(\bigcup_{j=1}^{\infty}A_{j}\right)\cap E\right)=\mu\left(\bigcup_{j=1}^{\infty}\left(A_{j}\cap E\right)\right)=\sum_{j=1}^{\infty}\mu\left(A_{j}\cap E\right)=\sum_{j=1}^{\infty}\mu_{E}\left(A_{j}\right).
+\mu_{E}\left(\bigcup_{j=1}^{\infty}A_{j}\right)=\mu\left(\left(\bigcup_{j=1}^{\infty}A_{j}\right)\cap{E}\right)=\mu\left(\bigcup_{j=1}^{\infty}\left(A_{j}\cap{E}\right)\right)=\sum_{j=1}^{\infty}\mu\left(A_{j}\cap{E}\right)=\sum_{j=1}^{\infty}\mu_{E}\left(A_{j}\right).
 $$
 
 Thus $\mu_{E}$ is a measure. $\blacksquare$
