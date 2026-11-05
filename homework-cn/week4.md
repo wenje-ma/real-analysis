@@ -172,11 +172,11 @@ $$
 
 由**定理 6.5.2 (康托尔集的三进制刻画)**, $x\in C$ 当且仅当 $x$ 的三进制展开 $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ 满足 $a_{k}\in\left\{0,2\right\}$.
 
-**1. 紧致性.** 由**定义 6.5.1 (康托尔集的递归构造)**, 每个 $C_{n}$ 是从 $\left[0,1\right]$ 去掉有限个开区间 (第 $n$ 步挖去的开区间) 所得, 故 $C_{n}$ 是有限个闭区间之并, 从而是闭集. $C=\bigcap_{n=0}^{\infty}C_{n}$ 是闭集的交, 故 $C$ 是闭集, 且 $C\subset\left[0,1\right]$ 有界. 由海涅-博雷尔定理, $\mathbb R$ 中有界闭集紧致, 故 $C$ 紧致. $\blacksquare$
+1. 紧致性. 由**定义 6.5.1 (康托尔集的递归构造)**, 每个 $C_{n}$ 是从 $\left[0,1\right]$ 去掉有限个开区间 (第 $n$ 步挖去的开区间) 所得, 故 $C_{n}$ 是有限个闭区间之并, 从而是闭集. $C=\bigcap_{n=0}^{\infty}C_{n}$ 是闭集的交, 故 $C$ 是闭集, 且 $C\subset\left[0,1\right]$ 有界. 由海涅-博雷尔定理, $\mathbb R$ 中有界闭集紧致, 故 $C$ 紧致. $\blacksquare$
 
-**2. 完备性.** $\mathbb R$ 是完备度量空间, $C$ 是 $\mathbb R$ 的闭子集. 若 $\left\{x_{n}\right\}\subset C$ 是柯西列, 则它在 $\mathbb R$ 中收敛于某 $x$; 因 $C$ 闭, $x\in C$. 故 $C$ 中任何柯西列收敛, $C$ 完备. $\blacksquare$
+2. 完备性. $\mathbb R$ 是完备度量空间, $C$ 是 $\mathbb R$ 的闭子集. 若 $\left\{x_{n}\right\}\subset C$ 是柯西列, 则它在 $\mathbb R$ 中收敛于某 $x$; 因 $C$ 闭, $x\in C$. 故 $C$ 中任何柯西列收敛, $C$ 完备. $\blacksquare$
 
-**3. 完全不连通.** 设 $K\subset C$ 连通且含有 $x< y$ 两点. 由**定理 6.5.2 (康托尔集的三进制刻画)**, $x,y$ 的三进制展开不含数字 $1$. 因 $x\ne y$, 存在最小的 $n$ 使 $x,y$ 的三进制第 $n$ 位不同, 不妨设 $x$ 的第 $n$ 位为 $0$, $y$ 的第 $n$ 位为 $2$ (前 $n-1$ 位相同). 则第 $n$ 步挖去的开区间中有一个 $J=\left(\alpha,\beta\right)$ 位于 $x$ 与 $y$ 之间 (即 $x< \alpha< \beta< y$), 且 $J\cap C=\varnothing$. 于是
+3. 完全不连通. 设 $K\subset C$ 连通且含有 $x< y$ 两点. 由**定理 6.5.2 (康托尔集的三进制刻画)**, $x,y$ 的三进制展开不含数字 $1$. 因 $x\ne y$, 存在最小的 $n$ 使 $x,y$ 的三进制第 $n$ 位不同, 不妨设 $x$ 的第 $n$ 位为 $0$, $y$ 的第 $n$ 位为 $2$ (前 $n-1$ 位相同). 则第 $n$ 步挖去的开区间中有一个 $J=\left(\alpha,\beta\right)$ 位于 $x$ 与 $y$ 之间 (即 $x< \alpha< \beta< y$), 且 $J\cap C=\varnothing$. 于是
 
 $$
 K=\left(K\cap\left(-\infty,\alpha\right]\right)\cup\left(K\cap\left[\beta,\infty\right)\right),
@@ -184,9 +184,9 @@ $$
 
 是两个非空, 互不相交的 $K$-相对开集 (因 $K\subset C$, $K\cap J=\varnothing$), 与 $K$ 连通矛盾. 故 $K$ 只能是单点集. $\blacksquare$
 
-**4. 无处稠密.** 任取非空开区间 $\left(\alpha,\beta\right)\subset\mathbb R$. 若它与 $\left[0,1\right]$ 相交, 取 $n$ 使 $3^{-n}< \beta-\alpha$. 第 $n$ 步后 $C_{n}$ 是 $2^{n}$ 个长度 $3^{-n}$ 的闭区间之并, 这些闭区间之间的 $2^{n}-1$ 个开区间 (第 $n$ 步挖去的) 覆盖了 $\left[0,1\right]$ 中除端点外的部分, 且挖去区间的长度均为 $3^{-n}$. 因 $\left(\alpha,\beta\right)$ 长度大于 $3^{-n}$, 它必包含某个第 $n$ 步挖去的开区间, 故 $\left(\alpha,\beta\right)$ 不全含于 $C$. 所以 $C$ 不含任何非空开区间, $\operatorname{int}\left(C\right)=\varnothing$, 即 $C$ 无处稠密. $\blacksquare$
+4. 无处稠密. 任取非空开区间 $\left(\alpha,\beta\right)\subset\mathbb R$. 若它与 $\left[0,1\right]$ 相交, 取 $n$ 使 $3^{-n}< \beta-\alpha$. 第 $n$ 步后 $C_{n}$ 是 $2^{n}$ 个长度 $3^{-n}$ 的闭区间之并, 这些闭区间之间的 $2^{n}-1$ 个开区间 (第 $n$ 步挖去的) 覆盖了 $\left[0,1\right]$ 中除端点外的部分, 且挖去区间的长度均为 $3^{-n}$. 因 $\left(\alpha,\beta\right)$ 长度大于 $3^{-n}$, 它必包含某个第 $n$ 步挖去的开区间, 故 $\left(\alpha,\beta\right)$ 不全含于 $C$. 所以 $C$ 不含任何非空开区间, $\operatorname{int}\left(C\right)=\varnothing$, 即 $C$ 无处稠密. $\blacksquare$
 
-**5. 完美集.** 闭集已由 (1) 证得. 证 $C$ 无孤立点: 设 $x\in C$, 对任意 $\varepsilon> 0$, 由**定理 6.5.2 (康托尔集的三进制刻画)** 写 $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$, $a_{k}\in\left\{0,2\right\}$. 取 $n$ 使 $\frac{2}{3^{n+1}}< \varepsilon$, 令 $x_{n}$ 为三进制展开中把 $x$ 的第 $n+1$ 位 $a_{n+1}$ 换成 $2-a_{n+1}$, 其余位不变所得的点. 则 $x_{n}\in C$ (三进制不含 $1$), $x_{n}\ne x$, 且
+5. 完美集. 闭集已由 (1) 证得. 证 $C$ 无孤立点: 设 $x\in C$, 对任意 $\varepsilon> 0$, 由**定理 6.5.2 (康托尔集的三进制刻画)** 写 $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$, $a_{k}\in\left\{0,2\right\}$. 取 $n$ 使 $\frac{2}{3^{n+1}}< \varepsilon$, 令 $x_{n}$ 为三进制展开中把 $x$ 的第 $n+1$ 位 $a_{n+1}$ 换成 $2-a_{n+1}$, 其余位不变所得的点. 则 $x_{n}\in C$ (三进制不含 $1$), $x_{n}\ne x$, 且
 
 $$
 \left|x_{n}-x\right|=\left|\frac{2-a_{n+1}}{3^{n+1}}-\frac{a_{n+1}}{3^{n+1}}\right|=\frac{2}{3^{n+1}}< \varepsilon.
@@ -198,13 +198,13 @@ $$
 
 证明习题 30, 33.
 
-**30.** 设 $E\in\mathcal L$ 且 $m\left(E\right)> 0$. 证明对任意 $\alpha< 1$, 存在开区间 $I$ 使 $m\left(E\cap I\right)> \alpha m\left(I\right)$.
+30. 设 $E\in\mathcal L$ 且 $m\left(E\right)> 0$. 证明对任意 $\alpha< 1$, 存在开区间 $I$ 使 $m\left(E\cap I\right)> \alpha m\left(I\right)$.
 
-**33.** 证明存在博雷尔集 $A\subset\left[0,1\right]$ 使对 $\left[0,1\right]$ 的每个子区间 $I$, 都有 $0< m\left(A\cap I\right)< m\left(I\right)$. (提示: $\left[0,1\right]$ 的每个子区间都含正测度的康托尔型集.)
+33. 证明存在博雷尔集 $A\subset\left[0,1\right]$ 使对 $\left[0,1\right]$ 的每个子区间 $I$, 都有 $0< m\left(A\cap I\right)< m\left(I\right)$. (提示: $\left[0,1\right]$ 的每个子区间都含正测度的康托尔型集.)
 
 ### 解答 3
 
-**30.** 反证. 假设存在 $\alpha< 1$ 使对每个开区间 $I$, 均有 $m\left(E\cap I\right)\le\alpha m\left(I\right)$. 则对任意开集 $U$, 把 $U$ 表为可数个互不相交开区间的并 $U=\bigcup_{k}I_{k}$, 由 $m$ 的可数可加性,
+30. 反证. 假设存在 $\alpha< 1$ 使对每个开区间 $I$, 均有 $m\left(E\cap I\right)\le\alpha m\left(I\right)$. 则对任意开集 $U$, 把 $U$ 表为可数个互不相交开区间的并 $U=\bigcup_{k}I_{k}$, 由 $m$ 的可数可加性,
 
 $$
 m\left(E\cap U\right)=\sum_{k}m\left(E\cap I_{k}\right)\le\alpha\sum_{k}m\left(I_{k}\right)=\alpha m\left(U\right).
@@ -218,7 +218,7 @@ $$
 
 于是 $m\left(E\right)\le\alpha m\left(E\right)$. 因 $m\left(E\right)> 0$, 得 $\alpha\ge1$, 与 $\alpha< 1$ 矛盾. 故存在开区间 $I$ 使 $m\left(E\cap I\right)> \alpha m\left(I\right)$. $\blacksquare$
 
-**33.** 用正测度的广义康托尔集 (广义康托尔集). 设 $\left\{I_{n}\right\}$ 是 $\left[0,1\right]$ 中所有以有理数为端点的开区间的枚举. 归纳地选取两两不交的闭区间 $J_{n}\subset I_{n}$ (取 $J_{n}$ 避开之前所有 $J_{k}$), 使每个子区间 $I$ 都含某个 $J_{n}$ (因 $\left\{I_{n}\right\}$ 枚举有理区间, 每个子区间含某个 $I_{n}$, 而 $J_{n}\subset I_{n}$). 固定 $c\in\left(0,1\right)$. 在每个 $J_{n}$ 内取广义康托尔集 $C_{n}\subset J_{n}$, 使 $m\left(C_{n}\right)=c\,m\left(J_{n}\right)$ (由广义康托尔集测度可为任意 $\beta\in\left(0,1\right)$). 因 $J_{n}$ 两两不交, $C_{n}$ 两两不交. 令 $A=\bigcup_{n=1}^{\infty}C_{n}$, 则 $A$ 是可数个闭集之并, 从而是博雷尔集, 且 $A\subset\left[0,1\right]$.
+33. 用正测度的广义康托尔集 (广义康托尔集). 设 $\left\{I_{n}\right\}$ 是 $\left[0,1\right]$ 中所有以有理数为端点的开区间的枚举. 归纳地选取两两不交的闭区间 $J_{n}\subset I_{n}$ (取 $J_{n}$ 避开之前所有 $J_{k}$), 使每个子区间 $I$ 都含某个 $J_{n}$ (因 $\left\{I_{n}\right\}$ 枚举有理区间, 每个子区间含某个 $I_{n}$, 而 $J_{n}\subset I_{n}$). 固定 $c\in\left(0,1\right)$. 在每个 $J_{n}$ 内取广义康托尔集 $C_{n}\subset J_{n}$, 使 $m\left(C_{n}\right)=c\,m\left(J_{n}\right)$ (由广义康托尔集测度可为任意 $\beta\in\left(0,1\right)$). 因 $J_{n}$ 两两不交, $C_{n}$ 两两不交. 令 $A=\bigcup_{n=1}^{\infty}C_{n}$, 则 $A$ 是可数个闭集之并, 从而是博雷尔集, 且 $A\subset\left[0,1\right]$.
 
 先证下界. 对任意子区间 $I\subset\left[0,1\right]$, 存在 $n$ 使 $J_{n}\subset I_{n}\subset I$, 故
 

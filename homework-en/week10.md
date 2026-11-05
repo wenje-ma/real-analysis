@@ -83,7 +83,7 @@ Let $\nu$ be a signed measure on $\left(X,\mathcal M\right)$.
 
 ### Solution to 2
 
-**(a).** By **Definition 11.4.4 (Variation Measure)**, $\left|\nu\right|=\nu^{+}+\nu^{-}$. Thus for any $f$,
+(a). By **Definition 11.4.4 (Variation Measure)**, $\left|\nu\right|=\nu^{+}+\nu^{-}$. Thus for any $f$,
 
 $$
 \int\left|f\right|\mathrm{d}\left|\nu\right|=\int\left|f\right|\mathrm{d}\nu^{+}+\int\left|f\right|\mathrm{d}\nu^{-}.
@@ -91,13 +91,13 @@ $$
 
 All three terms are nonnegative, so the left side is finite iff both right-side terms are finite, i.e. $f\in L^{1}\left(\nu^{+}\right)\cap L^{1}\left(\nu^{-}\right)=L^{1}\left(\nu\right)$. Hence $L^{1}\left(\nu\right)=L^{1}\left(\left|\nu\right|\right)$.
 
-**(b).** By **Theorem 11.4.3 (Jordan Decomposition Theorem)**, $\nu=\nu^{+}-\nu^{-}$. By the triangle inequality and (a),
+(b). By **Theorem 11.4.3 (Jordan Decomposition Theorem)**, $\nu=\nu^{+}-\nu^{-}$. By the triangle inequality and (a),
 
 $$
 \left|\int f\,\mathrm{d}\nu\right|=\left|\int f\,\mathrm{d}\nu^{+}-\int f\,\mathrm{d}\nu^{-}\right|\le\int\left|f\right|\mathrm{d}\nu^{+}+\int\left|f\right|\mathrm{d}\nu^{-}=\int\left|f\right|\mathrm{d}\left|\nu\right|.
 $$
 
-**(c).** First $\le$: for any measurable $g$ with $\left|g\right|\le1$, by (b), $\left|\int_{E}g\,\mathrm{d}\nu\right|\le\int_{E}\left|g\right|\mathrm{d}\left|\nu\right|\le\int_{E}1\,\mathrm{d}\left|\nu\right|=\left|\nu\right|\left(E\right)$, so the supremum is $\le\left|\nu\right|\left(E\right)$.
+(c). First $\le$: for any measurable $g$ with $\left|g\right|\le1$, by (b), $\left|\int_{E}g\,\mathrm{d}\nu\right|\le\int_{E}\left|g\right|\mathrm{d}\left|\nu\right|\le\int_{E}1\,\mathrm{d}\left|\nu\right|=\left|\nu\right|\left(E\right)$, so the supremum is $\le\left|\nu\right|\left(E\right)$.
 
 Then $\ge$: take a Hahn decomposition $X=P\cup N$ of $\nu$ (**Theorem 11.3.2 (Hahn Decomposition Theorem)**), set $g=\chi_{E\cap P}-\chi_{E\cap N}$; then $\left|g\right|\le1$ and $g$ is measurable. By **Theorem 11.4.3 (Jordan Decomposition Theorem)**, $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)$ and $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)$. Hence $\int_{E}g\,\mathrm{d}\nu=\nu\left(E\cap P\right)-\nu\left(E\cap N\right)=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)=\left|\nu\right|\left(E\right)$. Thus the supremum is $\ge\left|\nu\right|\left(E\right)$. Equality follows. $\blacksquare$
 
@@ -123,13 +123,13 @@ Let $\nu$ be a signed measure on $\left(X,\mathcal M\right)$ and $E\in\mathcal M
 
 ### Solution to 4
 
-**(a).** Take a Hahn decomposition $X=P\cup N$ of $\nu$ (**Theorem 11.3.2 (Hahn Decomposition Theorem)**); then $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)$ and $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)$ (**Theorem 11.4.3 (Jordan Decomposition Theorem)**).
+(a). Take a Hahn decomposition $X=P\cup N$ of $\nu$ (**Theorem 11.3.2 (Hahn Decomposition Theorem)**); then $\nu^{+}\left(E\right)=\nu\left(E\cap P\right)$ and $\nu^{-}\left(E\right)=-\nu\left(E\cap N\right)$ (**Theorem 11.4.3 (Jordan Decomposition Theorem)**).
 
 For any $F\in\mathcal M$ with $F\subset E$, by $\nu=\nu^{+}-\nu^{-}$ and $\nu^{-}\ge0$, $\nu\left(F\right)=\nu^{+}\left(F\right)-\nu^{-}\left(F\right)\le\nu^{+}\left(F\right)\le\nu^{+}\left(E\right)$ (the last by monotonicity of $\nu^{+}$, since $F\subset E$). Hence $\sup\left\{\nu\left(F\right):F\subset E\right\}\le\nu^{+}\left(E\right)$. Taking $F=E\cap P\subset E$, $\nu\left(E\cap P\right)=\nu^{+}\left(E\cap P\right)-\nu^{-}\left(E\cap P\right)=\nu^{+}\left(E\cap P\right)=\nu^{+}\left(E\right)$ (since $E\cap P\subset P$ is positive, $\nu^{-}\left(E\cap P\right)=0$). Hence the supremum is $\ge\nu^{+}\left(E\right)$. Combining, $\nu^{+}\left(E\right)=\sup\left\{\nu\left(F\right):F\subset E\right\}$.
 
 Similarly, for $F\subset E$, $\nu\left(F\right)=\nu^{+}\left(F\right)-\nu^{-}\left(F\right)\ge-\nu^{-}\left(F\right)\ge-\nu^{-}\left(E\right)$, so $\inf\left\{\nu\left(F\right):F\subset E\right\}\ge-\nu^{-}\left(E\right)$, i.e. $-\inf\left\{\nu\left(F\right):F\subset E\right\}\le\nu^{-}\left(E\right)$. Taking $F=E\cap N$, $\nu\left(E\cap N\right)=-\nu^{-}\left(E\cap N\right)=-\nu^{-}\left(E\right)$, so the infimum is $\le-\nu^{-}\left(E\right)$, i.e. $-\inf\ge\nu^{-}\left(E\right)$. Combining, $\nu^{-}\left(E\right)=-\inf\left\{\nu\left(F\right):F\subset E\right\}$.
 
-**(b).** First $\le$: for any pairwise-disjoint $\left\{E_{i}\right\}$ with union $E$, by $\nu=\nu^{+}-\nu^{-}$ and the triangle inequality,
+(b). First $\le$: for any pairwise-disjoint $\left\{E_{i}\right\}$ with union $E$, by $\nu=\nu^{+}-\nu^{-}$ and the triangle inequality,
 
 $$
 \sum_{i}\left|\nu\left(E_{i}\right)\right|=\sum_{i}\left|\nu^{+}\left(E_{i}\right)-\nu^{-}\left(E_{i}\right)\right|\le\sum_{i}\left[\nu^{+}\left(E_{i}\right)+\nu^{-}\left(E_{i}\right)\right]=\nu^{+}\left(E\right)+\nu^{-}\left(E\right)=\left|\nu\right|\left(E\right),
@@ -145,9 +145,9 @@ Let $\left\{\nu_{j}\right\}$ be a sequence of positive measures. If $\nu_{j}\per
 
 ### Solution to 5
 
-**(Singular case).** Since $\nu_{j}\perp\mu$ (**Definition 11.4.1 (Mutually Singular Signed Measures)**), for each $j$ there is $E_{j}\in\mathcal M$ such that $E_{j}$ is a $\mu$-null set and $E_{j}^{c}$ is a $\nu_{j}$-null set, i.e. $\mu\left(E_{j}\right)=0$ and $\nu_{j}\left(E_{j}^{c}\right)=0$. Let $E=\bigcup_{j=1}^{\infty}E_{j}$. By countable subadditivity of $\mu$, $\mu\left(E\right)\le\sum_{j=1}^{\infty}\mu\left(E_{j}\right)=0$, so $E$ is a $\mu$-null set. Also $E^{c}=\bigcap_{j=1}^{\infty}E_{j}^{c}\subset E_{k}^{c}$ for every $k$; by monotonicity of $\nu_{k}$, $\nu_{k}\left(E^{c}\right)\le\nu_{k}\left(E_{k}^{c}\right)=0$, so $\nu_{k}\left(E^{c}\right)=0$ for every $k$, and hence $\left(\sum_{j}\nu_{j}\right)\left(E^{c}\right)=\sum_{j}\nu_{j}\left(E^{c}\right)=0$. Thus $\sum_{j}\nu_{j}\perp\mu$.
+(Singular case). Since $\nu_{j}\perp\mu$ (**Definition 11.4.1 (Mutually Singular Signed Measures)**), for each $j$ there is $E_{j}\in\mathcal M$ such that $E_{j}$ is a $\mu$-null set and $E_{j}^{c}$ is a $\nu_{j}$-null set, i.e. $\mu\left(E_{j}\right)=0$ and $\nu_{j}\left(E_{j}^{c}\right)=0$. Let $E=\bigcup_{j=1}^{\infty}E_{j}$. By countable subadditivity of $\mu$, $\mu\left(E\right)\le\sum_{j=1}^{\infty}\mu\left(E_{j}\right)=0$, so $E$ is a $\mu$-null set. Also $E^{c}=\bigcap_{j=1}^{\infty}E_{j}^{c}\subset E_{k}^{c}$ for every $k$; by monotonicity of $\nu_{k}$, $\nu_{k}\left(E^{c}\right)\le\nu_{k}\left(E_{k}^{c}\right)=0$, so $\nu_{k}\left(E^{c}\right)=0$ for every $k$, and hence $\left(\sum_{j}\nu_{j}\right)\left(E^{c}\right)=\sum_{j}\nu_{j}\left(E^{c}\right)=0$. Thus $\sum_{j}\nu_{j}\perp\mu$.
 
-**(Absolute continuity case).** Let $\nu_{j}\ll\mu$ for all $j$ (**Definition 11.5.1 (Absolute Continuity)**). If $\mu\left(E\right)=0$, then $\nu_{j}\left(E\right)=0$ for all $j$, so $\left(\sum_{j}\nu_{j}\right)\left(E\right)=\sum_{j}\nu_{j}\left(E\right)=0$. Hence $\sum_{j}\nu_{j}\ll\mu$. $\blacksquare$
+(Absolute continuity case). Let $\nu_{j}\ll\mu$ for all $j$ (**Definition 11.5.1 (Absolute Continuity)**). If $\mu\left(E\right)=0$, then $\nu_{j}\left(E\right)=0$ for all $j$, so $\left(\sum_{j}\nu_{j}\right)\left(E\right)=\sum_{j}\nu_{j}\left(E\right)=0$. Hence $\sum_{j}\nu_{j}\ll\mu$. $\blacksquare$
 
 ## 6
 
@@ -159,9 +159,9 @@ Let $\mu$ be a positive measure. A family $\left\{f_{\alpha}\right\}_{\alpha\in 
 
 ### Solution to 6
 
-**(a).** Let $\left\{f_{1},\dots,f_{n}\right\}\subset L^{1}\left(\mu\right)$. For each $j$, by **Remark 11.5.3 (Absolute Continuity of the Integral w.r.t. the Measure)** ($f_{j}\in L^{1}\left(\mu\right)$, $\lim_{\mu\left(E\right)\to0}\int_{E}f_{j}\,\mathrm{d}\mu=0$), there is $\delta_{j}> 0$ such that $\mu\left(E\right)< \delta_{j}\Rightarrow\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|< \varepsilon$. Take $\delta=\min_{1\le j\le n}\delta_{j}> 0$; then whenever $\mu\left(E\right)< \delta$, for all $j$ we have $\mu\left(E\right)< \delta_{j}$, hence $\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|< \varepsilon$. Thus $\left\{f_{1},\dots,f_{n}\right\}$ is uniformly integrable.
+(a). Let $\left\{f_{1},\dots,f_{n}\right\}\subset L^{1}\left(\mu\right)$. For each $j$, by **Remark 11.5.3 (Absolute Continuity of the Integral w.r.t. the Measure)** ($f_{j}\in L^{1}\left(\mu\right)$, $\lim_{\mu\left(E\right)\to0}\int_{E}f_{j}\,\mathrm{d}\mu=0$), there is $\delta_{j}> 0$ such that $\mu\left(E\right)< \delta_{j}\Rightarrow\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|< \varepsilon$. Take $\delta=\min_{1\le j\le n}\delta_{j}> 0$; then whenever $\mu\left(E\right)< \delta$, for all $j$ we have $\mu\left(E\right)< \delta_{j}$, hence $\left|\int_{E}f_{j}\,\mathrm{d}\mu\right|< \varepsilon$. Thus $\left\{f_{1},\dots,f_{n}\right\}$ is uniformly integrable.
 
-**(b).** Since $\int\left|f_{n}-f\right|\mathrm{d}\mu\to0$, there is $N$ such that for $n\ge N$, $\int\left|f_{n}-f\right|\mathrm{d}\mu< \frac{\varepsilon}{2}$. By (a), the singleton $\left\{f\right\}$ is uniformly integrable: there is $\delta_{1}> 0$ such that $\mu\left(E\right)< \delta_{1}\Rightarrow\left|\int_{E}f\,\mathrm{d}\mu\right|< \frac{\varepsilon}{2}$. Also the finite set $\left\{f_{1},\dots,f_{N-1}\right\}$ is uniformly integrable by (a): there is $\delta_{2}> 0$ such that $\mu\left(E\right)< \delta_{2}\Rightarrow\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|< \varepsilon$ for $n< N$. Take $\delta=\min\left\{\delta_{1},\delta_{2}\right\}$. When $\mu\left(E\right)< \delta$, for $n\ge N$,
+(b). Since $\int\left|f_{n}-f\right|\mathrm{d}\mu\to0$, there is $N$ such that for $n\ge N$, $\int\left|f_{n}-f\right|\mathrm{d}\mu< \frac{\varepsilon}{2}$. By (a), the singleton $\left\{f\right\}$ is uniformly integrable: there is $\delta_{1}> 0$ such that $\mu\left(E\right)< \delta_{1}\Rightarrow\left|\int_{E}f\,\mathrm{d}\mu\right|< \frac{\varepsilon}{2}$. Also the finite set $\left\{f_{1},\dots,f_{N-1}\right\}$ is uniformly integrable by (a): there is $\delta_{2}> 0$ such that $\mu\left(E\right)< \delta_{2}\Rightarrow\left|\int_{E}f_{n}\,\mathrm{d}\mu\right|< \varepsilon$ for $n< N$. Take $\delta=\min\left\{\delta_{1},\delta_{2}\right\}$. When $\mu\left(E\right)< \delta$, for $n\ge N$,
 
 $$
 \left|\int_{E}f_{n}\,\mathrm{d}\mu\right|\le\left|\int_{E}f\,\mathrm{d}\mu\right|+\int_{E}\left|f_{n}-f\right|\mathrm{d}\mu\le\frac{\varepsilon}{2}+\int\left|f_{n}-f\right|\mathrm{d}\mu< \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,

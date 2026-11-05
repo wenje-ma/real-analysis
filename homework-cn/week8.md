@@ -94,7 +94,7 @@ $$
 
 ### 解答 2
 
-**可测性.** 考虑映射 $T:X\times\left[0,\infty\right]\to\left[0,\infty\right]\times\left[0,\infty\right]$, $T\left(x,y\right)=\left(f\left(x\right),y\right)$. 由**命题 7.1.7 (乘积空间的可测性)**, $T$ 可测当且仅当其坐标函数可测; 坐标函数 $\left(x,y\right)\mapsto f\left(x\right)=f\circ p_{1}$ 可测 (因 $f$ 可测), $\left(x,y\right)\mapsto y=p_{2}$ 连续可测. 故 $T$ 可测. 又 $\Phi\left(z,y\right)=z-y$ 连续, 博雷尔可测. 由**命题 7.1.5 (复合保持可测性)**, $\left(x,y\right)\mapsto f\left(x\right)-y=\Phi\circ T$ 可测. 因
+可测性. 考虑映射 $T:X\times\left[0,\infty\right]\to\left[0,\infty\right]\times\left[0,\infty\right]$, $T\left(x,y\right)=\left(f\left(x\right),y\right)$. 由**命题 7.1.7 (乘积空间的可测性)**, $T$ 可测当且仅当其坐标函数可测; 坐标函数 $\left(x,y\right)\mapsto f\left(x\right)=f\circ p_{1}$ 可测 (因 $f$ 可测), $\left(x,y\right)\mapsto y=p_{2}$ 连续可测. 故 $T$ 可测. 又 $\Phi\left(z,y\right)=z-y$ 连续, 博雷尔可测. 由**命题 7.1.5 (复合保持可测性)**, $\left(x,y\right)\mapsto f\left(x\right)-y=\Phi\circ T$ 可测. 因
 
 $$
 G_{f}=\left\{\left(x,y\right):f\left(x\right)-y\ge0\right\}=\left(f-y\right)^{-1}\left(\left[0,\infty\right]\right),
@@ -102,7 +102,7 @@ $$
 
 是可测函数的原像, 由**定义 10.1.1 (乘积 $\sigma$-代数)**, $G_{f}\in\mathcal M\otimes\mathcal B_{\mathbb R}$.
 
-**测度值.** 由**定理 10.2.2 (托内利定理)** (非负特征函数, $\mu\times m$ $\sigma$-有限),
+测度值. 由**定理 10.2.2 (托内利定理)** (非负特征函数, $\mu\times m$ $\sigma$-有限),
 
 $$
 \left(\mu\times m\right)\left(G_{f}\right)=\int_{X}m\left(\left(G_{f}\right)_{x}\right)\mathrm{d}\mu\left(x\right),
@@ -118,9 +118,9 @@ $$
 
 ### 解答 3
 
-**简单函数部分.** 由**定理 8.2.16 (可积简单函数在 $L^{1}$ 中稠密)**, 存在可积简单函数 $\varphi=\sum_{j}a_{j}\chi_{E_{j}}$ 使得 $\int\left|f-\varphi\right|< \varepsilon/2$. 对 $a_{j}\ne0$ 的项, 由 $\int a_{j}\chi_{E_{j}}\,\mathrm{d}m=a_{j}m\left(E_{j}\right)< \infty$ 得 $m\left(E_{j}\right)< \infty$ (否则积分发散, 与可积性矛盾). 由**定理 11.1.1 (勒贝格测度的正则性与矩形逼近)** (b), 对每个这样的 $E_{j}$ 存在有限个边为区间的互不相交矩形 $\left\{R_{j,k}\right\}$ 使 $m\left(E_{j}\triangle\bigcup_{k}R_{j,k}\right)$ 任意小. 于是 $\chi_{E_{j}}$ 与 $\chi_{R_{j}}$ (其中 $R_{j}=\bigcup_{k}R_{j,k}$) 在 $L^{1}$ 中任意接近, 取足够小的逼近误差并合并所有 $j$, 得到简单函数 $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ 满足 $\int\left|\varphi-\varphi'\right|< \varepsilon/2$. 故 $\int\left|f-\varphi'\right|\le\int\left|f-\varphi\right|+\int\left|\varphi-\varphi'\right|< \varepsilon$.
+简单函数部分. 由**定理 8.2.16 (可积简单函数在 $L^{1}$ 中稠密)**, 存在可积简单函数 $\varphi=\sum_{j}a_{j}\chi_{E_{j}}$ 使得 $\int\left|f-\varphi\right|< \varepsilon/2$. 对 $a_{j}\ne0$ 的项, 由 $\int a_{j}\chi_{E_{j}}\,\mathrm{d}m=a_{j}m\left(E_{j}\right)< \infty$ 得 $m\left(E_{j}\right)< \infty$ (否则积分发散, 与可积性矛盾). 由**定理 11.1.1 (勒贝格测度的正则性与矩形逼近)** (b), 对每个这样的 $E_{j}$ 存在有限个边为区间的互不相交矩形 $\left\{R_{j,k}\right\}$ 使 $m\left(E_{j}\triangle\bigcup_{k}R_{j,k}\right)$ 任意小. 于是 $\chi_{E_{j}}$ 与 $\chi_{R_{j}}$ (其中 $R_{j}=\bigcup_{k}R_{j,k}$) 在 $L^{1}$ 中任意接近, 取足够小的逼近误差并合并所有 $j$, 得到简单函数 $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ 满足 $\int\left|\varphi-\varphi'\right|< \varepsilon/2$. 故 $\int\left|f-\varphi'\right|\le\int\left|f-\varphi\right|+\int\left|\varphi-\varphi'\right|< \varepsilon$.
 
-**连续函数部分.** 设 $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ 已由上一步得到, 其中每个 $R_{j}$ 是有界闭矩形. 由特征函数的连续逼近, 对每个 $R_{j}$ 存在具有紧支撑的连续函数 $g_{j}$ 使 $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ 任意小. 取逼近误差足够小并令 $g=\sum_{j}a_{j}g_{j}$, 则 $g$ 连续且支撑在 $\bigcup_{j}R_{j}$ 中 (有界集), 且 $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|< \varepsilon/2$. 于是 $\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|< \varepsilon$, 且 $g$ 在有界集外为零. $\blacksquare$
+连续函数部分. 设 $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ 已由上一步得到, 其中每个 $R_{j}$ 是有界闭矩形. 由特征函数的连续逼近, 对每个 $R_{j}$ 存在具有紧支撑的连续函数 $g_{j}$ 使 $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ 任意小. 取逼近误差足够小并令 $g=\sum_{j}a_{j}g_{j}$, 则 $g$ 连续且支撑在 $\bigcup_{j}R_{j}$ 中 (有界集), 且 $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|< \varepsilon/2$. 于是 $\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|< \varepsilon$, 且 $g$ 在有界集外为零. $\blacksquare$
 
 ## 4
 
@@ -134,13 +134,13 @@ $$
 
 先证三种初等变换的情形, 再组合.
 
-**伸缩变换** $T_{1}\left(x_{1},\dots,x_{j},\dots,x_{n}\right)=\left(x_{1},\dots,cx_{j},\dots,x_{n}\right)$ ($c\ne0$). 由一维平移与伸缩的不变性 并结合乘积结构, 逐坐标伸缩保持其余坐标不动, 有 $m\left(T_{1}\left(E\right)\right)=\left|c\right|m\left(E\right)$ 且 $\int f\circ T_{1}\left(x\right)\mathrm{d}x=\frac{1}{\left|c\right|}\int f\left(x\right)\mathrm{d}x$, 即 $\int f\left(x\right)\mathrm{d}x=\left|\det T_{1}\right|\int f\circ T_{1}\left(x\right)\mathrm{d}x$.
+伸缩变换 $T_{1}\left(x_{1},\dots,x_{j},\dots,x_{n}\right)=\left(x_{1},\dots,cx_{j},\dots,x_{n}\right)$ ($c\ne0$). 由一维平移与伸缩的不变性 并结合乘积结构, 逐坐标伸缩保持其余坐标不动, 有 $m\left(T_{1}\left(E\right)\right)=\left|c\right|m\left(E\right)$ 且 $\int f\circ T_{1}\left(x\right)\mathrm{d}x=\frac{1}{\left|c\right|}\int f\left(x\right)\mathrm{d}x$, 即 $\int f\left(x\right)\mathrm{d}x=\left|\det T_{1}\right|\int f\circ T_{1}\left(x\right)\mathrm{d}x$.
 
-**剪切变换** $T_{2}\left(x_{1},\dots,x_{j},\dots,x_{n}\right)=\left(x_{1},\dots,x_{j}+cx_{k},\dots,x_{n}\right)$ ($k\ne j$). 由一维平移与伸缩的不变性 逐切片应用, $m\left(T_{2}\left(E\right)\right)=m\left(E\right)$ 且 $\int f\circ T_{2}\left(x\right)\mathrm{d}x=\int f\left(x\right)\mathrm{d}x$. 因 $\det T_{2}=1$, 公式成立.
+剪切变换 $T_{2}\left(x_{1},\dots,x_{j},\dots,x_{n}\right)=\left(x_{1},\dots,x_{j}+cx_{k},\dots,x_{n}\right)$ ($k\ne j$). 由一维平移与伸缩的不变性 逐切片应用, $m\left(T_{2}\left(E\right)\right)=m\left(E\right)$ 且 $\int f\circ T_{2}\left(x\right)\mathrm{d}x=\int f\left(x\right)\mathrm{d}x$. 因 $\det T_{2}=1$, 公式成立.
 
-**交换变换** $T_{3}$ 交换两个坐标, $\det T_{3}=-1$. 由 $m$ 作为乘积测度的对称性, $m\left(T_{3}\left(E\right)\right)=m\left(E\right)$ 且 $\int f\circ T_{3}\left(x\right)\mathrm{d}x=\int f\left(x\right)\mathrm{d}x$, 而 $\left|\det T_{3}\right|=1$, 公式成立.
+交换变换 $T_{3}$ 交换两个坐标, $\det T_{3}=-1$. 由 $m$ 作为乘积测度的对称性, $m\left(T_{3}\left(E\right)\right)=m\left(E\right)$ 且 $\int f\circ T_{3}\left(x\right)\mathrm{d}x=\int f\left(x\right)\mathrm{d}x$, 而 $\left|\det T_{3}\right|=1$, 公式成立.
 
-**一般情形.** 由初等线性代数, 每个 $T\in GL\left(n,\mathbb R\right)$ 都可写成有限个上述三种初等变换的乘积 $T=T_{1}\circ\cdots\circ T_{k}$ (可逆矩阵可通过行变换化为单位矩阵). 对每个初等变换上式成立, 且行列式相乘 $\left|\det T\right|=\prod_{i}\left|\det T_{i}\right|$. 逐次代入得
+一般情形. 由初等线性代数, 每个 $T\in GL\left(n,\mathbb R\right)$ 都可写成有限个上述三种初等变换的乘积 $T=T_{1}\circ\cdots\circ T_{k}$ (可逆矩阵可通过行变换化为单位矩阵). 对每个初等变换上式成立, 且行列式相乘 $\left|\det T\right|=\prod_{i}\left|\det T_{i}\right|$. 逐次代入得
 
 $$
 \int f\left(x\right)\mathrm{d}x=\left|\det T_{1}\right|\int f\circ T_{1}\left(x\right)\mathrm{d}x=\cdots=\left|\det T\right|\int f\circ T\left(x\right)\mathrm{d}x,
@@ -148,7 +148,7 @@ $$
 
 此即 (a). 可测性: $T$ 连续, 由可逆线性变换保持可测性与零测集 得 $f\circ T$ 可测且 $T\left(E\right)\in\mathcal L^{n}$.
 
-**证 (b).** 在 (a) 中取 $f=\chi_{T\left(E\right)}$, 则
+证 (b). 在 (a) 中取 $f=\chi_{T\left(E\right)}$, 则
 
 $$
 m\left(T\left(E\right)\right)=\int\chi_{T\left(E\right)}\left(x\right)\mathrm{d}x=\left|\det T\right|\int\chi_{T\left(E\right)}\circ T\left(x\right)\mathrm{d}x=\left|\det T\right|\int\chi_{E}\left(x\right)\mathrm{d}x=\left|\det T\right|m\left(E\right).
@@ -168,7 +168,7 @@ $T\left(E\right)\in\mathcal L^{n}$ 已由可测性保证. $\blacksquare$
 
 ### 解答 5
 
-**(a).** $\left|f\left(x,y\right)\right|=\frac{\left|x^{2}-y^{2}\right|}{\left(x^{2}+y^{2}\right)^{2}}\le\frac{x^{2}+y^{2}}{\left(x^{2}+y^{2}\right)^{2}}=\frac{1}{x^{2}+y^{2}}$. 在 $E$ 上 $\int_{E}\frac{1}{x^{2}+y^{2}}\mathrm{d}x\,\mathrm{d}y$ 发散 (用极坐标, $\int_{0}^{\delta}\int_{0}^{\pi/2}\frac{1}{r^{2}}r\,\mathrm{d}\theta\,\mathrm{d}r=\frac{\pi}{2}\int_{0}^{\delta}\frac{1}{r}\mathrm{d}r=\infty$), 故 $\int_{E}\left|f\right|=\infty$, $f\notin L^{1}$, $\int_{E}f\,\mathrm{d}m^{2}$ 无定义.
+(a). $\left|f\left(x,y\right)\right|=\frac{\left|x^{2}-y^{2}\right|}{\left(x^{2}+y^{2}\right)^{2}}\le\frac{x^{2}+y^{2}}{\left(x^{2}+y^{2}\right)^{2}}=\frac{1}{x^{2}+y^{2}}$. 在 $E$ 上 $\int_{E}\frac{1}{x^{2}+y^{2}}\mathrm{d}x\,\mathrm{d}y$ 发散 (用极坐标, $\int_{0}^{\delta}\int_{0}^{\pi/2}\frac{1}{r^{2}}r\,\mathrm{d}\theta\,\mathrm{d}r=\frac{\pi}{2}\int_{0}^{\delta}\frac{1}{r}\mathrm{d}r=\infty$), 故 $\int_{E}\left|f\right|=\infty$, $f\notin L^{1}$, $\int_{E}f\,\mathrm{d}m^{2}$ 无定义.
 
 先对 $x$ 积分. 固定 $y$, 令 $x=yt$, 则 $\int_{0}^{1}\frac{x^{2}-y^{2}}{\left(x^{2}+y^{2}\right)^{2}}\mathrm{d}x=\frac{1}{y}\int_{0}^{1/y}\frac{t^{2}-1}{\left(t^{2}+1\right)^{2}}\mathrm{d}t$. 因 $\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{t}{t^{2}+1}\right)=\frac{1-t^{2}}{\left(t^{2}+1\right)^{2}}$, 有 $\int\frac{t^{2}-1}{\left(t^{2}+1\right)^{2}}\mathrm{d}t=-\frac{t}{t^{2}+1}+C$, 故内层积分 $=\frac{1}{y}\left[-\frac{t}{t^{2}+1}\right]_{0}^{1/y}=-\frac{1}{y^{2}+1}$. 于是 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=\int_{0}^{1}-\frac{1}{1+y^{2}}\mathrm{d}y=-\left[\arctan y\right]_{0}^{1}=-\frac{\pi}{4}$.
 
@@ -176,13 +176,13 @@ $T\left(E\right)\in\mathcal L^{n}$ 已由可测性保证. $\blacksquare$
 
 结论: $\int_{E}f\,\mathrm{d}m^{2}$ 不存在; $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=-\frac{\pi}{4}$ 与 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=\frac{\pi}{4}$ 存在但不等, 符号相反. 因 $f\notin L^{1}$, **定理 10.2.1 (富比尼定理)** 不适用, 两个迭代积分不可交换.
 
-**(b).** $f\ge0$. 固定 $y$, 内层 $\int_{0}^{1}\left(1-xy\right)^{-a}\mathrm{d}x=\frac{1}{y}\cdot\frac{1-\left(1-y\right)^{1-a}}{1-a}$ (当 $a\ne1$), 且 $a=1$ 时内层 $=-\frac{\ln\left(1-y\right)}{y}$. 对 $0< a< 1$, 内层在 $y\to0$ 处趋于 $1$, 在 $y\to1$ 处趋于 $\frac{1}{1-a}$ (因 $\left(1-y\right)^{1-a}\to0$), 故有界, $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y< \infty$. 对 $a=1$, $\int_{0}^{1}-\frac{\ln\left(1-y\right)}{y}\mathrm{d}y=\sum_{k=1}^{\infty}\frac{1}{k^{2}}=\frac{\pi^{2}}{6}< \infty$. 故 $0< a\le1$ 时 $f\in L^{1}$, 由**定理 10.2.2 (托内利定理)**, 三个积分都存在且相等.
+(b). $f\ge0$. 固定 $y$, 内层 $\int_{0}^{1}\left(1-xy\right)^{-a}\mathrm{d}x=\frac{1}{y}\cdot\frac{1-\left(1-y\right)^{1-a}}{1-a}$ (当 $a\ne1$), 且 $a=1$ 时内层 $=-\frac{\ln\left(1-y\right)}{y}$. 对 $0< a< 1$, 内层在 $y\to0$ 处趋于 $1$, 在 $y\to1$ 处趋于 $\frac{1}{1-a}$ (因 $\left(1-y\right)^{1-a}\to0$), 故有界, $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y< \infty$. 对 $a=1$, $\int_{0}^{1}-\frac{\ln\left(1-y\right)}{y}\mathrm{d}y=\sum_{k=1}^{\infty}\frac{1}{k^{2}}=\frac{\pi^{2}}{6}< \infty$. 故 $0< a\le1$ 时 $f\in L^{1}$, 由**定理 10.2.2 (托内利定理)**, 三个积分都存在且相等.
 
 $a> 1$ 时, 内层 $\frac{1}{y}\cdot\frac{1-\left(1-y\right)^{1-a}}{1-a}$, 因 $1-a< 0$ 且 $y\to1$ 时 $\left(1-y\right)^{1-a}\to\infty$, 内层趋于 $+\infty$, 故 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=+\infty$; 对称地 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=+\infty$, 且 $\int_{E}f\,\mathrm{d}m^{2}=+\infty$.
 
 结论: $0< a\le1$ 时三个积分存在且相等, $f\in L^{1}$; $a> 1$ 时三个积分均为 $+\infty$, $f\notin L^{1}$.
 
-**(c).** 区域为 $\left\{\left(x,y\right):0< y< x< 1\right\}$. $\left|f\right|=\left(x-y\right)^{-3}$. 先对 $x$ 积分, $\int_{y}^{1}\left(x-y\right)^{-3}\mathrm{d}x=\left[-\frac{1}{2}\left(x-y\right)^{-2}\right]_{y}^{1}=+\infty$, 故 $\int_{E}\left|f\right|=\infty$, $f\notin L^{1}$, $\int_{E}f\,\mathrm{d}m^{2}$ 无定义.
+(c). 区域为 $\left\{\left(x,y\right):0< y< x< 1\right\}$. $\left|f\right|=\left(x-y\right)^{-3}$. 先对 $x$ 积分, $\int_{y}^{1}\left(x-y\right)^{-3}\mathrm{d}x=\left[-\frac{1}{2}\left(x-y\right)^{-2}\right]_{y}^{1}=+\infty$, 故 $\int_{E}\left|f\right|=\infty$, $f\notin L^{1}$, $\int_{E}f\,\mathrm{d}m^{2}$ 无定义.
 
 先对 $x$ 积分: 固定 $y$, $\int_{y}^{1}\left(x-y\right)^{-3}\mathrm{d}x=\left[-\frac{1}{2}\left(x-y\right)^{-2}\right]_{y}^{1}$, 因 $\lim_{x\to y^{+}}\left(x-y\right)^{-2}=\infty$, 故内层积分 $=+\infty$, 于是 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=+\infty$.
 

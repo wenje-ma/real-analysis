@@ -174,13 +174,13 @@ $$
 
 证明:
 
-**14.** 若 $f\in L^{+}$, 令 $\lambda\left(E\right)=\int_{E}f\,\mathrm{d}\mu$ (对 $E\in\mathcal M$). 则 $\lambda$ 是 $\mathcal M$ 上的测度, 且对任意 $g\in L^{+}$, $\int g\,\mathrm{d}\lambda=\int fg\,\mathrm{d}\mu$.
+14. 若 $f\in L^{+}$, 令 $\lambda\left(E\right)=\int_{E}f\,\mathrm{d}\mu$ (对 $E\in\mathcal M$). 则 $\lambda$ 是 $\mathcal M$ 上的测度, 且对任意 $g\in L^{+}$, $\int g\,\mathrm{d}\lambda=\int fg\,\mathrm{d}\mu$.
 
-**16.** 若 $f\in L^{+}$ 且 $\int f< \infty$, 对每个 $\varepsilon> 0$ 存在 $E\in\mathcal M$ 使得 $\mu\left(E\right)< \infty$ 且 $\int_{E}f> \left(\int f\right)-\varepsilon$.
+16. 若 $f\in L^{+}$ 且 $\int f< \infty$, 对每个 $\varepsilon> 0$ 存在 $E\in\mathcal M$ 使得 $\mu\left(E\right)< \infty$ 且 $\int_{E}f> \left(\int f\right)-\varepsilon$.
 
 ### 解答 4
 
-**14.** 先证 $\lambda$ 是测度. 由**定义 8.1.1 (非负简单函数的积分)** 与**定义 8.2.1 (非负可测函数的积分)**, $\lambda\left(\emptyset\right)=0$ 且非负. 对两两不交的可测集 $\left\{E_{n}\right\}$, 因 $f\chi_{\bigsqcup E_{n}}=\sum_{n}f\chi_{E_{n}}$ 且部分和 $\sum_{n=1}^{N}f\chi_{E_{n}}\uparrow f\chi_{\bigsqcup E_{n}}$ 点点, 由**定理 8.2.2 (单调收敛定理)**,
+14. 先证 $\lambda$ 是测度. 由**定义 8.1.1 (非负简单函数的积分)** 与**定义 8.2.1 (非负可测函数的积分)**, $\lambda\left(\emptyset\right)=0$ 且非负. 对两两不交的可测集 $\left\{E_{n}\right\}$, 因 $f\chi_{\bigsqcup E_{n}}=\sum_{n}f\chi_{E_{n}}$ 且部分和 $\sum_{n=1}^{N}f\chi_{E_{n}}\uparrow f\chi_{\bigsqcup E_{n}}$ 点点, 由**定理 8.2.2 (单调收敛定理)**,
 
 $$
 \lambda\left(\bigsqcup_{n=1}^{\infty}E_{n}\right)=\int f\chi_{\bigsqcup E_{n}}\mathrm{d}\mu=\sum_{n=1}^{\infty}\int f\chi_{E_{n}}\mathrm{d}\mu=\sum_{n=1}^{\infty}\lambda\left(E_{n}\right).
@@ -196,7 +196,7 @@ $$
 
 对一般 $g\in L^{+}$, 由**注 8.2.3 (简单函数逼近)** 取简单函数 $g_{k}\uparrow g$. 因 $f\ge0$, $fg_{k}\uparrow fg$. 由**定理 8.2.2 (单调收敛定理)** (分别在测度 $\lambda$ 与 $\mu$ 下), $\int g_{k}\,\mathrm{d}\lambda\uparrow\int g\,\mathrm{d}\lambda$ 且 $\int fg_{k}\,\mathrm{d}\mu\uparrow\int fg\,\mathrm{d}\mu$. 对每个 $k$ 两式相等 (简单情形), 故极限相等: $\int g\,\mathrm{d}\lambda=\int fg\,\mathrm{d}\mu$. $\blacksquare$
 
-**16.** 对 $n\in\mathbb N$, 令 $E_{n}:=\left\{x:f\left(x\right)> \frac{1}{n}\right\}\in\mathcal M$. 则 $\left\{E_{n}\right\}$ 单调上升且 $\bigcup_{n}E_{n}=\left\{x:f\left(x\right)> 0\right\}$. 由**定义 8.2.1 (非负可测函数的积分)**,
+16. 对 $n\in\mathbb N$, 令 $E_{n}:=\left\{x:f\left(x\right)> \frac{1}{n}\right\}\in\mathcal M$. 则 $\left\{E_{n}\right\}$ 单调上升且 $\bigcup_{n}E_{n}=\left\{x:f\left(x\right)> 0\right\}$. 由**定义 8.2.1 (非负可测函数的积分)**,
 
 $$
 \int f\,\mathrm{d}\mu\ge\int_{E_{n}}f\,\mathrm{d}\mu\ge\frac{1}{n}\mu\left(E_{n}\right),

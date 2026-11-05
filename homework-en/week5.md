@@ -174,13 +174,13 @@ Combining (1)(2)(3)(4), the three conditions are equivalent. $\blacksquare$
 
 Prove:
 
-**14.** If $f\in L^{+}$, set $\lambda\left(E\right)=\int_{E}f\,\mathrm{d}\mu$ (for $E\in\mathcal M$). Then $\lambda$ is a measure on $\mathcal M$, and for any $g\in L^{+}$, $\int g\,\mathrm{d}\lambda=\int fg\,\mathrm{d}\mu$.
+14. If $f\in L^{+}$, set $\lambda\left(E\right)=\int_{E}f\,\mathrm{d}\mu$ (for $E\in\mathcal M$). Then $\lambda$ is a measure on $\mathcal M$, and for any $g\in L^{+}$, $\int g\,\mathrm{d}\lambda=\int fg\,\mathrm{d}\mu$.
 
-**16.** If $f\in L^{+}$ and $\int f< \infty$, then for every $\varepsilon> 0$ there exists $E\in\mathcal M$ with $\mu\left(E\right)< \infty$ and $\int_{E}f> \left(\int f\right)-\varepsilon$.
+16. If $f\in L^{+}$ and $\int f< \infty$, then for every $\varepsilon> 0$ there exists $E\in\mathcal M$ with $\mu\left(E\right)< \infty$ and $\int_{E}f> \left(\int f\right)-\varepsilon$.
 
 ### Solution to 4
 
-**14.** First show $\lambda$ is a measure. By **Definition 8.1.1 (Integral of a Nonnegative Simple Function)** and **Definition 8.2.1 (Integral of a Nonnegative Measurable Function)**, $\lambda\left(\emptyset\right)=0$ and nonnegativity. For pairwise disjoint measurable sets $\left\{E_{n}\right\}$, since $f\chi_{\bigsqcup E_{n}}=\sum_{n}f\chi_{E_{n}}$ and the partial sums $\sum_{n=1}^{N}f\chi_{E_{n}}\uparrow f\chi_{\bigsqcup E_{n}}$ pointwise, by **Theorem 8.2.2 (Monotone Convergence Theorem)**,
+14. First show $\lambda$ is a measure. By **Definition 8.1.1 (Integral of a Nonnegative Simple Function)** and **Definition 8.2.1 (Integral of a Nonnegative Measurable Function)**, $\lambda\left(\emptyset\right)=0$ and nonnegativity. For pairwise disjoint measurable sets $\left\{E_{n}\right\}$, since $f\chi_{\bigsqcup E_{n}}=\sum_{n}f\chi_{E_{n}}$ and the partial sums $\sum_{n=1}^{N}f\chi_{E_{n}}\uparrow f\chi_{\bigsqcup E_{n}}$ pointwise, by **Theorem 8.2.2 (Monotone Convergence Theorem)**,
 
 $$
 \lambda\left(\bigsqcup_{n=1}^{\infty}E_{n}\right)=\int f\chi_{\bigsqcup E_{n}}\mathrm{d}\mu=\sum_{n=1}^{\infty}\int f\chi_{E_{n}}\mathrm{d}\mu=\sum_{n=1}^{\infty}\lambda\left(E_{n}\right).
@@ -196,7 +196,7 @@ $$
 
 For general $g\in L^{+}$, take simple $g_{k}\uparrow g$ by **Remark 8.2.3 (Approximation by Simple Functions)**. Since $f\ge0$, $fg_{k}\uparrow fg$. By **Theorem 8.2.2 (Monotone Convergence Theorem)** (under measures $\lambda$ and $\mu$ respectively), $\int g_{k}\,\mathrm{d}\lambda\uparrow\int g\,\mathrm{d}\lambda$ and $\int fg_{k}\,\mathrm{d}\mu\uparrow\int fg\,\mathrm{d}\mu$. For each $k$ the two agree (simple case), so the limits agree: $\int g\,\mathrm{d}\lambda=\int fg\,\mathrm{d}\mu$. $\blacksquare$
 
-**16.** For $n\in\mathbb N$, let $E_{n}:=\left\{x:f\left(x\right)> \frac{1}{n}\right\}\in\mathcal M$. Then $\left\{E_{n}\right\}$ is increasing and $\bigcup_{n}E_{n}=\left\{x:f\left(x\right)> 0\right\}$. By **Definition 8.2.1 (Integral of a Nonnegative Measurable Function)**,
+16. For $n\in\mathbb N$, let $E_{n}:=\left\{x:f\left(x\right)> \frac{1}{n}\right\}\in\mathcal M$. Then $\left\{E_{n}\right\}$ is increasing and $\bigcup_{n}E_{n}=\left\{x:f\left(x\right)> 0\right\}$. By **Definition 8.2.1 (Integral of a Nonnegative Measurable Function)**,
 
 $$
 \int f\,\mathrm{d}\mu\ge\int_{E_{n}}f\,\mathrm{d}\mu\ge\frac{1}{n}\mu\left(E_{n}\right),

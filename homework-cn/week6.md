@@ -101,9 +101,9 @@ $$
 
 证明:
 
-**20.** (广义控制收敛定理) 若 $f_{n},g_{n},f,g\in L^{1}$, $f_{n}\to f$ 且 $g_{n}\to g$ 几乎处处, $\left|f_{n}\right|\le g_{n}$, 且 $\int g_{n}\to\int g$, 则 $\int f_{n}\to\int f$.
+20. (广义控制收敛定理) 若 $f_{n},g_{n},f,g\in L^{1}$, $f_{n}\to f$ 且 $g_{n}\to g$ 几乎处处, $\left|f_{n}\right|\le g_{n}$, 且 $\int g_{n}\to\int g$, 则 $\int f_{n}\to\int f$.
 
-**23.** 给定有界函数 $f:\left[a,b\right]\to\mathbb R$, 令
+23. 给定有界函数 $f:\left[a,b\right]\to\mathbb R$, 令
 
 $$
 H\left(x\right)=\limsup_{\delta\to0}\sup_{0< \left|y-x\right|\le\delta}f\left(y\right),\qquad h\left(x\right)=\liminf_{\delta\to0}\inf_{0< \left|y-x\right|\le\delta}f\left(y\right).
@@ -111,13 +111,13 @@ $$
 
 证明: (a) $H\left(x\right)=h\left(x\right)$ 当且仅当 $f$ 在 $x$ 连续; (b) $H=G$ 几乎处处, $h=g$ 几乎处处, 且 $\int_{\left(a,b\right)}h\,\mathrm{d}m=\underline{\int}f$. 由此 $f$ 黎曼可积当且仅当 $f$ 的不连续点集测度为 0.
 
-**27.** 设 $f_{n}\left(x\right)=ae^{-nax}-be^{-nbx}$, 其中 $0< a< b$. (a) $\sum_{n=1}^{\infty}\int_{0}^{\infty}\left|f_{n}\left(x\right)\right|\mathrm{d}x=\infty$; (b) $\sum_{n=1}^{\infty}\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x=0$; (c) $\sum_{n=1}^{\infty}f_{n}\in L^{1}\left(\left[0,\infty\right),m\right)$, 且 $\int_{0}^{\infty}\sum_{n=1}^{\infty}f_{n}\left(x\right)\mathrm{d}x=\log\left(b/a\right)$.
+27. 设 $f_{n}\left(x\right)=ae^{-nax}-be^{-nbx}$, 其中 $0< a< b$. (a) $\sum_{n=1}^{\infty}\int_{0}^{\infty}\left|f_{n}\left(x\right)\right|\mathrm{d}x=\infty$; (b) $\sum_{n=1}^{\infty}\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x=0$; (c) $\sum_{n=1}^{\infty}f_{n}\in L^{1}\left(\left[0,\infty\right),m\right)$, 且 $\int_{0}^{\infty}\sum_{n=1}^{\infty}f_{n}\left(x\right)\mathrm{d}x=\log\left(b/a\right)$.
 
-**29.** 通过对等式 $\int_{0}^{\infty}e^{-tx}\mathrm{d}x=1/t$ 求导, 证明 $\int_{0}^{\infty}x^{n}e^{-x}\mathrm{d}x=n!$; 类似地, 通过对等式 $\int_{-\infty}^{\infty}e^{-tx^{2}}\mathrm{d}x=\sqrt{\pi/t}$ 求导, 证明 $\int_{-\infty}^{\infty}x^{2n}e^{-x^{2}}\mathrm{d}x=\frac{\left(2n\right)!\sqrt\pi}{4^{n}n!}$.
+29. 通过对等式 $\int_{0}^{\infty}e^{-tx}\mathrm{d}x=1/t$ 求导, 证明 $\int_{0}^{\infty}x^{n}e^{-x}\mathrm{d}x=n!$; 类似地, 通过对等式 $\int_{-\infty}^{\infty}e^{-tx^{2}}\mathrm{d}x=\sqrt{\pi/t}$ 求导, 证明 $\int_{-\infty}^{\infty}x^{2n}e^{-x^{2}}\mathrm{d}x=\frac{\left(2n\right)!\sqrt\pi}{4^{n}n!}$.
 
 ### 解答 1
 
-**20.** 由 $g_{n}\to g$ 几乎处处且 $\left|f_{n}\right|\le g_{n}$, 取极限得 $\left|f\right|\le g$ 几乎处处, 故 $f\in L^{1}$. 因 $\left|f_{n}\right|\le g_{n}$ 意味着 $-g_{n}\le f_{n}\le g_{n}$, 函数列 $\left\{g_{n}+f_{n}\right\}$ 与 $\left\{g_{n}-f_{n}\right\}$ 非负, 且分别几乎处处收敛于 $g+f$ 与 $g-f$. 由**定理 8.2.7 (法图引理)**,
+20. 由 $g_{n}\to g$ 几乎处处且 $\left|f_{n}\right|\le g_{n}$, 取极限得 $\left|f\right|\le g$ 几乎处处, 故 $f\in L^{1}$. 因 $\left|f_{n}\right|\le g_{n}$ 意味着 $-g_{n}\le f_{n}\le g_{n}$, 函数列 $\left\{g_{n}+f_{n}\right\}$ 与 $\left\{g_{n}-f_{n}\right\}$ 非负, 且分别几乎处处收敛于 $g+f$ 与 $g-f$. 由**定理 8.2.7 (法图引理)**,
 
 $$
 \int\left(g+f\right)\mathrm{d}\mu\le\liminf_{n\to\infty}\int\left(g_{n}+f_{n}\right)\mathrm{d}\mu=\int g\,\mathrm{d}\mu+\liminf_{n\to\infty}\int f_{n}\,\mathrm{d}\mu,
@@ -137,7 +137,7 @@ $$
 
 故 $\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu$. $\blacksquare$
 
-**23.** 用黎曼积分与达布和 的记号. $f$ 黎曼可积当且仅当 $\overline{\int}f=\underline{\int}f$.
+23. 用黎曼积分与达布和 的记号. $f$ 黎曼可积当且仅当 $\overline{\int}f=\underline{\int}f$.
 
 (a) 设 $f$ 在 $x$ 连续. 对 $\varepsilon> 0$ 存在 $\delta> 0$ 使 $\left|y-x\right|< \delta\Rightarrow\left|f\left(y\right)-f\left(x\right)\right|< \varepsilon$. 则对 $0< \left|y-x\right|\le\delta$, 有
 
@@ -181,7 +181,7 @@ $$
 
 因 $H\ge h$, 由习题三 (b) 得 $\int\left(H-h\right)\mathrm{d}m=0\iff H=h$ 几乎处处. 结合 (a) ($H=h\iff f$ 连续于 $x$) 得 $f$ 黎曼可积当且仅当 $f$ 的不连续点集测度为 0. 此时黎曼积分 $\overline{\int}f=\int H\,\mathrm{d}m=\int f\,\mathrm{d}m$ (因 $H=f$ 几乎处处). $\blacksquare$
 
-**27.** 先求 $f_{n}$ 的零点. 令 $f_{n}\left(x\right)=0$ 得 $ae^{-nax}=be^{-nbx}$, 即 $e^{n\left(b-a\right)x}=b/a$, 故唯一零点
+27. 先求 $f_{n}$ 的零点. 令 $f_{n}\left(x\right)=0$ 得 $ae^{-nax}=be^{-nbx}$, 即 $e^{n\left(b-a\right)x}=b/a$, 故唯一零点
 
 $$
 x_{n}=\frac{\log\left(b/a\right)}{n\left(b-a\right)}.
@@ -243,9 +243,9 @@ $$
 
 注意到这里 $\sum\int\left|f_{n}\right|=\infty$ (由 a), 不满足**引理 8.2.13 (级数逐项积分)** 的条件 $\sum\int\left|f_{n}\right|< \infty$, 故不能逐项积分; 事实上 $\int\sum f_{n}=\log\left(b/a\right)\ne\sum\int f_{n}=0$, 正说明该条件是本质的. $\blacksquare$
 
-**29.** 用**定理 8.2.17 (参数积分)** (b) (积分号下求导). 固定 $t_{0}> 0$, 在 $t$ 的紧邻域 $\left[t_{0}/2,t_{0}\right]$ 上考察.
+29. 用**定理 8.2.17 (参数积分)** (b) (积分号下求导). 固定 $t_{0}> 0$, 在 $t$ 的紧邻域 $\left[t_{0}/2,t_{0}\right]$ 上考察.
 
-**情形 1.** 令 $F\left(t\right)=\int_{0}^{\infty}e^{-tx}\mathrm{d}x=\frac{1}{t}$ ($t> 0$). 对每个 $k\ge1$, 在 $t\in\left[t_{0}/2,t_{0}\right]$ 上 $\left|\frac{\partial^{k}}{\partial t^{k}}e^{-tx}\right|=x^{k}e^{-tx}\le x^{k}e^{-\left(t_{0}/2\right)x}\in L^{1}\left(\left[0,\infty\right)\right)$, 故定理可反复应用:
+情形 1. 令 $F\left(t\right)=\int_{0}^{\infty}e^{-tx}\mathrm{d}x=\frac{1}{t}$ ($t> 0$). 对每个 $k\ge1$, 在 $t\in\left[t_{0}/2,t_{0}\right]$ 上 $\left|\frac{\partial^{k}}{\partial t^{k}}e^{-tx}\right|=x^{k}e^{-tx}\le x^{k}e^{-\left(t_{0}/2\right)x}\in L^{1}\left(\left[0,\infty\right)\right)$, 故定理可反复应用:
 
 $$
 F^{\left(n\right)}\left(t\right)=\int_{0}^{\infty}\left(-x\right)^{n}e^{-tx}\mathrm{d}x.
@@ -259,7 +259,7 @@ $$
 
 即 $\int_{0}^{\infty}x^{n}e^{-x}\mathrm{d}x=n!$.
 
-**情形 2.** 令 $G\left(s\right)=\int_{-\infty}^{\infty}e^{-sx^{2}}\mathrm{d}x=\sqrt{\pi/s}=\sqrt\pi\,s^{-1/2}$ ($s> 0$). 对每个 $k\ge1$, 在 $s\in\left[s_{0}/2,s_{0}\right]$ 上 $\left|\frac{\partial^{k}}{\partial s^{k}}e^{-sx^{2}}\right|=x^{2k}e^{-sx^{2}}\le x^{2k}e^{-\left(s_{0}/2\right)x^{2}}\in L^{1}\left(\mathbb R\right)$, 故可反复求导:
+情形 2. 令 $G\left(s\right)=\int_{-\infty}^{\infty}e^{-sx^{2}}\mathrm{d}x=\sqrt{\pi/s}=\sqrt\pi\,s^{-1/2}$ ($s> 0$). 对每个 $k\ge1$, 在 $s\in\left[s_{0}/2,s_{0}\right]$ 上 $\left|\frac{\partial^{k}}{\partial s^{k}}e^{-sx^{2}}\right|=x^{2k}e^{-sx^{2}}\le x^{2k}e^{-\left(s_{0}/2\right)x^{2}}\in L^{1}\left(\mathbb R\right)$, 故可反复求导:
 
 $$
 G^{\left(n\right)}\left(s\right)=\int_{-\infty}^{\infty}\left(-x^{2}\right)^{n}e^{-sx^{2}}\mathrm{d}x=\left(-1\right)^{n}\int_{-\infty}^{\infty}x^{2n}e^{-sx^{2}}\mathrm{d}x.

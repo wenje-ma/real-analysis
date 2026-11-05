@@ -172,11 +172,11 @@ Let the Cantor set $C=\bigcap_{n=0}^{\infty}C_{n}$ (**Definition 6.5.1 (Recursiv
 
 By **Theorem 6.5.2 (Ternary Characterization of the Cantor Set)**, $x\in C$ iff its ternary expansion $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ satisfies $a_{k}\in\left\{0,2\right\}$.
 
-**1. Compactness.** By **Definition 6.5.1 (Recursive Construction of the Cantor Set)**, each $C_{n}$ is obtained from $\left[0,1\right]$ by removing finitely many open intervals (those dug out at step $n$), so $C_{n}$ is a finite union of closed intervals and hence closed. $C=\bigcap_{n=0}^{\infty}C_{n}$ is an intersection of closed sets, so $C$ is closed, and $C\subset\left[0,1\right]$ is bounded. By the Heine-Borel theorem, bounded closed sets in $\mathbb R$ are compact, so $C$ is compact. $\blacksquare$
+1. Compactness. By **Definition 6.5.1 (Recursive Construction of the Cantor Set)**, each $C_{n}$ is obtained from $\left[0,1\right]$ by removing finitely many open intervals (those dug out at step $n$), so $C_{n}$ is a finite union of closed intervals and hence closed. $C=\bigcap_{n=0}^{\infty}C_{n}$ is an intersection of closed sets, so $C$ is closed, and $C\subset\left[0,1\right]$ is bounded. By the Heine-Borel theorem, bounded closed sets in $\mathbb R$ are compact, so $C$ is compact. $\blacksquare$
 
-**2. Completeness.** $\mathbb R$ is a complete metric space and $C$ is a closed subset of $\mathbb R$. If $\left\{x_{n}\right\}\subset C$ is a Cauchy sequence, it converges in $\mathbb R$ to some $x$; since $C$ is closed, $x\in C$. Thus every Cauchy sequence in $C$ converges, and $C$ is complete. $\blacksquare$
+2. Completeness. $\mathbb R$ is a complete metric space and $C$ is a closed subset of $\mathbb R$. If $\left\{x_{n}\right\}\subset C$ is a Cauchy sequence, it converges in $\mathbb R$ to some $x$; since $C$ is closed, $x\in C$. Thus every Cauchy sequence in $C$ converges, and $C$ is complete. $\blacksquare$
 
-**3. Total disconnectedness.** Suppose $K\subset C$ is connected and contains two points $x< y$. By **Theorem 6.5.2 (Ternary Characterization of the Cantor Set)**, the ternary expansions of $x,y$ contain no digit $1$. Since $x\ne y$, there is a smallest $n$ at which the $n$-th ternary digits of $x,y$ differ; assume without loss that $x$ has digit $0$ and $y$ has digit $2$ at position $n$ (the first $n-1$ digits agree). Then among the open intervals dug out at step $n$ there is one $J=\left(\alpha,\beta\right)$ lying between $x$ and $y$ (i.e. $x< \alpha< \beta< y$), and $J\cap C=\varnothing$. Hence
+3. Total disconnectedness. Suppose $K\subset C$ is connected and contains two points $x< y$. By **Theorem 6.5.2 (Ternary Characterization of the Cantor Set)**, the ternary expansions of $x,y$ contain no digit $1$. Since $x\ne y$, there is a smallest $n$ at which the $n$-th ternary digits of $x,y$ differ; assume without loss that $x$ has digit $0$ and $y$ has digit $2$ at position $n$ (the first $n-1$ digits agree). Then among the open intervals dug out at step $n$ there is one $J=\left(\alpha,\beta\right)$ lying between $x$ and $y$ (i.e. $x< \alpha< \beta< y$), and $J\cap C=\varnothing$. Hence
 
 $$
 K=\left(K\cap\left(-\infty,\alpha\right]\right)\cup\left(K\cap\left[\beta,\infty\right)\right),
@@ -184,9 +184,9 @@ $$
 
 which are two nonempty, disjoint, relatively open subsets of $K$ (since $K\subset C$ and $K\cap J=\varnothing$), contradicting the connectedness of $K$. Thus $K$ can only be a singleton. $\blacksquare$
 
-**4. Nowhere dense.** Take any nonempty open interval $\left(\alpha,\beta\right)\subset\mathbb R$. If it intersects $\left[0,1\right]$, choose $n$ so that $3^{-n}< \beta-\alpha$. After step $n$, $C_{n}$ is a union of $2^{n}$ closed intervals of length $3^{-n}$, and the $2^{n}-1$ open intervals between them (dug out at step $n$) cover the part of $\left[0,1\right]$ excluding endpoints, each of length $3^{-n}$. Since $\left(\alpha,\beta\right)$ has length greater than $3^{-n}$, it must contain one of the open intervals dug out at step $n$, so $\left(\alpha,\beta\right)$ is not entirely contained in $C$. Thus $C$ contains no nonempty open interval, $\operatorname{int}\left(C\right)=\varnothing$, i.e. $C$ is nowhere dense. $\blacksquare$
+4. Nowhere dense. Take any nonempty open interval $\left(\alpha,\beta\right)\subset\mathbb R$. If it intersects $\left[0,1\right]$, choose $n$ so that $3^{-n}< \beta-\alpha$. After step $n$, $C_{n}$ is a union of $2^{n}$ closed intervals of length $3^{-n}$, and the $2^{n}-1$ open intervals between them (dug out at step $n$) cover the part of $\left[0,1\right]$ excluding endpoints, each of length $3^{-n}$. Since $\left(\alpha,\beta\right)$ has length greater than $3^{-n}$, it must contain one of the open intervals dug out at step $n$, so $\left(\alpha,\beta\right)$ is not entirely contained in $C$. Thus $C$ contains no nonempty open interval, $\operatorname{int}\left(C\right)=\varnothing$, i.e. $C$ is nowhere dense. $\blacksquare$
 
-**5. Perfect set.** Closedness was proved in (1). To show $C$ has no isolated points: let $x\in C$ and $\varepsilon> 0$. By **Theorem 6.5.2 (Ternary Characterization of the Cantor Set)**, write $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ with $a_{k}\in\left\{0,2\right\}$. Choose $n$ so that $\frac{2}{3^{n+1}}< \varepsilon$, and let $x_{n}$ be the point obtained by replacing the $\left(n+1\right)$-th digit $a_{n+1}$ of $x$ by $2-a_{n+1}$, leaving all other digits unchanged. Then $x_{n}\in C$ (ternary expansion contains no $1$), $x_{n}\ne x$, and
+5. Perfect set. Closedness was proved in (1). To show $C$ has no isolated points: let $x\in C$ and $\varepsilon> 0$. By **Theorem 6.5.2 (Ternary Characterization of the Cantor Set)**, write $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ with $a_{k}\in\left\{0,2\right\}$. Choose $n$ so that $\frac{2}{3^{n+1}}< \varepsilon$, and let $x_{n}$ be the point obtained by replacing the $\left(n+1\right)$-th digit $a_{n+1}$ of $x$ by $2-a_{n+1}$, leaving all other digits unchanged. Then $x_{n}\in C$ (ternary expansion contains no $1$), $x_{n}\ne x$, and
 
 $$
 \left|x_{n}-x\right|=\left|\frac{2-a_{n+1}}{3^{n+1}}-\frac{a_{n+1}}{3^{n+1}}\right|=\frac{2}{3^{n+1}}< \varepsilon.
@@ -198,13 +198,13 @@ Thus the $\varepsilon$-neighborhood of $x$ contains a point of $C$ different fro
 
 Prove exercises 30 and 33.
 
-**30.** Let $E\in\mathcal L$ with $m\left(E\right)> 0$. Prove that for any $\alpha< 1$, there exists an open interval $I$ such that $m\left(E\cap I\right)> \alpha m\left(I\right)$.
+30. Let $E\in\mathcal L$ with $m\left(E\right)> 0$. Prove that for any $\alpha< 1$, there exists an open interval $I$ such that $m\left(E\cap I\right)> \alpha m\left(I\right)$.
 
-**33.** Prove that there exists a Borel set $A\subset\left[0,1\right]$ such that for every subinterval $I$ of $\left[0,1\right]$, $0< m\left(A\cap I\right)< m\left(I\right)$. (Hint: every subinterval of $\left[0,1\right]$ contains a positive-measure Cantor-type set.)
+33. Prove that there exists a Borel set $A\subset\left[0,1\right]$ such that for every subinterval $I$ of $\left[0,1\right]$, $0< m\left(A\cap I\right)< m\left(I\right)$. (Hint: every subinterval of $\left[0,1\right]$ contains a positive-measure Cantor-type set.)
 
 ### Solution to 3
 
-**30.** By contradiction. Suppose there exists $\alpha< 1$ such that for every open interval $I$, $m\left(E\cap I\right)\le\alpha m\left(I\right)$. Then for any open set $U$, writing $U$ as a countable union of disjoint open intervals $U=\bigcup_{k}I_{k}$, by countable additivity of $m$,
+30. By contradiction. Suppose there exists $\alpha< 1$ such that for every open interval $I$, $m\left(E\cap I\right)\le\alpha m\left(I\right)$. Then for any open set $U$, writing $U$ as a countable union of disjoint open intervals $U=\bigcup_{k}I_{k}$, by countable additivity of $m$,
 
 $$
 m\left(E\cap U\right)=\sum_{k}m\left(E\cap I_{k}\right)\le\alpha\sum_{k}m\left(I_{k}\right)=\alpha m\left(U\right).
@@ -218,7 +218,7 @@ $$
 
 Thus $m\left(E\right)\le\alpha m\left(E\right)$. Since $m\left(E\right)> 0$, $\alpha\ge1$, contradicting $\alpha< 1$. Hence there exists an open interval $I$ such that $m\left(E\cap I\right)> \alpha m\left(I\right)$. $\blacksquare$
 
-**33.** Use a positive-measure generalized Cantor set (Generalized Cantor Set). Let $\left\{I_{n}\right\}$ be an enumeration of all open intervals in $\left[0,1\right]$ with rational endpoints. Inductively choose pairwise disjoint closed intervals $J_{n}\subset I_{n}$ (choosing $J_{n}$ to avoid all previous $J_{k}$) so that every subinterval $I$ contains some $J_{n}$ (since $\left\{I_{n}\right\}$ enumerates rational intervals, every subinterval contains some $I_{n}$, and $J_{n}\subset I_{n}$). Fix $c\in\left(0,1\right)$. Inside each $J_{n}$, take a generalized Cantor set $C_{n}\subset J_{n}$ with $m\left(C_{n}\right)=c\,m\left(J_{n}\right)$ (by the fact that a generalized Cantor set can have measure any $\beta\in\left(0,1\right)$). Since the $J_{n}$ are pairwise disjoint, the $C_{n}$ are pairwise disjoint. Let $A=\bigcup_{n=1}^{\infty}C_{n}$; then $A$ is a countable union of closed sets, hence a Borel set, and $A\subset\left[0,1\right]$.
+33. Use a positive-measure generalized Cantor set (Generalized Cantor Set). Let $\left\{I_{n}\right\}$ be an enumeration of all open intervals in $\left[0,1\right]$ with rational endpoints. Inductively choose pairwise disjoint closed intervals $J_{n}\subset I_{n}$ (choosing $J_{n}$ to avoid all previous $J_{k}$) so that every subinterval $I$ contains some $J_{n}$ (since $\left\{I_{n}\right\}$ enumerates rational intervals, every subinterval contains some $I_{n}$, and $J_{n}\subset I_{n}$). Fix $c\in\left(0,1\right)$. Inside each $J_{n}$, take a generalized Cantor set $C_{n}\subset J_{n}$ with $m\left(C_{n}\right)=c\,m\left(J_{n}\right)$ (by the fact that a generalized Cantor set can have measure any $\beta\in\left(0,1\right)$). Since the $J_{n}$ are pairwise disjoint, the $C_{n}$ are pairwise disjoint. Let $A=\bigcup_{n=1}^{\infty}C_{n}$; then $A$ is a countable union of closed sets, hence a Borel set, and $A\subset\left[0,1\right]$.
 
 First prove the lower bound. For any subinterval $I\subset\left[0,1\right]$, there exists $n$ with $J_{n}\subset I_{n}\subset I$, so
 

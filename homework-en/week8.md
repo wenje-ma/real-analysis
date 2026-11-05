@@ -94,7 +94,7 @@ Let $\left(X,\mathcal M,\mu\right)$ be a $\sigma$-finite measure space and $f\in
 
 ### Solution to 2
 
-**Measurability.** Consider the map $T:X\times\left[0,\infty\right]\to\left[0,\infty\right]\times\left[0,\infty\right]$, $T\left(x,y\right)=\left(f\left(x\right),y\right)$. By **Proposition 7.1.7 (Measurability on Product Spaces)**, $T$ is measurable iff its coordinate functions are measurable; the coordinate $\left(x,y\right)\mapsto f\left(x\right)=f\circ p_{1}$ is measurable (since $f$ is measurable), and $\left(x,y\right)\mapsto y=p_{2}$ is continuous hence measurable. Thus $T$ is measurable. Also $\Phi\left(z,y\right)=z-y$ is continuous, hence Borel measurable. By **Proposition 7.1.5 (Composition Preserves Measurability)**, $\left(x,y\right)\mapsto f\left(x\right)-y=\Phi\circ T$ is measurable. Since
+Measurability. Consider the map $T:X\times\left[0,\infty\right]\to\left[0,\infty\right]\times\left[0,\infty\right]$, $T\left(x,y\right)=\left(f\left(x\right),y\right)$. By **Proposition 7.1.7 (Measurability on Product Spaces)**, $T$ is measurable iff its coordinate functions are measurable; the coordinate $\left(x,y\right)\mapsto f\left(x\right)=f\circ p_{1}$ is measurable (since $f$ is measurable), and $\left(x,y\right)\mapsto y=p_{2}$ is continuous hence measurable. Thus $T$ is measurable. Also $\Phi\left(z,y\right)=z-y$ is continuous, hence Borel measurable. By **Proposition 7.1.5 (Composition Preserves Measurability)**, $\left(x,y\right)\mapsto f\left(x\right)-y=\Phi\circ T$ is measurable. Since
 
 $$
 G_{f}=\left\{\left(x,y\right):f\left(x\right)-y\ge0\right\}=\left(f-y\right)^{-1}\left(\left[0,\infty\right]\right),
@@ -102,7 +102,7 @@ $$
 
 a preimage of a measurable function, by **Definition 10.1.1 (Product $\sigma$-Algebra)**, $G_{f}\in\mathcal M\otimes\mathcal B_{\mathbb R}$.
 
-**Measure value.** By **Theorem 10.2.2 (Tonelli's Theorem)** (nonnegative characteristic function, $\mu\times m$ is $\sigma$-finite),
+Measure value. By **Theorem 10.2.2 (Tonelli's Theorem)** (nonnegative characteristic function, $\mu\times m$ is $\sigma$-finite),
 
 $$
 \left(\mu\times m\right)\left(G_{f}\right)=\int_{X}m\left(\left(G_{f}\right)_{x}\right)\mathrm{d}\mu\left(x\right),
@@ -118,9 +118,9 @@ If $f\in L^{1}\left(m\right)$ and $\varepsilon> 0$, then there is a simple funct
 
 ### Solution to 3
 
-**Simple-function part.** By **Theorem 8.2.16 (Integrable Simple Functions Are Dense in $L^{1}$)**, there is an integrable simple function $\varphi=\sum_{j}a_{j}\chi_{E_{j}}$ with $\int\left|f-\varphi\right|< \varepsilon/2$. For the terms with $a_{j}\ne0$, since $\int a_{j}\chi_{E_{j}}\,\mathrm{d}m=a_{j}m\left(E_{j}\right)< \infty$, we have $m\left(E_{j}\right)< \infty$ (otherwise the integral diverges, contradicting integrability). By **Theorem 11.1.1 (Regularity of Lebesgue Measure and Rectangle Approximation)** (b), for each such $E_{j}$ there are finitely many pairwise-disjoint rectangles $\left\{R_{j,k}\right\}$ with interval sides such that $m\left(E_{j}\triangle\bigcup_{k}R_{j,k}\right)$ is arbitrarily small. Thus $\chi_{E_{j}}$ and $\chi_{R_{j}}$ (with $R_{j}=\bigcup_{k}R_{j,k}$) are arbitrarily close in $L^{1}$; taking the approximation errors small enough and combining over all $j$, we obtain a simple function $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ with $\int\left|\varphi-\varphi'\right|< \varepsilon/2$. Hence $\int\left|f-\varphi'\right|\le\int\left|f-\varphi\right|+\int\left|\varphi-\varphi'\right|< \varepsilon$.
+Simple-function part. By **Theorem 8.2.16 (Integrable Simple Functions Are Dense in $L^{1}$)**, there is an integrable simple function $\varphi=\sum_{j}a_{j}\chi_{E_{j}}$ with $\int\left|f-\varphi\right|< \varepsilon/2$. For the terms with $a_{j}\ne0$, since $\int a_{j}\chi_{E_{j}}\,\mathrm{d}m=a_{j}m\left(E_{j}\right)< \infty$, we have $m\left(E_{j}\right)< \infty$ (otherwise the integral diverges, contradicting integrability). By **Theorem 11.1.1 (Regularity of Lebesgue Measure and Rectangle Approximation)** (b), for each such $E_{j}$ there are finitely many pairwise-disjoint rectangles $\left\{R_{j,k}\right\}$ with interval sides such that $m\left(E_{j}\triangle\bigcup_{k}R_{j,k}\right)$ is arbitrarily small. Thus $\chi_{E_{j}}$ and $\chi_{R_{j}}$ (with $R_{j}=\bigcup_{k}R_{j,k}$) are arbitrarily close in $L^{1}$; taking the approximation errors small enough and combining over all $j$, we obtain a simple function $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ with $\int\left|\varphi-\varphi'\right|< \varepsilon/2$. Hence $\int\left|f-\varphi'\right|\le\int\left|f-\varphi\right|+\int\left|\varphi-\varphi'\right|< \varepsilon$.
 
-**Continuous-function part.** Let $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ be as obtained above, each $R_{j}$ a bounded closed rectangle. By Continuous Approximation of Characteristic Functions, for each $R_{j}$ there is a continuous compactly supported $g_{j}$ with $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ arbitrarily small. Taking the errors small enough and setting $g=\sum_{j}a_{j}g_{j}$, $g$ is continuous, supported in $\bigcup_{j}R_{j}$ (bounded), and $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|< \varepsilon/2$. Hence $\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|< \varepsilon$, and $g$ vanishes outside a bounded set. $\blacksquare$
+Continuous-function part. Let $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ be as obtained above, each $R_{j}$ a bounded closed rectangle. By Continuous Approximation of Characteristic Functions, for each $R_{j}$ there is a continuous compactly supported $g_{j}$ with $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ arbitrarily small. Taking the errors small enough and setting $g=\sum_{j}a_{j}g_{j}$, $g$ is continuous, supported in $\bigcup_{j}R_{j}$ (bounded), and $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|< \varepsilon/2$. Hence $\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|< \varepsilon$, and $g$ vanishes outside a bounded set. $\blacksquare$
 
 ## 4
 
@@ -134,13 +134,13 @@ If $f\in L^{1}\left(m\right)$ and $\varepsilon> 0$, then there is a simple funct
 
 First treat the three elementary transformations, then combine.
 
-**Dilation** $T_{1}\left(x_{1},\dots,x_{j},\dots,x_{n}\right)=\left(x_{1},\dots,cx_{j},\dots,x_{n}\right)$ ($c\ne0$). By Invariance Under Translation and Dilation in One Dimension and the product structure, dilating one coordinate while fixing the others gives $m\left(T_{1}\left(E\right)\right)=\left|c\right|m\left(E\right)$ and $\int f\circ T_{1}\left(x\right)\mathrm{d}x=\frac{1}{\left|c\right|}\int f\left(x\right)\mathrm{d}x$, i.e. $\int f\left(x\right)\mathrm{d}x=\left|\det T_{1}\right|\int f\circ T_{1}\left(x\right)\mathrm{d}x$.
+Dilation $T_{1}\left(x_{1},\dots,x_{j},\dots,x_{n}\right)=\left(x_{1},\dots,cx_{j},\dots,x_{n}\right)$ ($c\ne0$). By Invariance Under Translation and Dilation in One Dimension and the product structure, dilating one coordinate while fixing the others gives $m\left(T_{1}\left(E\right)\right)=\left|c\right|m\left(E\right)$ and $\int f\circ T_{1}\left(x\right)\mathrm{d}x=\frac{1}{\left|c\right|}\int f\left(x\right)\mathrm{d}x$, i.e. $\int f\left(x\right)\mathrm{d}x=\left|\det T_{1}\right|\int f\circ T_{1}\left(x\right)\mathrm{d}x$.
 
-**Shear** $T_{2}\left(x_{1},\dots,x_{j},\dots,x_{n}\right)=\left(x_{1},\dots,x_{j}+cx_{k},\dots,x_{n}\right)$ ($k\ne j$). By Invariance Under Translation and Dilation in One Dimension applied slicewise, $m\left(T_{2}\left(E\right)\right)=m\left(E\right)$ and $\int f\circ T_{2}\left(x\right)\mathrm{d}x=\int f\left(x\right)\mathrm{d}x$. Since $\det T_{2}=1$, the formula holds.
+Shear $T_{2}\left(x_{1},\dots,x_{j},\dots,x_{n}\right)=\left(x_{1},\dots,x_{j}+cx_{k},\dots,x_{n}\right)$ ($k\ne j$). By Invariance Under Translation and Dilation in One Dimension applied slicewise, $m\left(T_{2}\left(E\right)\right)=m\left(E\right)$ and $\int f\circ T_{2}\left(x\right)\mathrm{d}x=\int f\left(x\right)\mathrm{d}x$. Since $\det T_{2}=1$, the formula holds.
 
-**Swap** $T_{3}$ swaps two coordinates, $\det T_{3}=-1$. By the symmetry of $m$ as a product measure, $m\left(T_{3}\left(E\right)\right)=m\left(E\right)$ and $\int f\circ T_{3}\left(x\right)\mathrm{d}x=\int f\left(x\right)\mathrm{d}x$, and $\left|\det T_{3}\right|=1$, so the formula holds.
+Swap $T_{3}$ swaps two coordinates, $\det T_{3}=-1$. By the symmetry of $m$ as a product measure, $m\left(T_{3}\left(E\right)\right)=m\left(E\right)$ and $\int f\circ T_{3}\left(x\right)\mathrm{d}x=\int f\left(x\right)\mathrm{d}x$, and $\left|\det T_{3}\right|=1$, so the formula holds.
 
-**General case.** By elementary linear algebra, each $T\in GL\left(n,\mathbb R\right)$ is a finite product $T=T_{1}\circ\cdots\circ T_{k}$ of the three elementary transformations above (an invertible matrix reduces to the identity by row operations). For each elementary transform the above holds, and determinants multiply: $\left|\det T\right|=\prod_{i}\left|\det T_{i}\right|$. Substituting successively,
+General case. By elementary linear algebra, each $T\in GL\left(n,\mathbb R\right)$ is a finite product $T=T_{1}\circ\cdots\circ T_{k}$ of the three elementary transformations above (an invertible matrix reduces to the identity by row operations). For each elementary transform the above holds, and determinants multiply: $\left|\det T\right|=\prod_{i}\left|\det T_{i}\right|$. Substituting successively,
 
 $$
 \int f\left(x\right)\mathrm{d}x=\left|\det T_{1}\right|\int f\circ T_{1}\left(x\right)\mathrm{d}x=\cdots=\left|\det T\right|\int f\circ T\left(x\right)\mathrm{d}x,
@@ -148,7 +148,7 @@ $$
 
 which is (a). Measurability: $T$ is continuous, and by Invertible Linear Maps Preserve Measurability and Null Sets, $f\circ T$ is measurable and $T\left(E\right)\in\mathcal L^{n}$.
 
-**Proof of (b).** Take $f=\chi_{T\left(E\right)}$ in (a):
+Proof of (b). Take $f=\chi_{T\left(E\right)}$ in (a):
 
 $$
 m\left(T\left(E\right)\right)=\int\chi_{T\left(E\right)}\left(x\right)\mathrm{d}x=\left|\det T\right|\int\chi_{T\left(E\right)}\circ T\left(x\right)\mathrm{d}x=\left|\det T\right|\int\chi_{E}\left(x\right)\mathrm{d}x=\left|\det T\right|m\left(E\right).
@@ -168,7 +168,7 @@ Let $E=\left[0,1\right]\times\left[0,1\right]$. Study the existence and equality
 
 ### Solution to 5
 
-**(a).** $\left|f\left(x,y\right)\right|=\frac{\left|x^{2}-y^{2}\right|}{\left(x^{2}+y^{2}\right)^{2}}\le\frac{x^{2}+y^{2}}{\left(x^{2}+y^{2}\right)^{2}}=\frac{1}{x^{2}+y^{2}}$. On $E$, $\int_{E}\frac{1}{x^{2}+y^{2}}\mathrm{d}x\,\mathrm{d}y$ diverges (in polar coordinates, $\int_{0}^{\delta}\int_{0}^{\pi/2}\frac{1}{r^{2}}r\,\mathrm{d}\theta\,\mathrm{d}r=\frac{\pi}{2}\int_{0}^{\delta}\frac{1}{r}\mathrm{d}r=\infty$), so $\int_{E}\left|f\right|=\infty$, $f\notin L^{1}$, and $\int_{E}f\,\mathrm{d}m^{2}$ is undefined.
+(a). $\left|f\left(x,y\right)\right|=\frac{\left|x^{2}-y^{2}\right|}{\left(x^{2}+y^{2}\right)^{2}}\le\frac{x^{2}+y^{2}}{\left(x^{2}+y^{2}\right)^{2}}=\frac{1}{x^{2}+y^{2}}$. On $E$, $\int_{E}\frac{1}{x^{2}+y^{2}}\mathrm{d}x\,\mathrm{d}y$ diverges (in polar coordinates, $\int_{0}^{\delta}\int_{0}^{\pi/2}\frac{1}{r^{2}}r\,\mathrm{d}\theta\,\mathrm{d}r=\frac{\pi}{2}\int_{0}^{\delta}\frac{1}{r}\mathrm{d}r=\infty$), so $\int_{E}\left|f\right|=\infty$, $f\notin L^{1}$, and $\int_{E}f\,\mathrm{d}m^{2}$ is undefined.
 
 First integrating in $x$. Fix $y$, set $x=yt$; then $\int_{0}^{1}\frac{x^{2}-y^{2}}{\left(x^{2}+y^{2}\right)^{2}}\mathrm{d}x=\frac{1}{y}\int_{0}^{1/y}\frac{t^{2}-1}{\left(t^{2}+1\right)^{2}}\mathrm{d}t$. Since $\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{t}{t^{2}+1}\right)=\frac{1-t^{2}}{\left(t^{2}+1\right)^{2}}$, we have $\int\frac{t^{2}-1}{\left(t^{2}+1\right)^{2}}\mathrm{d}t=-\frac{t}{t^{2}+1}+C$, so the inner integral $=\frac{1}{y}\left[-\frac{t}{t^{2}+1}\right]_{0}^{1/y}=-\frac{1}{y^{2}+1}$. Hence $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=\int_{0}^{1}-\frac{1}{1+y^{2}}\mathrm{d}y=-\left[\arctan y\right]_{0}^{1}=-\frac{\pi}{4}$.
 
@@ -176,13 +176,13 @@ First integrating in $y$. Symmetrically, fix $x$, set $y=xt$; the inner integral
 
 Conclusion: $\int_{E}f\,\mathrm{d}m^{2}$ does not exist; $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=-\frac{\pi}{4}$ and $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=\frac{\pi}{4}$ exist but are unequal and opposite in sign. Since $f\notin L^{1}$, **Theorem 10.2.1 (Fubini's Theorem)** does not apply, and the iterated integrals cannot be exchanged.
 
-**(b).** $f\ge0$. Fix $y$; the inner integral $\int_{0}^{1}\left(1-xy\right)^{-a}\mathrm{d}x=\frac{1}{y}\cdot\frac{1-\left(1-y\right)^{1-a}}{1-a}$ (when $a\ne1$), and for $a=1$ the inner integral $=-\frac{\ln\left(1-y\right)}{y}$. For $0< a< 1$, the inner integral tends to $1$ as $y\to0$ and to $\frac{1}{1-a}$ as $y\to1$ (since $\left(1-y\right)^{1-a}\to0$), hence is bounded, and $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y< \infty$. For $a=1$, $\int_{0}^{1}-\frac{\ln\left(1-y\right)}{y}\mathrm{d}y=\sum_{k=1}^{\infty}\frac{1}{k^{2}}=\frac{\pi^{2}}{6}< \infty$. Thus for $0< a\le1$, $f\in L^{1}$, and by **Theorem 10.2.2 (Tonelli's Theorem)**, all three integrals exist and agree.
+(b). $f\ge0$. Fix $y$; the inner integral $\int_{0}^{1}\left(1-xy\right)^{-a}\mathrm{d}x=\frac{1}{y}\cdot\frac{1-\left(1-y\right)^{1-a}}{1-a}$ (when $a\ne1$), and for $a=1$ the inner integral $=-\frac{\ln\left(1-y\right)}{y}$. For $0< a< 1$, the inner integral tends to $1$ as $y\to0$ and to $\frac{1}{1-a}$ as $y\to1$ (since $\left(1-y\right)^{1-a}\to0$), hence is bounded, and $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y< \infty$. For $a=1$, $\int_{0}^{1}-\frac{\ln\left(1-y\right)}{y}\mathrm{d}y=\sum_{k=1}^{\infty}\frac{1}{k^{2}}=\frac{\pi^{2}}{6}< \infty$. Thus for $0< a\le1$, $f\in L^{1}$, and by **Theorem 10.2.2 (Tonelli's Theorem)**, all three integrals exist and agree.
 
 For $a> 1$, the inner integral $\frac{1}{y}\cdot\frac{1-\left(1-y\right)^{1-a}}{1-a}$; since $1-a< 0$ and $\left(1-y\right)^{1-a}\to\infty$ as $y\to1$, the inner integral tends to $+\infty$, so $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=+\infty$; symmetrically $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=+\infty$, and $\int_{E}f\,\mathrm{d}m^{2}=+\infty$.
 
 Conclusion: for $0< a\le1$, the three integrals exist and agree, $f\in L^{1}$; for $a> 1$, all three are $+\infty$, $f\notin L^{1}$.
 
-**(c).** The region is $\left\{\left(x,y\right):0< y< x< 1\right\}$. $\left|f\right|=\left(x-y\right)^{-3}$. First integrating in $x$, $\int_{y}^{1}\left(x-y\right)^{-3}\mathrm{d}x=\left[-\frac{1}{2}\left(x-y\right)^{-2}\right]_{y}^{1}=+\infty$, so $\int_{E}\left|f\right|=\infty$, $f\notin L^{1}$, and $\int_{E}f\,\mathrm{d}m^{2}$ is undefined.
+(c). The region is $\left\{\left(x,y\right):0< y< x< 1\right\}$. $\left|f\right|=\left(x-y\right)^{-3}$. First integrating in $x$, $\int_{y}^{1}\left(x-y\right)^{-3}\mathrm{d}x=\left[-\frac{1}{2}\left(x-y\right)^{-2}\right]_{y}^{1}=+\infty$, so $\int_{E}\left|f\right|=\infty$, $f\notin L^{1}$, and $\int_{E}f\,\mathrm{d}m^{2}$ is undefined.
 
 First integrating in $x$: fix $y$, $\int_{y}^{1}\left(x-y\right)^{-3}\mathrm{d}x=\left[-\frac{1}{2}\left(x-y\right)^{-2}\right]_{y}^{1}$; since $\lim_{x\to y^{+}}\left(x-y\right)^{-2}=\infty$, the inner integral $=+\infty$, so $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=+\infty$.
 

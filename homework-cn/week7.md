@@ -199,9 +199,9 @@ $$
 
 ### 解答 5
 
-**$\mathcal E$ 是代数.** 由矩形代数的交补性质, 可测矩形之交仍是可测矩形, 可测矩形之补是两个可测矩形之并. 空集 $\emptyset$ 与全空间 $X\times Y$ 都在 $\mathcal E$ 中. 对 $\mathcal E$ 中元素做补,交,并运算, 先把每个元素写成有限不交矩形并, 再由矩形之交仍是矩形,公共细分后两两不交, 得到的结果仍是有限不交矩形并, 仍属于 $\mathcal E$. 故 $\mathcal E$ 是一个代数.
+$\mathcal E$ 是代数. 由矩形代数的交补性质, 可测矩形之交仍是可测矩形, 可测矩形之补是两个可测矩形之并. 空集 $\emptyset$ 与全空间 $X\times Y$ 都在 $\mathcal E$ 中. 对 $\mathcal E$ 中元素做补,交,并运算, 先把每个元素写成有限不交矩形并, 再由矩形之交仍是矩形,公共细分后两两不交, 得到的结果仍是有限不交矩形并, 仍属于 $\mathcal E$. 故 $\mathcal E$ 是一个代数.
 
-**$\pi$ 良定义.** 设 $E=\bigcup_{i=1}^{m}A_{i}\times B_{i}=\bigcup_{j=1}^{n}C_{j}\times D_{j}$ 是 $E$ 的两种两两不交矩形分解. 对公共细分 $\left\{\left(A_{i}\cap C_{j}\right)\times\left(B_{i}\cap D_{j}\right)\right\}_{i,j}$, 由 $\mu,\nu$ 的有限可加性,
+$\pi$ 良定义. 设 $E=\bigcup_{i=1}^{m}A_{i}\times B_{i}=\bigcup_{j=1}^{n}C_{j}\times D_{j}$ 是 $E$ 的两种两两不交矩形分解. 对公共细分 $\left\{\left(A_{i}\cap C_{j}\right)\times\left(B_{i}\cap D_{j}\right)\right\}_{i,j}$, 由 $\mu,\nu$ 的有限可加性,
 
 $$
 \sum_{i=1}^{m}\mu\left(A_{i}\right)\nu\left(B_{i}\right)=\sum_{i,j}\mu\left(A_{i}\cap C_{j}\right)\nu\left(B_{i}\cap D_{j}\right)=\sum_{j=1}^{n}\mu\left(C_{j}\right)\nu\left(D_{j}\right),
@@ -209,7 +209,7 @@ $$
 
 故 $\pi\left(E\right)$ 与分解无关.
 
-**$\pi$ 是 $\mathcal E$ 上的准测度.** 由**定理 10.1.4 (乘积测度的存在唯一性)**, $\mu\times\nu$ 是 $\left(X\times Y,\mathcal A\otimes\mathcal B\right)$ 上的测度且对矩形取 $\mu\left(A\right)\nu\left(B\right)$; 对有限不交矩形并 $\bigcup_{i=1}^{n}A_{i}\times B_{i}$, 由测度的有限可加性,
+$\pi$ 是 $\mathcal E$ 上的准测度. 由**定理 10.1.4 (乘积测度的存在唯一性)**, $\mu\times\nu$ 是 $\left(X\times Y,\mathcal A\otimes\mathcal B\right)$ 上的测度且对矩形取 $\mu\left(A\right)\nu\left(B\right)$; 对有限不交矩形并 $\bigcup_{i=1}^{n}A_{i}\times B_{i}$, 由测度的有限可加性,
 
 $$
 \left(\mu\times\nu\right)\left(\bigcup_{i=1}^{n}A_{i}\times B_{i}\right)=\sum_{i=1}^{n}\mu\left(A_{i}\right)\nu\left(B_{i}\right)=\pi\left(E\right),
@@ -223,7 +223,7 @@ $$
 
 故 $\pi$ 是 $\mathcal E$ 上的准测度 (**定义 6.2.1 (准测度)**).
 
-**唯一延拓与乘积测度一致.** 由**定义 10.1.1 (乘积 $\sigma$-代数)**, $\mathcal E$ 由所有可测矩形生成, 故 $\sigma\left(\mathcal E\right)=\mathcal A\otimes\mathcal B$. 因 $\mu,\nu$ $\sigma$-有限, 可取 $X=\bigcup_{p}X_{p}$, $Y=\bigcup_{q}Y_{q}$ 使 $\mu\left(X_{p}\right),\nu\left(Y_{q}\right)< \infty$, 则矩形 $X_{p}\times Y_{q}$ 覆盖 $X\times Y$ 且 $\pi\left(X_{p}\times Y_{q}\right)< \infty$, 故 $\pi$ 是 $\sigma$-有限的. 由**定理 6.3.3 (卡拉西奥多里定理)** (准测度的唯一延拓), $\pi$ 在 $\sigma\left(\mathcal E\right)$ 上有唯一延拓. 该延拓在 $\mathcal E$ 上等于 $\pi=\left(\mu\times\nu\right)|_{\mathcal E}$, 故在整个 $\sigma\left(\mathcal E\right)=\mathcal A\otimes\mathcal B$ 上等于 $\mu\times\nu$. 即与**定理 10.1.4 (乘积测度的存在唯一性)** 中定义的乘积测度一致. $\blacksquare$
+唯一延拓与乘积测度一致. 由**定义 10.1.1 (乘积 $\sigma$-代数)**, $\mathcal E$ 由所有可测矩形生成, 故 $\sigma\left(\mathcal E\right)=\mathcal A\otimes\mathcal B$. 因 $\mu,\nu$ $\sigma$-有限, 可取 $X=\bigcup_{p}X_{p}$, $Y=\bigcup_{q}Y_{q}$ 使 $\mu\left(X_{p}\right),\nu\left(Y_{q}\right)< \infty$, 则矩形 $X_{p}\times Y_{q}$ 覆盖 $X\times Y$ 且 $\pi\left(X_{p}\times Y_{q}\right)< \infty$, 故 $\pi$ 是 $\sigma$-有限的. 由**定理 6.3.3 (卡拉西奥多里定理)** (准测度的唯一延拓), $\pi$ 在 $\sigma\left(\mathcal E\right)$ 上有唯一延拓. 该延拓在 $\mathcal E$ 上等于 $\pi=\left(\mu\times\nu\right)|_{\mathcal E}$, 故在整个 $\sigma\left(\mathcal E\right)=\mathcal A\otimes\mathcal B$ 上等于 $\mu\times\nu$. 即与**定理 10.1.4 (乘积测度的存在唯一性)** 中定义的乘积测度一致. $\blacksquare$
 
 ## 6
 

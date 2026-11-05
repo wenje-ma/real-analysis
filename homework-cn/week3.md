@@ -138,7 +138,7 @@ $$
 
 ### 解答 1
 
-**(a)** $E=\left(E\cap F\right)\cup\left(E\setminus F\right)$, $F=\left(E\cap F\right)\cup\left(F\setminus E\right)$ 均为两两不交分解, 由**命题 5.2.1 (有限可加性)**,
+(a) $E=\left(E\cap F\right)\cup\left(E\setminus F\right)$, $F=\left(E\cap F\right)\cup\left(F\setminus E\right)$ 均为两两不交分解, 由**命题 5.2.1 (有限可加性)**,
 
 $$
 \mu\left(E\right)=\mu\left(E\cap F\right)+\mu\left(E\setminus F\right),\qquad\mu\left(F\right)=\mu\left(E\cap F\right)+\mu\left(F\setminus E\right).
@@ -146,17 +146,17 @@ $$
 
 又 $E\setminus F\subset E\triangle F$, $F\setminus E\subset E\triangle F$, 由**命题 5.2.2 (单调性)**, $\mu\left(E\setminus F\right)\le\mu\left(E\triangle F\right)=0$, 同理 $\mu\left(F\setminus E\right)=0$. 故 $\mu\left(E\right)=\mu\left(E\cap F\right)=\mu\left(F\right)$. $\blacksquare$
 
-**(b)** 验证等价关系的三条性质:
+(b) 验证等价关系的三条性质:
 
-(1) **自反性**: $\mu\left(E\triangle E\right)=\mu\left(\varnothing\right)=0$, 故 $E\sim E$.
+(1) 自反性: $\mu\left(E\triangle E\right)=\mu\left(\varnothing\right)=0$, 故 $E\sim E$.
 
-(2) **对称性**: $E\triangle F=F\triangle E$, 故 $E\sim F\iff F\sim E$.
+(2) 对称性: $E\triangle F=F\triangle E$, 故 $E\sim F\iff F\sim E$.
 
-(3) **传递性**: 因 $E\triangle G\subset\left(E\triangle F\right)\cup\left(F\triangle G\right)$, 由**命题 5.2.3 (次可数可加性)**, $\mu\left(E\triangle G\right)\le\mu\left(E\triangle F\right)+\mu\left(F\triangle G\right)=0$, 故 $E\sim G$.
+(3) 传递性: 因 $E\triangle G\subset\left(E\triangle F\right)\cup\left(F\triangle G\right)$, 由**命题 5.2.3 (次可数可加性)**, $\mu\left(E\triangle G\right)\le\mu\left(E\triangle F\right)+\mu\left(F\triangle G\right)=0$, 故 $E\sim G$.
 
 故 $\sim$ 是 $\mathcal M$ 上的等价关系. $\blacksquare$
 
-**(c)** 对称性与非负性显然: $\rho\left(E,F\right)=\rho\left(F,E\right)\ge0$, $\rho\left(E,E\right)=0$. 又 $E\triangle G\subset\left(E\triangle F\right)\cup\left(F\triangle G\right)$, 由**命题 5.2.3 (次可数可加性)**,
+(c) 对称性与非负性显然: $\rho\left(E,F\right)=\rho\left(F,E\right)\ge0$, $\rho\left(E,E\right)=0$. 又 $E\triangle G\subset\left(E\triangle F\right)\cup\left(F\triangle G\right)$, 由**命题 5.2.3 (次可数可加性)**,
 
 $$
 \rho\left(E,G\right)=\mu\left(E\triangle G\right)\le\mu\left(E\triangle F\right)+\mu\left(F\triangle G\right)=\rho\left(E,F\right)+\rho\left(F,G\right).
@@ -176,13 +176,13 @@ $$
 
 (1) 设 $\mathcal E\subset\mathcal P\left(X\right)$ 是代数, $\mu_{0}$ 是 $\mathcal E$ 上 $\sigma$-有限的准测度, $\mu^{*}$ 是由 $\mu_{0}$ 生成的外测度, $\mathcal M$ 是 $\mu^{*}$-可测集全体. 证明 $\mu^{*}|_{\mathcal M}$ 是 $\mu_{0}$ 到 $\mathcal M$ 的唯一延拓.
 
-**17.** 设 $\mu^{*}$ 是 $X$ 上的外测度, $\left\{A_{j}\right\}_{j=1}^{\infty}$ 是一列两两不交的 $\mu^{*}$-可测集. 证明对任意 $E\subset X$, 有
+17. 设 $\mu^{*}$ 是 $X$ 上的外测度, $\left\{A_{j}\right\}_{j=1}^{\infty}$ 是一列两两不交的 $\mu^{*}$-可测集. 证明对任意 $E\subset X$, 有
 
 $$
 \mu^{*}\left(E\cap\bigcup_{j=1}^{\infty}A_{j}\right)=\sum_{j=1}^{\infty}\mu^{*}\left(E\cap A_{j}\right).
 $$
 
-**24.** 设 $\mu$ 是 $\left(X,\mathcal M\right)$ 上的有限测度, $\mu^{*}$ 是由 $\mu$ 诱导的外测度. 设 $E\subset X$ 满足 $\mu^{*}\left(E\right)=\mu^{*}\left(X\right)$ (但 $E$ 未必属于 $\mathcal M$).
+24. 设 $\mu$ 是 $\left(X,\mathcal M\right)$ 上的有限测度, $\mu^{*}$ 是由 $\mu$ 诱导的外测度. 设 $E\subset X$ 满足 $\mu^{*}\left(E\right)=\mu^{*}\left(X\right)$ (但 $E$ 未必属于 $\mathcal M$).
 
 (a) 若 $A,B\in\mathcal M$ 且 $A\cap E=B\cap E$, 则 $\mu\left(A\right)=\mu\left(B\right)$.
 
@@ -190,11 +190,11 @@ $$
 
 ### 解答 2
 
-**(1) 唯一性.** 由**定义 6.2.1 (准测度)**, $\mu_{0}$ 是代数 $\mathcal E$ 上的准测度. 先证 $\mu^{*}|_{\mathcal M}$ 确是 $\mu_{0}$ 的延拓: 由**定理 6.2.2 (由准测度生成外测度)**, $\mu^{*}|_{\mathcal E}=\mu_{0}$; 由**引理 6.3.2 (代数含于可测集)**, $\mathcal E\subset\mathcal M$; 由**定理 6.3.3 (卡拉西奥多里定理)** (1)(2), $\mathcal M$ 是 $\sigma$-代数且 $\mu^{*}|_{\mathcal M}$ 是完备测度. 故 $\mu^{*}|_{\mathcal M}$ 是 $\mu_{0}$ 到 $\mathcal M$ 的测度延拓.
+(1) 唯一性. 由**定义 6.2.1 (准测度)**, $\mu_{0}$ 是代数 $\mathcal E$ 上的准测度. 先证 $\mu^{*}|_{\mathcal M}$ 确是 $\mu_{0}$ 的延拓: 由**定理 6.2.2 (由准测度生成外测度)**, $\mu^{*}|_{\mathcal E}=\mu_{0}$; 由**引理 6.3.2 (代数含于可测集)**, $\mathcal E\subset\mathcal M$; 由**定理 6.3.3 (卡拉西奥多里定理)** (1)(2), $\mathcal M$ 是 $\sigma$-代数且 $\mu^{*}|_{\mathcal M}$ 是完备测度. 故 $\mu^{*}|_{\mathcal M}$ 是 $\mu_{0}$ 到 $\mathcal M$ 的测度延拓.
 
 再证唯一性. 设 $\nu$ 是 $\mathcal M$ 上任一满足 $\nu|_{\mathcal E}=\mu_{0}$ 的测度, 我们证明 $\nu=\mu^{*}|_{\mathcal M}$. 先设 $\mu_{0}\left(X\right)< \infty$.
 
-**步骤 1: $\nu\le\mu^{*}$ 在 $\mathcal M$ 上.** 对任意 $A\in\mathcal M$ 和 $\varepsilon> 0$, 由**定理 6.2.2 (由准测度生成外测度)** 中 $\mu^{*}$ 的定义, 存在 $\left\{E_{n}\right\}\subset\mathcal E$ 覆盖 $A$ 使 $\sum_{n}\mu_{0}\left(E_{n}\right)\le\mu^{*}\left(A\right)+\varepsilon$. 由 $\nu$ 的次可数可加性 (**命题 5.2.3 (次可数可加性)**) 及 $\nu|_{\mathcal E}=\mu_{0}$,
+步骤 1: $\nu\le\mu^{*}$ 在 $\mathcal M$ 上. 对任意 $A\in\mathcal M$ 和 $\varepsilon> 0$, 由**定理 6.2.2 (由准测度生成外测度)** 中 $\mu^{*}$ 的定义, 存在 $\left\{E_{n}\right\}\subset\mathcal E$ 覆盖 $A$ 使 $\sum_{n}\mu_{0}\left(E_{n}\right)\le\mu^{*}\left(A\right)+\varepsilon$. 由 $\nu$ 的次可数可加性 (**命题 5.2.3 (次可数可加性)**) 及 $\nu|_{\mathcal E}=\mu_{0}$,
 
 $$
 \nu\left(A\right)\le\sum_{n}\nu\left(E_{n}\right)=\sum_{n}\mu_{0}\left(E_{n}\right)\le\mu^{*}\left(A\right)+\varepsilon.
@@ -202,9 +202,9 @@ $$
 
 由 $\varepsilon$ 的任意性, $\nu\left(A\right)\le\mu^{*}\left(A\right)$.
 
-**步骤 2: $\nu=\mu^{*}$ 在 $\sigma\left(\mathcal E\right)$ 上.** 令 $\mathcal H=\left\{A\in\sigma\left(\mathcal E\right):\nu\left(A\right)=\mu^{*}\left(A\right)\right\}$. 对 $E\in\mathcal E$, 由**定理 6.2.2 (由准测度生成外测度)** 与 $\nu|_{\mathcal E}=\mu_{0}$ 得 $\mu^{*}\left(E\right)=\mu_{0}\left(E\right)=\nu\left(E\right)$, 故 $\mathcal E\subset\mathcal H$. 验证 $\mathcal H$ 是单调类 (**定义 4.4.1 (单调类)**): 若 $\left\{A_{n}\right\}\subset\mathcal H$ 且 $A_{n}\uparrow A$, 由 $\nu,\mu^{*}|_{\mathcal M}$ 的下连续性 (**命题 5.2.4 (下连续性)**; $\sigma\left(\mathcal E\right)\subset\mathcal M$) 得 $\nu\left(A\right)=\lim_{n}\nu\left(A_{n}\right)=\lim_{n}\mu^{*}\left(A_{n}\right)=\mu^{*}\left(A\right)$, 故 $A\in\mathcal H$; 递减情形同理 (此处 $\mu^{*}\left(A_{1}\right)\le\mu^{*}\left(X\right)=\mu_{0}\left(X\right)< \infty$, 上连续性可用). 故 $\mathcal H$ 是包含代数 $\mathcal E$ 的单调类, 由**定理 4.4.2 (单调类定理)**, $\sigma\left(\mathcal E\right)\subset\mathcal H$, 即 $\nu=\mu^{*}$ 在 $\sigma\left(\mathcal E\right)$ 上.
+步骤 2: $\nu=\mu^{*}$ 在 $\sigma\left(\mathcal E\right)$ 上. 令 $\mathcal H=\left\{A\in\sigma\left(\mathcal E\right):\nu\left(A\right)=\mu^{*}\left(A\right)\right\}$. 对 $E\in\mathcal E$, 由**定理 6.2.2 (由准测度生成外测度)** 与 $\nu|_{\mathcal E}=\mu_{0}$ 得 $\mu^{*}\left(E\right)=\mu_{0}\left(E\right)=\nu\left(E\right)$, 故 $\mathcal E\subset\mathcal H$. 验证 $\mathcal H$ 是单调类 (**定义 4.4.1 (单调类)**): 若 $\left\{A_{n}\right\}\subset\mathcal H$ 且 $A_{n}\uparrow A$, 由 $\nu,\mu^{*}|_{\mathcal M}$ 的下连续性 (**命题 5.2.4 (下连续性)**; $\sigma\left(\mathcal E\right)\subset\mathcal M$) 得 $\nu\left(A\right)=\lim_{n}\nu\left(A_{n}\right)=\lim_{n}\mu^{*}\left(A_{n}\right)=\mu^{*}\left(A\right)$, 故 $A\in\mathcal H$; 递减情形同理 (此处 $\mu^{*}\left(A_{1}\right)\le\mu^{*}\left(X\right)=\mu_{0}\left(X\right)< \infty$, 上连续性可用). 故 $\mathcal H$ 是包含代数 $\mathcal E$ 的单调类, 由**定理 4.4.2 (单调类定理)**, $\sigma\left(\mathcal E\right)\subset\mathcal H$, 即 $\nu=\mu^{*}$ 在 $\sigma\left(\mathcal E\right)$ 上.
 
-**步骤 3: $\nu=\mu^{*}$ 在 $\mathcal M$ 上.** 对任意 $A\in\mathcal M$, 由步骤 1 得 $\nu\left(A\right)\le\mu^{*}\left(A\right)$. 又因 $X\in\mathcal E$ (**定义 4.1.1 (集合代数)**), $\nu\left(X\right)=\mu_{0}\left(X\right)=\mu^{*}\left(X\right)$. 由步骤 1 作用于 $A^{c}\in\mathcal M$ (因 $\mathcal M$ 是 $\sigma$-代数, **定理 6.3.3 (卡拉西奥多里定理)** (1)), 以及 $A\in\mathcal M$ 给出 $\mu^{*}\left(X\right)=\mu^{*}\left(A\right)+\mu^{*}\left(A^{c}\right)$ (**定义 6.3.1 (卡拉西奥多里条件)** 于 $T=X$),
+步骤 3: $\nu=\mu^{*}$ 在 $\mathcal M$ 上. 对任意 $A\in\mathcal M$, 由步骤 1 得 $\nu\left(A\right)\le\mu^{*}\left(A\right)$. 又因 $X\in\mathcal E$ (**定义 4.1.1 (集合代数)**), $\nu\left(X\right)=\mu_{0}\left(X\right)=\mu^{*}\left(X\right)$. 由步骤 1 作用于 $A^{c}\in\mathcal M$ (因 $\mathcal M$ 是 $\sigma$-代数, **定理 6.3.3 (卡拉西奥多里定理)** (1)), 以及 $A\in\mathcal M$ 给出 $\mu^{*}\left(X\right)=\mu^{*}\left(A\right)+\mu^{*}\left(A^{c}\right)$ (**定义 6.3.1 (卡拉西奥多里条件)** 于 $T=X$),
 
 $$
 \nu\left(A\right)=\nu\left(X\right)-\nu\left(A^{c}\right)=\mu^{*}\left(X\right)-\nu\left(A^{c}\right)\ge\mu^{*}\left(X\right)-\mu^{*}\left(A^{c}\right)=\mu^{*}\left(A\right).
@@ -212,7 +212,7 @@ $$
 
 故 $\nu\left(A\right)=\mu^{*}\left(A\right)$. 于是 $\mu_{0}\left(X\right)< \infty$ 时唯一性得证.
 
-**$\sigma$-有限情形.** 设 $\mu_{0}$ 是 $\sigma$-有限的, 即存在两两不交的 $X_{k}\in\mathcal E$ 使 $X=\bigcup_{k=1}^{\infty}X_{k}$ 且 $\mu_{0}\left(X_{k}\right)< \infty$. 对任意 $A\in\mathcal M$, 由可数可加性与下连续性,
+$\sigma$-有限情形. 设 $\mu_{0}$ 是 $\sigma$-有限的, 即存在两两不交的 $X_{k}\in\mathcal E$ 使 $X=\bigcup_{k=1}^{\infty}X_{k}$ 且 $\mu_{0}\left(X_{k}\right)< \infty$. 对任意 $A\in\mathcal M$, 由可数可加性与下连续性,
 
 $$
 \mu^{*}\left(A\right)=\sum_{k}\mu^{*}\left(A\cap X_{k}\right),\qquad\nu\left(A\right)=\sum_{k}\nu\left(A\cap X_{k}\right).
@@ -220,7 +220,7 @@ $$
 
 对每个 $k$, 把有限测度 $\mu_{0}\left(\cdot\cap X_{k}\right)$ 与 $\nu\left(\cdot\cap X_{k}\right)$ 限制在 $X_{k}$ 上即化为有限情形, 得 $\nu\left(A\cap X_{k}\right)=\mu^{*}\left(A\cap X_{k}\right)$. 求和得 $\nu\left(A\right)=\mu^{*}\left(A\right)$. 故 $\mu^{*}|_{\mathcal M}$ 是 $\mu_{0}$ 到 $\mathcal M$ 的唯一延拓. $\blacksquare$
 
-**(2) 习题 17.** 一方面, 由**定义 6.1.1 (外测度)** (3) (次可数可加性),
+(2) 习题 17. 一方面, 由**定义 6.1.1 (外测度)** (3) (次可数可加性),
 
 $$
 \mu^{*}\left(E\cap\bigcup_{j=1}^{\infty}A_{j}\right)\le\sum_{j=1}^{\infty}\mu^{*}\left(E\cap A_{j}\right).
@@ -246,7 +246,7 @@ $$
 
 合并即得等式. $\blacksquare$
 
-**(3) 习题 24.** (a) 由 $A\cap E=B\cap E$ 得 $\left(A\setminus B\right)\cap E=\varnothing$, 且 $A\setminus B\in\mathcal M$. 因 $A\setminus B$ 可测, 用**定义 6.3.1 (卡拉西奥多里条件)** 于 $T=X$:
+(3) 习题 24. (a) 由 $A\cap E=B\cap E$ 得 $\left(A\setminus B\right)\cap E=\varnothing$, 且 $A\setminus B\in\mathcal M$. 因 $A\setminus B$ 可测, 用**定义 6.3.1 (卡拉西奥多里条件)** 于 $T=X$:
 
 $$
 \mu^{*}\left(X\right)=\mu^{*}\left(X\cap\left(A\setminus B\right)\right)+\mu^{*}\left(X\cap\left(A\setminus B\right)^{c}\right)=\mu\left(A\setminus B\right)+\mu^{*}\left(X\setminus\left(A\setminus B\right)\right).

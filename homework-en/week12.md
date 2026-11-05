@@ -42,7 +42,7 @@ Let $F\left(x\right)=x^{2}\sin\left(x^{-1}\right)$ and $G\left(x\right)=x^{2}\si
 
 ### Solution to 1
 
-**(a).** For $x\ne0$, direct differentiation gives $F'\left(x\right)=2x\sin\left(x^{-1}\right)-\cos\left(x^{-1}\right)$ and $G'\left(x\right)=2x\sin\left(x^{-2}\right)-\frac{2}{x}\cos\left(x^{-2}\right)$. At $x=0$, use the definition:
+(a). For $x\ne0$, direct differentiation gives $F'\left(x\right)=2x\sin\left(x^{-1}\right)-\cos\left(x^{-1}\right)$ and $G'\left(x\right)=2x\sin\left(x^{-2}\right)-\frac{2}{x}\cos\left(x^{-2}\right)$. At $x=0$, use the definition:
 
 $$
 F'\left(0\right)=\lim_{h\to0}\frac{F\left(h\right)-F\left(0\right)}{h}=\lim_{h\to0}\frac{h^{2}\sin\left(h^{-1}\right)}{h}=\lim_{h\to0}h\sin\left(h^{-1}\right)=0,
@@ -50,7 +50,7 @@ $$
 
 where the last equality uses $\left|h\sin\left(h^{-1}\right)\right|\le\left|h\right|\to0$; similarly $G'\left(0\right)=\lim_{h\to0}\frac{h^{2}\sin\left(h^{-2}\right)}{h}=\lim_{h\to0}h\sin\left(h^{-2}\right)=0$. Hence $F,G$ are differentiable on all of $\mathbb R$ (including $x=0$).
 
-**(b).** First show $F\in BV\left(\left[-1,1\right]\right)$. By (a), for $x\ne0$, $\left|F'\left(x\right)\right|=\left|2x\sin\left(x^{-1}\right)-\cos\left(x^{-1}\right)\right|\le2\left|x\right|+1\le3$. Thus $F'$ is bounded on $\left[-1,1\right]$. By the mean value theorem, $\left|F\left(x\right)-F\left(y\right)\right|\le3\left|x-y\right|$, i.e. $F$ satisfies a Lipschitz condition, and by **Theorem 14.0.7 (Basic Properties of Bounded-Variation Functions)** (3), $F\in BV\left(\left[-1,1\right]\right)$.
+(b). First show $F\in BV\left(\left[-1,1\right]\right)$. By (a), for $x\ne0$, $\left|F'\left(x\right)\right|=\left|2x\sin\left(x^{-1}\right)-\cos\left(x^{-1}\right)\right|\le2\left|x\right|+1\le3$. Thus $F'$ is bounded on $\left[-1,1\right]$. By the mean value theorem, $\left|F\left(x\right)-F\left(y\right)\right|\le3\left|x-y\right|$, i.e. $F$ satisfies a Lipschitz condition, and by **Theorem 14.0.7 (Basic Properties of Bounded-Variation Functions)** (3), $F\in BV\left(\left[-1,1\right]\right)$.
 
 Now show $G\notin BV\left(\left[-1,1\right]\right)$. Take $x_{k}=\frac{1}{\sqrt{\pi/2+k\pi}}$ ($k=0,1,2,\dots$); then $x_{k}\downarrow0$ and $\sin\left(x_{k}^{-2}\right)=\sin\left(\pi/2+k\pi\right)=\left(-1\right)^{k}$, so $G\left(x_{k}\right)=\left(-1\right)^{k}x_{k}^{2}$. For the partition $0< x_{N}< \cdots< x_{0}$ (and the endpoint $0$), by the alternating signs,
 
@@ -90,7 +90,7 @@ Let $f:\left[a,b\right]\to\mathbb R$, and view the graph of $f$ as a subset of $
 
 ### Solution to 3
 
-**(a).** Set $F\left(t\right)=t+if\left(t\right)$. For a partition $a=t_{0}< \cdots< t_{n}=b$ of $\left[a,b\right]$, the distance between adjacent vertices $t_{j-1}+if\left(t_{j-1}\right)$ and $t_{j}+if\left(t_{j}\right)$ is
+(a). Set $F\left(t\right)=t+if\left(t\right)$. For a partition $a=t_{0}< \cdots< t_{n}=b$ of $\left[a,b\right]$, the distance between adjacent vertices $t_{j-1}+if\left(t_{j-1}\right)$ and $t_{j}+if\left(t_{j}\right)$ is
 
 $$
 \left|F\left(t_{j}\right)-F\left(t_{j-1}\right)\right|=\sqrt{\left(t_{j}-t_{j-1}\right)^{2}+\left(f\left(t_{j}\right)-f\left(t_{j-1}\right)\right)^{2}},
@@ -98,7 +98,7 @@ $$
 
 so the length of the inscribed polygon is exactly $\sum_{j=1}^{n}\left|F\left(t_{j}\right)-F\left(t_{j-1}\right)\right|$. Hence $L$ equals the supremum of this sum over all partitions, which is precisely the total variation $V_{a}^{b}\left(F\right)$ of $F$ on $\left[a,b\right]$ (**Definition 14.0.6 (Functions of Bounded Variation)**).
 
-**(b).** If $f\in AC\left(\left[a,b\right]\right)$ (**Definition 15.0.11 (Absolute Continuity)**), then both components of $F\left(t\right)=t+if\left(t\right)$, namely $t$ (the identity) and $f$, are absolutely continuous, so $F$ is absolutely continuous. By **Theorem 15.0.14 (Equivalent Characterization of Absolute Continuity)**, for almost every $t$, $F'\left(t\right)=\frac{\mathrm{d}}{\mathrm{d}t}\left(t+if\left(t\right)\right)=1+if'\left(t\right)$, and hence $\left|F'\left(t\right)\right|=\left(1+\left(f'\left(t\right)\right)^{2}\right)^{1/2}$. By Total Variation of an Absolutely Continuous Function,
+(b). If $f\in AC\left(\left[a,b\right]\right)$ (**Definition 15.0.11 (Absolute Continuity)**), then both components of $F\left(t\right)=t+if\left(t\right)$, namely $t$ (the identity) and $f$, are absolutely continuous, so $F$ is absolutely continuous. By **Theorem 15.0.14 (Equivalent Characterization of Absolute Continuity)**, for almost every $t$, $F'\left(t\right)=\frac{\mathrm{d}}{\mathrm{d}t}\left(t+if\left(t\right)\right)=1+if'\left(t\right)$, and hence $\left|F'\left(t\right)\right|=\left(1+\left(f'\left(t\right)\right)^{2}\right)^{1/2}$. By Total Variation of an Absolutely Continuous Function,
 
 $$
 L=V_{a}^{b}\left(F\right)=\int_{a}^{b}\left|F'\left(t\right)\right|\mathrm{d}t=\int_{a}^{b}\left[1+\left(f'\left(t\right)\right)^{2}\right]^{1/2}\mathrm{d}t.
@@ -136,7 +136,7 @@ A function $F:\left(a,b\right)\to\mathbb R$ ($-\infty\le a< b\le\infty$) is call
 
 Write the difference quotient $S\left(u,v\right)=\frac{F\left(v\right)-F\left(u\right)}{v-u}$ ($u< v$).
 
-**(a).** First prove $\Rightarrow$. Assume $F$ is convex. First establish two monotonicities of the difference quotient: fixing the left endpoint $s$, for $s< x_{1}< x_{2}$, convexity gives
+(a). First prove $\Rightarrow$. Assume $F$ is convex. First establish two monotonicities of the difference quotient: fixing the left endpoint $s$, for $s< x_{1}< x_{2}$, convexity gives
 
 $$
 F\left(x_{1}\right)\le\frac{x_{2}-x_{1}}{x_{2}-s}F\left(s\right)+\frac{x_{1}-s}{x_{2}-s}F\left(x_{2}\right),
@@ -154,13 +154,13 @@ Now given $s\le s'< t'$ and $s< t\le t'$. By the right-endpoint monotonicity, $S
 
 Now prove $\Leftarrow$. Take any $s< t$, $\lambda\in\left(0,1\right)$, and set $u=\lambda s+\left(1-\lambda\right)t$; then $s< u< t$. Applying the inequality in (a) with $s'=u$, $t'=t$, which satisfies $s\le s'< t'$ and $s< t\le t'$, gives $\frac{F\left(u\right)-F\left(s\right)}{u-s}\le\frac{F\left(t\right)-F\left(u\right)}{t-u}$. Since $u=\lambda s+\left(1-\lambda\right)t$, we have $u-s=\lambda\left(t-s\right)$ and $t-u=\left(1-\lambda\right)\left(t-s\right)$. Substituting and simplifying gives $F\left(u\right)\le\lambda F\left(s\right)+\left(1-\lambda\right)F\left(t\right)$, i.e. $F$ is convex. This proves (a).
 
-**(b).** First prove $\Rightarrow$. Assume $F$ is convex, and take a compact subinterval $\left[\alpha,\beta\right]\subset\left(a,b\right)$. By the difference-quotient monotonicity in (a), for $\alpha\le x< y\le\beta$, $S\left(\alpha,x\right)\le S\left(x,y\right)\le S\left(y,\beta\right)$ (slopes at three points increasing), while $S\left(\alpha,x\right)\ge S\left(\alpha,\beta\right)$ (right-endpoint monotonicity) and $S\left(y,\beta\right)\le S\left(\alpha,\beta\right)$ (left-endpoint monotonicity), so $\left|S\left(x,y\right)\right|\le S\left(\alpha,\beta\right)< \infty$. Hence $F$ satisfies a Lipschitz condition on $\left[\alpha,\beta\right]$ (Lipschitz constant $S\left(\alpha,\beta\right)$), and by **Theorem 15.0.16 (Inclusions Among Function Classes)**, $F\in AC\left(\left[\alpha,\beta\right]\right)$. Also $F'$ exists everywhere (convex function) and is the limit of difference quotients; by (a) the difference quotient is monotone in the left endpoint, so $F'$ is increasing.
+(b). First prove $\Rightarrow$. Assume $F$ is convex, and take a compact subinterval $\left[\alpha,\beta\right]\subset\left(a,b\right)$. By the difference-quotient monotonicity in (a), for $\alpha\le x< y\le\beta$, $S\left(\alpha,x\right)\le S\left(x,y\right)\le S\left(y,\beta\right)$ (slopes at three points increasing), while $S\left(\alpha,x\right)\ge S\left(\alpha,\beta\right)$ (right-endpoint monotonicity) and $S\left(y,\beta\right)\le S\left(\alpha,\beta\right)$ (left-endpoint monotonicity), so $\left|S\left(x,y\right)\right|\le S\left(\alpha,\beta\right)< \infty$. Hence $F$ satisfies a Lipschitz condition on $\left[\alpha,\beta\right]$ (Lipschitz constant $S\left(\alpha,\beta\right)$), and by **Theorem 15.0.16 (Inclusions Among Function Classes)**, $F\in AC\left(\left[\alpha,\beta\right]\right)$. Also $F'$ exists everywhere (convex function) and is the limit of difference quotients; by (a) the difference quotient is monotone in the left endpoint, so $F'$ is increasing.
 
 Now prove $\Leftarrow$. Assume $F$ is absolutely continuous on every compact subinterval of $\left(a,b\right)$ and $F'$ is increasing. By **Theorem 15.0.14 (Equivalent Characterization of Absolute Continuity)**, for any $s< t\in\left(a,b\right)$ and intermediate point $u$, $F\left(u\right)-F\left(s\right)=\int_{s}^{u}F'$ and $F\left(t\right)-F\left(u\right)=\int_{u}^{t}F'$. Since $F'$ on $\left(s,u\right)$ is no larger than $F'$ on $\left(u,t\right)$, averaging gives $\frac{1}{u-s}\int_{s}^{u}F'\le\frac{1}{t-u}\int_{u}^{t}F'$, i.e. $S\left(s,u\right)\le S\left(u,t\right)$. Taking $u=\lambda s+\left(1-\lambda\right)t$ and simplifying (as in the $\Leftarrow$ part of (a)) gives $F\left(u\right)\le\lambda F\left(s\right)+\left(1-\lambda\right)F\left(t\right)$, i.e. $F$ is convex. This proves (b).
 
-**(c).** By the difference-quotient monotonicity in (a), the left and right derivatives of $F$ at $t_{0}$ exist: the left derivative $F'_{-}\left(t_{0}\right)=\sup_{t< t_{0}}S\left(t,t_{0}\right)$ and the right derivative $F'_{+}\left(t_{0}\right)=\inf_{t> t_{0}}S\left(t_{0},t\right)$, with $F'_{-}\left(t_{0}\right)\le F'_{+}\left(t_{0}\right)$ (for $t_{1}< t_{0}< t_{2}$, three-point slopes $S\left(t_{1},t_{0}\right)\le S\left(t_{0},t_{2}\right)$). Take $\beta\in\left[F'_{-}\left(t_{0}\right),F'_{+}\left(t_{0}\right)\right]$. When $t> t_{0}$, $S\left(t_{0},t\right)\ge F'_{+}\left(t_{0}\right)\ge\beta$, so $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$; when $t< t_{0}$, $S\left(t,t_{0}\right)\le F'_{-}\left(t_{0}\right)\le\beta$, and since $t-t_{0}< 0$, multiplying by the negative reverses the inequality, giving $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$. Equality holds at $t=t_{0}$.
+(c). By the difference-quotient monotonicity in (a), the left and right derivatives of $F$ at $t_{0}$ exist: the left derivative $F'_{-}\left(t_{0}\right)=\sup_{t< t_{0}}S\left(t,t_{0}\right)$ and the right derivative $F'_{+}\left(t_{0}\right)=\inf_{t> t_{0}}S\left(t_{0},t\right)$, with $F'_{-}\left(t_{0}\right)\le F'_{+}\left(t_{0}\right)$ (for $t_{1}< t_{0}< t_{2}$, three-point slopes $S\left(t_{1},t_{0}\right)\le S\left(t_{0},t_{2}\right)$). Take $\beta\in\left[F'_{-}\left(t_{0}\right),F'_{+}\left(t_{0}\right)\right]$. When $t> t_{0}$, $S\left(t_{0},t\right)\ge F'_{+}\left(t_{0}\right)\ge\beta$, so $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$; when $t< t_{0}$, $S\left(t,t_{0}\right)\le F'_{-}\left(t_{0}\right)\le\beta$, and since $t-t_{0}< 0$, multiplying by the negative reverses the inequality, giving $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$. Equality holds at $t=t_{0}$.
 
-**(d).** Set $t_{0}=\int g\,\mathrm{d}\mu$. Since $g$ takes values in $\left(a,b\right)$ and $g\in L^{1}\left(\mu\right)$, we have $t_{0}\in\left(a,b\right)$. By (c), there exists $\beta\in\mathbb R$ such that $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$ for all $t\in\left(a,b\right)$. Substituting $t=g\left(x\right)$ gives $F\left(g\left(x\right)\right)\ge F\left(t_{0}\right)+\beta\left(g\left(x\right)-t_{0}\right)$ for all $x\in X$. Integrating with respect to $\mu$ (the right side is in $L^{1}$, so the integral is well-defined):
+(d). Set $t_{0}=\int g\,\mathrm{d}\mu$. Since $g$ takes values in $\left(a,b\right)$ and $g\in L^{1}\left(\mu\right)$, we have $t_{0}\in\left(a,b\right)$. By (c), there exists $\beta\in\mathbb R$ such that $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$ for all $t\in\left(a,b\right)$. Substituting $t=g\left(x\right)$ gives $F\left(g\left(x\right)\right)\ge F\left(t_{0}\right)+\beta\left(g\left(x\right)-t_{0}\right)$ for all $x\in X$. Integrating with respect to $\mu$ (the right side is in $L^{1}$, so the integral is well-defined):
 
 $$
 \int F\circ g\,\mathrm{d}\mu\ge\int\left[F\left(t_{0}\right)+\beta\left(g-t_{0}\right)\right]\mathrm{d}\mu=F\left(t_{0}\right)+\beta\left(\int g\,\mathrm{d}\mu-t_{0}\right)=F\left(t_{0}\right)=F\left(\int g\,\mathrm{d}\mu\right).

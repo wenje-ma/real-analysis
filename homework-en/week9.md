@@ -54,9 +54,9 @@ Let $f\left(x\right)=x^{-1}\sin x$.
 
 ### Solution to 2
 
-**(a).** On $\left[k\pi,\left(k+1\right)\pi\right]$, $\int_{k\pi}^{\left(k+1\right)\pi}\left|\sin x\right|\mathrm{d}x=2$. Since $\frac{1}{x}$ on this interval is $\ge\frac{1}{\left(k+1\right)\pi}$, we have $\int_{k\pi}^{\left(k+1\right)\pi}\frac{\left|\sin x\right|}{x}\mathrm{d}x\ge\frac{2}{\left(k+1\right)\pi}$. Thus for any $N$, $\int_{0}^{\left(N+1\right)\pi}\frac{\left|\sin x\right|}{x}\mathrm{d}x\ge\sum_{k=0}^{N}\frac{2}{\left(k+1\right)\pi}\to\infty$ (harmonic series diverges), so $\int_{0}^{\infty}\left|f\right|\mathrm{d}x=\infty$.
+(a). On $\left[k\pi,\left(k+1\right)\pi\right]$, $\int_{k\pi}^{\left(k+1\right)\pi}\left|\sin x\right|\mathrm{d}x=2$. Since $\frac{1}{x}$ on this interval is $\ge\frac{1}{\left(k+1\right)\pi}$, we have $\int_{k\pi}^{\left(k+1\right)\pi}\frac{\left|\sin x\right|}{x}\mathrm{d}x\ge\frac{2}{\left(k+1\right)\pi}$. Thus for any $N$, $\int_{0}^{\left(N+1\right)\pi}\frac{\left|\sin x\right|}{x}\mathrm{d}x\ge\sum_{k=0}^{N}\frac{2}{\left(k+1\right)\pi}\to\infty$ (harmonic series diverges), so $\int_{0}^{\infty}\left|f\right|\mathrm{d}x=\infty$.
 
-**(b).** For fixed $b> 0$, since $\int_{0}^{b}\int_{0}^{\infty}\left|e^{-xy}\sin x\right|\mathrm{d}y\,\mathrm{d}x=\int_{0}^{b}\frac{\left|\sin x\right|}{x}\mathrm{d}x< \infty$ (for fixed $b$, $x^{-1}\sin x$ is integrable), by **Theorem 10.2.2 (Tonelli's Theorem)** we may exchange the order:
+(b). For fixed $b> 0$, since $\int_{0}^{b}\int_{0}^{\infty}\left|e^{-xy}\sin x\right|\mathrm{d}y\,\mathrm{d}x=\int_{0}^{b}\frac{\left|\sin x\right|}{x}\mathrm{d}x< \infty$ (for fixed $b$, $x^{-1}\sin x$ is integrable), by **Theorem 10.2.2 (Tonelli's Theorem)** we may exchange the order:
 
 $$
 \int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\int_{0}^{b}\int_{0}^{\infty}e^{-xy}\sin x\,\mathrm{d}y\,\mathrm{d}x=\int_{0}^{\infty}\left(\int_{0}^{b}e^{-xy}\sin x\,\mathrm{d}x\right)\mathrm{d}y.
@@ -64,7 +64,7 @@ $$
 
 For fixed $y$, integrating by parts twice gives $\int_{0}^{b}e^{-xy}\sin x\,\mathrm{d}x=\frac{1-e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}$. Hence $\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\int_{0}^{\infty}\frac{1-e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}\mathrm{d}y$.
 
-**Taking $b\to\infty$.** Split into $\frac{1}{1+y^{2}}-\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}$. The first integrates to $\int_{0}^{\infty}\frac{1}{1+y^{2}}\mathrm{d}y=\frac{\pi}{2}$. For the second, when $b\ge1$, $\left|\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}\right|\le\frac{e^{-y}\left(y+1\right)}{1+y^{2}}=:g\left(y\right)$, and $\int_{0}^{\infty}g\left(y\right)\mathrm{d}y< \infty$ (dominated by the exponential decay $e^{-y}$). By **Theorem 8.2.9 (Dominated Convergence Theorem)** (applied along any sequence $b_{n}\to\infty$), this term tends to $\int_{0}^{\infty}0\,\mathrm{d}y=0$. Hence $\lim_{b\to\infty}\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\frac{\pi}{2}$. $\blacksquare$
+Taking $b\to\infty$. Split into $\frac{1}{1+y^{2}}-\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}$. The first integrates to $\int_{0}^{\infty}\frac{1}{1+y^{2}}\mathrm{d}y=\frac{\pi}{2}$. For the second, when $b\ge1$, $\left|\frac{e^{-by}\left(y\sin b+\cos b\right)}{1+y^{2}}\right|\le\frac{e^{-y}\left(y+1\right)}{1+y^{2}}=:g\left(y\right)$, and $\int_{0}^{\infty}g\left(y\right)\mathrm{d}y< \infty$ (dominated by the exponential decay $e^{-y}$). By **Theorem 8.2.9 (Dominated Convergence Theorem)** (applied along any sequence $b_{n}\to\infty$), this term tends to $\int_{0}^{\infty}0\,\mathrm{d}y=0$. Hence $\lim_{b\to\infty}\int_{0}^{b}\frac{\sin x}{x}\mathrm{d}x=\frac{\pi}{2}$. $\blacksquare$
 
 ## 3
 
@@ -82,7 +82,7 @@ called the $\alpha$-th order fractional integral of $f$.
 
 ### Solution to 3
 
-**(a).** Expand the composite integral and exchange the order over $\left\{\left(s,t\right):0< t< s< x\right\}$:
+(a). Expand the composite integral and exchange the order over $\left\{\left(s,t\right):0< t< s< x\right\}$:
 
 $$
 I_{\alpha}\left(I_{\beta}f\right)\left(x\right)=\frac{1}{\Gamma\left(\alpha\right)}\int_{0}^{x}\left(x-s\right)^{\alpha-1}\left[\frac{1}{\Gamma\left(\beta\right)}\int_{0}^{s}\left(s-t\right)^{\beta-1}f\left(t\right)\mathrm{d}t\right]\mathrm{d}s.
@@ -102,7 +102,7 @@ $$
 
 By Gamma Function and the Beta Identity, $\int_{0}^{1}\left(1-u\right)^{\alpha-1}u^{\beta-1}\mathrm{d}u=\frac{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}{\Gamma\left(\alpha+\beta\right)}$. Substituting, $I_{\alpha}\left(I_{\beta}f\right)\left(x\right)=\frac{1}{\Gamma\left(\alpha+\beta\right)}\int_{0}^{x}\left(x-t\right)^{\alpha+\beta-1}f\left(t\right)\mathrm{d}t=I_{\alpha+\beta}f\left(x\right)$.
 
-**(b).** For $\alpha=1$, since $\Gamma\left(1\right)=1$, $I_{1}f\left(x\right)=\int_{0}^{x}f\left(t\right)\mathrm{d}t$, and by the fundamental theorem of calculus $\frac{\mathrm{d}}{\mathrm{d}x}I_{1}f=f$. By (a), iterating gives $I_{n}f=\underbrace{I_{1}\circ\cdots\circ I_{1}}_{n\text{ times}}f$, so $\frac{\mathrm{d}^{n}}{\mathrm{d}x^{n}}I_{n}f=f$. Also, since the lower limit of $I_{\alpha}f$ is $0$, for $k< n$, $\left(\frac{\mathrm{d}}{\mathrm{d}x}\right)^{k}I_{n}f$ takes the value $0$ at $0$. Thus $I_{n}f$ is an $n$-th antiderivative of $f$. $\blacksquare$
+(b). For $\alpha=1$, since $\Gamma\left(1\right)=1$, $I_{1}f\left(x\right)=\int_{0}^{x}f\left(t\right)\mathrm{d}t$, and by the fundamental theorem of calculus $\frac{\mathrm{d}}{\mathrm{d}x}I_{1}f=f$. By (a), iterating gives $I_{n}f=\underbrace{I_{1}\circ\cdots\circ I_{1}}_{n\text{ times}}f$, so $\frac{\mathrm{d}^{n}}{\mathrm{d}x^{n}}I_{n}f=f$. Also, since the lower limit of $I_{\alpha}f$ is $0$, for $k< n$, $\left(\frac{\mathrm{d}}{\mathrm{d}x}\right)^{k}I_{n}f$ takes the value $0$ at $0$. Thus $I_{n}f$ is an $n$-th antiderivative of $f$. $\blacksquare$
 
 ## 4
 
@@ -140,7 +140,7 @@ $$
 \int_{\mathbb R^{n}}\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}\mathrm{d}x=\sigma\left(S^{n-1}\right)\int_{0}^{\infty}r^{a+n-1}\left|\log r\right|^{b}\mathrm{d}r.
 $$
 
-**Set $\left\{\left|x\right|< 1/2\right\}$.** Substitute $u=-\log r$ (i.e. $r=e^{-u}$, $\mathrm{d}r=-e^{-u}\mathrm{d}u$, so $r\in\left(0,1/2\right]$ corresponds to $u\in\left[\log 2,\infty\right)$):
+Set $\left\{\left|x\right|< 1/2\right\}$. Substitute $u=-\log r$ (i.e. $r=e^{-u}$, $\mathrm{d}r=-e^{-u}\mathrm{d}u$, so $r\in\left(0,1/2\right]$ corresponds to $u\in\left[\log 2,\infty\right)$):
 
 $$
 \int_{0}^{1/2}r^{a+n-1}\left|\log r\right|^{b}\mathrm{d}r=\int_{\log 2}^{\infty}e^{-u\left(a+n-1\right)}e^{-u}u^{b}\mathrm{d}u=\int_{\log 2}^{\infty}e^{-u\left(a+n\right)}u^{b}\mathrm{d}u.
@@ -154,7 +154,7 @@ $$
 
 Thus $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ is integrable on $\left\{\left|x\right|< 1/2\right\}$ iff $a> -n$, or $a=-n$ and $b< -1$.
 
-**Set $\left\{\left|x\right|> 2\right\}$.** For $r\ge2$, $\left|\log r\right|=\log r$. Substitute $r=e^{u}$ ($\mathrm{d}r=e^{u}\mathrm{d}u$, $u\ge\log 2$):
+Set $\left\{\left|x\right|> 2\right\}$. For $r\ge2$, $\left|\log r\right|=\log r$. Substitute $r=e^{u}$ ($\mathrm{d}r=e^{u}\mathrm{d}u$, $u\ge\log 2$):
 
 $$
 \int_{2}^{\infty}r^{a+n-1}\left(\log r\right)^{b}\mathrm{d}r=\int_{\log 2}^{\infty}e^{u\left(a+n-1\right)}e^{u}u^{b}\mathrm{d}u=\int_{\log 2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u.
@@ -162,4 +162,4 @@ $$
 
 Convergence: $\int_{\log 2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u\text{ converges}\iff a+n< 0$ (exponential decay; for $a+n> 0$ exponential growth diverges, for $a+n=0$, $\int u^{b}\mathrm{d}u$ diverges for any $b$). Thus $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ is integrable on $\left\{\left|x\right|> 2\right\}$ iff $a< -n$.
 
-**Conclusion.** Integrable on $\left\{\left|x\right|< 1/2\right\}$ iff $a> -n$ or $\left(a=-n\text{ and }b< -1\right)$; integrable on $\left\{\left|x\right|> 2\right\}$ iff $a< -n$. $\blacksquare$
+Conclusion. Integrable on $\left\{\left|x\right|< 1/2\right\}$ iff $a> -n$ or $\left(a=-n\text{ and }b< -1\right)$; integrable on $\left\{\left|x\right|> 2\right\}$ iff $a< -n$. $\blacksquare$

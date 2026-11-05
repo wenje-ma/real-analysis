@@ -165,15 +165,15 @@ $$
 
 设 $\nu=\lambda+\mu$. 因 $\lambda\perp\mu$ (**定义 11.4.1 (相互奇异)**), 存在博雷尔集 $A$ 使 $\mu\left(A\right)=0$ 且 $\lambda\left(A^{c}\right)=0$.
 
-**正则性的条件 (1).** 对任意紧集 $K$, 由 $\lambda,\mu\ge0$ 及 $\nu$ 正则 (正则博雷尔测度), $\lambda\left(K\right)\le\nu\left(K\right)< \infty$, 同理 $\mu\left(K\right)< \infty$.
+正则性的条件 (1). 对任意紧集 $K$, 由 $\lambda,\mu\ge0$ 及 $\nu$ 正则 (正则博雷尔测度), $\lambda\left(K\right)\le\nu\left(K\right)< \infty$, 同理 $\mu\left(K\right)< \infty$.
 
-**正则性的条件 (2) 对 $\lambda$.** 先注意对任意 $E\in\mathcal B\left(\mathbb R^{n}\right)$, $\lambda\left(E\right)=\lambda\left(E\cap A\right)=\nu\left(E\cap A\right)$, 其中第二式用到 $\mu\left(E\cap A\right)\le\mu\left(A\right)=0$; 同理 $\mu\left(E\right)=\nu\left(E\cap A^{c}\right)$.
+正则性的条件 (2) 对 $\lambda$. 先注意对任意 $E\in\mathcal B\left(\mathbb R^{n}\right)$, $\lambda\left(E\right)=\lambda\left(E\cap A\right)=\nu\left(E\cap A\right)$, 其中第二式用到 $\mu\left(E\cap A\right)\le\mu\left(A\right)=0$; 同理 $\mu\left(E\right)=\nu\left(E\cap A^{c}\right)$.
 
 对任意开集 $U\supset E$, $U\cap A\supset E\cap A$, 故 $\lambda\left(U\right)=\nu\left(U\cap A\right)\ge\nu\left(E\cap A\right)=\lambda\left(E\right)$, 于是 $\inf\left\{\lambda\left(U\right):U\text{ 开},U\supset E\right\}\ge\lambda\left(E\right)$.
 
 反向: 给定 $\varepsilon> 0$. 因 $\nu$ 正则, 对 $E\cap A$ 存在开集 $W\supset E\cap A$ 使 $\nu\left(W\cap A\right)< \nu\left(E\cap A\right)+\varepsilon=\lambda\left(E\right)+\varepsilon$ (用 $\nu$ 的外正则性先取开集 $W'\supset E\cap A$ 使 $\nu\left(W'\right)< \nu\left(E\cap A\right)+\varepsilon$, 再令 $W=W'$ 并注意 $\nu\left(W'\cap A\right)\le\nu\left(W'\right)$). 又因 $\left(E\cap A^{c}\right)\cap A=\varnothing$ 且 $\lambda\left(E\cap A^{c}\right)=0$, 可取足够薄的开邻域 $V\supset E\cap A^{c}$ 使 $\nu\left(V\cap A\right)< \varepsilon$ (例如取 $V=\left\{x:\mathrm{dist}\left(x,E\cap A^{c}\right)< \delta\right\}$ 并令 $\delta\to0$, 则 $V\cap A\downarrow\left(E\cap A^{c}\right)\cap A=\varnothing$, 由上连续性使 $\nu\left(V\cap A\right)\to0$). 令 $U=W\cup V$, 则 $U$ 开,$U\supset E$, 且 $\lambda\left(U\right)=\nu\left(U\cap A\right)\le\nu\left(W\cap A\right)+\nu\left(V\cap A\right)< \lambda\left(E\right)+2\varepsilon$. 故 $\inf\left\{\lambda\left(U\right):U\text{ 开},U\supset E\right\}\le\lambda\left(E\right)$. 合并得 $\lambda\left(E\right)=\inf\left\{\lambda\left(U\right):U\text{ 开},U\supset E\right\}$.
 
-**正则性的条件 (2) 对 $\mu$.** 用 $\mu\left(E\right)=\nu\left(E\cap A^{c}\right)$ 及 $\nu|_{A^{c}}$ 的正则性, 论证完全对称, 得 $\mu$ 也满足条件 (2).
+正则性的条件 (2) 对 $\mu$. 用 $\mu\left(E\right)=\nu\left(E\cap A^{c}\right)$ 及 $\nu|_{A^{c}}$ 的正则性, 论证完全对称, 得 $\mu$ 也满足条件 (2).
 
 综上, $\lambda$ 与 $\mu$ 均正则. $\blacksquare$
 
@@ -185,8 +185,8 @@ $$
 
 枚举有理数 $\mathbb Q=\left\{q_{1},q_{2},\dots\right\}$, 定义 $F\left(x\right)=\sum_{q_{n}\le x}2^{-n}$, $x\in\mathbb R$. 这是至多可数项之和且每项非负, 值域含于 $\left[0,1\right]$. 由级数, $\sum_{n}2^{-n}$ 收敛, 故 $F$ 取值有限. 若 $x< y$, 则 $\left\{n:q_{n}\le x\right\}\subset\left\{n:q_{n}\le y\right\}$, 从而 $F\left(x\right)\le F\left(y\right)$, 即 $F$ 递增.
 
-**每个有理点是间断点.** 对 $q_{k}\in\mathbb Q$, 当 $x$ 自 $q_{k}$ 左侧趋于 $q_{k}$ 时, $\left\{q_{n}\le x\right\}$ 不含 $q_{k}$, 故左极限 $F\left(q_{k}-\right)=\sum_{q_{n}< q_{k}}2^{-n}=\sum_{q_{n}\le q_{k}}2^{-n}-2^{-k}=F\left(q_{k}\right)-2^{-k}< F\left(q_{k}\right)$. 而右极限 $F\left(q_{k}+\right)=\lim_{x\downarrow q_{k}}F\left(x\right)=F\left(q_{k}\right)$ (因 $x> q_{k}$ 时仍计入 $q_{k}$). 故 $F$ 在 $q_{k}$ 处左,右极限不相等, 是第一类间断点.
+每个有理点是间断点. 对 $q_{k}\in\mathbb Q$, 当 $x$ 自 $q_{k}$ 左侧趋于 $q_{k}$ 时, $\left\{q_{n}\le x\right\}$ 不含 $q_{k}$, 故左极限 $F\left(q_{k}-\right)=\sum_{q_{n}< q_{k}}2^{-n}=\sum_{q_{n}\le q_{k}}2^{-n}-2^{-k}=F\left(q_{k}\right)-2^{-k}< F\left(q_{k}\right)$. 而右极限 $F\left(q_{k}+\right)=\lim_{x\downarrow q_{k}}F\left(x\right)=F\left(q_{k}\right)$ (因 $x> q_{k}$ 时仍计入 $q_{k}$). 故 $F$ 在 $q_{k}$ 处左,右极限不相等, 是第一类间断点.
 
-**每个无理点是连续点.** 设 $x_{0}\in\mathbb R\setminus\mathbb Q$. 给定 $\varepsilon> 0$, 由级数 取 $N$ 使 $\sum_{n> N}2^{-n}< \varepsilon$. 因 $x_{0}$ 无理, 取 $\delta> 0$ 小到开区间 $\left(x_{0}-\delta,x_{0}+\delta\right)$ 内不含 $q_{1},\dots,q_{N}$ (有限个点, 可分离). 则当 $\left|x-x_{0}\right|< \delta$ 时, 区间 $\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right]$ 内至多含 $q_{N+1},q_{N+2},\dots$, 故 $\left|F\left(x\right)-F\left(x_{0}\right)\right|=\sum_{x_{0}< q_{n}\le x\text{ 或 }x< q_{n}\le x_{0}}2^{-n}\le\sum_{n> N}2^{-n}< \varepsilon$. 故 $F$ 在 $x_{0}$ 连续.
+每个无理点是连续点. 设 $x_{0}\in\mathbb R\setminus\mathbb Q$. 给定 $\varepsilon> 0$, 由级数 取 $N$ 使 $\sum_{n> N}2^{-n}< \varepsilon$. 因 $x_{0}$ 无理, 取 $\delta> 0$ 小到开区间 $\left(x_{0}-\delta,x_{0}+\delta\right)$ 内不含 $q_{1},\dots,q_{N}$ (有限个点, 可分离). 则当 $\left|x-x_{0}\right|< \delta$ 时, 区间 $\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right]$ 内至多含 $q_{N+1},q_{N+2},\dots$, 故 $\left|F\left(x\right)-F\left(x_{0}\right)\right|=\sum_{x_{0}< q_{n}\le x\text{ 或 }x< q_{n}\le x_{0}}2^{-n}\le\sum_{n> N}2^{-n}< \varepsilon$. 故 $F$ 在 $x_{0}$ 连续.
 
 综上, $F$ 的间断点集恰为 $\mathbb Q$. 由**定理 14.0.7 (有界变差函数的基本性质)** (4) 及**定理 14.0.10 (有界变差函数的间断点性质)**, $F$ 为递增有界函数从而是有界变差函数, 其间断点至多可数且均为第一类, 此处恰与 $\mathbb Q$ 相符. $\blacksquare$

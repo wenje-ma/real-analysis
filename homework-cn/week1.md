@@ -99,7 +99,7 @@ $$
 
 依据**定义 4.1.1 (集合代数)** 与**命题 4.1.2 (代数的等价定义)**, 分两个方向证明.
 
-**($\Rightarrow$)** 设 $\mathcal A$ 是代数, 则 $X\in\mathcal A$ (a) 成立, 有限并封闭 (c) 成立. 对补封闭 (b): 对任意 $A\in\mathcal A$, 由 $X,A\in\mathcal A$ 及差运算封闭, 得
+($\Rightarrow$) 设 $\mathcal A$ 是代数, 则 $X\in\mathcal A$ (a) 成立, 有限并封闭 (c) 成立. 对补封闭 (b): 对任意 $A\in\mathcal A$, 由 $X,A\in\mathcal A$ 及差运算封闭, 得
 
 $$
 A^{c}=X\setminus A\in\mathcal A.
@@ -107,7 +107,7 @@ $$
 
 故 (a)(b)(c) 均成立.
 
-**($\Leftarrow$)** 设 (a)(b)(c) 成立. $X\in\mathcal A$ 即**定义 4.1.1 (集合代数)** (1); 有限并封闭即 (3). 只需验证差运算封闭 (2): 对任意 $A,B\in\mathcal A$, 由 (b) 得 $B^{c}\in\mathcal A$, 由 (c) 得 $A^{c}\cup B\in\mathcal A$, 再由 (b) 得
+($\Leftarrow$) 设 (a)(b)(c) 成立. $X\in\mathcal A$ 即**定义 4.1.1 (集合代数)** (1); 有限并封闭即 (3). 只需验证差运算封闭 (2): 对任意 $A,B\in\mathcal A$, 由 (b) 得 $B^{c}\in\mathcal A$, 由 (c) 得 $A^{c}\cup B\in\mathcal A$, 再由 (b) 得
 
 $$
 A\setminus B=A\cap B^{c}=\left(A^{c}\cup B\right)^{c}\in\mathcal A,
@@ -123,7 +123,7 @@ $$
 
 ### 解答 2
 
-**($\Rightarrow$)** 设 $\mathcal F$ 是 $\sigma$-代数 (**定义 4.1.3 ($\sigma$-代数)**). 则 $X\in\mathcal F$; 对补封闭 (b); 对可数并封闭, 特别地对有限并封闭 (c), 也对可数不交并封闭. 还需验证差运算封闭: 对 $A,B\in\mathcal F$, 由 (b)(c) 与德摩根定律
+($\Rightarrow$) 设 $\mathcal F$ 是 $\sigma$-代数 (**定义 4.1.3 ($\sigma$-代数)**). 则 $X\in\mathcal F$; 对补封闭 (b); 对可数并封闭, 特别地对有限并封闭 (c), 也对可数不交并封闭. 还需验证差运算封闭: 对 $A,B\in\mathcal F$, 由 (b)(c) 与德摩根定律
 
 $$
 A\setminus B=A\cap B^{c}=\left(A^{c}\cup B\right)^{c}\in\mathcal F.
@@ -131,7 +131,7 @@ $$
 
 故由**命题 4.1.2 (代数的等价定义)** 得 $\mathcal F$ 是代数, 且显然对可数不交并封闭.
 
-**($\Leftarrow$)** 设 $\mathcal F$ 是代数且对可数不交并封闭. 代数给出 $X\in\mathcal F$, 对补封闭及有限并封闭; 只需再证对可数并封闭. 设 $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 作不交化:
+($\Leftarrow$) 设 $\mathcal F$ 是代数且对可数不交并封闭. 代数给出 $X\in\mathcal F$, 对补封闭及有限并封闭; 只需再证对可数并封闭. 设 $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$, 作不交化:
 
 $$
 B_{1}:=A_{1},\qquad B_{n}:=A_{n}\setminus\left(A_{1}\cup\cdots\cup A_{n-1}\right)\ \left(n\ge2\right).
@@ -161,11 +161,11 @@ $$
 
 对 $\alpha\left(\mathcal E\right)$ 逐条验证**定义 4.1.1 (集合代数)**:
 
-(1) **$X\in\alpha\left(\mathcal E\right)$**: 每个 $\mathcal A\in\mathscr C$ 是代数, 故 $X\in\mathcal A$, 从而 $X$ 属于所有 $\mathcal A$ 之交, 即 $X\in\alpha\left(\mathcal E\right)$.
+(1) $X\in\alpha\left(\mathcal E\right)$: 每个 $\mathcal A\in\mathscr C$ 是代数, 故 $X\in\mathcal A$, 从而 $X$ 属于所有 $\mathcal A$ 之交, 即 $X\in\alpha\left(\mathcal E\right)$.
 
-(2) **差运算封闭**: 设 $A,B\in\alpha\left(\mathcal E\right)$, 则对每个 $\mathcal A\in\mathscr C$ 有 $A,B\in\mathcal A$, 由 $\mathcal A$ 是代数得 $A\setminus B\in\mathcal A$. 因 $\mathcal A$ 任意, $A\setminus B\in\bigcap\mathscr C=\alpha\left(\mathcal E\right)$.
+(2) 差运算封闭: 设 $A,B\in\alpha\left(\mathcal E\right)$, 则对每个 $\mathcal A\in\mathscr C$ 有 $A,B\in\mathcal A$, 由 $\mathcal A$ 是代数得 $A\setminus B\in\mathcal A$. 因 $\mathcal A$ 任意, $A\setminus B\in\bigcap\mathscr C=\alpha\left(\mathcal E\right)$.
 
-(3) **有限并封闭**: 同理, 对每个 $\mathcal A\in\mathscr C$ 有 $A\cup B\in\mathcal A$, 故 $A\cup B\in\alpha\left(\mathcal E\right)$.
+(3) 有限并封闭: 同理, 对每个 $\mathcal A\in\mathscr C$ 有 $A\cup B\in\mathcal A$, 故 $A\cup B\in\alpha\left(\mathcal E\right)$.
 
 故 $\alpha\left(\mathcal E\right)$ 是含 $\mathcal E$ 的代数. 又由定义其为所有含 $\mathcal E$ 的代数的交集, 故它是包含 $\mathcal E$ 的最小代数. $\blacksquare$
 
@@ -185,11 +185,11 @@ $$
 
 逐条验证**定义 4.1.3 ($\sigma$-代数)**:
 
-(1) **$X\in\sigma\left(\mathcal E\right)$**: 每个 $\mathcal F\in\mathscr C'$ 是 $\sigma$-代数, 含 $X$, 故 $X$ 属于其交集.
+(1) $X\in\sigma\left(\mathcal E\right)$: 每个 $\mathcal F\in\mathscr C'$ 是 $\sigma$-代数, 含 $X$, 故 $X$ 属于其交集.
 
-(2) **补运算封闭**: 设 $A\in\sigma\left(\mathcal E\right)$, 则对每个 $\mathcal F\in\mathscr C'$, $A\in\mathcal F$, 由 $\mathcal F$ 是 $\sigma$-代数得 $A^{c}\in\mathcal F$, 故 $A^{c}\in\sigma\left(\mathcal E\right)$.
+(2) 补运算封闭: 设 $A\in\sigma\left(\mathcal E\right)$, 则对每个 $\mathcal F\in\mathscr C'$, $A\in\mathcal F$, 由 $\mathcal F$ 是 $\sigma$-代数得 $A^{c}\in\mathcal F$, 故 $A^{c}\in\sigma\left(\mathcal E\right)$.
 
-(3) **可数并封闭**: 设 $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\sigma\left(\mathcal E\right)$, 则对每个 $\mathcal F\in\mathscr C'$, $\left\{A_{n}\right\}\subset\mathcal F$, 由 $\mathcal F$ 对可数并封闭得 $\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$, 故 $\bigcup_{n=1}^{\infty}A_{n}\in\sigma\left(\mathcal E\right)$.
+(3) 可数并封闭: 设 $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\sigma\left(\mathcal E\right)$, 则对每个 $\mathcal F\in\mathscr C'$, $\left\{A_{n}\right\}\subset\mathcal F$, 由 $\mathcal F$ 对可数并封闭得 $\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$, 故 $\bigcup_{n=1}^{\infty}A_{n}\in\sigma\left(\mathcal E\right)$.
 
 故 $\sigma\left(\mathcal E\right)$ 是含 $\mathcal E$ 的 $\sigma$-代数, 且是最小的 (所有含 $\mathcal E$ 的 $\sigma$-代数之交). $\blacksquare$
 
@@ -209,11 +209,11 @@ $$
 
 记 $\tau$ 为开集族, $\mathcal F$ 为闭集族, $\mathcal G=\left\{\left(a,b\right)\right\}$, $\mathcal H=\left\{\left[a,b\right]\right\}$, $\mathcal K=\left\{\left(a,b\right]\right\}$. 由**定义 4.3.2 (博雷尔 $\sigma$-代数)**, $\mathcal B\left(\mathbb R\right)=\sigma\left(\tau\right)$.
 
-**1. $\sigma\left(\mathcal F\right)=\sigma\left(\tau\right)$.** 闭集是开集的补, 开集是闭集的补. 对任意闭集 $C$, $C^{c}$ 开, 故 $C=\left(C^{c}\right)^{c}\in\sigma\left(\tau\right)$ ($\sigma$-代数对补封闭), 从而 $\mathcal F\subset\sigma\left(\tau\right)\Rightarrow\sigma\left(\mathcal F\right)\subset\sigma\left(\tau\right)$. 对称地, 对任意开集 $O$, $O^{c}$ 闭, $O=\left(O^{c}\right)^{c}\in\sigma\left(\mathcal F\right)$, 故 $\tau\subset\sigma\left(\mathcal F\right)\Rightarrow\sigma\left(\tau\right)\subset\sigma\left(\mathcal F\right)$. 两者相等.
+1. $\sigma\left(\mathcal F\right)=\sigma\left(\tau\right)$. 闭集是开集的补, 开集是闭集的补. 对任意闭集 $C$, $C^{c}$ 开, 故 $C=\left(C^{c}\right)^{c}\in\sigma\left(\tau\right)$ ($\sigma$-代数对补封闭), 从而 $\mathcal F\subset\sigma\left(\tau\right)\Rightarrow\sigma\left(\mathcal F\right)\subset\sigma\left(\tau\right)$. 对称地, 对任意开集 $O$, $O^{c}$ 闭, $O=\left(O^{c}\right)^{c}\in\sigma\left(\mathcal F\right)$, 故 $\tau\subset\sigma\left(\mathcal F\right)\Rightarrow\sigma\left(\tau\right)\subset\sigma\left(\mathcal F\right)$. 两者相等.
 
-**2. $\sigma\left(\mathcal G\right)=\sigma\left(\tau\right)$.** 每个开区间 $\left(a,b\right)$ 是开集, 故 $\mathcal G\subset\tau\Rightarrow\sigma\left(\mathcal G\right)\subset\sigma\left(\tau\right)$. 反之, 由**定理 3.2.1 (实数中开集的构造)**, $\mathbb R$ 中每个开集 $O$ 是可数个互不相交开区间的并: $O=\bigcup_{n=1}^{\infty}\left(a_{n},b_{n}\right)\in\sigma\left(\mathcal G\right)$ ($\sigma$-代数对可数并封闭), 故 $\tau\subset\sigma\left(\mathcal G\right)\Rightarrow\sigma\left(\tau\right)\subset\sigma\left(\mathcal G\right)$. 两者相等.
+2. $\sigma\left(\mathcal G\right)=\sigma\left(\tau\right)$. 每个开区间 $\left(a,b\right)$ 是开集, 故 $\mathcal G\subset\tau\Rightarrow\sigma\left(\mathcal G\right)\subset\sigma\left(\tau\right)$. 反之, 由**定理 3.2.1 (实数中开集的构造)**, $\mathbb R$ 中每个开集 $O$ 是可数个互不相交开区间的并: $O=\bigcup_{n=1}^{\infty}\left(a_{n},b_{n}\right)\in\sigma\left(\mathcal G\right)$ ($\sigma$-代数对可数并封闭), 故 $\tau\subset\sigma\left(\mathcal G\right)\Rightarrow\sigma\left(\tau\right)\subset\sigma\left(\mathcal G\right)$. 两者相等.
 
-**3. $\sigma\left(\mathcal H\right)=\sigma\left(\tau\right)$.** 每个闭区间 $\left[a,b\right]$ 是闭集, 故 $\mathcal H\subset\mathcal F\Rightarrow\sigma\left(\mathcal H\right)\subset\sigma\left(\mathcal F\right)=\sigma\left(\tau\right)$. 反之, 开区间可用闭区间递增逼近:
+3. $\sigma\left(\mathcal H\right)=\sigma\left(\tau\right)$. 每个闭区间 $\left[a,b\right]$ 是闭集, 故 $\mathcal H\subset\mathcal F\Rightarrow\sigma\left(\mathcal H\right)\subset\sigma\left(\mathcal F\right)=\sigma\left(\tau\right)$. 反之, 开区间可用闭区间递增逼近:
 
 $$
 \left(a,b\right)=\bigcup_{n=n_{0}}^{\infty}\left[a+\frac{1}{n},b-\frac{1}{n}\right]\in\sigma\left(\mathcal H\right)
@@ -221,7 +221,7 @@ $$
 
 (取 $n_{0}$ 使 $a+\frac1n< b-\frac1n$), 故 $\mathcal G\subset\sigma\left(\mathcal H\right)\Rightarrow\sigma\left(\tau\right)=\sigma\left(\mathcal G\right)\subset\sigma\left(\mathcal H\right)$. 两者相等.
 
-**4. $\sigma\left(\mathcal K\right)=\sigma\left(\tau\right)$.** 一方面, $\left(a,b\right]=\bigcap_{n=1}^{\infty}\left(a,b+\frac1n\right)$ 是开区间之可数交, 故 $\left(a,b\right]\in\sigma\left(\tau\right)$ ($\sigma$-代数对可数交封闭: 取补后为可数并), 从而 $\mathcal K\subset\sigma\left(\tau\right)\Rightarrow\sigma\left(\mathcal K\right)\subset\sigma\left(\tau\right)$.
+4. $\sigma\left(\mathcal K\right)=\sigma\left(\tau\right)$. 一方面, $\left(a,b\right]=\bigcap_{n=1}^{\infty}\left(a,b+\frac1n\right)$ 是开区间之可数交, 故 $\left(a,b\right]\in\sigma\left(\tau\right)$ ($\sigma$-代数对可数交封闭: 取补后为可数并), 从而 $\mathcal K\subset\sigma\left(\tau\right)\Rightarrow\sigma\left(\mathcal K\right)\subset\sigma\left(\tau\right)$.
 
 另一方面, 开区间用左开右闭区间递减逼近: 取 $n_{0}$ 使 $b-\frac1n> a$,
 
@@ -251,17 +251,17 @@ $$
 
 我们证明 $\mathscr C$ 是 $\sigma$-代数且包含所有可测矩形, 从而 $\mathcal F\otimes\mathcal G=\sigma\left(\text{可测矩形}\right)\subseteq\mathscr C$, 即每个 $E\in\mathcal F\otimes\mathcal G$ 都有 $E_{x}\in\mathcal G$. 对 $y$ 一侧完全对称.
 
-**$\mathscr C$ 是 $\sigma$-代数.**
+$\mathscr C$ 是 $\sigma$-代数.
 
-(1) **$X\times Y\in\mathscr C$**: $\left(X\times Y\right)_{x}=Y\in\mathcal G$.
+(1) $X\times Y\in\mathscr C$: $\left(X\times Y\right)_{x}=Y\in\mathcal G$.
 
-(2) **补运算封闭**: 若 $E\in\mathscr C$, 即 $E_{x}\in\mathcal G$, 则 $\left(E^{c}\right)_{x}=\left(E_{x}\right)^{c}\in\mathcal G$ (因 $\mathcal G$ 是 $\sigma$-代数, 对补封闭), 故 $E^{c}\in\mathscr C$.
+(2) 补运算封闭: 若 $E\in\mathscr C$, 即 $E_{x}\in\mathcal G$, 则 $\left(E^{c}\right)_{x}=\left(E_{x}\right)^{c}\in\mathcal G$ (因 $\mathcal G$ 是 $\sigma$-代数, 对补封闭), 故 $E^{c}\in\mathscr C$.
 
-(3) **可数并封闭**: 若 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathscr C$, 则 $\left(\bigcup_{n=1}^{\infty}E_{n}\right)_{x}=\bigcup_{n=1}^{\infty}\left(E_{n}\right)_{x}\in\mathcal G$ ($\mathcal G$ 对可数并封闭), 故 $\bigcup E_{n}\in\mathscr C$.
+(3) 可数并封闭: 若 $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathscr C$, 则 $\left(\bigcup_{n=1}^{\infty}E_{n}\right)_{x}=\bigcup_{n=1}^{\infty}\left(E_{n}\right)_{x}\in\mathcal G$ ($\mathcal G$ 对可数并封闭), 故 $\bigcup E_{n}\in\mathscr C$.
 
 由**定义 4.1.3 ($\sigma$-代数)**, $\mathscr C$ 是 $\sigma$-代数.
 
-**$\mathscr C$ 包含所有可测矩形.** 设 $A\in\mathcal F$, $B\in\mathcal G$. 则
+$\mathscr C$ 包含所有可测矩形. 设 $A\in\mathcal F$, $B\in\mathcal G$. 则
 
 $$
 \left(A\times B\right)_{x}=\begin{cases}B,&x\in A,\\\varnothing,&x\notin A.\end{cases}
@@ -285,11 +285,11 @@ $$
 
 记 $\pi_{1}:\mathbb R^{m+n}\to\mathbb R^{m}$, $\pi_{2}:\mathbb R^{m+n}\to\mathbb R^{n}$ 为两个坐标投影. 先建立一个辅助事实: 投影 $\pi_{i}$ 连续, 故把博雷尔集拉回成博雷尔集.
 
-**辅助事实**: 对连续映射 $f:\mathbb R^{m+n}\to\mathbb R^{m}$ (这里 $f=\pi_{1}$), 若 $A\in\mathcal B\left(\mathbb R^{m}\right)$, 则 $f^{-1}\left(A\right)\in\mathcal B\left(\mathbb R^{m+n}\right)$.
+辅助事实: 对连续映射 $f:\mathbb R^{m+n}\to\mathbb R^{m}$ (这里 $f=\pi_{1}$), 若 $A\in\mathcal B\left(\mathbb R^{m}\right)$, 则 $f^{-1}\left(A\right)\in\mathcal B\left(\mathbb R^{m+n}\right)$.
 
 证明: 集合族 $\left\{A\subseteq\mathbb R^{m}:f^{-1}\left(A\right)\in\mathcal B\left(\mathbb R^{m+n}\right)\right\}$ 是 $\sigma$-代数 (原像保持补与可数并, **定理 2.4.2 (原像运算的性质)**), 且含所有开集 ($f$ 连续, 开集的原像是开集, 属于 $\mathcal B\left(\mathbb R^{m+n}\right)$), 故含 $\sigma\left(\text{开集}\right)=\mathcal B\left(\mathbb R^{m}\right)$. 辅助事实成立.
 
-**($\subset$) $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)\subseteq\mathcal B\left(\mathbb R^{m+n}\right)$.**
+($\subset$) $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)\subseteq\mathcal B\left(\mathbb R^{m+n}\right)$.
 
 任取可测矩形 $A\times B$ ($A\in\mathcal B\left(\mathbb R^{m}\right)$, $B\in\mathcal B\left(\mathbb R^{n}\right)$), 有
 
@@ -299,7 +299,7 @@ $$
 
 由辅助事实, $\pi_{1}^{-1}\left(A\right),\pi_{2}^{-1}\left(B\right)\in\mathcal B\left(\mathbb R^{m+n}\right)$, 其交亦在 $\mathcal B\left(\mathbb R^{m+n}\right)$. 故所有可测矩形都在 $\mathcal B\left(\mathbb R^{m+n}\right)$ 中; 而 $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$ 是含可测矩形的最小 $\sigma$-代数, 故 $\subseteq$ 成立.
 
-**($\supset$) $\mathcal B\left(\mathbb R^{m+n}\right)\subseteq\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$.**
+($\supset$) $\mathcal B\left(\mathbb R^{m+n}\right)\subseteq\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$.
 
 由开集表为可数开矩形并, $\mathbb R^{m+n}$ 中任意开集 $O$ 可表为可数个开矩形的并: $O=\bigcup_{k=1}^{\infty}\left(U_{k}\times V_{k}\right)$, 其中 $U_{k}\subset\mathbb R^{m}$, $V_{k}\subset\mathbb R^{n}$ 为开集. 而每个开矩形 $U_{k}\times V_{k}$ 是可测矩形 ($U_{k}\in\mathcal B\left(\mathbb R^{m}\right)$, $V_{k}\in\mathcal B\left(\mathbb R^{n}\right)$), 故属于 $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$. 于是 $O$ 作为可数并也属于该乘积 $\sigma$-代数. 故所有开集都在 $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$ 中, 从而
 

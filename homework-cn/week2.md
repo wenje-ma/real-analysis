@@ -144,7 +144,7 @@ $$
 
 记 $\mathscr G:=\sigma\left(\left\{\pi_{\alpha}^{-1}\left(\mathcal E_{\alpha}\right):\alpha\in I\right\}\right)$. 分两个包含关系证明.
 
-**($\subset$) $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}\subseteq\mathscr G$.**
+($\subset$) $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}\subseteq\mathscr G$.
 
 固定 $\alpha\in I$, 考虑 $\pi_{\alpha}:\prod_{\beta\in I}X_{\beta}\to X_{\alpha}$, 定义集合族
 
@@ -160,7 +160,7 @@ $$
 \bigotimes_{\alpha\in I}\mathcal F_{\alpha}\subseteq\mathscr G.
 $$
 
-**($\supset$) $\mathscr G\subseteq\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$.**
+($\supset$) $\mathscr G\subseteq\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$.
 
 固定 $\alpha\in I$. 对任意 $E_{\alpha}\in\mathcal E_{\alpha}$, $\pi_{\alpha}^{-1}\left(E_{\alpha}\right)$ 恰是一个柱集 (**定义 4.5.7 (任意乘积 $\sigma$-代数)** 中取 $A_{\beta}=E_{\alpha}$ 当 $\beta=\alpha$), 故 $\pi_{\alpha}^{-1}\left(\mathcal E_{\alpha}\right)\subseteq\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$. 于是所有生成元 $\pi_{\alpha}^{-1}\left(E_{\alpha}\right)$ ($\alpha\in I$) 都在乘积 $\sigma$-代数中, 而 $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$ 是含这些集合的 $\sigma$-代数, 故其生成的 $\sigma$-代数
 
@@ -196,11 +196,11 @@ $$
 
 即 $A\in\mathcal M$ 当且仅当 $A$ 与某个可测集 $B$ 相差一个零测度集 (**定义 5.4.2 (零测度集)**). 分六步证明.
 
-**1. $\mathcal M$ 是 $\sigma$-代数.** 逐条验证**定义 4.1.3 ($\sigma$-代数)**:
+1. $\mathcal M$ 是 $\sigma$-代数. 逐条验证**定义 4.1.3 ($\sigma$-代数)**:
 
-(1) **$X\in\mathcal M$**: 取 $B=X$, $N=\varnothing$, 则 $X\subset X\subset X\cup\varnothing$.
+(1) $X\in\mathcal M$: 取 $B=X$, $N=\varnothing$, 则 $X\subset X\subset X\cup\varnothing$.
 
-(2) **补运算封闭**: 设 $B\subset A\subset B\cup N$, $\mu\left(N\right)=0$. 则 $\left(B\cup N\right)^{c}\subset A^{c}\subset B^{c}$, 且
+(2) 补运算封闭: 设 $B\subset A\subset B\cup N$, $\mu\left(N\right)=0$. 则 $\left(B\cup N\right)^{c}\subset A^{c}\subset B^{c}$, 且
 
 $$
 B^{c}\setminus\left(B\cup N\right)^{c}=B^{c}\cap\left(B\cup N\right)=B^{c}\cap N\subset N,
@@ -208,11 +208,11 @@ $$
 
 故由**命题 5.2.2 (单调性)** 得 $\mu\left(B^{c}\setminus\left(B\cup N\right)^{c}\right)\le\mu\left(N\right)=0$. 于是 $A^{c}\in\mathcal M$ (取 $B'=\left(B\cup N\right)^{c}\in\mathcal F$, $N'=B^{c}\setminus\left(B\cup N\right)^{c}$).
 
-(3) **可数并封闭**: 设 $B_{n}\subset A_{n}\subset B_{n}\cup N_{n}$, $\mu\left(N_{n}\right)=0$. 则 $\bigcup_{n}B_{n}\subset\bigcup_{n}A_{n}\subset\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)$. 由**命题 5.2.3 (次可数可加性)**, $\mu\left(\bigcup_{n}N_{n}\right)\le\sum_{n}\mu\left(N_{n}\right)=0$, 故 $\bigcup_{n}N_{n}$ 是零测度集, 从而 $\bigcup_{n}A_{n}\in\mathcal M$.
+(3) 可数并封闭: 设 $B_{n}\subset A_{n}\subset B_{n}\cup N_{n}$, $\mu\left(N_{n}\right)=0$. 则 $\bigcup_{n}B_{n}\subset\bigcup_{n}A_{n}\subset\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)$. 由**命题 5.2.3 (次可数可加性)**, $\mu\left(\bigcup_{n}N_{n}\right)\le\sum_{n}\mu\left(N_{n}\right)=0$, 故 $\bigcup_{n}N_{n}$ 是零测度集, 从而 $\bigcup_{n}A_{n}\in\mathcal M$.
 
 故 $\mathcal M$ 是 $\sigma$-代数.
 
-**2. 定义 $\overline\mu:\mathcal M\to\left[0,+\infty\right]$, $\overline\mu\left(A\right):=\mu\left(B\right)$, 其中 $B\subset A\subset B\cup N$, $\mu\left(N\right)=0$.** 先证良定义: 设 $B_{1}\subset A\subset B_{1}\cup N_{1}$ 与 $B_{2}\subset A\subset B_{2}\cup N_{2}$, $\mu\left(N_{1}\right)=\mu\left(N_{2}\right)=0$. 由 $B_{1}\subset A\subset B_{2}\cup N_{2}$ 得 $B_{1}\setminus B_{2}\subset N_{2}$, 故 $\mu\left(B_{1}\setminus B_{2}\right)\le\mu\left(N_{2}\right)=0$; 同理 $\mu\left(B_{2}\setminus B_{1}\right)=0$. 由**命题 5.2.1 (有限可加性)** 与**命题 5.2.2 (单调性)**,
+2. 定义 $\overline\mu:\mathcal M\to\left[0,+\infty\right]$, $\overline\mu\left(A\right):=\mu\left(B\right)$, 其中 $B\subset A\subset B\cup N$, $\mu\left(N\right)=0$. 先证良定义: 设 $B_{1}\subset A\subset B_{1}\cup N_{1}$ 与 $B_{2}\subset A\subset B_{2}\cup N_{2}$, $\mu\left(N_{1}\right)=\mu\left(N_{2}\right)=0$. 由 $B_{1}\subset A\subset B_{2}\cup N_{2}$ 得 $B_{1}\setminus B_{2}\subset N_{2}$, 故 $\mu\left(B_{1}\setminus B_{2}\right)\le\mu\left(N_{2}\right)=0$; 同理 $\mu\left(B_{2}\setminus B_{1}\right)=0$. 由**命题 5.2.1 (有限可加性)** 与**命题 5.2.2 (单调性)**,
 
 $$
 \mu\left(B_{1}\right)=\mu\left(B_{1}\cap B_{2}\right)+\mu\left(B_{1}\setminus B_{2}\right)=\mu\left(B_{1}\cap B_{2}\right)=\mu\left(B_{2}\right).
@@ -220,17 +220,17 @@ $$
 
 故 $\overline\mu$ 良定义.
 
-**3. $\overline\mu$ 是测度.** 逐条验证**定义 5.1.2 (测度)**: 非负性显然. 零空集性: $\overline\mu\left(\varnothing\right)=\mu\left(\varnothing\right)=0$. 可数可加性: 设 $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal M$ 两两不交, 写 $A_{n}=B_{n}\cup N_{n}$ ($B_{n}\in\mathcal F$, $N_{n}\subset N_{n}'\in\mathcal N$). 则 $\bigcup_{n}A_{n}=\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)\in\mathcal M$, 且 $\left\{B_{n}\right\}$ 两两不交 (因 $B_{n}\subset A_{n}$), 由 $\mu$ 的可数可加性
+3. $\overline\mu$ 是测度. 逐条验证**定义 5.1.2 (测度)**: 非负性显然. 零空集性: $\overline\mu\left(\varnothing\right)=\mu\left(\varnothing\right)=0$. 可数可加性: 设 $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal M$ 两两不交, 写 $A_{n}=B_{n}\cup N_{n}$ ($B_{n}\in\mathcal F$, $N_{n}\subset N_{n}'\in\mathcal N$). 则 $\bigcup_{n}A_{n}=\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)\in\mathcal M$, 且 $\left\{B_{n}\right\}$ 两两不交 (因 $B_{n}\subset A_{n}$), 由 $\mu$ 的可数可加性
 
 $$
 \overline\mu\left(\bigcup_{n}A_{n}\right)=\mu\left(\bigcup_{n}B_{n}\right)=\sum_{n}\mu\left(B_{n}\right)=\sum_{n}\overline\mu\left(A_{n}\right).
 $$
 
-**4. 延拓性:** 对 $B\in\mathcal F$, 因 $B=B\cup\varnothing\in\mathcal M$, 故 $\overline\mu\left(B\right)=\mu\left(B\right)$, 即 $\overline\mu|_{\mathcal F}=\mu$.
+4. 延拓性: 对 $B\in\mathcal F$, 因 $B=B\cup\varnothing\in\mathcal M$, 故 $\overline\mu\left(B\right)=\mu\left(B\right)$, 即 $\overline\mu|_{\mathcal F}=\mu$.
 
-**5. 完备性 (**定义 5.4.4 (完备测度)**):** 设 $\overline\mu\left(A\right)=0$, 即 $A=B\cup N$ 且 $\mu\left(B\right)=0$, $N\subset N_{0}\in\mathcal N$. 则 $A\subset B\cup N_{0}$, 且由**命题 5.2.3 (次可数可加性)**, $\mu\left(B\cup N_{0}\right)\le\mu\left(B\right)+\mu\left(N_{0}\right)=0$, 故 $A$ 是某个零测度集之子集. 于是 $A=\varnothing\cup A\in\mathcal M$, 且 $A$ 的任意子集 $C\subset A$ 亦满足 $C\subset B\cup N_{0}$, 故 $C\in\mathcal M$. 因此 $\mathcal M$ 完备.
+5. 完备性 (定义 5.4.4 (完备测度)): 设 $\overline\mu\left(A\right)=0$, 即 $A=B\cup N$ 且 $\mu\left(B\right)=0$, $N\subset N_{0}\in\mathcal N$. 则 $A\subset B\cup N_{0}$, 且由**命题 5.2.3 (次可数可加性)**, $\mu\left(B\cup N_{0}\right)\le\mu\left(B\right)+\mu\left(N_{0}\right)=0$, 故 $A$ 是某个零测度集之子集. 于是 $A=\varnothing\cup A\in\mathcal M$, 且 $A$ 的任意子集 $C\subset A$ 亦满足 $C\subset B\cup N_{0}$, 故 $C\in\mathcal M$. 因此 $\mathcal M$ 完备.
 
-**6. 最小性:** 设 $\mathcal M'$ 是任一包含 $\mathcal F$ 的完备 $\sigma$-代数. 对 $A=B\cup N\in\mathcal M$ ($B\in\mathcal F$, $N\subset N_{0}\in\mathcal N$), 因 $N_{0}\in\mathcal F\subset\mathcal M'$ 且 $\mu\left(N_{0}\right)=0$, 由 $\mathcal M'$ 的完备性得 $N\in\mathcal M'$; 又 $B\in\mathcal F\subset\mathcal M'$, 故 $A=B\cup N\in\mathcal M'$. 因此 $\mathcal M\subset\mathcal M'$. 故 $\mathcal M$ 是包含 $\mathcal F$ 的最小完备 $\sigma$-代数.
+6. 最小性: 设 $\mathcal M'$ 是任一包含 $\mathcal F$ 的完备 $\sigma$-代数. 对 $A=B\cup N\in\mathcal M$ ($B\in\mathcal F$, $N\subset N_{0}\in\mathcal N$), 因 $N_{0}\in\mathcal F\subset\mathcal M'$ 且 $\mu\left(N_{0}\right)=0$, 由 $\mathcal M'$ 的完备性得 $N\in\mathcal M'$; 又 $B\in\mathcal F\subset\mathcal M'$, 故 $A=B\cup N\in\mathcal M'$. 因此 $\mathcal M\subset\mathcal M'$. 故 $\mathcal M$ 是包含 $\mathcal F$ 的最小完备 $\sigma$-代数.
 
 综上, $\left(X,\mathcal M,\overline\mu\right)$ 是满足 (1)(2)(3) 的完备测度空间, 定理得证. $\blacksquare$
 
@@ -298,11 +298,11 @@ $$
 
 逐条验证**定义 5.1.2 (测度)**:
 
-(1) **非负性**: $\mu_{E}\left(A\right)=\mu\left(A\cap E\right)\ge0$ 对一切 $A\in\mathcal M$.
+(1) 非负性: $\mu_{E}\left(A\right)=\mu\left(A\cap E\right)\ge0$ 对一切 $A\in\mathcal M$.
 
-(2) **零空集性**: $\mu_{E}\left(\varnothing\right)=\mu\left(\varnothing\cap E\right)=\mu\left(\varnothing\right)=0$.
+(2) 零空集性: $\mu_{E}\left(\varnothing\right)=\mu\left(\varnothing\cap E\right)=\mu\left(\varnothing\right)=0$.
 
-(3) **可数可加性**: 设 $\left\{A_{j}\right\}_{j=1}^{\infty}\subset\mathcal M$ 两两不交, 则 $\left\{A_{j}\cap E\right\}$ 亦两两不交, 由 $\mu$ 的可数可加性
+(3) 可数可加性: 设 $\left\{A_{j}\right\}_{j=1}^{\infty}\subset\mathcal M$ 两两不交, 则 $\left\{A_{j}\cap E\right\}$ 亦两两不交, 由 $\mu$ 的可数可加性
 
 $$
 \mu_{E}\left(\bigcup_{j=1}^{\infty}A_{j}\right)=\mu\left(\left(\bigcup_{j=1}^{\infty}A_{j}\right)\cap E\right)=\mu\left(\bigcup_{j=1}^{\infty}\left(A_{j}\cap E\right)\right)=\sum_{j=1}^{\infty}\mu\left(A_{j}\cap E\right)=\sum_{j=1}^{\infty}\mu_{E}\left(A_{j}\right).

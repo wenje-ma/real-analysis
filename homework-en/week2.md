@@ -144,7 +144,7 @@ where $\pi_{\beta}:\prod_{\alpha\in I}X_{\alpha}\to X_{\beta}$ is the coordinate
 
 Let $\mathscr G:=\sigma\left(\left\{\pi_{\alpha}^{-1}\left(\mathcal E_{\alpha}\right):\alpha\in I\right\}\right)$. Prove two inclusions.
 
-**($\subset$) $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}\subseteq\mathscr G$.**
+($\subset$) $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}\subseteq\mathscr G$.
 
 Fix $\alpha\in I$, consider $\pi_{\alpha}:\prod_{\beta\in I}X_{\beta}\to X_{\alpha}$, and define
 
@@ -160,7 +160,7 @@ $$
 \bigotimes_{\alpha\in I}\mathcal F_{\alpha}\subseteq\mathscr G.
 $$
 
-**($\supset$) $\mathscr G\subseteq\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$.**
+($\supset$) $\mathscr G\subseteq\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$.
 
 Fix $\alpha\in I$. For any $E_{\alpha}\in\mathcal E_{\alpha}$, $\pi_{\alpha}^{-1}\left(E_{\alpha}\right)$ is exactly a cylinder set (in **Definition 4.5.7 (Arbitrary Product $\sigma$-Algebra)** take $A_{\beta}=E_{\alpha}$ when $\beta=\alpha$), so $\pi_{\alpha}^{-1}\left(\mathcal E_{\alpha}\right)\subseteq\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$. Thus all generators $\pi_{\alpha}^{-1}\left(E_{\alpha}\right)$ ($\alpha\in I$) lie in the product $\sigma$-algebra, and since $\bigotimes_{\alpha\in I}\mathcal F_{\alpha}$ is a $\sigma$-algebra containing these sets, the $\sigma$-algebra they generate satisfies
 
@@ -196,11 +196,11 @@ $$
 
 i.e. $A\in\mathcal M$ iff $A$ differs from some measurable set $B$ by a zero-measure set (**Definition 5.4.2 (Zero-Measure Set)**). We prove in six steps.
 
-**1. $\mathcal M$ is a $\sigma$-algebra.** Verify **Definition 4.1.3 ($\sigma$-Algebra)** item by item:
+1. $\mathcal M$ is a $\sigma$-algebra. Verify **Definition 4.1.3 ($\sigma$-Algebra)** item by item:
 
-(1) **$X\in\mathcal M$**: take $B=X$, $N=\varnothing$; then $X\subset X\subset X\cup\varnothing$.
+(1) $X\in\mathcal M$: take $B=X$, $N=\varnothing$; then $X\subset X\subset X\cup\varnothing$.
 
-(2) **Complement closure**: suppose $B\subset A\subset B\cup N$, $\mu\left(N\right)=0$. Then $\left(B\cup N\right)^{c}\subset A^{c}\subset B^{c}$, and
+(2) Complement closure: suppose $B\subset A\subset B\cup N$, $\mu\left(N\right)=0$. Then $\left(B\cup N\right)^{c}\subset A^{c}\subset B^{c}$, and
 
 $$
 B^{c}\setminus\left(B\cup N\right)^{c}=B^{c}\cap\left(B\cup N\right)=B^{c}\cap N\subset N,
@@ -208,11 +208,11 @@ $$
 
 so by **Proposition 5.2.2 (Monotonicity)**, $\mu\left(B^{c}\setminus\left(B\cup N\right)^{c}\right)\le\mu\left(N\right)=0$. Hence $A^{c}\in\mathcal M$ (take $B'=\left(B\cup N\right)^{c}\in\mathcal F$, $N'=B^{c}\setminus\left(B\cup N\right)^{c}$).
 
-(3) **Countable union closure**: suppose $B_{n}\subset A_{n}\subset B_{n}\cup N_{n}$, $\mu\left(N_{n}\right)=0$. Then $\bigcup_{n}B_{n}\subset\bigcup_{n}A_{n}\subset\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)$. By **Proposition 5.2.3 (Countable Subadditivity)**, $\mu\left(\bigcup_{n}N_{n}\right)\le\sum_{n}\mu\left(N_{n}\right)=0$, so $\bigcup_{n}N_{n}$ is a zero-measure set, and hence $\bigcup_{n}A_{n}\in\mathcal M$.
+(3) Countable union closure: suppose $B_{n}\subset A_{n}\subset B_{n}\cup N_{n}$, $\mu\left(N_{n}\right)=0$. Then $\bigcup_{n}B_{n}\subset\bigcup_{n}A_{n}\subset\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)$. By **Proposition 5.2.3 (Countable Subadditivity)**, $\mu\left(\bigcup_{n}N_{n}\right)\le\sum_{n}\mu\left(N_{n}\right)=0$, so $\bigcup_{n}N_{n}$ is a zero-measure set, and hence $\bigcup_{n}A_{n}\in\mathcal M$.
 
 Thus $\mathcal M$ is a $\sigma$-algebra.
 
-**2. Define $\overline\mu:\mathcal M\to\left[0,+\infty\right]$ by $\overline\mu\left(A\right):=\mu\left(B\right)$, where $B\subset A\subset B\cup N$, $\mu\left(N\right)=0$.** First show well-defined: suppose $B_{1}\subset A\subset B_{1}\cup N_{1}$ and $B_{2}\subset A\subset B_{2}\cup N_{2}$ with $\mu\left(N_{1}\right)=\mu\left(N_{2}\right)=0$. From $B_{1}\subset A\subset B_{2}\cup N_{2}$ we get $B_{1}\setminus B_{2}\subset N_{2}$, so $\mu\left(B_{1}\setminus B_{2}\right)\le\mu\left(N_{2}\right)=0$; symmetrically $\mu\left(B_{2}\setminus B_{1}\right)=0$. By **Proposition 5.2.1 (Finite Additivity)** and **Proposition 5.2.2 (Monotonicity)**,
+2. Define $\overline\mu:\mathcal M\to\left[0,+\infty\right]$ by $\overline\mu\left(A\right):=\mu\left(B\right)$, where $B\subset A\subset B\cup N$, $\mu\left(N\right)=0$. First show well-defined: suppose $B_{1}\subset A\subset B_{1}\cup N_{1}$ and $B_{2}\subset A\subset B_{2}\cup N_{2}$ with $\mu\left(N_{1}\right)=\mu\left(N_{2}\right)=0$. From $B_{1}\subset A\subset B_{2}\cup N_{2}$ we get $B_{1}\setminus B_{2}\subset N_{2}$, so $\mu\left(B_{1}\setminus B_{2}\right)\le\mu\left(N_{2}\right)=0$; symmetrically $\mu\left(B_{2}\setminus B_{1}\right)=0$. By **Proposition 5.2.1 (Finite Additivity)** and **Proposition 5.2.2 (Monotonicity)**,
 
 $$
 \mu\left(B_{1}\right)=\mu\left(B_{1}\cap B_{2}\right)+\mu\left(B_{1}\setminus B_{2}\right)=\mu\left(B_{1}\cap B_{2}\right)=\mu\left(B_{2}\right).
@@ -220,17 +220,17 @@ $$
 
 Thus $\overline\mu$ is well-defined.
 
-**3. $\overline\mu$ is a measure.** Verify **Definition 5.1.2 (Measure)** item by item: nonnegativity is clear. Empty-set: $\overline\mu\left(\varnothing\right)=\mu\left(\varnothing\right)=0$. Countable additivity: let $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal M$ be pairwise disjoint; write $A_{n}=B_{n}\cup N_{n}$ ($B_{n}\in\mathcal F$, $N_{n}\subset N_{n}'\in\mathcal N$). Then $\bigcup_{n}A_{n}=\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)\in\mathcal M$, and $\left\{B_{n}\right\}$ are pairwise disjoint (since $B_{n}\subset A_{n}$). By countable additivity of $\mu$,
+3. $\overline\mu$ is a measure. Verify **Definition 5.1.2 (Measure)** item by item: nonnegativity is clear. Empty-set: $\overline\mu\left(\varnothing\right)=\mu\left(\varnothing\right)=0$. Countable additivity: let $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal M$ be pairwise disjoint; write $A_{n}=B_{n}\cup N_{n}$ ($B_{n}\in\mathcal F$, $N_{n}\subset N_{n}'\in\mathcal N$). Then $\bigcup_{n}A_{n}=\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)\in\mathcal M$, and $\left\{B_{n}\right\}$ are pairwise disjoint (since $B_{n}\subset A_{n}$). By countable additivity of $\mu$,
 
 $$
 \overline\mu\left(\bigcup_{n}A_{n}\right)=\mu\left(\bigcup_{n}B_{n}\right)=\sum_{n}\mu\left(B_{n}\right)=\sum_{n}\overline\mu\left(A_{n}\right).
 $$
 
-**4. Extension:** for $B\in\mathcal F$, since $B=B\cup\varnothing\in\mathcal M$, $\overline\mu\left(B\right)=\mu\left(B\right)$, i.e. $\overline\mu|_{\mathcal F}=\mu$.
+4. Extension: for $B\in\mathcal F$, since $B=B\cup\varnothing\in\mathcal M$, $\overline\mu\left(B\right)=\mu\left(B\right)$, i.e. $\overline\mu|_{\mathcal F}=\mu$.
 
-**5. Completeness (**Definition 5.4.4 (Complete Measure)**):** suppose $\overline\mu\left(A\right)=0$, i.e. $A=B\cup N$ with $\mu\left(B\right)=0$ and $N\subset N_{0}\in\mathcal N$. Then $A\subset B\cup N_{0}$, and by **Proposition 5.2.3 (Countable Subadditivity)**, $\mu\left(B\cup N_{0}\right)\le\mu\left(B\right)+\mu\left(N_{0}\right)=0$, so $A$ is a subset of a zero-measure set. Hence $A=\varnothing\cup A\in\mathcal M$, and any subset $C\subset A$ also satisfies $C\subset B\cup N_{0}$, so $C\in\mathcal M$. Thus $\mathcal M$ is complete.
+5. Completeness (Definition 5.4.4 (Complete Measure)): suppose $\overline\mu\left(A\right)=0$, i.e. $A=B\cup N$ with $\mu\left(B\right)=0$ and $N\subset N_{0}\in\mathcal N$. Then $A\subset B\cup N_{0}$, and by **Proposition 5.2.3 (Countable Subadditivity)**, $\mu\left(B\cup N_{0}\right)\le\mu\left(B\right)+\mu\left(N_{0}\right)=0$, so $A$ is a subset of a zero-measure set. Hence $A=\varnothing\cup A\in\mathcal M$, and any subset $C\subset A$ also satisfies $C\subset B\cup N_{0}$, so $C\in\mathcal M$. Thus $\mathcal M$ is complete.
 
-**6. Minimality:** let $\mathcal M'$ be any complete $\sigma$-algebra containing $\mathcal F$. For $A=B\cup N\in\mathcal M$ ($B\in\mathcal F$, $N\subset N_{0}\in\mathcal N$), since $N_{0}\in\mathcal F\subset\mathcal M'$ and $\mu\left(N_{0}\right)=0$, completeness of $\mathcal M'$ gives $N\in\mathcal M'$; also $B\in\mathcal F\subset\mathcal M'$, so $A=B\cup N\in\mathcal M'$. Hence $\mathcal M\subset\mathcal M'$. Thus $\mathcal M$ is the smallest complete $\sigma$-algebra containing $\mathcal F$.
+6. Minimality: let $\mathcal M'$ be any complete $\sigma$-algebra containing $\mathcal F$. For $A=B\cup N\in\mathcal M$ ($B\in\mathcal F$, $N\subset N_{0}\in\mathcal N$), since $N_{0}\in\mathcal F\subset\mathcal M'$ and $\mu\left(N_{0}\right)=0$, completeness of $\mathcal M'$ gives $N\in\mathcal M'$; also $B\in\mathcal F\subset\mathcal M'$, so $A=B\cup N\in\mathcal M'$. Hence $\mathcal M\subset\mathcal M'$. Thus $\mathcal M$ is the smallest complete $\sigma$-algebra containing $\mathcal F$.
 
 Therefore $\left(X,\mathcal M,\overline\mu\right)$ is a complete measure space satisfying (1)(2)(3), proving the theorem. $\blacksquare$
 
@@ -298,11 +298,11 @@ Given a measure space $\left(X,\mathcal M,\mu\right)$ and $E\in\mathcal M$, defi
 
 Verify **Definition 5.1.2 (Measure)** item by item:
 
-(1) **Nonnegativity**: $\mu_{E}\left(A\right)=\mu\left(A\cap E\right)\ge0$ for all $A\in\mathcal M$.
+(1) Nonnegativity: $\mu_{E}\left(A\right)=\mu\left(A\cap E\right)\ge0$ for all $A\in\mathcal M$.
 
-(2) **Empty set**: $\mu_{E}\left(\varnothing\right)=\mu\left(\varnothing\cap E\right)=\mu\left(\varnothing\right)=0$.
+(2) Empty set: $\mu_{E}\left(\varnothing\right)=\mu\left(\varnothing\cap E\right)=\mu\left(\varnothing\right)=0$.
 
-(3) **Countable additivity**: let $\left\{A_{j}\right\}_{j=1}^{\infty}\subset\mathcal M$ be pairwise disjoint. Then $\left\{A_{j}\cap E\right\}$ are also pairwise disjoint, and by countable additivity of $\mu$,
+(3) Countable additivity: let $\left\{A_{j}\right\}_{j=1}^{\infty}\subset\mathcal M$ be pairwise disjoint. Then $\left\{A_{j}\cap E\right\}$ are also pairwise disjoint, and by countable additivity of $\mu$,
 
 $$
 \mu_{E}\left(\bigcup_{j=1}^{\infty}A_{j}\right)=\mu\left(\left(\bigcup_{j=1}^{\infty}A_{j}\right)\cap E\right)=\mu\left(\bigcup_{j=1}^{\infty}\left(A_{j}\cap E\right)\right)=\sum_{j=1}^{\infty}\mu\left(A_{j}\cap E\right)=\sum_{j=1}^{\infty}\mu_{E}\left(A_{j}\right).

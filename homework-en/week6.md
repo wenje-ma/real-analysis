@@ -101,9 +101,9 @@ $$
 
 Prove:
 
-**20.** (Generalized dominated convergence) If $f_{n},g_{n},f,g\in L^{1}$, $f_{n}\to f$ and $g_{n}\to g$ a.e., $\left|f_{n}\right|\le g_{n}$, and $\int g_{n}\to\int g$, then $\int f_{n}\to\int f$.
+20. (Generalized dominated convergence) If $f_{n},g_{n},f,g\in L^{1}$, $f_{n}\to f$ and $g_{n}\to g$ a.e., $\left|f_{n}\right|\le g_{n}$, and $\int g_{n}\to\int g$, then $\int f_{n}\to\int f$.
 
-**23.** Let $f:\left[a,b\right]\to\mathbb R$ be bounded, and set
+23. Let $f:\left[a,b\right]\to\mathbb R$ be bounded, and set
 
 $$
 H\left(x\right)=\limsup_{\delta\to0}\sup_{0< \left|y-x\right|\le\delta}f\left(y\right),\qquad h\left(x\right)=\liminf_{\delta\to0}\inf_{0< \left|y-x\right|\le\delta}f\left(y\right).
@@ -111,13 +111,13 @@ $$
 
 Prove: (a) $H\left(x\right)=h\left(x\right)$ iff $f$ is continuous at $x$; (b) $H=G$ a.e., $h=g$ a.e., and $\int_{\left(a,b\right)}h\,\mathrm{d}m=\underline{\int}f$. Hence $f$ is Riemann integrable iff its set of discontinuities has measure 0.
 
-**27.** Let $f_{n}\left(x\right)=ae^{-nax}-be^{-nbx}$ with $0< a< b$. (a) $\sum_{n=1}^{\infty}\int_{0}^{\infty}\left|f_{n}\left(x\right)\right|\mathrm{d}x=\infty$; (b) $\sum_{n=1}^{\infty}\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x=0$; (c) $\sum_{n=1}^{\infty}f_{n}\in L^{1}\left(\left[0,\infty\right),m\right)$ and $\int_{0}^{\infty}\sum_{n=1}^{\infty}f_{n}\left(x\right)\mathrm{d}x=\log\left(b/a\right)$.
+27. Let $f_{n}\left(x\right)=ae^{-nax}-be^{-nbx}$ with $0< a< b$. (a) $\sum_{n=1}^{\infty}\int_{0}^{\infty}\left|f_{n}\left(x\right)\right|\mathrm{d}x=\infty$; (b) $\sum_{n=1}^{\infty}\int_{0}^{\infty}f_{n}\left(x\right)\mathrm{d}x=0$; (c) $\sum_{n=1}^{\infty}f_{n}\in L^{1}\left(\left[0,\infty\right),m\right)$ and $\int_{0}^{\infty}\sum_{n=1}^{\infty}f_{n}\left(x\right)\mathrm{d}x=\log\left(b/a\right)$.
 
-**29.** By differentiating $\int_{0}^{\infty}e^{-tx}\mathrm{d}x=1/t$, prove $\int_{0}^{\infty}x^{n}e^{-x}\mathrm{d}x=n!$; similarly, by differentiating $\int_{-\infty}^{\infty}e^{-tx^{2}}\mathrm{d}x=\sqrt{\pi/t}$, prove $\int_{-\infty}^{\infty}x^{2n}e^{-x^{2}}\mathrm{d}x=\frac{\left(2n\right)!\sqrt\pi}{4^{n}n!}$.
+29. By differentiating $\int_{0}^{\infty}e^{-tx}\mathrm{d}x=1/t$, prove $\int_{0}^{\infty}x^{n}e^{-x}\mathrm{d}x=n!$; similarly, by differentiating $\int_{-\infty}^{\infty}e^{-tx^{2}}\mathrm{d}x=\sqrt{\pi/t}$, prove $\int_{-\infty}^{\infty}x^{2n}e^{-x^{2}}\mathrm{d}x=\frac{\left(2n\right)!\sqrt\pi}{4^{n}n!}$.
 
 ### Solution to 1
 
-**20.** Since $g_{n}\to g$ a.e. and $\left|f_{n}\right|\le g_{n}$, taking limits gives $\left|f\right|\le g$ a.e., so $f\in L^{1}$. Since $\left|f_{n}\right|\le g_{n}$ means $-g_{n}\le f_{n}\le g_{n}$, the sequences $\left\{g_{n}+f_{n}\right\}$ and $\left\{g_{n}-f_{n}\right\}$ are nonnegative and converge a.e. to $g+f$ and $g-f$ respectively. By **Theorem 8.2.7 (Fatou's Lemma)**,
+20. Since $g_{n}\to g$ a.e. and $\left|f_{n}\right|\le g_{n}$, taking limits gives $\left|f\right|\le g$ a.e., so $f\in L^{1}$. Since $\left|f_{n}\right|\le g_{n}$ means $-g_{n}\le f_{n}\le g_{n}$, the sequences $\left\{g_{n}+f_{n}\right\}$ and $\left\{g_{n}-f_{n}\right\}$ are nonnegative and converge a.e. to $g+f$ and $g-f$ respectively. By **Theorem 8.2.7 (Fatou's Lemma)**,
 
 $$
 \int\left(g+f\right)\mathrm{d}\mu\le\liminf_{n\to\infty}\int\left(g_{n}+f_{n}\right)\mathrm{d}\mu=\int g\,\mathrm{d}\mu+\liminf_{n\to\infty}\int f_{n}\,\mathrm{d}\mu,
@@ -137,7 +137,7 @@ $$
 
 so $\lim_{n\to\infty}\int f_{n}\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu$. $\blacksquare$
 
-**23.** Use the notation of Riemann Integral and Darboux Sums. $f$ is Riemann integrable iff $\overline{\int}f=\underline{\int}f$.
+23. Use the notation of Riemann Integral and Darboux Sums. $f$ is Riemann integrable iff $\overline{\int}f=\underline{\int}f$.
 
 (a) Suppose $f$ is continuous at $x$. For $\varepsilon> 0$ there exists $\delta> 0$ such that $\left|y-x\right|< \delta\Rightarrow\left|f\left(y\right)-f\left(x\right)\right|< \varepsilon$. Then for $0< \left|y-x\right|\le\delta$,
 
@@ -181,7 +181,7 @@ $$
 
 Since $H\ge h$, by Exercise 3(b), $\int\left(H-h\right)\mathrm{d}m=0\iff H=h$ a.e. Combined with (a) ($H=h\iff f$ continuous at $x$), $f$ is Riemann integrable iff its discontinuity set has measure 0. Then the Riemann integral $\overline{\int}f=\int H\,\mathrm{d}m=\int f\,\mathrm{d}m$ (since $H=f$ a.e.). $\blacksquare$
 
-**27.** First find the zero of $f_{n}$. Setting $f_{n}\left(x\right)=0$ gives $ae^{-nax}=be^{-nbx}$, i.e. $e^{n\left(b-a\right)x}=b/a$, so the unique zero is
+27. First find the zero of $f_{n}$. Setting $f_{n}\left(x\right)=0$ gives $ae^{-nax}=be^{-nbx}$, i.e. $e^{n\left(b-a\right)x}=b/a$, so the unique zero is
 
 $$
 x_{n}=\frac{\log\left(b/a\right)}{n\left(b-a\right)}.
@@ -243,9 +243,9 @@ $$
 
 Note that here $\sum\int\left|f_{n}\right|=\infty$ (by (a)), so the condition $\sum\int\left|f_{n}\right|< \infty$ of **Lemma 8.2.13 (Termwise Integration of Series)** fails, and termwise integration is not allowed; indeed $\int\sum f_{n}=\log\left(b/a\right)\ne\sum\int f_{n}=0$, showing that this condition is essential. $\blacksquare$
 
-**29.** Use **Theorem 8.2.17 (Parameter Integrals)** (b) (differentiation under the integral). Fix $t_{0}> 0$ and work on a compact neighborhood $\left[t_{0}/2,t_{0}\right]$.
+29. Use **Theorem 8.2.17 (Parameter Integrals)** (b) (differentiation under the integral). Fix $t_{0}> 0$ and work on a compact neighborhood $\left[t_{0}/2,t_{0}\right]$.
 
-**Case 1.** Let $F\left(t\right)=\int_{0}^{\infty}e^{-tx}\mathrm{d}x=\frac{1}{t}$ ($t> 0$). For each $k\ge1$, on $t\in\left[t_{0}/2,t_{0}\right]$, $\left|\frac{\partial^{k}}{\partial t^{k}}e^{-tx}\right|=x^{k}e^{-tx}\le x^{k}e^{-\left(t_{0}/2\right)x}\in L^{1}\left(\left[0,\infty\right)\right)$, so the theorem applies repeatedly:
+Case 1. Let $F\left(t\right)=\int_{0}^{\infty}e^{-tx}\mathrm{d}x=\frac{1}{t}$ ($t> 0$). For each $k\ge1$, on $t\in\left[t_{0}/2,t_{0}\right]$, $\left|\frac{\partial^{k}}{\partial t^{k}}e^{-tx}\right|=x^{k}e^{-tx}\le x^{k}e^{-\left(t_{0}/2\right)x}\in L^{1}\left(\left[0,\infty\right)\right)$, so the theorem applies repeatedly:
 
 $$
 F^{\left(n\right)}\left(t\right)=\int_{0}^{\infty}\left(-x\right)^{n}e^{-tx}\mathrm{d}x.
@@ -259,7 +259,7 @@ $$
 
 i.e. $\int_{0}^{\infty}x^{n}e^{-x}\mathrm{d}x=n!$.
 
-**Case 2.** Let $G\left(s\right)=\int_{-\infty}^{\infty}e^{-sx^{2}}\mathrm{d}x=\sqrt{\pi/s}=\sqrt\pi\,s^{-1/2}$ ($s> 0$). For each $k\ge1$, on $s\in\left[s_{0}/2,s_{0}\right]$, $\left|\frac{\partial^{k}}{\partial s^{k}}e^{-sx^{2}}\right|=x^{2k}e^{-sx^{2}}\le x^{2k}e^{-\left(s_{0}/2\right)x^{2}}\in L^{1}\left(\mathbb R\right)$, so we may differentiate repeatedly:
+Case 2. Let $G\left(s\right)=\int_{-\infty}^{\infty}e^{-sx^{2}}\mathrm{d}x=\sqrt{\pi/s}=\sqrt\pi\,s^{-1/2}$ ($s> 0$). For each $k\ge1$, on $s\in\left[s_{0}/2,s_{0}\right]$, $\left|\frac{\partial^{k}}{\partial s^{k}}e^{-sx^{2}}\right|=x^{2k}e^{-sx^{2}}\le x^{2k}e^{-\left(s_{0}/2\right)x^{2}}\in L^{1}\left(\mathbb R\right)$, so we may differentiate repeatedly:
 
 $$
 G^{\left(n\right)}\left(s\right)=\int_{-\infty}^{\infty}\left(-x^{2}\right)^{n}e^{-sx^{2}}\mathrm{d}x=\left(-1\right)^{n}\int_{-\infty}^{\infty}x^{2n}e^{-sx^{2}}\mathrm{d}x.

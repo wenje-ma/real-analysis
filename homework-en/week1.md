@@ -98,7 +98,7 @@ Let $\mathcal A\subset\mathcal P\left(X\right)$. Prove **Proposition 4.1.2 (Equi
 
 By **Definition 4.1.1 (Algebra of Sets)** and **Proposition 4.1.2 (Equivalent Definition of an Algebra)**, prove in two directions.
 
-**($\Rightarrow$)** Suppose $\mathcal A$ is an algebra. Then $X\in\mathcal A$ so (a) holds, and finite unions are closed so (c) holds. Closure under complements (b): for any $A\in\mathcal A$, since $X,A\in\mathcal A$ and differences are closed,
+($\Rightarrow$) Suppose $\mathcal A$ is an algebra. Then $X\in\mathcal A$ so (a) holds, and finite unions are closed so (c) holds. Closure under complements (b): for any $A\in\mathcal A$, since $X,A\in\mathcal A$ and differences are closed,
 
 $$
 A^{c}=X\setminus A\in\mathcal A.
@@ -106,7 +106,7 @@ $$
 
 Thus (a)(b)(c) all hold.
 
-**($\Leftarrow$)** Suppose (a)(b)(c) hold. $X\in\mathcal A$ is (1) of **Definition 4.1.1 (Algebra of Sets)**; finite union closure is (3). It remains to verify difference closure (2): for any $A,B\in\mathcal A$, (b) gives $B^{c}\in\mathcal A$, (c) gives $A^{c}\cup B\in\mathcal A$, and (b) again gives
+($\Leftarrow$) Suppose (a)(b)(c) hold. $X\in\mathcal A$ is (1) of **Definition 4.1.1 (Algebra of Sets)**; finite union closure is (3). It remains to verify difference closure (2): for any $A,B\in\mathcal A$, (b) gives $B^{c}\in\mathcal A$, (c) gives $A^{c}\cup B\in\mathcal A$, and (b) again gives
 
 $$
 A\setminus B=A\cap B^{c}=\left(A^{c}\cup B\right)^{c}\in\mathcal A,
@@ -122,7 +122,7 @@ Prove: $\mathcal F$ is a $\sigma$-algebra iff $\mathcal F$ is an algebra and is 
 
 ### Solution to 2
 
-**($\Rightarrow$)** Suppose $\mathcal F$ is a $\sigma$-algebra (**Definition 4.1.3 ($\sigma$-Algebra)**). Then $X\in\mathcal F$; complements are closed (b); countable unions are closed, hence in particular finite unions (c), and countable disjoint unions are closed. It remains to verify difference closure: for $A,B\in\mathcal F$, by (b)(c) and De Morgan's laws,
+($\Rightarrow$) Suppose $\mathcal F$ is a $\sigma$-algebra (**Definition 4.1.3 ($\sigma$-Algebra)**). Then $X\in\mathcal F$; complements are closed (b); countable unions are closed, hence in particular finite unions (c), and countable disjoint unions are closed. It remains to verify difference closure: for $A,B\in\mathcal F$, by (b)(c) and De Morgan's laws,
 
 $$
 A\setminus B=A\cap B^{c}=\left(A^{c}\cup B\right)^{c}\in\mathcal F.
@@ -130,7 +130,7 @@ $$
 
 Thus by **Proposition 4.1.2 (Equivalent Definition of an Algebra)**, $\mathcal F$ is an algebra, and it is clearly closed under countable disjoint unions.
 
-**($\Leftarrow$)** Suppose $\mathcal F$ is an algebra and is closed under countable disjoint unions. The algebra gives $X\in\mathcal F$, complement closure, and finite union closure; it remains to prove countable union closure. Let $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ and disjointify:
+($\Leftarrow$) Suppose $\mathcal F$ is an algebra and is closed under countable disjoint unions. The algebra gives $X\in\mathcal F$, complement closure, and finite union closure; it remains to prove countable union closure. Let $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal F$ and disjointify:
 
 $$
 B_{1}:=A_{1},\qquad B_{n}:=A_{n}\setminus\left(A_{1}\cup\cdots\cup A_{n-1}\right)\ \left(n\ge2\right).
@@ -160,11 +160,11 @@ Let $\mathscr C=\left\{\mathcal A\subset\mathcal P\left(X\right):\mathcal A\text
 
 Verify **Definition 4.1.1 (Algebra of Sets)** item by item for $\alpha\left(\mathcal E\right)$:
 
-(1) **$X\in\alpha\left(\mathcal E\right)$**: each $\mathcal A\in\mathscr C$ is an algebra, so $X\in\mathcal A$, hence $X$ belongs to the intersection of all $\mathcal A$, i.e. $X\in\alpha\left(\mathcal E\right)$.
+(1) $X\in\alpha\left(\mathcal E\right)$: each $\mathcal A\in\mathscr C$ is an algebra, so $X\in\mathcal A$, hence $X$ belongs to the intersection of all $\mathcal A$, i.e. $X\in\alpha\left(\mathcal E\right)$.
 
-(2) **Difference closure**: let $A,B\in\alpha\left(\mathcal E\right)$. Then for each $\mathcal A\in\mathscr C$, $A,B\in\mathcal A$, and since $\mathcal A$ is an algebra, $A\setminus B\in\mathcal A$. Since $\mathcal A$ is arbitrary, $A\setminus B\in\bigcap\mathscr C=\alpha\left(\mathcal E\right)$.
+(2) Difference closure: let $A,B\in\alpha\left(\mathcal E\right)$. Then for each $\mathcal A\in\mathscr C$, $A,B\in\mathcal A$, and since $\mathcal A$ is an algebra, $A\setminus B\in\mathcal A$. Since $\mathcal A$ is arbitrary, $A\setminus B\in\bigcap\mathscr C=\alpha\left(\mathcal E\right)$.
 
-(3) **Finite union closure**: similarly, for each $\mathcal A\in\mathscr C$, $A\cup B\in\mathcal A$, so $A\cup B\in\alpha\left(\mathcal E\right)$.
+(3) Finite union closure: similarly, for each $\mathcal A\in\mathscr C$, $A\cup B\in\mathcal A$, so $A\cup B\in\alpha\left(\mathcal E\right)$.
 
 Thus $\alpha\left(\mathcal E\right)$ is an algebra containing $\mathcal E$. By definition it is the intersection of all algebras containing $\mathcal E$, so it is the smallest algebra containing $\mathcal E$. $\blacksquare$
 
@@ -184,11 +184,11 @@ Let $\mathscr C'=\left\{\mathcal F\subset\mathcal P\left(X\right):\mathcal F\tex
 
 Verify **Definition 4.1.3 ($\sigma$-Algebra)** item by item:
 
-(1) **$X\in\sigma\left(\mathcal E\right)$**: each $\mathcal F\in\mathscr C'$ is a $\sigma$-algebra containing $X$, so $X$ belongs to their intersection.
+(1) $X\in\sigma\left(\mathcal E\right)$: each $\mathcal F\in\mathscr C'$ is a $\sigma$-algebra containing $X$, so $X$ belongs to their intersection.
 
-(2) **Complement closure**: let $A\in\sigma\left(\mathcal E\right)$. Then for each $\mathcal F\in\mathscr C'$, $A\in\mathcal F$, and since $\mathcal F$ is a $\sigma$-algebra, $A^{c}\in\mathcal F$, hence $A^{c}\in\sigma\left(\mathcal E\right)$.
+(2) Complement closure: let $A\in\sigma\left(\mathcal E\right)$. Then for each $\mathcal F\in\mathscr C'$, $A\in\mathcal F$, and since $\mathcal F$ is a $\sigma$-algebra, $A^{c}\in\mathcal F$, hence $A^{c}\in\sigma\left(\mathcal E\right)$.
 
-(3) **Countable union closure**: let $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\sigma\left(\mathcal E\right)$. Then for each $\mathcal F\in\mathscr C'$, $\left\{A_{n}\right\}\subset\mathcal F$, and since $\mathcal F$ is closed under countable unions, $\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$, hence $\bigcup_{n=1}^{\infty}A_{n}\in\sigma\left(\mathcal E\right)$.
+(3) Countable union closure: let $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\sigma\left(\mathcal E\right)$. Then for each $\mathcal F\in\mathscr C'$, $\left\{A_{n}\right\}\subset\mathcal F$, and since $\mathcal F$ is closed under countable unions, $\bigcup_{n=1}^{\infty}A_{n}\in\mathcal F$, hence $\bigcup_{n=1}^{\infty}A_{n}\in\sigma\left(\mathcal E\right)$.
 
 Thus $\sigma\left(\mathcal E\right)$ is a $\sigma$-algebra containing $\mathcal E$, and it is the smallest one (the intersection of all $\sigma$-algebras containing $\mathcal E$). $\blacksquare$
 
@@ -208,11 +208,11 @@ $$
 
 Let $\tau$ be the open sets, $\mathcal F$ the closed sets, $\mathcal G=\left\{\left(a,b\right)\right\}$, $\mathcal H=\left\{\left[a,b\right]\right\}$, $\mathcal K=\left\{\left(a,b\right]\right\}$. By **Definition 4.3.2 (Borel $\sigma$-Algebra)**, $\mathcal B\left(\mathbb R\right)=\sigma\left(\tau\right)$.
 
-**1. $\sigma\left(\mathcal F\right)=\sigma\left(\tau\right)$.** Closed sets are complements of open sets and vice versa. For any closed set $C$, $C^{c}$ is open, so $C=\left(C^{c}\right)^{c}\in\sigma\left(\tau\right)$ (a $\sigma$-algebra is closed under complements), hence $\mathcal F\subset\sigma\left(\tau\right)\Rightarrow\sigma\left(\mathcal F\right)\subset\sigma\left(\tau\right)$. Symmetrically, for any open set $O$, $O^{c}$ is closed, $O=\left(O^{c}\right)^{c}\in\sigma\left(\mathcal F\right)$, so $\tau\subset\sigma\left(\mathcal F\right)\Rightarrow\sigma\left(\tau\right)\subset\sigma\left(\mathcal F\right)$. They are equal.
+1. $\sigma\left(\mathcal F\right)=\sigma\left(\tau\right)$. Closed sets are complements of open sets and vice versa. For any closed set $C$, $C^{c}$ is open, so $C=\left(C^{c}\right)^{c}\in\sigma\left(\tau\right)$ (a $\sigma$-algebra is closed under complements), hence $\mathcal F\subset\sigma\left(\tau\right)\Rightarrow\sigma\left(\mathcal F\right)\subset\sigma\left(\tau\right)$. Symmetrically, for any open set $O$, $O^{c}$ is closed, $O=\left(O^{c}\right)^{c}\in\sigma\left(\mathcal F\right)$, so $\tau\subset\sigma\left(\mathcal F\right)\Rightarrow\sigma\left(\tau\right)\subset\sigma\left(\mathcal F\right)$. They are equal.
 
-**2. $\sigma\left(\mathcal G\right)=\sigma\left(\tau\right)$.** Every open interval $\left(a,b\right)$ is open, so $\mathcal G\subset\tau\Rightarrow\sigma\left(\mathcal G\right)\subset\sigma\left(\tau\right)$. Conversely, by **Theorem 3.2.1 (Structure of Open Sets in $\mathbb R$)**, every open set $O$ in $\mathbb R$ is a countable union of disjoint open intervals: $O=\bigcup_{n=1}^{\infty}\left(a_{n},b_{n}\right)\in\sigma\left(\mathcal G\right)$ (a $\sigma$-algebra is closed under countable unions), so $\tau\subset\sigma\left(\mathcal G\right)\Rightarrow\sigma\left(\tau\right)\subset\sigma\left(\mathcal G\right)$. They are equal.
+2. $\sigma\left(\mathcal G\right)=\sigma\left(\tau\right)$. Every open interval $\left(a,b\right)$ is open, so $\mathcal G\subset\tau\Rightarrow\sigma\left(\mathcal G\right)\subset\sigma\left(\tau\right)$. Conversely, by **Theorem 3.2.1 (Structure of Open Sets in $\mathbb R$)**, every open set $O$ in $\mathbb R$ is a countable union of disjoint open intervals: $O=\bigcup_{n=1}^{\infty}\left(a_{n},b_{n}\right)\in\sigma\left(\mathcal G\right)$ (a $\sigma$-algebra is closed under countable unions), so $\tau\subset\sigma\left(\mathcal G\right)\Rightarrow\sigma\left(\tau\right)\subset\sigma\left(\mathcal G\right)$. They are equal.
 
-**3. $\sigma\left(\mathcal H\right)=\sigma\left(\tau\right)$.** Every closed interval $\left[a,b\right]$ is closed, so $\mathcal H\subset\mathcal F\Rightarrow\sigma\left(\mathcal H\right)\subset\sigma\left(\mathcal F\right)=\sigma\left(\tau\right)$. Conversely, open intervals can be approximated from within by closed intervals:
+3. $\sigma\left(\mathcal H\right)=\sigma\left(\tau\right)$. Every closed interval $\left[a,b\right]$ is closed, so $\mathcal H\subset\mathcal F\Rightarrow\sigma\left(\mathcal H\right)\subset\sigma\left(\mathcal F\right)=\sigma\left(\tau\right)$. Conversely, open intervals can be approximated from within by closed intervals:
 
 $$
 \left(a,b\right)=\bigcup_{n=n_{0}}^{\infty}\left[a+\frac{1}{n},b-\frac{1}{n}\right]\in\sigma\left(\mathcal H\right)
@@ -220,7 +220,7 @@ $$
 
 (take $n_{0}$ so that $a+\frac1n< b-\frac1n$), hence $\mathcal G\subset\sigma\left(\mathcal H\right)\Rightarrow\sigma\left(\tau\right)=\sigma\left(\mathcal G\right)\subset\sigma\left(\mathcal H\right)$. They are equal.
 
-**4. $\sigma\left(\mathcal K\right)=\sigma\left(\tau\right)$.** On one hand, $\left(a,b\right]=\bigcap_{n=1}^{\infty}\left(a,b+\frac1n\right)$ is a countable intersection of open intervals, so $\left(a,b\right]\in\sigma\left(\tau\right)$ (a $\sigma$-algebra is closed under countable intersections: take complements to get countable unions), hence $\mathcal K\subset\sigma\left(\tau\right)\Rightarrow\sigma\left(\mathcal K\right)\subset\sigma\left(\tau\right)$.
+4. $\sigma\left(\mathcal K\right)=\sigma\left(\tau\right)$. On one hand, $\left(a,b\right]=\bigcap_{n=1}^{\infty}\left(a,b+\frac1n\right)$ is a countable intersection of open intervals, so $\left(a,b\right]\in\sigma\left(\tau\right)$ (a $\sigma$-algebra is closed under countable intersections: take complements to get countable unions), hence $\mathcal K\subset\sigma\left(\tau\right)\Rightarrow\sigma\left(\mathcal K\right)\subset\sigma\left(\tau\right)$.
 
 On the other hand, open intervals are approximated from within by half-open intervals: take $n_{0}$ so that $b-\frac1n> a$,
 
@@ -250,17 +250,17 @@ $$
 
 We prove that $\mathscr C$ is a $\sigma$-algebra containing all measurable rectangles, hence $\mathcal F\otimes\mathcal G=\sigma\left(\text{measurable rectangles}\right)\subseteq\mathscr C$, i.e. every $E\in\mathcal F\otimes\mathcal G$ has $E_{x}\in\mathcal G$. The $y$-side is entirely symmetric.
 
-**$\mathscr C$ is a $\sigma$-algebra.**
+$\mathscr C$ is a $\sigma$-algebra.
 
-(1) **$X\times Y\in\mathscr C$**: $\left(X\times Y\right)_{x}=Y\in\mathcal G$.
+(1) $X\times Y\in\mathscr C$: $\left(X\times Y\right)_{x}=Y\in\mathcal G$.
 
-(2) **Complement closure**: if $E\in\mathscr C$, i.e. $E_{x}\in\mathcal G$, then $\left(E^{c}\right)_{x}=\left(E_{x}\right)^{c}\in\mathcal G$ (since $\mathcal G$ is a $\sigma$-algebra closed under complements), so $E^{c}\in\mathscr C$.
+(2) Complement closure: if $E\in\mathscr C$, i.e. $E_{x}\in\mathcal G$, then $\left(E^{c}\right)_{x}=\left(E_{x}\right)^{c}\in\mathcal G$ (since $\mathcal G$ is a $\sigma$-algebra closed under complements), so $E^{c}\in\mathscr C$.
 
-(3) **Countable union closure**: if $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathscr C$, then $\left(\bigcup_{n=1}^{\infty}E_{n}\right)_{x}=\bigcup_{n=1}^{\infty}\left(E_{n}\right)_{x}\in\mathcal G$ ($\mathcal G$ is closed under countable unions), so $\bigcup E_{n}\in\mathscr C$.
+(3) Countable union closure: if $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathscr C$, then $\left(\bigcup_{n=1}^{\infty}E_{n}\right)_{x}=\bigcup_{n=1}^{\infty}\left(E_{n}\right)_{x}\in\mathcal G$ ($\mathcal G$ is closed under countable unions), so $\bigcup E_{n}\in\mathscr C$.
 
 By **Definition 4.1.3 ($\sigma$-Algebra)**, $\mathscr C$ is a $\sigma$-algebra.
 
-**$\mathscr C$ contains all measurable rectangles.** Let $A\in\mathcal F$, $B\in\mathcal G$. Then
+$\mathscr C$ contains all measurable rectangles. Let $A\in\mathcal F$, $B\in\mathcal G$. Then
 
 $$
 \left(A\times B\right)_{x}=\begin{cases}B,&x\in A,\\\varnothing,&x\notin A.\end{cases}
@@ -284,11 +284,11 @@ $$
 
 Let $\pi_{1}:\mathbb R^{m+n}\to\mathbb R^{m}$ and $\pi_{2}:\mathbb R^{m+n}\to\mathbb R^{n}$ be the two coordinate projections. We first establish a helper fact: projections $\pi_{i}$ are continuous, so they pull Borel sets back to Borel sets.
 
-**Helper fact**: for a continuous map $f:\mathbb R^{m+n}\to\mathbb R^{m}$ (here $f=\pi_{1}$), if $A\in\mathcal B\left(\mathbb R^{m}\right)$, then $f^{-1}\left(A\right)\in\mathcal B\left(\mathbb R^{m+n}\right)$.
+Helper fact: for a continuous map $f:\mathbb R^{m+n}\to\mathbb R^{m}$ (here $f=\pi_{1}$), if $A\in\mathcal B\left(\mathbb R^{m}\right)$, then $f^{-1}\left(A\right)\in\mathcal B\left(\mathbb R^{m+n}\right)$.
 
 Proof: the family $\left\{A\subseteq\mathbb R^{m}:f^{-1}\left(A\right)\in\mathcal B\left(\mathbb R^{m+n}\right)\right\}$ is a $\sigma$-algebra (preimages preserve complements and countable unions, **Theorem 2.4.2 (Properties of Preimage Operations)**), and it contains all open sets ($f$ is continuous, so preimages of open sets are open and hence in $\mathcal B\left(\mathbb R^{m+n}\right)$); therefore it contains $\sigma\left(\text{open sets}\right)=\mathcal B\left(\mathbb R^{m}\right)$. The helper fact holds.
 
-**($\subset$) $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)\subseteq\mathcal B\left(\mathbb R^{m+n}\right)$.**
+($\subset$) $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)\subseteq\mathcal B\left(\mathbb R^{m+n}\right)$.
 
 Take any measurable rectangle $A\times B$ ($A\in\mathcal B\left(\mathbb R^{m}\right)$, $B\in\mathcal B\left(\mathbb R^{n}\right)$). Then
 
@@ -298,7 +298,7 @@ $$
 
 By the helper fact, $\pi_{1}^{-1}\left(A\right),\pi_{2}^{-1}\left(B\right)\in\mathcal B\left(\mathbb R^{m+n}\right)$, and their intersection is also in $\mathcal B\left(\mathbb R^{m+n}\right)$. Thus all measurable rectangles lie in $\mathcal B\left(\mathbb R^{m+n}\right)$; since $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$ is the smallest $\sigma$-algebra containing them, $\subseteq$ holds.
 
-**($\supset$) $\mathcal B\left(\mathbb R^{m+n}\right)\subseteq\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$.**
+($\supset$) $\mathcal B\left(\mathbb R^{m+n}\right)\subseteq\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$.
 
 By Open Sets as Countable Unions of Open Rectangles, any open set $O$ in $\mathbb R^{m+n}$ is a countable union of open rectangles: $O=\bigcup_{k=1}^{\infty}\left(U_{k}\times V_{k}\right)$, where $U_{k}\subset\mathbb R^{m}$, $V_{k}\subset\mathbb R^{n}$ are open. Each open rectangle $U_{k}\times V_{k}$ is a measurable rectangle ($U_{k}\in\mathcal B\left(\mathbb R^{m}\right)$, $V_{k}\in\mathcal B\left(\mathbb R^{n}\right)$), so it belongs to $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$. Hence $O$, as a countable union, also belongs to the product $\sigma$-algebra. Thus all open sets lie in $\mathcal B\left(\mathbb R^{m}\right)\otimes\mathcal B\left(\mathbb R^{n}\right)$, and therefore
 
