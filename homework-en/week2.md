@@ -126,7 +126,7 @@ $$
 
 > **Theorem 5.4.6 (Completion Theorem for Measures)**
 > 
-> Every measure space $\left(X,\mathcal{F},\mu\right)$ can be completed, i.e. there exists a complete measure space $\left(X,\mathcal{M},\overline\mu\right)$ such that: (1) $\mathcal{F}\subset\mathcal{M}$; (2) $\overline\mu|_{\mathcal{F}}=\mu$; (3) $\mathcal{M}$ is the smallest complete $\sigma$-algebra containing $\mathcal{F}$. Explicitly, let $\mathcal{N}=\left\{N\in\mathcal{F}:\mu\left(N\right)=0\right\}$, $\mathcal{M}=\left\{A\subset{X}:\exists\,B\in\mathcal{F},\,\exists\,N\in\mathcal{N},\,B\subset{A}\subset{B}\cup{N}\right\}$, and define $\overline\mu\left(A\right)=\mu\left(B\right)$.
+> Every measure space $\left(X,\mathcal{F},\mu\right)$ can be completed, i.e. there exists a complete measure space $\left(X,\mathcal{M},\overline\mu\right)$ such that: (1) $\mathcal{F}\subset\mathcal{M}$; (2) $\overline\mu|_{\mathcal{F}}=\mu$; (3) $\mathcal{M}$ is the smallest complete $\sigma$-algebra containing $\mathcal{F}$. Explicitly, let $\mathcal{N}=\left\{N\in\mathcal{F}:\mu\left(N\right)=0\right\}$, $\mathcal{M}=\left\{A\subset{X}:\exists\,B\in\mathcal{F},\exists\,N\in\mathcal{N},B\subset{A}\subset{B}\cup{N}\right\}$, and define $\overline\mu\left(A\right)=\mu\left(B\right)$.
 
 ## 1
 

@@ -106,7 +106,7 @@ $$
 23. 给定有界函数 $f:\left[a,b\right]\to\mathbb{R}$, 令
 
 $$
-H\left(x\right)=\limsup_{\delta\to0}\sup_{0<\left|y-x\right|\le\delta}f\left(y\right),\qquad{h}\left(x\right)=\liminf_{\delta\to0}\inf_{0<\left|y-x\right|\le\delta}f\left(y\right).
+H\left(x\right)=\limsup_{\delta\to0}\sup_{0<\left|y-x\right|\le\delta}f\left(y\right),\quad{h}\left(x\right)=\liminf_{\delta\to0}\inf_{0<\left|y-x\right|\le\delta}f\left(y\right).
 $$
 
 证明: (a) $H\left(x\right)=h\left(x\right)$ 当且仅当 $f$ 在 $x$ 连续; (b) $H=G$ 几乎处处, $h=g$ 几乎处处, 且 $\int_{\left(a,b\right)}h\,\mathrm{d}m=\underline{\int}f$. 由此 $f$ 黎曼可积当且仅当 $f$ 的不连续点集测度为 0.
@@ -150,7 +150,7 @@ $$
 反之, 设 $H\left(x\right)=h\left(x\right)=:L$. 对 $\varepsilon>0$, 由极限定义存在 $\delta>0$ 使对 $0<\delta'<\delta$ 有
 
 $$
-\inf_{0<\left|y-x\right|\le\delta'}f\left(y\right)>{}L-\varepsilon,\qquad\sup_{0<\left|y-x\right|\le\delta'}f\left(y\right)<{}L+\varepsilon.
+\inf_{0<\left|y-x\right|\le\delta'}f\left(y\right)>{}L-\varepsilon,\quad\sup_{0<\left|y-x\right|\le\delta'}f\left(y\right)<{}L+\varepsilon.
 $$
 
 取 $\delta'=\delta$, 则对 $0<\left|y-x\right|\le\delta$ 有 $L-\varepsilon<{}f\left(y\right)<{}L+\varepsilon$; 又 $f\left(x\right)$ 介于 $\inf$ 与 $\sup$ 之间, 故 $L-\varepsilon<{}f\left(x\right)<{}L+\varepsilon$. 于是 $\left|f\left(y\right)-f\left(x\right)\right|<2\varepsilon$ 对 $0<\left|y-x\right|\le\delta$ 成立, 即 $f$ 在 $x$ 连续.
@@ -158,7 +158,7 @@ $$
 (b) 取分割列 $\left\{P_{k}\right\}$, 使网格 $\max_{i}\left(t_{i}-t_{i-1}\right)\to0$ 且 $P_{k}\subset{P}_{k+1}$ (逐次加密), 定义
 
 $$
-G_{P_{k}}=\sum_{i}M_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},\qquad{g}_{P_{k}}=\sum_{i}m_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},
+G_{P_{k}}=\sum_{i}M_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},\quad{g}_{P_{k}}=\sum_{i}m_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},
 $$
 
 并令 $G=\lim_{k}G_{P_{k}}$, $g=\lim_{k}g_{P_{k}}$. 固定 $x$ 不属于任何 $P_{k}$ 的分点 (所有分割的分点之并至多可数, 测度为 0). 设 $x\in\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)$, 则 $G_{P_{k}}\left(x\right)=M_{i}^{\left(k\right)}=\sup_{\left[t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right]}f$. 随 $k\to\infty$ 该小区间收缩到 $\left\{x\right\}$, 上确界递减趋于 $\sup_{0<\left|y-x\right|\le\delta}f\left(y\right)$ 随 $\delta\to0$ 的极限, 即 $H\left(x\right)$. 故 $G\left(x\right)=H\left(x\right)$; 同理 $g\left(x\right)=h\left(x\right)$. 因此在 $\left[a,b\right]$ 去掉可数分点集后 $H=G$, $h=g$ 几乎处处.
@@ -226,7 +226,7 @@ $$
 对 $R>0$, 换元 $u=ax$ 与 $u=bx$:
 
 $$
-\int_{0}^{R}\frac{a}{e^{ax}-1}\mathrm{d}x=\int_{0}^{aR}\frac{\mathrm{d}u}{e^{u}-1},\qquad\int_{0}^{R}\frac{b}{e^{bx}-1}\mathrm{d}x=\int_{0}^{bR}\frac{\mathrm{d}u}{e^{u}-1}.
+\int_{0}^{R}\frac{a}{e^{ax}-1}\mathrm{d}x=\int_{0}^{aR}\frac{\mathrm{d}u}{e^{u}-1},\quad\int_{0}^{R}\frac{b}{e^{bx}-1}\mathrm{d}x=\int_{0}^{bR}\frac{\mathrm{d}u}{e^{u}-1}.
 $$
 
 故
@@ -296,7 +296,7 @@ $\left(\Rightarrow\right)$ 由**定义 9.1.3 (依测度收敛)**, 若 $f_{n}\xri
 $\left(\Leftarrow\right)$ 反证. 若 $f_{n}$ 不依测度收敛到 $f$, 则存在 $\varepsilon>0$ 使 $\mu\left(\left\{\left|f_{n}-f\right|>\varepsilon\right\}\right)$ 不趋于 $0$, 即存在 $\delta>0$ 与子列 $\left\{f_{n_{k}}\right\}$ 使
 
 $$
-\mu\left(\left\{x:\left|f_{n_{k}}\left(x\right)-f\left(x\right)\right|>\varepsilon\right\}\right)\ge\delta\,\text{对所有~}k.
+\mu\left(\left\{x:\left|f_{n_{k}}\left(x\right)-f\left(x\right)\right|>\varepsilon\right\}\right)\ge\delta\;\text{对所有~}k.
 $$
 
 由**命题 9.1.2 (几乎处处收敛的刻画)**, $\left\{f_{n_{k}}\right\}$ 的任何子子列 $\left\{f_{n'_{j}}\right\}$ 都不能几乎处处收敛到 $f$: 因为

@@ -62,7 +62,7 @@
 
 > **定理 5.4.6 (测度完备化定理)**
 > 
-> 任意测度空间 $\left(X,\mathcal{F},\mu\right)$ 都可以完备化, 即存在完备测度空间 $\left(X,\mathcal{M},\overline\mu\right)$ 使得: (1) $\mathcal{F}\subset\mathcal{M}$; (2) $\overline\mu|_{\mathcal{F}}=\mu$; (3) $\mathcal{M}$ 是包含 $\mathcal{F}$ 的最小完备 $\sigma$-代数. 具体地, 令 $\mathcal{N}=\left\{N\in\mathcal{F}:\mu\left(N\right)=0\right\}$, $\mathcal{M}=\left\{A\subset{X}:\exists\,B\in\mathcal{F},\,\exists\,N\in\mathcal{N},\,B\subset{A}\subset{B}\cup{N}\right\}$, 并定义 $\overline\mu\left(A\right)=\mu\left(B\right)$.
+> 任意测度空间 $\left(X,\mathcal{F},\mu\right)$ 都可以完备化, 即存在完备测度空间 $\left(X,\mathcal{M},\overline\mu\right)$ 使得: (1) $\mathcal{F}\subset\mathcal{M}$; (2) $\overline\mu|_{\mathcal{F}}=\mu$; (3) $\mathcal{M}$ 是包含 $\mathcal{F}$ 的最小完备 $\sigma$-代数. 具体地, 令 $\mathcal{N}=\left\{N\in\mathcal{F}:\mu\left(N\right)=0\right\}$, $\mathcal{M}=\left\{A\subset{X}:\exists\,B\in\mathcal{F},\exists\,N\in\mathcal{N},B\subset{A}\subset{B}\cup{N}\right\}$, 并定义 $\overline\mu\left(A\right)=\mu\left(B\right)$.
 
 > **定义 6.1.1 (外测度)**
 > 
@@ -141,7 +141,7 @@ $$
 (a) $E=\left(E\cap{F}\right)\cup\left(E\setminus{F}\right)$, $F=\left(E\cap{F}\right)\cup\left(F\setminus{E}\right)$ 均为两两不交分解, 由**命题 5.2.1 (有限可加性)**,
 
 $$
-\mu\left(E\right)=\mu\left(E\cap{F}\right)+\mu\left(E\setminus{F}\right),\qquad\mu\left(F\right)=\mu\left(E\cap{F}\right)+\mu\left(F\setminus{E}\right).
+\mu\left(E\right)=\mu\left(E\cap{F}\right)+\mu\left(E\setminus{F}\right),\quad\mu\left(F\right)=\mu\left(E\cap{F}\right)+\mu\left(F\setminus{E}\right).
 $$
 
 又 $E\setminus{F}\subset{E}\triangle{F}$, $F\setminus{E}\subset{E}\triangle{F}$, 由**命题 5.2.2 (单调性)**, $\mu\left(E\setminus{F}\right)\le\mu\left(E\triangle{F}\right)=0$, 同理 $\mu\left(F\setminus{E}\right)=0$. 故 $\mu\left(E\right)=\mu\left(E\cap{F}\right)=\mu\left(F\right)$. $\blacksquare$
@@ -215,7 +215,7 @@ $$
 $\sigma$-有限情形. 设 $\mu_{0}$ 是 $\sigma$-有限的, 即存在两两不交的 $X_{k}\in\mathcal{E}$ 使 $X=\bigcup_{k=1}^{\infty}X_{k}$ 且 $\mu_{0}\left(X_{k}\right)<\infty$. 对任意 $A\in\mathcal{M}$, 由可数可加性与下连续性,
 
 $$
-\mu^{*}\left(A\right)=\sum_{k}\mu^{*}\left(A\cap{X}_{k}\right),\qquad\nu\left(A\right)=\sum_{k}\nu\left(A\cap{X}_{k}\right).
+\mu^{*}\left(A\right)=\sum_{k}\mu^{*}\left(A\cap{X}_{k}\right),\quad\nu\left(A\right)=\sum_{k}\nu\left(A\cap{X}_{k}\right).
 $$
 
 对每个 $k$, 把有限测度 $\mu_{0}\left(\cdot\cap{X}_{k}\right)$ 与 $\nu\left(\cdot\cap{X}_{k}\right)$ 限制在 $X_{k}$ 上即化为有限情形, 得 $\nu\left(A\cap{X}_{k}\right)=\mu^{*}\left(A\cap{X}_{k}\right)$. 求和得 $\nu\left(A\right)=\mu^{*}\left(A\right)$. 故 $\mu^{*}|_{\mathcal{M}}$ 是 $\mu_{0}$ 到 $\mathcal{M}$ 的唯一延拓. $\blacksquare$
@@ -285,7 +285,7 @@ $$
 再证 $\mathcal{E}$ 对补封闭. 单个 h 区间的补:
 
 $$
-\varnothing^{c}=\mathbb{R}=\left(-\infty,\infty\right),\qquad\left(a,\infty\right)^{c}=\left(-\infty,a\right],\qquad\left(a,b\right]^{c}=\left(-\infty,a\right]\cup\left(b,\infty\right),
+\varnothing^{c}=\mathbb{R}=\left(-\infty,\infty\right),\quad\left(a,\infty\right)^{c}=\left(-\infty,a\right],\quad\left(a,b\right]^{c}=\left(-\infty,a\right]\cup\left(b,\infty\right),
 $$
 
 其中 $\left(-\infty,a\right]$, $\left(b,\infty\right)$ 均为 h 区间, 且两两不交. 故每个 h 区间的补仍属于 $\mathcal{E}$. 对 $\mathcal{E}$ 中元素 $A=\bigcup_{i=1}^{n}I_{i}$ ($I_{i}$ 为不交 h 区间), 由德摩根律

@@ -126,7 +126,7 @@ $$
 
 > **定理 5.4.6 (测度完备化定理)**
 > 
-> 任意测度空间 $\left(X,\mathcal{F},\mu\right)$ 都可以完备化, 即存在完备测度空间 $\left(X,\mathcal{M},\overline\mu\right)$ 使得: (1) $\mathcal{F}\subset\mathcal{M}$; (2) $\overline\mu|_{\mathcal{F}}=\mu$; (3) $\mathcal{M}$ 是包含 $\mathcal{F}$ 的最小完备 $\sigma$-代数. 具体地, 令 $\mathcal{N}=\left\{N\in\mathcal{F}:\mu\left(N\right)=0\right\}$, $\mathcal{M}=\left\{A\subset{X}:\exists\,B\in\mathcal{F},\,\exists\,N\in\mathcal{N},\,B\subset{A}\subset{B}\cup{N}\right\}$, 并定义 $\overline\mu\left(A\right)=\mu\left(B\right)$.
+> 任意测度空间 $\left(X,\mathcal{F},\mu\right)$ 都可以完备化, 即存在完备测度空间 $\left(X,\mathcal{M},\overline\mu\right)$ 使得: (1) $\mathcal{F}\subset\mathcal{M}$; (2) $\overline\mu|_{\mathcal{F}}=\mu$; (3) $\mathcal{M}$ 是包含 $\mathcal{F}$ 的最小完备 $\sigma$-代数. 具体地, 令 $\mathcal{N}=\left\{N\in\mathcal{F}:\mu\left(N\right)=0\right\}$, $\mathcal{M}=\left\{A\subset{X}:\exists\,B\in\mathcal{F},\exists\,N\in\mathcal{N},B\subset{A}\subset{B}\cup{N}\right\}$, 并定义 $\overline\mu\left(A\right)=\mu\left(B\right)$.
 
 ## 1
 

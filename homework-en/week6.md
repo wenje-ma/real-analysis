@@ -106,7 +106,7 @@ Prove:
 23. Let $f:\left[a,b\right]\to\mathbb{R}$ be bounded, and set
 
 $$
-H\left(x\right)=\limsup_{\delta\to0}\sup_{0<\left|y-x\right|\le\delta}f\left(y\right),\qquad{h}\left(x\right)=\liminf_{\delta\to0}\inf_{0<\left|y-x\right|\le\delta}f\left(y\right).
+H\left(x\right)=\limsup_{\delta\to0}\sup_{0<\left|y-x\right|\le\delta}f\left(y\right),\quad{h}\left(x\right)=\liminf_{\delta\to0}\inf_{0<\left|y-x\right|\le\delta}f\left(y\right).
 $$
 
 Prove: (a) $H\left(x\right)=h\left(x\right)$ iff $f$ is continuous at $x$; (b) $H=G$ a.e., $h=g$ a.e., and $\int_{\left(a,b\right)}h\,\mathrm{d}m=\underline{\int}f$. Hence $f$ is Riemann integrable iff its set of discontinuities has measure 0.
@@ -150,7 +150,7 @@ Letting $\delta\to0$ and using the arbitrariness of $\varepsilon$, $h\left(x\rig
 Conversely, suppose $H\left(x\right)=h\left(x\right)=:L$. For $\varepsilon>0$, by the definition of the limits there exists $\delta>0$ such that for $0<\delta'<\delta$,
 
 $$
-\inf_{0<\left|y-x\right|\le\delta'}f\left(y\right)>{}L-\varepsilon,\qquad\sup_{0<\left|y-x\right|\le\delta'}f\left(y\right)<{}L+\varepsilon.
+\inf_{0<\left|y-x\right|\le\delta'}f\left(y\right)>{}L-\varepsilon,\quad\sup_{0<\left|y-x\right|\le\delta'}f\left(y\right)<{}L+\varepsilon.
 $$
 
 Taking $\delta'=\delta$, for $0<\left|y-x\right|\le\delta$ we have $L-\varepsilon<{}f\left(y\right)<{}L+\varepsilon$; also $f\left(x\right)$ lies between the inf and sup, so $L-\varepsilon<{}f\left(x\right)<{}L+\varepsilon$. Hence $\left|f\left(y\right)-f\left(x\right)\right|<2\varepsilon$ for $0<\left|y-x\right|\le\delta$, i.e. $f$ is continuous at $x$.
@@ -158,7 +158,7 @@ Taking $\delta'=\delta$, for $0<\left|y-x\right|\le\delta$ we have $L-\varepsilo
 (b) Take a sequence of partitions $\left\{P_{k}\right\}$ with mesh $\max_{i}\left(t_{i}-t_{i-1}\right)\to0$ and $P_{k}\subset{P}_{k+1}$ (successive refinement), define
 
 $$
-G_{P_{k}}=\sum_{i}M_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},\qquad{g}_{P_{k}}=\sum_{i}m_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},
+G_{P_{k}}=\sum_{i}M_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},\quad{g}_{P_{k}}=\sum_{i}m_{i}^{\left(k\right)}\chi_{\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)},
 $$
 
 and set $G=\lim_{k}G_{P_{k}}$, $g=\lim_{k}g_{P_{k}}$. Fix $x$ not a partition point of any $P_{k}$ (the union of all partition points is at most countable, measure 0). Suppose $x\in\left(t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right)$; then $G_{P_{k}}\left(x\right)=M_{i}^{\left(k\right)}=\sup_{\left[t_{i-1}^{\left(k\right)},t_{i}^{\left(k\right)}\right]}f$. As $k\to\infty$ the interval shrinks to $\left\{x\right\}$, and the supremum decreases to the limit of $\sup_{0<\left|y-x\right|\le\delta}f\left(y\right)$ as $\delta\to0$, i.e. $H\left(x\right)$. Hence $G\left(x\right)=H\left(x\right)$; similarly $g\left(x\right)=h\left(x\right)$. Thus after removing the countable set of partition points from $\left[a,b\right]$, $H=G$ and $h=g$ almost everywhere.
@@ -226,7 +226,7 @@ As $x\to0^{+}$, $\frac{a}{e^{ax}-1}=\frac{1}{x}-\frac{a}{2}+O\left(x\right)$, so
 For $R>0$, change variables $u=ax$ and $u=bx$:
 
 $$
-\int_{0}^{R}\frac{a}{e^{ax}-1}\mathrm{d}x=\int_{0}^{aR}\frac{\mathrm{d}u}{e^{u}-1},\qquad\int_{0}^{R}\frac{b}{e^{bx}-1}\mathrm{d}x=\int_{0}^{bR}\frac{\mathrm{d}u}{e^{u}-1}.
+\int_{0}^{R}\frac{a}{e^{ax}-1}\mathrm{d}x=\int_{0}^{aR}\frac{\mathrm{d}u}{e^{u}-1},\quad\int_{0}^{R}\frac{b}{e^{bx}-1}\mathrm{d}x=\int_{0}^{bR}\frac{\mathrm{d}u}{e^{u}-1}.
 $$
 
 Thus
@@ -296,7 +296,7 @@ $\left(\Rightarrow\right)$ By **Definition 9.1.3 (Convergence in Measure)**, if 
 $\left(\Leftarrow\right)$ By contradiction. If $f_{n}$ does not converge to $f$ in measure, then there exists $\varepsilon>0$ such that $\mu\left(\left\{\left|f_{n}-f\right|>\varepsilon\right\}\right)$ does not tend to $0$, i.e. there exist $\delta>0$ and a subsequence $\left\{f_{n_{k}}\right\}$ with
 
 $$
-\mu\left(\left\{x:\left|f_{n_{k}}\left(x\right)-f\left(x\right)\right|>\varepsilon\right\}\right)\ge\delta\,\text{for~all~}k.
+\mu\left(\left\{x:\left|f_{n_{k}}\left(x\right)-f\left(x\right)\right|>\varepsilon\right\}\right)\ge\delta\;\text{for~all~}k.
 $$
 
 By **Proposition 9.1.2 (Characterization of Almost-Everywhere Convergence)**, no further subsequence $\left\{f_{n'_{j}}\right\}$ of $\left\{f_{n_{k}}\right\}$ can converge almost everywhere to $f$, because

@@ -62,7 +62,7 @@
 
 > **Theorem 5.4.6 (Completion Theorem for Measures)**
 > 
-> Every measure space $\left(X,\mathcal{F},\mu\right)$ can be completed, i.e. there exists a complete measure space $\left(X,\mathcal{M},\overline\mu\right)$ such that: (1) $\mathcal{F}\subset\mathcal{M}$; (2) $\overline\mu|_{\mathcal{F}}=\mu$; (3) $\mathcal{M}$ is the smallest complete $\sigma$-algebra containing $\mathcal{F}$. Explicitly, let $\mathcal{N}=\left\{N\in\mathcal{F}:\mu\left(N\right)=0\right\}$, $\mathcal{M}=\left\{A\subset{X}:\exists\,B\in\mathcal{F},\,\exists\,N\in\mathcal{N},\,B\subset{A}\subset{B}\cup{N}\right\}$, and define $\overline\mu\left(A\right)=\mu\left(B\right)$.
+> Every measure space $\left(X,\mathcal{F},\mu\right)$ can be completed, i.e. there exists a complete measure space $\left(X,\mathcal{M},\overline\mu\right)$ such that: (1) $\mathcal{F}\subset\mathcal{M}$; (2) $\overline\mu|_{\mathcal{F}}=\mu$; (3) $\mathcal{M}$ is the smallest complete $\sigma$-algebra containing $\mathcal{F}$. Explicitly, let $\mathcal{N}=\left\{N\in\mathcal{F}:\mu\left(N\right)=0\right\}$, $\mathcal{M}=\left\{A\subset{X}:\exists\,B\in\mathcal{F},\exists\,N\in\mathcal{N},B\subset{A}\subset{B}\cup{N}\right\}$, and define $\overline\mu\left(A\right)=\mu\left(B\right)$.
 
 > **Definition 6.1.1 (Outer Measure)**
 > 
@@ -141,7 +141,7 @@ Let $\left(X,\mathcal{M},\mu\right)$ be a finite measure space.
 (a) $E=\left(E\cap{F}\right)\cup\left(E\setminus{F}\right)$ and $F=\left(E\cap{F}\right)\cup\left(F\setminus{E}\right)$ are disjoint decompositions. By **Proposition 5.2.1 (Finite Additivity)**,
 
 $$
-\mu\left(E\right)=\mu\left(E\cap{F}\right)+\mu\left(E\setminus{F}\right),\qquad\mu\left(F\right)=\mu\left(E\cap{F}\right)+\mu\left(F\setminus{E}\right).
+\mu\left(E\right)=\mu\left(E\cap{F}\right)+\mu\left(E\setminus{F}\right),\quad\mu\left(F\right)=\mu\left(E\cap{F}\right)+\mu\left(F\setminus{E}\right).
 $$
 
 Since $E\setminus{F}\subset{E}\triangle{F}$ and $F\setminus{E}\subset{E}\triangle{F}$, by **Proposition 5.2.2 (Monotonicity)**, $\mu\left(E\setminus{F}\right)\le\mu\left(E\triangle{F}\right)=0$, and similarly $\mu\left(F\setminus{E}\right)=0$. Hence $\mu\left(E\right)=\mu\left(E\cap{F}\right)=\mu\left(F\right)$. $\blacksquare$
@@ -215,7 +215,7 @@ Hence $\nu\left(A\right)=\mu^{*}\left(A\right)$. This proves uniqueness when $\m
 $\sigma$-finite case. Suppose $\mu_{0}$ is $\sigma$-finite, i.e. there exist pairwise disjoint $X_{k}\in\mathcal{E}$ with $X=\bigcup_{k=1}^{\infty}X_{k}$ and $\mu_{0}\left(X_{k}\right)<\infty$. For any $A\in\mathcal{M}$, by countable additivity and continuity from below,
 
 $$
-\mu^{*}\left(A\right)=\sum_{k}\mu^{*}\left(A\cap{X}_{k}\right),\qquad\nu\left(A\right)=\sum_{k}\nu\left(A\cap{X}_{k}\right).
+\mu^{*}\left(A\right)=\sum_{k}\mu^{*}\left(A\cap{X}_{k}\right),\quad\nu\left(A\right)=\sum_{k}\nu\left(A\cap{X}_{k}\right).
 $$
 
 For each $k$, restricting the finite measures $\mu_{0}\left(\cdot\cap{X}_{k}\right)$ and $\nu\left(\cdot\cap{X}_{k}\right)$ to $X_{k}$ reduces to the finite case, giving $\nu\left(A\cap{X}_{k}\right)=\mu^{*}\left(A\cap{X}_{k}\right)$. Summing yields $\nu\left(A\right)=\mu^{*}\left(A\right)$. Thus $\mu^{*}|_{\mathcal{M}}$ is the unique extension of $\mu_{0}$ to $\mathcal{M}$. $\blacksquare$
@@ -285,7 +285,7 @@ First show the intersection of two h-intervals is an h-interval. Indeed, $\left(
 Next show $\mathcal{E}$ is closed under complements. The complement of a single h-interval:
 
 $$
-\varnothing^{c}=\mathbb{R}=\left(-\infty,\infty\right),\qquad\left(a,\infty\right)^{c}=\left(-\infty,a\right],\qquad\left(a,b\right]^{c}=\left(-\infty,a\right]\cup\left(b,\infty\right),
+\varnothing^{c}=\mathbb{R}=\left(-\infty,\infty\right),\quad\left(a,\infty\right)^{c}=\left(-\infty,a\right],\quad\left(a,b\right]^{c}=\left(-\infty,a\right]\cup\left(b,\infty\right),
 $$
 
 where $\left(-\infty,a\right]$ and $\left(b,\infty\right)$ are h-intervals and are pairwise disjoint. Thus the complement of each h-interval belongs to $\mathcal{E}$. For an element $A=\bigcup_{i=1}^{n}I_{i}\in\mathcal{E}$ ($I_{i}$ disjoint h-intervals), by De Morgan's laws,

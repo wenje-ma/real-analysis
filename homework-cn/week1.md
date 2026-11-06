@@ -65,7 +65,7 @@ $$
 > 若 $E\in\mathcal{F}\otimes\mathcal{G}$, 则对任意 $x\in{X}$, $y\in{Y}$, 其截面都可测:
 
 $$
-E_{x}=\left\{y\in{Y}:\left(x,y\right)\in{E}\right\}\in\mathcal{G},\qquad{E}^{y}=\left\{x\in{X}:\left(x,y\right)\in{E}\right\}\in\mathcal{F}.
+E_{x}=\left\{y\in{Y}:\left(x,y\right)\in{E}\right\}\in\mathcal{G},\quad{E}^{y}=\left\{x\in{X}:\left(x,y\right)\in{E}\right\}\in\mathcal{F}.
 $$
 
 > **定理 4.5.4 (博雷尔集的乘积)**
@@ -81,7 +81,7 @@ $$
 > 设 $\left\{\left(X_{\alpha},\mathcal{F}_{\alpha}\right)\right\}_{\alpha\in{I}}$ 是一族可测空间, 乘积 $\sigma$-代数 $\bigotimes_{\alpha\in{I}}\mathcal{F}_{\alpha}$ 是由所有柱集
 
 $$
-\left\{x=\left(x_{\alpha}\right)_{\alpha\in{I}}\in\prod_{\alpha\in{I}}X_{\alpha}:x_{\beta}\in{A}_{\beta}\right\},\,A_{\beta}\in\mathcal{F}_{\beta},\,\beta\in{I}
+\left\{x=\left(x_{\alpha}\right)_{\alpha\in{I}}\in\prod_{\alpha\in{I}}X_{\alpha}:x_{\beta}\in{A}_{\beta}\right\},A_{\beta}\in\mathcal{F}_{\beta},\beta\in{I}
 $$
 生成的 $\sigma$-代数.
 
@@ -134,7 +134,7 @@ $$
 ($\Leftarrow$) 设 $\mathcal{F}$ 是代数且对可数不交并封闭. 代数给出 $X\in\mathcal{F}$, 对补封闭及有限并封闭; 只需再证对可数并封闭. 设 $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal{F}$, 作不交化:
 
 $$
-B_{1}:=A_{1},\qquad{B}_{n}:=A_{n}\setminus\left(A_{1}\cup\cdots\cup{A}_{n-1}\right)\,\left(n\ge2\right).
+B_{1}:=A_{1},\quad{B}_{n}:=A_{n}\setminus\left(A_{1}\cup\cdots\cup{A}_{n-1}\right)\,\left(n\ge2\right).
 $$
 
 由代数的差运算与有限并封闭, 每个 $B_{n}\in\mathcal{F}$; 且 $\left\{B_{n}\right\}$ 两两不交, 并保持并集不变: $\bigcup_{n=1}^{\infty}B_{n}=\bigcup_{n=1}^{\infty}A_{n}$. 由可数不交并封闭,
@@ -238,7 +238,7 @@ $$
 证明**定理 4.5.3 (截面可测性)**: 设 $\left(X,\mathcal{F}\right)$, $\left(Y,\mathcal{G}\right)$ 为可测空间. 若 $E\in\mathcal{F}\otimes\mathcal{G}$, 则对任意 $x\in{X}$ 和 $y\in{Y}$, 其截面
 
 $$
-E_{x}=\left\{y\in{Y}:\left(x,y\right)\in{E}\right\}\in\mathcal{G},\qquad{E}^{y}=\left\{x\in{X}:\left(x,y\right)\in{E}\right\}\in\mathcal{F}.
+E_{x}=\left\{y\in{Y}:\left(x,y\right)\in{E}\right\}\in\mathcal{G},\quad{E}^{y}=\left\{x\in{X}:\left(x,y\right)\in{E}\right\}\in\mathcal{F}.
 $$
 
 ### 解答 6
