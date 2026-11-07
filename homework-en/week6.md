@@ -176,10 +176,10 @@ $$
 In particular $\int_{\left(a,b\right)}h\,\mathrm{d}m=\underline{\int}f$. Hence
 
 $$
-f\text{~Riemann~integrable}\iff\overline{\int}f=\underline{\int}f\iff\int{H}\,\mathrm{d}m=\int{h}\,\mathrm{d}m\iff\int\left(H-h\right)\mathrm{d}m=0.
+f\text{~Riemann~integrable}\Leftrightarrow\overline{\int}f=\underline{\int}f\Leftrightarrow\int{H}\,\mathrm{d}m=\int{h}\,\mathrm{d}m\Leftrightarrow\int\left(H-h\right)\mathrm{d}m=0.
 $$
 
-Since $H\ge{h}$, by Exercise 3(b), $\int\left(H-h\right)\mathrm{d}m=0\iff{H}=h$ a.e. Combined with (a) ($H=h\iff{f}$ continuous at $x$), $f$ is Riemann integrable iff its discontinuity set has measure 0. Then the Riemann integral $\overline{\int}f=\int{H}\,\mathrm{d}m=\int{f}\,\mathrm{d}m$ (since $H=f$ a.e.). $\blacksquare$
+Since $H\ge{h}$, by Exercise 3(b), $\int\left(H-h\right)\mathrm{d}m=0\Leftrightarrow{H}=h$ a.e. Combined with (a) ($H=h\Leftrightarrow{f}$ continuous at $x$), $f$ is Riemann integrable iff its discontinuity set has measure 0. Then the Riemann integral $\overline{\int}f=\int{H}\,\mathrm{d}m=\int{f}\,\mathrm{d}m$ (since $H=f$ a.e.). $\blacksquare$
 
 27. First find the zero of $f_{n}$. Setting $f_{n}\left(x\right)=0$ gives $ae^{-nax}=be^{-nbx}$, i.e. $e^{n\left(b-a\right)x}=b/a$, so the unique zero is
 

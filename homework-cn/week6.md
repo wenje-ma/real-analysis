@@ -176,10 +176,10 @@ $$
 特别地 $\int_{\left(a,b\right)}h\,\mathrm{d}m=\underline{\int}f$. 于是
 
 $$
-f\text{~黎曼可积}\iff\overline{\int}f=\underline{\int}f\iff\int{H}\,\mathrm{d}m=\int{h}\,\mathrm{d}m\iff\int\left(H-h\right)\mathrm{d}m=0.
+f\text{~黎曼可积}\Leftrightarrow\overline{\int}f=\underline{\int}f\Leftrightarrow\int{H}\,\mathrm{d}m=\int{h}\,\mathrm{d}m\Leftrightarrow\int\left(H-h\right)\mathrm{d}m=0.
 $$
 
-因 $H\ge{h}$, 由习题三 (b) 得 $\int\left(H-h\right)\mathrm{d}m=0\iff{H}=h$ 几乎处处. 结合 (a) ($H=h\iff{f}$ 连续于 $x$) 得 $f$ 黎曼可积当且仅当 $f$ 的不连续点集测度为 0. 此时黎曼积分 $\overline{\int}f=\int{H}\,\mathrm{d}m=\int{f}\,\mathrm{d}m$ (因 $H=f$ 几乎处处). $\blacksquare$
+因 $H\ge{h}$, 由习题三 (b) 得 $\int\left(H-h\right)\mathrm{d}m=0\Leftrightarrow{H}=h$ 几乎处处. 结合 (a) ($H=h\Leftrightarrow{f}$ 连续于 $x$) 得 $f$ 黎曼可积当且仅当 $f$ 的不连续点集测度为 0. 此时黎曼积分 $\overline{\int}f=\int{H}\,\mathrm{d}m=\int{f}\,\mathrm{d}m$ (因 $H=f$ 几乎处处). $\blacksquare$
 
 27. 先求 $f_{n}$ 的零点. 令 $f_{n}\left(x\right)=0$ 得 $ae^{-nax}=be^{-nbx}$, 即 $e^{n\left(b-a\right)x}=b/a$, 故唯一零点
 

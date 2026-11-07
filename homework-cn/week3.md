@@ -150,7 +150,7 @@ $$
 
 (1) 自反性: $\mu\left(E\triangle{E}\right)=\mu\left(\varnothing\right)=0$, 故 $E\sim{E}$.
 
-(2) 对称性: $E\triangle{F}=F\triangle{E}$, 故 $E\sim{F}\iff{F}\sim{E}$.
+(2) 对称性: $E\triangle{F}=F\triangle{E}$, 故 $E\sim{F}\Leftrightarrow{F}\sim{E}$.
 
 (3) 传递性: 因 $E\triangle{G}\subset\left(E\triangle{F}\right)\cup\left(F\triangle{G}\right)$, 由**命题 5.2.3 (次可数可加性)**, $\mu\left(E\triangle{G}\right)\le\mu\left(E\triangle{F}\right)+\mu\left(F\triangle{G}\right)=0$, 故 $E\sim{G}$.
 
@@ -168,7 +168,7 @@ $$
 E\triangle{F}\subset\left(E\triangle{E}'\right)\cup\left(E'\triangle{F}'\right)\cup\left(F'\triangle{F}\right),
 $$
 
-故 $\rho\left(E,F\right)\le0+\rho\left(E',F'\right)+0=\rho\left(E',F'\right)$; 对称地 $\rho\left(E',F'\right)\le\rho\left(E,F\right)$, 故 $\rho\left(E,F\right)=\rho\left(E',F'\right)$, 即 $\rho$ 良定义于商空间 $\mathcal{M}/\sim$. 又 $\rho\left(E,F\right)=0\iff\mu\left(E\triangle{F}\right)=0\iff{E}\sim{F}$, 故 $\rho$ 是 $\mathcal{M}/\sim$ 上的度量. $\blacksquare$
+故 $\rho\left(E,F\right)\le0+\rho\left(E',F'\right)+0=\rho\left(E',F'\right)$; 对称地 $\rho\left(E',F'\right)\le\rho\left(E,F\right)$, 故 $\rho\left(E,F\right)=\rho\left(E',F'\right)$, 即 $\rho$ 良定义于商空间 $\mathcal{M}/\sim$. 又 $\rho\left(E,F\right)=0\Leftrightarrow\mu\left(E\triangle{F}\right)=0\Leftrightarrow{E}\sim{F}$, 故 $\rho$ 是 $\mathcal{M}/\sim$ 上的度量. $\blacksquare$
 
 ## 2
 

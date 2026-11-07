@@ -149,10 +149,10 @@ $$
 收敛条件由指数因子决定:
 
 $$
-\int_{\log2}^{\infty}e^{-u\left(a+n\right)}u^{b}\mathrm{d}u\text{~收敛}\iff\begin{cases}a+n>0,&\text{指数衰减,~任意~}b,\\a+n=0\text{~且~}b<-1,&\int{u}^{b}\mathrm{d}u\text{~收敛},\\a+n<0,&\text{指数增长,~发散}.\end{cases}
+\int_{\log2}^{\infty}e^{-u\left(a+n\right)}u^{b}\mathrm{d}u\text{~收敛}\Leftrightarrow\begin{cases}a+n>0,&\text{指数衰减,~任意~}b,\\a+n=0\text{~且~}b<-1,&\int{u}^{b}\mathrm{d}u\text{~收敛},\\a+n<0,&\text{指数增长,~发散}.\end{cases}
 $$
 
-故 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在 $\left\{\left|x\right|<1/2\right\}$ 上可积 $\iff{a}>-n$, 或 $a=-n$ 且 $b<-1$.
+故 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在 $\left\{\left|x\right|<1/2\right\}$ 上可积 $\Leftrightarrow{a}>-n$, 或 $a=-n$ 且 $b<-1$.
 
 集合 $\left\{\left|x\right|>2\right\}$. 当 $r\ge2$ 时 $\left|\log{r}\right|=\log{r}$. 作代换 $r=e^{u}$ ($\mathrm{d}r=e^{u}\mathrm{d}u$, $u\ge\log2$):
 
@@ -160,6 +160,6 @@ $$
 \int_{2}^{\infty}r^{a+n-1}\left(\log{r}\right)^{b}\mathrm{d}r=\int_{\log2}^{\infty}e^{u\left(a+n-1\right)}e^{u}u^{b}\mathrm{d}u=\int_{\log2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u.
 $$
 
-收敛条件: $\int_{\log2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u\text{~收敛}\iff{a}+n<0$ (指数衰减; $a+n>0$ 时指数增长发散, $a+n=0$ 时 $\int{u}^{b}\mathrm{d}u$ 发散对任意 $b$). 故 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在 $\left\{\left|x\right|>2\right\}$ 上可积 $\iff{a}<-n$.
+收敛条件: $\int_{\log2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u\text{~收敛}\Leftrightarrow{a}+n<0$ (指数衰减; $a+n>0$ 时指数增长发散, $a+n=0$ 时 $\int{u}^{b}\mathrm{d}u$ 发散对任意 $b$). 故 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在 $\left\{\left|x\right|>2\right\}$ 上可积 $\Leftrightarrow{a}<-n$.
 
-结论. 在 $\left\{\left|x\right|<1/2\right\}$ 上可积 $\iff{a}>-n$ 或 $\left(a=-n\text{~且~}b<-1\right)$; 在 $\left\{\left|x\right|>2\right\}$ 上可积 $\iff{a}<-n$. $\blacksquare$
+结论. 在 $\left\{\left|x\right|<1/2\right\}$ 上可积 $\Leftrightarrow{a}>-n$ 或 $\left(a=-n\text{~且~}b<-1\right)$; 在 $\left\{\left|x\right|>2\right\}$ 上可积 $\Leftrightarrow{a}<-n$. $\blacksquare$

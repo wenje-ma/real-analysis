@@ -150,7 +150,7 @@ Since $E\setminus{F}\subset{E}\triangle{F}$ and $F\setminus{E}\subset{E}\triangl
 
 (1) Reflexivity: $\mu\left(E\triangle{E}\right)=\mu\left(\varnothing\right)=0$, so $E\sim{E}$.
 
-(2) Symmetry: $E\triangle{F}=F\triangle{E}$, so $E\sim{F}\iff{F}\sim{E}$.
+(2) Symmetry: $E\triangle{F}=F\triangle{E}$, so $E\sim{F}\Leftrightarrow{F}\sim{E}$.
 
 (3) Transitivity: since $E\triangle{G}\subset\left(E\triangle{F}\right)\cup\left(F\triangle{G}\right)$, by **Proposition 5.2.3 (Countable Subadditivity)**, $\mu\left(E\triangle{G}\right)\le\mu\left(E\triangle{F}\right)+\mu\left(F\triangle{G}\right)=0$, so $E\sim{G}$.
 
@@ -168,7 +168,7 @@ $$
 E\triangle{F}\subset\left(E\triangle{E}'\right)\cup\left(E'\triangle{F}'\right)\cup\left(F'\triangle{F}\right),
 $$
 
-so $\rho\left(E,F\right)\le0+\rho\left(E',F'\right)+0=\rho\left(E',F'\right)$; symmetrically $\rho\left(E',F'\right)\le\rho\left(E,F\right)$, hence $\rho\left(E,F\right)=\rho\left(E',F'\right)$, i.e. $\rho$ is well-defined on the quotient $\mathcal{M}/\sim$. Moreover, $\rho\left(E,F\right)=0\iff\mu\left(E\triangle{F}\right)=0\iff{E}\sim{F}$, so $\rho$ is a metric on $\mathcal{M}/\sim$. $\blacksquare$
+so $\rho\left(E,F\right)\le0+\rho\left(E',F'\right)+0=\rho\left(E',F'\right)$; symmetrically $\rho\left(E',F'\right)\le\rho\left(E,F\right)$, hence $\rho\left(E,F\right)=\rho\left(E',F'\right)$, i.e. $\rho$ is well-defined on the quotient $\mathcal{M}/\sim$. Moreover, $\rho\left(E,F\right)=0\Leftrightarrow\mu\left(E\triangle{F}\right)=0\Leftrightarrow{E}\sim{F}$, so $\rho$ is a metric on $\mathcal{M}/\sim$. $\blacksquare$
 
 ## 2
 

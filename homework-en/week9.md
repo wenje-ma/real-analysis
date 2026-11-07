@@ -149,7 +149,7 @@ $$
 The convergence is determined by the exponential factor:
 
 $$
-\int_{\log2}^{\infty}e^{-u\left(a+n\right)}u^{b}\mathrm{d}u\text{~converges}\iff\begin{cases}a+n>0,&\text{exponential~decay,~any~}b,\\a+n=0\text{~and~}b<-1,&\int{u}^{b}\mathrm{d}u\text{~converges},\\a+n<0,&\text{exponential~growth,~diverges}.\end{cases}
+\int_{\log2}^{\infty}e^{-u\left(a+n\right)}u^{b}\mathrm{d}u\text{~converges}\Leftrightarrow\begin{cases}a+n>0,&\text{exponential~decay,~any~}b,\\a+n=0\text{~and~}b<-1,&\int{u}^{b}\mathrm{d}u\text{~converges},\\a+n<0,&\text{exponential~growth,~diverges}.\end{cases}
 $$
 
 Thus $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ is integrable on $\left\{\left|x\right|<1/2\right\}$ iff $a>-n$, or $a=-n$ and $b<-1$.
@@ -160,6 +160,6 @@ $$
 \int_{2}^{\infty}r^{a+n-1}\left(\log{r}\right)^{b}\mathrm{d}r=\int_{\log2}^{\infty}e^{u\left(a+n-1\right)}e^{u}u^{b}\mathrm{d}u=\int_{\log2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u.
 $$
 
-Convergence: $\int_{\log2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u\text{~converges}\iff{a}+n<0$ (exponential decay; for $a+n>0$ exponential growth diverges, for $a+n=0$, $\int{u}^{b}\mathrm{d}u$ diverges for any $b$). Thus $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ is integrable on $\left\{\left|x\right|>2\right\}$ iff $a<-n$.
+Convergence: $\int_{\log2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u\text{~converges}\Leftrightarrow{a}+n<0$ (exponential decay; for $a+n>0$ exponential growth diverges, for $a+n=0$, $\int{u}^{b}\mathrm{d}u$ diverges for any $b$). Thus $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ is integrable on $\left\{\left|x\right|>2\right\}$ iff $a<-n$.
 
 Conclusion. Integrable on $\left\{\left|x\right|<1/2\right\}$ iff $a>-n$ or $\left(a=-n\text{~and~}b<-1\right)$; integrable on $\left\{\left|x\right|>2\right\}$ iff $a<-n$. $\blacksquare$
