@@ -113,7 +113,9 @@ $$
 \nu\left(E\right)=\int_{E}f\,\mathrm{d}\lambda=\int_{E}f\,\mathrm{d}\mu+\int_{E}f\,\mathrm{d}\nu,
 $$
 
-i.e. $\int_{E}\left(1-f\right)\mathrm{d}\nu=\int_{E}f\,\mathrm{d}\mu$. Since $1-f>0$ $\mu$-a.e. (also $\lambda$-a.e.), by the uniqueness in **Theorem 11.5.5 (Radon-Nikodym Theorem)**, $\frac{\mathrm{d}\nu}{\mathrm{d}\mu}=\frac{f}{1-f}$. $\blacksquare$
+i.e. $\int_{E}\left(1-f\right)\mathrm{d}\nu=\int_{E}f\,\mathrm{d}\mu$. Since $1-f>0$ $\mu$-a.e. (also $\lambda$-a.e.), by the uniqueness in **Theorem 11.5.5 (Radon-Nikodym Theorem)**, $\frac{\mathrm{d}\nu}{\mathrm{d}\mu}=\frac{f}{1-f}$.
+
+$\blacksquare$
 
 ## 3
 
@@ -123,23 +125,27 @@ Let $\left(X,\mathcal{M},\mu\right)$ be a $\sigma$-finite measure space, $\mathc
 
 For $E\in\mathcal{N}$, define $\nu_{0}\left(E\right):=\int_{E}f\,\mathrm{d}\mu$. Then $\nu_{0}$ is a signed measure on $\mathcal{N}$: finite and countable additivity follow from countable additivity of $\mu$ and integrability of $f$ (dominated convergence), and $\left|\nu_{0}\left(E\right)\right|\le\int_{E}\left|f\right|\mathrm{d}\mu\le\int\left|f\right|\mathrm{d}\mu<\infty$, so $\nu_{0}$ is finite. Also $\nu_{0}\ll\nu$ (**Definition 11.5.1 (Absolute Continuity)**): if $E\in\mathcal{N}$ and $\nu\left(E\right)=\mu\left(E\right)=0$, then $\nu_{0}\left(E\right)=\int_{E}f\,\mathrm{d}\mu=0$ ($f\in{L}^{1}\left(\mu\right)$, and the integral over a null set is $0$). Since $\nu=\mu|_{\mathcal{N}}$ is $\sigma$-finite (as $\mu$ is $\sigma$-finite), by **Theorem 11.5.5 (Radon-Nikodym Theorem)** there is an $\mathcal{N}$-measurable $g=\frac{\mathrm{d}\nu_{0}}{\mathrm{d}\nu}\in{L}^{1}\left(\nu\right)$ such that $\int_{E}f\,\mathrm{d}\mu=\nu_{0}\left(E\right)=\int_{E}g\,\mathrm{d}\nu$ for every $E\in\mathcal{N}$.
 
-If $g'\in{L}^{1}\left(\nu\right)$ also satisfies the same identity, then $\int_{E}\left(g-g'\right)\mathrm{d}\nu=0$ for every $E\in\mathcal{N}$. Taking $E=\left\{g>{}g'\right\}\in\mathcal{N}$, since $g-g'\in{L}^{1}\left(\nu\right)$ and $\int_{\left\{g>{}g'\right\}}\left(g-g'\right)\mathrm{d}\nu=0$, by the fact that a nonnegative function with zero integral vanishes a.e., we get $g=g'$ $\nu$-a.e. on $\left\{g>{}g'\right\}$; similarly on $\left\{g<{}g'\right\}$. Hence $g=g'$ $\nu$-a.e. $\blacksquare$
+If $g'\in{L}^{1}\left(\nu\right)$ also satisfies the same identity, then $\int_{E}\left(g-g'\right)\mathrm{d}\nu=0$ for every $E\in\mathcal{N}$. Taking $E=\left\{g>g'\right\}\in\mathcal{N}$, since $g-g'\in{L}^{1}\left(\nu\right)$ and $\int_{\left\{g>g'\right\}}\left(g-g'\right)\mathrm{d}\nu=0$, by the fact that a nonnegative function with zero integral vanishes a.e., we get $g=g'$ $\nu$-a.e. on $\left\{g>g'\right\}$; similarly on $\left\{g<{}g'\right\}$. Hence $g=g'$ $\nu$-a.e.
+
+$\blacksquare$
 
 ## 4
 
-Let $f\in{L}^{1}\left(\mathbb{R}^{n}\right)$ and $f\ne0$. Prove that there exist $C,R>0$ such that $Hf\left(x\right)\ge{C}\left|x\right|^{-n}$ for $\left|x\right|>{}R$. Hence for small $\lambda$, $m\left(\left\{x:Hf\left(x\right)>\lambda\right\}\right)\ge{C}'\lambda^{-1}$, so the estimate in the maximal theorem is essentially sharp.
+Let $f\in{L}^{1}\left(\mathbb{R}^{n}\right)$ and $f\ne0$. Prove that there exist $C,R>0$ such that $Hf\left(x\right)\ge{C}\left|x\right|^{-n}$ for $\left|x\right|>R$. Hence for small $\lambda$, $m\left(\left\{x:Hf\left(x\right)>\lambda\right\}\right)\ge{C}'\lambda^{-1}$, so the estimate in the maximal theorem is essentially sharp.
 
 ### Solution to 4
 
-Write $Hf$ for the Hardy-Littlewood maximal function (Hardy-Littlewood Maximal Function). Since $f\ne0$ and $f\in{L}^{1}\left(\mathbb{R}^{n}\right)$, there is a ball $K$ (some compact set suffices) with $\int_{K}\left|f\right|\mathrm{d}y>0$; otherwise all $\int_{K}f$ vanishing would force $f=0$ a.e., a contradiction. Set $c=\int_{K}\left|f\right|\mathrm{d}y>0$, and take $R>0$ with $K\subset{B}\left(0,R\right)$ (i.e. $\sup_{y\in{K}}\left|y\right|<{}R$). For $\left|x\right|>{}R$, since $K\subset{B}\left(0,R\right)$ and $R<\left|x\right|$, we have $K\subset{B}\left(x,2\left|x\right|\right)$. Hence, by the definition of the maximal function and Ball-Volume Formula,
+Write $Hf$ for the Hardy-Littlewood maximal function (Hardy-Littlewood Maximal Function). Since $f\ne0$ and $f\in{L}^{1}\left(\mathbb{R}^{n}\right)$, there is a ball $K$ (some compact set suffices) with $\int_{K}\left|f\right|\mathrm{d}y>0$; otherwise all $\int_{K}f$ vanishing would force $f=0$ a.e., a contradiction. Set $c=\int_{K}\left|f\right|\mathrm{d}y>0$, and take $R>0$ with $K\subset{B}\left(0,R\right)$ (i.e. $\sup_{y\in{K}}\left|y\right|<{}R$). For $\left|x\right|>R$, since $K\subset{B}\left(0,R\right)$ and $R<\left|x\right|$, we have $K\subset{B}\left(x,2\left|x\right|\right)$. Hence, by the definition of the maximal function and Ball-Volume Formula,
 
 $$
 Hf\left(x\right)\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{B\left(x,2\left|x\right|\right)}\left|f\right|\mathrm{d}y\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{K}\left|f\right|\mathrm{d}y=\frac{c}{C_{n}\left(2\left|x\right|\right)^{n}}=\frac{c}{2^{n}C_{n}}\left|x\right|^{-n}.
 $$
 
-Taking $C=\frac{c}{2^{n}C_{n}}>0$, we get $Hf\left(x\right)\ge{C}\left|x\right|^{-n}$ for $\left|x\right|>{}R$.
+Taking $C=\frac{c}{2^{n}C_{n}}>0$, we get $Hf\left(x\right)\ge{C}\left|x\right|^{-n}$ for $\left|x\right|>R$.
 
-For the second part, by the first part, when $0<\lambda<{}C/R^{n}$, $\left(C/\lambda\right)^{1/n}>{}R$, so $\left\{x:\left|x\right|>\left(C/\lambda\right)^{1/n}\right\}\subset\left\{x:Hf\left(x\right)>\lambda\right\}$. By the ball-volume formula, $m\left(\left\{x:\left|x\right|<\left(C/\lambda\right)^{1/n}\right\}\right)=C_{n}\left(\frac{C}{\lambda}\right)=\frac{C_{n}C}{\lambda}$. Setting $C'=C_{n}C$, we get $m\left(\left\{x:Hf\left(x\right)>\lambda\right\}\right)\ge{C}'\lambda^{-1}$ for small $\lambda>0$. $\blacksquare$
+For the second part, by the first part, when $0<\lambda<{}C/R^{n}$, $\left(C/\lambda\right)^{1/n}>R$, so $\left\{x:\left|x\right|>\left(C/\lambda\right)^{1/n}\right\}\subset\left\{x:Hf\left(x\right)>\lambda\right\}$. By the ball-volume formula, $m\left(\left\{x:\left|x\right|<\left(C/\lambda\right)^{1/n}\right\}\right)=C_{n}\left(\frac{C}{\lambda}\right)=\frac{C_{n}C}{\lambda}$. Setting $C'=C_{n}C$, we get $m\left(\left\{x:Hf\left(x\right)>\lambda\right\}\right)\ge{C}'\lambda^{-1}$ for small $\lambda>0$.
+
+$\blacksquare$
 
 ## 5
 
@@ -155,7 +161,9 @@ $$
 \frac{1}{m\left(B\right)}\int_{B}\left|f\right|\mathrm{d}y\le\frac{1}{m\left(B\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y=2^{n}\cdot\frac{1}{m\left(B\left(x,2\rho\right)\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y\le2^{n}Hf\left(x\right).
 $$
 
-Taking the supremum over all balls $B$ containing $x$ gives $H^{*}f\left(x\right)\le2^{n}Hf\left(x\right)$. Combining, $Hf\le{H}^{*}f\le2^{n}Hf$. $\blacksquare$
+Taking the supremum over all balls $B$ containing $x$ gives $H^{*}f\left(x\right)\le2^{n}Hf\left(x\right)$. Combining, $Hf\le{H}^{*}f\le2^{n}Hf$.
+
+$\blacksquare$
 
 ## 6
 
@@ -175,7 +183,9 @@ For the reverse inequality, given $\varepsilon>0$, since $\nu$ is regular, there
 
 Condition (2) of regularity for $\mu$. Using $\mu\left(E\right)=\nu\left(E\cap{A}^{c}\right)$ and the regularity of $\nu|_{A^{c}}$, the argument is entirely symmetric, and $\mu$ also satisfies condition (2).
 
-Thus both $\lambda$ and $\mu$ are regular. $\blacksquare$
+Thus both $\lambda$ and $\mu$ are regular.
+
+$\blacksquare$
 
 ## 7
 
@@ -185,8 +195,10 @@ Construct an increasing function on $\mathbb{R}$ whose set of discontinuities is
 
 Enumerate the rationals $\mathbb{Q}=\left\{q_{1},q_{2},\dots\right\}$ and define $F\left(x\right)=\sum_{q_{n}\le{x}}2^{-n}$ for $x\in\mathbb{R}$. This is a sum of at most countably many nonnegative terms, with values in $\left[0,1\right]$. By Series, $\sum_{n}2^{-n}$ converges, so $F$ takes finite values. If $x<{}y$, then $\left\{n:q_{n}\le{x}\right\}\subset\left\{n:q_{n}\le{y}\right\}$, so $F\left(x\right)\le{F}\left(y\right)$; hence $F$ is increasing.
 
-Every rational point is a discontinuity. For $q_{k}\in\mathbb{Q}$, as $x$ approaches $q_{k}$ from the left, $\left\{q_{n}\le{x}\right\}$ does not contain $q_{k}$, so the left limit $F\left(q_{k}-\right)=\sum_{q_{n}<{}q_{k}}2^{-n}=\sum_{q_{n}\le{q}_{k}}2^{-n}-2^{-k}=F\left(q_{k}\right)-2^{-k}<{}F\left(q_{k}\right)$. The right limit $F\left(q_{k}+\right)=\lim_{x\downarrow{q}_{k}}F\left(x\right)=F\left(q_{k}\right)$ (since for $x>{}q_{k}$, $q_{k}$ is still counted). Thus $F$ has unequal left and right limits at $q_{k}$, a jump discontinuity.
+Every rational point is a discontinuity. For $q_{k}\in\mathbb{Q}$, as $x$ approaches $q_{k}$ from the left, $\left\{q_{n}\le{x}\right\}$ does not contain $q_{k}$, so the left limit $F\left(q_{k}-\right)=\sum_{q_{n}<{}q_{k}}2^{-n}=\sum_{q_{n}\le{q}_{k}}2^{-n}-2^{-k}=F\left(q_{k}\right)-2^{-k}<{}F\left(q_{k}\right)$. The right limit $F\left(q_{k}+\right)=\lim_{x\downarrow{q}_{k}}F\left(x\right)=F\left(q_{k}\right)$ (since for $x>q_{k}$, $q_{k}$ is still counted). Thus $F$ has unequal left and right limits at $q_{k}$, a jump discontinuity.
 
-Every irrational point is a continuity point. Let $x_{0}\in\mathbb{R}\setminus\mathbb{Q}$. Given $\varepsilon>0$, by Series choose $N$ with $\sum_{n>{}N}2^{-n}<\varepsilon$. Since $x_{0}$ is irrational, choose $\delta>0$ small enough that $\left(x_{0}-\delta,x_{0}+\delta\right)$ contains none of $q_{1},\dots,q_{N}$ (finitely many points, separable). Then whenever $\left|x-x_{0}\right|<\delta$, the interval $\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right]$ contains at most $q_{N+1},q_{N+2},\dots$, so $\left|F\left(x\right)-F\left(x_{0}\right)\right|=\sum_{x_{0}<{}q_{n}\le{x}\text{~or~}x<{}q_{n}\le{x}_{0}}2^{-n}\le\sum_{n>{}N}2^{-n}<\varepsilon$. Hence $F$ is continuous at $x_{0}$.
+Every irrational point is a continuity point. Let $x_{0}\in\mathbb{R}\setminus\mathbb{Q}$. Given $\varepsilon>0$, by Series choose $N$ with $\sum_{n>N}2^{-n}<\varepsilon$. Since $x_{0}$ is irrational, choose $\delta>0$ small enough that $\left(x_{0}-\delta,x_{0}+\delta\right)$ contains none of $q_{1},\dots,q_{N}$ (finitely many points, separable). Then whenever $\left|x-x_{0}\right|<\delta$, the interval $\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right]$ contains at most $q_{N+1},q_{N+2},\dots$, so $\left|F\left(x\right)-F\left(x_{0}\right)\right|=\sum_{x_{0}<{}q_{n}\le{x}\text{~or~}x<{}q_{n}\le{x}_{0}}2^{-n}\le\sum_{n>N}2^{-n}<\varepsilon$. Hence $F$ is continuous at $x_{0}$.
 
-Thus the discontinuity set of $F$ is exactly $\mathbb{Q}$. By **Theorem 14.0.7 (Basic Properties of Bounded-Variation Functions)** (4) and **Theorem 14.0.10 (Discontinuity Properties of Bounded-Variation Functions)**, $F$ is an increasing bounded function, hence of bounded variation, with at most countably many jump discontinuities, which here are exactly $\mathbb{Q}$. $\blacksquare$
+Thus the discontinuity set of $F$ is exactly $\mathbb{Q}$. By **Theorem 14.0.7 (Basic Properties of Bounded-Variation Functions)** (4) and **Theorem 14.0.10 (Discontinuity Properties of Bounded-Variation Functions)**, $F$ is an increasing bounded function, hence of bounded variation, with at most countably many jump discontinuities, which here are exactly $\mathbb{Q}$.
+
+$\blacksquare$

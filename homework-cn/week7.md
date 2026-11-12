@@ -129,7 +129,9 @@ $$
 \mu\left(\left\{\left|f_{n}-f\right|>\varepsilon\right\}\right)\le\frac{\rho\left(f_{n},f\right)}{d\left(\varepsilon\right)}\to0.
 $$
 
-由**定义 9.1.3 (依测度收敛)**, $f_{n}\xrightarrow{\mu}f$. $\blacksquare$
+由**定义 9.1.3 (依测度收敛)**, $f_{n}\xrightarrow{\mu}f$.
+
+$\blacksquare$
 
 ## 2
 
@@ -145,7 +147,9 @@ $$
 \mu\left(X\setminus{F}\right)=\mu\left(\bigcup_{m=1}^{\infty}\left(X_{m}\setminus{F}_{m}\right)\right)\le\sum_{m=1}^{\infty}\mu\left(X_{m}\setminus{F}_{m}\right)=0,
 $$
 
-因 $X=\bigcup_{m}X_{m}$. 故 $\mu\left(\left(\bigcup_{m,j}E_{mj}\right)^{c}\right)=0$. 把可数族 $\left\{E_{mj}:m,j\in\mathbb{N}\right\}$ 重排为 $E_{1},E_{2},\dots$, 则 $\mu\left(\left(\bigcup_{i}E_{i}\right)^{c}\right)=0$ 且 $f_{n}\to{f}$ 在每个 $E_{i}$ 上一致收敛. $\blacksquare$
+因 $X=\bigcup_{m}X_{m}$. 故 $\mu\left(\left(\bigcup_{m,j}E_{mj}\right)^{c}\right)=0$. 把可数族 $\left\{E_{mj}:m,j\in\mathbb{N}\right\}$ 重排为 $E_{1},E_{2},\dots$, 则 $\mu\left(\left(\bigcup_{i}E_{i}\right)^{c}\right)=0$ 且 $f_{n}\to{f}$ 在每个 $E_{i}$ 上一致收敛.
+
+$\blacksquare$
 
 ## 3
 
@@ -163,11 +167,15 @@ $$
 E_{\varepsilon,\delta}=\bigcap_{y\in\left[0,\delta\right)\cap\mathbb{Q}}\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\varepsilon\right\},
 $$
 
-这是可数个可测集之交, 由**定义 4.1.3 ($\sigma$-代数)** ($\sigma$-代数对可数交封闭) 可测. $\blacksquare$
+这是可数个可测集之交, 由**定义 4.1.3 ($\sigma$-代数)** ($\sigma$-代数对可数交封闭) 可测.
+
+$\blacksquare$
 
 (b) 固定 $\eta>0$ 作为一致收敛的误差. 对每个 $\delta>0$, 记 $F_{\delta}:=\left\{x:\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta\text{~对所有~}y<\delta\right\}$, 由 (a) 可测, 且随 $\delta$ 减小而增大. 因 $f\left(x,\cdot\right)$ 在 $0$ 处连续, 对每个 $x$ 有 $\lim_{y\to0}f\left(x,y\right)=f\left(x,0\right)$, 故存在 $\delta>0$ 使 $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ 对所有 $y<\delta$, 即 $x\in{F}_{\delta}$. 故 $\bigcup_{\delta>0}F_{\delta}=X$.
 
-由测度的下连续性, 因 $\mu\left(X\right)<\infty$ 且 $F_{\delta}\uparrow{X}$, 有 $\mu\left(X\setminus{F}_{\delta}\right)\to0$. 给定 $\varepsilon>0$, 取 $\delta>0$ 使 $\mu\left(X\setminus{F}_{\delta}\right)<\varepsilon$, 令 $E:=X\setminus{F}_{\delta}$, 则 $\mu\left(E\right)<\varepsilon$, 且在 $E^{c}=F_{\delta}$ 上 $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ 对所有 $y<\delta$, 即 $f\left(\cdot,y\right)\to{f}\left(\cdot,0\right)$ 在 $E^{c}$ 上一致收敛 ($y\to0$). $\blacksquare$
+由测度的下连续性, 因 $\mu\left(X\right)<\infty$ 且 $F_{\delta}\uparrow{X}$, 有 $\mu\left(X\setminus{F}_{\delta}\right)\to0$. 给定 $\varepsilon>0$, 取 $\delta>0$ 使 $\mu\left(X\setminus{F}_{\delta}\right)<\varepsilon$, 令 $E:=X\setminus{F}_{\delta}$, 则 $\mu\left(E\right)<\varepsilon$, 且在 $E^{c}=F_{\delta}$ 上 $\left|f\left(x,y\right)-f\left(x,0\right)\right|\le\eta$ 对所有 $y<\delta$, 即 $f\left(\cdot,y\right)\to{f}\left(\cdot,0\right)$ 在 $E^{c}$ 上一致收敛 ($y\to0$).
+
+$\blacksquare$
 
 ## 4
 
@@ -191,7 +199,9 @@ $$
 m\left(\left[a,b\right]\setminus{E}\right)\le{m}\left(B\right)+\sum_{n=1}^{\infty}m\left(\left[a,b\right]\setminus{K}_{n}\right)<\varepsilon/3+\varepsilon/3=2\varepsilon/3<\varepsilon.
 $$
 
-在 $E$ 上, 每个 $\phi_{n}$ 连续 (因 $E\subset{K}_{n}$), 且 $\phi_{n}\to{f}$ 一致 (因 $E\subset\left[a,b\right]\setminus{B}$). 一致收敛的连续函数列的极限连续, 故 $f|_{E}$ 连续. $\blacksquare$
+在 $E$ 上, 每个 $\phi_{n}$ 连续 (因 $E\subset{K}_{n}$), 且 $\phi_{n}\to{f}$ 一致 (因 $E\subset\left[a,b\right]\setminus{B}$). 一致收敛的连续函数列的极限连续, 故 $f|_{E}$ 连续.
+
+$\blacksquare$
 
 ## 5
 
@@ -223,7 +233,9 @@ $$
 
 故 $\pi$ 是 $\mathcal{E}$ 上的准测度 (**定义 6.2.1 (准测度)**).
 
-唯一延拓与乘积测度一致. 由**定义 10.1.1 (乘积 $\sigma$-代数)**, $\mathcal{E}$ 由所有可测矩形生成, 故 $\sigma\left(\mathcal{E}\right)=\mathcal{A}\otimes\mathcal{B}$. 因 $\mu,\nu$ $\sigma$-有限, 可取 $X=\bigcup_{p}X_{p}$, $Y=\bigcup_{q}Y_{q}$ 使 $\mu\left(X_{p}\right),\nu\left(Y_{q}\right)<\infty$, 则矩形 $X_{p}\times{Y}_{q}$ 覆盖 $X\times{Y}$ 且 $\pi\left(X_{p}\times{Y}_{q}\right)<\infty$, 故 $\pi$ 是 $\sigma$-有限的. 由**定理 6.3.3 (卡拉西奥多里定理)** (准测度的唯一延拓), $\pi$ 在 $\sigma\left(\mathcal{E}\right)$ 上有唯一延拓. 该延拓在 $\mathcal{E}$ 上等于 $\pi=\left(\mu\times\nu\right)|_{\mathcal{E}}$, 故在整个 $\sigma\left(\mathcal{E}\right)=\mathcal{A}\otimes\mathcal{B}$ 上等于 $\mu\times\nu$. 即与**定理 10.1.4 (乘积测度的存在唯一性)** 中定义的乘积测度一致. $\blacksquare$
+唯一延拓与乘积测度一致. 由**定义 10.1.1 (乘积 $\sigma$-代数)**, $\mathcal{E}$ 由所有可测矩形生成, 故 $\sigma\left(\mathcal{E}\right)=\mathcal{A}\otimes\mathcal{B}$. 因 $\mu,\nu$ $\sigma$-有限, 可取 $X=\bigcup_{p}X_{p}$, $Y=\bigcup_{q}Y_{q}$ 使 $\mu\left(X_{p}\right),\nu\left(Y_{q}\right)<\infty$, 则矩形 $X_{p}\times{Y}_{q}$ 覆盖 $X\times{Y}$ 且 $\pi\left(X_{p}\times{Y}_{q}\right)<\infty$, 故 $\pi$ 是 $\sigma$-有限的. 由**定理 6.3.3 (卡拉西奥多里定理)** (准测度的唯一延拓), $\pi$ 在 $\sigma\left(\mathcal{E}\right)$ 上有唯一延拓. 该延拓在 $\mathcal{E}$ 上等于 $\pi=\left(\mu\times\nu\right)|_{\mathcal{E}}$, 故在整个 $\sigma\left(\mathcal{E}\right)=\mathcal{A}\otimes\mathcal{B}$ 上等于 $\mu\times\nu$. 即与**定理 10.1.4 (乘积测度的存在唯一性)** 中定义的乘积测度一致.
+
+$\blacksquare$
 
 ## 6
 
@@ -255,4 +267,6 @@ $$
 \int\chi_{D}\,\mathrm{d}\left(\mu\times\nu\right)=\left(\mu\times\nu\right)\left(D\right)=\int_{X}\nu\left(D_{x}\right)\mathrm{d}\mu\left(x\right)=\int_{X}\nu\left(\left\{x\right\}\right)\mathrm{d}\mu\left(x\right)=\int_{X}1\,\mathrm{d}\mu\left(x\right)=1.
 $$
 
-故三个积分分别为 $0$, $1$, $1$, 不全相等; 特别 $\iint\chi_{D}\,\mathrm{d}\mu\,\mathrm{d}\nu=0\ne1=\iint\chi_{D}\,\mathrm{d}\nu\,\mathrm{d}\mu$. 原因是 $\nu$ 非 $\sigma$-有限, **定理 10.2.1 (富比尼定理)** 的 $\sigma$-有限假设不满足, 故乘积积分与先对 $\mu$ 积分的迭代积分不一致. $\blacksquare$
+故三个积分分别为 $0$, $1$, $1$, 不全相等; 特别 $\iint\chi_{D}\,\mathrm{d}\mu\,\mathrm{d}\nu=0\ne1=\iint\chi_{D}\,\mathrm{d}\nu\,\mathrm{d}\mu$. 原因是 $\nu$ 非 $\sigma$-有限, **定理 10.2.1 (富比尼定理)** 的 $\sigma$-有限假设不满足, 故乘积积分与先对 $\mu$ 积分的迭代积分不一致.
+
+$\blacksquare$

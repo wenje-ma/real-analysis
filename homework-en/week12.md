@@ -58,7 +58,9 @@ $$
 \sum_{k=0}^{N-1}\left|G\left(x_{k}\right)-G\left(x_{k+1}\right)\right|=\sum_{k=0}^{N-1}\left(x_{k}^{2}+x_{k+1}^{2}\right)\ge\sum_{k=0}^{N-1}x_{k}^{2}=\sum_{k=0}^{N-1}\frac{1}{\pi/2+k\pi}.
 $$
 
-By Series, the harmonic series $\sum_{k}\frac{1}{k}$ diverges, so the above tends to $+\infty$ as $N\to\infty$. Thus the total variation of $G$ on $\left[0,1\right]\subset\left[-1,1\right]$ is already $+\infty$, so $V_{-1}^{1}\left(G\right)=+\infty$, i.e. $G\notin{B}V\left(\left[-1,1\right]\right)$. $\blacksquare$
+By Series, the harmonic series $\sum_{k}\frac{1}{k}$ diverges, so the above tends to $+\infty$ as $N\to\infty$. Thus the total variation of $G$ on $\left[0,1\right]\subset\left[-1,1\right]$ is already $+\infty$, so $V_{-1}^{1}\left(G\right)=+\infty$, i.e. $G\notin{B}V\left(\left[-1,1\right]\right)$.
+
+$\blacksquare$
 
 ## 2
 
@@ -78,7 +80,9 @@ $$
 T_{F}\left(x\right)=\sup_{P}\sum_{k=1}^{n}\left|F\left(t_{k}\right)-F\left(t_{k-1}\right)\right|\le\liminf_{j\to\infty}T_{F_{j}}\left(x\right).
 $$
 
-Hence $T_{F}\le\liminf_{j\to\infty}T_{F_{j}}$. $\blacksquare$
+Hence $T_{F}\le\liminf_{j\to\infty}T_{F_{j}}$.
+
+$\blacksquare$
 
 ## 3
 
@@ -118,7 +122,9 @@ $$
 \frac{\mathrm{d}\mu_{F}}{\mathrm{d}m}\left(x\right)=\frac{\mathrm{d}\left(\sum_{j}\mu_{F_{j}}\right)}{\mathrm{d}m}\left(x\right)=\sum_{j}\frac{\mathrm{d}\mu_{F_{j}}}{\mathrm{d}m}\left(x\right)=\sum_{j}F_{j}'\left(x\right),
 $$
 
-for $m$-a.e. $x$. Thus $F'\left(x\right)=\sum_{j}F_{j}'\left(x\right)$ a.e. $\blacksquare$
+for $m$-a.e. $x$. Thus $F'\left(x\right)=\sum_{j}F_{j}'\left(x\right)$ a.e.
+
+$\blacksquare$
 
 ## 5
 
@@ -158,7 +164,7 @@ Now prove $\Leftarrow$. Take any $s<{}t$, $\lambda\in\left(0,1\right)$, and set 
 
 Now prove $\Leftarrow$. Assume $F$ is absolutely continuous on every compact subinterval of $\left(a,b\right)$ and $F'$ is increasing. By **Theorem 15.0.14 (Equivalent Characterization of Absolute Continuity)**, for any $s<{}t\in\left(a,b\right)$ and intermediate point $u$, $F\left(u\right)-F\left(s\right)=\int_{s}^{u}F'$ and $F\left(t\right)-F\left(u\right)=\int_{u}^{t}F'$. Since $F'$ on $\left(s,u\right)$ is no larger than $F'$ on $\left(u,t\right)$, averaging gives $\frac{1}{u-s}\int_{s}^{u}F'\le\frac{1}{t-u}\int_{u}^{t}F'$, i.e. $S\left(s,u\right)\le{S}\left(u,t\right)$. Taking $u=\lambda{s}+\left(1-\lambda\right)t$ and simplifying (as in the $\Leftarrow$ part of (a)) gives $F\left(u\right)\le\lambda{F}\left(s\right)+\left(1-\lambda\right)F\left(t\right)$, i.e. $F$ is convex. This proves (b).
 
-(c). By the difference-quotient monotonicity in (a), the left and right derivatives of $F$ at $t_{0}$ exist: the left derivative $F'_{-}\left(t_{0}\right)=\sup_{t<{}t_{0}}S\left(t,t_{0}\right)$ and the right derivative $F'_{+}\left(t_{0}\right)=\inf_{t>{}t_{0}}S\left(t_{0},t\right)$, with $F'_{-}\left(t_{0}\right)\le{F}'_{+}\left(t_{0}\right)$ (for $t_{1}<{}t_{0}<{}t_{2}$, three-point slopes $S\left(t_{1},t_{0}\right)\le{S}\left(t_{0},t_{2}\right)$). Take $\beta\in\left[F'_{-}\left(t_{0}\right),F'_{+}\left(t_{0}\right)\right]$. When $t>{}t_{0}$, $S\left(t_{0},t\right)\ge{F}'_{+}\left(t_{0}\right)\ge\beta$, so $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$; when $t<{}t_{0}$, $S\left(t,t_{0}\right)\le{F}'_{-}\left(t_{0}\right)\le\beta$, and since $t-t_{0}<0$, multiplying by the negative reverses the inequality, giving $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$. Equality holds at $t=t_{0}$.
+(c). By the difference-quotient monotonicity in (a), the left and right derivatives of $F$ at $t_{0}$ exist: the left derivative $F'_{-}\left(t_{0}\right)=\sup_{t<{}t_{0}}S\left(t,t_{0}\right)$ and the right derivative $F'_{+}\left(t_{0}\right)=\inf_{t>t_{0}}S\left(t_{0},t\right)$, with $F'_{-}\left(t_{0}\right)\le{F}'_{+}\left(t_{0}\right)$ (for $t_{1}<{}t_{0}<{}t_{2}$, three-point slopes $S\left(t_{1},t_{0}\right)\le{S}\left(t_{0},t_{2}\right)$). Take $\beta\in\left[F'_{-}\left(t_{0}\right),F'_{+}\left(t_{0}\right)\right]$. When $t>t_{0}$, $S\left(t_{0},t\right)\ge{F}'_{+}\left(t_{0}\right)\ge\beta$, so $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$; when $t<{}t_{0}$, $S\left(t,t_{0}\right)\le{F}'_{-}\left(t_{0}\right)\le\beta$, and since $t-t_{0}<0$, multiplying by the negative reverses the inequality, giving $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$. Equality holds at $t=t_{0}$.
 
 (d). Set $t_{0}=\int{g}\,\mathrm{d}\mu$. Since $g$ takes values in $\left(a,b\right)$ and $g\in{L}^{1}\left(\mu\right)$, we have $t_{0}\in\left(a,b\right)$. By (c), there exists $\beta\in\mathbb{R}$ such that $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$ for all $t\in\left(a,b\right)$. Substituting $t=g\left(x\right)$ gives $F\left(g\left(x\right)\right)\ge{F}\left(t_{0}\right)+\beta\left(g\left(x\right)-t_{0}\right)$ for all $x\in{X}$. Integrating with respect to $\mu$ (the right side is in $L^{1}$, so the integral is well-defined):
 
@@ -166,4 +172,6 @@ $$
 \int{F}\circ{g}\,\mathrm{d}\mu\ge\int\left[F\left(t_{0}\right)+\beta\left(g-t_{0}\right)\right]\mathrm{d}\mu=F\left(t_{0}\right)+\beta\left(\int{g}\,\mathrm{d}\mu-t_{0}\right)=F\left(t_{0}\right)=F\left(\int{g}\,\mathrm{d}\mu\right).
 $$
 
-Hence $F\left(\int{g}\,\mathrm{d}\mu\right)\le\int{F}\circ{g}\,\mathrm{d}\mu$. $\blacksquare$
+Hence $F\left(\int{g}\,\mathrm{d}\mu\right)\le\int{F}\circ{g}\,\mathrm{d}\mu$.
+
+$\blacksquare$

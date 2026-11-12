@@ -144,7 +144,9 @@ $$
 \mu\left(E\right)=\mu\left(E\cap{F}\right)+\mu\left(E\setminus{F}\right),\quad\mu\left(F\right)=\mu\left(E\cap{F}\right)+\mu\left(F\setminus{E}\right).
 $$
 
-Since $E\setminus{F}\subset{E}\triangle{F}$ and $F\setminus{E}\subset{E}\triangle{F}$, by **Proposition 5.2.2 (Monotonicity)**, $\mu\left(E\setminus{F}\right)\le\mu\left(E\triangle{F}\right)=0$, and similarly $\mu\left(F\setminus{E}\right)=0$. Hence $\mu\left(E\right)=\mu\left(E\cap{F}\right)=\mu\left(F\right)$. $\blacksquare$
+Since $E\setminus{F}\subset{E}\triangle{F}$ and $F\setminus{E}\subset{E}\triangle{F}$, by **Proposition 5.2.2 (Monotonicity)**, $\mu\left(E\setminus{F}\right)\le\mu\left(E\triangle{F}\right)=0$, and similarly $\mu\left(F\setminus{E}\right)=0$. Hence $\mu\left(E\right)=\mu\left(E\cap{F}\right)=\mu\left(F\right)$.
+
+$\blacksquare$
 
 (b) Verify the three properties of an equivalence relation:
 
@@ -154,7 +156,9 @@ Since $E\setminus{F}\subset{E}\triangle{F}$ and $F\setminus{E}\subset{E}\triangl
 
 (3) Transitivity: since $E\triangle{G}\subset\left(E\triangle{F}\right)\cup\left(F\triangle{G}\right)$, by **Proposition 5.2.3 (Countable Subadditivity)**, $\mu\left(E\triangle{G}\right)\le\mu\left(E\triangle{F}\right)+\mu\left(F\triangle{G}\right)=0$, so $E\sim{G}$.
 
-Thus $\sim$ is an equivalence relation on $\mathcal{M}$. $\blacksquare$
+Thus $\sim$ is an equivalence relation on $\mathcal{M}$.
+
+$\blacksquare$
 
 (c) Symmetry and nonnegativity are clear: $\rho\left(E,F\right)=\rho\left(F,E\right)\ge0$ and $\rho\left(E,E\right)=0$. Since $E\triangle{G}\subset\left(E\triangle{F}\right)\cup\left(F\triangle{G}\right)$, by **Proposition 5.2.3 (Countable Subadditivity)**,
 
@@ -168,7 +172,9 @@ $$
 E\triangle{F}\subset\left(E\triangle{E}'\right)\cup\left(E'\triangle{F}'\right)\cup\left(F'\triangle{F}\right),
 $$
 
-so $\rho\left(E,F\right)\le0+\rho\left(E',F'\right)+0=\rho\left(E',F'\right)$; symmetrically $\rho\left(E',F'\right)\le\rho\left(E,F\right)$, hence $\rho\left(E,F\right)=\rho\left(E',F'\right)$, i.e. $\rho$ is well-defined on the quotient $\mathcal{M}/\sim$. Moreover, $\rho\left(E,F\right)=0\Leftrightarrow\mu\left(E\triangle{F}\right)=0\Leftrightarrow{E}\sim{F}$, so $\rho$ is a metric on $\mathcal{M}/\sim$. $\blacksquare$
+so $\rho\left(E,F\right)\le0+\rho\left(E',F'\right)+0=\rho\left(E',F'\right)$; symmetrically $\rho\left(E',F'\right)\le\rho\left(E,F\right)$, hence $\rho\left(E,F\right)=\rho\left(E',F'\right)$, i.e. $\rho$ is well-defined on the quotient $\mathcal{M}/\sim$. Moreover, $\rho\left(E,F\right)=0\Leftrightarrow\mu\left(E\triangle{F}\right)=0\Leftrightarrow{E}\sim{F}$, so $\rho$ is a metric on $\mathcal{M}/\sim$.
+
+$\blacksquare$
 
 ## 2
 
@@ -218,7 +224,9 @@ $$
 \mu^{*}\left(A\right)=\sum_{k}\mu^{*}\left(A\cap{X}_{k}\right),\quad\nu\left(A\right)=\sum_{k}\nu\left(A\cap{X}_{k}\right).
 $$
 
-For each $k$, restricting the finite measures $\mu_{0}\left(\cdot\cap{X}_{k}\right)$ and $\nu\left(\cdot\cap{X}_{k}\right)$ to $X_{k}$ reduces to the finite case, giving $\nu\left(A\cap{X}_{k}\right)=\mu^{*}\left(A\cap{X}_{k}\right)$. Summing yields $\nu\left(A\right)=\mu^{*}\left(A\right)$. Thus $\mu^{*}|_{\mathcal{M}}$ is the unique extension of $\mu_{0}$ to $\mathcal{M}$. $\blacksquare$
+For each $k$, restricting the finite measures $\mu_{0}\left(\cdot\cap{X}_{k}\right)$ and $\nu\left(\cdot\cap{X}_{k}\right)$ to $X_{k}$ reduces to the finite case, giving $\nu\left(A\cap{X}_{k}\right)=\mu^{*}\left(A\cap{X}_{k}\right)$. Summing yields $\nu\left(A\right)=\mu^{*}\left(A\right)$. Thus $\mu^{*}|_{\mathcal{M}}$ is the unique extension of $\mu_{0}$ to $\mathcal{M}$.
+
+$\blacksquare$
 
 (2) Exercise 17. On one hand, by **Definition 6.1.1 (Outer Measure)** (3) (countable subadditivity),
 
@@ -244,7 +252,9 @@ $$
 \mu^{*}\left(E\cap\bigcup_{j=1}^{\infty}A_{j}\right)\ge\sum_{j=1}^{\infty}\mu^{*}\left(E\cap{A}_{j}\right).
 $$
 
-Combining gives equality. $\blacksquare$
+Combining gives equality.
+
+$\blacksquare$
 
 (3) Exercise 24. (a) From $A\cap{E}=B\cap{E}$ we get $\left(A\setminus{B}\right)\cap{E}=\varnothing$, and $A\setminus{B}\in\mathcal{M}$. Since $A\setminus{B}$ is measurable, apply the **Definition 6.3.1 (Carathéodory Condition)** at $T=X$:
 
@@ -270,7 +280,9 @@ $$
 \nu\left(\bigcup_{n}\left(A_{n}\cap{E}\right)\right)=\nu\left(\left(\bigcup_{n}A_{n}\right)\cap{E}\right)=\mu\left(\bigcup_{n}A_{n}\right)=\sum_{n}\mu\left(A_{n}\right)=\sum_{n}\nu\left(A_{n}\cap{E}\right).
 $$
 
-Hence $\nu$ is a measure. $\blacksquare$
+Hence $\nu$ is a measure.
+
+$\blacksquare$
 
 ## 3
 
@@ -298,4 +310,6 @@ since each $I_{i}^{c}\in\mathcal{E}$ and $\mathcal{E}$ is closed under finite in
 
 Finally, $X\in\mathcal{E}$: since $\mathbb{R}=\left(-\infty,\infty\right)$ is an h-interval of type $\left(a,\infty\right)$ ($a=-\infty$), $\mathbb{R}\in\mathcal{E}$. For $A,B\in\mathcal{E}$, by De Morgan's laws $A\cup{B}=\left(A^{c}\cap{B}^{c}\right)^{c}\in\mathcal{E}$. Thus $\mathcal{E}$ is closed under finite unions.
 
-Therefore $\mathcal{E}$ is an algebra. $\blacksquare$
+Therefore $\mathcal{E}$ is an algebra.
+
+$\blacksquare$

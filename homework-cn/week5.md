@@ -76,7 +76,9 @@ $$
 \lambda\left(A\right)=\sum_{i=1}^{n}c_{i}\mu\left(A\cap{A}_{i}\right)\le\sum_{i=1}^{n}c_{i}\mu\left(A\right)=0,
 $$
 
-故 $\lambda\left(A\right)=0$. $\blacksquare$
+故 $\lambda\left(A\right)=0$.
+
+$\blacksquare$
 
 ## 2
 
@@ -128,7 +130,9 @@ $$
 \left|\int{f}\,\mathrm{d}\mu\right|=\left|\int{f}^{+}\mathrm{d}\mu-\int{f}^{-}\mathrm{d}\mu\right|\le\int{f}^{+}\mathrm{d}\mu+\int{f}^{-}\mathrm{d}\mu=\int\left|f\right|\mathrm{d}\mu.
 $$
 
-4. $f=g$ 几乎处处, 则 $f^{+}=g^{+}$, $f^{-}=g^{-}$ 几乎处处. 于是 $h:=f^{+}-g^{+}$ 可积且 $h=0$ 几乎处处, 其正部 $h^{+}$ 与负部 $h^{-}$ 均在零测集外为零. 由**命题 8.2.4 (积分关于集合的绝对连续性)**, $\int{h}^{+}\mathrm{d}\mu=\int_{\left\{h>0\right\}}h^{+}\mathrm{d}\mu=0$, $\int{h}^{-}\mathrm{d}\mu=0$, 故 $\int{h}\,\mathrm{d}\mu=0$, 即 $\int{f}^{+}\mathrm{d}\mu=\int{g}^{+}\mathrm{d}\mu$; 同理 $\int{f}^{-}\mathrm{d}\mu=\int{g}^{-}\mathrm{d}\mu$. 因此 $\int{f}\,\mathrm{d}\mu=\int{g}\,\mathrm{d}\mu$. $\blacksquare$
+4. $f=g$ 几乎处处, 则 $f^{+}=g^{+}$, $f^{-}=g^{-}$ 几乎处处. 于是 $h:=f^{+}-g^{+}$ 可积且 $h=0$ 几乎处处, 其正部 $h^{+}$ 与负部 $h^{-}$ 均在零测集外为零. 由**命题 8.2.4 (积分关于集合的绝对连续性)**, $\int{h}^{+}\mathrm{d}\mu=\int_{\left\{h>0\right\}}h^{+}\mathrm{d}\mu=0$, $\int{h}^{-}\mathrm{d}\mu=0$, 故 $\int{h}\,\mathrm{d}\mu=0$, 即 $\int{f}^{+}\mathrm{d}\mu=\int{g}^{+}\mathrm{d}\mu$; 同理 $\int{f}^{-}\mathrm{d}\mu=\int{g}^{-}\mathrm{d}\mu$. 因此 $\int{f}\,\mathrm{d}\mu=\int{g}\,\mathrm{d}\mu$.
+
+$\blacksquare$
 
 ## 3
 
@@ -152,7 +156,9 @@ $$
 \int_{X}f^{+}\mathrm{d}\mu\ge\int_{\left\{f^{+}>\frac{1}{n}\right\}}f^{+}\mathrm{d}\mu\ge\frac{1}{n}\mu\left(\left\{x:f^{+}\left(x\right)>\frac{1}{n}\right\}\right).
 $$
 
-因 $f$ 可积, $\int{f}^{+}\mathrm{d}\mu<\infty$, 故 $\mu\left(\left\{x:f^{+}\left(x\right)>\frac{1}{n}\right\}\right)\le{n}\int{f}^{+}\mathrm{d}\mu<\infty$. 于是 $\left\{f^{+}>0\right\}$ 是可数个有限测度集之并; 同理 $\left\{f^{-}>0\right\}$ 亦然. 从而 $\left\{x:f\left(x\right)\ne0\right\}$ 也是可数个有限测度集之并, 在**定义 5.1.5 ($\sigma$-有限测度)** 的意义下是 $\sigma$-有限的. $\blacksquare$
+因 $f$ 可积, $\int{f}^{+}\mathrm{d}\mu<\infty$, 故 $\mu\left(\left\{x:f^{+}\left(x\right)>\frac{1}{n}\right\}\right)\le{n}\int{f}^{+}\mathrm{d}\mu<\infty$. 于是 $\left\{f^{+}>0\right\}$ 是可数个有限测度集之并; 同理 $\left\{f^{-}>0\right\}$ 亦然. 从而 $\left\{x:f\left(x\right)\ne0\right\}$ 也是可数个有限测度集之并, 在**定义 5.1.5 ($\sigma$-有限测度)** 的意义下是 $\sigma$-有限的.
+
+$\blacksquare$
 
 (b) 记 $h:=\left|f-g\right|\in{L}^{1}$, $h\ge0$.
 
@@ -168,7 +174,9 @@ $$
 
 (4) $\int_{E}f\,\mathrm{d}\mu=\int_{E}g\,\mathrm{d}\mu$ 对所有 $E$ $\Rightarrow\int\left|f-g\right|\mathrm{d}\mu=0$: 取 $E:=\left\{x:f\left(x\right)\ge{g}\left(x\right)\right\}\in\mathcal{F}$. 由习题二 1 线性性, $\int_{E}\left(f-g\right)\mathrm{d}\mu=\int_{E}f\,\mathrm{d}\mu-\int_{E}g\,\mathrm{d}\mu=0$; 在 $E$ 上 $f-g\ge0$, 故 $\int_{E}\left|f-g\right|\mathrm{d}\mu=\int_{E}\left(f-g\right)\mathrm{d}\mu=0$. 同理对 $E^{c}$, $\int_{E^{c}}\left(g-f\right)\mathrm{d}\mu=0$, 在 $E^{c}$ 上 $g-f\ge0$, 故 $\int_{E^{c}}\left|f-g\right|\mathrm{d}\mu=0$. 于是 $\int\left|f-g\right|\mathrm{d}\mu=0$.
 
-综合 (1)(2)(3)(4) 得三条件等价. $\blacksquare$
+综合 (1)(2)(3)(4) 得三条件等价.
+
+$\blacksquare$
 
 ## 4
 
@@ -194,7 +202,9 @@ $$
 \int{g}\,\mathrm{d}\lambda=\sum_{j=1}^{m}a_{j}\lambda\left(E_{j}\right)=\sum_{j=1}^{m}a_{j}\int_{E_{j}}f\,\mathrm{d}\mu=\int\left(\sum_{j=1}^{m}a_{j}\chi_{E_{j}}f\right)\mathrm{d}\mu=\int{f}g\,\mathrm{d}\mu.
 $$
 
-对一般 $g\in{L}^{+}$, 由**注 8.2.3 (简单函数逼近)** 取简单函数 $g_{k}\uparrow{g}$. 因 $f\ge0$, $fg_{k}\uparrow{f}g$. 由**定理 8.2.2 (单调收敛定理)** (分别在测度 $\lambda$ 与 $\mu$ 下), $\int{g}_{k}\,\mathrm{d}\lambda\uparrow\int{g}\,\mathrm{d}\lambda$ 且 $\int{f}g_{k}\,\mathrm{d}\mu\uparrow\int{f}g\,\mathrm{d}\mu$. 对每个 $k$ 两式相等 (简单情形), 故极限相等: $\int{g}\,\mathrm{d}\lambda=\int{f}g\,\mathrm{d}\mu$. $\blacksquare$
+对一般 $g\in{L}^{+}$, 由**注 8.2.3 (简单函数逼近)** 取简单函数 $g_{k}\uparrow{g}$. 因 $f\ge0$, $fg_{k}\uparrow{f}g$. 由**定理 8.2.2 (单调收敛定理)** (分别在测度 $\lambda$ 与 $\mu$ 下), $\int{g}_{k}\,\mathrm{d}\lambda\uparrow\int{g}\,\mathrm{d}\lambda$ 且 $\int{f}g_{k}\,\mathrm{d}\mu\uparrow\int{f}g\,\mathrm{d}\mu$. 对每个 $k$ 两式相等 (简单情形), 故极限相等: $\int{g}\,\mathrm{d}\lambda=\int{f}g\,\mathrm{d}\mu$.
+
+$\blacksquare$
 
 16. 对 $n\in\mathbb{N}$, 令 $E_{n}:=\left\{x:f\left(x\right)>\frac{1}{n}\right\}\in\mathcal{M}$. 则 $\left\{E_{n}\right\}$ 单调上升且 $\bigcup_{n}E_{n}=\left\{x:f\left(x\right)>0\right\}$. 由**定义 8.2.1 (非负可测函数的积分)**,
 
@@ -202,4 +212,6 @@ $$
 \int{f}\,\mathrm{d}\mu\ge\int_{E_{n}}f\,\mathrm{d}\mu\ge\frac{1}{n}\mu\left(E_{n}\right),
 $$
 
-故 $\mu\left(E_{n}\right)\le{n}\int{f}\,\mathrm{d}\mu<\infty$. 又由**定理 8.2.2 (单调收敛定理)**, $\int_{E_{n}}f\,\mathrm{d}\mu\uparrow\int_{\left\{f>0\right\}}f\,\mathrm{d}\mu=\int{f}\,\mathrm{d}\mu$. 故对给定 $\varepsilon>0$, 取 $n$ 充分大使 $\int_{E_{n}}f\,\mathrm{d}\mu>\int{f}\,\mathrm{d}\mu-\varepsilon$, 令 $E:=E_{n}$, 则 $\mu\left(E\right)<\infty$ 且 $\int_{E}f>\int{f}-\varepsilon$. $\blacksquare$
+故 $\mu\left(E_{n}\right)\le{n}\int{f}\,\mathrm{d}\mu<\infty$. 又由**定理 8.2.2 (单调收敛定理)**, $\int_{E_{n}}f\,\mathrm{d}\mu\uparrow\int_{\left\{f>0\right\}}f\,\mathrm{d}\mu=\int{f}\,\mathrm{d}\mu$. 故对给定 $\varepsilon>0$, 取 $n$ 充分大使 $\int_{E_{n}}f\,\mathrm{d}\mu>\int{f}\,\mathrm{d}\mu-\varepsilon$, 令 $E:=E_{n}$, 则 $\mu\left(E\right)<\infty$ 且 $\int_{E}f>\int{f}-\varepsilon$.
+
+$\blacksquare$

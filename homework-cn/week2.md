@@ -232,7 +232,9 @@ $$
 
 6. 最小性: 设 $\mathcal{M}'$ 是任一包含 $\mathcal{F}$ 的完备 $\sigma$-代数. 对 $A=B\cup{N}\in\mathcal{M}$ ($B\in\mathcal{F}$, $N\subset{N}_{0}\in\mathcal{N}$), 因 $N_{0}\in\mathcal{F}\subset\mathcal{M}'$ 且 $\mu\left(N_{0}\right)=0$, 由 $\mathcal{M}'$ 的完备性得 $N\in\mathcal{M}'$; 又 $B\in\mathcal{F}\subset\mathcal{M}'$, 故 $A=B\cup{N}\in\mathcal{M}'$. 因此 $\mathcal{M}\subset\mathcal{M}'$. 故 $\mathcal{M}$ 是包含 $\mathcal{F}$ 的最小完备 $\sigma$-代数.
 
-综上, $\left(X,\mathcal{M},\overline\mu\right)$ 是满足 (1)(2)(3) 的完备测度空间, 定理得证. $\blacksquare$
+综上, $\left(X,\mathcal{M},\overline\mu\right)$ 是满足 (1)(2)(3) 的完备测度空间, 定理得证.
+
+$\blacksquare$
 
 ## 3
 
@@ -264,7 +266,9 @@ $$
 \mu\left(\limsup_{j\to\infty}E_{j}\right)=\lim_{n\to\infty}\mu\left(G_{n}\right)\ge\lim_{n\to\infty}\sup_{j\ge{n}}\mu\left(E_{j}\right)=\limsup_{j\to\infty}\mu\left(E_{j}\right).
 $$
 
-两不等式得证. $\blacksquare$
+两不等式得证.
+
+$\blacksquare$
 
 ## 4
 
@@ -288,7 +292,9 @@ $$
 \mu\left(E\right)+\mu\left(F\right)=2\mu\left(E\cap{F}\right)+\mu\left(E\setminus{F}\right)+\mu\left(F\setminus{E}\right)=\mu\left(E\cup{F}\right)+\mu\left(E\cap{F}\right).
 $$
 
-等式得证. $\blacksquare$
+等式得证.
+
+$\blacksquare$
 
 ## 5
 
@@ -308,4 +314,6 @@ $$
 \mu_{E}\left(\bigcup_{j=1}^{\infty}A_{j}\right)=\mu\left(\left(\bigcup_{j=1}^{\infty}A_{j}\right)\cap{E}\right)=\mu\left(\bigcup_{j=1}^{\infty}\left(A_{j}\cap{E}\right)\right)=\sum_{j=1}^{\infty}\mu\left(A_{j}\cap{E}\right)=\sum_{j=1}^{\infty}\mu_{E}\left(A_{j}\right).
 $$
 
-故 $\mu_{E}$ 是测度. $\blacksquare$
+故 $\mu_{E}$ 是测度.
+
+$\blacksquare$

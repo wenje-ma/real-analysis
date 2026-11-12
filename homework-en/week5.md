@@ -76,7 +76,9 @@ $$
 \lambda\left(A\right)=\sum_{i=1}^{n}c_{i}\mu\left(A\cap{A}_{i}\right)\le\sum_{i=1}^{n}c_{i}\mu\left(A\right)=0,
 $$
 
-so $\lambda\left(A\right)=0$. $\blacksquare$
+so $\lambda\left(A\right)=0$.
+
+$\blacksquare$
 
 ## 2
 
@@ -128,7 +130,9 @@ $$
 \left|\int{f}\,\mathrm{d}\mu\right|=\left|\int{f}^{+}\mathrm{d}\mu-\int{f}^{-}\mathrm{d}\mu\right|\le\int{f}^{+}\mathrm{d}\mu+\int{f}^{-}\mathrm{d}\mu=\int\left|f\right|\mathrm{d}\mu.
 $$
 
-4. If $f=g$ a.e., then $f^{+}=g^{+}$ and $f^{-}=g^{-}$ a.e. Thus $h:=f^{+}-g^{+}$ is integrable and $h=0$ a.e.; its positive part $h^{+}$ and negative part $h^{-}$ vanish outside a null set. By **Proposition 8.2.4 (Absolute Continuity of the Integral with Respect to the Set)**, $\int{h}^{+}\mathrm{d}\mu=\int_{\left\{h>0\right\}}h^{+}\mathrm{d}\mu=0$ and $\int{h}^{-}\mathrm{d}\mu=0$, so $\int{h}\,\mathrm{d}\mu=0$, i.e. $\int{f}^{+}\mathrm{d}\mu=\int{g}^{+}\mathrm{d}\mu$; similarly $\int{f}^{-}\mathrm{d}\mu=\int{g}^{-}\mathrm{d}\mu$. Hence $\int{f}\,\mathrm{d}\mu=\int{g}\,\mathrm{d}\mu$. $\blacksquare$
+4. If $f=g$ a.e., then $f^{+}=g^{+}$ and $f^{-}=g^{-}$ a.e. Thus $h:=f^{+}-g^{+}$ is integrable and $h=0$ a.e.; its positive part $h^{+}$ and negative part $h^{-}$ vanish outside a null set. By **Proposition 8.2.4 (Absolute Continuity of the Integral with Respect to the Set)**, $\int{h}^{+}\mathrm{d}\mu=\int_{\left\{h>0\right\}}h^{+}\mathrm{d}\mu=0$ and $\int{h}^{-}\mathrm{d}\mu=0$, so $\int{h}\,\mathrm{d}\mu=0$, i.e. $\int{f}^{+}\mathrm{d}\mu=\int{g}^{+}\mathrm{d}\mu$; similarly $\int{f}^{-}\mathrm{d}\mu=\int{g}^{-}\mathrm{d}\mu$. Hence $\int{f}\,\mathrm{d}\mu=\int{g}\,\mathrm{d}\mu$.
+
+$\blacksquare$
 
 ## 3
 
@@ -152,7 +156,9 @@ $$
 \int_{X}f^{+}\mathrm{d}\mu\ge\int_{\left\{f^{+}>\frac{1}{n}\right\}}f^{+}\mathrm{d}\mu\ge\frac{1}{n}\mu\left(\left\{x:f^{+}\left(x\right)>\frac{1}{n}\right\}\right).
 $$
 
-Since $f$ is integrable, $\int{f}^{+}\mathrm{d}\mu<\infty$, so $\mu\left(\left\{x:f^{+}\left(x\right)>\frac{1}{n}\right\}\right)\le{n}\int{f}^{+}\mathrm{d}\mu<\infty$. Thus $\left\{f^{+}>0\right\}$ is a countable union of finite-measure sets; similarly for $\left\{f^{-}>0\right\}$. Hence $\left\{x:f\left(x\right)\ne0\right\}$ is also a countable union of finite-measure sets, i.e. $\sigma$-finite in the sense of **Definition 5.1.5 ($\sigma$-Finite Measure)**. $\blacksquare$
+Since $f$ is integrable, $\int{f}^{+}\mathrm{d}\mu<\infty$, so $\mu\left(\left\{x:f^{+}\left(x\right)>\frac{1}{n}\right\}\right)\le{n}\int{f}^{+}\mathrm{d}\mu<\infty$. Thus $\left\{f^{+}>0\right\}$ is a countable union of finite-measure sets; similarly for $\left\{f^{-}>0\right\}$. Hence $\left\{x:f\left(x\right)\ne0\right\}$ is also a countable union of finite-measure sets, i.e. $\sigma$-finite in the sense of **Definition 5.1.5 ($\sigma$-Finite Measure)**.
+
+$\blacksquare$
 
 (b) Let $h:=\left|f-g\right|\in{L}^{1}$, $h\ge0$.
 
@@ -168,7 +174,9 @@ $$
 
 (4) $\int_{E}f\,\mathrm{d}\mu=\int_{E}g\,\mathrm{d}\mu$ for all $E$ $\Rightarrow\int\left|f-g\right|\mathrm{d}\mu=0$: take $E:=\left\{x:f\left(x\right)\ge{g}\left(x\right)\right\}\in\mathcal{F}$. By linearity (Exercise 2, item 1), $\int_{E}\left(f-g\right)\mathrm{d}\mu=\int_{E}f\,\mathrm{d}\mu-\int_{E}g\,\mathrm{d}\mu=0$; on $E$, $f-g\ge0$, so $\int_{E}\left|f-g\right|\mathrm{d}\mu=\int_{E}\left(f-g\right)\mathrm{d}\mu=0$. Similarly, for $E^{c}$, $\int_{E^{c}}\left(g-f\right)\mathrm{d}\mu=0$, and on $E^{c}$, $g-f\ge0$, so $\int_{E^{c}}\left|f-g\right|\mathrm{d}\mu=0$. Hence $\int\left|f-g\right|\mathrm{d}\mu=\int_{E}\left|f-g\right|\mathrm{d}\mu+\int_{E^{c}}\left|f-g\right|\mathrm{d}\mu=0$.
 
-Combining (1)(2)(3)(4), the three conditions are equivalent. $\blacksquare$
+Combining (1)(2)(3)(4), the three conditions are equivalent.
+
+$\blacksquare$
 
 ## 4
 
@@ -194,7 +202,9 @@ $$
 \int{g}\,\mathrm{d}\lambda=\sum_{j=1}^{m}a_{j}\lambda\left(E_{j}\right)=\sum_{j=1}^{m}a_{j}\int_{E_{j}}f\,\mathrm{d}\mu=\int\left(\sum_{j=1}^{m}a_{j}\chi_{E_{j}}f\right)\mathrm{d}\mu=\int{f}g\,\mathrm{d}\mu.
 $$
 
-For general $g\in{L}^{+}$, take simple $g_{k}\uparrow{g}$ by **Remark 8.2.3 (Approximation by Simple Functions)**. Since $f\ge0$, $fg_{k}\uparrow{f}g$. By **Theorem 8.2.2 (Monotone Convergence Theorem)** (under measures $\lambda$ and $\mu$ respectively), $\int{g}_{k}\,\mathrm{d}\lambda\uparrow\int{g}\,\mathrm{d}\lambda$ and $\int{f}g_{k}\,\mathrm{d}\mu\uparrow\int{f}g\,\mathrm{d}\mu$. For each $k$ the two agree (simple case), so the limits agree: $\int{g}\,\mathrm{d}\lambda=\int{f}g\,\mathrm{d}\mu$. $\blacksquare$
+For general $g\in{L}^{+}$, take simple $g_{k}\uparrow{g}$ by **Remark 8.2.3 (Approximation by Simple Functions)**. Since $f\ge0$, $fg_{k}\uparrow{f}g$. By **Theorem 8.2.2 (Monotone Convergence Theorem)** (under measures $\lambda$ and $\mu$ respectively), $\int{g}_{k}\,\mathrm{d}\lambda\uparrow\int{g}\,\mathrm{d}\lambda$ and $\int{f}g_{k}\,\mathrm{d}\mu\uparrow\int{f}g\,\mathrm{d}\mu$. For each $k$ the two agree (simple case), so the limits agree: $\int{g}\,\mathrm{d}\lambda=\int{f}g\,\mathrm{d}\mu$.
+
+$\blacksquare$
 
 16. For $n\in\mathbb{N}$, let $E_{n}:=\left\{x:f\left(x\right)>\frac{1}{n}\right\}\in\mathcal{M}$. Then $\left\{E_{n}\right\}$ is increasing and $\bigcup_{n}E_{n}=\left\{x:f\left(x\right)>0\right\}$. By **Definition 8.2.1 (Integral of a Nonnegative Measurable Function)**,
 
@@ -202,4 +212,6 @@ $$
 \int{f}\,\mathrm{d}\mu\ge\int_{E_{n}}f\,\mathrm{d}\mu\ge\frac{1}{n}\mu\left(E_{n}\right),
 $$
 
-so $\mu\left(E_{n}\right)\le{n}\int{f}\,\mathrm{d}\mu<\infty$. Also by **Theorem 8.2.2 (Monotone Convergence Theorem)**, $\int_{E_{n}}f\,\mathrm{d}\mu\uparrow\int_{\left\{f>0\right\}}f\,\mathrm{d}\mu=\int{f}\,\mathrm{d}\mu$. Thus for given $\varepsilon>0$, choose $n$ large enough that $\int_{E_{n}}f\,\mathrm{d}\mu>\int{f}\,\mathrm{d}\mu-\varepsilon$, and set $E:=E_{n}$; then $\mu\left(E\right)<\infty$ and $\int_{E}f>\int{f}-\varepsilon$. $\blacksquare$
+so $\mu\left(E_{n}\right)\le{n}\int{f}\,\mathrm{d}\mu<\infty$. Also by **Theorem 8.2.2 (Monotone Convergence Theorem)**, $\int_{E_{n}}f\,\mathrm{d}\mu\uparrow\int_{\left\{f>0\right\}}f\,\mathrm{d}\mu=\int{f}\,\mathrm{d}\mu$. Thus for given $\varepsilon>0$, choose $n$ large enough that $\int_{E_{n}}f\,\mathrm{d}\mu>\int{f}\,\mathrm{d}\mu-\varepsilon$, and set $E:=E_{n}$; then $\mu\left(E\right)<\infty$ and $\int_{E}f>\int{f}-\varepsilon$.
+
+$\blacksquare$

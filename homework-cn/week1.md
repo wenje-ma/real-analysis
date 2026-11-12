@@ -115,7 +115,9 @@ $$
 
 其中第二式用到**定理 1.2.9 (德摩根定律)**. 故 $\mathcal{A}$ 是代数.
 
-两方向结合, 命题得证. $\blacksquare$
+两方向结合, 命题得证.
+
+$\blacksquare$
 
 ## 2
 
@@ -143,7 +145,9 @@ $$
 \bigcup_{n=1}^{\infty}A_{n}=\bigcup_{n=1}^{\infty}B_{n}\in\mathcal{F}.
 $$
 
-故 $\mathcal{F}$ 对可数并封闭, 是 $\sigma$-代数. $\blacksquare$
+故 $\mathcal{F}$ 对可数并封闭, 是 $\sigma$-代数.
+
+$\blacksquare$
 
 ## 3
 
@@ -167,7 +171,9 @@ $$
 
 (3) 有限并封闭: 同理, 对每个 $\mathcal{A}\in\mathscr{C}$ 有 $A\cup{B}\in\mathcal{A}$, 故 $A\cup{B}\in\alpha\left(\mathcal{E}\right)$.
 
-故 $\alpha\left(\mathcal{E}\right)$ 是含 $\mathcal{E}$ 的代数. 又由定义其为所有含 $\mathcal{E}$ 的代数的交集, 故它是包含 $\mathcal{E}$ 的最小代数. $\blacksquare$
+故 $\alpha\left(\mathcal{E}\right)$ 是含 $\mathcal{E}$ 的代数. 又由定义其为所有含 $\mathcal{E}$ 的代数的交集, 故它是包含 $\mathcal{E}$ 的最小代数.
+
+$\blacksquare$
 
 ## 4
 
@@ -191,7 +197,9 @@ $$
 
 (3) 可数并封闭: 设 $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\sigma\left(\mathcal{E}\right)$, 则对每个 $\mathcal{F}\in\mathscr{C}'$, $\left\{A_{n}\right\}\subset\mathcal{F}$, 由 $\mathcal{F}$ 对可数并封闭得 $\bigcup_{n=1}^{\infty}A_{n}\in\mathcal{F}$, 故 $\bigcup_{n=1}^{\infty}A_{n}\in\sigma\left(\mathcal{E}\right)$.
 
-故 $\sigma\left(\mathcal{E}\right)$ 是含 $\mathcal{E}$ 的 $\sigma$-代数, 且是最小的 (所有含 $\mathcal{E}$ 的 $\sigma$-代数之交). $\blacksquare$
+故 $\sigma\left(\mathcal{E}\right)$ 是含 $\mathcal{E}$ 的 $\sigma$-代数, 且是最小的 (所有含 $\mathcal{E}$ 的 $\sigma$-代数之交).
+
+$\blacksquare$
 
 ## 5
 
@@ -223,7 +231,7 @@ $$
 
 4. $\sigma\left(\mathcal{K}\right)=\sigma\left(\tau\right)$. 一方面, $\left(a,b\right]=\bigcap_{n=1}^{\infty}\left(a,b+\frac1n\right)$ 是开区间之可数交, 故 $\left(a,b\right]\in\sigma\left(\tau\right)$ ($\sigma$-代数对可数交封闭: 取补后为可数并), 从而 $\mathcal{K}\subset\sigma\left(\tau\right)\Rightarrow\sigma\left(\mathcal{K}\right)\subset\sigma\left(\tau\right)$.
 
-另一方面, 开区间用左开右闭区间递减逼近: 取 $n_{0}$ 使 $b-\frac1n>{}a$,
+另一方面, 开区间用左开右闭区间递减逼近: 取 $n_{0}$ 使 $b-\frac1n>a$,
 
 $$
 \left(a,b\right)=\bigcup_{n=n_{0}}^{\infty}\left(a,b-\frac1n\right]\in\sigma\left(\mathcal{K}\right),
@@ -231,7 +239,9 @@ $$
 
 故 $\mathcal{G}\subset\sigma\left(\mathcal{K}\right)\Rightarrow\sigma\left(\tau\right)=\sigma\left(\mathcal{G}\right)\subset\sigma\left(\mathcal{K}\right)$. 两者相等.
 
-综上五族生成的 $\sigma$-代数都等于 $\sigma\left(\tau\right)=\mathcal{B}\left(\mathbb{R}\right)$, 命题得证. $\blacksquare$
+综上五族生成的 $\sigma$-代数都等于 $\sigma\left(\tau\right)=\mathcal{B}\left(\mathbb{R}\right)$, 命题得证.
+
+$\blacksquare$
 
 ## 6
 
@@ -271,7 +281,9 @@ $$
 
 因此 $\mathscr{C}$ 是包含所有可测矩形的 $\sigma$-代数, 而 $\mathcal{F}\otimes\mathcal{G}$ 是包含可测矩形的最小 $\sigma$-代数 (**定义 4.5.1 (可测矩形与乘积 $\sigma$-代数)**), 故 $\mathcal{F}\otimes\mathcal{G}\subseteq\mathscr{C}$. 于是对任意 $E\in\mathcal{F}\otimes\mathcal{G}$, $E_{x}\in\mathcal{G}$.
 
-对称地 (固定 $y\in{Y}$, 取截面 $E^{y}$, 用 $\mathcal{F}$ 作同样论证) 得 $E^{y}\in\mathcal{F}$. $\blacksquare$
+对称地 (固定 $y\in{Y}$, 取截面 $E^{y}$, 用 $\mathcal{F}$ 作同样论证) 得 $E^{y}\in\mathcal{F}$.
+
+$\blacksquare$
 
 ## 7
 
@@ -307,4 +319,6 @@ $$
 \mathcal{B}\left(\mathbb{R}^{m+n}\right)=\sigma\left(\text{开集}\right)\subseteq\mathcal{B}\left(\mathbb{R}^{m}\right)\otimes\mathcal{B}\left(\mathbb{R}^{n}\right).
 $$
 
-两方向结合, 即 $\mathcal{B}\left(\mathbb{R}^{m}\right)\otimes\mathcal{B}\left(\mathbb{R}^{n}\right)=\mathcal{B}\left(\mathbb{R}^{m+n}\right)$. $\blacksquare$
+两方向结合, 即 $\mathcal{B}\left(\mathbb{R}^{m}\right)\otimes\mathcal{B}\left(\mathbb{R}^{n}\right)=\mathcal{B}\left(\mathbb{R}^{m+n}\right)$.
+
+$\blacksquare$

@@ -64,7 +64,9 @@ $$
 
 对固定的 $y$, 分部积分两次得 $\int_{0}^{b}e^{-xy}\sin{x}\,\mathrm{d}x=\frac{1-e^{-by}\left(y\sin{b}+\cos{b}\right)}{1+y^{2}}$. 故 $\int_{0}^{b}\frac{\sin{x}}{x}\mathrm{d}x=\int_{0}^{\infty}\frac{1-e^{-by}\left(y\sin{b}+\cos{b}\right)}{1+y^{2}}\mathrm{d}y$.
 
-取极限 $b\to\infty$. 拆成两项 $\frac{1}{1+y^{2}}-\frac{e^{-by}\left(y\sin{b}+\cos{b}\right)}{1+y^{2}}$. 第一项积分 $\int_{0}^{\infty}\frac{1}{1+y^{2}}\mathrm{d}y=\frac{\pi}{2}$. 对第二项, 当 $b\ge1$ 时 $\left|\frac{e^{-by}\left(y\sin{b}+\cos{b}\right)}{1+y^{2}}\right|\le\frac{e^{-y}\left(y+1\right)}{1+y^{2}}=:g\left(y\right)$, 且 $\int_{0}^{\infty}g\left(y\right)\mathrm{d}y<\infty$ (被 $e^{-y}$ 指数衰减控制). 由**定理 8.2.9 (控制收敛定理)** (对任意序列 $b_{n}\to\infty$ 应用), 该项趋于 $\int_{0}^{\infty}0\,\mathrm{d}y=0$. 故 $\lim_{b\to\infty}\int_{0}^{b}\frac{\sin{x}}{x}\mathrm{d}x=\frac{\pi}{2}$. $\blacksquare$
+取极限 $b\to\infty$. 拆成两项 $\frac{1}{1+y^{2}}-\frac{e^{-by}\left(y\sin{b}+\cos{b}\right)}{1+y^{2}}$. 第一项积分 $\int_{0}^{\infty}\frac{1}{1+y^{2}}\mathrm{d}y=\frac{\pi}{2}$. 对第二项, 当 $b\ge1$ 时 $\left|\frac{e^{-by}\left(y\sin{b}+\cos{b}\right)}{1+y^{2}}\right|\le\frac{e^{-y}\left(y+1\right)}{1+y^{2}}=:g\left(y\right)$, 且 $\int_{0}^{\infty}g\left(y\right)\mathrm{d}y<\infty$ (被 $e^{-y}$ 指数衰减控制). 由**定理 8.2.9 (控制收敛定理)** (对任意序列 $b_{n}\to\infty$ 应用), 该项趋于 $\int_{0}^{\infty}0\,\mathrm{d}y=0$. 故 $\lim_{b\to\infty}\int_{0}^{b}\frac{\sin{x}}{x}\mathrm{d}x=\frac{\pi}{2}$.
+
+$\blacksquare$
 
 ## 3
 
@@ -102,7 +104,9 @@ $$
 
 由伽马函数与贝塔恒等式, $\int_{0}^{1}\left(1-u\right)^{\alpha-1}u^{\beta-1}\mathrm{d}u=\frac{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}{\Gamma\left(\alpha+\beta\right)}$. 代入得 $I_{\alpha}\left(I_{\beta}f\right)\left(x\right)=\frac{1}{\Gamma\left(\alpha+\beta\right)}\int_{0}^{x}\left(x-t\right)^{\alpha+\beta-1}f\left(t\right)\mathrm{d}t=I_{\alpha+\beta}f\left(x\right)$.
 
-(b). 先看 $\alpha=1$: 因 $\Gamma\left(1\right)=1$, $I_{1}f\left(x\right)=\int_{0}^{x}f\left(t\right)\mathrm{d}t$, 由微积分基本定理 $\frac{\mathrm{d}}{\mathrm{d}x}I_{1}f=f$. 由 (a), 迭代得 $I_{n}f=\underbrace{I_{1}\circ\cdots\circ{I}_{1}}_{n\text{~次}}f$, 故 $\frac{\mathrm{d}^{n}}{\mathrm{d}x^{n}}I_{n}f=f$. 又因 $I_{\alpha}f$ 的积分下限为 $0$, 对 $k<{}n$ 有 $\left(\frac{\mathrm{d}}{\mathrm{d}x}\right)^{k}I_{n}f$ 在 $0$ 处取值为 $0$. 故 $I_{n}f$ 是 $f$ 的一个 $n$ 阶反导数. $\blacksquare$
+(b). 先看 $\alpha=1$: 因 $\Gamma\left(1\right)=1$, $I_{1}f\left(x\right)=\int_{0}^{x}f\left(t\right)\mathrm{d}t$, 由微积分基本定理 $\frac{\mathrm{d}}{\mathrm{d}x}I_{1}f=f$. 由 (a), 迭代得 $I_{n}f=\underbrace{I_{1}\circ\cdots\circ{I}_{1}}_{n\text{~次}}f$, 故 $\frac{\mathrm{d}^{n}}{\mathrm{d}x^{n}}I_{n}f=f$. 又因 $I_{\alpha}f$ 的积分下限为 $0$, 对 $k<{}n$ 有 $\left(\frac{\mathrm{d}}{\mathrm{d}x}\right)^{k}I_{n}f$ 在 $0$ 处取值为 $0$. 故 $I_{n}f$ 是 $f$ 的一个 $n$ 阶反导数.
+
+$\blacksquare$
 
 ## 4
 
@@ -126,7 +130,9 @@ $$
 
 由 $m^{*}=\rho\times\sigma$ (**定理 11.4.1 (极坐标下的积分公式)**), $\rho\left(\left(a,b\right]\right)\cdot\sigma\left(R^{-1}E\right)=m^{*}\left(\left(a,b\right]\times{R}^{-1}E\right)$. 又由 $m^{*}$ 的旋转不变性, $m^{*}\left(\left(a,b\right]\times{R}^{-1}E\right)=m^{*}\left(\left(a,b\right]\times{E}\right)=\rho\left(\left(a,b\right]\right)\cdot\sigma\left(E\right)$. 故在矩形上 $\rho\times\sigma_{R}=\rho\times\sigma$. 由测度在乘积 $\sigma$-代数生成族上的唯一性, $\rho\times\sigma_{R}=\rho\times\sigma$ 在 $\left(0,\infty\right)\times{S}^{n-1}$ 上成立.
 
-最后由**定理 11.4.1 (极坐标下的积分公式)** 的唯一性 (使 $m^{*}=\rho\times\sigma$ 的测度 $\sigma$ 唯一), 从 $\rho\times\sigma_{R}=m^{*}=\rho\times\sigma$ 得 $\sigma_{R}=\sigma$, 即 $\sigma\left(R^{-1}E\right)=\sigma\left(E\right)$ 对一切博雷尔 $E$ 成立. 故 $\sigma$ 旋转不变. $\blacksquare$
+最后由**定理 11.4.1 (极坐标下的积分公式)** 的唯一性 (使 $m^{*}=\rho\times\sigma$ 的测度 $\sigma$ 唯一), 从 $\rho\times\sigma_{R}=m^{*}=\rho\times\sigma$ 得 $\sigma_{R}=\sigma$, 即 $\sigma\left(R^{-1}E\right)=\sigma\left(E\right)$ 对一切博雷尔 $E$ 成立. 故 $\sigma$ 旋转不变.
+
+$\blacksquare$
 
 ## 5
 
@@ -162,4 +168,6 @@ $$
 
 收敛条件: $\int_{\log2}^{\infty}e^{u\left(a+n\right)}u^{b}\mathrm{d}u\text{~收敛}\Leftrightarrow{a}+n<0$ (指数衰减; $a+n>0$ 时指数增长发散, $a+n=0$ 时 $\int{u}^{b}\mathrm{d}u$ 发散对任意 $b$). 故 $\left|x\right|^{a}\left|\log\left|x\right|\right|^{b}$ 在 $\left\{\left|x\right|>2\right\}$ 上可积 $\Leftrightarrow{a}<-n$.
 
-结论. 在 $\left\{\left|x\right|<1/2\right\}$ 上可积 $\Leftrightarrow{a}>-n$ 或 $\left(a=-n\text{~且~}b<-1\right)$; 在 $\left\{\left|x\right|>2\right\}$ 上可积 $\Leftrightarrow{a}<-n$. $\blacksquare$
+结论. 在 $\left\{\left|x\right|<1/2\right\}$ 上可积 $\Leftrightarrow{a}>-n$ 或 $\left(a=-n\text{~且~}b<-1\right)$; 在 $\left\{\left|x\right|>2\right\}$ 上可积 $\Leftrightarrow{a}<-n$.
+
+$\blacksquare$

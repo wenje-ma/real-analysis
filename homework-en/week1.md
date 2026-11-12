@@ -114,7 +114,9 @@ $$
 
 where the second equality uses **Theorem 1.2.9 (De Morgan's Laws)**. Thus $\mathcal{A}$ is an algebra.
 
-Combining both directions proves the proposition. $\blacksquare$
+Combining both directions proves the proposition.
+
+$\blacksquare$
 
 ## 2
 
@@ -142,7 +144,9 @@ $$
 \bigcup_{n=1}^{\infty}A_{n}=\bigcup_{n=1}^{\infty}B_{n}\in\mathcal{F}.
 $$
 
-Thus $\mathcal{F}$ is closed under countable unions and is a $\sigma$-algebra. $\blacksquare$
+Thus $\mathcal{F}$ is closed under countable unions and is a $\sigma$-algebra.
+
+$\blacksquare$
 
 ## 3
 
@@ -166,7 +170,9 @@ Verify **Definition 4.1.1 (Algebra of Sets)** item by item for $\alpha\left(\mat
 
 (3) Finite union closure: similarly, for each $\mathcal{A}\in\mathscr{C}$, $A\cup{B}\in\mathcal{A}$, so $A\cup{B}\in\alpha\left(\mathcal{E}\right)$.
 
-Thus $\alpha\left(\mathcal{E}\right)$ is an algebra containing $\mathcal{E}$. By definition it is the intersection of all algebras containing $\mathcal{E}$, so it is the smallest algebra containing $\mathcal{E}$. $\blacksquare$
+Thus $\alpha\left(\mathcal{E}\right)$ is an algebra containing $\mathcal{E}$. By definition it is the intersection of all algebras containing $\mathcal{E}$, so it is the smallest algebra containing $\mathcal{E}$.
+
+$\blacksquare$
 
 ## 4
 
@@ -190,7 +196,9 @@ Verify **Definition 4.1.3 ($\sigma$-Algebra)** item by item:
 
 (3) Countable union closure: let $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\sigma\left(\mathcal{E}\right)$. Then for each $\mathcal{F}\in\mathscr{C}'$, $\left\{A_{n}\right\}\subset\mathcal{F}$, and since $\mathcal{F}$ is closed under countable unions, $\bigcup_{n=1}^{\infty}A_{n}\in\mathcal{F}$, hence $\bigcup_{n=1}^{\infty}A_{n}\in\sigma\left(\mathcal{E}\right)$.
 
-Thus $\sigma\left(\mathcal{E}\right)$ is a $\sigma$-algebra containing $\mathcal{E}$, and it is the smallest one (the intersection of all $\sigma$-algebras containing $\mathcal{E}$). $\blacksquare$
+Thus $\sigma\left(\mathcal{E}\right)$ is a $\sigma$-algebra containing $\mathcal{E}$, and it is the smallest one (the intersection of all $\sigma$-algebras containing $\mathcal{E}$).
+
+$\blacksquare$
 
 ## 5
 
@@ -222,7 +230,7 @@ $$
 
 4. $\sigma\left(\mathcal{K}\right)=\sigma\left(\tau\right)$. On one hand, $\left(a,b\right]=\bigcap_{n=1}^{\infty}\left(a,b+\frac1n\right)$ is a countable intersection of open intervals, so $\left(a,b\right]\in\sigma\left(\tau\right)$ (a $\sigma$-algebra is closed under countable intersections: take complements to get countable unions), hence $\mathcal{K}\subset\sigma\left(\tau\right)\Rightarrow\sigma\left(\mathcal{K}\right)\subset\sigma\left(\tau\right)$.
 
-On the other hand, open intervals are approximated from within by half-open intervals: take $n_{0}$ so that $b-\frac1n>{}a$,
+On the other hand, open intervals are approximated from within by half-open intervals: take $n_{0}$ so that $b-\frac1n>a$,
 
 $$
 \left(a,b\right)=\bigcup_{n=n_{0}}^{\infty}\left(a,b-\frac1n\right]\in\sigma\left(\mathcal{K}\right),
@@ -230,7 +238,9 @@ $$
 
 hence $\mathcal{G}\subset\sigma\left(\mathcal{K}\right)\Rightarrow\sigma\left(\tau\right)=\sigma\left(\mathcal{G}\right)\subset\sigma\left(\mathcal{K}\right)$. They are equal.
 
-Thus all five families generate the same $\sigma$-algebra $\sigma\left(\tau\right)=\mathcal{B}\left(\mathbb{R}\right)$, proving the proposition. $\blacksquare$
+Thus all five families generate the same $\sigma$-algebra $\sigma\left(\tau\right)=\mathcal{B}\left(\mathbb{R}\right)$, proving the proposition.
+
+$\blacksquare$
 
 ## 6
 
@@ -270,7 +280,9 @@ Both cases lie in $\mathcal{G}$, so $A\times{B}\in\mathscr{C}$.
 
 Thus $\mathscr{C}$ is a $\sigma$-algebra containing all measurable rectangles, and $\mathcal{F}\otimes\mathcal{G}$ is the smallest $\sigma$-algebra containing them (**Definition 4.5.1 (Measurable Rectangles and Product $\sigma$-Algebra)**), so $\mathcal{F}\otimes\mathcal{G}\subseteq\mathscr{C}$. Hence for every $E\in\mathcal{F}\otimes\mathcal{G}$, $E_{x}\in\mathcal{G}$.
 
-Symmetrically (fix $y\in{Y}$, take the section $E^{y}$, and argue identically with $\mathcal{F}$), we get $E^{y}\in\mathcal{F}$. $\blacksquare$
+Symmetrically (fix $y\in{Y}$, take the section $E^{y}$, and argue identically with $\mathcal{F}$), we get $E^{y}\in\mathcal{F}$.
+
+$\blacksquare$
 
 ## 7
 
@@ -306,4 +318,6 @@ $$
 \mathcal{B}\left(\mathbb{R}^{m+n}\right)=\sigma\left(\text{open~sets}\right)\subseteq\mathcal{B}\left(\mathbb{R}^{m}\right)\otimes\mathcal{B}\left(\mathbb{R}^{n}\right).
 $$
 
-Combining both directions gives $\mathcal{B}\left(\mathbb{R}^{m}\right)\otimes\mathcal{B}\left(\mathbb{R}^{n}\right)=\mathcal{B}\left(\mathbb{R}^{m+n}\right)$. $\blacksquare$
+Combining both directions gives $\mathcal{B}\left(\mathbb{R}^{m}\right)\otimes\mathcal{B}\left(\mathbb{R}^{n}\right)=\mathcal{B}\left(\mathbb{R}^{m+n}\right)$.
+
+$\blacksquare$

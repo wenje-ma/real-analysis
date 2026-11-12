@@ -232,7 +232,9 @@ $$
 
 6. Minimality: let $\mathcal{M}'$ be any complete $\sigma$-algebra containing $\mathcal{F}$. For $A=B\cup{N}\in\mathcal{M}$ ($B\in\mathcal{F}$, $N\subset{N}_{0}\in\mathcal{N}$), since $N_{0}\in\mathcal{F}\subset\mathcal{M}'$ and $\mu\left(N_{0}\right)=0$, completeness of $\mathcal{M}'$ gives $N\in\mathcal{M}'$; also $B\in\mathcal{F}\subset\mathcal{M}'$, so $A=B\cup{N}\in\mathcal{M}'$. Hence $\mathcal{M}\subset\mathcal{M}'$. Thus $\mathcal{M}$ is the smallest complete $\sigma$-algebra containing $\mathcal{F}$.
 
-Therefore $\left(X,\mathcal{M},\overline\mu\right)$ is a complete measure space satisfying (1)(2)(3), proving the theorem. $\blacksquare$
+Therefore $\left(X,\mathcal{M},\overline\mu\right)$ is a complete measure space satisfying (1)(2)(3), proving the theorem.
+
+$\blacksquare$
 
 ## 3
 
@@ -264,7 +266,9 @@ $$
 \mu\left(\limsup_{j\to\infty}E_{j}\right)=\lim_{n\to\infty}\mu\left(G_{n}\right)\ge\lim_{n\to\infty}\sup_{j\ge{n}}\mu\left(E_{j}\right)=\limsup_{j\to\infty}\mu\left(E_{j}\right).
 $$
 
-Both inequalities are proved. $\blacksquare$
+Both inequalities are proved.
+
+$\blacksquare$
 
 ## 4
 
@@ -288,7 +292,9 @@ $$
 \mu\left(E\right)+\mu\left(F\right)=2\mu\left(E\cap{F}\right)+\mu\left(E\setminus{F}\right)+\mu\left(F\setminus{E}\right)=\mu\left(E\cup{F}\right)+\mu\left(E\cap{F}\right).
 $$
 
-The identity is proved. $\blacksquare$
+The identity is proved.
+
+$\blacksquare$
 
 ## 5
 
@@ -308,4 +314,6 @@ $$
 \mu_{E}\left(\bigcup_{j=1}^{\infty}A_{j}\right)=\mu\left(\left(\bigcup_{j=1}^{\infty}A_{j}\right)\cap{E}\right)=\mu\left(\bigcup_{j=1}^{\infty}\left(A_{j}\cap{E}\right)\right)=\sum_{j=1}^{\infty}\mu\left(A_{j}\cap{E}\right)=\sum_{j=1}^{\infty}\mu_{E}\left(A_{j}\right).
 $$
 
-Thus $\mu_{E}$ is a measure. $\blacksquare$
+Thus $\mu_{E}$ is a measure.
+
+$\blacksquare$

@@ -58,7 +58,9 @@ $$
 \sum_{k=0}^{N-1}\left|G\left(x_{k}\right)-G\left(x_{k+1}\right)\right|=\sum_{k=0}^{N-1}\left(x_{k}^{2}+x_{k+1}^{2}\right)\ge\sum_{k=0}^{N-1}x_{k}^{2}=\sum_{k=0}^{N-1}\frac{1}{\pi/2+k\pi}.
 $$
 
-由级数, 调和级数 $\sum_{k}\frac{1}{k}$ 发散, 故上式随 $N\to\infty$ 趋于 $+\infty$. 于是 $G$ 在 $\left[0,1\right]\subset\left[-1,1\right]$ 上的全变差已为 $+\infty$, 从而 $V_{-1}^{1}\left(G\right)=+\infty$, 即 $G\notin{B}V\left(\left[-1,1\right]\right)$. $\blacksquare$
+由级数, 调和级数 $\sum_{k}\frac{1}{k}$ 发散, 故上式随 $N\to\infty$ 趋于 $+\infty$. 于是 $G$ 在 $\left[0,1\right]\subset\left[-1,1\right]$ 上的全变差已为 $+\infty$, 从而 $V_{-1}^{1}\left(G\right)=+\infty$, 即 $G\notin{B}V\left(\left[-1,1\right]\right)$.
+
+$\blacksquare$
 
 ## 2
 
@@ -78,7 +80,9 @@ $$
 T_{F}\left(x\right)=\sup_{P}\sum_{k=1}^{n}\left|F\left(t_{k}\right)-F\left(t_{k-1}\right)\right|\le\liminf_{j\to\infty}T_{F_{j}}\left(x\right).
 $$
 
-故 $T_{F}\le\liminf_{j\to\infty}T_{F_{j}}$. $\blacksquare$
+故 $T_{F}\le\liminf_{j\to\infty}T_{F_{j}}$.
+
+$\blacksquare$
 
 ## 3
 
@@ -118,7 +122,9 @@ $$
 \frac{\mathrm{d}\mu_{F}}{\mathrm{d}m}\left(x\right)=\frac{\mathrm{d}\left(\sum_{j}\mu_{F_{j}}\right)}{\mathrm{d}m}\left(x\right)=\sum_{j}\frac{\mathrm{d}\mu_{F_{j}}}{\mathrm{d}m}\left(x\right)=\sum_{j}F_{j}'\left(x\right),
 $$
 
-对 $m$-几乎每个 $x$ 成立. 故 $F'\left(x\right)=\sum_{j}F_{j}'\left(x\right)$ 几乎处处. $\blacksquare$
+对 $m$-几乎每个 $x$ 成立. 故 $F'\left(x\right)=\sum_{j}F_{j}'\left(x\right)$ 几乎处处.
+
+$\blacksquare$
 
 ## 5
 
@@ -158,7 +164,7 @@ $$
 
 再证 $\Leftarrow$. 设 $F$ 在 $\left(a,b\right)$ 的每个紧子区间上绝对连续且 $F'$ 递增. 由**定理 15.0.14 (绝对连续的等价刻画)**, 对任意 $s<{}t\in\left(a,b\right)$ 与中间点 $u$, 有 $F\left(u\right)-F\left(s\right)=\int_{s}^{u}F'$, $F\left(t\right)-F\left(u\right)=\int_{u}^{t}F'$. 因 $F'$ 在 $\left(s,u\right)$ 上的值不超过其在 $\left(u,t\right)$ 上的值, 平均化得 $\frac{1}{u-s}\int_{s}^{u}F'\le\frac{1}{t-u}\int_{u}^{t}F'$, 即 $S\left(s,u\right)\le{S}\left(u,t\right)$. 取 $u=\lambda{s}+\left(1-\lambda\right)t$ 并整理 (同 (a) 的 $\Leftarrow$), 得 $F\left(u\right)\le\lambda{F}\left(s\right)+\left(1-\lambda\right)F\left(t\right)$, 即 $F$ 凸. 合并即得 (b).
 
-(c). 由 (a) 的差商单调性, $F$ 在 $t_{0}$ 处的左,右导数存在: 左导数 $F'_{-}\left(t_{0}\right)=\sup_{t<{}t_{0}}S\left(t,t_{0}\right)$, 右导数 $F'_{+}\left(t_{0}\right)=\inf_{t>{}t_{0}}S\left(t_{0},t\right)$, 且 $F'_{-}\left(t_{0}\right)\le{F}'_{+}\left(t_{0}\right)$ (对 $t_{1}<{}t_{0}<{}t_{2}$, 三点斜率 $S\left(t_{1},t_{0}\right)\le{S}\left(t_{0},t_{2}\right)$). 取 $\beta\in\left[F'_{-}\left(t_{0}\right),F'_{+}\left(t_{0}\right)\right]$. 当 $t>{}t_{0}$ 时, $S\left(t_{0},t\right)\ge{F}'_{+}\left(t_{0}\right)\ge\beta$, 故 $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$; 当 $t<{}t_{0}$ 时, $S\left(t,t_{0}\right)\le{F}'_{-}\left(t_{0}\right)\le\beta$, 因 $t-t_{0}<0$ 两边乘以负数翻转, 得 $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$. 对 $t=t_{0}$ 取等号成立.
+(c). 由 (a) 的差商单调性, $F$ 在 $t_{0}$ 处的左,右导数存在: 左导数 $F'_{-}\left(t_{0}\right)=\sup_{t<{}t_{0}}S\left(t,t_{0}\right)$, 右导数 $F'_{+}\left(t_{0}\right)=\inf_{t>t_{0}}S\left(t_{0},t\right)$, 且 $F'_{-}\left(t_{0}\right)\le{F}'_{+}\left(t_{0}\right)$ (对 $t_{1}<{}t_{0}<{}t_{2}$, 三点斜率 $S\left(t_{1},t_{0}\right)\le{S}\left(t_{0},t_{2}\right)$). 取 $\beta\in\left[F'_{-}\left(t_{0}\right),F'_{+}\left(t_{0}\right)\right]$. 当 $t>t_{0}$ 时, $S\left(t_{0},t\right)\ge{F}'_{+}\left(t_{0}\right)\ge\beta$, 故 $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$; 当 $t<{}t_{0}$ 时, $S\left(t,t_{0}\right)\le{F}'_{-}\left(t_{0}\right)\le\beta$, 因 $t-t_{0}<0$ 两边乘以负数翻转, 得 $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$. 对 $t=t_{0}$ 取等号成立.
 
 (d). 记 $t_{0}=\int{g}\,\mathrm{d}\mu$. 因 $g$ 取值于 $\left(a,b\right)$, 且 $g\in{L}^{1}\left(\mu\right)$, 有 $t_{0}\in\left(a,b\right)$. 由 (c), 存在 $\beta\in\mathbb{R}$ 使 $F\left(t\right)-F\left(t_{0}\right)\ge\beta\left(t-t_{0}\right)$ 对所有 $t\in\left(a,b\right)$ 成立. 代入 $t=g\left(x\right)$ 得 $F\left(g\left(x\right)\right)\ge{F}\left(t_{0}\right)+\beta\left(g\left(x\right)-t_{0}\right)$ 对一切 $x\in{X}$. 对 $\mu$ 积分 (右端 $\in{L}^{1}$, 故积分良定义):
 
@@ -166,4 +172,6 @@ $$
 \int{F}\circ{g}\,\mathrm{d}\mu\ge\int\left[F\left(t_{0}\right)+\beta\left(g-t_{0}\right)\right]\mathrm{d}\mu=F\left(t_{0}\right)+\beta\left(\int{g}\,\mathrm{d}\mu-t_{0}\right)=F\left(t_{0}\right)=F\left(\int{g}\,\mathrm{d}\mu\right).
 $$
 
-故 $F\left(\int{g}\,\mathrm{d}\mu\right)\le\int{F}\circ{g}\,\mathrm{d}\mu$. $\blacksquare$
+故 $F\left(\int{g}\,\mathrm{d}\mu\right)\le\int{F}\circ{g}\,\mathrm{d}\mu$.
+
+$\blacksquare$

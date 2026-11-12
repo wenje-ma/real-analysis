@@ -135,7 +135,9 @@ $$
 \int{f}\,\mathrm{d}\mu\le\liminf_{n\to\infty}\int{f}_{n}\,\mathrm{d}\mu\le\limsup_{n\to\infty}\int{f}_{n}\,\mathrm{d}\mu\le\int{f}\,\mathrm{d}\mu,
 $$
 
-so $\lim_{n\to\infty}\int{f}_{n}\,\mathrm{d}\mu=\int{f}\,\mathrm{d}\mu$. $\blacksquare$
+so $\lim_{n\to\infty}\int{f}_{n}\,\mathrm{d}\mu=\int{f}\,\mathrm{d}\mu$.
+
+$\blacksquare$
 
 23. Use the notation of Riemann Integral and Darboux Sums. $f$ is Riemann integrable iff $\overline{\int}f=\underline{\int}f$.
 
@@ -150,7 +152,7 @@ Letting $\delta\to0$ and using the arbitrariness of $\varepsilon$, $h\left(x\rig
 Conversely, suppose $H\left(x\right)=h\left(x\right)=:L$. For $\varepsilon>0$, by the definition of the limits there exists $\delta>0$ such that for $0<\delta'<\delta$,
 
 $$
-\inf_{0<\left|y-x\right|\le\delta'}f\left(y\right)>{}L-\varepsilon,\quad\sup_{0<\left|y-x\right|\le\delta'}f\left(y\right)<{}L+\varepsilon.
+\inf_{0<\left|y-x\right|\le\delta'}f\left(y\right)>L-\varepsilon,\quad\sup_{0<\left|y-x\right|\le\delta'}f\left(y\right)<{}L+\varepsilon.
 $$
 
 Taking $\delta'=\delta$, for $0<\left|y-x\right|\le\delta$ we have $L-\varepsilon<{}f\left(y\right)<{}L+\varepsilon$; also $f\left(x\right)$ lies between the inf and sup, so $L-\varepsilon<{}f\left(x\right)<{}L+\varepsilon$. Hence $\left|f\left(y\right)-f\left(x\right)\right|<2\varepsilon$ for $0<\left|y-x\right|\le\delta$, i.e. $f$ is continuous at $x$.
@@ -179,7 +181,9 @@ $$
 f\text{~Riemann~integrable}\Leftrightarrow\overline{\int}f=\underline{\int}f\Leftrightarrow\int{H}\,\mathrm{d}m=\int{h}\,\mathrm{d}m\Leftrightarrow\int\left(H-h\right)\mathrm{d}m=0.
 $$
 
-Since $H\ge{h}$, by Exercise 3(b), $\int\left(H-h\right)\mathrm{d}m=0\Leftrightarrow{H}=h$ a.e. Combined with (a) ($H=h\Leftrightarrow{f}$ continuous at $x$), $f$ is Riemann integrable iff its discontinuity set has measure 0. Then the Riemann integral $\overline{\int}f=\int{H}\,\mathrm{d}m=\int{f}\,\mathrm{d}m$ (since $H=f$ a.e.). $\blacksquare$
+Since $H\ge{h}$, by Exercise 3(b), $\int\left(H-h\right)\mathrm{d}m=0\Leftrightarrow{H}=h$ a.e. Combined with (a) ($H=h\Leftrightarrow{f}$ continuous at $x$), $f$ is Riemann integrable iff its discontinuity set has measure 0. Then the Riemann integral $\overline{\int}f=\int{H}\,\mathrm{d}m=\int{f}\,\mathrm{d}m$ (since $H=f$ a.e.).
+
+$\blacksquare$
 
 27. First find the zero of $f_{n}$. Setting $f_{n}\left(x\right)=0$ gives $ae^{-nax}=be^{-nbx}$, i.e. $e^{n\left(b-a\right)x}=b/a$, so the unique zero is
 
@@ -201,7 +205,7 @@ $$
 \int_{0}^{\infty}\left|f_{n}\right|\mathrm{d}x=\frac{2}{n}\left(e^{-nax_{n}}-e^{-nbx_{n}}\right).
 $$
 
-Let $t=e^{-nx_{n}}$. The zero condition gives $at^{a}=bt^{b}$, i.e. $t^{a-b}=b/a$, so $t=\left(b/a\right)^{1/\left(a-b\right)}\in\left(0,1\right)$. Since $t<1$ and $a<{}b$, the power map $\lambda\mapsto{t}^{\lambda}$ is decreasing, so $t^{a}>{}t^{b}$, and the constant $c:=2\left(t^{a}-t^{b}\right)>0$. Therefore
+Let $t=e^{-nx_{n}}$. The zero condition gives $at^{a}=bt^{b}$, i.e. $t^{a-b}=b/a$, so $t=\left(b/a\right)^{1/\left(a-b\right)}\in\left(0,1\right)$. Since $t<1$ and $a<{}b$, the power map $\lambda\mapsto{t}^{\lambda}$ is decreasing, so $t^{a}>t^{b}$, and the constant $c:=2\left(t^{a}-t^{b}\right)>0$. Therefore
 
 $$
 \sum_{n=1}^{\infty}\int_{0}^{\infty}\left|f_{n}\right|\mathrm{d}x=c\sum_{n=1}^{\infty}\frac{1}{n}=\infty.
@@ -241,7 +245,9 @@ $$
 \int_{0}^{\infty}\sum_{n=1}^{\infty}f_{n}\left(x\right)\mathrm{d}x=\lim_{R\to\infty}\int_{aR}^{bR}\frac{\mathrm{d}u}{u}=\log\left(b/a\right).
 $$
 
-Note that here $\sum\int\left|f_{n}\right|=\infty$ (by (a)), so the condition $\sum\int\left|f_{n}\right|<\infty$ of **Lemma 8.2.13 (Termwise Integration of Series)** fails, and termwise integration is not allowed; indeed $\int\sum{f}_{n}=\log\left(b/a\right)\ne\sum\int{f}_{n}=0$, showing that this condition is essential. $\blacksquare$
+Note that here $\sum\int\left|f_{n}\right|=\infty$ (by (a)), so the condition $\sum\int\left|f_{n}\right|<\infty$ of **Lemma 8.2.13 (Termwise Integration of Series)** fails, and termwise integration is not allowed; indeed $\int\sum{f}_{n}=\log\left(b/a\right)\ne\sum\int{f}_{n}=0$, showing that this condition is essential.
+
+$\blacksquare$
 
 29. Use **Theorem 8.2.17 (Parameter Integrals)** (b) (differentiation under the integral). Fix $t_{0}>0$ and work on a compact neighborhood $\left[t_{0}/2,t_{0}\right]$.
 
@@ -307,4 +313,6 @@ $$
 
 This contradicts the assumption (every subsequence has an a.e.-convergent further subsequence). Hence $f_{n}\xrightarrow{\mu}f$.
 
-Finally, let $\phi:\mathbb{R}\to\mathbb{R}$ be continuous. For any subsequence $\left\{\phi\left(f_{n_{k}}\right)\right\}$, by $f_{n}\xrightarrow{\mu}f$ and the proven $\left(\Rightarrow\right)$, the subsequence $\left\{f_{n_{k}}\right\}$ has a further subsequence $f_{n'_{k}}\to{f}$ a.e.; continuity of $\phi$ gives $\phi\left(f_{n'_{k}}\right)\to\phi\left(f\right)$ a.e. Thus every subsequence of $\left\{\phi\left(f_{n}\right)\right\}$ has an a.e.-convergent further subsequence, and by the proven $\left(\Leftarrow\right)$, $\phi\left(f_{n}\right)\xrightarrow{\mu}\phi\left(f\right)$. $\blacksquare$
+Finally, let $\phi:\mathbb{R}\to\mathbb{R}$ be continuous. For any subsequence $\left\{\phi\left(f_{n_{k}}\right)\right\}$, by $f_{n}\xrightarrow{\mu}f$ and the proven $\left(\Rightarrow\right)$, the subsequence $\left\{f_{n_{k}}\right\}$ has a further subsequence $f_{n'_{k}}\to{f}$ a.e.; continuity of $\phi$ gives $\phi\left(f_{n'_{k}}\right)\to\phi\left(f\right)$ a.e. Thus every subsequence of $\left\{\phi\left(f_{n}\right)\right\}$ has an a.e.-convergent further subsequence, and by the proven $\left(\Leftarrow\right)$, $\phi\left(f_{n}\right)\xrightarrow{\mu}\phi\left(f\right)$.
+
+$\blacksquare$

@@ -144,7 +144,9 @@ $$
 \mu\left(E\right)=\mu\left(E\cap{F}\right)+\mu\left(E\setminus{F}\right),\quad\mu\left(F\right)=\mu\left(E\cap{F}\right)+\mu\left(F\setminus{E}\right).
 $$
 
-又 $E\setminus{F}\subset{E}\triangle{F}$, $F\setminus{E}\subset{E}\triangle{F}$, 由**命题 5.2.2 (单调性)**, $\mu\left(E\setminus{F}\right)\le\mu\left(E\triangle{F}\right)=0$, 同理 $\mu\left(F\setminus{E}\right)=0$. 故 $\mu\left(E\right)=\mu\left(E\cap{F}\right)=\mu\left(F\right)$. $\blacksquare$
+又 $E\setminus{F}\subset{E}\triangle{F}$, $F\setminus{E}\subset{E}\triangle{F}$, 由**命题 5.2.2 (单调性)**, $\mu\left(E\setminus{F}\right)\le\mu\left(E\triangle{F}\right)=0$, 同理 $\mu\left(F\setminus{E}\right)=0$. 故 $\mu\left(E\right)=\mu\left(E\cap{F}\right)=\mu\left(F\right)$.
+
+$\blacksquare$
 
 (b) 验证等价关系的三条性质:
 
@@ -154,7 +156,9 @@ $$
 
 (3) 传递性: 因 $E\triangle{G}\subset\left(E\triangle{F}\right)\cup\left(F\triangle{G}\right)$, 由**命题 5.2.3 (次可数可加性)**, $\mu\left(E\triangle{G}\right)\le\mu\left(E\triangle{F}\right)+\mu\left(F\triangle{G}\right)=0$, 故 $E\sim{G}$.
 
-故 $\sim$ 是 $\mathcal{M}$ 上的等价关系. $\blacksquare$
+故 $\sim$ 是 $\mathcal{M}$ 上的等价关系.
+
+$\blacksquare$
 
 (c) 对称性与非负性显然: $\rho\left(E,F\right)=\rho\left(F,E\right)\ge0$, $\rho\left(E,E\right)=0$. 又 $E\triangle{G}\subset\left(E\triangle{F}\right)\cup\left(F\triangle{G}\right)$, 由**命题 5.2.3 (次可数可加性)**,
 
@@ -168,7 +172,9 @@ $$
 E\triangle{F}\subset\left(E\triangle{E}'\right)\cup\left(E'\triangle{F}'\right)\cup\left(F'\triangle{F}\right),
 $$
 
-故 $\rho\left(E,F\right)\le0+\rho\left(E',F'\right)+0=\rho\left(E',F'\right)$; 对称地 $\rho\left(E',F'\right)\le\rho\left(E,F\right)$, 故 $\rho\left(E,F\right)=\rho\left(E',F'\right)$, 即 $\rho$ 良定义于商空间 $\mathcal{M}/\sim$. 又 $\rho\left(E,F\right)=0\Leftrightarrow\mu\left(E\triangle{F}\right)=0\Leftrightarrow{E}\sim{F}$, 故 $\rho$ 是 $\mathcal{M}/\sim$ 上的度量. $\blacksquare$
+故 $\rho\left(E,F\right)\le0+\rho\left(E',F'\right)+0=\rho\left(E',F'\right)$; 对称地 $\rho\left(E',F'\right)\le\rho\left(E,F\right)$, 故 $\rho\left(E,F\right)=\rho\left(E',F'\right)$, 即 $\rho$ 良定义于商空间 $\mathcal{M}/\sim$. 又 $\rho\left(E,F\right)=0\Leftrightarrow\mu\left(E\triangle{F}\right)=0\Leftrightarrow{E}\sim{F}$, 故 $\rho$ 是 $\mathcal{M}/\sim$ 上的度量.
+
+$\blacksquare$
 
 ## 2
 
@@ -218,7 +224,9 @@ $$
 \mu^{*}\left(A\right)=\sum_{k}\mu^{*}\left(A\cap{X}_{k}\right),\quad\nu\left(A\right)=\sum_{k}\nu\left(A\cap{X}_{k}\right).
 $$
 
-对每个 $k$, 把有限测度 $\mu_{0}\left(\cdot\cap{X}_{k}\right)$ 与 $\nu\left(\cdot\cap{X}_{k}\right)$ 限制在 $X_{k}$ 上即化为有限情形, 得 $\nu\left(A\cap{X}_{k}\right)=\mu^{*}\left(A\cap{X}_{k}\right)$. 求和得 $\nu\left(A\right)=\mu^{*}\left(A\right)$. 故 $\mu^{*}|_{\mathcal{M}}$ 是 $\mu_{0}$ 到 $\mathcal{M}$ 的唯一延拓. $\blacksquare$
+对每个 $k$, 把有限测度 $\mu_{0}\left(\cdot\cap{X}_{k}\right)$ 与 $\nu\left(\cdot\cap{X}_{k}\right)$ 限制在 $X_{k}$ 上即化为有限情形, 得 $\nu\left(A\cap{X}_{k}\right)=\mu^{*}\left(A\cap{X}_{k}\right)$. 求和得 $\nu\left(A\right)=\mu^{*}\left(A\right)$. 故 $\mu^{*}|_{\mathcal{M}}$ 是 $\mu_{0}$ 到 $\mathcal{M}$ 的唯一延拓.
+
+$\blacksquare$
 
 (2) 习题 17. 一方面, 由**定义 6.1.1 (外测度)** (3) (次可数可加性),
 
@@ -244,7 +252,9 @@ $$
 \mu^{*}\left(E\cap\bigcup_{j=1}^{\infty}A_{j}\right)\ge\sum_{j=1}^{\infty}\mu^{*}\left(E\cap{A}_{j}\right).
 $$
 
-合并即得等式. $\blacksquare$
+合并即得等式.
+
+$\blacksquare$
 
 (3) 习题 24. (a) 由 $A\cap{E}=B\cap{E}$ 得 $\left(A\setminus{B}\right)\cap{E}=\varnothing$, 且 $A\setminus{B}\in\mathcal{M}$. 因 $A\setminus{B}$ 可测, 用**定义 6.3.1 (卡拉西奥多里条件)** 于 $T=X$:
 
@@ -270,7 +280,9 @@ $$
 \nu\left(\bigcup_{n}\left(A_{n}\cap{E}\right)\right)=\nu\left(\left(\bigcup_{n}A_{n}\right)\cap{E}\right)=\mu\left(\bigcup_{n}A_{n}\right)=\sum_{n}\mu\left(A_{n}\right)=\sum_{n}\nu\left(A_{n}\cap{E}\right).
 $$
 
-故 $\nu$ 是测度. $\blacksquare$
+故 $\nu$ 是测度.
+
+$\blacksquare$
 
 ## 3
 
@@ -298,4 +310,6 @@ $$
 
 最后, $X\in\mathcal{E}$: 因 $\mathbb{R}=\left(-\infty,\infty\right)$ 是 $\left(a,\infty\right)$ 型 h 区间 ($a=-\infty$), 故 $\mathbb{R}\in\mathcal{E}$. 且对 $A,B\in\mathcal{E}$, 由德摩根律 $A\cup{B}=\left(A^{c}\cap{B}^{c}\right)^{c}\in\mathcal{E}$. 故 $\mathcal{E}$ 对有限并封闭.
 
-综上, $\mathcal{E}$ 是代数. $\blacksquare$
+综上, $\mathcal{E}$ 是代数.
+
+$\blacksquare$

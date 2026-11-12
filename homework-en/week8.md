@@ -86,7 +86,9 @@ Compute $\iint{f}\,\mathrm{d}\mu\,\mathrm{d}\nu$ (inner summation over $\mu$, ou
 
 Compute $\iint{f}\,\mathrm{d}\nu\,\mathrm{d}\mu$ (inner over $\nu$). For fixed $m$, when $m\ge1$, $\sum_{n}f\left(m,n\right)=f\left(m,m\right)+f\left(m,m-1\right)=1+\left(-1\right)=0$; while for $m=0$, $f\left(0,n\right)$ is $1$ only at $n=0$, so the sum is $1$. Hence $\iint{f}\,\mathrm{d}\nu\,\mathrm{d}\mu=\sum_{m}\left(\sum_{n}f\left(m,n\right)\right)=1$.
 
-Thus $\iint{f}\,\mathrm{d}\mu\,\mathrm{d}\nu=0\ne1=\iint{f}\,\mathrm{d}\nu\,\mathrm{d}\mu$. Since $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)=\infty$, $f$ is not absolutely integrable, the hypothesis $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)<\infty$ of **Theorem 10.2.1 (Fubini's Theorem)** fails, and the order of integration cannot be exchanged. $\blacksquare$
+Thus $\iint{f}\,\mathrm{d}\mu\,\mathrm{d}\nu=0\ne1=\iint{f}\,\mathrm{d}\nu\,\mathrm{d}\mu$. Since $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)=\infty$, $f$ is not absolutely integrable, the hypothesis $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)<\infty$ of **Theorem 10.2.1 (Fubini's Theorem)** fails, and the order of integration cannot be exchanged.
+
+$\blacksquare$
 
 ## 2
 
@@ -110,7 +112,9 @@ $$
 
 where $\left(G_{f}\right)_{x}=\left\{y\in\left[0,\infty\right]:y\le{f}\left(x\right)\right\}=\left[0,f\left(x\right)\right]$, and Lebesgue measure $m\left(\left[0,f\left(x\right)\right]\right)=f\left(x\right)$. Hence $\left(\mu\times{m}\right)\left(G_{f}\right)=\int_{X}f\left(x\right)\mathrm{d}\mu\left(x\right)$.
 
-If $y\le{f}\left(x\right)$ is replaced by $y<{}f\left(x\right)$, then $\left(G_{f}\right)_{x}=\left[0,f\left(x\right)\right)$, still with $m=f\left(x\right)$, and the conclusion is unchanged. $\blacksquare$
+If $y\le{f}\left(x\right)$ is replaced by $y<{}f\left(x\right)$, then $\left(G_{f}\right)_{x}=\left[0,f\left(x\right)\right)$, still with $m=f\left(x\right)$, and the conclusion is unchanged.
+
+$\blacksquare$
 
 ## 3
 
@@ -120,7 +124,9 @@ If $f\in{L}^{1}\left(m\right)$ and $\varepsilon>0$, then there is a simple funct
 
 Simple-function part. By **Theorem 8.2.16 (Integrable Simple Functions Are Dense in $L^{1}$)**, there is an integrable simple function $\varphi=\sum_{j}a_{j}\chi_{E_{j}}$ with $\int\left|f-\varphi\right|<\varepsilon/2$. For the terms with $a_{j}\ne0$, since $\int{a}_{j}\chi_{E_{j}}\,\mathrm{d}m=a_{j}m\left(E_{j}\right)<\infty$, we have $m\left(E_{j}\right)<\infty$ (otherwise the integral diverges, contradicting integrability). By **Theorem 11.1.1 (Regularity of Lebesgue Measure and Rectangle Approximation)** (b), for each such $E_{j}$ there are finitely many pairwise-disjoint rectangles $\left\{R_{j,k}\right\}$ with interval sides such that $m\left(E_{j}\triangle\bigcup_{k}R_{j,k}\right)$ is arbitrarily small. Thus $\chi_{E_{j}}$ and $\chi_{R_{j}}$ (with $R_{j}=\bigcup_{k}R_{j,k}$) are arbitrarily close in $L^{1}$; taking the approximation errors small enough and combining over all $j$, we obtain a simple function $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ with $\int\left|\varphi-\varphi'\right|<\varepsilon/2$. Hence $\int\left|f-\varphi'\right|\le\int\left|f-\varphi\right|+\int\left|\varphi-\varphi'\right|<\varepsilon$.
 
-Continuous-function part. Let $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ be as obtained above, each $R_{j}$ a bounded closed rectangle. By Continuous Approximation of Characteristic Functions, for each $R_{j}$ there is a continuous compactly supported $g_{j}$ with $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ arbitrarily small. Taking the errors small enough and setting $g=\sum_{j}a_{j}g_{j}$, $g$ is continuous, supported in $\bigcup_{j}R_{j}$ (bounded), and $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|<\varepsilon/2$. Hence $\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|<\varepsilon$, and $g$ vanishes outside a bounded set. $\blacksquare$
+Continuous-function part. Let $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ be as obtained above, each $R_{j}$ a bounded closed rectangle. By Continuous Approximation of Characteristic Functions, for each $R_{j}$ there is a continuous compactly supported $g_{j}$ with $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ arbitrarily small. Taking the errors small enough and setting $g=\sum_{j}a_{j}g_{j}$, $g$ is continuous, supported in $\bigcup_{j}R_{j}$ (bounded), and $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|<\varepsilon/2$. Hence $\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|<\varepsilon$, and $g$ vanishes outside a bounded set.
+
+$\blacksquare$
 
 ## 4
 
@@ -154,7 +160,9 @@ $$
 m\left(T\left(E\right)\right)=\int\chi_{T\left(E\right)}\left(x\right)\mathrm{d}x=\left|\det{T}\right|\int\chi_{T\left(E\right)}\circ{T}\left(x\right)\mathrm{d}x=\left|\det{T}\right|\int\chi_{E}\left(x\right)\mathrm{d}x=\left|\det{T}\right|m\left(E\right).
 $$
 
-$T\left(E\right)\in\mathcal{L}^{n}$ follows from measurability. $\blacksquare$
+$T\left(E\right)\in\mathcal{L}^{n}$ follows from measurability.
+
+$\blacksquare$
 
 ## 5
 
@@ -188,4 +196,6 @@ First integrating in $x$: fix $y$, $\int_{y}^{1}\left(x-y\right)^{-3}\mathrm{d}x
 
 First integrating in $y$: fix $x$, $\int_{0}^{x}\left(x-y\right)^{-3}\mathrm{d}y=\left[-\frac{1}{2}\left(x-y\right)^{-2}\right]_{0}^{x}$; since $\lim_{y\to{x}^{-}}\left(x-y\right)^{-2}=\infty$, the inner integral $=-\infty$, so $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=-\infty$.
 
-Conclusion: $\int_{E}f\,\mathrm{d}m^{2}$ does not exist; $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=+\infty$ while $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=-\infty$. This is the classic counterexample where Fubini fails: without absolute integrability the order of integration cannot be exchanged. $\blacksquare$
+Conclusion: $\int_{E}f\,\mathrm{d}m^{2}$ does not exist; $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=+\infty$ while $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=-\infty$. This is the classic counterexample where Fubini fails: without absolute integrability the order of integration cannot be exchanged.
+
+$\blacksquare$

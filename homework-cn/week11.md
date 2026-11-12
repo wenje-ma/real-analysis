@@ -113,7 +113,9 @@ $$
 \nu\left(E\right)=\int_{E}f\,\mathrm{d}\lambda=\int_{E}f\,\mathrm{d}\mu+\int_{E}f\,\mathrm{d}\nu,
 $$
 
-即 $\int_{E}\left(1-f\right)\mathrm{d}\nu=\int_{E}f\,\mathrm{d}\mu$. 因 $1-f>0$ $\mu$-几乎处处 (也 $\lambda$-几乎处处), 由**定理 11.5.5 (拉东-尼科迪姆定理)** 的唯一性, $\frac{\mathrm{d}\nu}{\mathrm{d}\mu}=\frac{f}{1-f}$. $\blacksquare$
+即 $\int_{E}\left(1-f\right)\mathrm{d}\nu=\int_{E}f\,\mathrm{d}\mu$. 因 $1-f>0$ $\mu$-几乎处处 (也 $\lambda$-几乎处处), 由**定理 11.5.5 (拉东-尼科迪姆定理)** 的唯一性, $\frac{\mathrm{d}\nu}{\mathrm{d}\mu}=\frac{f}{1-f}$.
+
+$\blacksquare$
 
 ## 3
 
@@ -123,23 +125,27 @@ $$
 
 对 $E\in\mathcal{N}$, 定义 $\nu_{0}\left(E\right):=\int_{E}f\,\mathrm{d}\mu$. 则 $\nu_{0}$ 是 $\mathcal{N}$ 上的符号测度: 有限可加性与可数可加性由 $\mu$ 的可数可加性及 $f$ 的可积性 (控制收敛) 保证, 且 $\left|\nu_{0}\left(E\right)\right|\le\int_{E}\left|f\right|\mathrm{d}\mu\le\int\left|f\right|\mathrm{d}\mu<\infty$, 故 $\nu_{0}$ 有限. 又 $\nu_{0}\ll\nu$ (**定义 11.5.1 (绝对连续性)**): 若 $E\in\mathcal{N}$ 且 $\nu\left(E\right)=\mu\left(E\right)=0$, 则 $\nu_{0}\left(E\right)=\int_{E}f\,\mathrm{d}\mu=0$ ($f\in{L}^{1}\left(\mu\right)$, 在零测集上积分为 $0$). 由于 $\nu=\mu|_{\mathcal{N}}$ 是 $\sigma$-有限的 (由 $\mu$ $\sigma$-有限), 由**定理 11.5.5 (拉东-尼科迪姆定理)**, 存在 $\mathcal{N}$-可测函数 $g=\frac{\mathrm{d}\nu_{0}}{\mathrm{d}\nu}\in{L}^{1}\left(\nu\right)$ 使得 $\int_{E}f\,\mathrm{d}\mu=\nu_{0}\left(E\right)=\int_{E}g\,\mathrm{d}\nu$ 对一切 $E\in\mathcal{N}$ 成立.
 
-若 $g'\in{L}^{1}\left(\nu\right)$ 也满足同样等式, 则 $\int_{E}\left(g-g'\right)\mathrm{d}\nu=0$ 对一切 $E\in\mathcal{N}$. 取 $E=\left\{g>{}g'\right\}\in\mathcal{N}$, 因 $g-g'\in{L}^{1}\left(\nu\right)$ 且 $\int_{\left\{g>{}g'\right\}}\left(g-g'\right)\mathrm{d}\nu=0$, 由非负函数积分为零则几乎处处为零, 得 $g=g'$ $\nu$-几乎处处于 $\left\{g>{}g'\right\}$ 上; 同理于 $\left\{g<{}g'\right\}$ 上. 故 $g=g'$ $\nu$-几乎处处. $\blacksquare$
+若 $g'\in{L}^{1}\left(\nu\right)$ 也满足同样等式, 则 $\int_{E}\left(g-g'\right)\mathrm{d}\nu=0$ 对一切 $E\in\mathcal{N}$. 取 $E=\left\{g>g'\right\}\in\mathcal{N}$, 因 $g-g'\in{L}^{1}\left(\nu\right)$ 且 $\int_{\left\{g>g'\right\}}\left(g-g'\right)\mathrm{d}\nu=0$, 由非负函数积分为零则几乎处处为零, 得 $g=g'$ $\nu$-几乎处处于 $\left\{g>g'\right\}$ 上; 同理于 $\left\{g<{}g'\right\}$ 上. 故 $g=g'$ $\nu$-几乎处处.
+
+$\blacksquare$
 
 ## 4
 
-设 $f\in{L}^{1}\left(\mathbb{R}^{n}\right)$ 且 $f\ne0$. 证明存在 $C,R>0$ 使得 $Hf\left(x\right)\ge{C}\left|x\right|^{-n}$ 对 $\left|x\right|>{}R$ 成立. 从而当 $\lambda$ 充分小时, $m\left(\left\{x:Hf\left(x\right)>\lambda\right\}\right)\ge{C}'\lambda^{-1}$, 故极大定理中的估计本质上是尖锐的.
+设 $f\in{L}^{1}\left(\mathbb{R}^{n}\right)$ 且 $f\ne0$. 证明存在 $C,R>0$ 使得 $Hf\left(x\right)\ge{C}\left|x\right|^{-n}$ 对 $\left|x\right|>R$ 成立. 从而当 $\lambda$ 充分小时, $m\left(\left\{x:Hf\left(x\right)>\lambda\right\}\right)\ge{C}'\lambda^{-1}$, 故极大定理中的估计本质上是尖锐的.
 
 ### 解答 4
 
-记 $Hf$ 为哈代-利特尔伍德极大函数 (哈代-利特尔伍德极大函数). 因 $f\ne0$ 且 $f\in{L}^{1}\left(\mathbb{R}^{n}\right)$, 存在球 $K$ (取某个紧集即可) 使 $\int_{K}\left|f\right|\mathrm{d}y>0$; 否则 $\left|\int_{K}f\right|$ 全为零将推出 $f=0$ 几乎处处, 矛盾. 记 $c=\int_{K}\left|f\right|\mathrm{d}y>0$, 并取 $R>0$ 使 $K\subset{B}\left(0,R\right)$ (即 $\sup_{y\in{K}}\left|y\right|<{}R$). 对 $\left|x\right|>{}R$, 因 $K\subset{B}\left(0,R\right)$ 且 $R<\left|x\right|$, 有 $K\subset{B}\left(x,2\left|x\right|\right)$. 于是由极大函数定义与球体积公式,
+记 $Hf$ 为哈代-利特尔伍德极大函数 (哈代-利特尔伍德极大函数). 因 $f\ne0$ 且 $f\in{L}^{1}\left(\mathbb{R}^{n}\right)$, 存在球 $K$ (取某个紧集即可) 使 $\int_{K}\left|f\right|\mathrm{d}y>0$; 否则 $\left|\int_{K}f\right|$ 全为零将推出 $f=0$ 几乎处处, 矛盾. 记 $c=\int_{K}\left|f\right|\mathrm{d}y>0$, 并取 $R>0$ 使 $K\subset{B}\left(0,R\right)$ (即 $\sup_{y\in{K}}\left|y\right|<{}R$). 对 $\left|x\right|>R$, 因 $K\subset{B}\left(0,R\right)$ 且 $R<\left|x\right|$, 有 $K\subset{B}\left(x,2\left|x\right|\right)$. 于是由极大函数定义与球体积公式,
 
 $$
 Hf\left(x\right)\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{B\left(x,2\left|x\right|\right)}\left|f\right|\mathrm{d}y\ge\frac{1}{\left|B\left(x,2\left|x\right|\right)\right|}\int_{K}\left|f\right|\mathrm{d}y=\frac{c}{C_{n}\left(2\left|x\right|\right)^{n}}=\frac{c}{2^{n}C_{n}}\left|x\right|^{-n}.
 $$
 
-取 $C=\frac{c}{2^{n}C_{n}}>0$, 即得 $Hf\left(x\right)\ge{C}\left|x\right|^{-n}$ 对 $\left|x\right|>{}R$ 成立.
+取 $C=\frac{c}{2^{n}C_{n}}>0$, 即得 $Hf\left(x\right)\ge{C}\left|x\right|^{-n}$ 对 $\left|x\right|>R$ 成立.
 
-第二问: 由第一问, 当 $0<\lambda<{}C/R^{n}$ 时, $\left(C/\lambda\right)^{1/n}>{}R$, 故 $\left\{x:\left|x\right|>\left(C/\lambda\right)^{1/n}\right\}\subset\left\{x:Hf\left(x\right)>\lambda\right\}$. 由球体积公式, 该集合的补集测度为 $m\left(\left\{x:\left|x\right|<\left(C/\lambda\right)^{1/n}\right\}\right)=C_{n}\left(\frac{C}{\lambda}\right)=\frac{C_{n}C}{\lambda}$. 令 $C'=C_{n}C$, 得 $m\left(\left\{x:Hf\left(x\right)>\lambda\right\}\right)\ge{C}'\lambda^{-1}$ 对充分小的 $\lambda>0$ 成立. $\blacksquare$
+第二问: 由第一问, 当 $0<\lambda<{}C/R^{n}$ 时, $\left(C/\lambda\right)^{1/n}>R$, 故 $\left\{x:\left|x\right|>\left(C/\lambda\right)^{1/n}\right\}\subset\left\{x:Hf\left(x\right)>\lambda\right\}$. 由球体积公式, 该集合的补集测度为 $m\left(\left\{x:\left|x\right|<\left(C/\lambda\right)^{1/n}\right\}\right)=C_{n}\left(\frac{C}{\lambda}\right)=\frac{C_{n}C}{\lambda}$. 令 $C'=C_{n}C$, 得 $m\left(\left\{x:Hf\left(x\right)>\lambda\right\}\right)\ge{C}'\lambda^{-1}$ 对充分小的 $\lambda>0$ 成立.
+
+$\blacksquare$
 
 ## 5
 
@@ -155,7 +161,9 @@ $$
 \frac{1}{m\left(B\right)}\int_{B}\left|f\right|\mathrm{d}y\le\frac{1}{m\left(B\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y=2^{n}\cdot\frac{1}{m\left(B\left(x,2\rho\right)\right)}\int_{B\left(x,2\rho\right)}\left|f\right|\mathrm{d}y\le2^{n}Hf\left(x\right).
 $$
 
-对一切含 $x$ 的球 $B$ 取上确界, 得 $H^{*}f\left(x\right)\le2^{n}Hf\left(x\right)$. 合并即 $Hf\le{H}^{*}f\le2^{n}Hf$. $\blacksquare$
+对一切含 $x$ 的球 $B$ 取上确界, 得 $H^{*}f\left(x\right)\le2^{n}Hf\left(x\right)$. 合并即 $Hf\le{H}^{*}f\le2^{n}Hf$.
+
+$\blacksquare$
 
 ## 6
 
@@ -175,7 +183,9 @@ $$
 
 正则性的条件 (2) 对 $\mu$. 用 $\mu\left(E\right)=\nu\left(E\cap{A}^{c}\right)$ 及 $\nu|_{A^{c}}$ 的正则性, 论证完全对称, 得 $\mu$ 也满足条件 (2).
 
-综上, $\lambda$ 与 $\mu$ 均正则. $\blacksquare$
+综上, $\lambda$ 与 $\mu$ 均正则.
+
+$\blacksquare$
 
 ## 7
 
@@ -185,8 +195,10 @@ $$
 
 枚举有理数 $\mathbb{Q}=\left\{q_{1},q_{2},\dots\right\}$, 定义 $F\left(x\right)=\sum_{q_{n}\le{x}}2^{-n}$, $x\in\mathbb{R}$. 这是至多可数项之和且每项非负, 值域含于 $\left[0,1\right]$. 由级数, $\sum_{n}2^{-n}$ 收敛, 故 $F$ 取值有限. 若 $x<{}y$, 则 $\left\{n:q_{n}\le{x}\right\}\subset\left\{n:q_{n}\le{y}\right\}$, 从而 $F\left(x\right)\le{F}\left(y\right)$, 即 $F$ 递增.
 
-每个有理点是间断点. 对 $q_{k}\in\mathbb{Q}$, 当 $x$ 自 $q_{k}$ 左侧趋于 $q_{k}$ 时, $\left\{q_{n}\le{x}\right\}$ 不含 $q_{k}$, 故左极限 $F\left(q_{k}-\right)=\sum_{q_{n}<{}q_{k}}2^{-n}=\sum_{q_{n}\le{q}_{k}}2^{-n}-2^{-k}=F\left(q_{k}\right)-2^{-k}<{}F\left(q_{k}\right)$. 而右极限 $F\left(q_{k}+\right)=\lim_{x\downarrow{q}_{k}}F\left(x\right)=F\left(q_{k}\right)$ (因 $x>{}q_{k}$ 时仍计入 $q_{k}$). 故 $F$ 在 $q_{k}$ 处左,右极限不相等, 是第一类间断点.
+每个有理点是间断点. 对 $q_{k}\in\mathbb{Q}$, 当 $x$ 自 $q_{k}$ 左侧趋于 $q_{k}$ 时, $\left\{q_{n}\le{x}\right\}$ 不含 $q_{k}$, 故左极限 $F\left(q_{k}-\right)=\sum_{q_{n}<{}q_{k}}2^{-n}=\sum_{q_{n}\le{q}_{k}}2^{-n}-2^{-k}=F\left(q_{k}\right)-2^{-k}<{}F\left(q_{k}\right)$. 而右极限 $F\left(q_{k}+\right)=\lim_{x\downarrow{q}_{k}}F\left(x\right)=F\left(q_{k}\right)$ (因 $x>q_{k}$ 时仍计入 $q_{k}$). 故 $F$ 在 $q_{k}$ 处左,右极限不相等, 是第一类间断点.
 
-每个无理点是连续点. 设 $x_{0}\in\mathbb{R}\setminus\mathbb{Q}$. 给定 $\varepsilon>0$, 由级数 取 $N$ 使 $\sum_{n>{}N}2^{-n}<\varepsilon$. 因 $x_{0}$ 无理, 取 $\delta>0$ 小到开区间 $\left(x_{0}-\delta,x_{0}+\delta\right)$ 内不含 $q_{1},\dots,q_{N}$ (有限个点, 可分离). 则当 $\left|x-x_{0}\right|<\delta$ 时, 区间 $\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right]$ 内至多含 $q_{N+1},q_{N+2},\dots$, 故 $\left|F\left(x\right)-F\left(x_{0}\right)\right|=\sum_{x_{0}<{}q_{n}\le{x}\text{~或~}x<{}q_{n}\le{x}_{0}}2^{-n}\le\sum_{n>{}N}2^{-n}<\varepsilon$. 故 $F$ 在 $x_{0}$ 连续.
+每个无理点是连续点. 设 $x_{0}\in\mathbb{R}\setminus\mathbb{Q}$. 给定 $\varepsilon>0$, 由级数 取 $N$ 使 $\sum_{n>N}2^{-n}<\varepsilon$. 因 $x_{0}$ 无理, 取 $\delta>0$ 小到开区间 $\left(x_{0}-\delta,x_{0}+\delta\right)$ 内不含 $q_{1},\dots,q_{N}$ (有限个点, 可分离). 则当 $\left|x-x_{0}\right|<\delta$ 时, 区间 $\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right]$ 内至多含 $q_{N+1},q_{N+2},\dots$, 故 $\left|F\left(x\right)-F\left(x_{0}\right)\right|=\sum_{x_{0}<{}q_{n}\le{x}\text{~或~}x<{}q_{n}\le{x}_{0}}2^{-n}\le\sum_{n>N}2^{-n}<\varepsilon$. 故 $F$ 在 $x_{0}$ 连续.
 
-综上, $F$ 的间断点集恰为 $\mathbb{Q}$. 由**定理 14.0.7 (有界变差函数的基本性质)** (4) 及**定理 14.0.10 (有界变差函数的间断点性质)**, $F$ 为递增有界函数从而是有界变差函数, 其间断点至多可数且均为第一类, 此处恰与 $\mathbb{Q}$ 相符. $\blacksquare$
+综上, $F$ 的间断点集恰为 $\mathbb{Q}$. 由**定理 14.0.7 (有界变差函数的基本性质)** (4) 及**定理 14.0.10 (有界变差函数的间断点性质)**, $F$ 为递增有界函数从而是有界变差函数, 其间断点至多可数且均为第一类, 此处恰与 $\mathbb{Q}$ 相符.
+
+$\blacksquare$

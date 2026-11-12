@@ -135,7 +135,9 @@ $$
 \int{f}\,\mathrm{d}\mu\le\liminf_{n\to\infty}\int{f}_{n}\,\mathrm{d}\mu\le\limsup_{n\to\infty}\int{f}_{n}\,\mathrm{d}\mu\le\int{f}\,\mathrm{d}\mu,
 $$
 
-故 $\lim_{n\to\infty}\int{f}_{n}\,\mathrm{d}\mu=\int{f}\,\mathrm{d}\mu$. $\blacksquare$
+故 $\lim_{n\to\infty}\int{f}_{n}\,\mathrm{d}\mu=\int{f}\,\mathrm{d}\mu$.
+
+$\blacksquare$
 
 23. 用黎曼积分与达布和 的记号. $f$ 黎曼可积当且仅当 $\overline{\int}f=\underline{\int}f$.
 
@@ -150,7 +152,7 @@ $$
 反之, 设 $H\left(x\right)=h\left(x\right)=:L$. 对 $\varepsilon>0$, 由极限定义存在 $\delta>0$ 使对 $0<\delta'<\delta$ 有
 
 $$
-\inf_{0<\left|y-x\right|\le\delta'}f\left(y\right)>{}L-\varepsilon,\quad\sup_{0<\left|y-x\right|\le\delta'}f\left(y\right)<{}L+\varepsilon.
+\inf_{0<\left|y-x\right|\le\delta'}f\left(y\right)>L-\varepsilon,\quad\sup_{0<\left|y-x\right|\le\delta'}f\left(y\right)<{}L+\varepsilon.
 $$
 
 取 $\delta'=\delta$, 则对 $0<\left|y-x\right|\le\delta$ 有 $L-\varepsilon<{}f\left(y\right)<{}L+\varepsilon$; 又 $f\left(x\right)$ 介于 $\inf$ 与 $\sup$ 之间, 故 $L-\varepsilon<{}f\left(x\right)<{}L+\varepsilon$. 于是 $\left|f\left(y\right)-f\left(x\right)\right|<2\varepsilon$ 对 $0<\left|y-x\right|\le\delta$ 成立, 即 $f$ 在 $x$ 连续.
@@ -179,7 +181,9 @@ $$
 f\text{~黎曼可积}\Leftrightarrow\overline{\int}f=\underline{\int}f\Leftrightarrow\int{H}\,\mathrm{d}m=\int{h}\,\mathrm{d}m\Leftrightarrow\int\left(H-h\right)\mathrm{d}m=0.
 $$
 
-因 $H\ge{h}$, 由习题三 (b) 得 $\int\left(H-h\right)\mathrm{d}m=0\Leftrightarrow{H}=h$ 几乎处处. 结合 (a) ($H=h\Leftrightarrow{f}$ 连续于 $x$) 得 $f$ 黎曼可积当且仅当 $f$ 的不连续点集测度为 0. 此时黎曼积分 $\overline{\int}f=\int{H}\,\mathrm{d}m=\int{f}\,\mathrm{d}m$ (因 $H=f$ 几乎处处). $\blacksquare$
+因 $H\ge{h}$, 由习题三 (b) 得 $\int\left(H-h\right)\mathrm{d}m=0\Leftrightarrow{H}=h$ 几乎处处. 结合 (a) ($H=h\Leftrightarrow{f}$ 连续于 $x$) 得 $f$ 黎曼可积当且仅当 $f$ 的不连续点集测度为 0. 此时黎曼积分 $\overline{\int}f=\int{H}\,\mathrm{d}m=\int{f}\,\mathrm{d}m$ (因 $H=f$ 几乎处处).
+
+$\blacksquare$
 
 27. 先求 $f_{n}$ 的零点. 令 $f_{n}\left(x\right)=0$ 得 $ae^{-nax}=be^{-nbx}$, 即 $e^{n\left(b-a\right)x}=b/a$, 故唯一零点
 
@@ -201,7 +205,7 @@ $$
 \int_{0}^{\infty}\left|f_{n}\right|\mathrm{d}x=\frac{2}{n}\left(e^{-nax_{n}}-e^{-nbx_{n}}\right).
 $$
 
-记 $t=e^{-nx_{n}}$, 则由零点条件 $at^{a}=bt^{b}$, 即 $t^{a-b}=b/a$, 故 $t=\left(b/a\right)^{1/\left(a-b\right)}\in\left(0,1\right)$. 因 $t<1$ 且 $a<{}b$, 幂函数 $\lambda\mapsto{t}^{\lambda}$ 递减, 故 $t^{a}>{}t^{b}$, 常数 $c:=2\left(t^{a}-t^{b}\right)>0$. 因此
+记 $t=e^{-nx_{n}}$, 则由零点条件 $at^{a}=bt^{b}$, 即 $t^{a-b}=b/a$, 故 $t=\left(b/a\right)^{1/\left(a-b\right)}\in\left(0,1\right)$. 因 $t<1$ 且 $a<{}b$, 幂函数 $\lambda\mapsto{t}^{\lambda}$ 递减, 故 $t^{a}>t^{b}$, 常数 $c:=2\left(t^{a}-t^{b}\right)>0$. 因此
 
 $$
 \sum_{n=1}^{\infty}\int_{0}^{\infty}\left|f_{n}\right|\mathrm{d}x=c\sum_{n=1}^{\infty}\frac{1}{n}=\infty.
@@ -241,7 +245,9 @@ $$
 \int_{0}^{\infty}\sum_{n=1}^{\infty}f_{n}\left(x\right)\mathrm{d}x=\lim_{R\to\infty}\int_{aR}^{bR}\frac{\mathrm{d}u}{u}=\log\left(b/a\right).
 $$
 
-注意到这里 $\sum\int\left|f_{n}\right|=\infty$ (由 a), 不满足**引理 8.2.13 (级数逐项积分)** 的条件 $\sum\int\left|f_{n}\right|<\infty$, 故不能逐项积分; 事实上 $\int\sum{f}_{n}=\log\left(b/a\right)\ne\sum\int{f}_{n}=0$, 正说明该条件是本质的. $\blacksquare$
+注意到这里 $\sum\int\left|f_{n}\right|=\infty$ (由 a), 不满足**引理 8.2.13 (级数逐项积分)** 的条件 $\sum\int\left|f_{n}\right|<\infty$, 故不能逐项积分; 事实上 $\int\sum{f}_{n}=\log\left(b/a\right)\ne\sum\int{f}_{n}=0$, 正说明该条件是本质的.
+
+$\blacksquare$
 
 29. 用**定理 8.2.17 (参数积分)** (b) (积分号下求导). 固定 $t_{0}>0$, 在 $t$ 的紧邻域 $\left[t_{0}/2,t_{0}\right]$ 上考察.
 
@@ -307,4 +313,6 @@ $$
 
 这与假设 (任意子列存在几乎处处收敛子子列) 矛盾. 故 $f_{n}\xrightarrow{\mu}f$.
 
-最后设 $\phi:\mathbb{R}\to\mathbb{R}$ 连续. 对任意子列 $\left\{\phi\left(f_{n_{k}}\right)\right\}$, 由 $f_{n}\xrightarrow{\mu}f$ 和已证的 $\left(\Rightarrow\right)$, 子列 $\left\{f_{n_{k}}\right\}$ 存在子子列 $f_{n'_{k}}\to{f}$ 几乎处处; $\phi$ 连续推出 $\phi\left(f_{n'_{k}}\right)\to\phi\left(f\right)$ 几乎处处. 故 $\left\{\phi\left(f_{n}\right)\right\}$ 的任意子列存在几乎处处收敛子子列, 由已证的 $\left(\Leftarrow\right)$, $\phi\left(f_{n}\right)\xrightarrow{\mu}\phi\left(f\right)$. $\blacksquare$
+最后设 $\phi:\mathbb{R}\to\mathbb{R}$ 连续. 对任意子列 $\left\{\phi\left(f_{n_{k}}\right)\right\}$, 由 $f_{n}\xrightarrow{\mu}f$ 和已证的 $\left(\Rightarrow\right)$, 子列 $\left\{f_{n_{k}}\right\}$ 存在子子列 $f_{n'_{k}}\to{f}$ 几乎处处; $\phi$ 连续推出 $\phi\left(f_{n'_{k}}\right)\to\phi\left(f\right)$ 几乎处处. 故 $\left\{\phi\left(f_{n}\right)\right\}$ 的任意子列存在几乎处处收敛子子列, 由已证的 $\left(\Leftarrow\right)$, $\phi\left(f_{n}\right)\xrightarrow{\mu}\phi\left(f\right)$.
+
+$\blacksquare$

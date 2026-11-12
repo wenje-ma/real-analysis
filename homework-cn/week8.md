@@ -86,7 +86,9 @@ $$
 
 算 $\iint{f}\,\mathrm{d}\nu\,\mathrm{d}\mu$ (内层按 $\nu$ 求和). 对固定 $m$, 当 $m\ge1$ 时 $\sum_{n}f\left(m,n\right)=f\left(m,m\right)+f\left(m,m-1\right)=1+\left(-1\right)=0$; 而 $m=0$ 时 $f\left(0,n\right)$ 只在 $n=0$ 处为 $1$, 和为 $1$. 故 $\iint{f}\,\mathrm{d}\nu\,\mathrm{d}\mu=\sum_{m}\left(\sum_{n}f\left(m,n\right)\right)=1$.
 
-故 $\iint{f}\,\mathrm{d}\mu\,\mathrm{d}\nu=0\ne1=\iint{f}\,\mathrm{d}\nu\,\mathrm{d}\mu$. 因 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)=\infty$, $f$ 非绝对可积, **定理 10.2.1 (富比尼定理)** 的假设 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)<\infty$ 不满足, 故不能交换积分次序. $\blacksquare$
+故 $\iint{f}\,\mathrm{d}\mu\,\mathrm{d}\nu=0\ne1=\iint{f}\,\mathrm{d}\nu\,\mathrm{d}\mu$. 因 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)=\infty$, $f$ 非绝对可积, **定理 10.2.1 (富比尼定理)** 的假设 $\int\left|f\right|\mathrm{d}\left(\mu\times\nu\right)<\infty$ 不满足, 故不能交换积分次序.
+
+$\blacksquare$
 
 ## 2
 
@@ -110,7 +112,9 @@ $$
 
 其中 $\left(G_{f}\right)_{x}=\left\{y\in\left[0,\infty\right]:y\le{f}\left(x\right)\right\}=\left[0,f\left(x\right)\right]$, 勒贝格测度 $m\left(\left[0,f\left(x\right)\right]\right)=f\left(x\right)$. 故 $\left(\mu\times{m}\right)\left(G_{f}\right)=\int_{X}f\left(x\right)\mathrm{d}\mu\left(x\right)$.
 
-若把 $y\le{f}\left(x\right)$ 换成 $y<{}f\left(x\right)$, 则 $\left(G_{f}\right)_{x}=\left[0,f\left(x\right)\right)$, 仍有 $m=f\left(x\right)$, 结论不变. $\blacksquare$
+若把 $y\le{f}\left(x\right)$ 换成 $y<{}f\left(x\right)$, 则 $\left(G_{f}\right)_{x}=\left[0,f\left(x\right)\right)$, 仍有 $m=f\left(x\right)$, 结论不变.
+
+$\blacksquare$
 
 ## 3
 
@@ -120,7 +124,9 @@ $$
 
 简单函数部分. 由**定理 8.2.16 (可积简单函数在 $L^{1}$ 中稠密)**, 存在可积简单函数 $\varphi=\sum_{j}a_{j}\chi_{E_{j}}$ 使得 $\int\left|f-\varphi\right|<\varepsilon/2$. 对 $a_{j}\ne0$ 的项, 由 $\int{a}_{j}\chi_{E_{j}}\,\mathrm{d}m=a_{j}m\left(E_{j}\right)<\infty$ 得 $m\left(E_{j}\right)<\infty$ (否则积分发散, 与可积性矛盾). 由**定理 11.1.1 (勒贝格测度的正则性与矩形逼近)** (b), 对每个这样的 $E_{j}$ 存在有限个边为区间的互不相交矩形 $\left\{R_{j,k}\right\}$ 使 $m\left(E_{j}\triangle\bigcup_{k}R_{j,k}\right)$ 任意小. 于是 $\chi_{E_{j}}$ 与 $\chi_{R_{j}}$ (其中 $R_{j}=\bigcup_{k}R_{j,k}$) 在 $L^{1}$ 中任意接近, 取足够小的逼近误差并合并所有 $j$, 得到简单函数 $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ 满足 $\int\left|\varphi-\varphi'\right|<\varepsilon/2$. 故 $\int\left|f-\varphi'\right|\le\int\left|f-\varphi\right|+\int\left|\varphi-\varphi'\right|<\varepsilon$.
 
-连续函数部分. 设 $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ 已由上一步得到, 其中每个 $R_{j}$ 是有界闭矩形. 由特征函数的连续逼近, 对每个 $R_{j}$ 存在具有紧支撑的连续函数 $g_{j}$ 使 $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ 任意小. 取逼近误差足够小并令 $g=\sum_{j}a_{j}g_{j}$, 则 $g$ 连续且支撑在 $\bigcup_{j}R_{j}$ 中 (有界集), 且 $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|<\varepsilon/2$. 于是 $\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|<\varepsilon$, 且 $g$ 在有界集外为零. $\blacksquare$
+连续函数部分. 设 $\varphi'=\sum_{j}a_{j}\chi_{R_{j}}$ 已由上一步得到, 其中每个 $R_{j}$ 是有界闭矩形. 由特征函数的连续逼近, 对每个 $R_{j}$ 存在具有紧支撑的连续函数 $g_{j}$ 使 $\int\left|\chi_{R_{j}}-g_{j}\right|\mathrm{d}m$ 任意小. 取逼近误差足够小并令 $g=\sum_{j}a_{j}g_{j}$, 则 $g$ 连续且支撑在 $\bigcup_{j}R_{j}$ 中 (有界集), 且 $\int\left|\varphi'-g\right|\le\sum_{j}\left|a_{j}\right|\int\left|\chi_{R_{j}}-g_{j}\right|<\varepsilon/2$. 于是 $\int\left|f-g\right|\le\int\left|f-\varphi'\right|+\int\left|\varphi'-g\right|<\varepsilon$, 且 $g$ 在有界集外为零.
+
+$\blacksquare$
 
 ## 4
 
@@ -154,7 +160,9 @@ $$
 m\left(T\left(E\right)\right)=\int\chi_{T\left(E\right)}\left(x\right)\mathrm{d}x=\left|\det{T}\right|\int\chi_{T\left(E\right)}\circ{T}\left(x\right)\mathrm{d}x=\left|\det{T}\right|\int\chi_{E}\left(x\right)\mathrm{d}x=\left|\det{T}\right|m\left(E\right).
 $$
 
-$T\left(E\right)\in\mathcal{L}^{n}$ 已由可测性保证. $\blacksquare$
+$T\left(E\right)\in\mathcal{L}^{n}$ 已由可测性保证.
+
+$\blacksquare$
 
 ## 5
 
@@ -188,4 +196,6 @@ $a>1$ 时, 内层 $\frac{1}{y}\cdot\frac{1-\left(1-y\right)^{1-a}}{1-a}$, 因 $1
 
 先对 $y$ 积分: 固定 $x$, $\int_{0}^{x}\left(x-y\right)^{-3}\mathrm{d}y=\left[-\frac{1}{2}\left(x-y\right)^{-2}\right]_{0}^{x}$, 因 $\lim_{y\to{x}^{-}}\left(x-y\right)^{-2}=\infty$, 故内层积分 $=-\infty$, 于是 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=-\infty$.
 
-结论: $\int_{E}f\,\mathrm{d}m^{2}$ 不存在; $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=+\infty$ 而 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=-\infty$, 两个迭代积分存在但不等且符号相反. 这是富比尼失效的经典反例: 非绝对可积时积分次序不可交换. $\blacksquare$
+结论: $\int_{E}f\,\mathrm{d}m^{2}$ 不存在; $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}x\,\mathrm{d}y=+\infty$ 而 $\int_{0}^{1}\int_{0}^{1}f\,\mathrm{d}y\,\mathrm{d}x=-\infty$, 两个迭代积分存在但不等且符号相反. 这是富比尼失效的经典反例: 非绝对可积时积分次序不可交换.
+
+$\blacksquare$

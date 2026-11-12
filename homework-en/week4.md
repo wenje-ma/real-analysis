@@ -152,7 +152,9 @@ $$
 
 This proves (1).
 
-(2) For $r\ne0$, the dilation $\delta_{r}:t\mapsto{r}t$ maps an h-interval $\left(a,b\right]$ to $\left(ra,rb\right]$ ($r>0$) or $\left(rb,ra\right]$ ($r<0$), still an h-interval, and the length becomes $\left|r\right|\left(b-a\right)$, i.e. $\mu_{0}\left(rI\right)=\left|r\right|\mu_{0}\left(I\right)$. By the same argument as in (1), $m^{*}\left(rA\right)=\left|r\right|m^{*}\left(A\right)$, and $E$ measurable implies $rE$ measurable (using **Definition 6.3.1 (Carathéodory Condition)** and dilation). Hence $m\left(rE\right)=\left|r\right|m\left(E\right)$. When $r=0$, $0\cdot{E}$ is empty or $\left\{0\right\}$, and the measure is $0=\left|0\right|m\left(E\right)$. This proves (2). $\blacksquare$
+(2) For $r\ne0$, the dilation $\delta_{r}:t\mapsto{r}t$ maps an h-interval $\left(a,b\right]$ to $\left(ra,rb\right]$ ($r>0$) or $\left(rb,ra\right]$ ($r<0$), still an h-interval, and the length becomes $\left|r\right|\left(b-a\right)$, i.e. $\mu_{0}\left(rI\right)=\left|r\right|\mu_{0}\left(I\right)$. By the same argument as in (1), $m^{*}\left(rA\right)=\left|r\right|m^{*}\left(A\right)$, and $E$ measurable implies $rE$ measurable (using **Definition 6.3.1 (Carathéodory Condition)** and dilation). Hence $m\left(rE\right)=\left|r\right|m\left(E\right)$. When $r=0$, $0\cdot{E}$ is empty or $\left\{0\right\}$, and the measure is $0=\left|0\right|m\left(E\right)$. This proves (2).
+
+$\blacksquare$
 
 ## 2
 
@@ -172,9 +174,13 @@ Let the Cantor set $C=\bigcap_{n=0}^{\infty}C_{n}$ (**Definition 6.5.1 (Recursiv
 
 By **Theorem 6.5.2 (Ternary Characterization of the Cantor Set)**, $x\in{C}$ iff its ternary expansion $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ satisfies $a_{k}\in\left\{0,2\right\}$.
 
-1. Compactness. By **Definition 6.5.1 (Recursive Construction of the Cantor Set)**, each $C_{n}$ is obtained from $\left[0,1\right]$ by removing finitely many open intervals (those dug out at step $n$), so $C_{n}$ is a finite union of closed intervals and hence closed. $C=\bigcap_{n=0}^{\infty}C_{n}$ is an intersection of closed sets, so $C$ is closed, and $C\subset\left[0,1\right]$ is bounded. By the Heine-Borel theorem, bounded closed sets in $\mathbb{R}$ are compact, so $C$ is compact. $\blacksquare$
+1. Compactness. By **Definition 6.5.1 (Recursive Construction of the Cantor Set)**, each $C_{n}$ is obtained from $\left[0,1\right]$ by removing finitely many open intervals (those dug out at step $n$), so $C_{n}$ is a finite union of closed intervals and hence closed. $C=\bigcap_{n=0}^{\infty}C_{n}$ is an intersection of closed sets, so $C$ is closed, and $C\subset\left[0,1\right]$ is bounded. By the Heine-Borel theorem, bounded closed sets in $\mathbb{R}$ are compact, so $C$ is compact.
 
-2. Completeness. $\mathbb{R}$ is a complete metric space and $C$ is a closed subset of $\mathbb{R}$. If $\left\{x_{n}\right\}\subset{C}$ is a Cauchy sequence, it converges in $\mathbb{R}$ to some $x$; since $C$ is closed, $x\in{C}$. Thus every Cauchy sequence in $C$ converges, and $C$ is complete. $\blacksquare$
+$\blacksquare$
+
+2. Completeness. $\mathbb{R}$ is a complete metric space and $C$ is a closed subset of $\mathbb{R}$. If $\left\{x_{n}\right\}\subset{C}$ is a Cauchy sequence, it converges in $\mathbb{R}$ to some $x$; since $C$ is closed, $x\in{C}$. Thus every Cauchy sequence in $C$ converges, and $C$ is complete.
+
+$\blacksquare$
 
 3. Total disconnectedness. Suppose $K\subset{C}$ is connected and contains two points $x<{}y$. By **Theorem 6.5.2 (Ternary Characterization of the Cantor Set)**, the ternary expansions of $x,y$ contain no digit $1$. Since $x\ne{y}$, there is a smallest $n$ at which the $n$-th ternary digits of $x,y$ differ; assume without loss that $x$ has digit $0$ and $y$ has digit $2$ at position $n$ (the first $n-1$ digits agree). Then among the open intervals dug out at step $n$ there is one $J=\left(\alpha,\beta\right)$ lying between $x$ and $y$ (i.e. $x<\alpha<\beta<{}y$), and $J\cap{C}=\varnothing$. Hence
 
@@ -182,9 +188,13 @@ $$
 K=\left(K\cap\left(-\infty,\alpha\right]\right)\cup\left(K\cap\left[\beta,\infty\right)\right),
 $$
 
-which are two nonempty, disjoint, relatively open subsets of $K$ (since $K\subset{C}$ and $K\cap{J}=\varnothing$), contradicting the connectedness of $K$. Thus $K$ can only be a singleton. $\blacksquare$
+which are two nonempty, disjoint, relatively open subsets of $K$ (since $K\subset{C}$ and $K\cap{J}=\varnothing$), contradicting the connectedness of $K$. Thus $K$ can only be a singleton.
 
-4. Nowhere dense. Take any nonempty open interval $\left(\alpha,\beta\right)\subset\mathbb{R}$. If it intersects $\left[0,1\right]$, choose $n$ so that $3^{-n}<\beta-\alpha$. After step $n$, $C_{n}$ is a union of $2^{n}$ closed intervals of length $3^{-n}$, and the $2^{n}-1$ open intervals between them (dug out at step $n$) cover the part of $\left[0,1\right]$ excluding endpoints, each of length $3^{-n}$. Since $\left(\alpha,\beta\right)$ has length greater than $3^{-n}$, it must contain one of the open intervals dug out at step $n$, so $\left(\alpha,\beta\right)$ is not entirely contained in $C$. Thus $C$ contains no nonempty open interval, $\operatorname{int}\left(C\right)=\varnothing$, i.e. $C$ is nowhere dense. $\blacksquare$
+$\blacksquare$
+
+4. Nowhere dense. Take any nonempty open interval $\left(\alpha,\beta\right)\subset\mathbb{R}$. If it intersects $\left[0,1\right]$, choose $n$ so that $3^{-n}<\beta-\alpha$. After step $n$, $C_{n}$ is a union of $2^{n}$ closed intervals of length $3^{-n}$, and the $2^{n}-1$ open intervals between them (dug out at step $n$) cover the part of $\left[0,1\right]$ excluding endpoints, each of length $3^{-n}$. Since $\left(\alpha,\beta\right)$ has length greater than $3^{-n}$, it must contain one of the open intervals dug out at step $n$, so $\left(\alpha,\beta\right)$ is not entirely contained in $C$. Thus $C$ contains no nonempty open interval, $\operatorname{int}\left(C\right)=\varnothing$, i.e. $C$ is nowhere dense.
+
+$\blacksquare$
 
 5. Perfect set. Closedness was proved in (1). To show $C$ has no isolated points: let $x\in{C}$ and $\varepsilon>0$. By **Theorem 6.5.2 (Ternary Characterization of the Cantor Set)**, write $x=\sum_{k=1}^{\infty}\frac{a_{k}}{3^{k}}$ with $a_{k}\in\left\{0,2\right\}$. Choose $n$ so that $\frac{2}{3^{n+1}}<\varepsilon$, and let $x_{n}$ be the point obtained by replacing the $\left(n+1\right)$-th digit $a_{n+1}$ of $x$ by $2-a_{n+1}$, leaving all other digits unchanged. Then $x_{n}\in{C}$ (ternary expansion contains no $1$), $x_{n}\ne{x}$, and
 
@@ -192,7 +202,9 @@ $$
 \left|x_{n}-x\right|=\left|\frac{2-a_{n+1}}{3^{n+1}}-\frac{a_{n+1}}{3^{n+1}}\right|=\frac{2}{3^{n+1}}<\varepsilon.
 $$
 
-Thus the $\varepsilon$-neighborhood of $x$ contains a point of $C$ different from $x$, so $x$ is not isolated. Hence $C$ is a perfect set. $\blacksquare$
+Thus the $\varepsilon$-neighborhood of $x$ contains a point of $C$ different from $x$, so $x$ is not isolated. Hence $C$ is a perfect set.
+
+$\blacksquare$
 
 ## 3
 
@@ -216,7 +228,9 @@ $$
 m\left(E\right)=m\left(E\cap{U}_{n}\right)\le\alpha{m}\left(U_{n}\right)\to\alpha{m}\left(E\right).
 $$
 
-Thus $m\left(E\right)\le\alpha{m}\left(E\right)$. Since $m\left(E\right)>0$, $\alpha\ge1$, contradicting $\alpha<1$. Hence there exists an open interval $I$ such that $m\left(E\cap{I}\right)>\alpha{m}\left(I\right)$. $\blacksquare$
+Thus $m\left(E\right)\le\alpha{m}\left(E\right)$. Since $m\left(E\right)>0$, $\alpha\ge1$, contradicting $\alpha<1$. Hence there exists an open interval $I$ such that $m\left(E\cap{I}\right)>\alpha{m}\left(I\right)$.
+
+$\blacksquare$
 
 33. Use a positive-measure generalized Cantor set (Generalized Cantor Set). Let $\left\{I_{n}\right\}$ be an enumeration of all open intervals in $\left[0,1\right]$ with rational endpoints. Inductively choose pairwise disjoint closed intervals $J_{n}\subset{I}_{n}$ (choosing $J_{n}$ to avoid all previous $J_{k}$) so that every subinterval $I$ contains some $J_{n}$ (since $\left\{I_{n}\right\}$ enumerates rational intervals, every subinterval contains some $I_{n}$, and $J_{n}\subset{I}_{n}$). Fix $c\in\left(0,1\right)$. Inside each $J_{n}$, take a generalized Cantor set $C_{n}\subset{J}_{n}$ with $m\left(C_{n}\right)=c\,m\left(J_{n}\right)$ (by the fact that a generalized Cantor set can have measure any $\beta\in\left(0,1\right)$). Since the $J_{n}$ are pairwise disjoint, the $C_{n}$ are pairwise disjoint. Let $A=\bigcup_{n=1}^{\infty}C_{n}$; then $A$ is a countable union of closed sets, hence a Borel set, and $A\subset\left[0,1\right]$.
 
@@ -232,7 +246,9 @@ $$
 m\left(A\cap{I}\right)=m\left(\bigcup_{n}C_{n}\cap{I}\right)=\sum_{n}m\left(C_{n}\cap{I}\right)=\sum_{J_{n}\subset{I}}m\left(C_{n}\right)=c\sum_{J_{n}\subset{I}}m\left(J_{n}\right)=c\,m\left(\bigcup_{J_{n}\subset{I}}J_{n}\right)\le{c}\,m\left(I\right)<{}m\left(I\right),
 $$
 
-where $m\left(C_{n}\cap{I}\right)=m\left(C_{n}\right)$ is nonzero only when $J_{n}\cap{I}$ has positive measure (i.e. $J_{n}\subset{I}$, up to endpoints). Thus for every subinterval $I$ of $\left[0,1\right]$, $0<{}m\left(A\cap{I}\right)<{}m\left(I\right)$. $\blacksquare$
+where $m\left(C_{n}\cap{I}\right)=m\left(C_{n}\right)$ is nonzero only when $J_{n}\cap{I}$ has positive measure (i.e. $J_{n}\subset{I}$, up to endpoints). Thus for every subinterval $I$ of $\left[0,1\right]$, $0<{}m\left(A\cap{I}\right)<{}m\left(I\right)$.
+
+$\blacksquare$
 
 ## 4
 
@@ -252,7 +268,9 @@ $$
 \left\{x:\lim_{n\to\infty}f_{n}\left(x\right)\text{~exists}\right\}=\bigcap_{k=1}^{\infty}\bigcup_{N=1}^{\infty}\bigcap_{m,n\ge{N}}E_{k,m,n}.
 $$
 
-Since $\mathcal{M}$ is closed under countable intersections and countable unions (**Definition 4.1.3 ($\sigma$-Algebra)**), and $\bigcap_{m,n\ge{N}}E_{k,m,n}$ is a countable intersection, the above set is measurable. $\blacksquare$
+Since $\mathcal{M}$ is closed under countable intersections and countable unions (**Definition 4.1.3 ($\sigma$-Algebra)**), and $\bigcap_{m,n\ge{N}}E_{k,m,n}$ is a countable intersection, the above set is measurable.
+
+$\blacksquare$
 
 ## 5
 
@@ -266,7 +284,9 @@ $$
 \sup_{a\in{A}}f_{a}\left(x\right)=\begin{cases}1,&x\in{A},\\0,&x\notin{A},\end{cases}
 $$
 
-i.e. $\sup_{a\in{A}}f_{a}=\chi_{A}$. By **Example 7.3.5 (Indicator Function)**, $\chi_{A}$ is measurable iff $A\in\mathcal{L}$, contradicting the non-measurability of $A$. Thus the supremum of uncountably many measurable real-valued functions need not be measurable. $\blacksquare$
+i.e. $\sup_{a\in{A}}f_{a}=\chi_{A}$. By **Example 7.3.5 (Indicator Function)**, $\chi_{A}$ is measurable iff $A\in\mathcal{L}$, contradicting the non-measurability of $A$. Thus the supremum of uncountably many measurable real-valued functions need not be measurable.
+
+$\blacksquare$
 
 ## 6
 
@@ -298,4 +318,6 @@ Next prove $f_{n}\to{f}$ pointwise. Fix $\left(x,y\right)\in\mathbb{R}\times\mat
 
 By **Theorem 7.1.8 (Closure of Real-Valued Measurable Functions Under Operations)** (4) (pointwise limits are measurable), $f=\lim_{n}f_{n}$ is Borel measurable on $\mathbb{R}\times\mathbb{R}^{k}$.
 
-Finally, prove by induction that functions on $\mathbb{R}^{n}$ continuous in each variable separately are Borel measurable. For $n=1$, continuous functions pull open sets back to open sets, so by **Definition 4.3.2 (Borel $\sigma$-Algebra)** and **Definition 7.1.1 (Measurable Map)** they are measurable (also **Theorem 7.1.9 (Composition of Measurable and Continuous Functions)**). Assume the case $n-1$. For a function $f$ on $\mathbb{R}^{n}=\mathbb{R}\times\mathbb{R}^{n-1}$ continuous in each variable separately, for each $x$, $f\left(x,\cdot\right)$ is a function on $\mathbb{R}^{n-1}$ continuous in each variable separately, hence Borel measurable by the induction hypothesis; for each $y$, $f\left(\cdot,y\right)$ is continuous. By the result proved above, $f$ is Borel measurable on $\mathbb{R}\times\mathbb{R}^{n-1}$, i.e. on $\mathbb{R}^{n}$. $\blacksquare$
+Finally, prove by induction that functions on $\mathbb{R}^{n}$ continuous in each variable separately are Borel measurable. For $n=1$, continuous functions pull open sets back to open sets, so by **Definition 4.3.2 (Borel $\sigma$-Algebra)** and **Definition 7.1.1 (Measurable Map)** they are measurable (also **Theorem 7.1.9 (Composition of Measurable and Continuous Functions)**). Assume the case $n-1$. For a function $f$ on $\mathbb{R}^{n}=\mathbb{R}\times\mathbb{R}^{n-1}$ continuous in each variable separately, for each $x$, $f\left(x,\cdot\right)$ is a function on $\mathbb{R}^{n-1}$ continuous in each variable separately, hence Borel measurable by the induction hypothesis; for each $y$, $f\left(\cdot,y\right)$ is continuous. By the result proved above, $f$ is Borel measurable on $\mathbb{R}\times\mathbb{R}^{n-1}$, i.e. on $\mathbb{R}^{n}$.
+
+$\blacksquare$
