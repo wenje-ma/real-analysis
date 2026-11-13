@@ -6,7 +6,7 @@
 
 > **Definition 11.1.1 (Signed Measure)**
 > 
-> Let $\left(X,\mathcal{F}\right)$ be a measurable space. A function $\nu:\mathcal{F}\to\mathbb{R}\cup\left\{+\infty\right\}$ or $\mathbb{R}\cup\left\{-\infty\right\}$ is called a signed measure if: (1) $\nu\left(\varnothing\right)=0$; (2) countable additivity: for every sequence of pairwise-disjoint measurable sets $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal{F}$, $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$; (3) $\nu$ cannot take both $+\infty$ and $-\infty$.
+> Let $\left(X,\mathcal{F}\right)$ be a measurable space. A function $\nu:\mathcal{F}\to\mathbb{R}\cup\left\{+\infty\right\}$ or $\mathbb{R}\cup\left\{-\infty\right\}$ is called a signed measure if: (1) $\nu\left(\emptyset\right)=0$; (2) countable additivity: for every sequence of pairwise-disjoint measurable sets $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal{F}$, $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$; (3) $\nu$ cannot take both $+\infty$ and $-\infty$.
 
 > **Proposition 11.1.2 (Basic Properties of Signed Measures)**
 > 
@@ -26,7 +26,7 @@
 
 > **Theorem 11.3.2 (Hahn Decomposition Theorem)**
 > 
-> Let $\nu$ be a signed measure on $\left(X,\mathcal{F}\right)$. Then there is a decomposition $X=P\cup{N}$, where $P$ is positive, $N$ is negative, and $P\cap{N}=\varnothing$; and this decomposition is unique up to a $\nu$-null set.
+> Let $\nu$ be a signed measure on $\left(X,\mathcal{F}\right)$. Then there is a decomposition $X=P\cup{N}$, where $P$ is positive, $N$ is negative, and $P\cap{N}=\emptyset$; and this decomposition is unique up to a $\nu$-null set.
 
 > **Definition 11.4.1 (Mutually Singular Signed Measures)**
 > 
@@ -179,7 +179,7 @@ Condition (2) of regularity for $\lambda$. First note that for any $E\in\mathcal
 
 For any open $U\supset{E}$, $U\cap{A}\supset{E}\cap{A}$, so $\lambda\left(U\right)=\nu\left(U\cap{A}\right)\ge\nu\left(E\cap{A}\right)=\lambda\left(E\right)$, hence $\inf\left\{\lambda\left(U\right):U\text{~open},U\supset{E}\right\}\ge\lambda\left(E\right)$.
 
-For the reverse inequality, given $\varepsilon>0$, since $\nu$ is regular, there is an open set $W\supset{E}\cap{A}$ with $\nu\left(W\cap{A}\right)<\nu\left(E\cap{A}\right)+\varepsilon=\lambda\left(E\right)+\varepsilon$ (use outer regularity of $\nu$ to choose open $W'\supset{E}\cap{A}$ with $\nu\left(W'\right)<\nu\left(E\cap{A}\right)+\varepsilon$, set $W=W'$, and note $\nu\left(W'\cap{A}\right)\le\nu\left(W'\right)$). Also, since $\left(E\cap{A}^{c}\right)\cap{A}=\varnothing$ and $\lambda\left(E\cap{A}^{c}\right)=0$, choose a thin enough open neighborhood $V\supset{E}\cap{A}^{c}$ with $\nu\left(V\cap{A}\right)<\varepsilon$ (e.g. take $V=\left\{x:\mathrm{dist}\left(x,E\cap{A}^{c}\right)<\delta\right\}$ and let $\delta\to0$; then $V\cap{A}\downarrow\left(E\cap{A}^{c}\right)\cap{A}=\varnothing$, and upper continuity gives $\nu\left(V\cap{A}\right)\to0$). Set $U=W\cup{V}$; then $U$ is open, $U\supset{E}$, and $\lambda\left(U\right)=\nu\left(U\cap{A}\right)\le\nu\left(W\cap{A}\right)+\nu\left(V\cap{A}\right)<\lambda\left(E\right)+2\varepsilon$. Hence $\inf\left\{\lambda\left(U\right):U\text{~open},U\supset{E}\right\}\le\lambda\left(E\right)$. Combining, $\lambda\left(E\right)=\inf\left\{\lambda\left(U\right):U\text{~open},U\supset{E}\right\}$.
+For the reverse inequality, given $\varepsilon>0$, since $\nu$ is regular, there is an open set $W\supset{E}\cap{A}$ with $\nu\left(W\cap{A}\right)<\nu\left(E\cap{A}\right)+\varepsilon=\lambda\left(E\right)+\varepsilon$ (use outer regularity of $\nu$ to choose open $W'\supset{E}\cap{A}$ with $\nu\left(W'\right)<\nu\left(E\cap{A}\right)+\varepsilon$, set $W=W'$, and note $\nu\left(W'\cap{A}\right)\le\nu\left(W'\right)$). Also, since $\left(E\cap{A}^{c}\right)\cap{A}=\emptyset$ and $\lambda\left(E\cap{A}^{c}\right)=0$, choose a thin enough open neighborhood $V\supset{E}\cap{A}^{c}$ with $\nu\left(V\cap{A}\right)<\varepsilon$ (e.g. take $V=\left\{x:\mathrm{dist}\left(x,E\cap{A}^{c}\right)<\delta\right\}$ and let $\delta\to0$; then $V\cap{A}\downarrow\left(E\cap{A}^{c}\right)\cap{A}=\emptyset$, and upper continuity gives $\nu\left(V\cap{A}\right)\to0$). Set $U=W\cup{V}$; then $U$ is open, $U\supset{E}$, and $\lambda\left(U\right)=\nu\left(U\cap{A}\right)\le\nu\left(W\cap{A}\right)+\nu\left(V\cap{A}\right)<\lambda\left(E\right)+2\varepsilon$. Hence $\inf\left\{\lambda\left(U\right):U\text{~open},U\supset{E}\right\}\le\lambda\left(E\right)$. Combining, $\lambda\left(E\right)=\inf\left\{\lambda\left(U\right):U\text{~open},U\supset{E}\right\}$.
 
 Condition (2) of regularity for $\mu$. Using $\mu\left(E\right)=\nu\left(E\cap{A}^{c}\right)$ and the regularity of $\nu|_{A^{c}}$, the argument is entirely symmetric, and $\mu$ also satisfies condition (2).
 

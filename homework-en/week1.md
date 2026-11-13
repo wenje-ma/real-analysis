@@ -273,7 +273,7 @@ By **Definition 4.1.3 ($\sigma$-Algebra)**, $\mathscr{C}$ is a $\sigma$-algebra.
 $\mathscr{C}$ contains all measurable rectangles. Let $A\in\mathcal{F}$, $B\in\mathcal{G}$. Then
 
 $$
-\left(A\times{B}\right)_{x}=\begin{cases}B,&x\in{A},\\\varnothing,&x\notin{A}.\end{cases}
+\left(A\times{B}\right)_{x}=\begin{cases}B,&x\in{A},\\\emptyset,&x\notin{A}.\end{cases}
 $$
 
 Both cases lie in $\mathcal{G}$, so $A\times{B}\in\mathscr{C}$.

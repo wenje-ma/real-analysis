@@ -46,11 +46,11 @@
 
 > **Definition 6.1.1 (Outer Measure)**
 > 
-> Let $X$ be nonempty. A function $\mu^{*}:\mathcal{P}\left(X\right)\to\left[0,+\infty\right]$ is called an outer measure on $X$ if: (1) nonnegativity: $\mu^{*}\left(\varnothing\right)=0$ and $\mu^{*}\left(E\right)\ge0$ for all $E\subset{X}$; (2) monotonicity: $E\subset{F}\Rightarrow\mu^{*}\left(E\right)\le\mu^{*}\left(F\right)$; (3) countable subadditivity: $\mu^{*}\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu^{*}\left(E_{n}\right)$.
+> Let $X$ be nonempty. A function $\mu^{*}:\mathcal{P}\left(X\right)\to\left[0,+\infty\right]$ is called an outer measure on $X$ if: (1) nonnegativity: $\mu^{*}\left(\emptyset\right)=0$ and $\mu^{*}\left(E\right)\ge0$ for all $E\subset{X}$; (2) monotonicity: $E\subset{F}\Rightarrow\mu^{*}\left(E\right)\le\mu^{*}\left(F\right)$; (3) countable subadditivity: $\mu^{*}\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu^{*}\left(E_{n}\right)$.
 
 > **Definition 6.2.1 (Premeasure)**
 > 
-> Let $X$ be nonempty and $\mathcal{E}\subset\mathcal{P}\left(X\right)$ an algebra. A function $\mu_{0}:\mathcal{E}\to\left[0,+\infty\right]$ is called a premeasure if: (1) $\mu_{0}\left(\varnothing\right)=0$; (2) if $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal{E}$ are pairwise disjoint and $\bigcup_{n=1}^{\infty}E_{n}\in\mathcal{E}$, then $\mu_{0}\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right)$.
+> Let $X$ be nonempty and $\mathcal{E}\subset\mathcal{P}\left(X\right)$ an algebra. A function $\mu_{0}:\mathcal{E}\to\left[0,+\infty\right]$ is called a premeasure if: (1) $\mu_{0}\left(\emptyset\right)=0$; (2) if $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal{E}$ are pairwise disjoint and $\bigcup_{n=1}^{\infty}E_{n}\in\mathcal{E}$, then $\mu_{0}\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right)$.
 
 > **Theorem 6.2.2 (Outer Measure from a Premeasure)**
 > 
@@ -70,11 +70,11 @@
 
 > **Definition 6.4.1 (h-Interval)**
 > 
-> Let $-\infty\le{a}<{}b<\infty$. All half-open intervals $\left(a,b\right]$, together with $\left(a,\infty\right)$ and $\varnothing$, are called h-intervals. The family of finite disjoint unions of h-intervals forms an algebra $\mathcal{E}$.
+> Let $-\infty\le{a}<{}b<\infty$. All half-open intervals $\left(a,b\right]$, together with $\left(a,\infty\right)$ and $\emptyset$, are called h-intervals. The family of finite disjoint unions of h-intervals forms an algebra $\mathcal{E}$.
 
 > **Proposition 6.4.2 (Premeasure on $\mathcal{E}$)**
 > 
-> Let $F:\mathbb{R}\to\mathbb{R}$ be increasing and right-continuous. For disjoint intervals $\left(a_{i},b_{i}\right]$, $i=1,\dots,n$, define $\mu_{0}\left(\bigcup_{i=1}^{n}\left(a_{i},b_{i}\right]\right):=\sum_{i=1}^{n}\left[F\left(b_{i}\right)-F\left(a_{i}\right)\right]$, and set $\mu_{0}\left(\varnothing\right)=0$. Then $\mu_{0}$ is a premeasure on $\mathcal{E}$.
+> Let $F:\mathbb{R}\to\mathbb{R}$ be increasing and right-continuous. For disjoint intervals $\left(a_{i},b_{i}\right]$, $i=1,\dots,n$, define $\mu_{0}\left(\bigcup_{i=1}^{n}\left(a_{i},b_{i}\right]\right):=\sum_{i=1}^{n}\left[F\left(b_{i}\right)-F\left(a_{i}\right)\right]$, and set $\mu_{0}\left(\emptyset\right)=0$. Then $\mu_{0}$ is a premeasure on $\mathcal{E}$.
 
 > **Theorem 6.4.5 (Regularity of Lebesgue-Stieltjes Measure)**
 > 
@@ -182,17 +182,17 @@ $\blacksquare$
 
 $\blacksquare$
 
-3. Total disconnectedness. Suppose $K\subset{C}$ is connected and contains two points $x<{}y$. By **Theorem 6.5.2 (Ternary Characterization of the Cantor Set)**, the ternary expansions of $x,y$ contain no digit $1$. Since $x\ne{y}$, there is a smallest $n$ at which the $n$-th ternary digits of $x,y$ differ; assume without loss that $x$ has digit $0$ and $y$ has digit $2$ at position $n$ (the first $n-1$ digits agree). Then among the open intervals dug out at step $n$ there is one $J=\left(\alpha,\beta\right)$ lying between $x$ and $y$ (i.e. $x<\alpha<\beta<{}y$), and $J\cap{C}=\varnothing$. Hence
+3. Total disconnectedness. Suppose $K\subset{C}$ is connected and contains two points $x<{}y$. By **Theorem 6.5.2 (Ternary Characterization of the Cantor Set)**, the ternary expansions of $x,y$ contain no digit $1$. Since $x\ne{y}$, there is a smallest $n$ at which the $n$-th ternary digits of $x,y$ differ; assume without loss that $x$ has digit $0$ and $y$ has digit $2$ at position $n$ (the first $n-1$ digits agree). Then among the open intervals dug out at step $n$ there is one $J=\left(\alpha,\beta\right)$ lying between $x$ and $y$ (i.e. $x<\alpha<\beta<{}y$), and $J\cap{C}=\emptyset$. Hence
 
 $$
 K=\left(K\cap\left(-\infty,\alpha\right]\right)\cup\left(K\cap\left[\beta,\infty\right)\right),
 $$
 
-which are two nonempty, disjoint, relatively open subsets of $K$ (since $K\subset{C}$ and $K\cap{J}=\varnothing$), contradicting the connectedness of $K$. Thus $K$ can only be a singleton.
+which are two nonempty, disjoint, relatively open subsets of $K$ (since $K\subset{C}$ and $K\cap{J}=\emptyset$), contradicting the connectedness of $K$. Thus $K$ can only be a singleton.
 
 $\blacksquare$
 
-4. Nowhere dense. Take any nonempty open interval $\left(\alpha,\beta\right)\subset\mathbb{R}$. If it intersects $\left[0,1\right]$, choose $n$ so that $3^{-n}<\beta-\alpha$. After step $n$, $C_{n}$ is a union of $2^{n}$ closed intervals of length $3^{-n}$, and the $2^{n}-1$ open intervals between them (dug out at step $n$) cover the part of $\left[0,1\right]$ excluding endpoints, each of length $3^{-n}$. Since $\left(\alpha,\beta\right)$ has length greater than $3^{-n}$, it must contain one of the open intervals dug out at step $n$, so $\left(\alpha,\beta\right)$ is not entirely contained in $C$. Thus $C$ contains no nonempty open interval, $\operatorname{int}\left(C\right)=\varnothing$, i.e. $C$ is nowhere dense.
+4. Nowhere dense. Take any nonempty open interval $\left(\alpha,\beta\right)\subset\mathbb{R}$. If it intersects $\left[0,1\right]$, choose $n$ so that $3^{-n}<\beta-\alpha$. After step $n$, $C_{n}$ is a union of $2^{n}$ closed intervals of length $3^{-n}$, and the $2^{n}-1$ open intervals between them (dug out at step $n$) cover the part of $\left[0,1\right]$ excluding endpoints, each of length $3^{-n}$. Since $\left(\alpha,\beta\right)$ has length greater than $3^{-n}$, it must contain one of the open intervals dug out at step $n$, so $\left(\alpha,\beta\right)$ is not entirely contained in $C$. Thus $C$ contains no nonempty open interval, $\operatorname{int}\left(C\right)=\emptyset$, i.e. $C$ is nowhere dense.
 
 $\blacksquare$
 

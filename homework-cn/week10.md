@@ -11,7 +11,7 @@ $$
 
 > **定义 11.1.1 (符号测度)**
 > 
-> 设 $\left(X,\mathcal{F}\right)$ 是一个可测空间. 函数 $\nu:\mathcal{F}\to\mathbb{R}\cup\left\{+\infty\right\}$ 或 $\mathbb{R}\cup\left\{-\infty\right\}$ 称为符号测度, 若满足: (1) $\nu\left(\varnothing\right)=0$; (2) 可列可加性: 对任意一列互不相交的可测集 $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal{F}$, 有 $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$; (3) $\nu$ 不能同时取 $+\infty$ 与 $-\infty$ 为值.
+> 设 $\left(X,\mathcal{F}\right)$ 是一个可测空间. 函数 $\nu:\mathcal{F}\to\mathbb{R}\cup\left\{+\infty\right\}$ 或 $\mathbb{R}\cup\left\{-\infty\right\}$ 称为符号测度, 若满足: (1) $\nu\left(\emptyset\right)=0$; (2) 可列可加性: 对任意一列互不相交的可测集 $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal{F}$, 有 $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$; (3) $\nu$ 不能同时取 $+\infty$ 与 $-\infty$ 为值.
 
 > **命题 11.1.2 (符号测度的基本性质)**
 > 
@@ -31,7 +31,7 @@ $$
 
 > **定理 11.3.2 (哈恩分解定理)**
 > 
-> 设 $\nu$ 是 $\left(X,\mathcal{F}\right)$ 上的符号测度, 则存在 $X$ 的分解 $X=P\cup{N}$, 其中 $P$ 是正集, $N$ 是负集, $P\cap{N}=\varnothing$; 并且该分解在相差一个 $\nu$-零集的意义下是唯一的.
+> 设 $\nu$ 是 $\left(X,\mathcal{F}\right)$ 上的符号测度, 则存在 $X$ 的分解 $X=P\cup{N}$, 其中 $P$ 是正集, $N$ 是负集, $P\cap{N}=\emptyset$; 并且该分解在相差一个 $\nu$-零集的意义下是唯一的.
 
 > **定义 11.4.1 (相互奇异的符号测度)**
 > 
@@ -69,7 +69,7 @@ $$
 
 由 $\beta$ 的定义, 取正集列 $\left\{P_{n}\right\}\subset{E}$ 使 $\nu\left(P_{n}\right)\to\beta$. 令 $G=\bigcup_{n=1}^{\infty}P_{n}\subset{E}$, 则 $G$ 是正集 (**引理 11.2.2 (正集的性质)** (2)). 令 $Q_{n}=\bigcup_{k=1}^{n}P_{k}$, 则 $\left\{Q_{n}\right\}$ 是正集列的上升并, 仍为正集, 且 $\nu\left(Q_{n}\right)\ge\nu\left(P_{n}\right)\to\beta$; 又 $Q_{n}\subset{E}$ 为正集, 故 $\nu\left(Q_{n}\right)\le\beta$. 于是 $\nu\left(Q_{n}\right)\to\beta$, 由**命题 11.1.2 (符号测度的基本性质)** (2) (下连续性), $\nu\left(G\right)=\lim_{n\to\infty}\nu\left(Q_{n}\right)=\beta=\alpha>0$.
 
-最后证 $E\setminus{G}$ 是负集. 反设 $E\setminus{G}$ 不是负集, 由**引理 11.2.4 (非负集的判定)** 存在正集 $F\subset{E}\setminus{G}$ 使 $\nu\left(F\right)>0$. 因 $G\cap{F}=\varnothing$, $G\cup{F}\subset{E}$ 且 $G\cup{F}$ 是正集 (**引理 11.2.2 (正集的性质)** (2)), 于是 $\nu\left(G\cup{F}\right)=\nu\left(G\right)+\nu\left(F\right)=\alpha+\nu\left(F\right)>\alpha=\beta$, 与 $\beta$ 是 $E$ 中全体正集测度的上确界矛盾. 故 $E\setminus{G}$ 是负集.
+最后证 $E\setminus{G}$ 是负集. 反设 $E\setminus{G}$ 不是负集, 由**引理 11.2.4 (非负集的判定)** 存在正集 $F\subset{E}\setminus{G}$ 使 $\nu\left(F\right)>0$. 因 $G\cap{F}=\emptyset$, $G\cup{F}\subset{E}$ 且 $G\cup{F}$ 是正集 (**引理 11.2.2 (正集的性质)** (2)), 于是 $\nu\left(G\cup{F}\right)=\nu\left(G\right)+\nu\left(F\right)=\alpha+\nu\left(F\right)>\alpha=\beta$, 与 $\beta$ 是 $E$ 中全体正集测度的上确界矛盾. 故 $E\setminus{G}$ 是负集.
 
 $\blacksquare$
 
@@ -113,7 +113,7 @@ $\blacksquare$
 
 $f$ 是实值可测函数, 至少一个 $\int{f}^{+}\mathrm{d}\mu$, $\int{f}^{-}\mathrm{d}\mu$ 有限. 由**定义 11.2.1 (正集,负集,零集)**: 对 $E\in\mathcal{M}$, $E$ 是 $\nu$-正集当且仅当对任意可测 $F\subset{E}$, $\nu\left(F\right)=\int_{F}f\,\mathrm{d}\mu\ge0$; 因这对 $F=E\cap\left\{f<0\right\}$ 与 $F=E\cap\left\{f>0\right\}$ 均须成立, 故 $E$ 是正集当且仅当 $f\ge0$ $\mu$-几乎处处于 $E$ 上. 同理, $E$ 是负集当且仅当 $f\le0$ $\mu$-几乎处处于 $E$ 上; $E$ 是零集当且仅当 $f=0$ $\mu$-几乎处处于 $E$ 上.
 
-因此 $X=P\cup{N}$, 其中 $P=\left\{x:f\left(x\right)\ge0\right\}$, $N=\left\{x:f\left(x\right)<0\right\}$, 是 $\nu$ 的一个哈恩分解 (**定理 11.3.2 (哈恩分解定理)**): $P$ 是正集, $N$ 是负集, $P\cap{N}=\varnothing$, $P\cup{N}=X$. (零测集 $\left\{f=0\right\}$ 可并入 $P$ 或 $N$ 而不改变分解的本质.)
+因此 $X=P\cup{N}$, 其中 $P=\left\{x:f\left(x\right)\ge0\right\}$, $N=\left\{x:f\left(x\right)<0\right\}$, 是 $\nu$ 的一个哈恩分解 (**定理 11.3.2 (哈恩分解定理)**): $P$ 是正集, $N$ 是负集, $P\cap{N}=\emptyset$, $P\cup{N}=X$. (零测集 $\left\{f=0\right\}$ 可并入 $P$ 或 $N$ 而不改变分解的本质.)
 
 由**定理 11.4.3 (若尔当分解定理)**, $\nu^{+}\left(E\right)=\nu\left(E\cap{P}\right)=\int_{E\cap{P}}f\,\mathrm{d}\mu=\int_{E}f^{+}\mathrm{d}\mu$ (因 $f\ge0$ 于 $P$ 上), $\nu^{-}\left(E\right)=-\nu\left(E\cap{N}\right)=-\int_{E\cap{N}}f\,\mathrm{d}\mu=\int_{E}f^{-}\mathrm{d}\mu$ (因 $f\le0$ 于 $N$ 上). 故 $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$.
 

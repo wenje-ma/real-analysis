@@ -46,7 +46,7 @@
 
 > **定义 6.1.1 (外测度)**
 > 
-> 设 $X$ 非空. 函数 $\mu^{*}:\mathcal{P}\left(X\right)\to\left[0,+\infty\right]$ 称为 $X$ 上的一个外测度, 若满足: (1) 非负性: $\mu^{*}\left(\varnothing\right)=0$, 且 $\mu^{*}\left(E\right)\ge0$ 对一切 $E\subset{X}$; (2) 单调性: $E\subset{F}\Rightarrow\mu^{*}\left(E\right)\le\mu^{*}\left(F\right)$; (3) 次可数可加性: $\mu^{*}\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu^{*}\left(E_{n}\right)$.
+> 设 $X$ 非空. 函数 $\mu^{*}:\mathcal{P}\left(X\right)\to\left[0,+\infty\right]$ 称为 $X$ 上的一个外测度, 若满足: (1) 非负性: $\mu^{*}\left(\emptyset\right)=0$, 且 $\mu^{*}\left(E\right)\ge0$ 对一切 $E\subset{X}$; (2) 单调性: $E\subset{F}\Rightarrow\mu^{*}\left(E\right)\le\mu^{*}\left(F\right)$; (3) 次可数可加性: $\mu^{*}\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu^{*}\left(E_{n}\right)$.
 
 > **定义 6.2.1 (准测度)**
 > 
@@ -70,11 +70,11 @@
 
 > **定义 6.4.1 (h 区间)**
 > 
-> 令 $-\infty\le{a}<{}b<\infty$, 所有左开右闭区间 $\left(a,b\right]$, 以及 $\left(a,\infty\right)$, $\varnothing$ 称为 h 区间. h 区间的有限不交并形成的集族 $\mathcal{E}$ 为一个代数.
+> 令 $-\infty\le{a}<{}b<\infty$, 所有左开右闭区间 $\left(a,b\right]$, 以及 $\left(a,\infty\right)$, $\emptyset$ 称为 h 区间. h 区间的有限不交并形成的集族 $\mathcal{E}$ 为一个代数.
 
 > **命题 6.4.2 ($\mathcal{E}$ 上的准测度)**
 > 
-> 设 $F:\mathbb{R}\to\mathbb{R}$ 为增的右连续函数. 对于不交区间 $\left(a_{i},b_{i}\right]$, $i=1,\dots,n$, 定义 $\mu_{0}\left(\bigcup_{i=1}^{n}\left(a_{i},b_{i}\right]\right):=\sum_{i=1}^{n}\left[F\left(b_{i}\right)-F\left(a_{i}\right)\right]$, 并令 $\mu_{0}\left(\varnothing\right)=0$. 则 $\mu_{0}$ 为 $\mathcal{E}$ 上的准测度.
+> 设 $F:\mathbb{R}\to\mathbb{R}$ 为增的右连续函数. 对于不交区间 $\left(a_{i},b_{i}\right]$, $i=1,\dots,n$, 定义 $\mu_{0}\left(\bigcup_{i=1}^{n}\left(a_{i},b_{i}\right]\right):=\sum_{i=1}^{n}\left[F\left(b_{i}\right)-F\left(a_{i}\right)\right]$, 并令 $\mu_{0}\left(\emptyset\right)=0$. 则 $\mu_{0}$ 为 $\mathcal{E}$ 上的准测度.
 
 > **定理 6.4.5 (勒贝格-斯蒂尔杰斯测度的正则性)**
 > 
@@ -182,17 +182,17 @@ $\blacksquare$
 
 $\blacksquare$
 
-3. 完全不连通. 设 $K\subset{C}$ 连通且含有 $x<{}y$ 两点. 由**定理 6.5.2 (康托尔集的三进制刻画)**, $x,y$ 的三进制展开不含数字 $1$. 因 $x\ne{y}$, 存在最小的 $n$ 使 $x,y$ 的三进制第 $n$ 位不同, 不妨设 $x$ 的第 $n$ 位为 $0$, $y$ 的第 $n$ 位为 $2$ (前 $n-1$ 位相同). 则第 $n$ 步挖去的开区间中有一个 $J=\left(\alpha,\beta\right)$ 位于 $x$ 与 $y$ 之间 (即 $x<\alpha<\beta<{}y$), 且 $J\cap{C}=\varnothing$. 于是
+3. 完全不连通. 设 $K\subset{C}$ 连通且含有 $x<{}y$ 两点. 由**定理 6.5.2 (康托尔集的三进制刻画)**, $x,y$ 的三进制展开不含数字 $1$. 因 $x\ne{y}$, 存在最小的 $n$ 使 $x,y$ 的三进制第 $n$ 位不同, 不妨设 $x$ 的第 $n$ 位为 $0$, $y$ 的第 $n$ 位为 $2$ (前 $n-1$ 位相同). 则第 $n$ 步挖去的开区间中有一个 $J=\left(\alpha,\beta\right)$ 位于 $x$ 与 $y$ 之间 (即 $x<\alpha<\beta<{}y$), 且 $J\cap{C}=\emptyset$. 于是
 
 $$
 K=\left(K\cap\left(-\infty,\alpha\right]\right)\cup\left(K\cap\left[\beta,\infty\right)\right),
 $$
 
-是两个非空, 互不相交的 $K$-相对开集 (因 $K\subset{C}$, $K\cap{J}=\varnothing$), 与 $K$ 连通矛盾. 故 $K$ 只能是单点集.
+是两个非空, 互不相交的 $K$-相对开集 (因 $K\subset{C}$, $K\cap{J}=\emptyset$), 与 $K$ 连通矛盾. 故 $K$ 只能是单点集.
 
 $\blacksquare$
 
-4. 无处稠密. 任取非空开区间 $\left(\alpha,\beta\right)\subset\mathbb{R}$. 若它与 $\left[0,1\right]$ 相交, 取 $n$ 使 $3^{-n}<\beta-\alpha$. 第 $n$ 步后 $C_{n}$ 是 $2^{n}$ 个长度 $3^{-n}$ 的闭区间之并, 这些闭区间之间的 $2^{n}-1$ 个开区间 (第 $n$ 步挖去的) 覆盖了 $\left[0,1\right]$ 中除端点外的部分, 且挖去区间的长度均为 $3^{-n}$. 因 $\left(\alpha,\beta\right)$ 长度大于 $3^{-n}$, 它必包含某个第 $n$ 步挖去的开区间, 故 $\left(\alpha,\beta\right)$ 不全含于 $C$. 所以 $C$ 不含任何非空开区间, $\operatorname{int}\left(C\right)=\varnothing$, 即 $C$ 无处稠密.
+4. 无处稠密. 任取非空开区间 $\left(\alpha,\beta\right)\subset\mathbb{R}$. 若它与 $\left[0,1\right]$ 相交, 取 $n$ 使 $3^{-n}<\beta-\alpha$. 第 $n$ 步后 $C_{n}$ 是 $2^{n}$ 个长度 $3^{-n}$ 的闭区间之并, 这些闭区间之间的 $2^{n}-1$ 个开区间 (第 $n$ 步挖去的) 覆盖了 $\left[0,1\right]$ 中除端点外的部分, 且挖去区间的长度均为 $3^{-n}$. 因 $\left(\alpha,\beta\right)$ 长度大于 $3^{-n}$, 它必包含某个第 $n$ 步挖去的开区间, 故 $\left(\alpha,\beta\right)$ 不全含于 $C$. 所以 $C$ 不含任何非空开区间, $\operatorname{int}\left(C\right)=\emptyset$, 即 $C$ 无处稠密.
 
 $\blacksquare$
 

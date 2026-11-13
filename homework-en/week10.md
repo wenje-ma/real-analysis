@@ -11,7 +11,7 @@ with all integral values in $\left[0,\infty\right]$.
 
 > **Definition 11.1.1 (Signed Measure)**
 > 
-> Let $\left(X,\mathcal{F}\right)$ be a measurable space. A function $\nu:\mathcal{F}\to\mathbb{R}\cup\left\{+\infty\right\}$ or $\mathbb{R}\cup\left\{-\infty\right\}$ is called a signed measure if: (1) $\nu\left(\varnothing\right)=0$; (2) countable additivity: for every sequence of pairwise-disjoint measurable sets $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal{F}$, $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$; (3) $\nu$ cannot take both $+\infty$ and $-\infty$.
+> Let $\left(X,\mathcal{F}\right)$ be a measurable space. A function $\nu:\mathcal{F}\to\mathbb{R}\cup\left\{+\infty\right\}$ or $\mathbb{R}\cup\left\{-\infty\right\}$ is called a signed measure if: (1) $\nu\left(\emptyset\right)=0$; (2) countable additivity: for every sequence of pairwise-disjoint measurable sets $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal{F}$, $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$; (3) $\nu$ cannot take both $+\infty$ and $-\infty$.
 
 > **Proposition 11.1.2 (Basic Properties of Signed Measures)**
 > 
@@ -31,7 +31,7 @@ with all integral values in $\left[0,\infty\right]$.
 
 > **Theorem 11.3.2 (Hahn Decomposition Theorem)**
 > 
-> Let $\nu$ be a signed measure on $\left(X,\mathcal{F}\right)$. Then there is a decomposition $X=P\cup{N}$, where $P$ is positive, $N$ is negative, and $P\cap{N}=\varnothing$; and this decomposition is unique up to a $\nu$-null set.
+> Let $\nu$ be a signed measure on $\left(X,\mathcal{F}\right)$. Then there is a decomposition $X=P\cup{N}$, where $P$ is positive, $N$ is negative, and $P\cap{N}=\emptyset$; and this decomposition is unique up to a $\nu$-null set.
 
 > **Definition 11.4.1 (Mutually Singular Signed Measures)**
 > 
@@ -69,7 +69,7 @@ First show $\alpha$ is attained by a positive set. Let $\beta=\sup\left\{\nu\lef
 
 By the definition of $\beta$, take a sequence of positive sets $\left\{P_{n}\right\}\subset{E}$ with $\nu\left(P_{n}\right)\to\beta$. Let $G=\bigcup_{n=1}^{\infty}P_{n}\subset{E}$; then $G$ is positive (**Lemma 11.2.2 (Properties of Positive Sets)** (2)). Set $Q_{n}=\bigcup_{k=1}^{n}P_{k}$; then $\left\{Q_{n}\right\}$ is an increasing union of positive sets, hence positive, and $\nu\left(Q_{n}\right)\ge\nu\left(P_{n}\right)\to\beta$; also $Q_{n}\subset{E}$ is positive, so $\nu\left(Q_{n}\right)\le\beta$. Thus $\nu\left(Q_{n}\right)\to\beta$, and by **Proposition 11.1.2 (Basic Properties of Signed Measures)** (2) (lower continuity), $\nu\left(G\right)=\lim_{n\to\infty}\nu\left(Q_{n}\right)=\beta=\alpha>0$.
 
-Finally show $E\setminus{G}$ is negative. Suppose otherwise; then by **Lemma 11.2.4 (Criterion for a Non-Negative Set)** there is a positive set $F\subset{E}\setminus{G}$ with $\nu\left(F\right)>0$. Since $G\cap{F}=\varnothing$, $G\cup{F}\subset{E}$ and $G\cup{F}$ is positive (**Lemma 11.2.2 (Properties of Positive Sets)** (2)); hence $\nu\left(G\cup{F}\right)=\nu\left(G\right)+\nu\left(F\right)=\alpha+\nu\left(F\right)>\alpha=\beta$, contradicting that $\beta$ is the supremum of the measures of all positive sets in $E$. Thus $E\setminus{G}$ is negative.
+Finally show $E\setminus{G}$ is negative. Suppose otherwise; then by **Lemma 11.2.4 (Criterion for a Non-Negative Set)** there is a positive set $F\subset{E}\setminus{G}$ with $\nu\left(F\right)>0$. Since $G\cap{F}=\emptyset$, $G\cup{F}\subset{E}$ and $G\cup{F}$ is positive (**Lemma 11.2.2 (Properties of Positive Sets)** (2)); hence $\nu\left(G\cup{F}\right)=\nu\left(G\right)+\nu\left(F\right)=\alpha+\nu\left(F\right)>\alpha=\beta$, contradicting that $\beta$ is the supremum of the measures of all positive sets in $E$. Thus $E\setminus{G}$ is negative.
 
 $\blacksquare$
 
@@ -113,7 +113,7 @@ Let $\nu\left(E\right)=\int_{E}f\,\mathrm{d}\mu$, where $\mu$ is a positive meas
 
 $f$ is real-valued measurable, with at least one of $\int{f}^{+}\mathrm{d}\mu$, $\int{f}^{-}\mathrm{d}\mu$ finite. By **Definition 11.2.1 (Positive Set, Negative Set, Null Set)**: for $E\in\mathcal{M}$, $E$ is a $\nu$-positive set iff for every measurable $F\subset{E}$, $\nu\left(F\right)=\int_{F}f\,\mathrm{d}\mu\ge0$; since this must hold for both $F=E\cap\left\{f<0\right\}$ and $F=E\cap\left\{f>0\right\}$, $E$ is positive iff $f\ge0$ $\mu$-a.e. on $E$. Similarly, $E$ is negative iff $f\le0$ $\mu$-a.e. on $E$; $E$ is a null set iff $f=0$ $\mu$-a.e. on $E$.
 
-Thus $X=P\cup{N}$, where $P=\left\{x:f\left(x\right)\ge0\right\}$ and $N=\left\{x:f\left(x\right)<0\right\}$, is a Hahn decomposition of $\nu$ (**Theorem 11.3.2 (Hahn Decomposition Theorem)**): $P$ positive, $N$ negative, $P\cap{N}=\varnothing$, $P\cup{N}=X$. (The null set $\left\{f=0\right\}$ may be merged into $P$ or $N$ without changing the decomposition.)
+Thus $X=P\cup{N}$, where $P=\left\{x:f\left(x\right)\ge0\right\}$ and $N=\left\{x:f\left(x\right)<0\right\}$, is a Hahn decomposition of $\nu$ (**Theorem 11.3.2 (Hahn Decomposition Theorem)**): $P$ positive, $N$ negative, $P\cap{N}=\emptyset$, $P\cup{N}=X$. (The null set $\left\{f=0\right\}$ may be merged into $P$ or $N$ without changing the decomposition.)
 
 By **Theorem 11.4.3 (Jordan Decomposition Theorem)**, $\nu^{+}\left(E\right)=\nu\left(E\cap{P}\right)=\int_{E\cap{P}}f\,\mathrm{d}\mu=\int_{E}f^{+}\mathrm{d}\mu$ (since $f\ge0$ on $P$), and $\nu^{-}\left(E\right)=-\nu\left(E\cap{N}\right)=-\int_{E\cap{N}}f\,\mathrm{d}\mu=\int_{E}f^{-}\mathrm{d}\mu$ (since $f\le0$ on $N$). Hence $\nu^{+}\left(E\right)=\int_{E}f^{+}\mathrm{d}\mu$, $\nu^{-}\left(E\right)=\int_{E}f^{-}\mathrm{d}\mu$, $\left|\nu\right|\left(E\right)=\int_{E}\left|f\right|\mathrm{d}\mu$.
 

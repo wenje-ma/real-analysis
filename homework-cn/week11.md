@@ -6,7 +6,7 @@
 
 > **定义 11.1.1 (符号测度)**
 > 
-> 设 $\left(X,\mathcal{F}\right)$ 是一个可测空间. 函数 $\nu:\mathcal{F}\to\mathbb{R}\cup\left\{+\infty\right\}$ 或 $\mathbb{R}\cup\left\{-\infty\right\}$ 称为符号测度, 若满足: (1) $\nu\left(\varnothing\right)=0$; (2) 可列可加性: 对任意一列互不相交的可测集 $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal{F}$, 有 $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$; (3) $\nu$ 不能同时取 $+\infty$ 与 $-\infty$ 为值.
+> 设 $\left(X,\mathcal{F}\right)$ 是一个可测空间. 函数 $\nu:\mathcal{F}\to\mathbb{R}\cup\left\{+\infty\right\}$ 或 $\mathbb{R}\cup\left\{-\infty\right\}$ 称为符号测度, 若满足: (1) $\nu\left(\emptyset\right)=0$; (2) 可列可加性: 对任意一列互不相交的可测集 $\left\{E_{i}\right\}_{i=1}^{\infty}\subset\mathcal{F}$, 有 $\nu\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\nu\left(E_{i}\right)$; (3) $\nu$ 不能同时取 $+\infty$ 与 $-\infty$ 为值.
 
 > **命题 11.1.2 (符号测度的基本性质)**
 > 
@@ -26,7 +26,7 @@
 
 > **定理 11.3.2 (哈恩分解定理)**
 > 
-> 设 $\nu$ 是 $\left(X,\mathcal{F}\right)$ 上的符号测度, 则存在 $X$ 的分解 $X=P\cup{N}$, 其中 $P$ 是正集, $N$ 是负集, $P\cap{N}=\varnothing$; 并且该分解在相差一个 $\nu$-零集的意义下是唯一的.
+> 设 $\nu$ 是 $\left(X,\mathcal{F}\right)$ 上的符号测度, 则存在 $X$ 的分解 $X=P\cup{N}$, 其中 $P$ 是正集, $N$ 是负集, $P\cap{N}=\emptyset$; 并且该分解在相差一个 $\nu$-零集的意义下是唯一的.
 
 > **定义 11.4.1 (相互奇异的符号测度)**
 > 
@@ -179,7 +179,7 @@ $\blacksquare$
 
 对任意开集 $U\supset{E}$, $U\cap{A}\supset{E}\cap{A}$, 故 $\lambda\left(U\right)=\nu\left(U\cap{A}\right)\ge\nu\left(E\cap{A}\right)=\lambda\left(E\right)$, 于是 $\inf\left\{\lambda\left(U\right):U\text{~开},U\supset{E}\right\}\ge\lambda\left(E\right)$.
 
-反向: 给定 $\varepsilon>0$. 因 $\nu$ 正则, 对 $E\cap{A}$ 存在开集 $W\supset{E}\cap{A}$ 使 $\nu\left(W\cap{A}\right)<\nu\left(E\cap{A}\right)+\varepsilon=\lambda\left(E\right)+\varepsilon$ (用 $\nu$ 的外正则性先取开集 $W'\supset{E}\cap{A}$ 使 $\nu\left(W'\right)<\nu\left(E\cap{A}\right)+\varepsilon$, 再令 $W=W'$ 并注意 $\nu\left(W'\cap{A}\right)\le\nu\left(W'\right)$). 又因 $\left(E\cap{A}^{c}\right)\cap{A}=\varnothing$ 且 $\lambda\left(E\cap{A}^{c}\right)=0$, 可取足够薄的开邻域 $V\supset{E}\cap{A}^{c}$ 使 $\nu\left(V\cap{A}\right)<\varepsilon$ (例如取 $V=\left\{x:\mathrm{dist}\left(x,E\cap{A}^{c}\right)<\delta\right\}$ 并令 $\delta\to0$, 则 $V\cap{A}\downarrow\left(E\cap{A}^{c}\right)\cap{A}=\varnothing$, 由上连续性使 $\nu\left(V\cap{A}\right)\to0$). 令 $U=W\cup{V}$, 则 $U$ 开,$U\supset{E}$, 且 $\lambda\left(U\right)=\nu\left(U\cap{A}\right)\le\nu\left(W\cap{A}\right)+\nu\left(V\cap{A}\right)<\lambda\left(E\right)+2\varepsilon$. 故 $\inf\left\{\lambda\left(U\right):U\text{~开},U\supset{E}\right\}\le\lambda\left(E\right)$. 合并得 $\lambda\left(E\right)=\inf\left\{\lambda\left(U\right):U\text{~开},U\supset{E}\right\}$.
+反向: 给定 $\varepsilon>0$. 因 $\nu$ 正则, 对 $E\cap{A}$ 存在开集 $W\supset{E}\cap{A}$ 使 $\nu\left(W\cap{A}\right)<\nu\left(E\cap{A}\right)+\varepsilon=\lambda\left(E\right)+\varepsilon$ (用 $\nu$ 的外正则性先取开集 $W'\supset{E}\cap{A}$ 使 $\nu\left(W'\right)<\nu\left(E\cap{A}\right)+\varepsilon$, 再令 $W=W'$ 并注意 $\nu\left(W'\cap{A}\right)\le\nu\left(W'\right)$). 又因 $\left(E\cap{A}^{c}\right)\cap{A}=\emptyset$ 且 $\lambda\left(E\cap{A}^{c}\right)=0$, 可取足够薄的开邻域 $V\supset{E}\cap{A}^{c}$ 使 $\nu\left(V\cap{A}\right)<\varepsilon$ (例如取 $V=\left\{x:\mathrm{dist}\left(x,E\cap{A}^{c}\right)<\delta\right\}$ 并令 $\delta\to0$, 则 $V\cap{A}\downarrow\left(E\cap{A}^{c}\right)\cap{A}=\emptyset$, 由上连续性使 $\nu\left(V\cap{A}\right)\to0$). 令 $U=W\cup{V}$, 则 $U$ 开,$U\supset{E}$, 且 $\lambda\left(U\right)=\nu\left(U\cap{A}\right)\le\nu\left(W\cap{A}\right)+\nu\left(V\cap{A}\right)<\lambda\left(E\right)+2\varepsilon$. 故 $\inf\left\{\lambda\left(U\right):U\text{~开},U\supset{E}\right\}\le\lambda\left(E\right)$. 合并得 $\lambda\left(E\right)=\inf\left\{\lambda\left(U\right):U\text{~开},U\supset{E}\right\}$.
 
 正则性的条件 (2) 对 $\mu$. 用 $\mu\left(E\right)=\nu\left(E\cap{A}^{c}\right)$ 及 $\nu|_{A^{c}}$ 的正则性, 论证完全对称, 得 $\mu$ 也满足条件 (2).
 

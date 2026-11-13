@@ -198,7 +198,7 @@ i.e. $A\in\mathcal{M}$ iff $A$ differs from some measurable set $B$ by a zero-me
 
 1. $\mathcal{M}$ is a $\sigma$-algebra. Verify **Definition 4.1.3 ($\sigma$-Algebra)** item by item:
 
-(1) $X\in\mathcal{M}$: take $B=X$, $N=\varnothing$; then $X\subset{X}\subset{X}\cup\varnothing$.
+(1) $X\in\mathcal{M}$: take $B=X$, $N=\emptyset$; then $X\subset{X}\subset{X}\cup\emptyset$.
 
 (2) Complement closure: suppose $B\subset{A}\subset{B}\cup{N}$, $\mu\left(N\right)=0$. Then $\left(B\cup{N}\right)^{c}\subset{A}^{c}\subset{B}^{c}$, and
 
@@ -220,15 +220,15 @@ $$
 
 Thus $\overline\mu$ is well-defined.
 
-3. $\overline\mu$ is a measure. Verify **Definition 5.1.2 (Measure)** item by item: nonnegativity is clear. Empty-set: $\overline\mu\left(\varnothing\right)=\mu\left(\varnothing\right)=0$. Countable additivity: let $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal{M}$ be pairwise disjoint; write $A_{n}=B_{n}\cup{N}_{n}$ ($B_{n}\in\mathcal{F}$, $N_{n}\subset{N}_{n}'\in\mathcal{N}$). Then $\bigcup_{n}A_{n}=\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)\in\mathcal{M}$, and $\left\{B_{n}\right\}$ are pairwise disjoint (since $B_{n}\subset{A}_{n}$). By countable additivity of $\mu$,
+3. $\overline\mu$ is a measure. Verify **Definition 5.1.2 (Measure)** item by item: nonnegativity is clear. Empty-set: $\overline\mu\left(\emptyset\right)=\mu\left(\emptyset\right)=0$. Countable additivity: let $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal{M}$ be pairwise disjoint; write $A_{n}=B_{n}\cup{N}_{n}$ ($B_{n}\in\mathcal{F}$, $N_{n}\subset{N}_{n}'\in\mathcal{N}$). Then $\bigcup_{n}A_{n}=\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)\in\mathcal{M}$, and $\left\{B_{n}\right\}$ are pairwise disjoint (since $B_{n}\subset{A}_{n}$). By countable additivity of $\mu$,
 
 $$
 \overline\mu\left(\bigcup_{n}A_{n}\right)=\mu\left(\bigcup_{n}B_{n}\right)=\sum_{n}\mu\left(B_{n}\right)=\sum_{n}\overline\mu\left(A_{n}\right).
 $$
 
-4. Extension: for $B\in\mathcal{F}$, since $B=B\cup\varnothing\in\mathcal{M}$, $\overline\mu\left(B\right)=\mu\left(B\right)$, i.e. $\overline\mu|_{\mathcal{F}}=\mu$.
+4. Extension: for $B\in\mathcal{F}$, since $B=B\cup\emptyset\in\mathcal{M}$, $\overline\mu\left(B\right)=\mu\left(B\right)$, i.e. $\overline\mu|_{\mathcal{F}}=\mu$.
 
-5. Completeness (Definition 5.4.4 (Complete Measure)): suppose $\overline\mu\left(A\right)=0$, i.e. $A=B\cup{N}$ with $\mu\left(B\right)=0$ and $N\subset{N}_{0}\in\mathcal{N}$. Then $A\subset{B}\cup{N}_{0}$, and by **Proposition 5.2.3 (Countable Subadditivity)**, $\mu\left(B\cup{N}_{0}\right)\le\mu\left(B\right)+\mu\left(N_{0}\right)=0$, so $A$ is a subset of a zero-measure set. Hence $A=\varnothing\cup{A}\in\mathcal{M}$, and any subset $C\subset{A}$ also satisfies $C\subset{B}\cup{N}_{0}$, so $C\in\mathcal{M}$. Thus $\mathcal{M}$ is complete.
+5. Completeness (Definition 5.4.4 (Complete Measure)): suppose $\overline\mu\left(A\right)=0$, i.e. $A=B\cup{N}$ with $\mu\left(B\right)=0$ and $N\subset{N}_{0}\in\mathcal{N}$. Then $A\subset{B}\cup{N}_{0}$, and by **Proposition 5.2.3 (Countable Subadditivity)**, $\mu\left(B\cup{N}_{0}\right)\le\mu\left(B\right)+\mu\left(N_{0}\right)=0$, so $A$ is a subset of a zero-measure set. Hence $A=\emptyset\cup{A}\in\mathcal{M}$, and any subset $C\subset{A}$ also satisfies $C\subset{B}\cup{N}_{0}$, so $C\in\mathcal{M}$. Thus $\mathcal{M}$ is complete.
 
 6. Minimality: let $\mathcal{M}'$ be any complete $\sigma$-algebra containing $\mathcal{F}$. For $A=B\cup{N}\in\mathcal{M}$ ($B\in\mathcal{F}$, $N\subset{N}_{0}\in\mathcal{N}$), since $N_{0}\in\mathcal{F}\subset\mathcal{M}'$ and $\mu\left(N_{0}\right)=0$, completeness of $\mathcal{M}'$ gives $N\in\mathcal{M}'$; also $B\in\mathcal{F}\subset\mathcal{M}'$, so $A=B\cup{N}\in\mathcal{M}'$. Hence $\mathcal{M}\subset\mathcal{M}'$. Thus $\mathcal{M}$ is the smallest complete $\sigma$-algebra containing $\mathcal{F}$.
 
@@ -306,7 +306,7 @@ Verify **Definition 5.1.2 (Measure)** item by item:
 
 (1) Nonnegativity: $\mu_{E}\left(A\right)=\mu\left(A\cap{E}\right)\ge0$ for all $A\in\mathcal{M}$.
 
-(2) Empty set: $\mu_{E}\left(\varnothing\right)=\mu\left(\varnothing\cap{E}\right)=\mu\left(\varnothing\right)=0$.
+(2) Empty set: $\mu_{E}\left(\emptyset\right)=\mu\left(\emptyset\cap{E}\right)=\mu\left(\emptyset\right)=0$.
 
 (3) Countable additivity: let $\left\{A_{j}\right\}_{j=1}^{\infty}\subset\mathcal{M}$ be pairwise disjoint. Then $\left\{A_{j}\cap{E}\right\}$ are also pairwise disjoint, and by countable additivity of $\mu$,
 

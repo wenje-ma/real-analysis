@@ -14,7 +14,7 @@
 
 > **Definition 6.2.1 (Premeasure)**
 > 
-> Let $X$ be nonempty and $\mathcal{E}\subset\mathcal{P}\left(X\right)$ an algebra. A function $\mu_{0}:\mathcal{E}\to\left[0,+\infty\right]$ is called a premeasure if: (1) $\mu_{0}\left(\varnothing\right)=0$; (2) if $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal{E}$ are pairwise disjoint and $\bigcup_{n=1}^{\infty}E_{n}\in\mathcal{E}$, then $\mu_{0}\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right)$.
+> Let $X$ be nonempty and $\mathcal{E}\subset\mathcal{P}\left(X\right)$ an algebra. A function $\mu_{0}:\mathcal{E}\to\left[0,+\infty\right]$ is called a premeasure if: (1) $\mu_{0}\left(\emptyset\right)=0$; (2) if $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal{E}$ are pairwise disjoint and $\bigcup_{n=1}^{\infty}E_{n}\in\mathcal{E}$, then $\mu_{0}\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right)$.
 
 > **Theorem 6.3.3 (Carathéodory's Theorem)**
 > 

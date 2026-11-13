@@ -66,11 +66,11 @@
 
 > **Definition 6.1.1 (Outer Measure)**
 > 
-> Let $X$ be nonempty. A function $\mu^{*}:\mathcal{P}\left(X\right)\to\left[0,+\infty\right]$ is called an outer measure on $X$ if: (1) nonnegativity: $\mu^{*}\left(\varnothing\right)=0$ and $\mu^{*}\left(E\right)\ge0$ for all $E\subset{X}$; (2) monotonicity: $E\subset{F}\Rightarrow\mu^{*}\left(E\right)\le\mu^{*}\left(F\right)$; (3) countable subadditivity: $\mu^{*}\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu^{*}\left(E_{n}\right)$.
+> Let $X$ be nonempty. A function $\mu^{*}:\mathcal{P}\left(X\right)\to\left[0,+\infty\right]$ is called an outer measure on $X$ if: (1) nonnegativity: $\mu^{*}\left(\emptyset\right)=0$ and $\mu^{*}\left(E\right)\ge0$ for all $E\subset{X}$; (2) monotonicity: $E\subset{F}\Rightarrow\mu^{*}\left(E\right)\le\mu^{*}\left(F\right)$; (3) countable subadditivity: $\mu^{*}\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu^{*}\left(E_{n}\right)$.
 
 > **Definition 6.2.1 (Premeasure)**
 > 
-> Let $X$ be nonempty and $\mathcal{E}\subset\mathcal{P}\left(X\right)$ an algebra. A function $\mu_{0}:\mathcal{E}\to\left[0,+\infty\right]$ is called a premeasure if: (1) $\mu_{0}\left(\varnothing\right)=0$; (2) if $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal{E}$ are pairwise disjoint and $\bigcup_{n=1}^{\infty}E_{n}\in\mathcal{E}$, then $\mu_{0}\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right)$.
+> Let $X$ be nonempty and $\mathcal{E}\subset\mathcal{P}\left(X\right)$ an algebra. A function $\mu_{0}:\mathcal{E}\to\left[0,+\infty\right]$ is called a premeasure if: (1) $\mu_{0}\left(\emptyset\right)=0$; (2) if $\left\{E_{n}\right\}_{n=1}^{\infty}\subset\mathcal{E}$ are pairwise disjoint and $\bigcup_{n=1}^{\infty}E_{n}\in\mathcal{E}$, then $\mu_{0}\left(\bigcup_{n=1}^{\infty}E_{n}\right)=\sum_{n=1}^{\infty}\mu_{0}\left(E_{n}\right)$.
 
 > **Theorem 6.2.2 (Outer Measure from a Premeasure)**
 > 
@@ -100,11 +100,11 @@ The collection of all $\mu^{*}$-measurable sets is denoted $\mathcal{M}_{\mu^{*}
 
 > **Definition 6.4.1 (h-Interval)**
 > 
-> Let $-\infty\le{a}<{}b<\infty$. All half-open intervals $\left(a,b\right]$, together with $\left(a,\infty\right)$ and $\varnothing$, are called h-intervals. The family of finite disjoint unions of h-intervals forms an algebra $\mathcal{E}$.
+> Let $-\infty\le{a}<{}b<\infty$. All half-open intervals $\left(a,b\right]$, together with $\left(a,\infty\right)$ and $\emptyset$, are called h-intervals. The family of finite disjoint unions of h-intervals forms an algebra $\mathcal{E}$.
 
 > **Proposition 6.4.2 (Premeasure on $\mathcal{E}$)**
 > 
-> Let $F:\mathbb{R}\to\mathbb{R}$ be increasing and right-continuous. For disjoint intervals $\left(a_{i},b_{i}\right]$, $i=1,\dots,n$, define $\mu_{0}\left(\bigcup_{i=1}^{n}\left(a_{i},b_{i}\right]\right):=\sum_{i=1}^{n}\left[F\left(b_{i}\right)-F\left(a_{i}\right)\right]$, and set $\mu_{0}\left(\varnothing\right)=0$. Then $\mu_{0}$ is a premeasure on $\mathcal{E}$.
+> Let $F:\mathbb{R}\to\mathbb{R}$ be increasing and right-continuous. For disjoint intervals $\left(a_{i},b_{i}\right]$, $i=1,\dots,n$, define $\mu_{0}\left(\bigcup_{i=1}^{n}\left(a_{i},b_{i}\right]\right):=\sum_{i=1}^{n}\left[F\left(b_{i}\right)-F\left(a_{i}\right)\right]$, and set $\mu_{0}\left(\emptyset\right)=0$. Then $\mu_{0}$ is a premeasure on $\mathcal{E}$.
 
 > **Theorem 6.4.5 (Regularity of Lebesgue-Stieltjes Measure)**
 > 
@@ -150,7 +150,7 @@ $\blacksquare$
 
 (b) Verify the three properties of an equivalence relation:
 
-(1) Reflexivity: $\mu\left(E\triangle{E}\right)=\mu\left(\varnothing\right)=0$, so $E\sim{E}$.
+(1) Reflexivity: $\mu\left(E\triangle{E}\right)=\mu\left(\emptyset\right)=0$, so $E\sim{E}$.
 
 (2) Symmetry: $E\triangle{F}=F\triangle{E}$, so $E\sim{F}\Leftrightarrow{F}\sim{E}$.
 
@@ -256,13 +256,13 @@ Combining gives equality.
 
 $\blacksquare$
 
-(3) Exercise 24. (a) From $A\cap{E}=B\cap{E}$ we get $\left(A\setminus{B}\right)\cap{E}=\varnothing$, and $A\setminus{B}\in\mathcal{M}$. Since $A\setminus{B}$ is measurable, apply the **Definition 6.3.1 (Carathéodory Condition)** at $T=X$:
+(3) Exercise 24. (a) From $A\cap{E}=B\cap{E}$ we get $\left(A\setminus{B}\right)\cap{E}=\emptyset$, and $A\setminus{B}\in\mathcal{M}$. Since $A\setminus{B}$ is measurable, apply the **Definition 6.3.1 (Carathéodory Condition)** at $T=X$:
 
 $$
 \mu^{*}\left(X\right)=\mu^{*}\left(X\cap\left(A\setminus{B}\right)\right)+\mu^{*}\left(X\cap\left(A\setminus{B}\right)^{c}\right)=\mu\left(A\setminus{B}\right)+\mu^{*}\left(X\setminus\left(A\setminus{B}\right)\right).
 $$
 
-Since $\left(A\setminus{B}\right)\cap{E}=\varnothing$, we have $E\subset{X}\setminus\left(A\setminus{B}\right)$. By monotonicity of the outer measure (**Definition 6.1.1 (Outer Measure)** (2)), $\mu^{*}\left(X\setminus\left(A\setminus{B}\right)\right)\ge\mu^{*}\left(E\right)=\mu^{*}\left(X\right)$. Substituting gives $\mu\left(A\setminus{B}\right)\le0$, hence $\mu\left(A\setminus{B}\right)=0$. Similarly $\mu\left(B\setminus{A}\right)=0$. Thus by **Proposition 5.2.1 (Finite Additivity)**,
+Since $\left(A\setminus{B}\right)\cap{E}=\emptyset$, we have $E\subset{X}\setminus\left(A\setminus{B}\right)$. By monotonicity of the outer measure (**Definition 6.1.1 (Outer Measure)** (2)), $\mu^{*}\left(X\setminus\left(A\setminus{B}\right)\right)\ge\mu^{*}\left(E\right)=\mu^{*}\left(X\right)$. Substituting gives $\mu\left(A\setminus{B}\right)\le0$, hence $\mu\left(A\setminus{B}\right)=0$. Similarly $\mu\left(B\setminus{A}\right)=0$. Thus by **Proposition 5.2.1 (Finite Additivity)**,
 
 $$
 \mu\left(A\right)=\mu\left(A\cap{B}\right)+\mu\left(A\setminus{B}\right)=\mu\left(A\cap{B}\right)=\mu\left(B\right).
@@ -274,7 +274,7 @@ $\blacksquare$
 
 Next show $\mathcal{M}_{E}$ is a $\sigma$-algebra on $E$ (**Definition 4.1.3 ($\sigma$-Algebra)**): since $E=X\cap{E}\in\mathcal{M}_{E}$; for $A\cap{E}\in\mathcal{M}_{E}$, its complement within $E$ is $E\setminus\left(A\cap{E}\right)=\left(X\setminus{A}\right)\cap{E}\in\mathcal{M}_{E}$; and $\bigcup_{n}\left(A_{n}\cap{E}\right)=\left(\bigcup_{n}A_{n}\right)\cap{E}\in\mathcal{M}_{E}$. Thus $\mathcal{M}_{E}$ is a $\sigma$-algebra on $E$.
 
-Finally show $\nu$ is a measure on $\mathcal{M}_{E}$ (**Definition 5.1.2 (Measure)**). Nonnegativity follows from $\mu\ge0$; $\nu\left(\varnothing\right)=\mu\left(\varnothing\right)=0$. Let $\left\{A_{n}\cap{E}\right\}$ be pairwise disjoint. Then for $n\ne{m}$, $\left(A_{n}\cap{A}_{m}\right)\cap{E}=\left(A_{n}\cap{E}\right)\cap\left(A_{m}\cap{E}\right)=\varnothing$, and by (a), $\mu\left(A_{n}\cap{A}_{m}\right)=0$. Thus by **Proposition 5.2.1 (Finite Additivity)** and **Proposition 5.2.4 (Continuity from Below)**,
+Finally show $\nu$ is a measure on $\mathcal{M}_{E}$ (**Definition 5.1.2 (Measure)**). Nonnegativity follows from $\mu\ge0$; $\nu\left(\emptyset\right)=\mu\left(\emptyset\right)=0$. Let $\left\{A_{n}\cap{E}\right\}$ be pairwise disjoint. Then for $n\ne{m}$, $\left(A_{n}\cap{A}_{m}\right)\cap{E}=\left(A_{n}\cap{E}\right)\cap\left(A_{m}\cap{E}\right)=\emptyset$, and by (a), $\mu\left(A_{n}\cap{A}_{m}\right)=0$. Thus by **Proposition 5.2.1 (Finite Additivity)** and **Proposition 5.2.4 (Continuity from Below)**,
 
 $$
 \nu\left(\bigcup_{n}\left(A_{n}\cap{E}\right)\right)=\nu\left(\left(\bigcup_{n}A_{n}\right)\cap{E}\right)=\mu\left(\bigcup_{n}A_{n}\right)=\sum_{n}\mu\left(A_{n}\right)=\sum_{n}\nu\left(A_{n}\cap{E}\right).
@@ -286,18 +286,18 @@ $\blacksquare$
 
 ## 3
 
-Let $-\infty\le{a}<{}b<\infty$. All half-open intervals $\left(a,b\right]$, together with $\left(a,\infty\right)$ and $\varnothing$, are called h-intervals. Prove that the family $\mathcal{E}$ of finite disjoint unions of h-intervals is an algebra (**Definition 6.4.1 (h-Interval)**).
+Let $-\infty\le{a}<{}b<\infty$. All half-open intervals $\left(a,b\right]$, together with $\left(a,\infty\right)$ and $\emptyset$, are called h-intervals. Prove that the family $\mathcal{E}$ of finite disjoint unions of h-intervals is an algebra (**Definition 6.4.1 (h-Interval)**).
 
 ### Solution to 3
 
 Verify using **Definition 4.1.1 (Algebra of Sets)**.
 
-First show the intersection of two h-intervals is an h-interval. Indeed, $\left(a,b\right]\cap\left(c,d\right]=\left(\max\left(a,c\right),\min\left(b,d\right)\right]$ (if nonempty), $\left(a,b\right]\cap\left(c,\infty\right)=\left(\max\left(a,c\right),b\right]$, $\left(a,\infty\right)\cap\left(c,\infty\right)=\left(\max\left(a,c\right),\infty\right)$, and the intersection with $\varnothing$ is $\varnothing$. Thus the intersection of h-intervals is an h-interval. Consequently, the intersection of any two finite disjoint unions in $\mathcal{E}$ can be expanded as a finite disjoint union of h-intervals, so $\mathcal{E}$ is closed under finite intersections.
+First show the intersection of two h-intervals is an h-interval. Indeed, $\left(a,b\right]\cap\left(c,d\right]=\left(\max\left(a,c\right),\min\left(b,d\right)\right]$ (if nonempty), $\left(a,b\right]\cap\left(c,\infty\right)=\left(\max\left(a,c\right),b\right]$, $\left(a,\infty\right)\cap\left(c,\infty\right)=\left(\max\left(a,c\right),\infty\right)$, and the intersection with $\emptyset$ is $\emptyset$. Thus the intersection of h-intervals is an h-interval. Consequently, the intersection of any two finite disjoint unions in $\mathcal{E}$ can be expanded as a finite disjoint union of h-intervals, so $\mathcal{E}$ is closed under finite intersections.
 
 Next show $\mathcal{E}$ is closed under complements. The complement of a single h-interval:
 
 $$
-\varnothing^{c}=\mathbb{R}=\left(-\infty,\infty\right),\quad\left(a,\infty\right)^{c}=\left(-\infty,a\right],\quad\left(a,b\right]^{c}=\left(-\infty,a\right]\cup\left(b,\infty\right),
+\emptyset^{c}=\mathbb{R}=\left(-\infty,\infty\right),\quad\left(a,\infty\right)^{c}=\left(-\infty,a\right],\quad\left(a,b\right]^{c}=\left(-\infty,a\right]\cup\left(b,\infty\right),
 $$
 
 where $\left(-\infty,a\right]$ and $\left(b,\infty\right)$ are h-intervals and are pairwise disjoint. Thus the complement of each h-interval belongs to $\mathcal{E}$. For an element $A=\bigcup_{i=1}^{n}I_{i}\in\mathcal{E}$ ($I_{i}$ disjoint h-intervals), by De Morgan's laws,

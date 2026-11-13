@@ -198,7 +198,7 @@ $$
 
 1. $\mathcal{M}$ 是 $\sigma$-代数. 逐条验证**定义 4.1.3 ($\sigma$-代数)**:
 
-(1) $X\in\mathcal{M}$: 取 $B=X$, $N=\varnothing$, 则 $X\subset{X}\subset{X}\cup\varnothing$.
+(1) $X\in\mathcal{M}$: 取 $B=X$, $N=\emptyset$, 则 $X\subset{X}\subset{X}\cup\emptyset$.
 
 (2) 补运算封闭: 设 $B\subset{A}\subset{B}\cup{N}$, $\mu\left(N\right)=0$. 则 $\left(B\cup{N}\right)^{c}\subset{A}^{c}\subset{B}^{c}$, 且
 
@@ -220,15 +220,15 @@ $$
 
 故 $\overline\mu$ 良定义.
 
-3. $\overline\mu$ 是测度. 逐条验证**定义 5.1.2 (测度)**: 非负性显然. 零空集性: $\overline\mu\left(\varnothing\right)=\mu\left(\varnothing\right)=0$. 可数可加性: 设 $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal{M}$ 两两不交, 写 $A_{n}=B_{n}\cup{N}_{n}$ ($B_{n}\in\mathcal{F}$, $N_{n}\subset{N}_{n}'\in\mathcal{N}$). 则 $\bigcup_{n}A_{n}=\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)\in\mathcal{M}$, 且 $\left\{B_{n}\right\}$ 两两不交 (因 $B_{n}\subset{A}_{n}$), 由 $\mu$ 的可数可加性
+3. $\overline\mu$ 是测度. 逐条验证**定义 5.1.2 (测度)**: 非负性显然. 零空集性: $\overline\mu\left(\emptyset\right)=\mu\left(\emptyset\right)=0$. 可数可加性: 设 $\left\{A_{n}\right\}_{n=1}^{\infty}\subset\mathcal{M}$ 两两不交, 写 $A_{n}=B_{n}\cup{N}_{n}$ ($B_{n}\in\mathcal{F}$, $N_{n}\subset{N}_{n}'\in\mathcal{N}$). 则 $\bigcup_{n}A_{n}=\left(\bigcup_{n}B_{n}\right)\cup\left(\bigcup_{n}N_{n}\right)\in\mathcal{M}$, 且 $\left\{B_{n}\right\}$ 两两不交 (因 $B_{n}\subset{A}_{n}$), 由 $\mu$ 的可数可加性
 
 $$
 \overline\mu\left(\bigcup_{n}A_{n}\right)=\mu\left(\bigcup_{n}B_{n}\right)=\sum_{n}\mu\left(B_{n}\right)=\sum_{n}\overline\mu\left(A_{n}\right).
 $$
 
-4. 延拓性: 对 $B\in\mathcal{F}$, 因 $B=B\cup\varnothing\in\mathcal{M}$, 故 $\overline\mu\left(B\right)=\mu\left(B\right)$, 即 $\overline\mu|_{\mathcal{F}}=\mu$.
+4. 延拓性: 对 $B\in\mathcal{F}$, 因 $B=B\cup\emptyset\in\mathcal{M}$, 故 $\overline\mu\left(B\right)=\mu\left(B\right)$, 即 $\overline\mu|_{\mathcal{F}}=\mu$.
 
-5. 完备性 (定义 5.4.4 (完备测度)): 设 $\overline\mu\left(A\right)=0$, 即 $A=B\cup{N}$ 且 $\mu\left(B\right)=0$, $N\subset{N}_{0}\in\mathcal{N}$. 则 $A\subset{B}\cup{N}_{0}$, 且由**命题 5.2.3 (次可数可加性)**, $\mu\left(B\cup{N}_{0}\right)\le\mu\left(B\right)+\mu\left(N_{0}\right)=0$, 故 $A$ 是某个零测度集之子集. 于是 $A=\varnothing\cup{A}\in\mathcal{M}$, 且 $A$ 的任意子集 $C\subset{A}$ 亦满足 $C\subset{B}\cup{N}_{0}$, 故 $C\in\mathcal{M}$. 因此 $\mathcal{M}$ 完备.
+5. 完备性 (定义 5.4.4 (完备测度)): 设 $\overline\mu\left(A\right)=0$, 即 $A=B\cup{N}$ 且 $\mu\left(B\right)=0$, $N\subset{N}_{0}\in\mathcal{N}$. 则 $A\subset{B}\cup{N}_{0}$, 且由**命题 5.2.3 (次可数可加性)**, $\mu\left(B\cup{N}_{0}\right)\le\mu\left(B\right)+\mu\left(N_{0}\right)=0$, 故 $A$ 是某个零测度集之子集. 于是 $A=\emptyset\cup{A}\in\mathcal{M}$, 且 $A$ 的任意子集 $C\subset{A}$ 亦满足 $C\subset{B}\cup{N}_{0}$, 故 $C\in\mathcal{M}$. 因此 $\mathcal{M}$ 完备.
 
 6. 最小性: 设 $\mathcal{M}'$ 是任一包含 $\mathcal{F}$ 的完备 $\sigma$-代数. 对 $A=B\cup{N}\in\mathcal{M}$ ($B\in\mathcal{F}$, $N\subset{N}_{0}\in\mathcal{N}$), 因 $N_{0}\in\mathcal{F}\subset\mathcal{M}'$ 且 $\mu\left(N_{0}\right)=0$, 由 $\mathcal{M}'$ 的完备性得 $N\in\mathcal{M}'$; 又 $B\in\mathcal{F}\subset\mathcal{M}'$, 故 $A=B\cup{N}\in\mathcal{M}'$. 因此 $\mathcal{M}\subset\mathcal{M}'$. 故 $\mathcal{M}$ 是包含 $\mathcal{F}$ 的最小完备 $\sigma$-代数.
 
@@ -306,7 +306,7 @@ $\blacksquare$
 
 (1) 非负性: $\mu_{E}\left(A\right)=\mu\left(A\cap{E}\right)\ge0$ 对一切 $A\in\mathcal{M}$.
 
-(2) 零空集性: $\mu_{E}\left(\varnothing\right)=\mu\left(\varnothing\cap{E}\right)=\mu\left(\varnothing\right)=0$.
+(2) 零空集性: $\mu_{E}\left(\emptyset\right)=\mu\left(\emptyset\cap{E}\right)=\mu\left(\emptyset\right)=0$.
 
 (3) 可数可加性: 设 $\left\{A_{j}\right\}_{j=1}^{\infty}\subset\mathcal{M}$ 两两不交, 则 $\left\{A_{j}\cap{E}\right\}$ 亦两两不交, 由 $\mu$ 的可数可加性
 

@@ -66,7 +66,7 @@
 
 > **定义 6.1.1 (外测度)**
 > 
-> 设 $X$ 非空. 函数 $\mu^{*}:\mathcal{P}\left(X\right)\to\left[0,+\infty\right]$ 称为 $X$ 上的一个外测度, 若满足: (1) 非负性: $\mu^{*}\left(\varnothing\right)=0$, 且 $\mu^{*}\left(E\right)\ge0$ 对一切 $E\subset{X}$; (2) 单调性: $E\subset{F}\Rightarrow\mu^{*}\left(E\right)\le\mu^{*}\left(F\right)$; (3) 次可数可加性: $\mu^{*}\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu^{*}\left(E_{n}\right)$.
+> 设 $X$ 非空. 函数 $\mu^{*}:\mathcal{P}\left(X\right)\to\left[0,+\infty\right]$ 称为 $X$ 上的一个外测度, 若满足: (1) 非负性: $\mu^{*}\left(\emptyset\right)=0$, 且 $\mu^{*}\left(E\right)\ge0$ 对一切 $E\subset{X}$; (2) 单调性: $E\subset{F}\Rightarrow\mu^{*}\left(E\right)\le\mu^{*}\left(F\right)$; (3) 次可数可加性: $\mu^{*}\left(\bigcup_{n=1}^{\infty}E_{n}\right)\le\sum_{n=1}^{\infty}\mu^{*}\left(E_{n}\right)$.
 
 > **定义 6.2.1 (准测度)**
 > 
@@ -100,11 +100,11 @@ $$
 
 > **定义 6.4.1 (h 区间)**
 > 
-> 令 $-\infty\le{a}<{}b<\infty$, 所有左开右闭区间 $\left(a,b\right]$, 以及 $\left(a,\infty\right)$, $\varnothing$ 称为 h 区间. h 区间的有限不交并形成的集族 $\mathcal{E}$ 为一个代数.
+> 令 $-\infty\le{a}<{}b<\infty$, 所有左开右闭区间 $\left(a,b\right]$, 以及 $\left(a,\infty\right)$, $\emptyset$ 称为 h 区间. h 区间的有限不交并形成的集族 $\mathcal{E}$ 为一个代数.
 
 > **命题 6.4.2 ($\mathcal{E}$ 上的准测度)**
 > 
-> 设 $F:\mathbb{R}\to\mathbb{R}$ 为增的右连续函数. 对于不交区间 $\left(a_{i},b_{i}\right]$, $i=1,\dots,n$, 定义 $\mu_{0}\left(\bigcup_{i=1}^{n}\left(a_{i},b_{i}\right]\right):=\sum_{i=1}^{n}\left[F\left(b_{i}\right)-F\left(a_{i}\right)\right]$, 并令 $\mu_{0}\left(\varnothing\right)=0$. 则 $\mu_{0}$ 为 $\mathcal{E}$ 上的准测度.
+> 设 $F:\mathbb{R}\to\mathbb{R}$ 为增的右连续函数. 对于不交区间 $\left(a_{i},b_{i}\right]$, $i=1,\dots,n$, 定义 $\mu_{0}\left(\bigcup_{i=1}^{n}\left(a_{i},b_{i}\right]\right):=\sum_{i=1}^{n}\left[F\left(b_{i}\right)-F\left(a_{i}\right)\right]$, 并令 $\mu_{0}\left(\emptyset\right)=0$. 则 $\mu_{0}$ 为 $\mathcal{E}$ 上的准测度.
 
 > **定理 6.4.5 (勒贝格-斯蒂尔杰斯测度的正则性)**
 > 
@@ -150,7 +150,7 @@ $\blacksquare$
 
 (b) 验证等价关系的三条性质:
 
-(1) 自反性: $\mu\left(E\triangle{E}\right)=\mu\left(\varnothing\right)=0$, 故 $E\sim{E}$.
+(1) 自反性: $\mu\left(E\triangle{E}\right)=\mu\left(\emptyset\right)=0$, 故 $E\sim{E}$.
 
 (2) 对称性: $E\triangle{F}=F\triangle{E}$, 故 $E\sim{F}\Leftrightarrow{F}\sim{E}$.
 
@@ -256,13 +256,13 @@ $$
 
 $\blacksquare$
 
-(3) 习题 24. (a) 由 $A\cap{E}=B\cap{E}$ 得 $\left(A\setminus{B}\right)\cap{E}=\varnothing$, 且 $A\setminus{B}\in\mathcal{M}$. 因 $A\setminus{B}$ 可测, 用**定义 6.3.1 (卡拉西奥多里条件)** 于 $T=X$:
+(3) 习题 24. (a) 由 $A\cap{E}=B\cap{E}$ 得 $\left(A\setminus{B}\right)\cap{E}=\emptyset$, 且 $A\setminus{B}\in\mathcal{M}$. 因 $A\setminus{B}$ 可测, 用**定义 6.3.1 (卡拉西奥多里条件)** 于 $T=X$:
 
 $$
 \mu^{*}\left(X\right)=\mu^{*}\left(X\cap\left(A\setminus{B}\right)\right)+\mu^{*}\left(X\cap\left(A\setminus{B}\right)^{c}\right)=\mu\left(A\setminus{B}\right)+\mu^{*}\left(X\setminus\left(A\setminus{B}\right)\right).
 $$
 
-由 $\left(A\setminus{B}\right)\cap{E}=\varnothing$ 得 $E\subset{X}\setminus\left(A\setminus{B}\right)$, 据外测度单调性 (**定义 6.1.1 (外测度)** (2)) 有 $\mu^{*}\left(X\setminus\left(A\setminus{B}\right)\right)\ge\mu^{*}\left(E\right)=\mu^{*}\left(X\right)$. 代入上式得 $\mu\left(A\setminus{B}\right)\le0$, 故 $\mu\left(A\setminus{B}\right)=0$. 同理 $\mu\left(B\setminus{A}\right)=0$. 于是由**命题 5.2.1 (有限可加性)**,
+由 $\left(A\setminus{B}\right)\cap{E}=\emptyset$ 得 $E\subset{X}\setminus\left(A\setminus{B}\right)$, 据外测度单调性 (**定义 6.1.1 (外测度)** (2)) 有 $\mu^{*}\left(X\setminus\left(A\setminus{B}\right)\right)\ge\mu^{*}\left(E\right)=\mu^{*}\left(X\right)$. 代入上式得 $\mu\left(A\setminus{B}\right)\le0$, 故 $\mu\left(A\setminus{B}\right)=0$. 同理 $\mu\left(B\setminus{A}\right)=0$. 于是由**命题 5.2.1 (有限可加性)**,
 
 $$
 \mu\left(A\right)=\mu\left(A\cap{B}\right)+\mu\left(A\setminus{B}\right)=\mu\left(A\cap{B}\right)=\mu\left(B\right).
@@ -274,7 +274,7 @@ $\blacksquare$
 
 再证 $\mathcal{M}_{E}$ 是 $E$ 上的 $\sigma$-代数 (**定义 4.1.3 ($\sigma$-代数)**): 因 $E=X\cap{E}\in\mathcal{M}_{E}$; 对 $A\cap{E}\in\mathcal{M}_{E}$, 其在 $E$ 内的补为 $E\setminus\left(A\cap{E}\right)=\left(X\setminus{A}\right)\cap{E}\in\mathcal{M}_{E}$; 且 $\bigcup_{n}\left(A_{n}\cap{E}\right)=\left(\bigcup_{n}A_{n}\right)\cap{E}\in\mathcal{M}_{E}$. 故 $\mathcal{M}_{E}$ 是 $E$ 上的 $\sigma$-代数.
 
-最后证 $\nu$ 是 $\mathcal{M}_{E}$ 上的测度 (**定义 5.1.2 (测度)**). 非负性由 $\mu\ge0$; $\nu\left(\varnothing\right)=\mu\left(\varnothing\right)=0$. 设 $\left\{A_{n}\cap{E}\right\}$ 两两不交. 则对 $n\ne{m}$, $\left(A_{n}\cap{A}_{m}\right)\cap{E}=\left(A_{n}\cap{E}\right)\cap\left(A_{m}\cap{E}\right)=\varnothing$, 由 (a) 得 $\mu\left(A_{n}\cap{A}_{m}\right)=0$. 于是由**命题 5.2.1 (有限可加性)** 与**命题 5.2.4 (下连续性)**,
+最后证 $\nu$ 是 $\mathcal{M}_{E}$ 上的测度 (**定义 5.1.2 (测度)**). 非负性由 $\mu\ge0$; $\nu\left(\emptyset\right)=\mu\left(\emptyset\right)=0$. 设 $\left\{A_{n}\cap{E}\right\}$ 两两不交. 则对 $n\ne{m}$, $\left(A_{n}\cap{A}_{m}\right)\cap{E}=\left(A_{n}\cap{E}\right)\cap\left(A_{m}\cap{E}\right)=\emptyset$, 由 (a) 得 $\mu\left(A_{n}\cap{A}_{m}\right)=0$. 于是由**命题 5.2.1 (有限可加性)** 与**命题 5.2.4 (下连续性)**,
 
 $$
 \nu\left(\bigcup_{n}\left(A_{n}\cap{E}\right)\right)=\nu\left(\left(\bigcup_{n}A_{n}\right)\cap{E}\right)=\mu\left(\bigcup_{n}A_{n}\right)=\sum_{n}\mu\left(A_{n}\right)=\sum_{n}\nu\left(A_{n}\cap{E}\right).
@@ -286,18 +286,18 @@ $\blacksquare$
 
 ## 3
 
-设 $-\infty\le{a}<{}b<\infty$, 所有左开右闭区间 $\left(a,b\right]$ 以及 $\left(a,\infty\right)$, $\varnothing$ 称为 h 区间. 证明 h 区间的有限不交并形成的集族 $\mathcal{E}$ 是一个代数 (**定义 6.4.1 (h 区间)**).
+设 $-\infty\le{a}<{}b<\infty$, 所有左开右闭区间 $\left(a,b\right]$ 以及 $\left(a,\infty\right)$, $\emptyset$ 称为 h 区间. 证明 h 区间的有限不交并形成的集族 $\mathcal{E}$ 是一个代数 (**定义 6.4.1 (h 区间)**).
 
 ### 解答 3
 
 用**定义 4.1.1 (集合代数)** 验证.
 
-先证两个 h 区间的交仍是 h 区间. 事实上, $\left(a,b\right]\cap\left(c,d\right]=\left(\max\left(a,c\right),\min\left(b,d\right)\right]$ (若非空), $\left(a,b\right]\cap\left(c,\infty\right)=\left(\max\left(a,c\right),b\right]$, $\left(a,\infty\right)\cap\left(c,\infty\right)=\left(\max\left(a,c\right),\infty\right)$, 且与 $\varnothing$ 的交为 $\varnothing$. 故 h 区间的交是 h 区间. 由此, $\mathcal{E}$ 中任意两个有限不交并的交, 仍可展开为有限个 h 区间的不交并, 故 $\mathcal{E}$ 对有限交封闭.
+先证两个 h 区间的交仍是 h 区间. 事实上, $\left(a,b\right]\cap\left(c,d\right]=\left(\max\left(a,c\right),\min\left(b,d\right)\right]$ (若非空), $\left(a,b\right]\cap\left(c,\infty\right)=\left(\max\left(a,c\right),b\right]$, $\left(a,\infty\right)\cap\left(c,\infty\right)=\left(\max\left(a,c\right),\infty\right)$, 且与 $\emptyset$ 的交为 $\emptyset$. 故 h 区间的交是 h 区间. 由此, $\mathcal{E}$ 中任意两个有限不交并的交, 仍可展开为有限个 h 区间的不交并, 故 $\mathcal{E}$ 对有限交封闭.
 
 再证 $\mathcal{E}$ 对补封闭. 单个 h 区间的补:
 
 $$
-\varnothing^{c}=\mathbb{R}=\left(-\infty,\infty\right),\quad\left(a,\infty\right)^{c}=\left(-\infty,a\right],\quad\left(a,b\right]^{c}=\left(-\infty,a\right]\cup\left(b,\infty\right),
+\emptyset^{c}=\mathbb{R}=\left(-\infty,\infty\right),\quad\left(a,\infty\right)^{c}=\left(-\infty,a\right],\quad\left(a,b\right]^{c}=\left(-\infty,a\right]\cup\left(b,\infty\right),
 $$
 
 其中 $\left(-\infty,a\right]$, $\left(b,\infty\right)$ 均为 h 区间, 且两两不交. 故每个 h 区间的补仍属于 $\mathcal{E}$. 对 $\mathcal{E}$ 中元素 $A=\bigcup_{i=1}^{n}I_{i}$ ($I_{i}$ 为不交 h 区间), 由德摩根律

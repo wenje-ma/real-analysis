@@ -274,7 +274,7 @@ $\mathscr{C}$ 是 $\sigma$-代数.
 $\mathscr{C}$ 包含所有可测矩形. 设 $A\in\mathcal{F}$, $B\in\mathcal{G}$. 则
 
 $$
-\left(A\times{B}\right)_{x}=\begin{cases}B,&x\in{A},\\\varnothing,&x\notin{A}.\end{cases}
+\left(A\times{B}\right)_{x}=\begin{cases}B,&x\in{A},\\\emptyset,&x\notin{A}.\end{cases}
 $$
 
 两种情况均在 $\mathcal{G}$ 中, 故 $A\times{B}\in\mathscr{C}$.
