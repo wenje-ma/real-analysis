@@ -142,7 +142,7 @@ $$
 m^{*}\left(T\right)=m^{*}\left(T-x\right)=m^{*}\left(\left(T-x\right)\cap{E}\right)+m^{*}\left(\left(T-x\right)\cap{E}^{c}\right)=m^{*}\left(T\cap\left(E+x\right)\right)+m^{*}\left(T\cap\left(E+x\right)^{c}\right),
 $$
 
-其中第二步用 $E$ 的可测性于 $T-x$. 故 $E+x$ 可测. 于是对可测集 $E$,
+其中中间一步用 $E$ 的可测性于 $T-x$. 故 $E+x$ 可测. 于是对可测集 $E$,
 
 $$
 m\left(E+x\right)=m^{*}\left(E+x\right)=m^{*}\left(E\right)=m\left(E\right).
